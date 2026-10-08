@@ -768,8 +768,8 @@ A continuación, se presenta el registro de las entrevistas realizadas a los rep
 | **Nombres y Apellidos**                | Jari Hassan                                                                                                                                                                                                                                                                                                                                                      |
 | **Edad**                               | 25 años                                                                                                                                                                                                                                                                                                                                                          |
 | **Distrito**                           | San Borja                                                                                                                                                                                                                                                                                                                                                        |
-| **Enlace al video (Microsoft Stream)** | [Entrevista grabada – Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241d811_upc_edu_pe/IQCBD_5MzFsIQ7WwTMg6JH1CAVHjGSGzKYEmoNuR2M1T4X0?e=meBl8F&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D) |
-| **Timing de inicio y duración**        | Inicio: 00:40 - Duración: 10:42 minutos                                                                                                                                                                                                                                                                                                                          |
+| **Enlace al video (Microsoft Stream)** | Pendiente de agregar|
+| **Timing de inicio y duración**        | Inicio: 00:40 - Fin: 10:42                                                                                                                                                                                                                                                                                                                       |
 | **Evidencia fotográfica**              | *<p><img src="assets/images/chapter-02/entrevista-segmento1-Hassan.png" width="400" alt="Logo AgroFlet"> </p>*                                                                                                                                                                                                                                                                     |
 
 **Resumen de la entrevista:**
@@ -787,44 +787,134 @@ Jari considera que una solución digital sí podría aportar valor real a su ope
 Estas funcionalidades ayudarían a prevenir pérdidas, mejorar la distribución y tomar decisiones con mayor rapidez.
 
 
+#### Entrevista 2: Farit
+
+| Campo | Detalle |
+|:------|:--------|
+| **Título** | Entrevista 2: Farit |
+| **Segmento** | Empresas distribuidoras de productos perecibles |
+| **Nombres y Apellidos** | Farit (apellidos pendientes) |
+| **Edad** | 28 años |
+| **Distrito** | San Luis |
+| **Enlace al video (Microsoft Stream)** | Pendiente de agregar |
+| **Timing de inicio y duración** | Inicio: 10:42 - Fin: 17:02|
+| **Evidencia fotográfica** |  <p><img src="assets/images/chapter-02/entrevista-seg1-farit.png" width="400" alt="Entrevista Farit"></p> |
+
+**Resumen de la entrevista:**
+
+Farit es un profesional de 28 años que trabaja en el área de operaciones y logística de una empresa alimenticia ubicada en San Luis. Su labor está relacionada con la distribución y conservación de productos perecibles, por lo que conoce las dificultades asociadas al control del inventario y al mantenimiento de la cadena de frío.
+
+Actualmente, la empresa utiliza un **sistema ERP complementado con Excel** para gestionar el stock, los lotes y las fechas de vencimiento. Sin embargo, uno de sus principales problemas es la **falta de actualización de la información en tiempo real**, lo que genera diferencias entre el inventario registrado y el físico, además de pérdidas ocasionales por productos vencidos o deteriorados.
+
+Asimismo, Farit identificó la **falta de monitoreo automatizado de temperatura durante el transporte** como una dificultad importante. En algunas ocasiones, las fallas en la cadena de frío se detectan cuando los vehículos llegan a su destino, dificultando una respuesta oportuna. También señaló que la información logística se encuentra distribuida entre diferentes herramientas y comunicaciones con los conductores, lo que puede ocasionar retrasos, pérdidas económicas e insatisfacción de los clientes.
+
+El entrevistado considera que **FrioTrack podría mejorar la eficiencia operativa mediante la centralización de información y la automatización del monitoreo**. Para él, las funcionalidades más importantes serían:
+
+- Monitoreo de temperatura en tiempo real durante el transporte.
+- Alertas automáticas ante variaciones de temperatura.
+- Control de lotes y fechas de vencimiento.
+- Seguimiento de vehículos mediante GPS.
+- Panel centralizado para consultar información logística e inventarios.
+
+Respecto a la implementación, Farit manifestó disposición a utilizar una solución digital, siempre que sea **fácil de utilizar, tenga un costo razonable y permita demostrar una reducción de pérdidas**.
+
+En conclusión, la entrevista evidencia la necesidad de una **plataforma que integre el control de inventarios, el monitoreo de la cadena de frío y la trazabilidad logística en tiempo real**. Estos hallazgos respaldan la propuesta de FrioTrack para prevenir pérdidas, mejorar la capacidad de respuesta ante incidentes y optimizar la distribución de productos perecibles.
 
 #### Entrevistas segmento 2:
 
 #### Entrevista 1: Irma Barreto
 
-| Campo | Información |
-|-------|-------------|
-| **Título** | **Entrevista 1: Irma Barreto** |
-| Segmento | Tiendas y bodegas con productos perecibles |
-| Nombres y apellidos | Irma Barreto |
-| Edad | 40 años |
-| Distrito | San Juan de Lurigancho |
-| Ocupación | Dueña y administradora de un pequeño restaurante familiar |
-| Tipo de negocio | Restaurante familiar |
-| Número de trabajadores | 4 personas |
-| Años gestionando el negocio | 6 años |
-| Productos perecibles principales | Frutas, verduras, carnes y otros ingredientes para la preparación de alimentos |
-| Volumen de compra aproximado | 30-40 kg de productos perecibles por semana |
-| Inicio de la entrevista | 00:00 |
-| Duración | 08:15 |
-| URL del video | [Video evidencia](https://upcedupe-my.sharepoint.com/personal/u20241f246_upc_edu_pe/_layouts/15/stream.aspx?id=%2Fpersonal%2Fu20241f246%5Fupc%5Fedu%5Fpe%2FDocuments%2Fentrevista%2Dsegmento%2D2%2Dalexander%2Dweb%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E42b0dbe0%2D21c5%2D4a90%2D89ee%2Da7c7e8118144&mode=View) |
-| **Fotografía** | <div align="center"><img src="./assets/images/chapter-02/entrevista-segmento-2-irma-barreto.png" width="300"></div> |
-| **Resumen de la entrevista** | Irma Barreto, de 40 años, es dueña y administradora de un pequeño restaurante familiar ubicado en San Juan de Lurigancho. Cuenta con aproximadamente 6 años de experiencia gestionando su negocio y trabaja junto a otras 3 personas. Actualmente, controla el inventario de sus productos perecibles de manera manual, revisando las cantidades disponibles y anotando algunas compras en un cuaderno. Sus principales dificultades son la falta de actualización del stock en tiempo real, los errores en el registro de productos y la posibilidad de quedarse sin ingredientes durante las horas de mayor atención. También señaló que las frutas y verduras pueden llegar demasiado maduras, maltratadas o en cantidades menores a las solicitadas, generando pérdidas y dificultades para preparar algunos platos del menú. Para reducir estos problemas, mostró interés en utilizar una aplicación sencilla desde su celular Android que le permita controlar automáticamente el inventario, recibir alertas sobre productos próximos a vencer, revisar las existencias y consultar el estado de sus pedidos. Asimismo, consideró importante contar con una solución que facilite la organización de sus compras y disminuya las pérdidas por deterioro de productos. Estaría dispuesta a pagar aproximadamente entre 30 y 50 soles mensuales por una herramienta accesible que le ayude a mejorar la gestión de su inventario y abastecimiento. En general, la entrevista evidencia que el comerciante necesita una solución digital que facilite el control de productos perecibles, reduzca las pérdidas y mejore la disponibilidad de ingredientes para las operaciones diarias del restaurante. |
+| Campo | Detalle |
+|:------|:--------|
+| **Título** | Entrevista 1: Irma Barreto |
+| **Segmento** | Tiendas y bodegas con productos perecibles |
+| **Nombres y Apellidos** | Irma Barreto |
+| **Edad** | 40 años |
+| **Distrito** | San Juan de Lurigancho |
+| **Enlace al video (Microsoft Stream)** |Pendiente de agregar|
+| **Timing de inicio y duración** | Inicio: 17:05 - Fin: 23:53|
+| **Evidencia fotográfica** | <p><img src="assets/images/chapter-02/entrevista-segmento-2-irma-barreto.png" width="400" alt="Entrevista Irma Barreto"></p> |
+
+**Resumen de la entrevista:**
+
+Irma Barreto es una comerciante de 40 años que administra un restaurante familiar ubicado en San Juan de Lurigancho. Cuenta con 6 años de experiencia en el negocio y trabaja junto a otras tres personas. Su establecimiento utiliza principalmente productos perecibles como frutas, verduras y carnes, con un volumen aproximado de compra de 30 a 40 kg semanales.
+
+Actualmente, realiza el **control de inventario de manera manual**, revisando las cantidades disponibles y registrando algunas compras en un cuaderno. Entre sus principales dificultades identifica la **falta de actualización del stock en tiempo real**, los errores en los registros y el riesgo de quedarse sin ingredientes durante las horas de mayor atención. Asimismo, menciona que algunos productos llegan demasiado maduros, deteriorados o en cantidades inferiores a las solicitadas, lo que ocasiona pérdidas y dificultades en la preparación de los platos.
+
+Irma considera que una solución digital sencilla, accesible desde su celular Android, podría mejorar la administración de su negocio. Las funcionalidades que considera más importantes son:
+
+- Control automático del inventario y actualización del stock.
+- Alertas de productos próximos a vencer.
+- Consulta de existencias y seguimiento del estado de los pedidos.
+- Organización de compras y abastecimiento.
+
+Respecto a la inversión, manifestó estar dispuesta a pagar **entre S/ 30 y S/ 50 mensuales**, siempre que la herramienta sea accesible y facilite sus operaciones diarias.
+
+En conclusión, la entrevista evidencia la necesidad de una **solución digital práctica y económica** que permita reducir las pérdidas por deterioro, mejorar el control de productos perecibles y garantizar una mayor disponibilidad de ingredientes para el funcionamiento del restaurante.
+
 
 #### Entrevista 2: Santiago Silva Jara
 
-| Campo | Información |
-|-------|-------------|
-| **Título** | **Entrevista 2: Santiago Silva Jara** |
-| Segmento | Tiendas y bodegas con productos perecibles |
-| Nombres y apellidos | Santiago Silva Jara |
-| Edad | 22 años |
-| Distrito | Víctor Larco Herrera (Trujillo) |
-| Inicio de la entrevista | 00:00 |
-| Duración | 04:08 |
-| URL del video | [Video evidencia](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202421137_upc_edu_pe/IQAEFjC2Gb2fSr-pRZqtPllkAQef9VFRhQM8i7AwkrYuvCA) |
-| **Fotografía** | <div align="center"><img src="./assets/images/chapter-02/entrevista-segmento-2-santiago-silva-jara.png" width="500"></div> |
-| **Resumen de la entrevista** | Santiago Silva Jara, de 22 años, del distrito de Víctor Larco Herrera (Trujillo), posee una bodega en la que vende todo tipo de productos, incluyendo productos perecibles. Registra a mano la fecha de caducidad de estos productos para tener presente cuándo puede cambiarlos y así no afectar a sus clientes. Comentó que sería muy útil contar con una aplicación que le avise sobre estos vencimientos y cambios. |
+| Campo | Detalle |
+|:------|:--------|
+| **Título** | Entrevista 2: Santiago Silva Jara |
+| **Segmento** | Tiendas y bodegas con productos perecibles |
+| **Nombres y Apellidos** | Santiago Silva Jara |
+| **Edad** | 22 años |
+| **Distrito** | Víctor Larco Herrera (Trujillo) |
+| **Enlace al video (Microsoft Stream)** |Pendiente de agregar|
+| **Timing de inicio y duración** | Inicio: 23:54 - Fin: 28:02 |
+| **Evidencia fotográfica** | <p><img src="assets/images/chapter-02/entrevista-segmento-2-santiago-silva-jara.png" width="400" alt="Entrevista Santiago Silva Jara"></p> |
+
+**Resumen de la entrevista:**
+
+Santiago Silva Jara es un comerciante de 22 años del distrito de Víctor Larco Herrera, en Trujillo. Es propietario de una bodega donde comercializa diversos productos, incluidos alimentos perecibles que requieren un control adecuado de sus fechas de vencimiento.
+
+Actualmente, realiza el **registro manual de las fechas de caducidad** de sus productos para identificar cuándo deben cambiarse y evitar inconvenientes con sus clientes. Este procedimiento requiere una revisión constante, ya que depende de las anotaciones realizadas por el propio comerciante.
+
+Durante la entrevista, Santiago manifestó interés en contar con una **aplicación que le permita recibir avisos sobre los próximos vencimientos** y facilite la identificación de los productos que necesitan ser cambiados.
+
+La funcionalidad principal identificada es:
+
+- Alertas automáticas sobre fechas de vencimiento y productos que requieren cambio.
+
+En conclusión, la entrevista evidencia la necesidad de una **herramienta digital sencilla para el control de vencimientos**, que facilite el seguimiento de productos perecibles y contribuya a prevenir inconvenientes con los clientes.
+
+
+#### Entrevista 3: Carlos Astudillo
+
+| Campo | Detalle |
+|:------|:--------|
+| **Título** | Entrevista 3: Carlos Astudillo |
+| **Segmento** | Tiendas y bodegas con productos perecibles |
+| **Nombres y Apellidos** | Carlos Astudillo |
+| **Edad** | 22 años |
+| **Distrito** | San Juan de Lurigancho |
+| **Enlace al video (Microsoft Stream)** | Pendiente de agregar |
+| **Timing de inicio y duración** | Inicio: 28:06 - Fin 41:19 |
+| **Evidencia fotográfica** |<p><img src="assets/images/chapter-02/entrevista-seg2-carlos.png" width="400" alt="Entrevista Carlos Astudillo"></p> |
+
+**Resumen de la entrevista:**
+
+Carlos Astudillo es un joven de 22 años encargado de una bodega familiar ubicada en San Juan de Lurigancho. Durante la entrevista, identificó diversas dificultades relacionadas con el **control de inventarios, las fechas de vencimiento y la organización de productos**. Actualmente, utilizan cuadernos para registrar las ventas y Excel para administrar el inventario, consolidando la información al finalizar cada mes.
+
+Uno de los principales problemas es la **falta de actualización del stock en tiempo real**, debido a que los recuentos se realizan generalmente cada 30 días o cada 15 días cuando algún producto presenta mayor rotación. Para evitar el desabastecimiento, aplican una estrategia de reposición cuando las existencias alcanzan aproximadamente el 20 % del stock. Sin embargo, todavía dependen de revisiones manuales, lo que incrementa el riesgo de errores y pérdidas.
+
+Asimismo, Carlos señaló que han experimentado **pérdidas ocasionales por productos vencidos o deteriorados**, especialmente con productos como los huevos. También mencionó que la desorganización del almacén puede generar retrasos en la atención al cliente y dificultades con los proveedores, afectando la eficiencia de las operaciones.
+
+El entrevistado considera que **FrioTrack podría facilitar la gestión del negocio mediante la automatización del inventario y el control de vencimientos**. Destacó la importancia de contar con una aplicación sencilla y accesible desde dispositivos móviles, especialmente porque algunos integrantes de su familia presentan dificultades para utilizar Excel.
+
+Las funcionalidades que considera más importantes son:
+
+- Control automático del inventario y actualización del stock.
+- Alertas anticipadas sobre productos próximos a vencer.
+- Notificaciones accesibles desde dispositivos móviles.
+- Avisos directos, como llamadas de alerta, ante vencimientos próximos.
+- Interfaz sencilla e intuitiva para usuarios con poca experiencia tecnológica.
+
+Respecto a la inversión, Carlos manifestó interés en adoptar la plataforma, aunque **no estableció un monto mensual específico**, indicando que el costo debería evaluarse según las necesidades y el tamaño del negocio.
+
+En conclusión, la entrevista evidencia la necesidad de una **solución digital accesible que reduzca la dependencia de registros manuales, prevenga pérdidas por vencimiento y mejore la organización del inventario**. Estos hallazgos respaldan la propuesta de FrioTrack como una herramienta para optimizar la gestión de productos perecibles en pequeñas bodegas.
 
 ### 2.2.3. Análisis de entrevistas
 
