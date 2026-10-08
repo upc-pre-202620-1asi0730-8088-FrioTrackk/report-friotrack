@@ -918,3 +918,50 @@ Asimismo, se identificaron los sistemas externos que interactúan con la platafo
   <p><i>Figura X. Big Picture EventStorming del proyecto FrioTrack.</i></p>
 </div>
 
+### 2.5. Ubiquitous Language
+
+El **Ubiquitous Language** de **FrioTrack** establece un lenguaje común entre los integrantes del equipo y los usuarios del sistema. Los siguientes términos representan los conceptos principales del dominio de monitoreo de la cadena de frío y gestión de productos perecibles.
+
+- **Cold Chain (Cadena de Frío):** conjunto de procesos de almacenamiento y transporte que mantienen condiciones de temperatura adecuadas para conservar productos perecibles.
+
+- **Perishable Batch (Lote Perecible):** agrupación de productos perecibles que comparten características de identificación y control, como procedencia, fecha de producción o fecha de vencimiento.
+
+- **FEFO Policy (Primero en Vencer, Primero en Salir):** estrategia de gestión de inventario que prioriza la salida de los productos cuya fecha de vencimiento está más próxima.
+
+- **Thermal Telemetry (Telemetría Térmica):** registro y transmisión periódica de datos de temperatura obtenidos mediante sensores.
+
+- **Thermal Threshold (Umbral Térmico):** límite mínimo y máximo de temperatura permitido para mantener un producto en condiciones adecuadas.
+
+- **Cold Breach (Ruptura de Cadena de Frío):** situación en la que la temperatura de almacenamiento o transporte se encuentra fuera del rango permitido durante un periodo determinado.
+
+- **IoT Sensor Node (Nodo Sensor IoT):** dispositivo equipado con sensores que recopila información ambiental y la transmite a la plataforma.
+
+- **Storage Unit (Unidad de Almacenamiento):** espacio destinado al almacenamiento de productos perecibles bajo condiciones controladas de temperatura.
+
+- **Shrinkage / Merma:** pérdida de productos perecibles debido a vencimiento, deterioro o condiciones inadecuadas de almacenamiento.
+
+- **Critical Expiration Window (Ventana Crítica de Caducidad):** periodo previo al vencimiento de un producto durante el cual se requiere tomar acciones para evitar que se convierta en merma.
+
+- **Telemetry Ingestion (Ingesta de Telemetría):** proceso mediante el cual la plataforma recibe, valida y almacena los datos enviados por los sensores.
+
+- **Telemetry Loss (Pérdida de Comunicación Telemétrica):** condición en la que el sensor deja de transmitir información hacia la plataforma.
+
+- **Thermal Deviation Event (Evento de Desviación Térmica):** evento generado cuando una medición de temperatura supera los límites establecidos.
+
+- **Dispatch Order (Orden de Despacho):** instrucción utilizada para preparar los productos que serán transportados o entregados al cliente.
+
+- **Picking List (Lista de Picking):** listado que indica los productos y lotes que deben ser retirados del inventario para preparar un pedido.
+
+- **Emergency Alert (Alerta de Emergencia):** notificación generada ante una condición crítica que requiere atención inmediata.
+
+- **Clearance Discount (Descuento de Liquidación):** reducción de precio aplicada a productos próximos a vencer con el objetivo de acelerar su venta y reducir pérdidas.
+
+- **Warehouse Supervisor (Supervisor de Almacén):** usuario encargado de supervisar las operaciones relacionadas con el almacenamiento, inventario y condiciones de conservación de los productos.
+
+- **Retail Merchant (Comerciante Minorista):** usuario encargado de gestionar productos perecibles en tiendas, bodegas o puestos de mercados de abastos.
+
+- **MQTT Broker (Broker MQTT):** intermediario utilizado para gestionar la comunicación de mensajes entre los sensores IoT y los componentes de la plataforma.
+
+- **Thermal Recovery Time (Tiempo de Recuperación Térmica):** tiempo que necesita una unidad de almacenamiento para volver a su rango de temperatura adecuado después de una alteración térmica.
+
+- **Shelf Life (Vida Útil):** periodo durante el cual un producto perecible puede mantenerse en condiciones adecuadas para su comercialización y consumo.
