@@ -2558,3 +2558,286 @@ El recorrido que se muestra en la Figura 4.86 sigue el camino principal del Coor
 | Landing Page publicada (GitHub Pages) | [upc-pre-202620-1asi0730-8088-friotrack.github.io/friotrack-landing](https://upc-pre-202620-1asi0730-8088-friotrack.github.io/friotrack-landing/) |
 | Repositorio de la Landing Page | [github.com/upc-pre-202620-1asi0730-8088-FrioTrack/friotrack-landing](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/friotrack-landing) |
 | Video demostrativo del prototipo | Pendiente de completar por el equipo. |
+
+## 4.6. Domain-Driven Software Architecture
+
+Esta sección describe el diseño de la solución de software de FríoTrack desde el enfoque de Domain-Driven Design (DDD), propuesto por Evans (2003) y desarrollado en su vertiente estratégica y táctica por Vernon (2013). El enfoque parte de un lenguaje compartido entre el equipo y el negocio (el lenguaje ubicuo), divide el dominio en contextos delimitados (*Bounded Contexts*) con responsabilidades claras y, dentro de cada uno, modela los agregados que protegen las reglas del negocio. El modelo se descubrió con EventStorming en su nivel de diseño (Brandolini, 2021), y la arquitectura resultante se documenta con el modelo C4 (Brown, s. f.), que la describe en tres niveles de detalle: contexto, contenedores y componentes.
+
+El punto de partida del modelado fueron los problemas del Capítulo I (la falta de lecturas continuas, de alertas oportunas y de evidencia térmica comprobable), que se sustentan en que la gestión del tiempo y de la temperatura a lo largo de la cadena de frío determina la calidad y la inocuidad del alimento (Mercier et al., 2017), y las pantallas y flujos de la sección 4.4. De esas fuentes se obtuvo el lenguaje ubicuo, cuyos términos principales se resumen en la Tabla 4.22. Estos términos se usan con el mismo significado en las pantallas, en los eventos del modelo, en las clases y en las tablas de la base de datos.
+
+**Tabla 4.22**
+
+*Lenguaje ubicuo de FríoTrack*
+
+
+| Término | Significado en FríoTrack |
+| :--- | :--- |
+| **Envío (*Shipment*)** | Traslado terrestre de una carga perecible entre un origen y un destino, con un rango térmico configurado. Es la unidad central del negocio. |
+| **Rango térmico** | Intervalo de temperatura mínima y máxima, y humedad máxima, dentro del cual la carga debe viajar. |
+| **Tolerancia** | Minutos que una lectura puede permanecer fuera del rango antes de que la desviación se considere crítica. |
+| **Lectura (*Reading*)** | Medición de temperatura y humedad enviada por el sensor de la unidad, con su fecha y hora. |
+| **Posición reportada** | Ubicación GPS enviada por el sensor; se distingue de la ruta planificada. |
+| **Monitoreo** | Seguimiento de un envío mientras está en tránsito, desde el inicio del traslado hasta su entrega. |
+| **Alerta** | Aviso generado cuando una lectura sale del rango (advertencia o crítica) o cuando el sensor pierde señal. |
+| **Acción correctiva** | Respuesta que el Coordinador Logístico registra ante una alerta. |
+| **Incidencia** | Evento del traslado que el Coordinador Logístico registra y que puede afectar la carga. |
+| **Reporte térmico** | Documento PDF con las lecturas, alertas y acciones de un envío, que sirve como evidencia. |
+| **Reserva de recursos** | Bloqueo de una unidad y de un conductor para un envío durante su horario. |
+
+*Nota.* Elaboración propia.
+
+### 4.6.1. Design-Level EventStorming
+
+#### Notación
+
+El EventStorming de nivel de diseño ordena, de izquierda a derecha y en una línea de tiempo, los eventos de dominio que ocurren en el sistema y, alrededor de ellos, los comandos que los provocan, los agregados que los emiten y las políticas que reaccionan. Se agregaron dos elementos de apoyo: las reglas de negocio que protegen a cada agregado y las vistas (*read models*) que consumen las pantallas. La Tabla 4.23 muestra la notación usada en los diagramas de esta sección.
+
+**Tabla 4.23**
+
+*Notación de los diagramas de EventStorming*
+
+
+| Elemento | Color | Significado |
+| :--- | :---: | :--- |
+| **Actor** | Amarillo claro | Persona o rol que ejecuta un comando. |
+| **Comando** | Azul | Intención de un actor o de una política de cambiar el estado del sistema. |
+| **Agregado** | Amarillo | Entidad raíz que valida las reglas y emite los eventos. |
+| **Evento de dominio** | Naranja | Hecho relevante que ya ocurrió, en pasado. |
+| **Política** | Lila | Regla «cuando ocurre X, entonces hacer Y» que conecta un evento con un comando. |
+| **Regla de negocio** | Blanco con borde lila discontinuo | Restricción que el agregado debe garantizar. |
+| **Sistema externo** | Rosado | Sistema fuera del control de FríoTrack. |
+| **Vista (*read model*)** | Verde | Información que una pantalla presenta al usuario. |
+| **Evento o comando externo** | Tono claro con borde discontinuo | Elemento que pertenece a otro contexto delimitado. |
+
+*Nota.* Elaboración propia, con base en la notación de EventStorming (Brandolini, 2021).
+
+#### Bounded Contexts
+
+El dominio se dividió en cinco contextos delimitados. La separación sigue las cuatro preguntas que orientaron el análisis: qué parte del negocio genera valor diferencial (subdominio *core*), qué partes lo apoyan pero no lo diferencian (*supporting*), cuáles son genéricas y podrían resolverse con soluciones estándar (*generic*), y dónde cambia el significado de un término. Por ejemplo, «envío» significa una programación con rango térmico en Shipment Management, una reserva de horario en Fleet & Resource Management y una serie de lecturas en Monitoring & Telemetry.
+
+**Tabla 4.24**
+
+*Bounded Contexts de FríoTrack*
+
+
+| Bounded Context | Tipo de subdominio | Responsabilidad | Agregados principales | Pantallas relacionadas |
+| :--- | :---: | :--- | :--- | :--- |
+| **IAM** (Identity & Access Management) | Genérico | Registrar cuentas, autenticar, bloquear tras intentos fallidos, recuperar contraseñas y gestionar el perfil y el idioma. | `UserAccount`, `AuthSession`, `UserProfile` | Iniciar sesión, Crear cuenta, Recuperar contraseña, Configuración |
+| **Fleet & Resource Management** | De apoyo | Administrar vehículos, sensores y conductores, y reservar o liberar recursos para los envíos. | `Vehicle`, `Driver`, `FleetAllocation` | Vehículos, Conductores, paso 3 del registro de un envío |
+| **Shipment Management** | *Core* | Definir, programar, iniciar, entregar y cancelar envíos con su rango térmico y su ruta. | `Shipment` | Dashboard, Envíos, Nuevo envío, Detalle del envío |
+| **Monitoring & Telemetry** | *Core* | Recibir lecturas y posiciones del sensor, evaluarlas contra el rango, detectar la pérdida de señal y exponer las series. | `ShipmentMonitoring` | Detalle del envío (Resumen, Lecturas, Ruta y posiciones), mapas y gráficos |
+| **Alert & Reporting** | De apoyo | Generar alertas, notificar, registrar acciones correctivas e incidencias y producir el reporte térmico. | `Alert`, `Notification`, `Incident`, `ThermalReport` | Notificaciones, pestaña Alertas, acción correctiva, Historial, reportes |
+
+*Nota.* Elaboración propia.
+
+Shipment Management y Monitoring & Telemetry son los contextos *core* porque en ellos reside el valor diferencial de FríoTrack: programar con un rango térmico explícito y vigilar continuamente su cumplimiento. IAM es genérico y podría resolverse con una solución estándar de identidad, aunque se implementa en la propia API para simplificar el alcance inicial.
+
+#### Relaciones entre contextos y matriz de interdependencias
+
+En el diseño propuesto de la API, los contextos se relacionan mediante eventos de dominio internos de un monolito modular: un contexto publica un evento y otro reacciona con un comando propio, sin acceder a los datos internos del primero. En el mapa de contextos, Shipment Management es el proveedor (*upstream*) de Fleet & Resource Management y de Monitoring & Telemetry en una relación de cliente y proveedor (*Customer/Supplier*), y Monitoring & Telemetry lo es de Alert & Reporting. No se propone un broker ni microservicios independientes para TB1. IAM opera como servicio abierto (*Open Host Service*) que entrega la identidad y el perfil del usuario a los demás contextos mediante un token. Los sensores, por ser un sistema externo, se aíslan con una capa anticorrupción que traduce sus mensajes al comando `RecordReading` (Evans, 2003).
+
+La Tabla 4.25 lista las interacciones y se corresponde con los números que aparecen en el diagrama general. Las interacciones 3 y 6 ocurren dentro de un mismo contexto y se incluyen para mantener continua la cadena desde la lectura hasta la notificación.
+
+**Tabla 4.25**
+
+*Matriz de interdependencias entre contextos*
+
+
+| N.º | Origen (evento) | Destino (comando) | Descripción |
+| :---: | :--- | :--- | :--- |
+| 1 | `ShipmentScheduled` (Shipment Management) | `ReserveResources` (Fleet & Resource Management) | Al programar un envío se reservan la unidad y el conductor. Si no están disponibles, se emite `ResourcesUnavailable` y el envío vuelve a borrador. |
+| 2 | `TransitStarted` (Shipment Management) | `StartMonitoring` (Monitoring & Telemetry) | Al iniciar el traslado se abre el monitoreo con el rango térmico y la tolerancia del envío. |
+| 3 | `ReadingRecorded` (Monitoring & Telemetry) | `EvaluateReading` (Monitoring & Telemetry) | Cada lectura se evalúa contra el rango y la tolerancia; el resultado es `ReadingOutOfRange` o `ReadingWithinRange`. |
+| 4 | `ReadingOutOfRange` (Monitoring & Telemetry) | `RaiseAlert` (Alert & Reporting) | Una lectura fuera de rango solicita la creación de una alerta, advertencia o crítica según la tolerancia. |
+| 5 | `SignalLost` (Monitoring & Telemetry) | `RaiseAlert` (Alert & Reporting) | La pérdida de señal del sensor solicita una alerta de tipo «Sin señal». |
+| 6 | `AlertRaised` (Alert & Reporting) | `SendNotification` (Alert & Reporting) | Toda alerta genera una notificación para el Coordinador Logístico y para el Cliente de Carga. |
+| 7 | `ReadingWithinRange` (Monitoring & Telemetry) | `ResolveAlert` (Alert & Reporting) | Si existe una alerta activa y la lectura se normaliza, la alerta se cierra. |
+| 8 | `ShipmentDelivered` (Shipment Management) | `ReleaseResources` (Fleet & Resource Management) | Al entregar el envío se liberan la unidad y el conductor. |
+| 9 | `ShipmentDelivered` (Shipment Management) | `StopMonitoring` (Monitoring & Telemetry) | Al entregar el envío se detiene el monitoreo. La cancelación se admite antes de iniciar el tránsito. |
+| 10 | `ShipmentDelivered` (Shipment Management) | `GenerateThermalReport` (Alert & Reporting) | La entrega habilita la generación del reporte térmico, que el usuario solicita desde «Descargar reporte». |
+| 11 | `ShipmentCancelled` (Shipment Management) | `ReleaseResources` (Fleet & Resource Management) | Al cancelar el envío se liberan los recursos que tenía reservados. |
+
+*Nota.* Elaboración propia.
+
+#### Diagrama general
+
+El diagrama general presenta los eventos de dominio de los cinco contextos organizados en calles (*swimlanes*), una por contexto, y las once integraciones de la Tabla 4.25 como flechas numeradas.
+
+**Figura 4.87**
+
+*Diagrama general de EventStorming de nivel de diseño*
+
+<p align="center">
+  <img src="assets/images/chapter-04/eventstorming-general.png" alt="Diagrama general de EventStorming de nivel de diseño" width="1000"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+> **Enlace al tablero de EventStorming (Miro):** pendiente de completar por el equipo.
+
+#### BC1 · IAM (Identity & Access Management)
+
+El contexto IAM cubre el ciclo de vida de la cuenta. El registro exige un correo único y una contraseña de al menos ocho caracteres con letras y números, y al concluir se envía un correo de confirmación mediante el servicio de correo. Cada inicio de sesión exitoso redirige al usuario según su perfil: al Dashboard, si es Coordinador Logístico, o a Envíos por recibir, si es Cliente de Carga. Tras cinco intentos fallidos consecutivos se bloquea la cuenta. La recuperación de contraseña envía un enlace sin revelar si el correo existe, con el fin de no facilitar la enumeración de cuentas.
+
+**Figura 4.88**
+
+*EventStorming del contexto IAM*
+
+<p align="center">
+  <img src="assets/images/chapter-04/eventstorming-bc1-iam.png" alt="EventStorming del contexto IAM" width="1000"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+#### BC2 · Fleet & Resource Management
+
+Este contexto gestiona los recursos físicos de la empresa de transporte. Sus reglas más importantes son la unicidad de la placa y de la licencia, y la ausencia de traslape de horarios: una unidad o un conductor no pueden reservarse para dos envíos a la vez. Una unidad enviada a mantenimiento deja de aparecer como disponible. La reserva y la liberación no las decide el usuario directamente, sino que las provocan por política los eventos del contexto Shipment Management.
+
+**Figura 4.89**
+
+*EventStorming del contexto Fleet & Resource Management*
+
+<p align="center">
+  <img src="assets/images/chapter-04/eventstorming-bc2-fleet.png" alt="EventStorming del contexto Fleet & Resource Management" width="1000"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+#### BC3 · Shipment Management
+
+Este es el contexto central del negocio. El diseño previsto permite al Coordinador Logístico definir un borrador con su rango térmico y luego programarlo; el borrador persistido sigue fuera de la demo local. Al programar, la política del contexto solicita la reserva de recursos: si se reservan, se avisa al Cliente de Carga; si no están disponibles, no se confirma la programación. Esta secuencia corresponde al flujo 1 de la sección 4.4.4. Antes del tránsito puede cancelarse el envío programado y liberar la reserva. Al iniciar el traslado se abre el monitoreo; la entrega lo detiene y libera los recursos. No se permite cancelar un envío en tránsito ni entregado.
+
+**Figura 4.90**
+
+*EventStorming del contexto Shipment Management*
+
+<p align="center">
+  <img src="assets/images/chapter-04/eventstorming-bc3-shipment.png" alt="EventStorming del contexto Shipment Management" width="1000"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+#### BC4 · Monitoring & Telemetry
+
+El contexto recibe las lecturas y las posiciones de los sensores y las evalúa. Al iniciar el monitoreo copia el rango térmico y la tolerancia del envío, de modo que una modificación posterior del envío no altere retroactivamente la evaluación. Cada lectura se registra y se evalúa: si está fuera de rango se solicita una alerta al contexto Alert & Reporting; si está dentro y existe una alerta activa, se solicita su resolución. Una política adicional detecta la pérdida de señal cuando no llegan lecturas durante el tiempo máximo permitido y solicita una alerta «Sin señal», que en la interfaz se muestra con el banner «Sin señal desde HH:MM» y la última lectura conocida.
+
+**Figura 4.91**
+
+*EventStorming del contexto Monitoring & Telemetry*
+
+<p align="center">
+  <img src="assets/images/chapter-04/eventstorming-bc4-monitoring-tb1.svg" alt="EventStorming del contexto Monitoring & Telemetry" width="1000"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+#### BC5 · Alert & Reporting
+
+Este contexto reacciona a los eventos de monitoreo. Al recibir la solicitud de una alerta, la política del contexto la clasifica como advertencia o como crítica según la tolerancia, la registra y genera una notificación para el Coordinador Logístico y el Cliente de Carga (con envío de correo en el caso de alertas críticas). El Coordinador registra la acción correctiva desde la ventana modal descrita en la sección 4.4; si marcó la casilla «Notificar al Cliente de Carga», se envía además una notificación al cliente. La alerta se cierra cuando la lectura vuelve al rango. El contexto también registra incidencias, genera el reporte térmico en PDF y controla la lectura de las notificaciones.
+
+**Figura 4.92**
+
+*EventStorming del contexto Alert & Reporting*
+
+<p align="center">
+  <img src="assets/images/chapter-04/eventstorming-bc5-alerts.png" alt="EventStorming del contexto Alert & Reporting" width="1000"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+### 4.6.2. Software Architecture Context Diagram
+
+El diagrama de contexto (nivel 1 del modelo C4) muestra FríoTrack como una sola caja y a su alrededor las personas que lo usan y los sistemas externos con los que se comunica (Brown, s. f.). Su utilidad es acordar el alcance del sistema con lectores no técnicos.
+
+**Figura 4.93**
+
+*Diagrama de contexto del sistema FríoTrack (modelo C4, nivel 1)*
+
+<p align="center">
+  <img src="assets/images/chapter-04/c4-contexto.png" alt="Diagrama de contexto del sistema FríoTrack (modelo C4, nivel 1)" width="1000"><br>
+  <i>Nota.</i> Elaboración propia, con base en el modelo C4.
+</p>
+
+**Tabla 4.26**
+
+*Elementos del diagrama de contexto*
+
+
+| Elemento | Tipo | Descripción y relación con FríoTrack |
+| :--- | :--- | :--- |
+| **Coordinador Logístico** | Persona | Empresa de transporte. Programa envíos, administra unidades y conductores y atiende alertas. Usa el sistema mediante HTTPS. |
+| **Cliente de Carga** | Persona | Productor, exportador o comprador. Consulta el estado térmico de sus envíos y descarga reportes. Usa el sistema mediante HTTPS. |
+| **FríoTrack** | Sistema | Plataforma web para el monitoreo casi en tiempo real de temperatura, humedad y posición de cargas refrigeradas. |
+| **Sensores de temperatura, humedad y GPS** | Sistema externo | Dispositivos instalados en cada unidad. Envían lecturas y posiciones a FríoTrack mediante HTTPS con formato JSON. |
+| **Servicio de correo electrónico** | Sistema externo | Entrega los correos de confirmación de cuenta, de recuperación de contraseña y de alertas críticas. |
+| **OpenStreetMap** | Sistema externo | Provee las teselas de los mapas donde se muestran rutas y posiciones (OpenStreetMap Foundation, s. f.). |
+
+*Nota.* Elaboración propia.
+
+### 4.6.3. Software Architecture Container Diagrams
+
+El diagrama de contenedores (nivel 2 del modelo C4) descompone FríoTrack en sus unidades ejecutables y muestra las decisiones tecnológicas. Un contenedor, en este modelo, es una aplicación o un almacén de datos que debe estar en ejecución para que el sistema funcione, y no un contenedor de Docker.
+
+**Figura 4.94**
+
+*Diagrama de contenedores de FríoTrack (modelo C4, nivel 2)*
+
+<p align="center">
+  <img src="assets/images/chapter-04/c4-containers-tb1.svg" alt="Diagrama de contenedores de FríoTrack (modelo C4, nivel 2)" width="1000"><br>
+  <i>Nota.</i> Elaboración propia, con base en el modelo C4.
+</p>
+
+**Tabla 4.27**
+
+*Contenedores de FríoTrack y decisiones tecnológicas*
+
+
+| Contenedor | Tecnología | Responsabilidad | Justificación |
+| :--- | :--- | :--- | :--- |
+| **Landing Page** | HTML, CSS y JavaScript, sitio estático | Presentar la propuesta de valor y dirigir al registro o al inicio de sesión. | Contenido público que no requiere lógica de servidor y que se sirve de forma estática y rápida. |
+| **Aplicación web (SPA)** | Vue 3, Vite, PrimeVue, Leaflet | Interfaz del Coordinador Logístico y del Cliente de Carga: dashboard, envíos, alertas, historial y reportes. | Vue 3 y Vite permiten una interfaz reactiva; PrimeVue (PrimeTek, s. f.) aporta los componentes descritos en la sección 4.1.2; Leaflet (Agafonkin, s. f.) dibuja los mapas con las teselas de OpenStreetMap. |
+| **API web** | ASP.NET Core Web API, C# | Aplicar las reglas de negocio, autenticar con JWT, recibir las lecturas de los sensores, evaluar alertas y generar los reportes PDF. | Centraliza las reglas del dominio en un único lugar; los tokens JWT (Jones et al., 2015) permiten autenticar sin mantener sesión en el servidor; la API se documenta con OpenAPI. |
+| **Base de datos** | PostgreSQL | Almacenar usuarios, flota, envíos, lecturas, alertas, notificaciones y reportes. | Base relacional con integridad referencial, tipos para fecha y hora con zona horaria y soporte de campos JSON (The PostgreSQL Global Development Group, s. f.). |
+| **OpenStreetMap** | Sistema externo | Proveer las teselas del mapa. | Alternativa abierta que no exige licencia comercial de mapas. |
+| **Sensores** | Sistema externo | Reportar lecturas y posiciones. | Cada unidad lleva un sensor asignado en el contexto Fleet & Resource Management. |
+| **Servicio de correo** | Sistema externo | Entregar correos transaccionales. | Evita operar un servidor de correo propio. |
+
+*Nota.* Elaboración propia.
+
+En la arquitectura objetivo, la aplicación web usa REST/JSON sobre HTTPS y credenciales emitidas por IAM. Una aplicación web describe el producto que utiliza el navegador; SPA describe su estrategia de navegación y renderizado del cliente. El contenedor cliente será una aplicación Vue de tipo SPA, separado del contenedor de API y de la landing. En TB1 la aplicación usa un repositorio local de demostración; aún no emite JWT ni consume una API interna desplegada. Los sensores envían sus lecturas a un punto de acceso específico de la API. La API es el único contenedor que accede a la base de datos y a los sistemas externos de correo, de modo que las credenciales y las reglas de negocio no se exponen al navegador.
+
+### 4.6.4. Software Architecture Component Diagrams
+
+Se separan los componentes del contenedor cliente y del contenedor API según los cinco Bounded Contexts. Los diagramas describen responsabilidades y contratos; el backend es un diseño pendiente de implementación y la primera aplicación cliente usa almacenamiento local de prueba. Las fuentes editables están en `assets/architecture/`: Mermaid, PlantUML y Structurizr DSL. Su traslado a la herramienta solicitada por el curso y las capturas compartidas siguen pendientes.
+
+#### 4.6.4.1. Componentes del frontend
+
+![Componentes del frontend Vue](assets/images/chapter-04/c4-frontend-tb1.svg)
+
+| Contexto/componente | Tecnología | Responsabilidad | Relación |
+|---|---|---|---|
+| IAM: Access/Profile views | Vue y PrimeVue | Selección de perfil demo y preferencias; registro y login de diseño | AppStore obtiene el perfil demo; autenticación servidor pendiente |
+| Fleet: Resource views | Vue, formularios PrimeVue | Crear/editar vehículos y conductores, asociar sensores de prueba | Valida unicidad y disponibilidad en operations.js |
+| Shipment: List/Detail/Wizard views | Vue y PrimeVue | Programar en cuatro pasos, cambiar estados permitidos y buscar | AppStore coordina validación y persistencia local |
+| Monitoring: Reading/Map components | Vue y Leaflet | Lecturas y ubicaciones de ejemplo, rango térmico y señal | Lecturas demo; teselas OpenStreetMap vía HTTPS |
+| Alert & Reporting: Alert/History views | Vue | Acciones correctivas, avisos internos e historial de prueba | Aplica permisos del perfil; exportación identificada como demo |
+| AppStore / LocalDemoRepository | JavaScript y localStorage | Estado reactivo y persistencia local con versión | Adaptador sustituible por HTTP en AV2; no frontera de seguridad |
+| Shared UI / i18n / navigation | Vue, PrimeVue y JavaScript | Layout, foco, rutas hash e inglés/español | Utilizado por todas las vistas |
+
+La autorización local evita acciones incompatibles durante la demostración; un usuario puede manipular el navegador. La API futura validará identidad, tenant y permisos en cada solicitud. No se representan reglas del dominio como componentes de UI ni se declara que localStorage sea una base de datos compartida.
+
+#### 4.6.4.2. Componentes del backend
+
+![Componentes de la API por contexto y capa](assets/images/chapter-04/c4-backend-tb1.svg)
+
+Cada columna corresponde a un contexto: IAM, Fleet, Shipment, Monitoring y Alert & Reporting. En cada uno, **Interfaces** expone controladores REST y DTO; **Application** coordina command/query handlers, validación de solicitud y transacciones; **Domain** contiene agregados, objetos de valor, reglas y puertos; **Infrastructure** implementa esos puertos con EF Core y adaptadores. Interfaces depende de Application, Application de Domain, e Infrastructure implementa interfaces definidas hacia el interior. El dominio no depende de EF Core, controladores ni correo externo.
+
+| Componente | Tecnología propuesta | Responsabilidad |
+|---|---|---|
+| REST controllers / DTO | ASP.NET Core y C# | Validar forma de solicitud, identidad y mapear respuestas HTTP |
+| Command/query handlers | C# | Coordinar casos de uso por contexto y una unidad de trabajo |
+| Aggregates / domain services / ports | C# | Proteger rangos, reservas y transiciones; emitir eventos internos |
+| Repository / UnitOfWork adapters | EF Core y PostgreSQL | Guardar agregados; unicidad, FK y transacciones |
+| In-process event dispatcher | C# | Publicar eventos después de aceptar el caso de uso; reacciones de aplicación |
+| Sensor adapter | C# | Traducir datos de sensores al comando RecordReading |
+| Mail / Report adapters | C# | Aislar correo externo y generación de documento térmico |
+
+`ShipmentScheduled` solicita reserva; `TransitStarted` activa monitoreo; `ReadingOutOfRange` y `SignalLost` solicitan alertas; entrega/cancelación liberan recursos. Estas son integraciones **propuestas**, no un bus implementado. La reserva que condiciona la programación debe ser validada y confirmada dentro del caso de uso; un evento aceptado no justifica sobreasignar recursos.
+
+#### 4.6.4.3. Otros contenedores
+
+La landing tiene contenido/estilo (`index.html`, CSS), internacionalización (`i18n.js` y diccionarios), navegación/planes/contacto (`app.js`) y simulador identificado (`hero-sim.js`). El almacén PostgreSQL es un contenedor de datos, cuyo detalle se presenta en 4.8; no se lo representa como una aplicación con controladores. Las teselas, sensores y correo son sistemas externos, no contenedores que el equipo implementa.
