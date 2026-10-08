@@ -443,3 +443,61 @@ El ciclo de vida de desarrollo de FríoTrack está sujeto a un conjunto de restr
 *If* logistics coordinators with high daily operational volumes
 *Attain* the ability to find specific shipments, units, or routes within seconds, minimizing search fatigue
 *With* an advanced search bar and multi-criteria filters on the active shipments dashboard.
+
+#### 1.2.2.4. Lean UX Canvas
+
+El Lean UX Canvas es una herramienta ágil que sintetiza los elementos clave del proceso Lean UX en un único artefacto visual colaborativo. A continuación, se presenta el canvas desarrollado por el equipo para el diseño y concepción de FrioTrack:
+
+*Lean UX Canvas*
+
+<p align="center">
+  <img src="assets/images/chapter-01/lean-ux-canvas.png" alt="Lean UX Canvas de FrioTrack" width="800"><br>
+  <i>Nota. Elaboración propia.</i>
+</p>
+
+<p align="center"> Enlace público del Lean UX Canvas: https://miro.com/app/board/uXjVHIgbY-o=/?share_link_id=988098140826 </p>
+
+## 1.3. Segmentos objetivo
+
+La delimitación de los segmentos objetivo de FríoTrack responde al diagnóstico sobre las falencias en el transporte terrestre de productos perecibles descritas por la FAO (2022) y el Banco Mundial (2023), la factibilidad de contacto directo para las fases de validación operativa, y el mapa de corredores logísticos identificado por el MTC (2023). A partir de este análisis, se han estructurado dos grupos clave de usuarios cuyos roles interactúan de forma directa y complementaria a lo largo de la cadena de suministro agroalimentaria:
+
+---
+
+### Segmento 1: Empresas de Transporte Refrigerado
+
+**Descripción general**
+Este grupo se encuentra integrado por empresas de transporte y operadores logísticos independientes encargados de brindar servicios de traslado terrestre bajo régimen de temperatura controlada para insumos perecibles y productos congelados. Su responsabilidad principal abarca la operación continua y el mantenimiento técnico de las unidades de frío durante todo el itinerario, asegurando que la carga ingrese a su destino respetando estrictamente los parámetros térmicos fijados por el cliente. La dificultad central que atraviesa este sector radica en la falta de visibilidad en tiempo real sobre las condiciones del compartimento de carga mientras las unidades permanecen en carretera, lo que anula la capacidad de reacción inmediata ante averías imprevistas del sistema de refrigeración.
+
+**Características demográficas y estadísticas de contexto**
+Las decisiones de gestión en este segmento son tomadas por coordinadores de flota y gerentes de operaciones cuyas edades oscilan mayoritariamente entre los 28 y 55 años. La infraestructura operativa de estas compañías se concentra en Lima Metropolitana y en los principales nodos agroexportadores del país —La Libertad, Ica, Piura y Lambayeque—, coincidentes con los corredores logísticos identificados por el MTC (2023). En lo relativo al nivel educativo, predomina la formación técnica o universitaria en logística, administración y disciplinas afines. Dado el nivel de desempeño logístico general del país (puesto 61/139 en el LPI del Banco Mundial, 2023), es razonable estimar una baja penetración de herramientas tecnológicas de control de flotas y monitoreo térmico remoto entre operadores de pequeña y mediana escala.
+
+**Características psicográficas y conductuales**
+Los responsables operativos conviven con un alto nivel de estrés derivado del riesgo constante de que una avería no detectada en el equipo frigorífico derive en la pérdida total de despachos de alto valor comercial. Ante la falta de sistemas integrados, la supervisión de la ruta se efectúa de manera informal mediante llamadas telefónicas periódicas con el conductor y revisiones manuales en puntos de control estratégicos. Si bien estos profesionales emplean cotidianamente computadoras para tareas administrativas y teléfonos inteligentes de gama media, se observa una adopción incipiente de soluciones orientadas al Internet de las Cosas (IoT) o plataformas de gestión remota. No obstante, muestran una elevada receptividad hacia la incorporación de herramientas tecnológicas accesibles que hayan demostrado eficacia en la disminución de pérdidas de productos y en el fortalecimiento de la confianza con sus clientes.
+
+**Puntos de dolor (Pain Points)**
+* Incertidumbre permanente respecto al estado térmico real de la mercadería a lo largo de la ruta.
+* Ausencia de mecanismos automatizados para la emisión de alertas tempranas ante fallas en los sistemas de refrigeración.
+* Dificultad para fundamentar de manera objetiva ante los clientes el cumplimiento continuo del rango de temperatura solicitado durante el traslado.
+* Pérdida sostenida de oportunidades de negocio frente a firmas exportadoras que exigen trazabilidad térmica rigurosa como condición imprescindible en sus contratos.
+
+---
+
+### Segmento 2: Productores/Exportadores y Compradores de Alimentos Perecibles
+
+**Descripción general**
+Este segmento reúne a los actores de la cadena comercial que despachan o recepcionan insumos y productos perecibles cuya calidad depende de una cadena de frío ininterrumpida. Entre ellos se encuentran los productores agrícolas, las agroexportadoras, las plantas de procesamiento industrial y los compradores finales, tales como cadenas de supermercados, distribuidoras y clientes internacionales. La exigencia fundamental de este grupo reside en disponer de evidencias auditables y confiables que certifiquen que la carga se mantuvo dentro del rango térmico estipulado a lo largo de todo el trayecto, garantizando con ello la inocuidad y los estándares de calidad requeridos para su procesamiento o comercialización.
+
+**Características demográficas y estadísticas de contexto**
+El perfil de los profesionales que conforman este segmento abarca un rango etario que va de los 28 a los 60 años. Geográficamente, la actividad se concentra en Lima Metropolitana y en los valles agrícolas de alta productividad dedicados a la exportación —La Libertad, Ica, Piura y Lambayeque—, en línea con el crecimiento de las exportaciones agropecuarias no tradicionales reportado por el INEI (2023). La composición académica y la tipología de negocio son heterogéneas, abarcando desde supervisores de campo con formación técnica hasta gerentes de calidad y logística con estudios universitarios de grado y posgrado. Se trata de organizaciones que mueven volúmenes constantes de carga refrigerada y cuyo nivel de operación está condicionado por la observancia de normas y certificaciones internacionales de inocuidad alimentaria.
+
+**Características psicográficas y conductuales**
+Existe una marcada sensibilidad hacia la variable del tiempo y el control de la temperatura, dado que cualquier alteración en la refrigeración compromete de forma directa la vida útil, el valor comercial y la inocuidad del producto. Esta situación genera una constante frustración operativa ante la falta de comunicación proactiva por parte de las empresas de transporte respecto a las condiciones de la carga en tránsito. En comparación con el sector transportista, este segmento exhibe una mayor familiaridad con herramientas digitales de gestión de datos e implementación de sistemas de calidad. Asimismo, demuestran un claro interés por adoptar tecnologías que reduzcan la incertidumbre dentro de sus cadenas de suministro, en un contexto donde la FAO (2022) señala la trazabilidad térmica como un factor crítico para reducir pérdidas de alimentos.
+
+**Puntos de dolor (Pain Points)**
+* Incertidumbre sobre el mantenimiento del rango térmico adecuado en los productos recibidos al concluir el traslado.
+* Imposibilidad de anticipar el deterioro de la carga antes de su llegada a la planta de recepción para activar planes de contingencia.
+* Carencia de un canal de comunicación formal e integrado con el transportista para la notificación inmediata de incidencias térmicas.
+* Dificultad para evaluar con criterios objetivos el nivel de cumplimiento y desempeño de sus proveedores de transporte refrigerado debido a la falta de historiales documentados.
+* Presión creciente por parte de auditorías de calidad y certificaciones internacionales para respaldar con datos verificables la trazabilidad térmica en toda la cadena de abastecimiento.
+
+---
