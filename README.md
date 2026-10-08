@@ -3085,12 +3085,6 @@ El diseño prevé consultas de envíos autorizados por empresa y cliente, últim
 
 # Capítulo V: Product Implementation, Validation & Deployment
 
-Proyecto: FríoTrack. Startup: BlackStartup. Entrega: TB1. Edición del capítulo: 08/10/2026. Corte de evidencias técnicas: 07/10/2026. Team Leader confirmado: Atauje Barreto, Alexander Sebastián.
-
-FríoTrack propone monitorear las condiciones de transporte de carga refrigerada para dos segmentos: Coordinador Logístico y Cliente de Carga. Este capítulo documenta la configuración del trabajo, el antecedente del Sprint 1 y la primera aplicación frontend del Sprint 2. Se conserva la estructura del enunciado y se desarrolla Sprint 2 con el formato del ejemplo entregado, adaptando sus tablas al dominio y a las evidencias de FríoTrack.
-
-En el corte registrado existen una landing histórica en GitHub Pages, una landing corregida y una aplicación Vue ejecutadas localmente, y fuentes publicadas mediante PRs de borrador. El frontend usa datos de ejemplo y localStorage. Su despliegue en AWS o Azure, la nueva publicación de la landing y la validación grupal siguen pendientes.
-
 ## 5.1. Software Configuration Management
 
 ### 5.1.1. Software Development Environment Configuration
@@ -3108,19 +3102,6 @@ El entorno separa gestión del proyecto, requisitos, diseño, implementación, p
 | Software Testing | Node test runner y navegador | Revisar reglas de dominio, compilación y recorridos observables. | 15 pruebas aprobadas, build y capturas del 07/10/2026. |
 | Software Documentation | Markdown, README y OpenAPI/Swagger previsto | Documentar configuración, alcance y evidencias; OpenAPI cuando existan servicios. | Capítulo y recibos locales; sin Swagger de servicios ejecutados. |
 | Software Deployment | GitHub Pages histórico; AWS o Azure para frontend TB1 | Publicar versiones comprobables y enlazar landing con aplicación. | Compilación preparada; cuenta y publicación cloud pendientes. |
-
-La interfaz utiliza la identidad visual de FríoTrack y componentes PrimeVue. La conformidad completa con Material Design, accesibilidad y ARIA debe cotejarse con los artefactos UX y la revisión final. Inglés estadounidense es el idioma inicial de un navegador nuevo y español latinoamericano la alternativa.
-
-Para reproducir el frontend desde su carpeta de fuentes se utiliza el lockfile del proyecto:
-
-```sh
-npm ci
-npm test
-npm run build
-npm run dev
-```
-
-El desarrollo usa `http://127.0.0.1:5173/` y la previsualización del build, mediante `npm run preview`, usa `http://127.0.0.1:4173/`. Son direcciones de revisión local. El estado de ejemplo reside en la clave `friotrack.tb1.sample.v1`; las posiciones y lecturas no provienen de entrevistas ni de sensores reales.
 
 ### 5.1.2. Source Code Management
 
@@ -3475,11 +3456,3 @@ La integración observada deja las fuentes revisables en GitHub. Su autoría reg
 | Daga Chávez, Joaquín Leonardo | Eshnikeee | No documentados en este conjunto | No documentados en este conjunto | Pendiente; registrar cambios y revisiones reales. |
 | Saavedra Flores, Rodrigo Andree | rodrigoxd67 | No documentados en este conjunto | No documentados en este conjunto | Pendiente; registrar cambios y revisiones reales. |
 | Vera Solsol, Nayely Macarena | Macaxprogram29 | No documentados en este conjunto | No documentados en este conjunto | Pendiente; registrar cambios y revisiones reales. |
-
-Las ramas registradas son feature/tb1-report-corrections, feature/tb1-landing-corrections, feature/tb1-frontend-application y feature/av2-api-design. Los cuatro PRs estaban en draft; no se registran aprobaciones cruzadas ni una release o etiqueta de cierre.
-
-Evidencias de colaboración por completar: capturas de Pull Requests con autor, revisor y estado real; Network graph; Contributors por periodo, repositorio y rama; captura de board actualizado y relación de tareas; actas breves de planning, review y retrospectiva con participantes y decisiones. Los conteos no deben duplicar commits entre ramas ni confundir autor Git con líder de aspecto.
-
-El equipo confirmó como segunda sesión sincrónica semanal los sábados de 09:00 a 11:00, America/Lima. La semana exacta de entrega sigue por confirmar. Cada integrante debe revisar el material que presenta, registrar sus aportes y participar en las grabaciones y sustentación.
-
-La evaluación de participación corresponde al Team Leader Atauje Barreto, Alexander Sebastián, con evidencias y calificaciones reales. Student Outcome, Collaboration Insights y registro de versiones del informe deben actualizarse con el cierre efectivo del sprint.
