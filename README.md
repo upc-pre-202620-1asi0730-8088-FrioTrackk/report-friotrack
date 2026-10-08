@@ -274,3 +274,75 @@ En su etapa inicial, FríoTrack enfoca sus operaciones en el mercado peruano. El
 | <img src="assets/images/chapter-01/u202219829.png" alt="Joaquín Daga" width="120"> | **Daga Chávez, Joaquín Leonardo — u202219829**<br>Estudiante de la carrera de Ingeniería de Software. Especializado en el análisis de requisitos y documentación técnica de proyectos. Domina herramientas de control de versiones con Git y GitHub, aportando rigor en la gestión del repositorio y el aseguramiento de la calidad de la documentación. |
 | <img src="assets/images/chapter-01/u20241D811.png" alt="Rodrigo Saavedra" width="120"> | **Saavedra Flores, Rodrigo Andree — u20241D811**<br>Estudiante de la carrera de Ingeniería de Software. Tiene fortalezas en el diseño UX/UI con Figma y modelado de procesos. Aporta al equipo capacidad analítica para la investigación de mercado, definición de segmentos objetivo y experiencia de usuario. |
 | <img src="assets/images/chapter-01/u20231h171.png" alt="Nayely Vera" width="120"> | **Vera Solsol, Nayely Macarena — u20231H17**<br>Mi nombre es Nayely Macarena Vera Solsol, tengo 20 años y estoy cursando el 5to ciclo de la carrera de Ingeniería de Software. Me apasiona el proceso de aprendizaje continuo y el trabajo colaborativo, aportando compromiso, adaptabilidad y buena comunicación al equipo. Cuento con conocimientos en C++ y actualmente me encuentro reforzando mi nivel de inglés para ampliar mis oportunidades profesionales y responder de manera efectiva a los retos tecnológicos actuales. Me comprometo a aportar de forma activa, responsable y dedicado al desarrollo del proyecto para lograr resultados de calidad. |
+
+## 1.2. Solution Profile
+
+**Product Description**
+
+FríoTrack es una plataforma web distribuida enfocada en la gestión inteligente y el monitoreo continuo de la cadena de frío, concebida para transformar los niveles de visibilidad, control operativo y trazabilidad térmica en el transporte terrestre de alimentos perecibles y productos congelados a nivel nacional. La solución centraliza y procesa en tiempo casi real la telemetría recolectada durante cada traslado, registrando de forma sistemática variables críticas como la temperatura ambiental e interna del compartimento frigorífico, la humedad relativa, la ubicación geográfica exacta del vehículo mediante posicionamiento GPS, la tipología de la carga transportada, los puntos de origen y destino, y la generación automática de alertas inmediatas ante cualquier excursión térmica o contingencia detectada durante el trayecto.
+
+### 1.2.1. Antecedentes y problemática
+
+El transporte refrigerado de alimentos en el Perú representa un eslabón determinante dentro de la cadena de valor agroalimentaria y agroexportadora. Un fallo en este proceso genera pérdidas financieras e incrementa riesgos en la inocuidad alimentaria. Como se señaló, el Perú ocupa el puesto 61 de 139 países en el Índice de Desempeño Logístico del Banco Mundial (2023), lo que evidencia que la coordinación de la cadena de suministro y la trazabilidad de la carga refrigerada en el país presentan brechas estructurales frente a otros mercados de la región.
+
+La FAO (2022) señala que el Perú pierde más de 12 millones de toneladas de alimentos a lo largo de la cadena productiva, y que buena parte de esas pérdidas ocurre en etapas donde la ausencia de monitoreo remoto impide corregir a tiempo fallas en la conservación térmica de los productos. Esto es particularmente relevante para alimentos con rangos térmicos estrictos, como los que produce y exporta el Perú (arándanos, palta, uva, productos hidrobiológicos), cuya calidad comercial se deteriora con variaciones de temperatura de pocas horas.
+
+Para estructurar formalmente la problemática, el equipo desarrolló el análisis **5W's + 2H's**:
+
+* **Who (¿Quiénes son los afectados?)**
+  * **Productores y exportadores agroindustriales:** organizaciones que transportan mercadería de alta sensibilidad (arándanos, palta, uva, productos hidrobiológicos) hacia plantas de procesamiento, terminales portuarios o centros de distribución, necesitando garantizar la continuidad de la temperatura requerida.
+  * **Empresas de transporte refrigerado:** operadores de flete que, dado el nivel de desempeño logístico del país (Banco Mundial, 2023), no cuentan con sistemas de telemetría e integración de datos térmicos en tiempo real.
+  * **Compradores, plantas de procesamiento y cadenas de retail:** receptores de carga que exigen verificar la continuidad térmica antes del ingreso o procesamiento del lote.
+  * **Gestores de calidad y coordinadores logísticos:** auditores responsables de validar estándares térmicos requeridos por certificaciones de inocuidad y contratos de exportación.
+
+* **What (¿Cuál es el problema?)**
+  * La falta de seguimiento telemático e interrupciones en la lectura de temperatura y humedad en el transporte refrigerado, desencadenando:
+    * Imposibilidad de detectar fluctuaciones térmicas en tiempo real.
+    * Ausencia de alertas preventivas para corregir fallos mecánicos del equipo de refrigeración.
+    * Falta de auditorías y registros objetivos para deslindar responsabilidades operativas.
+    * Riesgos sanitarios que comprometen la certificación del producto final.
+
+* **Where (¿Dónde ocurre el problema?)**
+  * Se presenta en los corredores viales que, según el *Plan Nacional de Servicios e Infraestructura Logística de Transporte al 2032* (MTC, 2023), conectan los principales centros de producción agroexportadora con puertos y centros de consumo:
+    * La Libertad → Puerto de Salaverry / Lima (arándanos, espárragos, palta)
+    * Ica → Lima / Puerto del Callao (uva, palta, cítricos)
+    * Piura → Lima (mango, banano orgánico)
+    * Lambayeque → Lima (productos hidrobiológicos congelados)
+  * Estos trayectos combinan distancias extensas y variaciones climáticas que elevan la exigencia sobre los equipos de frío.
+
+* **When (¿Cuándo ocurre el problema?)**
+  * Es una deficiencia sostenida y operativa presente en los traslados diarios. Se intensifica durante las temporadas de alta demanda de exportación (campañas de fruta fresca), donde el uso intensivo de la flota incrementa la probabilidad de fallas mecánicas.
+
+* **Why (¿Por qué ocurre el problema?)**
+  * **Causas tecnológicas:** uso de termómetros manuales o data loggers pasivos sin conexión remota a plataformas web, consistente con la posición del Perú en el Índice de Desempeño Logístico del Banco Mundial (2023).
+  * **Causas organizacionales:** dificultad del sector transporte para estandarizar protocolos de mantenimiento de la cadena de frío frente a un mercado logístico todavía en desarrollo (MTC, 2023).
+  * **Causas económicas:** las soluciones telemáticas tradicionales de escala corporativa resultan costosas para el perfil operativo de las PYMEs de transporte.
+
+* **How (¿Cómo ocurre el problema?)**
+  * Al iniciar el viaje se ajusta manualmente el equipo refrigerador. Durante el traslado no existen revisiones telemáticas continuas. El conductor nota un fallo solo si la unidad emite sonidos anómalos o cuando se descarga el producto en destino, momento en que el daño a la carga es irreversible y no existen registros para determinar el punto de falla.
+
+* **How Much (¿Cuánto impacta el problema?)**
+  * Más de 12 millones de toneladas de alimentos se pierden a lo largo de la cadena productiva peruana (FAO, 2022).
+  * Desecho total o desvalorización comercial de lotes enteros por excursiones térmicas no detectadas.
+  * Conflictos comerciales entre generadores de carga y transportistas ante la falta de evidencias objetivas.
+  * Descalificación comercial de transportistas que no ofrecen trazabilidad frente a clientes exportadores.
+
+Para delimitar con precisión el alcance y el impacto del desarrollo del producto de software, el equipo ha establecido los siguientes objetivos:
+
+* **Objetivo General:**
+  * Diseñar, desarrollar e implementar un sistema web distribuido (compuesto por una aplicación de interfaz cliente responsive y un RESTful API de desarrollo interno) para la startup BlackStartup, que permita monitorear en tiempo casi real las condiciones de temperatura y humedad del transporte refrigerado de alimentos en el Perú, contribuyendo directamente a la reducción de pérdidas por ruptura de cadena de frío.
+
+* **Objetivos Específicos:**
+  * Desarrollar una aplicación frontend responsive que proporcione una experiencia de usuario intuitiva e inclusiva, optimizada para transportistas refrigerados, productores/exportadores y compradores.
+  * Construir un RESTful API del lado del servidor robusto y de alto rendimiento que garantice la persistencia segura, la lógica de negocio y la consistencia en el procesamiento de lecturas de sensores y alertas térmicas.
+  * Garantizar la cobertura del diseño inclusivo implementando atributos de accesibilidad ARIA e internacionalización (i18n) para soportar los idiomas inglés y español latinoamericano.
+  * Integrar de manera fluida un servicio geográfico de terceros que brinde soporte visual e interactivo al trayecto físico de las unidades de transporte refrigerado sobre mapas digitales.
+  * Alcanzar los criterios de éxito planteados en la visión de negocio: incorporar al menos 150 usuarios activos en los primeros 8 meses de operación, alcanzar una tasa de retención mensual superior al 75 % a partir del tercer mes y registrar un Net Promoter Score (NPS) mayor a 40 puntos.
+
+El ciclo de vida de desarrollo de FríoTrack está sujeto a un conjunto de restricciones tecnológicas, metodológicas y operativas impuestas para asegurar la calidad y los estándares de la ingeniería de software:
+
+* **Restricciones Tecnológicas del Servidor:** el backend de la plataforma se construirá utilizando C# con ASP.NET Core Web API, empleando Entity Framework Core como ORM y PostgreSQL como sistema gestor de base de datos relacional para el almacenamiento de la telemetría y los datos del sistema.
+* **Restricciones Tecnológicas del Cliente:** el frontend cliente se implementará sobre Vue.js utilizando JavaScript/TypeScript y la librería de componentes PrimeVue, garantizando un diseño alineado a los estándares de Material Design y adaptable a distintos dispositivos.
+* **Restricciones de Integración y Documentación:** el sistema debe consumir un servicio externo de mapas (Google Maps API o Leaflet/OpenStreetMap) para la visualización gráfica de rutas en tiempo real, e integrarse mediante llamadas API RESTful documentadas técnicamente con OpenAPI Specification (OAS) a través de Swagger.
+* **Restricciones de Proceso y Calidad de Código:** el proyecto debe gestionarse bajo el marco de trabajo ágil Scrum. El código fuente debe almacenarse en repositorios dentro de una organización pública en GitHub, aplicando GitFlow, nomenclatura estandarizada en inglés, Conventional Commits, y versionamiento formal bajo Semantic Versioning (SemVer 2.0.0).
+* **Restricciones de Idioma y Accesibilidad:** FríoTrack está diseñado de forma nativa en español para asegurar usabilidad óptima entre transportistas y productores peruanos. No obstante, para alinearse con las directrices de ingeniería globales y los requisitos de acreditación del curso, el sistema se desarrollará con un marco de internacionalización (i18n), con soporte técnico en inglés y español, y atributos ARIA para garantizar la accesibilidad web (a11y).
