@@ -2484,3 +2484,77 @@ Este flujo verifica primero que la cuenta corresponda al perfil de Cliente de Ca
 | El reporte térmico solo está disponible cuando el envío se entrega. | El botón «Descargar reporte» se habilita al concluir el envío. |
 
 *Nota.* Elaboración propia.
+
+## 4.5. Web Applications Prototyping
+
+> **Alcance de los artefactos:** el HTML histórico no sustituye el prototipo Figma solicitado. Los mock-ups móviles siguen siendo estáticos y no hay evidencia de enlaces de prototipo Figma. La aplicación Vue TB1 incorpora navegación responsive y cuatro pasos de programación; es una implementación demostrativa distinta del prototipo. El video de navegación y su captura/URL Microsoft Stream están pendientes.
+
+El prototipo de FríoTrack reúne los mock-ups de la Web Application en una experiencia navegable con la que es posible recorrer los flujos principales antes de escribir código de producción. Su propósito es doble: validar con el equipo y con usuarios que las tareas se pueden completar con la estructura propuesta, y ofrecer una referencia concreta para la implementación. Siguiendo el ciclo iterativo de diseño y evaluación que plantea la norma ISO 9241-210 (International Organization for Standardization [ISO], 2019), el prototipo es el insumo para la evaluación que se realizará en la siguiente etapa.
+
+El prototipo se entrega como un único archivo HTML autocontenido (sin dependencias externas), que incluye las tipografías, los íconos y las 20 pantallas de escritorio conectadas entre sí: las 18 del inventario de la sección 4.4 y las versiones de Notificaciones y Configuración del Cliente de Carga. Se abre en cualquier navegador moderno. Una barra superior permite volver a la pantalla anterior, regresar al inicio de sesión y saltar directamente al Dashboard del Coordinador Logístico o a la pantalla Envíos por recibir del Cliente de Carga. Los elementos interactivos se resaltan al pasar el cursor.
+
+La Tabla 4.20 resume las interacciones que el prototipo permite. Los menús laterales de ambos perfiles navegan a todas las secciones; las demás interacciones se listan por pantalla.
+
+**Tabla 4.20**
+
+*Interacciones disponibles en el prototipo*
+
+
+| Pantalla | Elemento interactivo | Resultado |
+| :--- | :--- | :--- |
+| Iniciar sesión | Botón «Iniciar sesión» | Abre el Dashboard del Coordinador Logístico. |
+| Iniciar sesión | Enlace «Regístrate» | Abre Crear cuenta. |
+| Iniciar sesión | Enlace «¿Olvidaste tu contraseña?» | Abre Recuperar contraseña. |
+| Crear cuenta | Botón «Crear cuenta» y enlace «Inicia sesión» | Regresan a Iniciar sesión. En el sistema real, crear la cuenta redirige al Dashboard (Coordinador Logístico) o a Envíos por recibir (Cliente de Carga). |
+| Recuperar contraseña | Enlace «Volver a iniciar sesión» | Regresa a Iniciar sesión. |
+| Dashboard | Botón «Nuevo envío» | Abre el paso 1 del registro de un envío. |
+| Dashboard | Tarjeta de un envío de la lista | Abre el detalle del envío. |
+| Envíos | Botón «Nuevo envío» y cada fila de la tabla | Abren el paso 1 del registro y el detalle del envío, respectivamente. |
+| Nuevo envío · paso 1 | Botones «Siguiente» y «Cancelar» | El HTML histórico omite pasos 2 y 3; esta limitación se conserva como antecedente. En la aplicación Vue TB1 se recorren los cuatro pasos. |
+| Nuevo envío · paso 4 | Botones «Atrás», «Confirmar y programar» y «Cancelar» | Regresan al paso 1 o vuelven a la lista de envíos. |
+| Detalle del envío | Pestaña «Alertas» y botón «Registrar incidencia» | Abren la pestaña Alertas o la ventana modal de acción correctiva. |
+| Detalle · Alertas | Botón «Registrar acción» y pestaña «Resumen» | Abren la ventana modal o regresan al resumen. |
+| Registrar acción correctiva | Botones «Guardar acción» y «Cancelar» | Regresan a la pestaña Alertas. |
+| Notificaciones | Cada notificación | Abre el detalle del envío; la alerta crítica abre directamente la pestaña Alertas. |
+| Envíos por recibir (Cliente) | Tarjeta de un envío | Abre el detalle en modo de solo lectura. |
+| Detalle (Cliente) | Menú lateral | Navega a Envíos por recibir, Historial, Notificaciones y Configuración del Cliente. |
+
+*Nota.* Elaboración propia.
+
+El recorrido que se muestra en la Figura 4.86 sigue el camino principal del Coordinador Logístico (iniciar sesión, abrir un envío crítico, registrar la acción correctiva, programar un nuevo envío) y termina en la vista del Cliente de Carga.
+
+**Figura 4.86**
+
+*Recorrido del prototipo interactivo de FríoTrack (animación)*
+
+<p align="center">
+  <img src="assets/images/chapter-04/prototype-recorrido.gif" alt="Recorrido del prototipo interactivo de FríoTrack (animación)" width="900"><br>
+  <i>Nota.</i> La animación recorre doce pantallas en el orden: inicio de sesión, Dashboard, detalle del envío FT-2421, pestaña Alertas, registro de la acción correctiva, retorno a Alertas, lista de envíos, nuevo envío (pasos 1 y 4), lista de envíos, Envíos por recibir del Cliente de Carga y detalle del envío. Elaboración propia.
+</p>
+
+**Alcance del prototipo.** El prototipo simula la experiencia de uso. No implementa autenticación real, persistencia de datos, envío de correos, recepción de lecturas de sensores ni conexión con servicios de mapas: los datos son ficticios y los mapas y gráficos son ilustraciones. Las secciones Vehículos, Conductores, Historial y Configuración se pueden visitar, pero sus formularios no ejecutan acciones. Las versiones móviles se presentan como mock-ups estáticos en la sección 4.4.3.
+
+**Plan de evaluación.** Con el prototipo se evaluarán tres tareas, una por cada flujo de usuario de la sección 4.4.4. La Tabla 4.21 define la métrica de éxito de cada una. Los resultados se documentarán en la etapa de validación del proyecto, una vez ejecutadas las sesiones con usuarios.
+
+**Tabla 4.21**
+
+*Tareas y métricas para la evaluación del prototipo*
+
+
+| Tarea | Perfil | Métrica de éxito |
+| :--- | :--- | :--- |
+| Programar un envío con una carga a 2–5 °C. | Coordinador Logístico | Completa los cuatro pasos sin ayuda y sin errores de validación repetidos. |
+| Registrar la acción correctiva de una alerta crítica. | Coordinador Logístico | Llega desde la notificación al formulario y guarda la acción en menos de un minuto. |
+| Identificar si un envío está dentro del rango y ubicar el reporte térmico. | Cliente de Carga | Lee correctamente el estado térmico y localiza el botón de descarga en el detalle o en Historial. |
+
+*Nota.* Elaboración propia.
+
+**Enlaces del prototipo.**
+
+| Recurso | Enlace |
+| :--- | :--- |
+| Prototipo interactivo en HTML (archivo del repositorio) | [`assets/prototype/friotrack-prototype.html`](assets/prototype/friotrack-prototype.html). Para verlo, descargue el archivo y ábralo en un navegador. |
+| Archivo de Figma del Bloque 4 (Product Design) | [figma.com/design/eJ6Ceq0H0FP0xWseNnKFFv](https://www.figma.com/design/eJ6Ceq0H0FP0xWseNnKFFv). Contiene las páginas Portada, 4.1 Style Guidelines, 4.2 IA y User Flows, 4.3 Landing Page y 4.5 Web App (wireframes y mock-ups). Las capturas de cada página están en [`assets/figma/capturas/`](assets/figma/README.md) y los archivos SVG de origen en [`assets/figma/svg/`](assets/figma/README.md). |
+| Landing Page publicada (GitHub Pages) | [upc-pre-202620-1asi0730-8088-friotrack.github.io/friotrack-landing](https://upc-pre-202620-1asi0730-8088-friotrack.github.io/friotrack-landing/) |
+| Repositorio de la Landing Page | [github.com/upc-pre-202620-1asi0730-8088-FrioTrack/friotrack-landing](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/friotrack-landing) |
+| Video demostrativo del prototipo | Pendiente de completar por el equipo. |
