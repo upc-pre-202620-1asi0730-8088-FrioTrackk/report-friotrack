@@ -166,15 +166,15 @@ El historial y las evidencias de colaboración de AV1 corresponden al repositori
   - [3.1. User Stories](#31-user-stories)
   - [3.2. Impact Mapping](#32-impact-mapping)
   - [3.3. Product Backlog](#33-product-backlog)
-- [Capítulo IV: Product Design][chapter-4]
-  - 4.1. Style Guidelines
-  - 4.2. Information Architecture
-  - 4.3. Landing Page UI Design
-  - 4.4. Web Applications UX/UI Design
-  - 4.5. Web Applications Prototyping
-  - 4.6. Domain-Driven Software Architecture
-  - 4.7. Software Object-Oriented Design
-  - 4.8. Database Design
+- [Capítulo IV: Product Design](#capítulo-iv-product-design)
+  - [4.1. Style Guidelines](#41-style-guidelines)
+  - [4.2. Information Architecture](#42-information-architecture)
+  - [4.3. Landing Page UI Design](#43-landing-page-ui-design)
+  - [4.4. Web Applications UX/UI Design](#44-web-applications-uxui-design)
+  - [4.5. Web Applications Prototyping](#45-web-applications-prototyping)
+  - [4.6. Domain-Driven Software Architecture](#46-domain-driven-software-architecture)
+  - [4.7. Software Object-Oriented Design](#47-software-object-oriented-design)
+  - [4.8. Database Design](#48-database-design)
 - [Capítulo V: Product Implementation, Validation & Deployment][chapter-5]
   - 5.1. Software Configuration Management
   - 5.2. Landing Page, Services & Applications Implementation
@@ -2955,3 +2955,108 @@ IAM contiene `Organization`, `UserAccount` y `PasswordResetToken`; los roles pre
 *Nota.* La fuente PlantUML incluye las enumeraciones y sus dependencias; los paneles muestran las entidades y agregados persistentes.
 
 Una acción válida cambia la alerta de `ACTIVE` a `ACKNOWLEDGED` y puede generar un aviso únicamente para el cliente asignado (US35). **Registrar la acción no demuestra recuperación.** La resolución requiere una lectura posterior dentro de ambos rangos; el historial conserva la alerta y su atención.
+
+## 4.8. Database Design
+
+### 4.8.1. Database Diagrams
+
+Se propone un esquema relacional de **17 tablas** para PostgreSQL. La fuente editable [database-tb1.mmd](assets/architecture/database-tb1.mmd) y el catálogo [backend-model-tb1.json](assets/architecture/backend-model-tb1.json) documentan columnas, claves, opcionalidad y 27 relaciones. No se ejecutaron Mermaid, SQL, migraciones ni una instancia de PostgreSQL. Las figuras son vistas vectoriales programáticas por contexto; el esquema responde al modelo de transporte actual y a los dos roles de usuario. `Organization` es una normalización prevista de la empresa, no una seguridad multitenant ya implementada.
+
+**Figura 4.98**
+
+*Diseño relacional previsto de FríoTrack, en cuatro paneles*
+
+**Panel de organización, cuentas y recursos**
+
+![ERD previsto: organización, cuentas, recuperación, unidades, conductores y sensores](assets/images/chapter-04/database-resources-tb1.svg)
+
+**Panel de envío, reserva e historial**
+
+![ERD previsto: envío con cuatro límites, reserva e historial](assets/images/chapter-04/database-shipment-tb1.svg)
+
+**Panel de monitoreo y telemetría**
+
+![ERD previsto: copia de límites, lecturas y posiciones](assets/images/chapter-04/database-monitoring-tb1.svg)
+
+**Panel de alertas, atención y evidencia**
+
+![ERD previsto: alertas, acciones, avisos, incidencias e informes](assets/images/chapter-04/database-alerts-tb1.svg)
+
+*Nota.* `PK` identifica una clave primaria; `FK`, una referencia; `UK`, una restricción de unicidad; `nullable`, un campo opcional. Las flechas identifican asociaciones principales y sus multiplicidades; la fuente Mermaid y la Tabla 4.32 contienen todas las relaciones. El [ERD PNG de AV1](assets/images/chapter-04/erd-friotrack.png) se conserva sin alteración como antecedente del modelo anterior.
+
+**Tabla 4.31**
+
+*Tablas propuestas por contexto delimitado*
+
+| Contexto | Tabla | Descripción prevista |
+| :--- | :--- | :--- |
+| IAM | `organizations` | Empresa de transporte que agrupa cuentas, recursos y envíos. |
+| IAM | `users` | Cuentas con empresa, rol, idioma, contraseña resumida, estado e intentos fallidos. |
+| IAM | `password_reset_tokens` | Tokens resumidos de recuperación, vencimiento y uso único. |
+| Fleet & Resource | `vehicles` | Unidades de la empresa, placa, capacidad y estado. |
+| Fleet & Resource | `drivers` | Conductores de la empresa, licencia y estado. |
+| Fleet & Resource | `sensors` | Dispositivos identificados con asignación opcional y única a una unidad. |
+| Fleet & Resource | `fleet_allocations` | Reserva de unidad y conductor por envío, intervalo, estado y liberación. |
+| Shipment | `shipments` | Empresa, coordinador, cliente, carga, peso, ruta, fechas, versión, estado y cuatro límites ambientales con tolerancia. |
+| Shipment | `shipment_history` | Acciones del envío, responsable, nota, fecha y cambios de estado cuando corresponda. |
+| Monitoring & Telemetry | `shipment_monitorings` | Copia de los cuatro límites y tolerancia, máximo silencio configurable, estado de señal y fechas de monitoreo. |
+| Monitoring & Telemetry | `sensor_readings` | Temperatura, humedad, fecha y resultado de ambos rangos. |
+| Monitoring & Telemetry | `position_reports` | Latitud, longitud y fecha de reporte. |
+| Alert & Reporting | `alerts` | Envío, tipo, severidad, estado, lectura de origen opcional y fechas de evolución. |
+| Alert & Reporting | `corrective_actions` | Alerta atendida, responsable, comentario, fecha y elección de notificar al cliente. |
+| Alert & Reporting | `notifications` | Destinatario, envío, alerta opcional, tipo y fechas de creación/lectura. |
+| Alert & Reporting | `incidents` | Evento operativo del envío, responsable, descripción y fecha. |
+| Alert & Reporting | `thermal_reports` | Referencia al informe, responsable, fecha y resumen de evidencia en JSON. |
+
+*Nota.* No existen registros reales ni migraciones ejecutadas que se acrediten mediante este diseño.
+
+**Decisiones de diseño.** Se proponen las siguientes restricciones y patrones:
+
+- Usar UUID en las tablas de negocio y `bigint` en lecturas y posiciones; usar `timestamptz` para comparar instantes y `numeric` para los valores y límites ambientales.
+- Incluir `min_temp_c`, `max_temp_c`, `min_humidity_pct` y `max_humidity_pct` tanto en `shipments` como en `shipment_monitorings`. Los límites de inicio y la tolerancia forman una copia que conserva la interpretación de las mediciones históricas (US17).
+- Validar `min_temp_c < max_temp_c`, `0 ≤ min_humidity_pct < max_humidity_pct ≤ 100` y tolerancia no negativa. El frontend actual acepta temperatura entre −50 y 50 °C; estos son límites operativos del prototipo, no una recomendación universal de conservación. La futura validación deberá conservar los rangos admitidos por el contrato aprobado.
+- Validar peso positivo que no supere capacidad; salida anterior a llegada; origen diferente del destino; recursos habilitados y cliente autorizado. La reserva y programación deberán confirmar ambas asignaciones de forma atómica y rechazar intervalos solapados de unidad o conductor.
+- Aplicar unicidad a placa, licencia, serial, correo y código de envío; prever una asignación de sensor por unidad, una reserva por envío y un monitoreo por envío. La asociación opcional de sensor y los estados de borrador/inicio explican las cardinalidades `0..1`; una reserva liberada permanece para trazabilidad.
+- Limitar mediante `CHECK` los estados y roles previstos; comprobar coordenadas `−90..90` para latitud y `−180..180` para longitud. La severidad temporal y el máximo silencio configurable necesitan validación al integrar telemetría real.
+- Prever índices por empresa y estado del envío, por monitoreo/fecha de lectura, por envío/estado de alerta y por destinatario/fecha de lectura del aviso. Guardar el resumen del informe como `jsonb` conserva su contexto de generación; la copia de límites es una decisión deliberada de trazabilidad.
+- Verificar permisos y pertenencia en el servidor futuro; una FK por sí sola no garantiza que coordinador, cliente y recursos estén autorizados para una empresa. La selección de perfil y localStorage del frontend no sustituyen esa verificación.
+
+Las siguientes relaciones documentan el esquema completo. Las cardinalidades se leen **padre → hija**; una hija con FK no nullable referencia exactamente un padre, y la tabla indica cuántas hijas puede tener ese padre. Las relaciones opcionales especifican ambos extremos.
+
+**Tabla 4.32**
+
+*Relaciones propuestas entre tablas*
+
+| Tabla hija | Columna FK | Tabla padre | Cardinalidad padre → hija | Significado |
+| :--- | :--- | :--- | :--- | :--- |
+| `users` | `organization_id` | `organizations` | `1 → 0..*` | Empresa de la cuenta. |
+| `vehicles` | `organization_id` | `organizations` | `1 → 0..*` | Empresa propietaria de la unidad. |
+| `drivers` | `organization_id` | `organizations` | `1 → 0..*` | Empresa que administra al conductor. |
+| `shipments` | `organization_id` | `organizations` | `1 → 0..*` | Empresa que gestiona el envío. |
+| `password_reset_tokens` | `user_id` | `users` | `1 → 0..*` | Cuenta a la que pertenece el token. |
+| `sensors` | `vehicle_id` | `vehicles` | `0..1 → 0..1` | Sensor opcional y único por unidad; sensor aún sin asignar permitido. |
+| `fleet_allocations` | `shipment_id` | `shipments` | `1 → 0..1` | Reserva opcional en borrador, requerida al programar. |
+| `fleet_allocations` | `vehicle_id` | `vehicles` | `1 → 0..*` | Unidad reservada; se rechazan solapamientos activos. |
+| `fleet_allocations` | `driver_id` | `drivers` | `1 → 0..*` | Conductor reservado; se rechazan solapamientos activos. |
+| `shipments` | `coordinator_id` | `users` | `1 → 0..*` | Coordinador responsable de la programación. |
+| `shipments` | `client_id` | `users` | `1 → 0..*` | Cliente asignado con acceso de consulta. |
+| `shipment_history` | `shipment_id` | `shipments` | `1 → 0..*` | Envío al que pertenece la acción histórica. |
+| `shipment_history` | `actor_id` | `users` | `1 → 0..*` | Responsable de la acción. |
+| `shipment_monitorings` | `shipment_id` | `shipments` | `1 → 0..1` | Monitoreo opcional antes del inicio, único por envío. |
+| `sensor_readings` | `monitoring_id` | `shipment_monitorings` | `1 → 0..*` | Monitoreo que conserva y evalúa la lectura. |
+| `position_reports` | `monitoring_id` | `shipment_monitorings` | `1 → 0..*` | Monitoreo al que pertenece la posición. |
+| `alerts` | `shipment_id` | `shipments` | `1 → 0..*` | Envío afectado. |
+| `alerts` | `trigger_reading_id` | `sensor_readings` | `0..1 → 0..*` | Lectura opcional de origen; una pérdida de señal puede no tenerla. |
+| `corrective_actions` | `alert_id` | `alerts` | `1 → 0..*` | Alerta cuya atención se documenta. |
+| `corrective_actions` | `registered_by` | `users` | `1 → 0..*` | Coordinador que registra la acción. |
+| `notifications` | `user_id` | `users` | `1 → 0..*` | Destinatario autorizado del aviso. |
+| `notifications` | `shipment_id` | `shipments` | `1 → 0..*` | Envío al que se refiere el aviso. |
+| `notifications` | `alert_id` | `alerts` | `0..1 → 0..*` | Alerta de origen opcional. |
+| `incidents` | `shipment_id` | `shipments` | `1 → 0..*` | Envío afectado por la incidencia. |
+| `incidents` | `registered_by` | `users` | `1 → 0..*` | Responsable del registro. |
+| `thermal_reports` | `shipment_id` | `shipments` | `1 → 0..*` | Envío cuya evidencia se resume. |
+| `thermal_reports` | `generated_by` | `users` | `1 → 0..*` | Usuario que solicita/genera el informe autorizado. |
+
+*Nota.* Multiplicidades del diseño, no restricciones verificadas en una base de datos ejecutada.
+
+El diseño prevé consultas de envíos autorizados por empresa y cliente, última lectura con su fecha, periodos de mediciones sin interpolar vacíos, alertas abiertas y reconocidas, avisos no leídos e historial con evidencia. Su ejecución y seguridad deben demostrarse en la implementación posterior; este capítulo acredita la especificación local del modelo.
