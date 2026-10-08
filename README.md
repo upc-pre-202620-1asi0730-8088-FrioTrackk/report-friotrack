@@ -768,7 +768,7 @@ A continuación, se presenta el registro de las entrevistas realizadas a los rep
 | **Nombres y Apellidos**                | Jari Hassan                                                                                                                                                                                                                                                                                                                                                      |
 | **Edad**                               | 25 años                                                                                                                                                                                                                                                                                                                                                          |
 | **Distrito**                           | San Borja                                                                                                                                                                                                                                                                                                                                                        |
-| **Enlace al video (Microsoft Stream)** | Pendiente de agregar|
+| **Enlace al video (Microsoft Stream)** |[Entrevistas-Consolidado](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202219829_upc_edu_pe/IQAIrCLq6pSFSJvrtihV4MBEAclabwb3TRiATBksgwlaG60?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=ZMsYWh)|
 | **Timing de inicio y duración**        | Inicio: 00:40 - Fin: 10:42                                                                                                                                                                                                                                                                                                                       |
 | **Evidencia fotográfica**              | *<p><img src="assets/images/chapter-02/entrevista-segmento1-Hassan.png" width="400" alt="Logo AgroFlet"> </p>*                                                                                                                                                                                                                                                                     |
 
@@ -796,7 +796,7 @@ Estas funcionalidades ayudarían a prevenir pérdidas, mejorar la distribución 
 | **Nombres y Apellidos** | Farit (apellidos pendientes) |
 | **Edad** | 28 años |
 | **Distrito** | San Luis |
-| **Enlace al video (Microsoft Stream)** | Pendiente de agregar |
+| **Enlace al video (Microsoft Stream)** |[Entrevistas-Consolidado](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202219829_upc_edu_pe/IQAIrCLq6pSFSJvrtihV4MBEAclabwb3TRiATBksgwlaG60?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=ZMsYWh)|
 | **Timing de inicio y duración** | Inicio: 10:42 - Fin: 17:02|
 | **Evidencia fotográfica** |  <p><img src="assets/images/chapter-02/entrevista-seg1-farit.png" width="400" alt="Entrevista Farit"></p> |
 
@@ -831,7 +831,7 @@ En conclusión, la entrevista evidencia la necesidad de una **plataforma que int
 | **Nombres y Apellidos** | Irma Barreto |
 | **Edad** | 40 años |
 | **Distrito** | San Juan de Lurigancho |
-| **Enlace al video (Microsoft Stream)** |Pendiente de agregar|
+| **Enlace al video (Microsoft Stream)** |[Entrevistas-Consolidado](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202219829_upc_edu_pe/IQAIrCLq6pSFSJvrtihV4MBEAclabwb3TRiATBksgwlaG60?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=ZMsYWh)|
 | **Timing de inicio y duración** | Inicio: 17:05 - Fin: 23:53|
 | **Evidencia fotográfica** | <p><img src="assets/images/chapter-02/entrevista-segmento-2-irma-barreto.png" width="400" alt="Entrevista Irma Barreto"></p> |
 
@@ -862,7 +862,7 @@ En conclusión, la entrevista evidencia la necesidad de una **solución digital 
 | **Nombres y Apellidos** | Santiago Silva Jara |
 | **Edad** | 22 años |
 | **Distrito** | Víctor Larco Herrera (Trujillo) |
-| **Enlace al video (Microsoft Stream)** |Pendiente de agregar|
+| **Enlace al video (Microsoft Stream)** |[Entrevistas-Consolidado](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202219829_upc_edu_pe/IQAIrCLq6pSFSJvrtihV4MBEAclabwb3TRiATBksgwlaG60?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=ZMsYWh)|
 | **Timing de inicio y duración** | Inicio: 23:54 - Fin: 28:02 |
 | **Evidencia fotográfica** | <p><img src="assets/images/chapter-02/entrevista-segmento-2-santiago-silva-jara.png" width="400" alt="Entrevista Santiago Silva Jara"></p> |
 
@@ -890,7 +890,7 @@ En conclusión, la entrevista evidencia la necesidad de una **herramienta digita
 | **Nombres y Apellidos** | Carlos Astudillo |
 | **Edad** | 22 años |
 | **Distrito** | San Juan de Lurigancho |
-| **Enlace al video (Microsoft Stream)** | Pendiente de agregar |
+| **Enlace al video (Microsoft Stream)** |[Entrevistas-Consolidado](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202219829_upc_edu_pe/IQAIrCLq6pSFSJvrtihV4MBEAclabwb3TRiATBksgwlaG60?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=ZMsYWh)|
 | **Timing de inicio y duración** | Inicio: 28:06 - Fin 41:19 |
 | **Evidencia fotográfica** |<p><img src="assets/images/chapter-02/entrevista-seg2-carlos.png" width="400" alt="Entrevista Carlos Astudillo"></p> |
 
