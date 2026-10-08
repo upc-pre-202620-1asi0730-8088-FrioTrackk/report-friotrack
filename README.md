@@ -904,3 +904,17 @@ De esta manera, se identificó una oportunidad para desarrollar **FrioTrack**, u
 <div align="center">
   <img src="assets/images/chapter-02/empathy-mapping-seg2.jpg" alt="Empathy Mapping - Segmento 2" width="600">
 </div>
+
+### 2.4. Big Picture EventStorming
+
+En la sesión de **Big Picture EventStorming**, el equipo exploró de forma visual el panorama general del dominio de **FrioTrack**, enfocado en la telemetría IoT para la cadena de frío y la gestión de inventarios de productos perecibles. Se identificaron los principales eventos del ciclo de vida de los productos, desde la recepción e ingreso de la mercadería hasta su despacho, considerando el monitoreo de las condiciones de almacenamiento y transporte.
+
+Asimismo, se identificaron los sistemas externos que interactúan con la plataforma, como los sensores IoT y los servicios utilizados para generar alertas. Esta primera aproximación permitió alinear el entendimiento del equipo sobre el dominio y establecer las bases para el diseño detallado de la solución.
+
+**Primera fase: Eventos**
+
+<div align="center">
+  <img src="assets/images/chapter-02/big-picture.jpg" alt="Big Picture EventStorming - FrioTrack" width="600">
+  <p><i>Figura X. Big Picture EventStorming del proyecto FrioTrack.</i></p>
+</div>
+
