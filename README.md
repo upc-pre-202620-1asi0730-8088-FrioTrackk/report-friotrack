@@ -360,3 +360,85 @@ El ciclo de vida de desarrollo de FríoTrack está sujeto a un conjunto de restr
 **Our initial focus will be** logistics and quality coordinators of small and medium-sized refrigerated transport companies operating on export corridors between Peru's producing regions and Lima Metropolitana, as well as producers and buyers who require verifiable cold chain compliance.
 
 **We'll know we are successful when we see** at least 150 active users within the first 8 months, a monthly user retention rate above 75% starting from month 3, a 30% reduction in cold chain deviation incidents during transit, and a Net Promoter Score (NPS) exceeding 40 points after 3 months of platform usage.
+
+#### 1.2.2.2. Lean UX Assumptions
+
+**Business Assumptions**
+1. Creemos que existe un mercado de empresas de transporte refrigerado, productores agrícolas y agroexportadores en el Perú dispuestos a adoptar una plataforma digital de monitoreo térmico, dado el impacto de las pérdidas de alimentos reportadas por la FAO (2022) y las brechas de desempeño logístico señaladas por el Banco Mundial (2023).
+2. Creemos que un modelo de negocio basado en suscripción mensual por volumen de flota es viable y comercialmente aceptable para las PYMEs del sector logístico.
+3. Creemos que FríoTrack puede diferenciarse de las soluciones de rastreo GPS genéricas mediante su enfoque especializado en trazabilidad térmica, su estructura de costos accesible y una interfaz simplificada.
+4. Creemos que la integración con sensores IoT de temperatura/humedad y con servicios externos de geolocalización es técnicamente factible dentro del alcance del proyecto.
+5. Creemos que el equipo de ingeniería posee las competencias técnicas requeridas para construir, desplegar y mantener la arquitectura distribuida dentro del ciclo académico programado.
+
+**Business Outcome Assumptions**
+1. Creemos que, tras los primeros meses posteriores al lanzamiento, FríoTrack habrá logrado la adopción de un número significativo de empresas y usuarios activos.
+2. Creemos que la tasa de retención mensual de usuarios activos se mantendrá en niveles elevados a partir del tercer mes de operación.
+3. Creemos que el uso constante de la plataforma contribuirá a reducir la incidencia de pérdidas no detectadas por alteración de temperatura en ruta.
+4. Creemos que la acumulación de datos históricos de trazabilidad térmica se convertirá en un activo estratégico para las auditorías de los clientes.
+5. Creemos que las recomendaciones de los primeros usuarios (*early adopters*) impulsarán un crecimiento orgánico de la base de clientes.
+
+**User Assumptions**
+1. Creemos que los usuarios principales son coordinadores logísticos, jefes de flota y gestores de calidad en empresas de transporte refrigerado.
+2. Creemos que un segundo segmento clave está conformado por directores de calidad de empresas agroexportadoras y compradores mayoristas.
+3. Creemos que ambos perfiles utilizan smartphones de gama media y computadoras de escritorio como herramientas primarias de trabajo.
+4. Creemos que el personal del segmento transportista tiene familiaridad limitada con plataformas telemáticas avanzadas.
+5. Creemos que los usuarios del segmento agroexportador/comprador cuentan con mayor alfabetización digital y experiencia con auditorías de calidad.
+
+**User Outcome and Benefit Assumptions**
+1. Creemos que los coordinadores logísticos buscan reducir pérdidas financieras y disponer de visibilidad centralizada sin depender de reportes manuales.
+2. Creemos que las empresas transportistas necesitan respaldar con evidencias objetivas el cumplimiento de los rangos térmicos exigidos.
+3. Creemos que los agroexportadores y compradores necesitan enterarse de inmediato sobre desviaciones de temperatura en ruta.
+4. Creemos que ambos perfiles valoran exportar reportes de historial térmico como mecanismo de auditoría.
+5. Creemos que los transportistas percibirán la plataforma como una ventaja competitiva ante sus clientes.
+
+**Feature Assumptions**
+1. Creemos que un panel interactivo (*dashboard*) en tiempo casi real es la funcionalidad de mayor valor para ambos segmentos.
+2. Creemos que un motor de alertas automáticas ante desviaciones térmicas es una característica crítica diferenciadora.
+3. Creemos que el módulo de consulta del historial térmico es imprescindible para auditorías y reportes de calidad.
+4. Creemos que la representación visual de rutas sobre mapas interactivos incrementará la usabilidad de la plataforma.
+5. Creemos que el módulo de administración de flota y conductores es indispensable para la gestión logística diaria.
+6. Creemos que las notificaciones dentro de la aplicación aumentarán el engagement diario.
+7. Creemos que un sistema de búsqueda y filtros avanzados facilitará la navegación en operaciones de alto volumen.
+
+#### 1.2.2.3. Lean UX Hypothesis Statements
+
+**Hypothesis Statement 1:**
+*We believe we will achieve* an active adoption target within the first months of launch
+*If* logistics and quality coordinators
+*Attain* centralized, near real-time visibility over the temperature, humidity and location of active refrigerated shipments without relying on manual checks
+*With* a near real-time monitoring dashboard displaying live sensor readings, status, and location of active transport operations.
+
+**Hypothesis Statement 2:**
+*We believe we will achieve* a reduction in undetected cold chain break incidents
+*If* logistics coordinators and buyers
+*Attain* the ability to be immediately notified when a shipment's temperature or humidity deviates from the configured safe range
+*With* an automated thermal alert system integrated directly into the shipment details page.
+
+**Hypothesis Statement 3:**
+*We believe we will achieve* a high monthly user retention rate starting from the early months of operation
+*If* transport companies and quality coordinators
+*Attain* a reliable historical thermal record of past shipments to support quality audits, certifications, and commercial claims
+*With* an operation history management module with advanced search, filtering, and exportable thermal logs.
+
+**Hypothesis Statement 4:**
+*We believe we will achieve* a high Net Promoter Score (NPS) among early adopters
+*If* producers, exporters and buyers
+*Attain* an intuitive and highly visual way to track the location and thermal condition of shipments along national transport corridors
+*With* an interactive map interface integrated with an external geolocation service.
+
+**Hypothesis Statement 5:**
+*We believe we will achieve* a high monthly user retention rate starting from the early months of operation
+*If* logistics coordinators
+*Attain* an orderly mechanism to register refrigerated units, assign available drivers, and organize dispatch workflows
+*With* a fleet and driver management module with status indicators and simplified registry forms.
+
+**Hypothesis Statement 6:**
+*We believe we will achieve* a reduction in undetected cold chain break incidents
+*If* logistics coordinators and buyers
+*Attain* instant awareness of critical thermal deviations to execute contingency plans immediately
+*With* an automated system of push alerts and in-app notifications triggered upon threshold breaches.
+
+**Hypothesis Statement 7:**
+*We believe we will achieve* a high Net Promoter Score (NPS) among early adopters
+*If* logistics coordinators with high daily operational volumes
+*Attain* the ability to find specific shipments, units, or routes within seconds, minimizing s
