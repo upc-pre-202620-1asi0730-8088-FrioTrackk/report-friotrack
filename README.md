@@ -162,10 +162,10 @@ El historial y las evidencias de colaboración de AV1 corresponden al repositori
     - [2.3.4. Empathy Mapping](#234-empathy-mapping)
   - [2.4. Big Picture EventStorming](#24-big-picture-eventstorming)
   - [2.5. Ubiquitous Language](#25-ubiquitous-language)
-- [Capítulo III: Requirements Specification][chapter-3]
-  - 3.1. User Stories
-  - 3.2. Impact Mapping
-  - 3.3. Product Backlog
+- [Capítulo III: Requirements Specification](#capítulo-iii-requirements-specification)
+  - [3.1. User Stories](#31-user-stories)
+  - [3.2. Impact Mapping](#32-impact-mapping)
+  - [3.3. Product Backlog](#33-product-backlog)
 - [Capítulo IV: Product Design][chapter-4]
   - 4.1. Style Guidelines
   - 4.2. Information Architecture
@@ -970,7 +970,7 @@ El **Ubiquitous Language** de **FrioTrack** establece un lenguaje común entre l
 
 # Capítulo III: Requirements Specification
 
-## 3.1. Epics
+### Epics
 
 | Epic ID | Título | Descripción |
 | :--- | :--- | :--- |
@@ -982,7 +982,7 @@ El **Ubiquitous Language** de **FrioTrack** establece un lenguaje común entre l
 | **EP06** | Gestión de la Landing Page y Captación | Épica que agrupa los requerimientos asociados al sitio web estático institucional de presentación, propuesta de valor y captación de clientes de FríoTrack. |
 | **EP07** | RESTful API Backend & Servicios Transversales | Épica técnica dedicada al desarrollo de la API de servicios bajo arquitectura REST (C# / ASP.NET Core), seguridad, gestión de reportes ejecutivos en PDF, multi-idioma (i18n) y analítica avanzada. |
 
-## 3.2. User Stories
+## 3.1. User Stories
 
 | Epic/ Story ID | Título | Descripción | Criterios de Aceptación | Relacionado con (Epic ID) |
 | :--- | :--- | :--- | :--- | :--- |
