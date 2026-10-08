@@ -1933,3 +1933,554 @@ La Landing Page incluye interacciones que los mock-ups estáticos no muestran. L
 *Nota.* Elaboración propia.
 
 **Verificación.** No se dispone de scripts ni resultados que respalden la afirmación histórica de “72 comprobaciones”; se retira. Las verificaciones realizadas para TB1 se registran con resultados y límites en el capítulo V y en `work/verification-results.json` dentro del ZIP compartido del avance. No equivalen a evaluación con usuarios ni a certificación WCAG.
+
+## 4.4. Web Applications UX/UI Design
+
+El diseño de la Web Application de FríoTrack organiza las experiencias de los dos perfiles de usuario: el Coordinador Logístico, que programa los envíos, administra la flota y atiende las alertas, y el Cliente de Carga, que verifica el estado térmico de los envíos que espera recibir y descarga los reportes. El diseño se desarrolla en cuatro artefactos encadenados: los wireframes definen la estructura de cada pantalla, los wireflows conectan las pantallas según las acciones del usuario, los mock-ups aplican la identidad visual y los diagramas de flujo de usuario (*user flows*) añaden las decisiones y las rutas alternas.
+
+La aplicación se compone de 22 pantallas: 3 de acceso y cuenta, 12 del Coordinador Logístico, 3 del Cliente de Carga y 4 versiones móviles de las pantallas más críticas para quien opera en ruta. La Tabla 4.17 las lista con la tarea del usuario que cada una apoya. Los mock-ups históricos omiten los pasos 2 y 3. La aplicación TB1 incorpora los cuatro pasos; aún deben actualizarse los artefactos Figma para que su diseño y prototipo reflejen el recorrido completo.
+
+**Tabla 4.17**
+
+*Inventario de pantallas de la Web Application*
+
+
+| N.º | Pantalla | Perfil | Tarea que apoya | Elementos destacados |
+| :---: | :--- | :--- | :--- | :--- |
+| 1 | **Iniciar sesión** | Ambos | Acceder a la cuenta. | Correo y contraseña, «Mantener sesión iniciada», enlaces a registro y a recuperación. |
+| 2 | **Crear cuenta** | Ambos | Registrarse eligiendo el perfil. | Selector de perfil (Coordinador Logístico o Cliente de Carga), datos de contacto, validación por campo. |
+| 3 | **Recuperar contraseña** | Ambos | Restablecer el acceso. | Envío de enlace con mensaje neutro que no revela si el correo existe. |
+| 4 | **Dashboard** | Coordinador | Ver de un vistazo el estado de la operación. | Cuatro indicadores, mapa de unidades activas (70 % del ancho) y lista de envíos activos (30 %). |
+| 5 | **Envíos** | Coordinador | Buscar, filtrar y acceder a un envío. | Búsqueda, filtros combinables, chips de filtros activos, tabla con estado térmico y paginación. |
+| 6 | **Nuevo envío · paso 1** | Coordinador | Definir la carga y su rango térmico. | Indicador de cuatro pasos, datos de la carga, temperatura mínima y máxima, humedad y tolerancia. |
+| 7 | **Nuevo envío · paso 4 (revisión)** | Coordinador | Confirmar y programar el envío. | Resumen de carga, ruta y recursos; aviso de que los recursos no se reservan hasta confirmar. |
+| 8 | **Detalle del envío** | Coordinador | Seguir un envío en tránsito. | Aviso de alerta, indicadores, gráfico de lecturas con banda de rango seguro y mapa. |
+| 9 | **Detalle del envío · Alertas** | Coordinador | Revisar las alertas de un envío. | Tabla de alertas con tipo, duración, lectura y estado; acción «Registrar acción». |
+| 10 | **Registrar acción correctiva** | Coordinador | Documentar la respuesta a una alerta. | Ventana modal con acción, comentario y casilla «Notificar al Cliente de Carga». |
+| 11 | **Vehículos** | Coordinador | Administrar las unidades y sus sensores. | Lista con placa, capacidad, sensor y estado; formulario de registro. |
+| 12 | **Conductores** | Coordinador | Administrar los conductores. | Lista con licencia, contacto, unidad asignada y disponibilidad. |
+| 13 | **Historial** | Coordinador | Auditar envíos concluidos. | Filtros por fecha y estado, resumen de desvíos y descarga del reporte en PDF. |
+| 14 | **Notificaciones** | Ambos | Enterarse de alertas y cambios. | Pestañas (Todas, Sin leer, Alertas, Entregas), agrupación por día y acción «Marcar todas como leídas». |
+| 15 | **Configuración** | Ambos | Gestionar perfil, contraseña e idioma. | Datos de perfil, cambio de contraseña, preferencias de idioma y de alertas. |
+| 16 | **Envíos por recibir** | Cliente | Ubicar los envíos que espera. | Indicadores, lista de envíos asignados y mapa. |
+| 17 | **Detalle del envío (Cliente)** | Cliente | Verificar el estado térmico y descargar el reporte. | Vista de solo lectura, lecturas, ruta y botón «Descargar reporte térmico». |
+| 18 | **Historial (Cliente)** | Cliente | Consultar envíos anteriores. | Filtros y descarga de reportes. |
+| 19 a 22 | **Versión móvil** | Coordinador | Operar en ruta desde el celular. | Inicio de sesión, panel con mapa y hoja deslizable, detalle del envío y registro de acción correctiva. |
+
+*Nota.* Elaboración propia. La trazabilidad vigente usa el catálogo del capítulo III: acceso US06/07/08/32; perfil US39; dashboard y detalle US10–18; flota US19–22/29/38; programación US33; estados US34; acciones US35; cliente US36; incidencias US40; historial US23/24; idioma US30. Las pantallas históricas representan diseño; su presencia no demuestra implementación completa.
+
+### 4.4.1. Web Applications Wireframes
+
+Los wireframes de la aplicación se elaboraron en escala de grises, a un lienzo de 1440 × 900 px para escritorio y de 390 × 844 px para móvil. Su finalidad es acordar la distribución de los contenidos y de los controles antes de definir el aspecto visual. Las decisiones más relevantes son las siguientes: el Dashboard destina alrededor del 70 % del ancho al mapa y el 30 % a la lista de envíos, por ser la ubicación de las unidades el dato que más orienta al Coordinador; las listas usan tablas con filtros visibles y no menús ocultos; el registro de un envío se divide en cuatro pasos para no abrumar al usuario con un formulario extenso; y la acción primaria de cada pantalla ocupa siempre la misma posición, en la esquina superior derecha del área de trabajo.
+
+#### Acceso y cuenta
+
+**Figura 4.40**
+
+*Wireframe · Iniciar sesión*
+
+<p align="center">
+  <img src="assets/images/chapter-04/wireframe-login.png" alt="Wireframe · Iniciar sesión" width="800"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.41**
+
+*Wireframe · Crear cuenta*
+
+<p align="center">
+  <img src="assets/images/chapter-04/wireframe-register.png" alt="Wireframe · Crear cuenta" width="800"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.42**
+
+*Wireframe · Recuperar contraseña*
+
+<p align="center">
+  <img src="assets/images/chapter-04/wireframe-recover.png" alt="Wireframe · Recuperar contraseña" width="800"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+#### Coordinador Logístico
+
+**Figura 4.43**
+
+*Wireframe · Dashboard del Coordinador Logístico*
+
+<p align="center">
+  <img src="assets/images/chapter-04/wireframe-dashboard.png" alt="Wireframe · Dashboard del Coordinador Logístico" width="800"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.44**
+
+*Wireframe · Lista de envíos*
+
+<p align="center">
+  <img src="assets/images/chapter-04/wireframe-shipments.png" alt="Wireframe · Lista de envíos" width="800"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.45**
+
+*Wireframe · Nuevo envío, paso 1: carga y rango térmico*
+
+<p align="center">
+  <img src="assets/images/chapter-04/wireframe-new1.png" alt="Wireframe · Nuevo envío, paso 1: carga y rango térmico" width="800"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.46**
+
+*Wireframe · Nuevo envío, paso 4: revisión*
+
+<p align="center">
+  <img src="assets/images/chapter-04/wireframe-new4.png" alt="Wireframe · Nuevo envío, paso 4: revisión" width="800"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.47**
+
+*Wireframe · Detalle de un envío en tránsito*
+
+<p align="center">
+  <img src="assets/images/chapter-04/wireframe-detail.png" alt="Wireframe · Detalle de un envío en tránsito" width="800"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.48**
+
+*Wireframe · Detalle de un envío, pestaña Alertas*
+
+<p align="center">
+  <img src="assets/images/chapter-04/wireframe-alerts.png" alt="Wireframe · Detalle de un envío, pestaña Alertas" width="800"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.49**
+
+*Wireframe · Ventana modal «Registrar acción correctiva»*
+
+<p align="center">
+  <img src="assets/images/chapter-04/wireframe-alert.png" alt="Wireframe · Ventana modal «Registrar acción correctiva»" width="800"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.50**
+
+*Wireframe · Vehículos*
+
+<p align="center">
+  <img src="assets/images/chapter-04/wireframe-vehicles.png" alt="Wireframe · Vehículos" width="800"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.51**
+
+*Wireframe · Conductores*
+
+<p align="center">
+  <img src="assets/images/chapter-04/wireframe-drivers.png" alt="Wireframe · Conductores" width="800"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.52**
+
+*Wireframe · Historial de envíos*
+
+<p align="center">
+  <img src="assets/images/chapter-04/wireframe-history.png" alt="Wireframe · Historial de envíos" width="800"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.53**
+
+*Wireframe · Notificaciones*
+
+<p align="center">
+  <img src="assets/images/chapter-04/wireframe-notifications.png" alt="Wireframe · Notificaciones" width="800"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.54**
+
+*Wireframe · Configuración*
+
+<p align="center">
+  <img src="assets/images/chapter-04/wireframe-settings.png" alt="Wireframe · Configuración" width="800"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+#### Cliente de Carga
+
+**Figura 4.55**
+
+*Wireframe · Envíos por recibir*
+
+<p align="center">
+  <img src="assets/images/chapter-04/wireframe-c-incoming.png" alt="Wireframe · Envíos por recibir" width="800"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.56**
+
+*Wireframe · Detalle de un envío (vista de solo lectura)*
+
+<p align="center">
+  <img src="assets/images/chapter-04/wireframe-c-detail.png" alt="Wireframe · Detalle de un envío (vista de solo lectura)" width="800"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.57**
+
+*Wireframe · Historial del Cliente de Carga*
+
+<p align="center">
+  <img src="assets/images/chapter-04/wireframe-c-history.png" alt="Wireframe · Historial del Cliente de Carga" width="800"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+#### Versión móvil
+
+**Figura 4.58**
+
+*Wireframes móviles · Inicio de sesión, panel, detalle del envío y registro de acción correctiva*
+
+<p align="center">
+  <img src="assets/images/chapter-04/wireframe-m-login.png" alt="Wireframes móviles · Inicio de sesión, panel, detalle del envío y registro de acción correctiva" width="200">
+  <img src="assets/images/chapter-04/wireframe-m-dashboard.png" alt="Wireframes móviles · Inicio de sesión, panel, detalle del envío y registro de acción correctiva" width="200">
+  <img src="assets/images/chapter-04/wireframe-m-detail.png" alt="Wireframes móviles · Inicio de sesión, panel, detalle del envío y registro de acción correctiva" width="200">
+  <img src="assets/images/chapter-04/wireframe-m-alert.png" alt="Wireframes móviles · Inicio de sesión, panel, detalle del envío y registro de acción correctiva" width="200"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+### 4.4.2. Web Applications Wireflow Diagrams
+
+Los wireflows combinan miniaturas de los wireframes con flechas rotuladas que indican la acción del usuario que provoca el cambio de pantalla. Permiten verificar que cada tarea principal puede completarse sin callejones sin salida y que cada pantalla sabe hacia dónde continúa. Se elaboraron cinco wireflows, uno por objetivo relevante de los perfiles: preparar y programar un envío, atender una alerta, verificar un envío como cliente, crear una cuenta o recuperar la contraseña, y operar desde el celular.
+
+#### Wireflow 1 · Preparar y programar un envío (Coordinador Logístico)
+
+El Coordinador parte del Dashboard, entra a Envíos, inicia un nuevo envío y avanza por los pasos del formulario hasta la revisión. Al confirmar, el envío queda en estado Programado, aparece en la lista y el Cliente de Carga recibe una notificación.
+
+**Figura 4.59**
+
+*Wireflow · Preparar y programar un envío*
+
+<p align="center">
+  <img src="assets/images/chapter-04/wireflow-preparar-envio.png" alt="Wireflow · Preparar y programar un envío" width="1000"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+#### Wireflow 2 · Atender una alerta (Coordinador Logístico)
+
+Una alerta crítica se descubre desde el contador del Dashboard o desde la campana de notificaciones. Desde la notificación el usuario llega directamente a la pestaña Alertas del envío afectado, abre la ventana modal, registra la acción realizada y guarda. La alerta pasa a estado Reconocida, se conserva en el historial y, si el usuario lo indicó, el Cliente de Carga recibe el aviso.
+
+**Figura 4.60**
+
+*Wireflow · Atender una alerta*
+
+<p align="center">
+  <img src="assets/images/chapter-04/wireflow-atender-alerta.png" alt="Wireflow · Atender una alerta" width="1000"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+#### Wireflow 3 · Verificar un envío y descargar el reporte (Cliente de Carga)
+
+Tras iniciar sesión, el Cliente de Carga llega a Envíos por recibir, abre el detalle de un envío en modo de solo lectura y, desde Historial, descarga el reporte térmico en PDF de un envío entregado.
+
+**Figura 4.61**
+
+*Wireflow · Verificar un envío y descargar el reporte*
+
+<p align="center">
+  <img src="assets/images/chapter-04/wireflow-cliente-verifica.png" alt="Wireflow · Verificar un envío y descargar el reporte" width="1000"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+#### Wireflow 4 · Crear una cuenta y recuperar la contraseña
+
+Desde la pantalla de inicio de sesión, un visitante puede registrarse eligiendo su perfil, tras lo cual es redirigido a la pantalla inicial correspondiente (Dashboard para el Coordinador Logístico, Envíos por recibir para el Cliente de Carga), o recuperar su contraseña mediante un enlace enviado a su correo.
+
+**Figura 4.62**
+
+*Wireflow · Crear una cuenta y recuperar la contraseña*
+
+<p align="center">
+  <img src="assets/images/chapter-04/wireflow-cuenta.png" alt="Wireflow · Crear una cuenta y recuperar la contraseña" width="1000"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+#### Wireflow 5 · Atender una alerta desde el celular
+
+El Coordinador que se encuentra en ruta recorre un flujo abreviado: inicia sesión, ve el panel con el mapa y la hoja deslizable de envíos, abre el detalle del envío crítico y registra la acción correctiva.
+
+**Figura 4.63**
+
+*Wireflow · Atender una alerta desde el celular*
+
+<p align="center">
+  <img src="assets/images/chapter-04/wireflow-movil.png" alt="Wireflow · Atender una alerta desde el celular" width="1000"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+### 4.4.3. Web Applications Mock-ups
+
+Los mock-ups desarrollan las mismas pantallas con el detalle visual definido en la guía de estilo: color, tipografía, íconos, componentes, datos de ejemplo y estados. Se usaron datos ficticios verosímiles (unidades, placas, conductores y empresas inventados) para comprobar que los textos y las tablas sostienen contenido real sin desbordarse. Los criterios que guiaron la revisión visual fueron los siguientes:
+
+**Tabla 4.18**
+
+*Criterios de diseño aplicados en los mock-ups*
+
+
+| Criterio | Aplicación en las pantallas |
+| :--- | :--- |
+| **El estado térmico se entiende sin leer** | Cada envío lleva un chip de color con ícono y texto (dentro del rango, advertencia, crítico, sin señal); los envíos críticos también se destacan con un marcador rojo en el mapa. |
+| **Diferenciación entre perfiles** | El Coordinador dispone de acciones de gestión (nuevo envío, registrar acción, marcar como entregado); el Cliente de Carga ve un aviso de «Vista de solo lectura» y un único botón primario, «Descargar reporte térmico». |
+| **Datos con su contexto temporal** | Las lecturas indican su hora («Lectura reportada 09:30») y las posiciones, su fuente; el gráfico marca con una banda el rango seguro configurado. |
+| **Prevención de errores** | Las validaciones se muestran junto al campo; el aviso «Otro envío usa estos recursos» evita programar dos envíos con la misma unidad. |
+| **Consistencia** | Las tablas, las tarjetas, los chips y los botones son los mismos componentes en todas las pantallas. |
+
+*Nota.* Elaboración propia.
+
+Los mock-ups se diseñan para implementarse con Vue 3 y PrimeVue (PrimeTek, s. f.) sobre una base de Material Design 3 (Google, s. f.); representan decisiones visuales y no la ejecución real de los componentes.
+
+#### Acceso y cuenta
+
+**Figura 4.64**
+
+*Mock-up · Iniciar sesión*
+
+<p align="center">
+  <img src="assets/images/chapter-04/mockup-login.png" alt="Mock-up · Iniciar sesión" width="800"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.65**
+
+*Mock-up · Crear cuenta*
+
+<p align="center">
+  <img src="assets/images/chapter-04/mockup-register.png" alt="Mock-up · Crear cuenta" width="800"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.66**
+
+*Mock-up · Recuperar contraseña*
+
+<p align="center">
+  <img src="assets/images/chapter-04/mockup-recover.png" alt="Mock-up · Recuperar contraseña" width="800"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+#### Coordinador Logístico
+
+**Figura 4.67**
+
+*Mock-up · Dashboard del Coordinador Logístico*
+
+<p align="center">
+  <img src="assets/images/chapter-04/mockup-dashboard.png" alt="Mock-up · Dashboard del Coordinador Logístico" width="800"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.68**
+
+*Mock-up · Lista de envíos*
+
+<p align="center">
+  <img src="assets/images/chapter-04/mockup-shipments.png" alt="Mock-up · Lista de envíos" width="800"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.69**
+
+*Mock-up · Nuevo envío, paso 1: carga y rango térmico*
+
+<p align="center">
+  <img src="assets/images/chapter-04/mockup-new1.png" alt="Mock-up · Nuevo envío, paso 1: carga y rango térmico" width="800"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.70**
+
+*Mock-up · Nuevo envío, paso 4: revisión*
+
+<p align="center">
+  <img src="assets/images/chapter-04/mockup-new4.png" alt="Mock-up · Nuevo envío, paso 4: revisión" width="800"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.71**
+
+*Mock-up · Detalle de un envío en tránsito*
+
+<p align="center">
+  <img src="assets/images/chapter-04/mockup-detail.png" alt="Mock-up · Detalle de un envío en tránsito" width="800"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.72**
+
+*Mock-up · Detalle de un envío, pestaña Alertas*
+
+<p align="center">
+  <img src="assets/images/chapter-04/mockup-alerts.png" alt="Mock-up · Detalle de un envío, pestaña Alertas" width="800"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.73**
+
+*Mock-up · Ventana modal «Registrar acción correctiva»*
+
+<p align="center">
+  <img src="assets/images/chapter-04/mockup-alert.png" alt="Mock-up · Ventana modal «Registrar acción correctiva»" width="800"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.74**
+
+*Mock-up · Vehículos*
+
+<p align="center">
+  <img src="assets/images/chapter-04/mockup-vehicles.png" alt="Mock-up · Vehículos" width="800"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.75**
+
+*Mock-up · Conductores*
+
+<p align="center">
+  <img src="assets/images/chapter-04/mockup-drivers.png" alt="Mock-up · Conductores" width="800"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.76**
+
+*Mock-up · Historial de envíos*
+
+<p align="center">
+  <img src="assets/images/chapter-04/mockup-history.png" alt="Mock-up · Historial de envíos" width="800"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.77**
+
+*Mock-up · Notificaciones*
+
+<p align="center">
+  <img src="assets/images/chapter-04/mockup-notifications.png" alt="Mock-up · Notificaciones" width="800"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.78**
+
+*Mock-up · Configuración*
+
+<p align="center">
+  <img src="assets/images/chapter-04/mockup-settings.png" alt="Mock-up · Configuración" width="800"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+#### Cliente de Carga
+
+**Figura 4.79**
+
+*Mock-up · Envíos por recibir*
+
+<p align="center">
+  <img src="assets/images/chapter-04/mockup-c-incoming.png" alt="Mock-up · Envíos por recibir" width="800"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.80**
+
+*Mock-up · Detalle de un envío (vista de solo lectura)*
+
+<p align="center">
+  <img src="assets/images/chapter-04/mockup-c-detail.png" alt="Mock-up · Detalle de un envío (vista de solo lectura)" width="800"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.81**
+
+*Mock-up · Historial del Cliente de Carga*
+
+<p align="center">
+  <img src="assets/images/chapter-04/mockup-c-history.png" alt="Mock-up · Historial del Cliente de Carga" width="800"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+#### Versión móvil
+
+**Figura 4.82**
+
+*Mock-ups móviles · Inicio de sesión, panel, detalle del envío y registro de acción correctiva*
+
+<p align="center">
+  <img src="assets/images/chapter-04/mockup-m-login.png" alt="Mock-ups móviles · Inicio de sesión, panel, detalle del envío y registro de acción correctiva" width="200">
+  <img src="assets/images/chapter-04/mockup-m-dashboard.png" alt="Mock-ups móviles · Inicio de sesión, panel, detalle del envío y registro de acción correctiva" width="200">
+  <img src="assets/images/chapter-04/mockup-m-detail.png" alt="Mock-ups móviles · Inicio de sesión, panel, detalle del envío y registro de acción correctiva" width="200">
+  <img src="assets/images/chapter-04/mockup-m-alert.png" alt="Mock-ups móviles · Inicio de sesión, panel, detalle del envío y registro de acción correctiva" width="200"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+### 4.4.4. Web Applications User Flow Diagrams
+
+Los diagramas de flujo de usuario complementan los wireflows al incorporar las decisiones que determinan cómo continúa una interacción y las rutas alternas cuando algo falla. Cada diagrama muestra el camino esperado (o camino feliz) y los caminos de error, y permite comprobar que toda rama tiene una salida: corregir, reintentar, cancelar o volver. La leyenda de los tres diagramas es común: los rectángulos azules son pantallas, los rombos ámbar son decisiones, los rectángulos turquesa con línea discontinua son procesos que ejecuta el sistema, los rectángulos rojos son errores o caminos alternos, y las elipses son el inicio y el final del flujo.
+
+#### Flujo 1 · Programar un envío
+
+El flujo valida los datos en cada paso antes de avanzar: que el mínimo de temperatura sea menor que el máximo y que el peso sea positivo (paso 1), que la salida sea futura y que la ruta esté definida (paso 2), y que existan una unidad y un conductor disponibles (paso 3). En la revisión, el usuario puede confirmar o cancelar; si cancela, se le ofrece guardar un borrador. Al confirmar, el sistema valida de nuevo la disponibilidad y reserva los recursos. Si otro envío los ocupó mientras tanto, se muestra el aviso «Otro envío usa estos recursos» y el usuario vuelve al paso 3. Esta regla se apoya en el principio de que la selección provisional de recursos no los reserva: la reserva solo ocurre al confirmar.
+
+**Figura 4.83**
+
+*Diagrama de flujo de usuario · Programar un envío*
+
+<p align="center">
+  <img src="assets/images/chapter-04/userflow-programar-envio.png" alt="Diagrama de flujo de usuario · Programar un envío" width="800"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+#### Flujo 2 · Atender una alerta
+
+El flujo comienza con la llegada de una lectura del sensor. El sistema la compara con el rango configurado. Si está dentro del rango, el estado térmico se mantiene. Si está fuera de rango pero no excede la tolerancia en minutos, el envío pasa a Advertencia y se espera la siguiente lectura; si la excede, se crea una alerta crítica y se envía una notificación. Mientras el Coordinador no registre una acción, la alerta sigue activa y se le recuerda periódicamente. Al registrar la acción, el sistema exige seleccionar una de las acciones disponibles; luego, si la lectura vuelve al rango, la alerta se resuelve y el historial se actualiza; si no vuelve, se registra una incidencia y se notifica al Cliente de Carga.
+
+**Figura 4.84**
+
+*Diagrama de flujo de usuario · Atender una alerta*
+
+<p align="center">
+  <img src="assets/images/chapter-04/userflow-atender-alerta.png" alt="Diagrama de flujo de usuario · Atender una alerta" width="750"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+#### Flujo 3 · Verificar un envío y descargar el reporte (Cliente de Carga)
+
+Este flujo verifica primero que la cuenta corresponda al perfil de Cliente de Carga; en caso contrario, redirige al Dashboard del Coordinador. Si el cliente no tiene envíos asignados, ve un estado vacío con un mensaje explicativo. Al abrir el detalle de un envío, se comprueba si el sensor tiene señal: si no la tiene, se muestra el aviso «Sin señal desde HH:MM» junto con la última lectura conocida, pero el resto de la información sigue disponible. El botón «Descargar reporte» permanece deshabilitado hasta que el envío se entrega; una vez entregado, el sistema genera el PDF y, si la generación falla, muestra un mensaje de error con la opción de reintentar.
+
+**Figura 4.85**
+
+*Diagrama de flujo de usuario · Verificar un envío y descargar el reporte*
+
+<p align="center">
+  <img src="assets/images/chapter-04/userflow-cliente-reporte.png" alt="Diagrama de flujo de usuario · Verificar un envío y descargar el reporte" width="650"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Tabla 4.19**
+
+*Reglas de negocio reflejadas en los flujos de usuario*
+
+
+| Regla | Efecto en la interfaz |
+| :--- | :--- |
+| Los recursos no se reservan hasta confirmar el envío. | La selección de unidad y conductor es provisional; el aviso de la revisión lo advierte. |
+| Un envío nuevo nace como borrador y pasa a Programado al confirmarse. | El envío aparece en la lista con el chip «Programado» y se notifica al Cliente de Carga. |
+| Una desviación menor que la tolerancia genera advertencia; una que la excede, alerta crítica. | Cambia el chip del envío y, en el caso crítico, se crea una notificación. |
+| El Cliente de Carga solo consulta. | Las pantallas del cliente no muestran acciones de gestión y llevan el aviso «Vista de solo lectura». |
+| El reporte térmico solo está disponible cuando el envío se entrega. | El botón «Descargar reporte» se habilita al concluir el envío. |
+
+*Nota.* Elaboración propia.
