@@ -501,3 +501,140 @@ Existe una marcada sensibilidad hacia la variable del tiempo y el control de la 
 * Presión creciente por parte de auditorías de calidad y certificaciones internacionales para respaldar con datos verificables la trazabilidad térmica en toda la cadena de abastecimiento.
 
 ---
+# Capítulo II: Requirements Elicitation & Analysis
+
+## 2.1. Competidores
+
+En esta sección se identifican y describen los principales competidores de **FrioTrack**, tanto directos como indirectos. Estos ofrecen soluciones digitales relacionadas con la gestión logística, el control de inventario y el monitoreo de productos sensibles a la temperatura dentro de la cadena de frío.
+
+### 2.1.1. Análisis competitivo
+
+#### Competitive Analysis Landscape
+
+**¿Por qué realizar este análisis?**
+
+El análisis permite identificar oportunidades de diferenciación y aspectos de mejora para la propuesta de valor de **FrioTrack**. Asimismo, permite comparar cómo otras soluciones atienden las necesidades de gestión de inventario, monitoreo y distribución, considerando factores como funcionalidades, precio y experiencia de usuario.
+
+| Perfil | **FrioTrack** | **Óptima ERP (Perú)** | **Sinapsys WMS (Perú)** | **Tive (EE. UU.)** |
+|---|---|---|---|---|
+| **Descripción general** | Plataforma SaaS orientada al monitoreo de temperatura y gestión de productos perecibles, integrando información de la cadena de frío en una sola solución. | ERP peruano orientado a pymes, con módulos de inventario y facturación electrónica integrada con SUNAT. | Sistema WMS para la gestión de almacenes, incluyendo recepción, picking y despacho. | Plataforma IoT para monitoreo de temperatura y ubicación en la cadena de suministro. |
+| **Ventaja competitiva** | Integra monitoreo de temperatura, control de productos perecibles, alertas y trazabilidad en una solución dirigida al mercado peruano. | Integración con SUNAT y experiencia en el mercado peruano de pymes. | Amplia cobertura de procesos de almacén y adaptación a diferentes sectores. | Alta precisión en el monitoreo de temperatura y geolocalización, con cobertura internacional. |
+
+#### Perfil de marketing
+
+| Aspecto | **FrioTrack** | **Óptima ERP** | **Sinapsys WMS** | **Tive** |
+|---|---|---|---|---|
+| **Mercado objetivo** | Empresas distribuidoras y negocios que comercializan alimentos perecibles y requieren controlar las condiciones de almacenamiento y transporte. | Pymes peruanas de comercio, manufactura y distribución que requieren gestionar inventario y facturación. | Empresas medianas y grandes de distribución y manufactura en Latinoamérica. | Empresas exportadoras, operadores logísticos y cadenas de suministro que manejan productos sensibles a la temperatura. |
+| **Estrategias de marketing** | Marketing digital, posicionamiento en buscadores, redes sociales y ventas directas a empresas relacionadas con la cadena de frío. | Publicidad digital, participación en eventos empresariales y referencias de clientes. | Ventas B2B, participación en eventos del sector logístico y alianzas con integradores. | Presencia en medios digitales especializados y eventos internacionales de supply chain, con enfoque en clientes empresariales. |
+
+#### Productos y servicios
+
+| **FrioTrack** | **Óptima ERP** | **Sinapsys WMS** | **Tive** |
+|---|---|---|---|
+| Monitoreo de temperatura en tiempo real, alertas ante variaciones, trazabilidad de productos y visualización de información mediante un dashboard. | Contabilidad, facturación electrónica, inventario, cuentas por cobrar y pagar y generación de reportes. | Recepción de mercadería, gestión de ubicaciones, picking, embalaje, despacho y control de lotes. | Sensores de temperatura y GPS, plataforma SaaS de monitoreo, alertas, reportes y API de integración. |
+
+#### Precios y costos
+
+| **FrioTrack** | **Óptima ERP** | **Sinapsys WMS** | **Tive** |
+|---|---|---|---|
+| Modelo de suscripción según las funcionalidades y necesidades del cliente. | Planes desde aproximadamente S/ 89 mensuales, con módulos adicionales. | Solución con costos asociados a implementación y configuración. | Suscripción por sensor más el costo del hardware, principalmente orientada a clientes empresariales. |
+
+#### Canales de distribución
+
+| **FrioTrack** | **Óptima ERP** | **Sinapsys WMS** | **Tive** |
+|---|---|---|---|
+| Plataforma web accesible desde dispositivos con conexión a internet. | Plataforma web y aplicación de escritorio. | Plataforma web y aplicaciones orientadas a la gestión empresarial. | Plataforma web, API y aplicaciones móviles, complementadas con sensores físicos. |
+
+#### Análisis SWOT
+
+**Fortalezas**
+
+- **FrioTrack:** Plataforma enfocada en la cadena de frío, con monitoreo de temperatura y acceso a la información desde una interfaz web.
+- **Óptima ERP:** Experiencia en el mercado peruano e integración con SUNAT.
+- **Sinapsys WMS:** Amplia cobertura de procesos relacionados con la gestión de almacenes.
+- **Tive:** Alta precisión en sensores y experiencia internacional en monitoreo de temperatura.
+
+**Debilidades**
+
+- **FrioTrack:** Al ser una solución en desarrollo, requiere validación y adopción inicial por parte de los usuarios.
+- **Óptima ERP:** No cuenta con un módulo especializado para el monitoreo de temperatura.
+- **Sinapsys WMS:** Su implementación puede representar una mayor complejidad y costo para pequeñas empresas.
+- **Tive:** Su enfoque empresarial y dependencia de hardware especializado pueden incrementar el costo de implementación.
+
+**Oportunidades**
+
+- **FrioTrack:** Crecimiento de la necesidad de monitorear productos perecibles y reducir pérdidas asociadas a variaciones de temperatura.
+- **Óptima ERP:** Incorporar funcionalidades de monitoreo de temperatura para ampliar su propuesta de valor.
+- **Sinapsys WMS:** Integrar tecnologías IoT para complementar la gestión de almacenes.
+- **Tive:** Establecer alianzas con proveedores locales para ampliar su presencia en nuevos mercados.
+
+**Amenazas**
+
+- **FrioTrack:** Resistencia al cambio tecnológico, competencia de soluciones consolidadas y problemas de conectividad en determinadas zonas.
+- **Óptima ERP:** Aparición de soluciones especializadas que integren inventario y monitoreo de temperatura.
+- **Sinapsys WMS:** Competencia de plataformas empresariales con funcionalidades similares y mayor reconocimiento.
+- **Tive:** Aparición de sensores de menor costo y nuevas plataformas IoT orientadas a pequeñas y medianas empresas.
+
+### 2.1.2. Estrategias y tácticas frente a competidores
+
+A partir del análisis competitivo, **FrioTrack** define las siguientes estrategias y tácticas preliminares para responder a las fortalezas de sus competidores y aprovechar las oportunidades identificadas en el mercado peruano.
+
+**Frente a Óptima ERP**
+
+*Estrategia:* Diferenciación mediante especialización y atención de necesidades específicas.
+
+Óptima ERP cuenta con presencia en el segmento pyme peruano, pero no está especializado en el monitoreo de temperatura ni en la gestión de productos perecibles. **FrioTrack** puede aprovechar esta diferencia mediante el monitoreo térmico en tiempo real, las alertas y la trazabilidad de productos.
+
+*Tácticas:*
+
+- Desarrollar materiales de comunicación que destaquen los beneficios del monitoreo de temperatura y el control de productos perecibles.
+- Implementar la importación de datos desde Excel para facilitar la migración de empresas que utilizan hojas de cálculo u otras soluciones.
+- Ofrecer un periodo de prueba gratuito para facilitar la adopción de la plataforma.
+
+**Frente a Sinapsys WMS**
+
+*Estrategia:* Competir mediante accesibilidad y facilidad de adopción para el segmento PYME.
+
+Sinapsys WMS ofrece una cobertura amplia para la gestión de almacenes, pero su implementación puede resultar compleja para pequeñas y medianas empresas. **FrioTrack** busca diferenciarse mediante una solución especializada, sencilla y enfocada en las necesidades de la cadena de frío.
+
+*Tácticas:*
+
+- Ofrecer un proceso de incorporación sencillo, acompañado de tutoriales y soporte en español.
+- Orientar las campañas de adquisición hacia empresas que busquen una alternativa especializada y de menor complejidad.
+- Desarrollar casos de uso para sectores como alimentos, bebidas y otros productos sensibles a la temperatura.
+
+**Frente a Tive**
+
+*Estrategia:* Aprovechar la orientación hacia pymes locales y la accesibilidad de la solución frente a plataformas empresariales internacionales.
+
+Tive ofrece una solución especializada para el monitoreo de temperatura y ubicación. Sin embargo, su orientación hacia clientes empresariales permite que **FrioTrack** se diferencie mediante una propuesta enfocada en las necesidades de pequeñas y medianas empresas del mercado peruano.
+
+*Tácticas:*
+
+- Destacar la compatibilidad de **FrioTrack** con sensores IoT disponibles en el mercado, reduciendo la dependencia de hardware propietario.
+- Desarrollar alianzas con proveedores locales de sensores IoT para facilitar la adquisición e implementación de los dispositivos.
+- Orientar la comunicación de la marca hacia las necesidades particulares de las empresas peruanas que trabajan con productos perecibles.
+
+**Frente a Sinapsys WMS**
+
+*Estrategia:* Competir mediante accesibilidad económica y facilidad de adopción para el segmento PYME.
+
+Sinapsys WMS ofrece funciones amplias para la gestión de almacenes, pero su implementación puede representar una barrera para pequeñas y medianas empresas. Además, su mayor complejidad puede dificultar la adopción. **FrioTrack** puede aprovechar esta diferencia mediante una solución especializada en cadena de frío, sencilla de utilizar y enfocada en las necesidades del segmento objetivo.
+
+*Tácticas:*
+
+- Posicionar a **FrioTrack** como una solución de fácil adopción, con un proceso de incorporación sencillo, tutoriales en español y soporte al usuario.
+- Orientar las campañas hacia empresas que hayan descartado soluciones WMS por su costo o complejidad, destacando funcionalidades específicas como el monitoreo de temperatura y la trazabilidad.
+- Publicar casos de uso en sectores como lácteos, cárnicos y frutas y verduras para demostrar la especialización de **FrioTrack**.
+
+**Frente a Tive**
+
+*Estrategia:* Aprovechar la orientación hacia PYMES locales y la accesibilidad de la solución frente a plataformas empresariales internacionales.
+
+Tive ofrece una solución especializada para el monitoreo de temperatura y ubicación. Sin embargo, **FrioTrack** puede diferenciarse mediante una propuesta orientada a las necesidades de pequeñas y medianas empresas, integrando el monitoreo de temperatura con la gestión de productos perecibles.
+
+*Tácticas:*
+
+- Comunicar la compatibilidad de **FrioTrack** con sensores IoT disponibles en el mercado, reduciendo la dependencia de hardware propietario.
+- Desarrollar alianzas con proveedores locales de sensores IoT para facilitar la adquisición e implementación de los dispositivos.
+- Orientar la comunicación de marca hacia las necesidades del mercado peruano, destacando una solución desarrollada para empresas que trabajan con productos perecibles y requieren controlar sus condiciones de almacenamiento y transporte.
