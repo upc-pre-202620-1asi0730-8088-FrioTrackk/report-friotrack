@@ -1568,3 +1568,368 @@ Dentro del detalle de cada envío se usa navegación local mediante pestañas qu
 *Nota.* Elaboración propia.
 
 La información geográfica indica de forma explícita si corresponde a una ruta planificada o a una posición reportada, con su hora y fuente, de modo que una posición estimada no se presente como seguimiento continuo. La ruta de navegación (por ejemplo, Envíos › FT-2421) permite retroceder un nivel en cualquier momento.
+
+## 4.3. Landing Page UI Design
+
+La Landing Page es la primera interacción de un potencial usuario con FríoTrack. Su diseño busca que el visitante comprenda en pocos segundos qué problema resuelve la plataforma, para quién está pensada y cómo comenzar. Para lograrlo se recurre a un recorrido vertical de doce secciones que se puede recorrer con la vista, en línea con la observación de Krug (2014) de que los usuarios de la web escanean las páginas en lugar de leerlas completas. Cada sección tiene un único propósito y un titular que se entiende por sí solo, y la barra de navegación permite saltar directamente a las secciones principales.
+
+La Landing Page se implementó con HTML, CSS y JavaScript sin bibliotecas externas y se publica en el repositorio [`friotrack-landing`](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/friotrack-landing) del equipo, con el sitio disponible en [GitHub Pages](https://upc-pre-202620-1asi0730-8088-friotrack.github.io/friotrack-landing/). Las capturas de este capítulo corresponden a esa implementación, de modo que el diseño que se documenta es el mismo que se entrega. La franja de cargas que se ubica bajo el héroe se documenta dentro de la sección 1, porque forma con él un solo bloque visual, y por eso el recorrido se mantiene en doce secciones.
+
+**Tabla 4.15**
+
+*Secciones de la Landing Page y su propósito*
+
+
+| N.º | Sección | Propósito | Contenido principal |
+| :---: | :--- | :--- | :--- |
+| 1 | **Encabezado y héroe** | Explicar la propuesta de valor y dirigir a la acción. | Barra de navegación con logotipo, seis enlaces (Inicio, Quiénes somos, Lo que hacemos, Planes, Equipo, Contacto), «Iniciar sesión», «Registrarse» y selector ES | EN; titular «Tu carga perecible, vigilada en cada kilómetro», con la segunda línea en degradado turquesa y azul; botones «Probar FríoTrack» y «Ver cómo funciona»; tres beneficios con ícono; panel simulado de una unidad con lecturas de temperatura y humedad y un botón para simular una falla del equipo de frío. La barra de navegación es transparente sobre el fondo azul noche del héroe y pasa a fondo blanco al desplazarse. Al pie del bloque, una franja con las cargas que se cuidan en ruta (arándanos, espárragos, palta, uva, mango, banano orgánico, cítricos y productos hidrobiológicos). |
+| 2 | **El problema** | Justificar la necesidad con datos verificables. | Tres indicadores: puesto 61 de 139 en el Índice de Desempeño Logístico (Banco Mundial, 2023), más de 12 millones de toneladas de alimentos perdidos o desperdiciados en Perú (estimación nacional, no atribuible solo al transporte) (Organización de las Naciones Unidas para la Alimentación y la Agricultura [FAO], 2026) y 41 corredores logísticos identificados (Ministerio de Transportes y Comunicaciones [MTC], 2023); comparación entre «Hoy, en ruta» (tarjeta de borde punteado) y «Con FríoTrack» (tarjeta azul noche). |
+| 3 | **Quiénes somos** | Presentar al equipo y su propósito. | Descripción de BlackStartup como empresa de base tecnológica peruana, misión y visión definidas en el Capítulo I, cada una en una tarjeta con ícono. |
+| 4 | **Lo que hacemos** | Detallar las capacidades. | Siete tarjetas en una cuadrícula tipo *bento* sobre fondo azul noche: panel en tiempo casi real, alertas automáticas, historial térmico, mapa de rutas, flota y conductores, búsqueda y filtros, y avisos dentro de la aplicación. Cada tarjeta incluye una mini-interfaz ilustrativa del producto. |
+| 5 | **Cómo funciona** | Mostrar que el uso es simple. | Cuatro tarjetas numeradas: registrar la flota, definir los rangos seguros, seguir cada viaje, y actuar y demostrar. |
+| 6 | **Corredores** | Delimitar la zona inicial de operación. | Cuatro corredores (Piura, Lambayeque, La Libertad e Ica) hacia Lima y el Callao, con la carga típica de cada uno y un esquema animado de la ruta seleccionada sobre un mapa de fondo oscuro. |
+| 7 | **Para quién** | Segmentar a la audiencia. | Un selector segmentado con dos pestañas, una por segmento (empresas de transporte refrigerado; productores, exportadores y compradores), cada una con una tarjeta de lo que les preocupa y otra, azul noche, con lo que obtienen con FríoTrack. |
+| 8 | **Planes** | Presentar la oferta comercial referencial. | Plan Básico (S/ 79 al mes, hasta 5 unidades), Plan Profesional (S/ 199 al mes, hasta 25 unidades, recomendado) y Plan Empresarial (a medida, más de 25 unidades); selector mensual o anual (dos meses gratis). |
+| 9 | **Metas** | Comunicar los compromisos de medición. | Cuatro metas del Capítulo I, en una franja azul noche: 150 usuarios activos en ocho meses, retención mensual superior a 75 %, 30 % menos incidentes de ruptura de la cadena de frío y un Net Promoter Score mayor a 40. |
+| 10 | **Equipo** | Dar a conocer a las personas detrás del producto. | Cinco integrantes, cada uno en una tarjeta con su rol, su descripción y su fotografía o, en su defecto, sus iniciales. |
+| 11 | **Contacto** | Captar el interés del visitante. | Formulario sobre fondo azul noche con nombres y apellidos, empresa, correo, celular y perfil («Soy…»), y tres beneficios de la demostración. |
+| 12 | **Pie de página** | Ofrecer navegación secundaria y datos legales. | Logotipo, descripción breve, enlaces de Producto, Empresa y Legal (Términos y condiciones, Protección de datos), derechos reservados y referencia al curso. |
+
+*Nota.* Los precios son referenciales y están sujetos a validación con usuarios reales. Elaboración propia.
+
+Los indicadores de la sección 2 provienen de las mismas fuentes utilizadas en el Capítulo I, de modo que el discurso de la Landing Page es coherente con el análisis del problema. La sección 7 refleja los dos segmentos objetivo definidos en ese capítulo, y la sección 9 repite los criterios de éxito de la visión de negocio. Además de la página principal existe una página de Términos y condiciones, con nueve cláusulas en español e inglés, a la que se llega desde el pie de página y desde el formulario de registro.
+
+### 4.3.1. Landing Page Wireframe
+
+Los wireframes de la Landing Page se elaboraron en escala de grises para concentrar la revisión en la estructura, la jerarquía y la ubicación de los elementos, sin la influencia del color ni de la identidad visual (Buxton, 2007). El logotipo y las fotografías aparecen como espacios reservados, los íconos como círculos y los gráficos como recuadros con su descripción. Se diseñaron una versión de escritorio, con un ancho de 1440 px, y una versión móvil de 390 px, en la que las columnas se apilan y la navegación se reduce a un menú desplegable.
+
+#### Wireframes de escritorio
+
+**Figura 4.10**
+
+*Wireframe de escritorio · Sección 1: encabezado y héroe*
+
+<p align="center">
+  <img src="assets/images/chapter-04/landing-wireframe-desktop-1.png" alt="Wireframe de escritorio · Sección 1: encabezado y héroe" width="850"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.11**
+
+*Wireframe de escritorio · Sección 2: el problema*
+
+<p align="center">
+  <img src="assets/images/chapter-04/landing-wireframe-desktop-2.png" alt="Wireframe de escritorio · Sección 2: el problema" width="850"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.12**
+
+*Wireframe de escritorio · Sección 3: quiénes somos*
+
+<p align="center">
+  <img src="assets/images/chapter-04/landing-wireframe-desktop-3.png" alt="Wireframe de escritorio · Sección 3: quiénes somos" width="850"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.13**
+
+*Wireframe de escritorio · Sección 4: lo que hacemos*
+
+<p align="center">
+  <img src="assets/images/chapter-04/landing-wireframe-desktop-4.png" alt="Wireframe de escritorio · Sección 4: lo que hacemos" width="850"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.14**
+
+*Wireframe de escritorio · Sección 5: cómo funciona*
+
+<p align="center">
+  <img src="assets/images/chapter-04/landing-wireframe-desktop-5.png" alt="Wireframe de escritorio · Sección 5: cómo funciona" width="850"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.15**
+
+*Wireframe de escritorio · Sección 6: corredores*
+
+<p align="center">
+  <img src="assets/images/chapter-04/landing-wireframe-desktop-6.png" alt="Wireframe de escritorio · Sección 6: corredores" width="850"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.16**
+
+*Wireframe de escritorio · Sección 7: para quién*
+
+<p align="center">
+  <img src="assets/images/chapter-04/landing-wireframe-desktop-7.png" alt="Wireframe de escritorio · Sección 7: para quién" width="850"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.17**
+
+*Wireframe de escritorio · Sección 8: planes*
+
+<p align="center">
+  <img src="assets/images/chapter-04/landing-wireframe-desktop-8.png" alt="Wireframe de escritorio · Sección 8: planes" width="850"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.18**
+
+*Wireframe de escritorio · Sección 9: metas*
+
+<p align="center">
+  <img src="assets/images/chapter-04/landing-wireframe-desktop-9.png" alt="Wireframe de escritorio · Sección 9: metas" width="850"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.19**
+
+*Wireframe de escritorio · Sección 10: equipo*
+
+<p align="center">
+  <img src="assets/images/chapter-04/landing-wireframe-desktop-10.png" alt="Wireframe de escritorio · Sección 10: equipo" width="850"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.20**
+
+*Wireframe de escritorio · Sección 11: contacto*
+
+<p align="center">
+  <img src="assets/images/chapter-04/landing-wireframe-desktop-11.png" alt="Wireframe de escritorio · Sección 11: contacto" width="850"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.21**
+
+*Wireframe de escritorio · Sección 12: pie de página*
+
+<p align="center">
+  <img src="assets/images/chapter-04/landing-wireframe-desktop-12.png" alt="Wireframe de escritorio · Sección 12: pie de página" width="850"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+#### Wireframes móviles
+
+Las doce secciones se presentan a continuación en tres filas, en el mismo orden de la versión de escritorio (secciones 1 a 4, 5 a 8 y 9 a 12).
+
+**Figura 4.22**
+
+*Wireframes móviles · Secciones 1 a 4*
+
+<p align="center">
+  <img src="assets/images/chapter-04/landing-wireframe-mobile-1.png" alt="Wireframes móviles · Secciones 1 a 4" width="200">
+  <img src="assets/images/chapter-04/landing-wireframe-mobile-2.png" alt="Wireframes móviles · Secciones 1 a 4" width="200">
+  <img src="assets/images/chapter-04/landing-wireframe-mobile-3.png" alt="Wireframes móviles · Secciones 1 a 4" width="200">
+  <img src="assets/images/chapter-04/landing-wireframe-mobile-4.png" alt="Wireframes móviles · Secciones 1 a 4" width="200"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.23**
+
+*Wireframes móviles · Secciones 5 a 8*
+
+<p align="center">
+  <img src="assets/images/chapter-04/landing-wireframe-mobile-5.png" alt="Wireframes móviles · Secciones 5 a 8" width="200">
+  <img src="assets/images/chapter-04/landing-wireframe-mobile-6.png" alt="Wireframes móviles · Secciones 5 a 8" width="200">
+  <img src="assets/images/chapter-04/landing-wireframe-mobile-7.png" alt="Wireframes móviles · Secciones 5 a 8" width="200">
+  <img src="assets/images/chapter-04/landing-wireframe-mobile-8.png" alt="Wireframes móviles · Secciones 5 a 8" width="200"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.24**
+
+*Wireframes móviles · Secciones 9 a 12*
+
+<p align="center">
+  <img src="assets/images/chapter-04/landing-wireframe-mobile-9.png" alt="Wireframes móviles · Secciones 9 a 12" width="200">
+  <img src="assets/images/chapter-04/landing-wireframe-mobile-10.png" alt="Wireframes móviles · Secciones 9 a 12" width="200">
+  <img src="assets/images/chapter-04/landing-wireframe-mobile-11.png" alt="Wireframes móviles · Secciones 9 a 12" width="200">
+  <img src="assets/images/chapter-04/landing-wireframe-mobile-12.png" alt="Wireframes móviles · Secciones 9 a 12" width="200"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+### 4.3.2. Landing Page Mock-up
+
+Los mock-ups aplican sobre los wireframes la identidad visual definida en la sección 4.1: la paleta azul y turquesa, la tipografía Inter y el logotipo. Se mantienen la estructura y las posiciones validadas en los wireframes, de manera que las diferencias entre ambas versiones son únicamente de superficie visual. Para dar una sensación de frío y de precisión, la Landing Page alterna secciones oscuras (héroe, funciones, metas y contacto) con secciones claras sobre blanco y sobre un fondo «hielo», y usa tarjetas de radio de 20 px, mini-interfaces del producto y una elevación suave. Las capturas se tomaron de la Landing Page implementada, con datos ficticios: el panel de la sección 1 es una simulación que muestra cómo se ve una lectura dentro del rango y cómo llega una alerta cuando la temperatura supera el máximo de 4 °C.
+
+La Landing Page amplía la paleta de la sección 4.1.1 con cinco tonos derivados que no se usan en la Web Application: Night (`#06132B`) y Night 2 (`#0A2247`), para los fondos oscuros; Ice (`#EEF4FC`), para las secciones claras alternas; y Aqua (`#5EEAD4`) y Sky (`#7DB4FF`), versiones claras del turquesa y del azul que solo se emplean como texto o trazo sobre fondo oscuro. Sus razones de contraste sobre Night son de 12,5 : 1 (Aqua) y 8,7 : 1 (Sky), y el texto secundario claro (`#CBD5E1`) alcanza 12,5 : 1, por lo que superan el mínimo de 4,5 : 1 del criterio 1.4.3. El texto secundario de las secciones claras usa `#475569`, con 7,6 : 1 sobre blanco y 6,9 : 1 sobre Ice, y los rótulos en azul sobre Ice alcanzan 5,3 : 1.
+
+#### Mock-ups de escritorio
+
+**Figura 4.25**
+
+*Mock-up de escritorio · Sección 1: encabezado y héroe*
+
+<p align="center">
+  <img src="assets/images/chapter-04/landing-mockup-desktop-1.png" alt="Mock-up de escritorio · Sección 1: encabezado y héroe" width="850"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.26**
+
+*Mock-up de escritorio · Sección 2: el problema*
+
+<p align="center">
+  <img src="assets/images/chapter-04/landing-mockup-desktop-2.png" alt="Mock-up de escritorio · Sección 2: el problema" width="850"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.27**
+
+*Mock-up de escritorio · Sección 3: quiénes somos*
+
+<p align="center">
+  <img src="assets/images/chapter-04/landing-mockup-desktop-3.png" alt="Mock-up de escritorio · Sección 3: quiénes somos" width="850"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.28**
+
+*Mock-up de escritorio · Sección 4: lo que hacemos*
+
+<p align="center">
+  <img src="assets/images/chapter-04/landing-mockup-desktop-4.png" alt="Mock-up de escritorio · Sección 4: lo que hacemos" width="850"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.29**
+
+*Mock-up de escritorio · Sección 5: cómo funciona*
+
+<p align="center">
+  <img src="assets/images/chapter-04/landing-mockup-desktop-5.png" alt="Mock-up de escritorio · Sección 5: cómo funciona" width="850"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.30**
+
+*Mock-up de escritorio · Sección 6: corredores*
+
+<p align="center">
+  <img src="assets/images/chapter-04/landing-mockup-desktop-6.png" alt="Mock-up de escritorio · Sección 6: corredores" width="850"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.31**
+
+*Mock-up de escritorio · Sección 7: para quién*
+
+<p align="center">
+  <img src="assets/images/chapter-04/landing-mockup-desktop-7.png" alt="Mock-up de escritorio · Sección 7: para quién" width="850"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.32**
+
+*Mock-up de escritorio · Sección 8: planes*
+
+<p align="center">
+  <img src="assets/images/chapter-04/landing-mockup-desktop-8.png" alt="Mock-up de escritorio · Sección 8: planes" width="850"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.33**
+
+*Mock-up de escritorio · Sección 9: metas*
+
+<p align="center">
+  <img src="assets/images/chapter-04/landing-mockup-desktop-9.png" alt="Mock-up de escritorio · Sección 9: metas" width="850"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.34**
+
+*Mock-up de escritorio · Sección 10: equipo*
+
+<p align="center">
+  <img src="assets/images/chapter-04/landing-mockup-desktop-10.png" alt="Mock-up de escritorio · Sección 10: equipo" width="850"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.35**
+
+*Mock-up de escritorio · Sección 11: contacto*
+
+<p align="center">
+  <img src="assets/images/chapter-04/landing-mockup-desktop-11.png" alt="Mock-up de escritorio · Sección 11: contacto" width="850"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.36**
+
+*Mock-up de escritorio · Sección 12: pie de página*
+
+<p align="center">
+  <img src="assets/images/chapter-04/landing-mockup-desktop-12.png" alt="Mock-up de escritorio · Sección 12: pie de página" width="850"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+#### Mock-ups móviles
+
+**Figura 4.37**
+
+*Mock-ups móviles · Secciones 1 a 4*
+
+<p align="center">
+  <img src="assets/images/chapter-04/landing-mockup-mobile-1.png" alt="Mock-ups móviles · Secciones 1 a 4" width="200">
+  <img src="assets/images/chapter-04/landing-mockup-mobile-2.png" alt="Mock-ups móviles · Secciones 1 a 4" width="200">
+  <img src="assets/images/chapter-04/landing-mockup-mobile-3.png" alt="Mock-ups móviles · Secciones 1 a 4" width="200">
+  <img src="assets/images/chapter-04/landing-mockup-mobile-4.png" alt="Mock-ups móviles · Secciones 1 a 4" width="200"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.38**
+
+*Mock-ups móviles · Secciones 5 a 8*
+
+<p align="center">
+  <img src="assets/images/chapter-04/landing-mockup-mobile-5.png" alt="Mock-ups móviles · Secciones 5 a 8" width="200">
+  <img src="assets/images/chapter-04/landing-mockup-mobile-6.png" alt="Mock-ups móviles · Secciones 5 a 8" width="200">
+  <img src="assets/images/chapter-04/landing-mockup-mobile-7.png" alt="Mock-ups móviles · Secciones 5 a 8" width="200">
+  <img src="assets/images/chapter-04/landing-mockup-mobile-8.png" alt="Mock-ups móviles · Secciones 5 a 8" width="200"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.39**
+
+*Mock-ups móviles · Secciones 9 a 12*
+
+<p align="center">
+  <img src="assets/images/chapter-04/landing-mockup-mobile-9.png" alt="Mock-ups móviles · Secciones 9 a 12" width="200">
+  <img src="assets/images/chapter-04/landing-mockup-mobile-10.png" alt="Mock-ups móviles · Secciones 9 a 12" width="200">
+  <img src="assets/images/chapter-04/landing-mockup-mobile-11.png" alt="Mock-ups móviles · Secciones 9 a 12" width="200">
+  <img src="assets/images/chapter-04/landing-mockup-mobile-12.png" alt="Mock-ups móviles · Secciones 9 a 12" width="200"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+#### Comportamiento interactivo
+
+La Landing Page incluye interacciones que los mock-ups estáticos no muestran. La Tabla 4.16 las resume.
+
+**Tabla 4.16**
+
+*Interacciones de la Landing Page*
+
+
+| Elemento | Comportamiento |
+| :--- | :--- |
+| **Selector ES \| EN** | Cambia todos los textos, los formatos numéricos y los metadatos de la página. El idioma inicial sigue al del navegador y se recuerda en el equipo del visitante. |
+| **Panel simulado (sección 1)** | El botón «Simular falla del equipo de frío» eleva la temperatura por encima de 4 °C, muestra la alerta con la hora y el aviso al coordinador logístico y al cliente de carga, y al restablecer la refrigeración registra el incidente en el historial. Los datos son ficticios. |
+| **Corredores (sección 6)** | Al elegir un corredor se resalta su ruta hacia Lima, se anima el recorrido del camión y se muestra la carga típica. |
+| **Pestañas «Para quién» (sección 7)** | Alternan entre los dos segmentos con el ratón o con las teclas de flecha, Inicio y Fin. |
+| **Planes (sección 8)** | El selector Mensual \| Anual actualiza los precios (el plan anual equivale a diez mensualidades). |
+| **Formulario de contacto (sección 11)** | Valida los campos obligatorios y confirma en pantalla. Mientras no exista un servicio que reciba los datos, la confirmación aclara que es una versión demostrativa y que la información no se envía. |
+| **Iniciar sesión y Registrarse** | Abren una ventana modal. El inicio de sesión no exige un formato de contraseña; el registro exige al menos ocho caracteres con mayúscula, minúscula y número, y muestra un enlace a los términos y condiciones. En esta versión no se autentica: los botones se conectarán con las pantallas de acceso de la Web Application (sección 4.4). |
+| **Menú móvil** | En pantallas de hasta 1240 px la navegación se reemplaza por un menú desplegable que se cierra al elegir una sección o al pulsar Escape. |
+| **Barra de navegación** | Es transparente sobre el héroe y pasa a fondo blanco con sombra ligera cuando el visitante se desplaza. El enlace de la sección visible se resalta en el menú. |
+| **Franja de cargas (sección 1)** | Las cargas cuidadas en ruta se desplazan lentamente de derecha a izquierda; con la preferencia de reducción de movimiento del sistema, la franja queda estática. |
+| **Aparición de bloques** | Las tarjetas y los titulares aparecen con un desvanecimiento suave al entrar en pantalla. Sin JavaScript o con reducción de movimiento, todo el contenido es visible desde el inicio. |
+
+*Nota.* Elaboración propia.
+
+**Verificación.** No se dispone de scripts ni resultados que respalden la afirmación histórica de “72 comprobaciones”; se retira. Las verificaciones realizadas para TB1 se registran con resultados y límites en el capítulo V y en `work/verification-results.json` dentro del ZIP compartido del avance. No equivalen a evaluación con usuarios ni a certificación WCAG.
