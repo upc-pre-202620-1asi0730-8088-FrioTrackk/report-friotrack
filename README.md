@@ -175,9 +175,31 @@ El historial y las evidencias de colaboración de AV1 corresponden al repositori
   - [4.6. Domain-Driven Software Architecture](#46-domain-driven-software-architecture)
   - [4.7. Software Object-Oriented Design](#47-software-object-oriented-design)
   - [4.8. Database Design](#48-database-design)
-- [Capítulo V: Product Implementation, Validation & Deployment][chapter-5]
-  - 5.1. Software Configuration Management
-  - 5.2. Landing Page, Services & Applications Implementation
+- [Capítulo V: Product Implementation, Validation & Deployment](#capítulo-v-product-implementation-validation--deployment)
+  - [5.1. Software Configuration Management](#51-software-configuration-management)
+    - [5.1.1. Software Development Environment Configuration](#511-software-development-environment-configuration)
+    - [5.1.2. Source Code Management](#512-source-code-management)
+    - [5.1.3. Source Code Style Guide & Conventions](#513-source-code-style-guide--conventions)
+    - [5.1.4. Software Deployment Configuration](#514-software-deployment-configuration)
+  - [5.2. Landing Page, Services & Applications Implementation](#52-landing-page-services--applications-implementation)
+    - [5.2.1. Sprint 1](#521-sprint-1)
+      - [5.2.1.1. Sprint Planning 1](#5211-sprint-planning-1)
+      - [5.2.1.2. Aspect Leaders and Collaborators](#5212-aspect-leaders-and-collaborators)
+      - [5.2.1.3. Sprint Backlog 1](#5213-sprint-backlog-1)
+      - [5.2.1.4. Development Evidence for Sprint Review](#5214-development-evidence-for-sprint-review)
+      - [5.2.1.5. Execution Evidence for Sprint Review](#5215-execution-evidence-for-sprint-review)
+      - [5.2.1.6. Services Documentation Evidence for Sprint Review](#5216-services-documentation-evidence-for-sprint-review)
+      - [5.2.1.7. Software Deployment Evidence for Sprint Review](#5217-software-deployment-evidence-for-sprint-review)
+      - [5.2.1.8. Team Collaboration Insights during Sprint](#5218-team-collaboration-insights-during-sprint)
+    - [5.2.2. Sprint 2](#522-sprint-2)
+      - [5.2.2.1. Sprint Planning 2](#5221-sprint-planning-2)
+      - [5.2.2.2. Aspect Leaders and Collaborators](#5222-aspect-leaders-and-collaborators)
+      - [5.2.2.3. Sprint Backlog 2](#5223-sprint-backlog-2)
+      - [5.2.2.4. Development Evidence for Sprint Review](#5224-development-evidence-for-sprint-review)
+      - [5.2.2.5. Execution Evidence for Sprint Review](#5225-execution-evidence-for-sprint-review)
+      - [5.2.2.6. Services Documentation Evidence for Sprint Review](#5226-services-documentation-evidence-for-sprint-review)
+      - [5.2.2.7. Software Deployment Evidence for Sprint Review](#5227-software-deployment-evidence-for-sprint-review)
+      - [5.2.2.8. Team Collaboration Insights during Sprint](#5228-team-collaboration-insights-during-sprint)
 - [Conclusiones, Bibliografía y Anexos][backmatter]
 
 [student-outcome]: https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/develop/report/01-student-outcome.md
@@ -3060,3 +3082,404 @@ Las siguientes relaciones documentan el esquema completo. Las cardinalidades se 
 *Nota.* Multiplicidades del diseño, no restricciones verificadas en una base de datos ejecutada.
 
 El diseño prevé consultas de envíos autorizados por empresa y cliente, última lectura con su fecha, periodos de mediciones sin interpolar vacíos, alertas abiertas y reconocidas, avisos no leídos e historial con evidencia. Su ejecución y seguridad deben demostrarse en la implementación posterior; este capítulo acredita la especificación local del modelo.
+
+# Capítulo V: Product Implementation, Validation & Deployment
+
+Proyecto: FríoTrack. Startup: BlackStartup. Entrega: TB1. Edición del capítulo: 08/10/2026. Corte de evidencias técnicas: 07/10/2026. Team Leader confirmado: Atauje Barreto, Alexander Sebastián.
+
+FríoTrack propone monitorear las condiciones de transporte de carga refrigerada para dos segmentos: Coordinador Logístico y Cliente de Carga. Este capítulo documenta la configuración del trabajo, el antecedente del Sprint 1 y la primera aplicación frontend del Sprint 2. Se conserva la estructura del enunciado y se desarrolla Sprint 2 con el formato del ejemplo entregado, adaptando sus tablas al dominio y a las evidencias de FríoTrack.
+
+En el corte registrado existen una landing histórica en GitHub Pages, una landing corregida y una aplicación Vue ejecutadas localmente, y fuentes publicadas mediante PRs de borrador. El frontend usa datos de ejemplo y localStorage. Su despliegue en AWS o Azure, la nueva publicación de la landing y la validación grupal siguen pendientes.
+
+## 5.1. Software Configuration Management
+
+### 5.1.1. Software Development Environment Configuration
+
+El entorno separa gestión del proyecto, requisitos, diseño, implementación, pruebas y despliegue. El frontend corresponde al stack Vue, JavaScript y PrimeVue indicado en el statement. El backend se mantiene como diseño previsto en ASP.NET Core, C# y Entity Framework Core para las siguientes iteraciones.
+
+| Discipline | Tools / technologies | Application in FríoTrack | Current evidence |
+| --- | --- | --- | --- |
+| Project Management | Trello y GitHub | Planificar historias, tareas, responsables y revisiones. | Board histórico disponible; actualización Sprint 2 pendiente. |
+| Requirements Management | Markdown, catálogo de historias y Gherkin | Conservar IDs, títulos, criterios y trazabilidad con capítulo III. | Selección propuesta de 15 historias y 55 SP. |
+| Product UX/UI Design | Figma, UXPressia y Miro/FigJam | Validar investigación, flujos, prototipos y modelado colaborativo. | Artefactos previos y borradores; falta trabajo real en herramientas compartidas. |
+| Landing Development | HTML5, CSS3 y JavaScript | Presentar propuesta, corredores, planes y acceso por perfil. | Versión histórica publicada; correcciones fuente y ejecución local. |
+| Frontend Development | Vue 3, JavaScript, PrimeVue 4, Vite y Leaflet | Construir programación, consulta, monitoreo, alertas, flota e historial. | Primera versión local 0.1.0 y fuente publicada. |
+| Backend Development | ASP.NET Core, C#, EF Core; PostgreSQL propuesto | Implementar posteriormente servicios y persistencia compartida. | Diseño AV2; sin API ni base de datos operativas. |
+| Software Testing | Node test runner y navegador | Revisar reglas de dominio, compilación y recorridos observables. | 15 pruebas aprobadas, build y capturas del 07/10/2026. |
+| Software Documentation | Markdown, README y OpenAPI/Swagger previsto | Documentar configuración, alcance y evidencias; OpenAPI cuando existan servicios. | Capítulo y recibos locales; sin Swagger de servicios ejecutados. |
+| Software Deployment | GitHub Pages histórico; AWS o Azure para frontend TB1 | Publicar versiones comprobables y enlazar landing con aplicación. | Compilación preparada; cuenta y publicación cloud pendientes. |
+
+La interfaz utiliza la identidad visual de FríoTrack y componentes PrimeVue. La conformidad completa con Material Design, accesibilidad y ARIA debe cotejarse con los artefactos UX y la revisión final. Inglés estadounidense es el idioma inicial de un navegador nuevo y español latinoamericano la alternativa.
+
+Para reproducir el frontend desde su carpeta de fuentes se utiliza el lockfile del proyecto:
+
+```sh
+npm ci
+npm test
+npm run build
+npm run dev
+```
+
+El desarrollo usa `http://127.0.0.1:5173/` y la previsualización del build, mediante `npm run preview`, usa `http://127.0.0.1:4173/`. Son direcciones de revisión local. El estado de ejemplo reside en la clave `friotrack.tb1.sample.v1`; las posiciones y lecturas no provienen de entrevistas ni de sensores reales.
+
+### 5.1.2. Source Code Management
+
+Los productos se organizan en cuatro repositorios de la organización de FríoTrack. El frontend es la aplicación web de TB1: no se necesita otro repositorio para la misma aplicación.
+
+| Repository | Source branch | Pull Request | Scope / recorded state |
+| --- | --- | --- | --- |
+| [report-friotrack](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/report-friotrack/tree/feature/tb1-report-corrections) | `feature/tb1-report-corrections` | [PR #12](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/report-friotrack/pull/12) | Informe y evidencias TB1. Draft hacia develop; sin merge en el corte del 07/10/2026. |
+| [friotrack-landing](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/friotrack-landing/tree/feature/tb1-landing-corrections) | `feature/tb1-landing-corrections` | [PR #7](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/friotrack-landing/pull/7) | Landing actualizada. Draft hacia develop; sin merge en el corte del 07/10/2026. |
+| [friotrack-frontend](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/friotrack-frontend/tree/feature/tb1-frontend-application) | `feature/tb1-frontend-application` | [PR #1](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/friotrack-frontend/pull/1) | Primera aplicación frontend. Draft hacia develop; sin merge en el corte del 07/10/2026. |
+| [friotrack-api](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/friotrack-api/tree/feature/av2-api-design) | `feature/av2-api-design` | [PR #1](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/friotrack-api/pull/1) | Diseño previsto para AV2. Draft hacia develop; sin merge en el corte del 07/10/2026. |
+
+La integración registrada sigue ramas `feature/` con PR hacia `develop`, preservando los antecedentes de AV1 y `main`. Las revisiones cruzadas, la integración final y cualquier versión de entrega deben registrarse cuando el equipo las realice. No se declara una rama release, etiqueta o merge que no conste en las evidencias.
+
+Los mensajes nuevos siguen Conventional Commits: `type(scope): imperative English description`, con cuerpo en inglés que explica el cambio y su finalidad. Ejemplos reales son `feat(operations): add TB1 sample shipment workspace` y `docs(frontend): document setup validation and cloud limits`. Los tipos se eligen por el cambio: docs, feat, fix, chore, test o refactor cuando corresponda. Los mensajes exactos y sus cuerpos figuran en 5.2.2.4.
+
+Se usa SemVer como convención de versionado: MAJOR para cambios incompatibles, MINOR para funcionalidades compatibles y PATCH para correcciones. `0.1.0` es la versión de desarrollo del paquete frontend; no acredita una etiqueta release ni un despliegue. Los once commits de la integración están registrados bajo la identidad Git de Alexander Sebastián Atauje Barreto.
+
+### 5.1.3. Source Code Style Guide & Conventions
+
+| Technology / artifact | Convention | Purpose |
+| --- | --- | --- |
+| HTML5 y CSS3 | HTML semántico, labels asociados, alt significativo, clases inglesas y variables de marca. | Mantener estructura comprensible y experiencia consistente. |
+| JavaScript | camelCase en variables/funciones, PascalCase en componentes y clases, módulos explícitos. | Separar responsabilidades y mantener nombres coherentes. |
+| Vue y PrimeVue | Componentes PascalCase, props explícitas, estado reactivo, mensajes localizados. | Evitar lógica de dominio duplicada en vistas. |
+| Dominio frontend | Reglas en src/domains/operations.js; datos de ejemplo en seed.js. | Probar permisos locales, estados, reservas y validaciones sin depender de Vue. |
+| Persistencia frontend | Adaptador en src/infrastructure/demo-repository.js. | Separar la demo local de una futura integración REST. |
+| C# / ASP.NET Core previsto | PascalCase público, camelCase en parámetros, interfaces I<Name>, DTO y capas separadas. | Mantener coherencia con el stack de backend del curso. |
+| Gherkin | Dado-Cuando-Entonces o Given-When-Then; resultado observable y referencia a US. | Vincular aceptación y pruebas a requisitos del capítulo III. |
+| Markdown y commits | Encabezados numerados, enlaces relativos, estado de evidencia explícito; commits en inglés. | Facilitar revisión y exportación del informe. |
+
+El vocabulario del dominio es envío refrigerado, unidad, conductor, cliente, lectura, rango, alerta y acción correctiva. Inventario de bodegas, FEFO, proveedores de mercadería y módulos Angular del ejemplo no se incorporan como alcance de FríoTrack.
+
+### 5.1.4. Software Deployment Configuration
+
+La landing es un sitio estático. Su configuración de integración está en `assets/js/config.js`: `frontendBaseUrl` debe apuntar a la URL HTTPS pública del frontend cuando exista. `contactEndpoint` permanece sin receptor y debe configurarse y probarse antes de declarar envío efectivo.
+
+La aplicación Vue se compila con `npm run build`. El artefacto a publicar es el contenido de `dist/`, con rutas hash y un base path apropiado al destino. El ejemplo de entorno permite ajustar `VITE_BASE_PATH` y `VITE_LANDING_URL`; las variables `VITE_*` son públicas en el cliente y no deben contener secretos. AWS o Azure es el requisito de plataforma confirmado por el equipo.
+
+La ejecución local no se ha trasladado aún a una cuenta cloud. Al hacerlo, se verifican HTTPS, carga de recursos, refresco de rutas, perfil e idioma de CTA, desktop/mobile y versión exacta. Los datos de localStorage pertenecen a cada navegador y origen, por lo que no se trasladan automáticamente del localhost al dominio público. Desplegar el frontend no crea autenticación, API o base de datos compartida.
+
+La configuración futura del backend contemplará HTTPS, secretos de servidor, CORS limitado, conexión PostgreSQL, migraciones y OpenAPI.
+
+## 5.2. Landing Page, Services & Applications Implementation
+
+### 5.2.1. Sprint 1
+
+#### 5.2.1.1. Sprint Planning 1
+
+El Sprint 1 constituye el antecedente de implementación de la landing y se mantiene acumulativamente para TB1. La planificación histórica declara una reunión virtual el 08/09/2026 a las 19:00, pero no se dispone de un acta adicional que confirme asistentes y acuerdos. Por ello, esos datos se conservan como antecedentes declarados.
+
+| Field | Recorded detail |
+| --- | --- |
+| Sprint # | Sprint 1 |
+| Date | 08/09/2026, declarado en AV1; acta por confirmar. |
+| Time | 19:00, declarado en AV1; acta por confirmar. |
+| Location | Reunión virtual declarada; plataforma y registro por confirmar. |
+| Prepared By | Por confirmar con la planificación original. |
+| Attendees (to planning meeting) | Por confirmar mediante registro original; no se presume asistencia de todos. |
+| Sprint 1 Goal | Reformulación retrospectiva: comunicar la propuesta de transporte refrigerado, cobertura propuesta, planes y acceso por segmento. |
+| Sprint 1 Velocity | No existe una capacidad acordada verificable ni resultado aceptado medido. |
+| Sum of Story Points | 10 SP propuestos en la reconciliación actual: US01 + US02 + US03 + US31. |
+
+Sprint Goal reformulado: Our focus is on communicating FríoTrack’s cold-chain transport proposal. We believe it delivers a clear understanding of shipment monitoring to logistics coordinators and cargo clients. This will be confirmed when visitors can identify both segments, consult the four proposed corridors and reference plans, switch between English and Spanish, and reach the appropriate frontend entry point, with contact outcomes accurately identified.
+
+La recepción de contacto y el enlace a una app pública siguen pendientes de cierre.
+
+#### 5.2.1.2. Aspect Leaders and Collaborators
+
+El registro de versiones AV1 declara aportes por disciplina. Se conserva esa atribución como antecedente; las letras L/C de la planificación original deben contrastarse con tareas y evidencias antes de reutilizarse como liderazgo ejercido.
+
+| Team Member (Last Name, First Name) | GitHub Username | Declared AV1 contribution |
+| --- | --- | --- |
+| Atauje Barreto, Alexander Sebastián | Alexander1Alexander2 | Introducción, startup profile y frontmatter. |
+| Bardales Rodriguez, Benjamin Elias | Benja72312 | Arquitectura, diseño y mayor parte de la landing. |
+| Daga Chávez, Joaquín Leonardo | Eshnikeee | Historias y criterios de aceptación. |
+| Saavedra Flores, Rodrigo Andree | rodrigoxd67 | Capítulo V y apoyo a implementación/despliegue de landing. |
+| Vera Solsol, Nayely Macarena | Macaxprogram29 | Impact Mapping y Product Backlog. |
+
+Los usernames proceden del informe. La identidad de publicación de Alexander está verificada en los recibos de integración; los demás deben confirmar su cuenta si ha cambiado.
+
+#### 5.2.1.3. Sprint Backlog 1
+
+La reconstrucción del backlog usa los IDs y títulos canónicos del capítulo III. Las horas son una propuesta de revisión de 10 horas y no horas ejecutadas por integrantes. Los estados describen el material revisable, no aceptación completa.
+
+| Story Id | Story Title | Task Id | Task Title | Task Description | Estimation (Hours) | Assigned To | Status |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| US01 | Propuesta de valor en Landing | S1-T01 | Revisar propuesta y segmentos | Contrastar el contenido histórico con Coordinador Logístico y Cliente de Carga; retirar promesas fuera del alcance. | 2 | Por confirmar | To-Review |
+| US02 | Corredores logísticos en Landing | S1-T02 | Verificar cobertura propuesta | Comprobar los cuatro corredores y que no se presenten como cobertura comercial garantizada. | 2 | Por confirmar | To-Review |
+| US03 | Formulario de contacto comercial | S1-T03 | Revisar formulario de contacto | Validar campos y errores; la recepción efectiva requiere configurar y probar un receptor real. | 3 | Por confirmar | In-Process |
+| US31 | Planes y acceso desde la Landing | S1-T04 | Revisar planes y acceso | Comprobar periodicidad, precios referenciales y CTA; falta enlazar una app pública vigente. | 3 | Por confirmar | To-Review |
+
+Las historias suman 3 + 3 + 2 + 2 = 10 SP propuestos, contados una sola vez. El [board histórico de BlackStartup](https://trello.com/b/6qrvOukt/blackstartup-friotrack) debe actualizarse y comprobarse con el catálogo vigente. La captura del board actualizado es un pendiente.
+
+#### 5.2.1.4. Development Evidence for Sprint Review
+
+El historial de la landing acredita las siguientes revisiones y merges del antecedente AV1. Los mensajes históricos se mantienen con su idioma original; la convención en inglés se aplica a los nuevos commits.
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Commited on (Date) |
+| --- | --- | --- | --- | --- | --- |
+| friotrack-landing | main / historia AV1 | [02b76e5](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/friotrack-landing/commit/02b76e5) | Merge pull request #6 from upc-pre-202620-1asi0730-8088-FrioTrack/develop | release: publicar la landing rediseñada en main | 2026-09-19 |
+| friotrack-landing | Historial AV1 | [c63b6b0](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/friotrack-landing/commit/c63b6b0) | Merge pull request #3 from upc-pre-202620-1asi0730-8088-FrioTrack/feature/terms-and-conditions | feat: bilingual terms and conditions page | 2026-09-19 |
+| friotrack-landing | Historial AV1 | [c64f54f](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/friotrack-landing/commit/c64f54f) | Merge pull request #2 from upc-pre-202620-1asi0730-8088-FrioTrack/feature/landing-page | feat: landing page markup, scripts and team assets | 2026-09-19 |
+| friotrack-landing | Historial AV1 | [4b602ba](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/friotrack-landing/commit/4b602ba) | docs: actualizar el README con el nuevo diseño y la estructura de archivos | Sin cuerpo adicional. | 2026-09-19 |
+
+Las correcciones posteriores TB1 se publicaron en la rama y PR de 5.1.2. Su despliegue nuevo continúa pendiente. Los commits de esas correcciones se registran en Sprint 2.
+
+#### 5.2.1.5. Execution Evidence for Sprint Review
+
+Las dos primeras capturas conservan la ejecución histórica de la landing AV1. La versión original incluía secciones de presentación y acceso demostrativo; los mensajes de inventario/FEFO o resultados comerciales no forman parte del alcance validado del dominio actual.
+
+![Figura 5.1. Landing histórica AV1: presentación del servicio.](assets/images/chapter-05/landing_1.png)
+
+![Figura 5.2. Landing histórica AV1: sección de contenido.](assets/images/chapter-05/landing_2.png)
+
+Las correcciones TB1 se presentan por separado en 5.2.2.5. El enlace de Stream de ejecución y explicación del Sprint 1 debe incorporarse cuando el grupo lo proporcione.
+
+#### 5.2.1.6. Services Documentation Evidence for Sprint Review
+
+No se implementaron Web Services internos para la landing del Sprint 1. No existe evidencia de Swagger, recepción comercial o correo enviados por esa versión. El contacto sin receptor corresponde a integración pendiente.
+
+#### 5.2.1.7. Software Deployment Evidence for Sprint Review
+
+La [landing histórica de FríoTrack en GitHub Pages](https://upc-pre-202620-1asi0730-8088-friotrack.github.io/friotrack-landing/) conserva la publicación AV1. La configuración registrada usa `main` y la raíz del sitio; las capturas siguientes son históricas y no muestran el despliegue de las correcciones TB1.
+
+![Figura 5.3. Configuración histórica GitHub Pages AV1.](assets/images/chapter-05/git_1.png)
+
+![Figura 5.4. Publicación histórica de la landing AV1.](assets/images/chapter-05/git_3.png)
+
+El nuevo despliegue, versión y fecha de la landing corregida se incorporarán en 5.2.2.7 después de publicarla.
+
+#### 5.2.1.8. Team Collaboration Insights during Sprint
+
+![Figura 5.5. Captura histórica de colaboración AV1.](assets/images/chapter-05/git_2.png)
+
+Los conteos deben identificar repositorio, periodo, rama y si incluyen merges. Las contribuciones del informe no se suman como si fueran commits de la landing. La evaluación individual debe contrastar cambios, tareas y revisiones, no solo la cantidad de commits.
+
+### 5.2.2. Sprint 2
+
+#### 5.2.2.1. Sprint Planning 2
+
+La segunda iteración se orienta a la primera FríoTrack Frontend Web Application, construida con Vue, JavaScript y PrimeVue. El coordinador puede revisar programación, recursos, condiciones térmicas y acciones; el cliente puede consultar los envíos asociados a su perfil. La implementación actual permite demostrar esos recorridos con datos locales de ejemplo.
+
+La siguiente planificación es una propuesta para validación del equipo. No registra una reunión celebrada, un compromiso de 55 SP ni la aceptación de historias.
+
+| Field | FríoTrack Sprint Planning 2 |
+| --- | --- |
+| Sprint # | Sprint 2 |
+| Date | Pendiente: fecha real de Sprint Planning y referencia del acta. |
+| Time | Pendiente: hora real y zona America/Lima. |
+| Location | Pendiente: plataforma o lugar utilizado por el equipo. |
+| Prepared By | Pendiente de confirmar el responsable del acta. Team Leader: Atauje Barreto, Alexander Sebastián. |
+| Attendees (to planning meeting) | Pendiente: registrar asistentes reales, ausencias y acuerdos. |
+| Sprint 1 Review Summary | Landing AV1 publicada; correcciones de segmentos, IDs, contacto, CTA y documentación preparadas. Falta validar aceptación y receptor real. |
+| Sprint 1 Retrospective Summary | Propuesta de mejora: integrar temprano, conservar IDs, revisar PR con otro integrante, actualizar board y separar muestras de evidencias reales. El equipo debe registrar su retrospectiva real. |
+| Sprint 2 Goal | Our focus is on delivering the first FríoTrack Vue web application for cold-chain shipments. We believe it delivers operational visibility and traceable corrective actions to logistics coordinators and cargo clients. This will be confirmed when a coordinator schedules a shipment with valid resources, reviews sample thermal conditions, records an action, and a cargo client consults only assigned shipments, from a verified public deployment and in both supported languages. |
+| Sprint 2 Velocity | Capacidad en SP que el equipo puede aceptar: pendiente de acordar. No se reemplaza por horas ni por el total propuesto. |
+| Sum of Story Points | 55 SP propuestos de 15 historias únicas; sujetos a acuerdo y a un alcance viable para TB1. |
+
+Outcome: primera aplicación navegable y publicada. Impact: visibilidad de estados, lecturas y atención de alertas. Customers: Coordinador Logístico y Cliente de Carga. Evento de confirmación: review de cuatro recorridos completos desde una URL pública verificada. Métrica propuesta: 4 de 4 recorridos sin errores bloqueantes, en desktop/mobile y EN/ES, acompañados por rechazo de fechas/rangos inválidos, recursos solapados y consulta de envío ajeno. La métrica aún no está alcanzada, pues faltan el despliegue y la aceptación del equipo.
+
+La suma de 55 SP describe el catálogo seleccionado y debe contrastarse con criterios completos, capacidad y alcance de demostración antes de comprometerla.
+
+#### 5.2.2.2. Aspect Leaders and Collaborators
+
+Los aspectos del sprint corresponden a la aplicación y a sus evidencias: acceso y entrada pública, programación y recursos, monitoreo, alertas/trazabilidad y calidad/despliegue. El Team Leader está confirmado; los líderes y colaboradores de cada aspecto aún deben acordarse. La siguiente matriz debe completarse con L y C vinculadas a las tareas reales.
+
+| Team Member (Last Name, First Name) | GitHub Username | Access & Public Entry | Scheduling & Resources | Monitoring | Alerts & Traceability | Quality & Deployment |
+| --- | --- | --- | --- | --- | --- | --- |
+| Atauje Barreto, Alexander Sebastián | Alexander1Alexander2 | Por acordar | Por acordar | Por acordar | Por acordar | Por acordar |
+| Bardales Rodriguez, Benjamin Elias | Benja72312 | Por acordar | Por acordar | Por acordar | Por acordar | Por acordar |
+| Daga Chávez, Joaquín Leonardo | Eshnikeee | Por acordar | Por acordar | Por acordar | Por acordar | Por acordar |
+| Saavedra Flores, Rodrigo Andree | rodrigoxd67 | Por acordar | Por acordar | Por acordar | Por acordar | Por acordar |
+| Vera Solsol, Nayely Macarena | Macaxprogram29 | Por acordar | Por acordar | Por acordar | Por acordar | Por acordar |
+
+L = Leader; C = Collaborator. Las celdas pendientes no son asignaciones ejercidas. Cada liderazgo confirmado debe corresponder a las tareas de 5.2.2.3 y a cambios o revisiones registrados.
+
+#### 5.2.2.3. Sprint Backlog 2
+
+El backlog adapta el ejemplo a programación de envíos, flota, monitoreo y consulta del cliente. Usa los títulos e IDs canónicos del capítulo III, conserva 55 SP y descompone trabajo funcional y de cierre. Las estimaciones en horas son propuestas para discutir con el grupo y no un registro de tiempo trabajado. Los responsables deben sustituirse por nombres después de acordar la asignación.
+
+Board: [Trello histórico BlackStartup](https://trello.com/b/6qrvOukt/blackstartup-friotrack). Pendiente de evidencia: URL y captura del board Sprint 2 actualizado, con acceso comprobado, IDs vigentes, responsables y estados.
+
+Estados: To-do = trabajo no iniciado acreditadamente; In-Process = alcance parcial con cierre pendiente; To-Review = implementación de demostración disponible para revisión; Done = aceptación documentada contra el alcance acordado.
+
+| Story Id | Story Title | Task Id | Task Title | Task Description | Estimation (Hours) | Assigned To | Status |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| US33 | Programación de envío refrigerado | S2-T01 | Construir programación en cuatro pasos | Carga, ruta y fechas; recursos y cliente; rangos; revisión y confirmación. El borrador queda en memoria y no se persiste como DRAFT. | 6 | Por acordar con el equipo | To-Review |
+| US33 | Programación de envío refrigerado | S2-T02 | Revisar errores de programación | Comprobar campos obligatorios, llegada posterior a salida, capacidad y rechazo sin reservas parciales. | 3 | Por acordar con el equipo | To-Review |
+| US19 | Registro de nueva unidad refrigerada | S2-T03 | Registrar y editar unidades | Validar placa y sensor únicos, capacidad positiva y protección de recursos asignados. | 3 | Por acordar con el equipo | To-Review |
+| US21 | Registro de conductores | S2-T04 | Registrar y editar conductores | Validar nombre y licencia única; proteger los registros vinculados a viajes programados o activos. | 3 | Por acordar con el equipo | To-Review |
+| US22 | Asignación de conductor a vehículo | S2-T05 | Reservar vehículo y conductor | Comprobar disponibilidad y solapamiento antes de confirmar la programación con ambos recursos. | 4 | Por acordar con el equipo | To-Review |
+| US34 | Gestión de estados del envío | S2-T06 | Gestionar inicio y entrega | Aplicar scheduled → in-transit → delivered, permisos locales y retención del historial. | 3 | Por acordar con el equipo | To-Review |
+| US34 | Gestión de estados del envío | S2-T07 | Gestionar cancelación programada | Solicitar comentario, liberar reservas y rechazar cancelación durante tránsito o después de entrega. DRAFT persistido no está implementado. | 3 | Por acordar con el equipo | To-Review |
+| US10 | Telemetría en vivo en el panel | S2-T08 | Mostrar panel de monitoreo | Presentar última lectura de muestra, temperatura, humedad, estado e identificación de procedencia; no simular conexión a sensores. | 4 | Por acordar con el equipo | To-Review |
+| US11 | Mapa de rutas y posiciones | S2-T09 | Mostrar ruta y posición de muestra | Usar ilustración local y mapa Leaflet/OSM opcional con atribución; conservar la información si no se carga el proveedor externo. | 4 | Por acordar con el equipo | To-Review |
+| US12 | Búsqueda y filtros de envíos | S2-T10 | Implementar búsqueda y filtros | Consultar los envíos accesibles por código, atributos y estado, distinguiendo resultados vacíos. | 3 | Por acordar con el equipo | To-Review |
+| US14 | Detalle de telemetría por unidad | S2-T11 | Mostrar detalle térmico | Presentar valores, fecha, rango, gráfica y tabla accesible de lecturas; los datos son ejemplos almacenados. | 4 | Por acordar con el equipo | To-Review |
+| US17 | Configuración de umbrales térmicos | S2-T12 | Validar rangos de la carga | Exigir mínimo menor que máximo y humedad entre 0 y 100; preservar rangos de operaciones iniciadas. Verificar por separado los criterios de tolerancia del catálogo. | 3 | Por acordar con el equipo | To-Review |
+| US18 | Historial de alertas emitidas | S2-T13 | Consultar alertas e historial | Mostrar alertas abiertas, reconocidas y cerradas, con vínculo a lectura y acciones de ejemplo. | 3 | Por acordar con el equipo | To-Review |
+| US35 | Registro de acción correctiva | S2-T14 | Registrar acción correctiva | Guardar comentario, autor local y fecha; reconocer la alerta sin cerrarla automáticamente. | 3 | Por acordar con el equipo | To-Review |
+| US35 | Registro de acción correctiva | S2-T15 | Verificar aviso y recuperación | Dirigir el aviso interno solo al cliente asignado y cerrar la térmica únicamente tras una lectura posterior dentro de ambos rangos. | 3 | Por acordar con el equipo | To-Review |
+| US36 | Consulta de envíos del Cliente de Carga | S2-T16 | Construir consulta del cliente | Mostrar solo envíos asociados, detalle, lecturas, alertas, acciones e historial, sin controles de gestión. | 4 | Por acordar con el equipo | To-Review |
+| US36 | Consulta de envíos del Cliente de Carga | S2-T17 | Probar acceso a envío ajeno | Rechazar consultas y exportaciones de otro cliente, y operaciones de escritura desde el perfil cliente, mediante reglas de la demo. | 2 | Por acordar con el equipo | To-Review |
+| US23 | Consulta de historial térmico | S2-T18 | Consultar historial térmico | Filtrar envíos y consultar lecturas identificadas como muestra; verificar por separado la identificación de periodos sin información. | 4 | Por acordar con el equipo | To-Review |
+| US30 | Gestión de idiomas (i18n) | S2-T19 | Implementar idioma y formatos | EN inicial, ES latinoamericano, preferencia local y traducción de textos, validaciones y mensajes accesibles de componentes. | 3 | Por acordar con el equipo | To-Review |
+| US30 | Gestión de idiomas (i18n) | S2-T20 | Revisar entrada desde landing | Conservar role/lang en enlaces de acceso y registro; el idioma explícito debe prevalecer sobre una preferencia guardada. | 2 | Por acordar con el equipo | To-Review |
+| Soporte | Actividad transversal sin SP adicional | S2-T21 | Configurar frontend independiente | Mantener Vue, JavaScript, PrimeVue, Vite, lockfile, ejemplo de entorno y separación entre vistas, dominio y adaptador. | 3 | Por acordar con el equipo | To-Review |
+| Soporte | Actividad transversal sin SP adicional | S2-T22 | Revisar build y pruebas | Revisar el resultado registrado de 15 pruebas y build; repetir sobre la versión definitiva cuando se introduzcan cambios. | 2 | Por acordar con el equipo | To-Review |
+| Soporte | Actividad transversal sin SP adicional | S2-T23 | Cerrar revisión responsive y a11y | Completar recorridos desktop/mobile, teclado, formularios y reduced-motion; los controles ya revisados no acreditan una auditoría integral. | 4 | Por acordar con el equipo | In-Process |
+| Soporte | Actividad transversal sin SP adicional | S2-T24 | Desplegar frontend en AWS o Azure | Con cuenta disponible, publicar dist, comprobar HTTPS y guardar versión, fecha, configuración y capturas reales. | 4 | Por acordar con el equipo | To-do |
+| Soporte | Actividad transversal sin SP adicional | S2-T25 | Publicar landing y actualizar CTA | Sustituir enlaces locales por la URL verificada; publicar la landing corregida y probar ambos perfiles e idiomas. | 3 | Por acordar con el equipo | To-do |
+| Soporte | Actividad transversal sin SP adicional | S2-T26 | Conectar contacto comercial | Configurar receptor autorizado y comprobar éxito, error HTTP y fallo de red sin falsos mensajes de recepción. | 3 | Por acordar con el equipo | To-do |
+| Soporte | Actividad transversal sin SP adicional | S2-T27 | Actualizar board y planificación | Registrar reunión, L/C, responsables, horas acordadas, capacidad en SP, criterios y estados; guardar URL y captura del Sprint 2. | 3 | Por acordar con el equipo | To-do |
+| Soporte | Actividad transversal sin SP adicional | S2-T28 | Realizar revisión cruzada y analytics | Revisar PRs con personas distintas al autor y registrar aportes reales por integrante, producto, periodo y rama. | 3 | Por acordar con el equipo | To-do |
+| Soporte | Actividad transversal sin SP adicional | S2-T29 | Grabar y explicar navegación | El grupo revisa el soporte de pantalla, graba la explicación y publica en Stream con permisos comprobados. | 3 | Por acordar con el equipo | To-do |
+| Soporte | Actividad transversal sin SP adicional | S2-T30 | Consolidar evidencias del sprint | Incorporar acta de review/retro, board, videos, URLs y capturas cloud al capítulo y al informe final. | 3 | Por acordar con el equipo | To-do |
+
+Total propuesto de tareas: 30 tareas y 98 horas. Las actividades de soporte tienen identificadores de tarea, pero no se inventan nuevos TS/US del catálogo ni se les suman SP. Una misma historia puede tener varias tareas: sus puntos se cuentan una sola vez.
+
+Historias seleccionadas y frontera de aceptación:
+
+| Story Id | Story Title | SP proposed | Local coverage for TB1 | Remaining acceptance scope |
+| --- | --- | --- | --- | --- |
+| US10 | Telemetría en vivo en el panel | 5 | Panel y lecturas de muestra | Recepción continua de sensores y verificación de señal del producto operativo. |
+| US11 | Mapa de rutas y posiciones | 5 | Ruta y coordenadas de ejemplo; OSM opcional | Posiciones recibidas de dispositivos y todos los casos del proveedor. |
+| US12 | Búsqueda y filtros de envíos | 3 | Lista, búsqueda y filtros locales | Revisión integral de todos los filtros y consultas con permisos de servidor. |
+| US14 | Detalle de telemetría por unidad | 3 | Detalle, gráfica y tabla de lecturas | Series reales, intervalos completos y autorización en backend. |
+| US17 | Configuración de umbrales térmicos | 3 | Rangos térmicos y de humedad; guardas locales | Confirmar tolerancia y todos los criterios; trasladar reglas a servicios. |
+| US18 | Historial de alertas emitidas | 3 | Alertas de muestra y acciones | Filtros completos, eventos de sensores y retención en servidor. |
+| US19 | Registro de nueva unidad refrigerada | 3 | Registro/edición y unicidad local de unidad | Persistencia compartida y validación del ámbito de empresa en servidor. |
+| US21 | Registro de conductores | 3 | Registro/edición y licencia única local | Persistencia compartida y validación en servidor. |
+| US22 | Asignación de conductor a vehículo | 3 | Reserva local y rechazo de solapamiento | Transacciones y concurrencia segura entre usuarios. |
+| US23 | Consulta de historial térmico | 5 | Consulta local de historial de muestra | Evidencia real de sensores y conservación para auditoría. |
+| US30 | Gestión de idiomas (i18n) | 3 | EN/ES, persistencia y controles revisados | Recorrido final completo de ambas interfaces y versión desplegada. |
+| US33 | Programación de envío refrigerado | 5 | Programación confirmada en cuatro pasos | DRAFT persistido y criterios completos del producto objetivo. |
+| US34 | Gestión de estados del envío | 3 | Inicio, entrega y cancelación scheduled | DRAFT persistido; aceptación de todos los criterios y seguridad servidor. |
+| US35 | Registro de acción correctiva | 3 | Nota, reconocimiento y aviso interno | Entrega externa si se acuerda; validación de producto operativo. |
+| US36 | Consulta de envíos del Cliente de Carga | 5 | Consulta y aislamiento local del cliente | Autenticación real y autorización en servidor. |
+
+Total: 55 SP propuestos. La tabla distingue lo revisable de la demo y lo pendiente del producto objetivo. El statement sitúa la primera Web Services desplegada en AV2. CSV e incidencias son controles auxiliares presentes, pero no añaden historias comprometidas ni puntos por duplicado a esta selección.
+
+#### 5.2.2.4. Development Evidence for Sprint Review
+
+Las fuentes de FríoTrack se publicaron en cuatro ramas y PRs de borrador. El corte de integración registra 11 commits nuevos: 5 del informe, 2 de landing, 3 de frontend y 1 de diseño API para AV2. Las fechas son metadatos reales de Git con zona UTC-05.
+
+Autor y committer de esta integración: Alexander Sebastián Atauje Barreto, usuario `Alexander1Alexander2`, correo noreply vinculado `300703256+Alexander1Alexander2@users.noreply.github.com`. Las filas reproducen subject y body exactos en inglés.
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Commited on (Date) |
+| --- | --- | --- | --- | --- | --- |
+| report-friotrack | `feature/tb1-report-corrections` | [f464354a8be8](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/report-friotrack/commit/f464354a8be8a8599aff78046737dbf35d4debc0) | docs(history): preserve AV1 sources and exclude local artifacts | Archive the inherited AV1 chapter III and retain earlier source snapshots while excluding private configuration and generated workspace files. | 2026-10-07T19:32:14-05:00 |
+| report-friotrack | `feature/tb1-report-corrections` | [77339d1d1ddf](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/report-friotrack/commit/77339d1d1ddff1cc9fa9163469339afee815b893) | docs(requirements): reconcile TB1 research scope and backlog | Align target segments, interview instruments, canonical stories and sprint criteria with the statement and teacher feedback. Keep unperformed research and team decisions pending. | 2026-10-07T19:32:14-05:00 |
+| report-friotrack | `feature/tb1-report-corrections` | [8a1762e73bfe](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/report-friotrack/commit/8a1762e73bfe8041a875d54e7faa8512ca8150db) | docs(architecture): align frontend and planned backend designs | Document the Vue frontend and planned ASP.NET Core domain model with editable diagrams. Preserve historical assets and distinguish design from executable backend functionality. | 2026-10-07T19:32:15-05:00 |
+| report-friotrack | `feature/tb1-report-corrections` | [a581e2b2eace](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/report-friotrack/commit/a581e2b2eaceed9a36b95582239fc453f8415191) | docs(tb1): add implementation evidence and delivery guidance | Document the local frontend, landing corrections, observed checks and delivery artifacts. Keep cloud hosting, interviews and group evidence explicitly pending. | 2026-10-07T19:32:49-05:00 |
+| report-friotrack | `feature/tb1-report-corrections` | [d136e48ec32f](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/report-friotrack/commit/d136e48ec32fd061c6cd2226a4682d4f33dc3c9a) | docs(tb1): record verified GitHub integration and export evidence | Record the published feature branches, actual commit metadata and draft pull requests after they exist. Verify the regenerated report export and keep team research, reviews and AWS or Azure hosting pending. | 2026-10-07T21:05:15-05:00 |
+| friotrack-landing | `feature/tb1-landing-corrections` | [e1c0d416fe18](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/friotrack-landing/commit/e1c0d416fe18283e5b4938b5d621be0b81025624) | fix(landing): align bilingual entry and contact workflows | Default new visitors to English, route role CTAs to the local Vue sample and preserve failed contact requests. Add the supplied team photos without claiming message delivery or a new deployment. | 2026-10-07T19:32:49-05:00 |
+| friotrack-landing | `feature/tb1-landing-corrections` | [7c7a4ea2badd](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/friotrack-landing/commit/7c7a4ea2badd215e4749dc85e7938d9bd8ab07b2) | docs(landing): document TB1 source integration and limits | Explain standalone frontend setup, centralized configuration and actual contact behavior. Preserve the historical Pages reference and document the pending AWS or Azure deployment. | 2026-10-07T19:32:50-05:00 |
+| friotrack-frontend | `feature/tb1-frontend-application` | [47de7fabc006](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/friotrack-frontend/commit/47de7fabc006d426ce94e4a1df788c6deb4aa773) | chore(project): configure standalone Vue frontend tooling | Configure Vue, PrimeVue and Vite with the dependency lockfile, portable environment example and exclusions for dependencies, builds and private settings. | 2026-10-07T19:32:50-05:00 |
+| friotrack-frontend | `feature/tb1-frontend-application` | [473d5c1b04c4](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/friotrack-frontend/commit/473d5c1b04c405d96f0ed4dcd06bb56475a9f252) | feat(operations): add TB1 sample shipment workspace | Implement local shipment planning, lifecycle, monitoring, fleet, client views and bilingual navigation. Include domain tests for ownership, resource allocation and lifecycle invariants; the adapter remains a local sample. | 2026-10-07T19:33:08-05:00 |
+| friotrack-frontend | `feature/tb1-frontend-application` | [eeac3703f79d](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/friotrack-frontend/commit/eeac3703f79d1a5c087fcb6e51c7da8ebe117b3b) | docs(frontend): document setup validation and cloud limits | Describe portable setup, the verified standalone build and domain tests, sample-data behavior and known constraints. Keep real authentication, backend integration and AWS or Azure hosting pending. | 2026-10-07T19:33:08-05:00 |
+| friotrack-api | `feature/av2-api-design` | [05d95306d58e](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/friotrack-api/commit/05d95306d58e41c09c96313aa760c659ce6f5e10) | docs(api): prepare AV2 scope and domain design | Document the planned ASP.NET Core, C# and EF Core service with the existing editable domain designs. No executable API, database, endpoints, authentication, migrations or passing API tests are claimed. | 2026-10-07T19:33:09-05:00 |
+
+El commit `d136e48ec32fd061c6cd2226a4682d4f33dc3c9a` añade el registro final después del corte inicial de diez. Los registros completos se incluyen en [commits JSON](assets/evidence/github-final-commits.json) y [CSV de commits](assets/annexes/commits-sprint2.csv).
+
+Los PRs referenciados en 5.1.2 permanecían draft hacia develop, sin merge, en el registro del 07/10/2026.
+
+#### 5.2.2.5. Execution Evidence for Sprint Review
+
+La ejecución local presenta panel, lista y detalle de envíos, programación en cuatro pasos, unidades/conductores, alertas, acciones, historial y consulta del cliente. El acceso consiste en perfiles de demostración y registro local sin contraseñas; no equivale a identidad o autenticación de servidor. Las lecturas, coordenadas, empresas y clientes visibles son ejemplos.
+
+Resultados registrados el 07/10/2026:
+
+| Scenario | Observed result | Scope / limitation |
+| --- | --- | --- |
+| Programación de envío | Se completaron los cuatro pasos y se creó FT-0005; persistió al recargar. | Reserva y estado locales; borrador no persistido. |
+| Validaciones | Se bloqueó avance por campos vacíos, llegada anterior a salida y rango térmico invertido. | Casos observados y pruebas de dominio; falta revisión final completa. |
+| Monitoreo y mapa | Se mostraron lecturas y ubicación de muestra; cargaron ocho teselas OSM con atribución. | Sin sensores/GPS conectados; el mapa externo requiere red. |
+| Acción correctiva | FT-0002 quedó reconocida y abierta; aviso interno al cliente asignado. | La nota no modifica la medición ni prueba seguridad de la carga. |
+| Recuperación térmica | Lectura manual de 4 °C y 86 % cerró la térmica; alertas abiertas pasaron de dos a una. | Dato de ejemplo ingresado manualmente. |
+| Cliente de carga | Andrea consultó FT-0001/2/4/5; FT-0003 mostró Envío no disponible. | Reglas locales; no autorización segura de servidor. |
+| Historial y CSV | FT-0002 mostró cinco lecturas y exportación identificada como muestra. | No es certificado de auditoría emitido por servidor. |
+| Idiomas y CTA | Inglés inicial, español es-419 y role/lang conservados en la entrada desde landing. | Integración local; aún falta URL cloud. |
+| Teclado y móvil | Foco, Tab/Shift+Tab y Escape revisados; drawer cerrado inerte; scroll interno de tabla. | Viewport 390 x 844 y revisión dirigida, sin certificación completa WCAG. |
+| Cancelación | Control visible en FT-0005 programado; ausente en tránsito/entregado. | Rechazo y liberación se verificaron por dominio; esa mutación no se repitió en navegador. |
+
+Vistas de la aplicación ejecutada localmente. Las imágenes siguientes son capturas del 07/10/2026, no prototipos Figma ni evidencia de despliegue.
+
+![Figura 5.6. Panel del Coordinador Logístico en inglés con indicadores de muestra.](assets/images/chapter-05/tb1-frontend-dashboard-en.jpg)
+
+![Figura 5.7. Paso 4 de programación: revisión de carga, ruta, recursos, cliente y rangos.](assets/images/chapter-05/tb1-frontend-scheduling.jpg)
+
+![Figura 5.8. Alerta reconocida mediante acción correctiva, todavía abierta.](assets/images/chapter-05/tb1-frontend-alerts-es.jpg)
+
+![Figura 5.9. Detalle térmico y de humedad después de una lectura normal de ejemplo.](assets/images/chapter-05/tb1-frontend-detail-es.jpg)
+
+![Figura 5.10. Consulta de envíos asociados al Cliente de Carga en escritorio.](assets/images/chapter-05/tb1-frontend-client-es.jpg)
+
+![Figura 5.11. Detalle del cliente en móvil; el viewport de revisión fue 390 x 844.](assets/images/chapter-05/tb1-frontend-client-mobile.jpg)
+
+Landing corregida, ejecutada localmente: se comprobó alternancia mensual/anual de planes, navegación a términos EN/ES, entrada por segmento y las fotografías del equipo. Los precios continúan siendo referenciales. El formulario sin receptor identifica validación de muestra y no declara mensaje recibido ni reunión agendada.
+
+![Figura 5.12. Landing TB1 corregida en escritorio, revisión local.](assets/images/chapter-05/tb1-landing-desktop.jpg)
+
+![Figura 5.13. Landing TB1 corregida en móvil, revisión local.](assets/images/chapter-05/tb1-landing-mobile.jpg)
+
+![Figura 5.14. Sección del equipo con las cinco fotografías suministradas.](assets/images/chapter-05/tb1-landing-team.jpg)
+
+Verificación automática registrada: 15 de 15 pruebas de dominio aprobadas; build Vite 7.3.7 con 223 módulos sin advertencias. La copia standalone también completó instalación con lockfile, pruebas y build. Las pruebas revisan permisos locales, rangos, fechas, capacidad, reservas, versiones obsoletas, estados, cancelación, unicidad, reconocimiento, recuperación térmica y CSV. La landing registra seis comprobaciones de fuente; los diccionarios frontend tienen 234 claves por idioma y 166 referencias estáticas sin faltantes.
+
+Las tres muestras de contraste del detalle dieron 17,06:1, 4,55:1 y 5,58:1; no representan todos los colores y estados. Las reglas de `prefers-reduced-motion` están en la fuente, pero no hay prueba funcional con esa preferencia activada.
+
+Video de navegación y explicación del Sprint 2: se incluye [material de apoyo de pantalla](assets/annexes/frioTrack-productnavigation-sprint2-apoyo.mp4), de 4 minutos y 46 segundos, creado a partir de 152 capturas muestreadas de interacciones locales reales. Se muestran programación, rangos inválidos, inicio de viaje, lectura fuera de rango, acción, recuperación normal, cliente, idiomas y móvil. No tiene audio ni cámaras del grupo.
+
+Enlace Microsoft Stream: pendiente de grabación y explicación del grupo, publicación y verificación de permisos para el docente.
+
+![Figura 5.15. Estado final FT-0006 del recorrido local usado para el apoyo de pantalla.](assets/images/chapter-05/tb1-product-video.jpg)
+
+#### 5.2.2.6. Services Documentation Evidence for Sprint Review
+
+La sección de servicios se conserva conforme al statement. La versión TB1 actual no consume Web Services internos ni una Fake API de json-server. Usa `LocalDemoRepository` sobre localStorage. OpenStreetMap suministra teselas cartográficas externas, no servicios de programación, autenticación o telemetría del negocio.
+
+| Component / integration | Implemented interaction | Documentation evidence | State |
+| --- | --- | --- | --- |
+| Adaptador local de demostración | Las vistas usan src/infrastructure/demo-repository.js y reglas en src/domains/operations.js. | README frontend, fuente publicada, pruebas y recibos incluidos. | Implementado localmente; no es endpoint HTTP. |
+| OpenStreetMap / Leaflet | Carga opcional de teselas públicas y atribución. | Captura del detalle y comprobación registrada de carga. | Servicio externo cartográfico; posiciones ficticias. |
+| Formulario landing | Validación y control de errores; contactEndpoint sin receptor. | Fuente de configuración y regresiones de landing. | Recepción real pendiente; no endpoint operativo acreditado. |
+| API de FríoTrack | ASP.NET Core, C# y EF Core previstos; PostgreSQL propuesto. | Repositorio friotrack-api, rama feature/av2-api-design y commit 05d95306d58e. | Diseño AV2; sin servidor, rutas verificadas ni Swagger ejecutado. |
+
+Al existir servicios implementados, su documentación deberá incluir acción, verbo HTTP, sintaxis, parámetros, respuestas/códigos y ejemplos, enlace OpenAPI desplegado o local antes del despliegue, capturas de interacción, repositorio y commits de documentación. La primera Web Services desplegada aparece en AV2.
+
+La sustitución del adaptador local requerirá autenticación, autorización por empresa/cliente, persistencia compartida, transacciones para reservas, control de concurrencia y lectura de sensores. Publicar una SPA estática en AWS o Azure no implementa automáticamente esas capacidades.
+
+#### 5.2.2.7. Software Deployment Evidence for Sprint Review
+
+TB1 exige la landing actualizada y la primera versión frontend desplegadas. El estado comprobable del corte es el siguiente:
+
+| Product | Source / runtime reference | Recorded deployment state | Evidence still required |
+| --- | --- | --- | --- |
+| Landing AV1 | GitHub Pages histórico de 5.2.1.7. | Publicación histórica observada. | Recomprobar acceso; no confundir con landing TB1. |
+| Landing TB1 | [Fuente corregida](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/friotrack-landing/tree/feature/tb1-landing-corrections); ejecución local. | Código publicado; nueva versión web pendiente. | URL pública, fecha, revisión publicada, capturas de configuración y CTA a cloud. |
+| Frontend TB1 | [Aplicación Vue](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/friotrack-frontend/tree/feature/tb1-frontend-application); build local. | AWS o Azure pendiente de cuenta y publicación. | URL HTTPS, configuración real, versión/hash y flujos EN/ES desktop/mobile. |
+| API y PostgreSQL | Repositorio de diseño AV2; sin URL de ejecución. | No implementados; primera API desplegada prevista en AV2. | Cuando existan: servicio operativo, documentación y evidencias correspondientes. |
+
+#### 5.2.2.8. Team Collaboration Insights during Sprint
+
+La integración observada deja las fuentes revisables en GitHub. Su autoría registrada permite reproducir los cambios, pero no acredita por sí sola la participación de los cinco integrantes. Los siguientes números corresponden exclusivamente a los once commits de integración del 07/10/2026.
+
+| Team Member | GitHub Username | Integration commits in this evidence set | Draft PRs attributed to this publication | Cross-reviews / team evidence |
+| --- | --- | --- | --- | --- |
+| Atauje Barreto, Alexander Sebastián | Alexander1Alexander2 | 11 | 4 | Pendiente: revisiones sustantivas, board y decisiones del equipo. |
+| Bardales Rodriguez, Benjamin Elias | Benja72312 | No documentados en este conjunto | No documentados en este conjunto | Pendiente; registrar cambios y revisiones reales. |
+| Daga Chávez, Joaquín Leonardo | Eshnikeee | No documentados en este conjunto | No documentados en este conjunto | Pendiente; registrar cambios y revisiones reales. |
+| Saavedra Flores, Rodrigo Andree | rodrigoxd67 | No documentados en este conjunto | No documentados en este conjunto | Pendiente; registrar cambios y revisiones reales. |
+| Vera Solsol, Nayely Macarena | Macaxprogram29 | No documentados en este conjunto | No documentados en este conjunto | Pendiente; registrar cambios y revisiones reales. |
+
+Las ramas registradas son feature/tb1-report-corrections, feature/tb1-landing-corrections, feature/tb1-frontend-application y feature/av2-api-design. Los cuatro PRs estaban en draft; no se registran aprobaciones cruzadas ni una release o etiqueta de cierre.
+
+Evidencias de colaboración por completar: capturas de Pull Requests con autor, revisor y estado real; Network graph; Contributors por periodo, repositorio y rama; captura de board actualizado y relación de tareas; actas breves de planning, review y retrospectiva con participantes y decisiones. Los conteos no deben duplicar commits entre ramas ni confundir autor Git con líder de aspecto.
+
+El equipo confirmó como segunda sesión sincrónica semanal los sábados de 09:00 a 11:00, America/Lima. La semana exacta de entrega sigue por confirmar. Cada integrante debe revisar el material que presenta, registrar sus aportes y participar en las grabaciones y sustentación.
+
+La evaluación de participación corresponde al Team Leader Atauje Barreto, Alexander Sebastián, con evidencias y calificaciones reales. Student Outcome, Collaboration Insights y registro de versiones del informe deben actualizarse con el cierre efectivo del sprint.

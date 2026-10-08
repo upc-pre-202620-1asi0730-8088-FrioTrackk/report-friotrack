@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-07",
+  "path": "C:\\Users\\Alexander 2\\Downloads\\report-friotrack\\outputs\\upc-pre-202620-1asi0730-8088-blackstartup-productnavigation-sprint-2.mp4",
+  "durationSeconds": 286.166667,
+  "frameSamples": 152,
+  "encodedFrameRate": "24/1",
+  "codec": "h264",
+  "dimensions": [
+    1280,
+    900
+  ],
+  "audio": false,
+  "capture": "Official CUA timestamped browser screenshots; sampled screen recording of actual local interactions, with gaps held at the last captured frame; no synthetic UI",
+  "scope": "Silent sampled screen recording of actual local Vue app interactions with labelled sample data. Scheduling four consecutive steps, range validation, manual reading excursion, corrective acknowledgement, normal reading, assigned client, EN/ES and mobile view. Frame gaps preserve elapsed timing at last captured screen. This is not an interview, human exposition, hosted deployment or prototype recording.",
+  "sampleShipment": "FT-0006",
+  "humanPresentation": false,
+  "streamURL": null,
+  "sha256": "69bc06154deca1b06504f26d4f08cce25ec6fa8d7301fbebcd85de48d8f4e6bc",
+  "visualReview": "Root inspected 14 decoded frames in contact sheet and the final actual browser screenshot; local interactions and sampled-screen limitations confirmed.",
+  "fullDecode": "passed_without_ffmpeg_decode_errors",
+  "decodedReviewFrames": 14,
+  "userScope": "Interviews, narration and group camera recordings will be performed by the user and their group. This silent local screen video is support material only."
+}

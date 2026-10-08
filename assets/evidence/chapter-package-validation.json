@@ -1,0 +1,26 @@
+{
+  "edition_date": "2026-10-08",
+  "evidence_cutoff": "2026-10-07",
+  "markdown_words": 8158,
+  "pdf_pages": 35,
+  "tables": 17,
+  "images": 15,
+  "empty_pages": [],
+  "relative_links_valid": true,
+  "original_source_files_checked": 253,
+  "original_source_files_changed": [],
+  "issues": [],
+  "visual_review": {
+    "status": "passed",
+    "scope": "All 35 final pages reviewed in six rendered contact sheets; backlog page 16 also inspected at full resolution.",
+    "findings": "No clipping, overlap, missing images or stranded image heading observed. Code block and image captions present."
+  },
+  "chapter_content_validation": {
+    "sprint2_tasks": 30,
+    "proposed_hours": 98,
+    "canonical_stories": 15,
+    "proposed_story_points": 55,
+    "commit_records": 11,
+    "commit_subjects_and_bodies_match": true
+  }
+}

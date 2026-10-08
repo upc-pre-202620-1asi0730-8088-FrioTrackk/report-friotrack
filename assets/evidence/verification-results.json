@@ -1,0 +1,630 @@
+{
+  "date": "2026-10-07",
+  "status": "local_checks_passed_tb1_delivery_still_incomplete",
+  "automatic": {
+    "frontend": {
+      "reviewDate": "2026-10-07",
+      "scope": "Local TB1 frontend with explicitly labelled sample data",
+      "domainTests": {
+        "command": "node --test tests/operations.test.js",
+        "passed": 15,
+        "failed": 0,
+        "durationMilliseconds": 153.2764,
+        "latestRevisionNote": "Previous 15/15 domain run retained; not repeated for chart aria-label formatting because domain logic and stored readings did not change.",
+        "status": "passed"
+      },
+      "productionBuild": {
+        "command": "node node_modules/vite/bin/vite.js build",
+        "viteVersion": "7.3.7",
+        "modulesTransformed": 223,
+        "status": "passed",
+        "warnings": [],
+        "chunksKilobytes": {
+          "application": 111.67,
+          "vue": 101.46,
+          "primevue": 368.61,
+          "leaflet": 149.97
+        },
+        "finalBuildSeconds": 4.59
+      },
+      "browserQA": {
+        "status": "selected_flows_verified_by_root",
+        "note": "Root verified selected interactions through the official CUA browser. This does not claim complete WCAG conformance or all browser/viewport coverage.",
+        "confirmed": [
+          "Schedule sample shipment and reject invalid dates/ranges",
+          "Corrective action acknowledges the alert without premature resolution",
+          "Explicit landing EN/ES language applies to the SPA",
+          "Mobile 390px shipment list and client details: document scrollWidth 375px, internal table scroll",
+          "Closed mobile sidebar hidden/inert; opening moves focus, Shift+Tab wraps, Escape returns focus to menu button",
+          "Client detail shows sample CSV/map access without coordinator management actions",
+          "Cancellation action present for scheduled FT-0005 and absent for in-transit FT-0006 and delivered FT-0004",
+          "Current cancellation control visible for scheduled FT-0005, absent for in-transit FT-0006 and delivered FT-0004 (root CUA); no cancellation mutation performed through UI in this check",
+          "Latest temperature chart accessible label checked by root CUA in ES and EN; at most one decimal and no raw floating-point residue"
+        ],
+        "latestReview": {
+          "date": "2026-10-07",
+          "cancellationControls": {
+            "scheduledFT0005": "visible",
+            "inTransitFT0006": "absent",
+            "deliveredFT0004": "absent"
+          },
+          "mutationScope": "Control visibility only; cancellation behavior covered by prior domain tests",
+          "consoleWarningsOrErrorsObserved": [],
+          "proofImage": "work/frontend-final-review.png",
+          "proofImageSha256": "e84b047cc33fb79ada388ca994c4173d5d3d56da88e694a573eb97aed53e9327",
+          "proofScope": "Actual local FT-0006 page, English, viewport screenshot; no cloud deployment"
+        }
+      },
+      "deployment": {
+        "status": "not_published",
+        "publicURL": null
+      },
+      "apiAndAuthentication": {
+        "status": "not_implemented",
+        "sampleProfilesOnly": true,
+        "passwordsStored": false
+      },
+      "accessibilityLocale": {
+        "primeVue": "Reactive EN/ES, including aria.close and option-selection announcements",
+        "conformity": "No WCAG certification claimed",
+        "validation": "Root owns browser interaction verification",
+        "freeText": "Preserved; only known sample metadata translated for display",
+        "status": "implemented",
+        "leaflet": "Zoom titles/aria and attribution localized on language changes",
+        "temperatureChart": {
+          "ariaValues": "Intl.NumberFormat using the active es-419/en-US locale, no grouping and at most one fractional digit",
+          "storedReadings": "Unchanged; formatting affects only the chart accessible label",
+          "browserValidation": "Root CUA observed FT-0004 chart label in ES and EN: -20.1, -19.9, -19.7, -19.4 degrees Celsius; no raw binary floating-point residue. Stored readings unchanged."
+        }
+      },
+      "mobileNavigation": {
+        "layout": "Table scrolling confined with min-width:0 on flex/grid containers",
+        "escape": "Close and return focus to menu button",
+        "open": "Initial focus and Tab focus containment",
+        "closed": "visibility:hidden, inert, aria-hidden",
+        "browserValidation": "Confirmed by root CUA at width 390px; document scrollWidth 375px for shipment list and client detail; keyboard focus cycle and Escape verified",
+        "status": "implemented"
+      },
+      "shipmentLifecycle": {
+        "catalogReference": "US34 acceptance criterion 3: cancellation only from DRAFT or SCHEDULED",
+        "implementedStates": [
+          "scheduled",
+          "in-transit",
+          "delivered",
+          "cancelled"
+        ],
+        "persistedDrafts": false,
+        "cancellation": "Scheduled only, with a note; rejected in transit and after delivery",
+        "resourceReservations": "Scheduled cancellation releases availability for another overlapping allocation",
+        "verification": "Expanded two existing domain tests; all 15 domain tests passed. Root CUA verified cancellation-control visibility in three current states; actual cancellation mutation covered by domain tests, not a new browser mutation.",
+        "status": "domain_tests_and_build_passed"
+      },
+      "landingRouteIntegration": {
+        "browserValidation": "Explicit EN/ES landing language confirmed by root CUA",
+        "language": "Explicit valid lang=en/es hash query overrides saved preference on mount and change",
+        "role": "Explicit role query updates on same login/register page",
+        "status": "implemented"
+      }
+    },
+    "landing": {
+      "type": "source regression tests; not browser UI verification",
+      "checks": [
+        {
+          "name": "index.html translation attributes",
+          "passed": true,
+          "keys": 268
+        },
+        {
+          "name": "Terms-and-Condition.html translation attributes",
+          "passed": true,
+          "keys": 2
+        },
+        {
+          "name": "HTTP failure does not claim receipt or hide form",
+          "passed": true
+        },
+        {
+          "name": "Network failure reports an error",
+          "passed": true
+        },
+        {
+          "name": "HTTP success alone confirms receipt",
+          "passed": true
+        },
+        {
+          "name": "No endpoint explicitly produces only demo validation",
+          "passed": true
+        }
+      ]
+    },
+    "frontendI18n": {
+      "date": "2026-10-07",
+      "status": "passed",
+      "dictionaryKeysPerLanguage": 234,
+      "staticReferencedKeys": 166,
+      "sourceFiles": 24,
+      "missingKeys": [],
+      "emptyTranslations": [],
+      "scope": "Dictionary parity and static translation/domain-error references. Dynamic rendering was reviewed separately through CUA; this is not a complete language or accessibility audit."
+    },
+    "sourceReferences": {
+      "references_checked": 591,
+      "anchors_checked": 377,
+      "issues": [],
+      "review_scope": "local asset paths, Markdown links and heading anchors, HTML IDs and entry CTA markup; external permissions/URLs not verified"
+    }
+  },
+  "browser": {
+    "method": "Official CUA browser interactions and read-only DOM observations, with saved screenshots. These are manually observed results, not an automated end-to-end suite.",
+    "checks": [
+      {
+        "id": "scheduling",
+        "status": "passed",
+        "observed": "Four consecutive steps create FT-0005; persisted after reload"
+      },
+      {
+        "id": "invalid-input",
+        "status": "passed",
+        "observed": "Empty mandatory input, inverted dates and invalid thermal range block progress"
+      },
+      {
+        "id": "monitoring",
+        "status": "passed",
+        "observed": "Thermal/humidity sample values, chart, coordinates and eight loaded OSM tiles with attribution"
+      },
+      {
+        "id": "corrective-action",
+        "status": "passed",
+        "observed": "Action acknowledges FT-0002 and keeps excursion open; optional internal client notice"
+      },
+      {
+        "id": "normal-reading",
+        "status": "passed",
+        "observed": "4 °C / 86 % sample closes thermal alert; open alert count drops 2 to 1"
+      },
+      {
+        "id": "client-scope",
+        "status": "passed",
+        "observed": "Andrea sees assigned FT-0001/2/4/5; FT-0003 unavailable; management controls absent"
+      },
+      {
+        "id": "csv",
+        "status": "passed",
+        "observed": "Browser downloads filtered FT-0002 CSV with five readings and sample-labelled history"
+      },
+      {
+        "id": "locale",
+        "status": "passed",
+        "observed": "EN/ES, es-419, translated dialog controls and explicit lang query over saved preference"
+      },
+      {
+        "id": "landing-links",
+        "status": "passed",
+        "observed": "Plan CTA routes to coordinator registration; client CTA preserves cargo-client role and en language"
+      },
+      {
+        "id": "keyboard",
+        "status": "passed",
+        "observed": "Dialog Escape returns focus; mobile drawer Shift+Tab wraps and Escape returns to navigation toggle"
+      },
+      {
+        "id": "mobile-overflow",
+        "status": "passed",
+        "observed": "390 x 844 viewport: document width 375; table scroll stays inside container; detail also 375"
+      },
+      {
+        "id": "landing-form",
+        "status": "passed",
+        "observed": "Demo contact validation states no message sent or meeting scheduled"
+      },
+      {
+        "id": "landing-photos",
+        "status": "passed",
+        "observed": "Five actual team image files load after scrolling"
+      },
+      {
+        "id": "landing-prices-terms",
+        "status": "passed",
+        "observed": "Annual reference prices 790/1990; terms/demo notice load in EN and ES"
+      },
+      {
+        "id": "console",
+        "status": "passed",
+        "observed": "No warn/error entries captured in recent inspected logs of the review tabs"
+      }
+    ],
+    "viewports": {
+      "desktop": {
+        "width": 1280
+      },
+      "mobile": {
+        "width": 390,
+        "height": 844,
+        "documentWidth": 375
+      }
+    },
+    "contrastSamples": [
+      {
+        "role": "title",
+        "foreground": [
+          15,
+          23,
+          42
+        ],
+        "background": [
+          248,
+          250,
+          252
+        ],
+        "ratio": 17.06
+      },
+      {
+        "role": "body",
+        "foreground": [
+          100,
+          116,
+          139
+        ],
+        "background": [
+          248,
+          250,
+          252
+        ],
+        "ratio": 4.55
+      },
+      {
+        "role": "CSV control",
+        "foreground": [
+          11,
+          94,
+          215
+        ],
+        "background": [
+          248,
+          250,
+          252
+        ],
+        "ratio": 5.58
+      }
+    ],
+    "reducedMotion": {
+      "observedPreference": false,
+      "sourceGuardsPresent": true,
+      "activePreferenceFunctionallyTested": false
+    }
+  },
+  "limits": [
+    "Frontend/new landing not newly hosted; source changes are published in draft PRs",
+    "No real authentication, API, sensors or shared database",
+    "No full WCAG or all-device certification",
+    "Interviews, group exposition, narration and prototype video remain the responsibility of the user and group",
+    "No new human meetings/contributions or academic grades invented",
+    "Private Stream/Figma/UXPressia/Trello permissions not verified",
+    "Performance PDF is an independent composition; current DOCX native rendering unverified"
+  ],
+  "captures": {
+    "date": "2026-10-07",
+    "captures": [
+      {
+        "path": "report/assets/images/chapter-05/tb1-frontend-alerts-es.jpg",
+        "width": 1265,
+        "height": 712,
+        "sha256": "9cff570255f343cc2ba3520d65121cac4ec304bb9e46bf609260eb2ad97a29b1"
+      },
+      {
+        "path": "report/assets/images/chapter-05/tb1-frontend-client-es.jpg",
+        "width": 1280,
+        "height": 900,
+        "sha256": "8fe565c807ff9127c5cbd6c5fa64db547d0d4449e06b091f69d304d3fe01cda9"
+      },
+      {
+        "path": "report/assets/images/chapter-05/tb1-frontend-client-mobile.jpg",
+        "width": 375,
+        "height": 811,
+        "sha256": "cd48793466290dc43b42f4f5be7fb98c543904e1c9ec4745997511b06f97996d"
+      },
+      {
+        "path": "report/assets/images/chapter-05/tb1-frontend-dashboard-en.jpg",
+        "width": 1265,
+        "height": 712,
+        "sha256": "11fcab0c2f275e1ed8fd8b2a62dab32516ec93d49c76fe7a85cb7049e71d804a"
+      },
+      {
+        "path": "report/assets/images/chapter-05/tb1-frontend-detail-es.jpg",
+        "width": 1265,
+        "height": 712,
+        "sha256": "85ae8b1c8f3447ee35030087b7fd06b01aa2042ac2cca279961fc92765c1e92c"
+      },
+      {
+        "path": "report/assets/images/chapter-05/tb1-frontend-scheduling.jpg",
+        "width": 1265,
+        "height": 712,
+        "sha256": "0274b8236718a71ea88e92720de7f0b433e1aa6fbab1a39b6dd5c4a53d61f34f"
+      },
+      {
+        "path": "report/assets/images/chapter-05/tb1-landing-desktop.jpg",
+        "width": 1265,
+        "height": 712,
+        "sha256": "24c02a09c1c5e200f755f8e380b6abbe4a6800de3337fc43fd5e5ba0bb4d684f"
+      },
+      {
+        "path": "report/assets/images/chapter-05/tb1-landing-mobile.jpg",
+        "width": 375,
+        "height": 811,
+        "sha256": "37b848778e2ae2ee3fccf528ada81a6461d7fa1f8126940c00d0368d65d786c8"
+      },
+      {
+        "path": "report/assets/images/chapter-05/tb1-landing-team.jpg",
+        "width": 1265,
+        "height": 712,
+        "sha256": "e036b57b890218d595387fe9183cb9221ce978f23d2acd11b26d59e2348ad5ec"
+      },
+      {
+        "path": "report/assets/images/chapter-05/tb1-product-video.jpg",
+        "width": 1265,
+        "height": 712,
+        "sha256": "3d4ca34414a6603437bcc02a9eb40d9ccfd3dd287b87a4bd39b16d9322a0643d"
+      }
+    ],
+    "scope": "Actual CUA screenshots of local demo; no mock-ups or published-site evidence."
+  },
+  "screenVideo": {
+    "date": "2026-10-07",
+    "path": "C:\\Users\\Alexander 2\\Downloads\\report-friotrack\\outputs\\upc-pre-202620-1asi0730-8088-blackstartup-productnavigation-sprint-2.mp4",
+    "durationSeconds": 286.166667,
+    "frameSamples": 152,
+    "encodedFrameRate": "24/1",
+    "codec": "h264",
+    "dimensions": [
+      1280,
+      900
+    ],
+    "audio": false,
+    "capture": "Official CUA timestamped browser screenshots; sampled screen recording of actual local interactions, with gaps held at the last captured frame; no synthetic UI",
+    "scope": "Silent sampled screen recording of actual local Vue app interactions with labelled sample data. Scheduling four consecutive steps, range validation, manual reading excursion, corrective acknowledgement, normal reading, assigned client, EN/ES and mobile view. Frame gaps preserve elapsed timing at last captured screen. This is not an interview, human exposition, hosted deployment or prototype recording.",
+    "sampleShipment": "FT-0006",
+    "humanPresentation": false,
+    "streamURL": null,
+    "sha256": "69bc06154deca1b06504f26d4f08cce25ec6fa8d7301fbebcd85de48d8f4e6bc",
+    "visualReview": "Root inspected 14 decoded frames in contact sheet and the final actual browser screenshot; local interactions and sampled-screen limitations confirmed.",
+    "fullDecode": "passed_without_ffmpeg_decode_errors",
+    "decodedReviewFrames": 14,
+    "userScope": "Interviews, narration and group camera recordings will be performed by the user and their group. This silent local screen video is support material only."
+  },
+  "performance": {
+    "date": "2026-10-07",
+    "pages": 2,
+    "path": "C:\\Users\\Alexander 2\\Downloads\\report-friotrack\\outputs\\upc-pre-202620-1asi0730-8088-blackstartup-performance-tb1.pdf",
+    "sourceDocx": "C:\\Users\\Alexander 2\\Downloads\\report-friotrack\\outputs\\upc-pre-202620-1asi0730-8088-blackstartup-performance-tb1.docx",
+    "teamLeader": "Atauje Barreto, Alexander Sebastián",
+    "method": "Independent ReportLab composition from the DOCX paragraphs and table data",
+    "docxRenderVerified": false,
+    "wordExport": false,
+    "gradesAssigned": false,
+    "signaturesAdded": false,
+    "nayelyStudentCode": "pending_confirmation",
+    "docxSha256": "62852e6ea4929b188f71c644884a1139aa95833478354eea7975424cff9bbab1",
+    "pdfSha256": "0d2314de69b4fa4c47702d75d56fb675b9891b03dc196f1993ee9eb86b1fe724",
+    "visualReview": "Both pages rasterized with pypdfium2 and inspected via view_image: readable tables, no clipping/overlap/missing glyphs, blank checkboxes and grades preserved; root separately inspected both page PNGs.",
+    "nativeExportAttempt": "Root dedicated hidden Word export produced no PDF change or completion output. Root identified its own PowerShell helper by exact export script command line (PID 1004) and stopped that helper. No other Word process/document was closed."
+  },
+  "reportExport": {
+    "pages": 211,
+    "sha256": "94fe8d0099e3aa7cb4b7b141865c7b66fffe83f66ac430bf4aa13ebd5371a6ab",
+    "images": 172,
+    "tables": 82,
+    "internalLinks": 205,
+    "automaticFindings": 0,
+    "visualFindings": 0,
+    "scope": "Export and layout checked; human and external evidence still pending"
+  },
+  "presentation": {
+    "slides": 12,
+    "pptxSha256": "a5a6a6fc41cf40c9defd5576614caefbfd547c27190b10eb2348aece631a286c",
+    "pdfSha256": "d96848a5ee37b9685fb07cb50c8f7558f540c20ddbcaf79a4eb912413916ef9f",
+    "editableTables": 5,
+    "checks": "Package/layout/first-party import and 12 rendered pages",
+    "nativePowerPointInspected": false
+  },
+  "cloudPreparation": {
+    "reviewDate": "2026-10-07",
+    "artifact": "upc-pre-202620-1asi0730-8088-blackstartup-frontend-cloud-tb1.zip",
+    "artifactSha256": "5cdb4232e7b19a17e260d6f215e77804ed5f3a1a2e18514e3226e8b10b9c67c7",
+    "status": "passed_packaging_checks",
+    "checks": {
+      "currentBuild": true,
+      "indexAtRoot": true,
+      "exactDistContents": true,
+      "allSHA256Match": true,
+      "allCRC32Match": true,
+      "zipTest": true,
+      "relativeHTMLResourcesExist": true,
+      "relativeCSSResourcesExist": true,
+      "relativeJSImportsExist": true,
+      "noDependenciesOrPrivateConfig": true
+    },
+    "resourceReferencesChecked": [
+      {
+        "from": "index.html",
+        "to": "logo.svg"
+      },
+      {
+        "from": "index.html",
+        "to": "assets/index-DE4nd0Tu.js"
+      },
+      {
+        "from": "index.html",
+        "to": "assets/vue-C15VUGQV.js"
+      },
+      {
+        "from": "index.html",
+        "to": "assets/primevue-CntNMRAB.js"
+      },
+      {
+        "from": "index.html",
+        "to": "assets/index-D3oWbSvU.css"
+      },
+      {
+        "from": "assets/index-D3oWbSvU.css",
+        "to": "assets/inter-latin-400-normal-C38fXH4l.woff2"
+      },
+      {
+        "from": "assets/index-D3oWbSvU.css",
+        "to": "assets/inter-latin-400-normal-CyCys3Eg.woff"
+      },
+      {
+        "from": "assets/index-D3oWbSvU.css",
+        "to": "assets/inter-latin-500-normal-Cerq10X2.woff2"
+      },
+      {
+        "from": "assets/index-D3oWbSvU.css",
+        "to": "assets/inter-latin-500-normal-BL9OpVg8.woff"
+      },
+      {
+        "from": "assets/index-D3oWbSvU.css",
+        "to": "assets/inter-latin-600-normal-LgqL8muc.woff2"
+      },
+      {
+        "from": "assets/index-D3oWbSvU.css",
+        "to": "assets/inter-latin-600-normal-CiBQ2DWP.woff"
+      },
+      {
+        "from": "assets/index-D3oWbSvU.css",
+        "to": "assets/inter-latin-700-normal-Yt3aPRUw.woff2"
+      },
+      {
+        "from": "assets/index-D3oWbSvU.css",
+        "to": "assets/inter-latin-700-normal-BLAVimhd.woff"
+      },
+      {
+        "from": "assets/index-D3oWbSvU.css",
+        "to": "assets/primeicons-DMOk5skT.eot"
+      },
+      {
+        "from": "assets/index-D3oWbSvU.css",
+        "to": "assets/primeicons-DMOk5skT.eot"
+      },
+      {
+        "from": "assets/index-D3oWbSvU.css",
+        "to": "assets/primeicons-C6QP2o4f.woff2"
+      },
+      {
+        "from": "assets/index-D3oWbSvU.css",
+        "to": "assets/primeicons-WjwUDZjB.woff"
+      },
+      {
+        "from": "assets/index-D3oWbSvU.css",
+        "to": "assets/primeicons-MpK4pl85.ttf"
+      },
+      {
+        "from": "assets/index-D3oWbSvU.css",
+        "to": "assets/primeicons-Dr5RGzOO.svg"
+      },
+      {
+        "from": "assets/index-DE4nd0Tu.js",
+        "to": "assets/vue-C15VUGQV.js"
+      },
+      {
+        "from": "assets/index-DE4nd0Tu.js",
+        "to": "assets/primevue-CntNMRAB.js"
+      },
+      {
+        "from": "assets/index-DE4nd0Tu.js",
+        "to": "assets/leaflet-src-Byf149Wh.js"
+      },
+      {
+        "from": "assets/primevue-CntNMRAB.js",
+        "to": "assets/vue-C15VUGQV.js"
+      }
+    ],
+    "deploymentExecuted": false,
+    "providerSelected": false,
+    "cloudRuntimeVerification": "Pending actual authorized deployment",
+    "officialDocumentation": [
+      "https://docs.aws.amazon.com/amplify/latest/userguide/manual-deploys.html",
+      "https://learn.microsoft.com/en-us/azure/static-web-apps/deploy-web-framework"
+    ],
+    "userRequirement": "Final app hosting in AWS or Azure; user will create an account later; continue locally for now."
+  },
+  "projectLabels": {
+    "checkedFilesOrOfficeParts": 102,
+    "findings": [],
+    "scope": "Current project text and Office XML; historical AV1 preserved; IA as Information Architecture retained."
+  },
+  "githubPublication": {
+    "identity": {
+      "login": "Alexander1Alexander2",
+      "id": 300703256
+    },
+    "repositories": [
+      {
+        "repository": "friotrack-api",
+        "url": "https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/friotrack-api/pull/1",
+        "number": 1,
+        "state": "open",
+        "draft": true,
+        "merged": false,
+        "branch": "feature/av2-api-design",
+        "headHash": "05d95306d58e41c09c96313aa760c659ce6f5e10",
+        "base": "develop",
+        "developHash": "6864d994f7cf5cc5e02bcbdf986eb4fa72800553",
+        "mainHash": "6864d994f7cf5cc5e02bcbdf986eb4fa72800553",
+        "commits": 1,
+        "changedFiles": 6,
+        "additions": 1592,
+        "deletions": 1
+      },
+      {
+        "repository": "friotrack-frontend",
+        "url": "https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/friotrack-frontend/pull/1",
+        "number": 1,
+        "state": "open",
+        "draft": true,
+        "merged": false,
+        "branch": "feature/tb1-frontend-application",
+        "headHash": "eeac3703f79d1a5c087fcb6e51c7da8ebe117b3b",
+        "base": "develop",
+        "developHash": "f859e47ee30a67fb9f9a5599bfe50352f275f481",
+        "mainHash": "f859e47ee30a67fb9f9a5599bfe50352f275f481",
+        "commits": 3,
+        "changedFiles": 34,
+        "additions": 2755,
+        "deletions": 1
+      },
+      {
+        "repository": "friotrack-landing",
+        "url": "https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/friotrack-landing/pull/7",
+        "number": 7,
+        "state": "open",
+        "draft": true,
+        "merged": false,
+        "branch": "feature/tb1-landing-corrections",
+        "headHash": "7c7a4ea2badd215e4749dc85e7938d9bd8ab07b2",
+        "base": "develop",
+        "developHash": "c63b6b0b8613cb2b161aa352bd25e47e7e3c9aca",
+        "mainHash": "02b76e5e97803fbbcc176bdec8492da8d4fa585e",
+        "commits": 2,
+        "changedFiles": 14,
+        "additions": 97,
+        "deletions": 142
+      },
+      {
+        "repository": "report-friotrack",
+        "url": "https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/report-friotrack/pull/12",
+        "number": 12,
+        "state": "open",
+        "draft": true,
+        "merged": false,
+        "branch": "feature/tb1-report-corrections",
+        "headHash": "d136e48ec32fd061c6cd2226a4682d4f33dc3c9a",
+        "base": "develop",
+        "developHash": "7dd78b3ba4c058fecf90c586c8e14fb37dc5b7f4",
+        "mainHash": "3a9a17fcac89bb84e8b86b11fed4d186080dd076",
+        "commits": 5,
+        "changedFiles": 58,
+        "additions": 7013,
+        "deletions": 1177
+      }
+    ]
+  }
+}
