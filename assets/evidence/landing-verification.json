@@ -1,0 +1,31 @@
+{
+  "type": "source regression tests; not browser UI verification",
+  "checks": [
+    {
+      "name": "index.html translation attributes",
+      "passed": true,
+      "keys": 268
+    },
+    {
+      "name": "Terms-and-Condition.html translation attributes",
+      "passed": true,
+      "keys": 2
+    },
+    {
+      "name": "HTTP failure does not claim receipt or hide form",
+      "passed": true
+    },
+    {
+      "name": "Network failure reports an error",
+      "passed": true
+    },
+    {
+      "name": "HTTP success alone confirms receipt",
+      "passed": true
+    },
+    {
+      "name": "No endpoint explicitly produces only demo validation",
+      "passed": true
+    }
+  ]
+}

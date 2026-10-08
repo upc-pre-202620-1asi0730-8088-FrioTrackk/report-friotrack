@@ -1,0 +1,312 @@
+{
+  "scope": "Canonical IDs and proposed estimates reused in this independent chapter; no product acceptance claimed.",
+  "sprint1": [
+    {
+      "id": "US01",
+      "title": "Propuesta de valor en Landing",
+      "epic": "EP01",
+      "points": 3,
+      "scope": "landing",
+      "role": "visitante",
+      "definition": "Como visitante, deseo conocer el servicio de monitoreo de transporte refrigerado para evaluar si responde a las necesidades de mi carga.",
+      "acceptance_criteria": [
+        "Dado que el visitante consulta el servicio, cuando solicita su descripción, entonces obtiene el problema atendido, temperatura, humedad, ubicación y beneficios para los dos segmentos de transporte.",
+        "Dado que el servicio usa datos ilustrativos, cuando el visitante consulta una muestra, entonces la información identifica su carácter simulado y no atribuye resultados a clientes reales.",
+        "Dado que el visitante consulta el servicio en inglés o español, cuando obtiene la propuesta, entonces se conserva el mismo alcance y no se promete inventario ni FEFO."
+      ],
+      "estimate_status": "proposed_not_team_commitment",
+      "delivery_status": "not_verified_by_this_catalog"
+    },
+    {
+      "id": "US02",
+      "title": "Corredores logísticos en Landing",
+      "epic": "EP01",
+      "points": 3,
+      "scope": "landing",
+      "role": "visitante interesado en transporte refrigerado",
+      "definition": "Como visitante interesado en transporte refrigerado, deseo conocer los corredores propuestos para evaluar la correspondencia con mis rutas.",
+      "acceptance_criteria": [
+        "Dado que el visitante solicita cobertura, cuando consulta los corredores propuestos, entonces obtiene los orígenes en La Libertad, Ica, Piura y Lambayeque y su relación con Lima.",
+        "Dado que una ruta carece de validación comercial, cuando se presenta su cobertura, entonces se identifica como propuesta y no como servicio contratado o garantizado."
+      ],
+      "estimate_status": "proposed_not_team_commitment",
+      "delivery_status": "not_verified_by_this_catalog"
+    },
+    {
+      "id": "US03",
+      "title": "Formulario de contacto comercial",
+      "epic": "EP01",
+      "points": 2,
+      "scope": "landing",
+      "role": "visitante interesado",
+      "definition": "Como visitante interesado, deseo enviar una solicitud de demostración para recibir atención comercial sobre FríoTrack.",
+      "acceptance_criteria": [
+        "Dado que la solicitud contiene los campos obligatorios y correo válido, cuando el receptor confirma su recepción, entonces se informa la aceptación de la solicitud sin afirmar una respuesta comercial ya realizada.",
+        "Dado que falta un campo obligatorio o el correo tiene formato inválido, cuando se intenta enviar la solicitud, entonces no se remite y se especifican los datos que requieren corrección.",
+        "Dado que el receptor no está configurado o falla, cuando se intenta enviar una solicitud válida, entonces se informa que no se confirma la recepción y no se presenta un resultado exitoso."
+      ],
+      "estimate_status": "proposed_not_team_commitment",
+      "delivery_status": "not_verified_by_this_catalog"
+    },
+    {
+      "id": "US31",
+      "title": "Planes y acceso desde la Landing",
+      "epic": "EP01",
+      "points": 2,
+      "scope": "landing",
+      "role": "visitante",
+      "definition": "Como visitante, deseo comparar los planes propuestos y acceder según mi perfil para evaluar la oferta e iniciar el uso de la aplicación.",
+      "acceptance_criteria": [
+        "Dado que el visitante consulta planes, cuando obtiene la oferta, entonces cada plan identifica prestaciones, moneda, periodicidad y carácter referencial de los precios no validados.",
+        "Dado que el frontend publicado tiene accesos vigentes para ambos perfiles, cuando el visitante solicita ingresar o registrarse, entonces se dirige al acceso correspondiente conservando el perfil elegido.",
+        "Dado que el frontend aún no está publicado, cuando el visitante solicita acceso, entonces se declara su disponibilidad pendiente sin simular un registro ni una sesión exitosa."
+      ],
+      "estimate_status": "proposed_not_team_commitment",
+      "delivery_status": "not_verified_by_this_catalog"
+    }
+  ],
+  "sprint2": [
+    {
+      "id": "US10",
+      "title": "Telemetría en vivo en el panel",
+      "epic": "EP03",
+      "points": 5,
+      "scope": "product",
+      "role": "Coordinador Logístico",
+      "definition": "Como Coordinador Logístico, deseo consultar temperatura y humedad reportadas durante los envíos para detectar cambios de condición de la carga.",
+      "acceptance_criteria": [
+        "Dado que existe un envío autorizado con una lectura registrada, cuando se consulta su condición, entonces se obtienen temperatura en °C, humedad relativa en %, fecha de medición y procedencia del dato.",
+        "Dado que se recibe una lectura posterior válida, cuando el monitoreo se actualiza, entonces la última lectura corresponde a la fecha más reciente y la lectura anterior permanece en el historial.",
+        "Dado que no existe lectura válida o la señal está vencida, cuando se consulta la condición, entonces se informa la ausencia o antigüedad y no se presenta una medición inventada como actual."
+      ],
+      "estimate_status": "proposed_not_team_commitment",
+      "delivery_status": "not_verified_by_this_catalog"
+    },
+    {
+      "id": "US11",
+      "title": "Mapa de rutas y posiciones",
+      "epic": "EP03",
+      "points": 5,
+      "scope": "product",
+      "role": "Coordinador Logístico",
+      "definition": "Como Coordinador Logístico, deseo consultar las posiciones reportadas de mis envíos para conocer su avance sobre la ruta.",
+      "acceptance_criteria": [
+        "Dado que un envío autorizado tiene posiciones válidas, cuando se consulta su recorrido, entonces se relacionan su origen, destino y última posición con la fecha de reporte y su fuente.",
+        "Dado que no se ha recibido posición o el proveedor cartográfico falla, cuando se consulta el recorrido, entonces se informa esa limitación y se conserva la información del envío disponible sin inventar coordenadas.",
+        "Dado que las coordenadas exceden latitud -90 a 90 o longitud -180 a 180, cuando se evalúa una posición, entonces no se considera una posición válida."
+      ],
+      "estimate_status": "proposed_not_team_commitment",
+      "delivery_status": "not_verified_by_this_catalog"
+    },
+    {
+      "id": "US12",
+      "title": "Búsqueda y filtros de envíos",
+      "epic": "EP03",
+      "points": 3,
+      "scope": "product",
+      "role": "Coordinador Logístico",
+      "definition": "Como Coordinador Logístico, deseo localizar envíos por código, unidad, estado y periodo para encontrar las operaciones que requieren seguimiento.",
+      "acceptance_criteria": [
+        "Dado que existen envíos autorizados, cuando se consulta un código o una combinación de filtros, entonces se obtienen solo los envíos que satisfacen todos los criterios y los permisos de la cuenta.",
+        "Dado que ningún envío coincide, cuando se ejecuta la consulta, entonces el resultado es vacío y se distingue de un error de servicio.",
+        "Dado que la fecha inicial es posterior a la final, cuando se solicita el periodo, entonces se informa el criterio inválido y no se interpreta como una consulta sin resultados."
+      ],
+      "estimate_status": "proposed_not_team_commitment",
+      "delivery_status": "not_verified_by_this_catalog"
+    },
+    {
+      "id": "US14",
+      "title": "Detalle de telemetría por unidad",
+      "epic": "EP03",
+      "points": 3,
+      "scope": "product",
+      "role": "Coordinador Logístico",
+      "definition": "Como Coordinador Logístico, deseo consultar las mediciones de temperatura y humedad asociadas al envío de una unidad para verificar el comportamiento de la carga durante el periodo solicitado.",
+      "acceptance_criteria": [
+        "Dado que la unidad pertenece a su empresa y el envío tiene lecturas, cuando consulta un intervalo válido, entonces obtiene sus valores, unidades, fechas y rango aplicable ordenados cronológicamente.",
+        "Dado que existen interrupciones de reporte, cuando se consulta ese periodo, entonces los intervalos sin datos quedan identificados sin interpolar valores como si fueran mediciones reales.",
+        "Dado que la unidad no está autorizada, cuando se solicita su telemetría, entonces no se entregan lecturas ni metadatos privados."
+      ],
+      "estimate_status": "proposed_not_team_commitment",
+      "delivery_status": "not_verified_by_this_catalog"
+    },
+    {
+      "id": "US17",
+      "title": "Configuración de umbrales térmicos",
+      "epic": "EP04",
+      "points": 3,
+      "scope": "product",
+      "role": "Coordinador Logístico",
+      "definition": "Como Coordinador Logístico, deseo definir el rango y tolerancia de la carga para evaluar sus condiciones según los requisitos del envío.",
+      "acceptance_criteria": [
+        "Dado que el envío todavía no inicia monitoreo, cuando se guarda un mínimo menor que el máximo, humedad entre 0 y 100 y tolerancia no negativa, entonces el rango queda asociado al envío.",
+        "Dado que el mínimo es mayor o igual que el máximo, la humedad excede 0 a 100 o la tolerancia es negativa, cuando se propone el rango, entonces no se guarda y se identifican las restricciones incumplidas.",
+        "Dado que el envío ya inició monitoreo, cuando se pretende cambiar el rango aplicado, entonces las evaluaciones históricas mantienen el rango de su inicio y no se reescriben retroactivamente."
+      ],
+      "estimate_status": "proposed_not_team_commitment",
+      "delivery_status": "not_verified_by_this_catalog"
+    },
+    {
+      "id": "US18",
+      "title": "Historial de alertas emitidas",
+      "epic": "EP04",
+      "points": 3,
+      "scope": "product",
+      "role": "Coordinador Logístico",
+      "definition": "Como Coordinador Logístico, deseo consultar las alertas y su evolución para revisar la atención de incidencias en mis envíos.",
+      "acceptance_criteria": [
+        "Dado que existen alertas autorizadas, cuando se solicita un periodo y estado, entonces se obtienen las coincidencias con severidad, medición de origen, inicio, fin y acciones registradas.",
+        "Dado que el periodo no contiene alertas, cuando se consulta, entonces se devuelve un conjunto vacío sin atribuir eventos inexistentes.",
+        "Dado que se solicita una alerta fuera de la empresa, cuando se verifica el acceso, entonces no se revelan sus datos."
+      ],
+      "estimate_status": "proposed_not_team_commitment",
+      "delivery_status": "not_verified_by_this_catalog"
+    },
+    {
+      "id": "US19",
+      "title": "Registro de nueva unidad refrigerada",
+      "epic": "EP05",
+      "points": 3,
+      "scope": "product",
+      "role": "Coordinador Logístico",
+      "definition": "Como Coordinador Logístico, deseo registrar una unidad frigorífica para disponer de recursos identificados para mis envíos.",
+      "acceptance_criteria": [
+        "Dado que la placa no está registrada y la capacidad es positiva, cuando se registra la unidad con los datos obligatorios, entonces se crea una sola unidad asociada a la empresa.",
+        "Dado que la placa ya existe en el registro, cuando se intenta registrar de nuevo, entonces no se duplica la unidad y se informa el conflicto.",
+        "Dado que la capacidad no es positiva o faltan datos obligatorios, cuando se solicita el registro, entonces no se crea una unidad incompleta."
+      ],
+      "estimate_status": "proposed_not_team_commitment",
+      "delivery_status": "not_verified_by_this_catalog"
+    },
+    {
+      "id": "US21",
+      "title": "Registro de conductores",
+      "epic": "EP05",
+      "points": 3,
+      "scope": "product",
+      "role": "Coordinador Logístico",
+      "definition": "Como Coordinador Logístico, deseo registrar conductores con licencia y contacto para planificar el personal de mis envíos.",
+      "acceptance_criteria": [
+        "Dado que la licencia es única y los datos obligatorios están completos, cuando se registra el conductor, entonces se crea un registro asociado a la empresa.",
+        "Dado que la licencia ya está registrada, cuando se intenta crear otro conductor con ella, entonces se informa el conflicto y no se duplica el registro.",
+        "Dado que falta licencia o nombre, cuando se solicita el registro, entonces no se crea un conductor incompleto."
+      ],
+      "estimate_status": "proposed_not_team_commitment",
+      "delivery_status": "not_verified_by_this_catalog"
+    },
+    {
+      "id": "US22",
+      "title": "Asignación de conductor a vehículo",
+      "epic": "EP05",
+      "points": 3,
+      "scope": "product",
+      "role": "Coordinador Logístico",
+      "definition": "Como Coordinador Logístico, deseo reservar una unidad y conductor para un envío para evitar incompatibilidades de recursos durante el traslado.",
+      "acceptance_criteria": [
+        "Dado que el conductor y vehículo están activos y disponibles durante el intervalo del envío, cuando se confirma su asignación, entonces ambos quedan reservados para ese envío.",
+        "Dado que uno de los recursos está reservado en un intervalo solapado, cuando se intenta asignarlo, entonces no se crea la reserva y se identifica el recurso en conflicto.",
+        "Dado que uno de los recursos pertenece a otra empresa o está inactivo, cuando se intenta asignarlo, entonces la reserva se rechaza."
+      ],
+      "estimate_status": "proposed_not_team_commitment",
+      "delivery_status": "not_verified_by_this_catalog"
+    },
+    {
+      "id": "US23",
+      "title": "Consulta de historial térmico",
+      "epic": "EP06",
+      "points": 5,
+      "scope": "product",
+      "role": "Coordinador Logístico",
+      "definition": "Como Coordinador Logístico, deseo consultar las mediciones de envíos finalizados para respaldar auditorías de la cadena de frío.",
+      "acceptance_criteria": [
+        "Dado que el envío finalizado pertenece a la empresa, cuando se consulta su historial, entonces se obtienen lecturas, rangos aplicados, fechas, intervalos sin señal y alertas conservadas.",
+        "Dado que se solicita un periodo sin mediciones, cuando se consulta el historial, entonces se informa ausencia de datos sin concluir que la cadena de frío fue íntegra.",
+        "Dado que el envío pertenece a otra empresa, cuando se solicita su historial, entonces no se entregan los registros."
+      ],
+      "estimate_status": "proposed_not_team_commitment",
+      "delivery_status": "not_verified_by_this_catalog"
+    },
+    {
+      "id": "US30",
+      "title": "Gestión de idiomas (i18n)",
+      "epic": "EP02",
+      "points": 3,
+      "scope": "product",
+      "role": "Coordinador Logístico o Cliente de Carga",
+      "definition": "Como Coordinador Logístico o Cliente de Carga, deseo operar en inglés estadounidense o español latinoamericano para comprender la información y los resultados de mis tareas.",
+      "acceptance_criteria": [
+        "Dado que no existe una preferencia guardada, cuando inicia la experiencia, entonces los textos se presentan en inglés estadounidense.",
+        "Dado que el usuario elige español latinoamericano o inglés estadounidense, cuando consulta contenido y realiza operaciones, entonces los textos estáticos, validaciones, notificaciones y formatos corresponden al idioma elegido.",
+        "Dado que una traducción no está disponible, cuando se obtiene el contenido, entonces se usa inglés como respaldo sin mostrar claves internas de traducción."
+      ],
+      "estimate_status": "proposed_not_team_commitment",
+      "delivery_status": "not_verified_by_this_catalog"
+    },
+    {
+      "id": "US33",
+      "title": "Programación de envío refrigerado",
+      "epic": "EP08",
+      "points": 5,
+      "scope": "product",
+      "role": "Coordinador Logístico",
+      "definition": "Como Coordinador Logístico, deseo programar carga, rango, ruta, recursos y cliente para iniciar el seguimiento de una operación refrigerada.",
+      "acceptance_criteria": [
+        "Dado que la carga, rango, origen, destino e intervalo son válidos y los recursos están disponibles, cuando se confirma la programación con un Cliente de Carga autorizado, entonces se crea un código único, estado SCHEDULED y reserva de unidad y conductor.",
+        "Dado que existe borrador con datos incompletos, cuando se conserva sin programarlo, entonces mantiene estado DRAFT sin reservar recursos ni afirmar que hay un envío programado.",
+        "Dado que el intervalo es inválido o los recursos tienen conflicto, cuando se confirma la programación, entonces no se crea una reserva parcial y se informa qué condición impide programar."
+      ],
+      "estimate_status": "proposed_not_team_commitment",
+      "delivery_status": "not_verified_by_this_catalog"
+    },
+    {
+      "id": "US34",
+      "title": "Gestión de estados del envío",
+      "epic": "EP08",
+      "points": 3,
+      "scope": "product",
+      "role": "Coordinador Logístico",
+      "definition": "Como Coordinador Logístico, deseo iniciar, entregar o cancelar mis envíos según su estado para mantener un seguimiento verificable de la operación.",
+      "acceptance_criteria": [
+        "Dado que un envío está SCHEDULED con recursos válidos, cuando se inicia tránsito, entonces pasa a IN_TRANSIT y registra responsable e instante del cambio.",
+        "Dado que un envío está IN_TRANSIT, cuando se confirma entrega, entonces pasa a DELIVERED, termina el monitoreo activo y conserva su historial.",
+        "Dado que un envío está DRAFT o SCHEDULED, cuando se cancela, entonces pasa a CANCELLED y libera sus reservas; dado que está DELIVERED o CANCELLED, cuando se solicita iniciarlo, entonces se rechaza esa transición sin alterar el estado."
+      ],
+      "estimate_status": "proposed_not_team_commitment",
+      "delivery_status": "not_verified_by_this_catalog"
+    },
+    {
+      "id": "US35",
+      "title": "Registro de acción correctiva",
+      "epic": "EP04",
+      "points": 3,
+      "scope": "product",
+      "role": "Coordinador Logístico",
+      "definition": "Como Coordinador Logístico, deseo documentar la atención de una alerta para dejar constancia de la respuesta y comunicarla al cliente.",
+      "acceptance_criteria": [
+        "Dado que una alerta activa pertenece a su empresa y la acción está descrita, cuando se registra la atención, entonces se conserva acción, comentario, responsable, fecha y vínculo con la alerta, que pasa a ACKNOWLEDGED.",
+        "Dado que se solicita notificar al cliente asociado, cuando se registra la acción, entonces se genera un aviso referido a ese envío sin distribuirlo a otros clientes.",
+        "Dado que la acción está vacía o no existe permiso sobre la alerta, cuando se intenta registrar, entonces no se crea la acción ni cambia el estado; una acción no resuelve por sí sola una excursión todavía fuera de rango."
+      ],
+      "estimate_status": "proposed_not_team_commitment",
+      "delivery_status": "not_verified_by_this_catalog"
+    },
+    {
+      "id": "US36",
+      "title": "Consulta de envíos del Cliente de Carga",
+      "epic": "EP08",
+      "points": 5,
+      "scope": "product",
+      "role": "Cliente de Carga",
+      "definition": "Como Cliente de Carga, deseo consultar mis envíos, estado y evidencia térmica para preparar la recepción de mi carga y revisar su trazabilidad.",
+      "acceptance_criteria": [
+        "Dado que el cliente está asociado a un envío, cuando lo consulta, entonces obtiene su estado, ruta, última medición con fecha, alertas, acciones comunicadas e historial disponible.",
+        "Dado que un envío no está asociado al cliente, cuando intenta consultarlo por su identificador, entonces no recibe su información.",
+        "Dado que el cliente consulta un envío propio, cuando intenta programarlo, reasignar recursos o cambiar su estado, entonces la escritura se rechaza y se conserva la vista de consulta."
+      ],
+      "estimate_status": "proposed_not_team_commitment",
+      "delivery_status": "not_verified_by_this_catalog"
+    }
+  ],
+  "sprint2_proposed_points": 55,
+  "team_commitment": "pending"
+}

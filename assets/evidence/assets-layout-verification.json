@@ -1,0 +1,30 @@
+{
+  "layout": "one root chapter Markdown and assets; all images in assets/images",
+  "image_files": 15,
+  "relative_links_checked": 18,
+  "relative_links_missing": [],
+  "chapter_preserved_except_relative_paths": true,
+  "previous_chapter_unchanged": true,
+  "image_and_linked_file_bytes_preserved": true,
+  "path_mapping": {
+    "assets/imagenes/landing_1.png": "assets/images/landing_1.png",
+    "assets/imagenes/landing_2.png": "assets/images/landing_2.png",
+    "assets/imagenes/git_1.png": "assets/images/git_1.png",
+    "assets/imagenes/git_3.png": "assets/images/git_3.png",
+    "assets/imagenes/git_2.png": "assets/images/git_2.png",
+    "assets/images/chapter-05/tb1-frontend-dashboard-en.jpg": "assets/images/tb1-frontend-dashboard-en.jpg",
+    "assets/images/chapter-05/tb1-frontend-scheduling.jpg": "assets/images/tb1-frontend-scheduling.jpg",
+    "assets/images/chapter-05/tb1-frontend-alerts-es.jpg": "assets/images/tb1-frontend-alerts-es.jpg",
+    "assets/images/chapter-05/tb1-frontend-detail-es.jpg": "assets/images/tb1-frontend-detail-es.jpg",
+    "assets/images/chapter-05/tb1-frontend-client-es.jpg": "assets/images/tb1-frontend-client-es.jpg",
+    "assets/images/chapter-05/tb1-frontend-client-mobile.jpg": "assets/images/tb1-frontend-client-mobile.jpg",
+    "assets/images/chapter-05/tb1-landing-desktop.jpg": "assets/images/tb1-landing-desktop.jpg",
+    "assets/images/chapter-05/tb1-landing-mobile.jpg": "assets/images/tb1-landing-mobile.jpg",
+    "assets/images/chapter-05/tb1-landing-team.jpg": "assets/images/tb1-landing-team.jpg",
+    "assets/images/chapter-05/tb1-product-video.jpg": "assets/images/tb1-product-video.jpg",
+    "annexes/commits-sprint2.csv": "assets/annexes/commits-sprint2.csv",
+    "annexes/frioTrack-productnavigation-sprint2-apoyo.mp4": "assets/annexes/frioTrack-productnavigation-sprint2-apoyo.mp4",
+    "evidence/github-final-commits.json": "assets/evidence/github-final-commits.json"
+  },
+  "note": "Prior evidence receipts describe the original technical review and PDF export; this simplified package includes only the Markdown and assets, with no PDF or HTML."
+}
