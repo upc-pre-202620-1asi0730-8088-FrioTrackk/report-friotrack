@@ -346,3 +346,17 @@ El ciclo de vida de desarrollo de FríoTrack está sujeto a un conjunto de restr
 * **Restricciones de Integración y Documentación:** el sistema debe consumir un servicio externo de mapas (Google Maps API o Leaflet/OpenStreetMap) para la visualización gráfica de rutas en tiempo real, e integrarse mediante llamadas API RESTful documentadas técnicamente con OpenAPI Specification (OAS) a través de Swagger.
 * **Restricciones de Proceso y Calidad de Código:** el proyecto debe gestionarse bajo el marco de trabajo ágil Scrum. El código fuente debe almacenarse en repositorios dentro de una organización pública en GitHub, aplicando GitFlow, nomenclatura estandarizada en inglés, Conventional Commits, y versionamiento formal bajo Semantic Versioning (SemVer 2.0.0).
 * **Restricciones de Idioma y Accesibilidad:** FríoTrack está diseñado de forma nativa en español para asegurar usabilidad óptima entre transportistas y productores peruanos. No obstante, para alinearse con las directrices de ingeniería globales y los requisitos de acreditación del curso, el sistema se desarrollará con un marco de internacionalización (i18n), con soporte técnico en inglés y español, y atributos ARIA para garantizar la accesibilidad web (a11y).
+
+### 1.2.2. Lean UX Process
+
+#### 1.2.2.1. Lean UX Problem Statements
+
+**The current state of** cold chain monitoring for perishable food transportation in Peru **has focused mainly on** manual, non-continuous temperature checks performed by drivers or logistics staff, without digital sensors or centralized records, leaving producers, carriers, and buyers unable to detect cold chain breaks in real time.
+
+**What existing products/services fail to address is** an affordable, sector-specific digital platform that consolidates continuous temperature and humidity monitoring, automated alerts, and route visibility for small and medium-sized refrigerated transport operators in Peru.
+
+**Our product/service will address this gap by** developing FríoTrack, a responsive web platform for near real-time monitoring of refrigerated food shipments, enabling users to track temperature and humidity readings, receive automated alerts on cold chain deviations, visualize shipment routes, and access historical thermal records for quality audits and commercial claims.
+
+**Our initial focus will be** logistics and quality coordinators of small and medium-sized refrigerated transport companies operating on export corridors between Peru's producing regions and Lima Metropolitana, as well as producers and buyers who require verifiable cold chain compliance.
+
+**We'll know we are successful when we see** at least 150 active users within the first 8 months, a monthly user retention rate above 75% starting from month 3, a 30% reduction in cold chain deviation incidents during transit, and a Net Promoter Score (NPS) exceeding 40 points after 3 months of platform usage.
