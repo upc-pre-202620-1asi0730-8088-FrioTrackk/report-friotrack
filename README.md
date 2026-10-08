@@ -1029,3 +1029,56 @@ El **Ubiquitous Language** de **FrioTrack** establece un lenguaje común entre l
 <img src="assets/images/chapter-03/impact_mapping01.png" alt="Impact Mapping de FríoTrack" width="100%">
 <img src="assets/images/chapter-03/impact_mapping02.png" alt="Impact Mapping de FríoTrack" width="100%">
 <img src="assets/images/chapter-03/impact_mapping03.png" alt="Impact Mapping de FríoTrack" width="100%">
+
+
+## 3.3. Product Backlog
+
+| # Orden | User Story Id | Título | Descripción | Story Points <br>(1 / 2 / 3 / 5 / 8) |
+| :---: | :---: | :--- | :--- | :---: |
+| **1** | US01 | Telemetría en vivo en el panel | Como **coordinador logístico**, quiero visualizar un panel con lecturas actualizadas de temperatura para supervisar envíos. | 5 |
+| **2** | US02 | Mapa interactivo de rutas | Como **coordinador logístico**, quiero visualizar la ubicación geográfica de las unidades sobre un mapa para rastrear el trayecto. | 8 |
+| **3** | US03 | Búsqueda y filtros de envíos | Como **coordinador logístico**, quiero buscar y filtrar envíos activos por código o unidad para localizar operaciones rápidamente. | 3 |
+| **4** | US04 | Indicadores visuales de severidad | Como **coordinador logístico**, quiero observar indicadores visuales de color según el estado térmico para priorizar incidencias. | 2 |
+| **5** | US05 | Detalle de telemetría por unidad | Como **coordinador logístico**, quiero consultar el detalle técnico de una unidad en ruta para verificar variables de humedad y vibración. | 5 |
+| **6** | TS01 | Endpoint de consulta de envíos activos | Como **developer**, quiero desarrollar un endpoint GET en la API para listar los envíos activos con filtros de búsqueda. | 3 |
+| **7** | US06 | Detección de excursiones térmicas | Como **comprador de alimentos**, quiero recibir notificaciones automáticas cuando la temperatura supere el rango seguro. | 5 |
+| **8** | US07 | Notificaciones push en plataforma | Como **coordinador logístico**, quiero visualizar avisos emergentes dentro de la aplicación para enterarme de incidencias. | 3 |
+| **9** | US08 | Configuración de umbrales térmicos | Como **gestor de calidad**, quiero configurar los rangos máximos y mínimos permitidos por tipo de alimento transportado. | 3 |
+| **10** | US09 | Historial de alertas emitidas | Como **coordinador logístico**, quiero consultar el registro histórico de todas las alertas generadas para auditar incidencias. | 3 |
+| **11** | TS02 | Endpoint de consulta de alertas | Como **developer**, quiero desarrollar un endpoint GET en la API para consultar el listado de alertas térmicas registradas. | 3 |
+| **12** | US10 | Consulta de historial térmico | Como **gestor de calidad**, quiero consultar los registros históricos de temperatura de envíos finalizados para auditorías. | 5 |
+| **13** | US11 | Exportación de informes de trazabilidad | Como **agroexportador**, quiero exportar informes térmicos en formato estructurado para resolver reclamaciones comerciales. | 5 |
+| **14** | US12 | Gráficos estadísticos comparativos | Como **gestor de calidad**, quiero visualizar gráficos de comportamiento térmico por ruta para identificar variaciones. | 5 |
+| **15** | US13 | Registro de bitácora de auditoría | Como **auditor de calidad**, quiero consultar el registro de acciones de los usuarios en la plataforma para trazabilidad interna. | 3 |
+| **16** | US14 | Registro de nueva unidad refrigerada | Como **coordinador logístico**, quiero registrar nuevas unidades frigoríficas en el sistema para asociarlas a los despachos. | 3 |
+| **17** | US15 | Edición de datos de unidad | Como **coordinador logístico**, quiero actualizar la información de una unidad frigorífica para mantener la base de datos al día. | 2 |
+| **18** | US16 | Registro de conductores | Como **coordinador logístico**, quiero registrar los datos de los conductores en el sistema para asignarlos a los viajes. | 3 |
+| **19** | US17 | Asignación de conductor a vehículo | Como **coordinador logístico**, quiero asignar un conductor disponible a una unidad de transporte para organizar despachos. | 3 |
+| **20** | US18 | Configuración de dispositivos IoT | Como **administrador técnico**, quiero asociar tokens y dispositivos sensores IoT a las unidades de transporte desde el panel. | 5 |
+| **21** | TS03 | Endpoint de gestión de flotas | Como **developer**, quiero crear endpoints CRUD en la API para la administración de unidades frigoríficas y vehículos. | 5 |
+| **22** | TS04 | Endpoint de recepción de telemetría IoT | Como **developer**, quiero implementar un endpoint POST en la API para recibir y almacenar lecturas masivas de sensores. | 8 |
+| **23** | US19 | Inicio de sesión en el sistema | Como **coordinador logístico**, quiero autenticar mis credenciales en el sistema para acceder al panel operativo. | 3 |
+| **24** | US20 | Cierre de sesión seguro | Como **usuario del sistema**, quiero cerrar mi sesión activa de forma segura para evitar accesos no autorizados. | 2 |
+| **25** | US21 | Recuperación de contraseña | Como **usuario del sistema**, quiero solicitar un enlace de recuperación de contraseña para restablecer mi acceso. | 3 |
+| **26** | US22 | Gestión de perfiles de usuario | Como **administrador**, quiero administrar los roles y permisos de los usuarios para controlar el acceso a módulos. | 5 |
+| **27** | TS05 | Endpoint de autenticación JWT | Como **developer**, quiero construir un endpoint POST en la API para autenticar usuarios y emitir tokens JWT seguros. | 5 |
+| **28** | US23 | Propuesta de valor en Landing | Como **visitante transportista**, quiero visualizar la propuesta de valor principal en la página de inicio para comprender los beneficios del monitoreo térmico. | 2 |
+| **29** | US24 | Corredores logísticos en Landing | Como **visitante agroexportador**, quiero consultar los corredores logísticos cubiertos para verificar la cobertura de mis rutas. | 2 |
+| **30** | US25 | Formulario de contacto comercial | Como **visitante interesado**, quiero registrar mis datos en un formulario para solicitar una demostración comercial. | 3 |
+| **31** | US26 | Casos de éxito y testimonios | Como **visitante del sitio**, quiero leer casos de éxito de otros transportistas para validar la efectividad de la plataforma. | 2 |
+| **32** | US27 | Preguntas frecuentes (FAQ) | Como **visitante interesado**, quiero consultar preguntas frecuentes para resolver dudas sobre la implementación del sistema. | 2 |
+| **33** | US28 | Generación de reportes PDF ejecutivos | Como **gerente logístico**, quiero generar un reporte ejecutivo en PDF con el resumen mensual de operaciones y cadena de frío. | 5 |
+| **34** | US29 | Panel de analítica de incidencias | Como **gestor de calidad**, quiero visualizar métricas agregadas de fallas térmicas para identificar proveedores o rutas críticas. | 5 |
+| **35** | US30 | Gestión de multi-idioma (i18n) | Como **usuario del sistema**, quiero alternar entre español e inglés en la interfaz para facilitar la operación a socios extranjeros. | 3 |
+| **36** | TS06 | Endpoint de exportación de reportes | Como **developer**, quiero implementar un endpoint en la API que compile y exporte datos históricos en archivos estructurados. | 5 |
+| **37** | TS07 | Documentación Swagger OpenAPI | Como **developer**, quiero configurar la especificación OpenAPI mediante Swagger para documentar los endpoints. | 2 |
+
+
+## Referencia y Enlace Público
+- **Herramienta de gestión:** Trello
+- **URL Pública del Product Backlog:** https://trello.com/b/6qrvOukt/blackstartup-fr%C3%ADotrack
+
+## Captura de pantalla
+<div align="center">
+  <img src="assets/images/chapter-03/cap_trello.png" alt="Captura de pantalla de Trello" width="60%">
+</div>
