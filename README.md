@@ -1082,3 +1082,201 @@ El **Ubiquitous Language** de **FrioTrack** establece un lenguaje común entre l
 <div align="center">
   <img src="assets/images/chapter-03/cap_trello.png" alt="Captura de pantalla de Trello" width="60%">
 </div>
+
+---
+# Capítulo IV: Product Design
+
+El presente capítulo documenta las decisiones de diseño de FríoTrack, la plataforma web de BlackStartup para el monitoreo en tiempo casi real de la temperatura, la humedad y la posición de cargas refrigeradas durante el transporte terrestre, el diseño se desarrolla en dos planos complementarios. El primero corresponde al diseño de la experiencia y de la interfaz (secciones 4.1 a 4.5), que traduce a pantallas navegables el problema y los perfiles de usuario definidos en el Capítulo I. El segundo corresponde al diseño de la solución de software (secciones 4.6 a 4.8), donde se modela el dominio, se describe la arquitectura y se especifican las clases y la base de datos que sustentan esas pantallas.
+
+Ambos planos se trabajaron de manera conjunta. Cada pantalla de la aplicación se diseñó a partir de una tarea concreta de los dos perfiles de usuario de la plataforma, el **Coordinador Logístico** (empresa de transporte refrigerado) y el **Cliente de Carga** (productor, exportador o comprador de alimentos perecibles), y cada comando o evento del modelo de dominio se relaciona con una acción visible en esas pantallas. De este modo, el enfoque de diseño centrado en las personas propuesto por la norma ISO 9241-210 (International Organization for Standardization [ISO], 2019) se mantiene desde la primera guía de estilo hasta el diagrama de la base de datos.
+
+Los datos de ejemplo que aparecen en las imágenes (códigos de envío, placas, conductores, clientes y empresas) son ficticios y se emplean solamente para ilustrar el diseño. Los precios de los planes de la Landing Page son referenciales y están sujetos a validación con usuarios reales.
+
+## 4.1. Style Guidelines
+
+### 4.1.1. General Style Guidelines
+
+La guía de estilo de FríoTrack establece los elementos visuales y de lenguaje que se aplican de manera uniforme en la Landing Page y en la Web Application. Su propósito es que la interfaz transmita seriedad y precisión, que es lo que los usuarios esperan de una herramienta que respalda la conservación de alimentos perecibles, y que la información crítica (por ejemplo, una lectura fuera de rango) pueda reconocerse sin esfuerzo. Los principios que la orientan son cuatro: consistencia entre pantallas, jerarquía visual clara, uso del color siempre acompañado de texto e ícono, y lenguaje orientado a la acción. Estos principios se apoyan en las heurísticas de usabilidad de Nielsen (1994), en particular la visibilidad del estado del sistema, la consistencia y los estándares, y la prevención de errores.
+
+#### Logotipo
+
+El logotipo de FríoTrack combina un isotipo y un nombre dividido cromáticamente en «Frío» y «Track». El isotipo es el mismo archivo `logo.svg` de la Landing Page y está formado por tres elementos con significado propio: un copo de nieve de seis brazos que comunica la cadena de frío, puntas de flecha en los extremos que aluden al recorrido de la unidad y un nodo central que representa el sensor que reporta las lecturas. Todo ello se inscribe en un cuadrado de esquinas redondeadas del color principal de la marca. Se definen tres versiones: la principal sobre fondo claro, una versión sobre fondo oscuro para el pie de página y una versión sobre el color de marca, además del isotipo aislado que se usa como ícono de la pestaña del navegador y de la aplicación.
+
+**Figura 4.1**
+
+*Logotipo de FríoTrack y sus variantes*
+
+<p align="center">
+  <img src="assets/images/chapter-04/logo-friotrack.png" alt="Logotipo de FríoTrack y sus variantes" width="900"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+#### Tipografía
+
+Se adopta la familia **Inter** (Andersson, s. f.) como tipografía única de la plataforma. Inter es una tipografía sans-serif de licencia SIL Open Font License 1.1, diseñada para la lectura en pantalla, que incluye los caracteres del español (tildes, «ñ», signos de apertura) y cifras tabulares. Esta última característica es relevante para FríoTrack porque las lecturas de temperatura se muestran en columnas y deben alinearse verticalmente para poder compararse de un vistazo. La escala tipográfica define nueve roles, desde el texto de encabezado de la Landing Page hasta las etiquetas de 12 px, y mantiene un interlineado mínimo de 1,5 en párrafos y de 1,3 en interfaces densas.
+
+**Figura 4.2**
+
+*Sistema tipográfico de FríoTrack*
+
+<p align="center">
+  <img src="assets/images/chapter-04/typography-friotrack.png" alt="Sistema tipográfico de FríoTrack" width="900"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+#### Paleta de colores
+
+La paleta parte de un azul frío como color principal, asociado con confianza y con la temática de refrigeración, y de un turquesa de acento para elementos decorativos. Sobre esta base se definen cuatro colores semánticos para el estado térmico de un envío: dentro del rango, advertencia, crítico y sin señal. Cada color de estado tiene tres variantes (relleno, texto seguro y tinte de fondo), de modo que el texto siempre se pinta con la variante que cumple el contraste requerido. Además, el color nunca es el único portador de información: cada estado se acompaña de un ícono y de una etiqueta de texto, lo que responde al criterio de éxito 1.4.1 (Uso del color) de las Pautas de Accesibilidad para el Contenido Web (World Wide Web Consortium [W3C], 2024).
+
+**Tabla 4.1**
+
+*Colores de marca, superficies y estados de FríoTrack*
+
+
+| Nombre | Código | Función en la interfaz |
+| :--- | :---: | :--- |
+| **Primary Blue** | `#0B5ED7` | Acciones principales, enlaces y navegación activa. |
+| **Blue Dark** | `#084BAE` | Estados *hover* y *pressed*; texto sobre el tinte azul. |
+| **Cold Teal** | `#00B4A6` | Acento decorativo y datos secundarios (no se usa como color de texto sobre blanco). |
+| **Ink** | `#0F172A` | Texto principal y encabezados. |
+| **Slate** | `#64748B` | Texto secundario y etiquetas. |
+| **Background** | `#F8FAFC` | Fondo general de la aplicación. |
+| **Blue Tint** | `#EAF2FE` | Selección, fila activa y avisos informativos. |
+| **Dentro del rango** | `#146C36` (texto) · `#E7F6EC` (tinte) | Lectura dentro del rango térmico configurado. |
+| **Advertencia** | `#92400E` (texto) · `#FEF3C7` (tinte) · `#F5A524` (relleno) | Lectura cercana al límite o desvío breve. |
+| **Crítico** | `#B42318` (texto) · `#FDECEE` (tinte) · `#E63946` (relleno) | Desvío que supera la tolerancia configurada. |
+| **Sin señal** | `#475569` (texto) · `#EEF2F6` (tinte) · `#64748B` (relleno) | El sensor no reporta; se muestra la última lectura conocida. |
+
+*Nota.* Elaboración propia.
+
+Los valores de contraste se calcularon con la fórmula de luminancia relativa definida por el criterio 1.4.3 (Contraste mínimo) de las Pautas de Accesibilidad para el Contenido Web 2.2 (W3C, 2024), que exige una razón de al menos 4,5 : 1 para texto normal y de 3 : 1 para texto grande. La Tabla 4.2 resume los resultados de las combinaciones que se emplean en la interfaz.
+
+**Tabla 4.2**
+
+*Razón de contraste de las combinaciones de color utilizadas*
+
+
+| Combinación (texto sobre fondo) | Razón | Resultado | Uso |
+| :--- | :---: | :---: | :--- |
+| Blanco sobre Primary Blue | 5,84 : 1 | Cumple AA | Texto de botones primarios |
+| Primary Blue sobre blanco | 5,84 : 1 | Cumple AA | Enlaces y texto de acción |
+| Blanco sobre Blue Dark | 7,99 : 1 | Cumple AA | Botones en estado *hover* |
+| Ink sobre Background | 17,06 : 1 | Cumple AA | Texto principal |
+| Slate sobre blanco | 4,76 : 1 | Cumple AA | Texto secundario |
+| Slate sobre Background | 4,55 : 1 | Cumple AA | Texto secundario sobre el fondo de página |
+| Blue Dark sobre Blue Tint | 7,09 : 1 | Cumple AA | Navegación activa |
+| Texto de «Dentro del rango» sobre su tinte | 5,82 : 1 | Cumple AA | Chips de estado |
+| Texto de «Advertencia» sobre su tinte | 6,37 : 1 | Cumple AA | Chips de estado |
+| Texto de «Crítico» sobre su tinte | 5,76 : 1 | Cumple AA | Chips de estado y alertas |
+| Texto de «Sin señal» sobre su tinte | 6,74 : 1 | Cumple AA | Chips de estado |
+| Ink sobre Cold Teal | 6,87 : 1 | Cumple AA | Etiquetas sobre el acento |
+| Blanco sobre Cold Teal | 2,60 : 1 | No cumple | Combinación prohibida para texto |
+
+*Nota.* Razones calculadas por el equipo con la fórmula de luminancia relativa de WCAG. Elaboración propia.
+
+**Figura 4.3**
+
+*Paleta de colores y estados térmicos de FríoTrack*
+
+<p align="center">
+  <img src="assets/images/chapter-04/colors-friotrack.png" alt="Paleta de colores y estados térmicos de FríoTrack" width="900"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+#### Espaciado y cuadrícula
+
+El espaciado se basa en una cuadrícula de 8 px con un medio paso de 4 px, escala que se aplica a los componentes de la Web Application y, con valores fluidos que se ajustan al ancho de la pantalla, a la Landing Page. Los radios de borde (8 px en botones y campos, 12 px en tarjetas, 20 px en paneles grandes y circular en los chips) y tres niveles de elevación (tarjetas, controles flotantes y ventanas modales) completan el sistema. Para la maquetación se definen cuatro puntos de quiebre: móvil (360 a 767 px, cuatro columnas), tableta (768 a 1023 px, ocho columnas), laptop (1024 a 1439 px, doce columnas) y escritorio (desde 1440 px, doce columnas con un ancho máximo de 1180 px en la Landing Page). La Landing Page implementada aplica además cortes propios según su contenido: 1240 px, por debajo del cual la navegación pasa a un menú desplegable; 1000 px, donde las secciones se apilan en una columna y las tarjetas de funciones pasan a dos por fila; 720 px, donde las tarjetas ocupan todo el ancho; y 560 px, donde se compactan los bloques de equipo y de metas. Este enfoque adaptable a distintos tamaños de pantalla sigue los tres ingredientes del diseño web adaptable descritos por Marcotte (2010): cuadrículas fluidas, imágenes flexibles y consultas de medios.
+
+**Figura 4.4**
+
+*Sistema de espaciado, radios, elevación y puntos de quiebre*
+
+<p align="center">
+  <img src="assets/images/chapter-04/spacing-friotrack.png" alt="Sistema de espaciado, radios, elevación y puntos de quiebre" width="900"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+#### Iconografía
+
+La interfaz utiliza PrimeIcons, la biblioteca de íconos de PrimeVue (PrimeTek, s. f.), para la navegación y las acciones frecuentes, y la complementa con cinco íconos propios que PrimeIcons no ofrece y que son propios de la cadena de frío: temperatura, humedad, puerta abierta, copo de nieve y sin señal. Los íconos se usan en tres tamaños (16, 20 y 24 px) y se acompañan de una etiqueta de texto cuando la acción pueda resultar ambigua, como en «Descargar reporte».
+
+**Figura 4.5**
+
+*Sistema de iconografía de FríoTrack*
+
+<p align="center">
+  <img src="assets/images/chapter-04/iconography-friotrack.png" alt="Sistema de iconografía de FríoTrack" width="900"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+#### Tono de comunicación y lenguaje aplicado
+
+El tono de FríoTrack es serio pero cercano. La interfaz informa con precisión y orienta la siguiente acción, sin culpar al usuario cuando ocurre un error. Se establecen tres principios: comunicar de manera clara y profesional; ser preciso y no absoluto (se distingue entre lectura reportada, ruta planificada y llegada estimada, y no se afirma «en tiempo real» cuando el dato llegó con retraso); y orientar a la acción, mostrando primero el problema y luego qué hacer. Los textos de la interfaz se redactan en español latinoamericano (`es_419`) y en inglés (`en_US`).
+
+**Tabla 4.3**
+
+*Vocabulario preferido y vocabulario a evitar en la interfaz*
+
+
+| Preferir | Evitar | Motivo |
+| :--- | :--- | :--- |
+| Lectura reportada 09:30 | Temperatura actual (cuando el dato está retrasado) | Si la lectura llegó con retraso, «actual» resulta engañoso. |
+| Fuera de rango | Peligro / Emergencia | Describe el hecho sin dramatizar. |
+| Sin señal del sensor | Error de conexión | Nombra la causa que el usuario puede revisar. |
+| Llegada estimada | Hora de llegada exacta | La hora depende del tránsito y no es una certeza. |
+| Registrar acción correctiva | Solucionar problema | Nombra la acción concreta que realiza el usuario. |
+| Envío en tránsito | Camión activo | Se refiere al envío, que es la unidad del negocio. |
+
+*Nota.* Elaboración propia.
+
+**Figura 4.6**
+
+*Tono de comunicación y mensajes del sistema*
+
+<p align="center">
+  <img src="assets/images/chapter-04/tone-friotrack.png" alt="Tono de comunicación y mensajes del sistema" width="900"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+### 4.1.2. Web Style Guidelines
+
+Las guías de estilo web definen cómo se aplican los elementos anteriores en los componentes de interfaz de la Web Application y de la Landing Page. La Web Application se construye con Vue 3 y PrimeVue (PrimeTek, s. f.), una biblioteca de componentes que se personaliza con el tema de FríoTrack, mientras que la Landing Page, por ser un sitio estático, usa HTML, CSS y JavaScript sin bibliotecas y replica los mismos tokens mediante variables CSS, y toma como referencia Material Design 3 (Google, s. f.) para los estados de interacción, el foco y la elevación. Todos los componentes comparten los mismos tokens de color, tipografía y espaciado descritos en la sección 4.1.1, de manera que un cambio de tema se propaga a toda la plataforma.
+
+**Tabla 4.4**
+
+*Componentes de la interfaz web y reglas de uso*
+
+
+| Componente | Variantes y estados | Regla de uso |
+| :--- | :--- | :--- |
+| **Botón** | Primario, contorno, neutro, texto y peligro; tamaños pequeño (32 px), estándar (40 px) y grande (48 px); estados normal, *hover*, foco, deshabilitado. | Cada vista tiene una sola acción primaria. Las acciones destructivas usan el botón de peligro y piden confirmación. |
+| **Campo de formulario** | Normal, con foco (anillo azul de 3 px), con error y con texto de ayuda. | Toda etiqueta es visible y los errores se muestran junto al campo, con texto que explica cómo corregirlos. |
+| **Chip de estado** | Dentro del rango, advertencia, crítico, sin señal, en tránsito, programado. | Siempre incluye ícono y texto además del color. |
+| **Tarjeta de indicador (KPI)** | Ícono de color, valor numérico y etiqueta. | Se usa en el Dashboard para envíos en tránsito, alertas activas, unidades disponibles y entregas del día. |
+| **Aviso (*banner*)** | Informativo, correcto, advertencia y crítico. | Comunican el estado de un envío o de una operación, por ejemplo «Sin señal desde 09:12». |
+| **Tabla** | Encabezado fijo, filas seleccionables, paginación. | Los códigos y las lecturas usan cifras tabulares; toda fila navega al detalle del registro. |
+| **Pestañas** | Activa, inactiva, con contador. | Organizan el detalle del envío (Resumen, Lecturas, Ruta y posiciones, Alertas, Historial de estados). |
+| **Indicador de pasos** | Paso completado, actual y pendiente. | Guía el registro de un envío en cuatro pasos. |
+| **Ventana modal** | Cabecera, cuerpo, pie con acciones. | Se reserva para acciones que requieren decisión, como registrar una acción correctiva. |
+| **Interruptor y selector** | Activado, desactivado; opciones excluyentes. | Preferencias como las alertas por correo y el idioma (ES / EN). |
+
+*Nota.* Elaboración propia, con base en los componentes de PrimeVue y las pautas de Material Design 3.
+
+**Figura 4.7**
+
+*Componentes de la interfaz web de FríoTrack*
+
+<p align="center">
+  <img src="assets/images/chapter-04/components-friotrack.png" alt="Componentes de la interfaz web de FríoTrack" width="900"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Accesibilidad.** Las siguientes son decisiones y objetivos de diseño; no acreditan una auditoría completa de la implementación ni una certificación. La verificación local realizada se presenta en Sprint 2. La interfaz se diseña para cumplir el nivel AA de las Pautas de Accesibilidad para el Contenido Web 2.2 (W3C, 2024). Las decisiones concretas son las siguientes: los contrastes de la Tabla 4.2 satisfacen el criterio 1.4.3; el borde y el anillo de foco de los campos superan la razón de 3 : 1 exigida por el criterio 1.4.11 (Contraste de elementos no textuales), con 5,84 : 1 en el estado de foco y 5,76 : 1 en el estado de error; el foco del teclado es siempre visible (criterio 2.4.7); los controles táctiles miden al menos 32 px por lado, más que el mínimo de 24 px del criterio 2.5.8 (Tamaño del objetivo); y los mensajes de error identifican el campo y sugieren la corrección (criterios 3.3.1 y 3.3.3). Los componentes interactivos personalizados, como las pestañas y las ventanas modales, incorporan roles y atributos de las especificaciones WAI-ARIA 1.2 (W3C, 2023) para que los lectores de pantalla anuncien correctamente su estado.
+
+**Punto de mejora identificado.** El borde de reposo de los campos y de los botones neutros (`#CBD5E1`) tiene una razón de contraste de solo 1,48 : 1 frente al blanco, por lo que no alcanza el 3 : 1 del criterio 1.4.11. La Landing Page implementada ya resuelve este punto: sus campos y botones de conmutación usan Slate (`#64748B`, 4,76 : 1) como borde. Los mock-ups de la Web Application conservan el tono tenue por coherencia visual con el diseño original, pero cada campo mantiene una etiqueta visible; para la implementación de la Web Application se recomienda aplicar el mismo cambio antes de la validación con usuarios.
+
+**Internacionalización.** Todos los textos se gestionan mediante archivos de traducción para el español latinoamericano (`es_419`), idioma base del producto según el Capítulo I, y el inglés (`en_US`). El idioma inicial sigue al del navegador del usuario y puede cambiarse desde el selector ES / EN del encabezado o, en la Web Application, desde la sección Configuración; la elección se conserva para la siguiente visita.
+
+**Diseño adaptable.** La Landing Page prioriza el contenido esencial en pantallas pequeñas, según la recomendación de Wroblewski (2011): en su versión móvil las secciones se reorganizan en una sola columna y la navegación se reduce a un menú desplegable. La Web Application ofrece dos disposiciones: en escritorio, una barra lateral de navegación con un área de trabajo de varias columnas; en móvil, una barra inferior con cuatro destinos (Panel, Envíos, Alertas y Perfil) y un panel deslizable con la lista de envíos sobre el mapa.
+
+**Retroalimentación e interacción.** Siguiendo el principio de retroalimentación descrito por Norman (2013), toda acción del usuario recibe una respuesta visible: los botones cambian de estado al pasar el cursor, las operaciones largas (como la generación del reporte térmico) muestran un aviso de progreso y los resultados se confirman con un mensaje. Las acciones irreversibles, como cancelar un envío, solicitan confirmación previa.
