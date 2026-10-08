@@ -136,17 +136,17 @@ El historial y las evidencias de colaboración de AV1 corresponden al repositori
 
 - [Student Outcome][student-outcome]
 - [Capítulo I: Introducción][chapter-1]
-  - 1.1. Startup Profile
-    - 1.1.1. Descripción de la Startup
-    - 1.1.2. Perfiles de integrantes del equipo
-  - 1.2. Solution Profile
-    - 1.2.1. Antecedentes y problemática
-    - 1.2.2. Lean UX Process
-      - 1.2.2.1. Lean UX Problem Statements
-      - 1.2.2.2. Lean UX Assumptions
-      - 1.2.2.3. Lean UX Hypothesis Statements
-      - 1.2.2.4. Lean UX Canvas
-  - 1.3. Segmentos objetivo
+  - [1.1. Startup Profile](#11-startup-profile)
+    - [1.1.1. Descripción de la Startup](#111-descripción-de-la-startup)
+    - [1.1.2. Perfiles de integrantes del equipo](#112-perfiles-de-integrantes-del-equipo)
+  - [1.2. Solution Profile](#12-solution-profile)
+    - [1.2.1. Antecedentes y problemática](#121-antecedentes-y-problemática)
+    - [1.2.2. Lean UX Process](#122-lean-ux-process)
+      - [1.2.2.1. Lean UX Problem Statements](#1221-lean-ux-problem-statements)
+      - [1.2.2.2. Lean UX Assumptions](#1222-lean-ux-assumptions)
+      - [1.2.2.3. Lean UX Hypothesis Statements](#1223-lean-ux-hypothesis-statements)
+      - [1.2.2.4. Lean UX Canvas](#1224-lean-ux-canvas)
+  - [1.3. Segmentos objetivo](#13-segmentos-objetivo)
 - [Capítulo II: Requirements Elicitation & Analysis][chapter-2]
   - 2.1. Competidores
     - 2.1.1. Análisis competitivo
