@@ -187,3 +187,59 @@ El historial y las evidencias de colaboración de AV1 corresponden al repositori
 [chapter-4]: https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/develop/report/14-chapter4-product-design.md
 [chapter-5]: https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/develop/report/15-chapter5-product-impl.md
 [backmatter]: https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/develop/report/16-backmatter.md
+
+---
+
+## Student Outcome
+
+### ABET – EAC - Student Outcome 5
+
+Capacidad de funcionar eficazmente en un equipo cuyos miembros proporcionan liderazgo de forma conjunta, crean un entorno colaborativo e inclusivo, establecen metas, planifican tareas y cumplen objetivos.
+
+<table>
+  <thead>
+    <tr>
+      <th>Criterio específico</th>
+      <th>Acciones realizadas</th>
+      <th>Conclusiones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td valign="top">
+        <strong>Trabaja en equipo para proporcionar liderazgo en forma conjunta.</strong>
+      </td>
+      <td valign="top">
+        <ul>
+          <li><strong>[TB1] Atauje Barreto, Alexander Sebastián:</strong> Coordinó la distribución de tareas entre los capítulos I al V como Team Leader. Lideró la redacción del Capítulo I, incluyendo Startup Profile, Solution Profile y Lean UX Process, y brindó apoyo en tareas de backend y en la implementación de la Landing Page.</li>
+          <li><strong>[TB1] Bardales Rodriguez, Benjamin Elias:</strong> Lideró el desarrollo del Capítulo IV, incluyendo la arquitectura de software, los diagramas de clases y el diseño de base de datos. Asimismo, condujo la mayor parte de la implementación de la Landing Page con HTML5, CSS3 y JavaScript.</li>
+          <li><strong>[TB1] Daga Chávez, Joaquín Leonardo:</strong> Lideró la documentación del Capítulo III, organizando las User Stories y sus criterios de aceptación. Colaboró en la estructuración del Impact Mapping y del Product Backlog.</li>
+          <li><strong>[TB1] Saavedra Flores, Rodrigo Andree:</strong> Lideró la redacción del Capítulo V, correspondiente a Product Implementation, Validation &amp; Deployment, y colaboró en la implementación y despliegue de la Landing Page.</li>
+          <li><strong>[TB1] Vera Solsol, Nayely Macarena:</strong> Lideró la elaboración del Impact Mapping, participó en la redacción de User Stories por roles de negocio y contribuyó a la priorización y refinamiento del Product Backlog.</li>
+        </ul>
+      </td>
+      <td valign="top">
+        La distribución de responsabilidades permitió compartir el liderazgo técnico y funcional. Los integrantes coordinaron sus aportes para mantener la coherencia entre los requisitos, el diseño, la implementación y la documentación de FríoTrack.
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
+        <strong>Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos.</strong>
+      </td>
+      <td valign="top">
+        <ul>
+          <li><strong>[TB1] Atauje Barreto, Alexander Sebastián:</strong> Estableció las metas y el cronograma del equipo, coordinó las reuniones de Sprint Planning y realizó el seguimiento de los entregables. También apoyó en tareas de otros capítulos según las necesidades del equipo.</li>
+          <li><strong>[TB1] Bardales Rodriguez, Benjamin Elias:</strong> Planificó las actividades del Capítulo IV y de la Landing Page, coordinando el diseño técnico y la implementación de la interfaz con los plazos acordados.</li>
+          <li><strong>[TB1] Daga Chávez, Joaquín Leonardo:</strong> Organizó la redacción del Capítulo III, las User Stories y los criterios de aceptación en Gherkin. Participó en la priorización del Product Backlog de acuerdo con la planificación del equipo.</li>
+          <li><strong>[TB1] Saavedra Flores, Rodrigo Andree:</strong> Planificó las actividades de documentación del Capítulo V y coordinó su apoyo en la implementación y despliegue de la Landing Page para contribuir a los objetivos de la entrega.</li>
+          <li><strong>[TB1] Vera Solsol, Nayely Macarena:</strong> Coordinó la incorporación del Impact Mapping en el informe, planificó la redacción de User Stories y participó en la estimación del Product Backlog mediante puntos de historia basados en la secuencia de Fibonacci.</li>
+        </ul>
+      </td>
+      <td valign="top">
+        La planificación y el seguimiento de tareas facilitaron la coordinación de los aportes individuales. El apoyo entre integrantes permitió atender las necesidades del equipo y avanzar hacia los objetivos establecidos para la entrega.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+---
