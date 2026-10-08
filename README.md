@@ -638,3 +638,192 @@ Tive ofrece una solución especializada para el monitoreo de temperatura y ubica
 - Comunicar la compatibilidad de **FrioTrack** con sensores IoT disponibles en el mercado, reduciendo la dependencia de hardware propietario.
 - Desarrollar alianzas con proveedores locales de sensores IoT para facilitar la adquisición e implementación de los dispositivos.
 - Orientar la comunicación de marca hacia las necesidades del mercado peruano, destacando una solución desarrollada para empresas que trabajan con productos perecibles y requieren controlar sus condiciones de almacenamiento y transporte.
+
+## 2.2. Entrevistas
+
+Se diseñó una investigación mediante entrevistas semiestructuradas dirigidas a representantes de ambos segmentos. En el material recopilado se registran tres entrevistas por segmento y se desarrollaron tres resúmenes en total.
+
+### 2.2.1. Diseño de entrevistas
+
+El diseño de las guías de entrevista siguió buenas prácticas de *needfinding* aplicadas al diseño de experiencia de usuario (Portigal, 2013; Goodman et al., 2012). Las preguntas fueron formuladas de manera abierta para evitar sesgar las respuestas de los entrevistados, priorizando la descripción de comportamientos y experiencias reales sobre opiniones o intenciones.
+
+### Segmento 1: Empresas distribuidoras de productos perecibles
+
+#### Datos del entrevistado
+
+1. ¿Cuál es su nombre y edad?
+2. ¿En qué distrito opera su empresa actualmente?
+3. ¿Cuál es su cargo o rol dentro de la empresa?
+4. ¿En qué sector específico trabaja su empresa? (alimenticio, farmacéutico, agroindustrial, otro)
+5. ¿Cuántos años lleva trabajando en el rubro logístico o de distribución?
+6. ¿Cuántas personas conforman su equipo operativo actualmente?
+
+#### Gestión de inventario
+
+7. ¿Qué método utilizan actualmente para registrar y controlar el inventario de sus productos perecibles?
+8. ¿Con qué frecuencia detectan pérdidas por productos vencidos o en mal estado?
+9. ¿Qué tan actualizado se mantiene el stock en sus registros durante las operaciones diarias?
+10. ¿Han tenido inconvenientes graves por errores en el registro del inventario? ¿Cómo los manejaron?
+
+#### Control de temperatura y cadena de frío
+
+11. ¿Cómo monitorean la temperatura durante el almacenamiento y el transporte de sus productos?
+12. ¿Qué sucede operativamente cuando detectan un fallo en la cadena de frío?
+13. ¿Qué tan difícil les resulta identificar mermas o pérdidas en tiempo real dentro del proceso?
+
+#### Logística y distribución
+
+14. ¿Qué herramientas o sistemas utilizan actualmente para planificar y ejecutar su distribución?
+15. ¿Cómo realizan el seguimiento de los productos desde el almacén hasta el punto de entrega final?
+16. ¿Qué tan eficiente consideran su proceso de distribución actual y en qué basan esa valoración?
+
+#### Impacto económico y operativo
+
+17. ¿Cuánto estiman que pierden mensualmente por fallas en almacenamiento, transporte o control de inventario?
+18. ¿Cuál de estos factores afecta más su rentabilidad: gestión de inventario, transporte o control de calidad?
+19. ¿Cómo repercuten estos problemas en la satisfacción de sus clientes?
+
+#### Disposición hacia una solución digital
+
+20. ¿Qué tan valioso sería para ustedes contar con visibilidad del stock en tiempo real?
+21. ¿Qué importancia le darían a una herramienta que monitoree la temperatura de forma automática y continua?
+22. ¿Estarían dispuestos a invertir en una solución que automatice su inventario y distribución? ¿Bajo qué condiciones?
+23. ¿Qué funcionalidades serían indispensables en una plataforma de gestión logística como FrioTrack?
+
+### Segmento 2: Tiendas y bodegas con productos perecibles
+
+#### Datos del entrevistado
+
+1. ¿Cuál es su nombre y edad?
+2. ¿En qué distrito se ubica su tienda o bodega?
+3. ¿Cuántos años lleva gestionando su negocio?
+4. ¿Qué tipo de productos perecibles comercializa principalmente?
+5. ¿Cuántas personas trabajan en su negocio actualmente?
+6. ¿Maneja un solo local o tiene más puntos de venta?
+
+#### Control de inventario
+
+7. ¿Cómo controlan actualmente el stock de sus productos perecibles?
+8. ¿Registran las entradas y salidas de forma manual o cuentan con algún sistema digital?
+9. ¿Qué tan actualizado suele estar su inventario durante un día normal de operación?
+10. ¿Con qué frecuencia se quedan sin stock de productos de alta rotación?
+
+#### Fechas de vencimiento y pérdidas
+
+11. ¿Cómo controlan las fechas de vencimiento de sus productos actualmente?
+12. ¿Con qué frecuencia tienen pérdidas por productos vencidos o deteriorados?
+13. ¿Qué tipo de productos les generan mayor cantidad de pérdidas y a qué lo atribuyen?
+
+#### Organización y errores frecuentes
+
+14. ¿Qué dificultades enfrentan para mantener ordenado su almacén o área de stock?
+15. ¿Qué errores ocurren con mayor frecuencia en el registro o control de su inventario?
+16. ¿Qué consecuencias les trae no encontrar un producto rápidamente cuando un cliente lo solicita?
+
+#### Impacto en ventas y clientes
+
+17. ¿Han perdido ventas o clientes por problemas relacionados con una mala gestión del inventario?
+18. ¿Cómo deciden actualmente cuándo y cuánto reponer de cada producto?
+
+#### Disposición hacia una solución digital
+
+19. ¿Les resultaría útil recibir alertas automáticas cuando un producto esté próximo a vencerse?
+20. ¿Utilizarían una aplicación sencilla para gestionar su inventario desde el celular o computadora?
+21. ¿Qué funciones priorizarían: alertas de vencimiento, reportes de ventas o control automático de stock?
+22. ¿Cuánto estarían dispuestos a pagar mensualmente por una solución como FrioTrack?
+
+### 2.2.2. Registro de entrevistas
+
+A continuación, se presenta el registro de las entrevistas realizadas a los representantes de cada segmento objetivo.
+
+#### Entrevistas segmento 1:
+
+#### Entrevista 1: Jari Hassan
+| Campo                                  | Detalle                                                                                                                                                                                                                                                                                                                                                          |
+|:---------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Titulo**                             | Entrevista 1: Jari Hassan                                                                                                                                                                                                                                                                                                                                        |
+| **Segmento**                           | Empresas distribuidoras de productos perecibles                                                                                                                                                                                                                                                                                                                  |
+| **Nombres y Apellidos**                | Jari Hassan                                                                                                                                                                                                                                                                                                                                                      |
+| **Edad**                               | 25 años                                                                                                                                                                                                                                                                                                                                                          |
+| **Distrito**                           | San Borja                                                                                                                                                                                                                                                                                                                                                        |
+| **Enlace al video (Microsoft Stream)** | [Entrevista grabada – Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241d811_upc_edu_pe/IQCBD_5MzFsIQ7WwTMg6JH1CAVHjGSGzKYEmoNuR2M1T4X0?e=meBl8F&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D) |
+| **Timing de inicio y duración**        | Inicio: 00:40 - Duración: 10:42 minutos                                                                                                                                                                                                                                                                                                                          |
+| **Evidencia fotográfica**              | *<p><img src="assets/images/chapter-02/evidencia.png" width="400" alt="Logo AgroFlet"> </p>*                                                                                                                                                                                                                                                                     |
+
+**Resumen de la entrevista:**
+
+Jari Hassan es un profesional de 25 años que se desempeña como Jefe de Operaciones y Logística en una empresa del sector alimenticio con base en San Luis. Trabaja directamente con la distribución de productos perecibles, como lácteos, embutidos y carnes envasadas, por lo que conoce de cerca las exigencias que implica mantener la cadena de frío y el control del inventario en este tipo de operación.
+
+A partir de su experiencia, señala que uno de los principales problemas en su empresa es la **falta de visibilidad en tiempo real**, tanto del stock como de las condiciones de temperatura durante el transporte. Actualmente combinan un ERP tradicional con registros manuales en Excel, lo que genera desfases en la información, errores de inventario y pérdidas por productos vencidos o en mal estado. También menciona que, cuando ocurre una falla en ruta, muchas veces se enteran demasiado tarde y la mercadería termina en cuarentena o merma.
+
+Jari considera que una solución digital sí podría aportar valor real a su operación, siempre que sea práctica, intuitiva y rápida de implementar. Para él, las funciones más importantes serían:
+
+- Control de lotes con alertas de vencimiento
+- Trazabilidad de vehículos por GPS
+- Monitoreo térmico en vivo con notificaciones inmediatas
+
+Estas funcionalidades ayudarían a prevenir pérdidas, mejorar la distribución y tomar decisiones con mayor rapidez.
+
+
+
+#### Entrevistas segmento 2:
+
+#### Entrevista 1: Irma Barreto
+
+| Campo | Información |
+|-------|-------------|
+| **Título** | **Entrevista 1: Irma Barreto** |
+| Segmento | Tiendas y bodegas con productos perecibles |
+| Nombres y apellidos | Irma Barreto |
+| Edad | 40 años |
+| Distrito | San Juan de Lurigancho |
+| Ocupación | Dueña y administradora de un pequeño restaurante familiar |
+| Tipo de negocio | Restaurante familiar |
+| Número de trabajadores | 4 personas |
+| Años gestionando el negocio | 6 años |
+| Productos perecibles principales | Frutas, verduras, carnes y otros ingredientes para la preparación de alimentos |
+| Volumen de compra aproximado | 30-40 kg de productos perecibles por semana |
+| Inicio de la entrevista | 00:00 |
+| Duración | 08:15 |
+| URL del video | [Video evidencia](https://upcedupe-my.sharepoint.com/personal/u20241f246_upc_edu_pe/_layouts/15/stream.aspx?id=%2Fpersonal%2Fu20241f246%5Fupc%5Fedu%5Fpe%2FDocuments%2Fentrevista%2Dsegmento%2D2%2Dalexander%2Dweb%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E42b0dbe0%2D21c5%2D4a90%2D89ee%2Da7c7e8118144&mode=View) |
+| **Fotografía** | <div align="center"><img src="./assets/images/chapter-02/entrevista-segmento-2-irma-barreto.png" width="300"></div> |
+| **Resumen de la entrevista** | Irma Barreto, de 40 años, es dueña y administradora de un pequeño restaurante familiar ubicado en San Juan de Lurigancho. Cuenta con aproximadamente 6 años de experiencia gestionando su negocio y trabaja junto a otras 3 personas. Actualmente, controla el inventario de sus productos perecibles de manera manual, revisando las cantidades disponibles y anotando algunas compras en un cuaderno. Sus principales dificultades son la falta de actualización del stock en tiempo real, los errores en el registro de productos y la posibilidad de quedarse sin ingredientes durante las horas de mayor atención. También señaló que las frutas y verduras pueden llegar demasiado maduras, maltratadas o en cantidades menores a las solicitadas, generando pérdidas y dificultades para preparar algunos platos del menú. Para reducir estos problemas, mostró interés en utilizar una aplicación sencilla desde su celular Android que le permita controlar automáticamente el inventario, recibir alertas sobre productos próximos a vencer, revisar las existencias y consultar el estado de sus pedidos. Asimismo, consideró importante contar con una solución que facilite la organización de sus compras y disminuya las pérdidas por deterioro de productos. Estaría dispuesta a pagar aproximadamente entre 30 y 50 soles mensuales por una herramienta accesible que le ayude a mejorar la gestión de su inventario y abastecimiento. En general, la entrevista evidencia que el comerciante necesita una solución digital que facilite el control de productos perecibles, reduzca las pérdidas y mejore la disponibilidad de ingredientes para las operaciones diarias del restaurante. |
+
+#### Entrevista 2: Santiago Silva Jara
+
+| Campo | Información |
+|-------|-------------|
+| **Título** | **Entrevista 2: Santiago Silva Jara** |
+| Segmento | Tiendas y bodegas con productos perecibles |
+| Nombres y apellidos | Santiago Silva Jara |
+| Edad | 22 años |
+| Distrito | Víctor Larco Herrera (Trujillo) |
+| Inicio de la entrevista | 00:00 |
+| Duración | 04:08 |
+| URL del video | [Video evidencia](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202421137_upc_edu_pe/IQAEFjC2Gb2fSr-pRZqtPllkAQef9VFRhQM8i7AwkrYuvCA) |
+| **Fotografía** | <div align="center"><img src="./assets/images/chapter-02/entrevista-segmento-2-santiago-silva-jara.png" width="500"></div> |
+| **Resumen de la entrevista** | Santiago Silva Jara, de 22 años, del distrito de Víctor Larco Herrera (Trujillo), posee una bodega en la que vende todo tipo de productos, incluyendo productos perecibles. Registra a mano la fecha de caducidad de estos productos para tener presente cuándo puede cambiarlos y así no afectar a sus clientes. Comentó que sería muy útil contar con una aplicación que le avise sobre estos vencimientos y cambios. |
+
+### 2.2.3. Análisis de entrevistas
+
+El presente análisis sintetiza la información recopilada a partir de las entrevistas en profundidad realizadas a los representantes de los dos segmentos objetivo.
+
+**Análisis Primer Segmento: Empresas Distribuidoras de Productos Perecibles (Jari Hassan)**
+
+En primer lugar, se evidencia una limitación operativa significativa derivada de la falta de visibilidad en tiempo real sobre el stock y las condiciones térmicas durante el transporte. El 100% (1 de 1) de los entrevistados de este segmento gestiona la distribución de productos altamente sensibles a la temperatura —lácteos, embutidos y carnes envasadas— desde una empresa del sector alimenticio con base en San Luis, combinando un ERP tradicional con registros manuales en hojas de cálculo, lo que genera desfases entre la información registrada y el estado real del inventario.
+
+En segundo lugar, se identifica un impacto financiero directo generado por la detección tardía de fallas en la cadena de frío. El entrevistado señaló que, cuando ocurre una interrupción térmica durante el traslado, la empresa suele enterarse cuando ya es demasiado tarde, lo que deriva en mercadería puesta en cuarentena o convertida directamente en merma, además de errores de inventario que afectan la rentabilidad de la operación.
+
+En tercer lugar, se identifica una demanda concreta por funcionalidades de monitoreo automatizado y trazabilidad. El entrevistado, de 25 años y con el cargo de Jefe de Operaciones y Logística, prioriza contar con control de lotes mediante alertas de vencimiento, trazabilidad de vehículos por GPS y monitoreo térmico en vivo con notificaciones inmediatas ante cualquier desviación fuera de rango.
+
+En cuarto lugar, respecto a la viabilidad y adopción de la plataforma, la disposición a migrar hacia una solución digital está condicionada a que esta sea práctica, intuitiva y rápida de implementar dentro de la operación diaria. En síntesis, este segmento requiere una solución que centralice la telemetría térmica y la ubicación de la flota en un único panel, reduciendo la brecha entre el momento en que ocurre una falla y el momento en que el equipo logístico puede reaccionar.
+
+**Análisis Segundo Segmento: Tiendas y Bodegas con Productos Perecibles (Irma Barreto y Santiago Silva Jara)**
+
+En primer lugar, se evidencia una dependencia generalizada de métodos manuales para el control de inventario y de fechas de vencimiento. De acuerdo con los testimonios recopilados, el 100% (2 de 2) de los comerciantes registra sus productos a mano —ya sea en un cuaderno o directamente sobre el empaque—, sin apoyo de ningún sistema digital, lo que abarca desde un restaurante familiar en San Juan de Lurigancho con un volumen de 30 a 40 kg de productos perecibles por semana, hasta una bodega en Trujillo que comercializa productos perecibles junto con otros rubros.
+
+En segundo lugar, existe un impacto directo en las pérdidas y en la operación diaria derivado de la falta de actualización del stock en tiempo real. El 100% de los entrevistados reportó dificultades vinculadas a productos que llegan en mal estado, maltratados o en cantidades menores a las solicitadas, así como el riesgo constante de quedarse sin ingredientes o productos de alta rotación durante las horas de mayor atención al público.
+
+En tercer lugar, se identifica una alta disposición hacia la adopción de alertas automáticas de vencimiento y aplicaciones móviles sencillas. Ambos comerciantes, con edades de 22 y 40 años, coincidieron en el interés por una aplicación accesible desde su celular Android que les permita recibir avisos sobre productos próximos a vencer y revisar sus existencias sin depender del registro manual.
+
+En cuarto lugar, respecto a la viabilidad comercial, la disposición a pagar está condicionada a que la solución sea económicamente accesible para negocios de pequeña escala: la entrevistada de San Juan de Lurigancho indicó estar dispuesta a pagar entre 30 y 50 soles mensuales por una herramienta que facilite la gestión de su inventario. En síntesis, este segmento requiere una aplicación simple y de bajo costo que automatice el control de vencimientos y reduzca las pérdidas por deterioro, sin exigir conocimientos técnicos avanzados para su uso diario.
