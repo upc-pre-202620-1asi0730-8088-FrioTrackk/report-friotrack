@@ -1280,3 +1280,291 @@ Las guías de estilo web definen cómo se aplican los elementos anteriores en lo
 **Diseño adaptable.** La Landing Page prioriza el contenido esencial en pantallas pequeñas, según la recomendación de Wroblewski (2011): en su versión móvil las secciones se reorganizan en una sola columna y la navegación se reduce a un menú desplegable. La Web Application ofrece dos disposiciones: en escritorio, una barra lateral de navegación con un área de trabajo de varias columnas; en móvil, una barra inferior con cuatro destinos (Panel, Envíos, Alertas y Perfil) y un panel deslizable con la lista de envíos sobre el mapa.
 
 **Retroalimentación e interacción.** Siguiendo el principio de retroalimentación descrito por Norman (2013), toda acción del usuario recibe una respuesta visible: los botones cambian de estado al pasar el cursor, las operaciones largas (como la generación del reporte térmico) muestran un aviso de progreso y los resultados se confirman con un mensaje. Las acciones irreversibles, como cancelar un envío, solicitan confirmación previa.
+
+## 4.2. Information Architecture
+
+La arquitectura de información de FríoTrack define cómo se organiza, se nombra, se busca y se recorre el contenido de la plataforma. Se elaboró con base en los cuatro sistemas que proponen Rosenfeld et al. (2015) (organización, rotulado, navegación y búsqueda) y en el modelo de capas de Garrett (2011), que distingue la estructura del sitio de la interacción y de la superficie visual. La plataforma tiene dos superficies con audiencias distintas: la Landing Page, pública, cuyo objetivo es explicar la propuesta de valor y llevar al visitante al registro; y la Web Application, privada, cuyo contenido depende del perfil del usuario autenticado.
+
+### 4.2.1. Organization Systems
+
+FríoTrack combina una **estructura jerárquica** con **flujos secuenciales**. La jerarquía agrupa el contenido en pocas categorías principales, siete para el Coordinador Logístico y cuatro para el Cliente de Carga, cada una con subniveles propios. Los flujos secuenciales se reservan para tareas que deben completarse en orden y con validación en cada paso, como el registro de un envío en cuatro pasos (carga y rango térmico, ruta y horario, unidad y conductor, revisión). Esta decisión responde a que la jerarquía facilita ubicar la información, mientras que la secuencia reduce errores en tareas de alto costo, como programar un traslado con una unidad equivocada.
+
+El contenido se organiza mediante cuatro esquemas de organización, cada uno aplicado en las pantallas donde resulta más natural para el usuario:
+
+**Tabla 4.5**
+
+*Esquemas de organización aplicados en FríoTrack*
+
+
+| Esquema | Criterio de agrupación | Dónde se aplica |
+| :--- | :--- | :--- |
+| **Por audiencia** | Perfil del usuario | Landing Page («Para quién») y menú lateral de la aplicación, que muestra siete opciones al Coordinador Logístico y cuatro al Cliente de Carga. |
+| **Por tarea** | Lo que el usuario necesita hacer | Menú del Coordinador Logístico: Envíos (programar y seguir), Vehículos y Conductores (administrar la flota), Historial (auditar). |
+| **Cronológico** | Fecha y hora del evento | Historial de envíos, historial de estados de un envío, lista de notificaciones agrupada por día y gráfico de lecturas de las últimas 12 horas. |
+| **Por estado** | Situación del envío o de la alerta | Chips de estado (programado, en tránsito, entregado, cancelado) y de estado térmico (dentro del rango, advertencia, crítico, sin señal); filtros de las listas. |
+
+*Nota.* Elaboración propia, con base en los esquemas de organización de Rosenfeld et al. (2015).
+
+Los dos mapas del sitio que se muestran a continuación resumen la estructura resultante. El primero corresponde a la Landing Page, que se organiza en una página principal de doce secciones, una página de términos y condiciones y una ventana modal con dos puntos de entrada a la aplicación (Iniciar sesión y Registrarse). El segundo muestra la Web Application, con una zona pública de acceso y cuenta, y dos ramas privadas, una por perfil.
+
+**Figura 4.8**
+
+*Mapa del sitio de la Landing Page*
+
+<p align="center">
+  <img src="assets/images/chapter-04/ia-landing-sitemap.png" alt="Mapa del sitio de la Landing Page" width="1000"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+**Figura 4.9**
+
+*Mapa del sitio de la Web Application por perfil de usuario*
+
+<p align="center">
+  <img src="assets/images/chapter-04/ia-webapp-sitemap.png" alt="Mapa del sitio de la Web Application por perfil de usuario" width="1000"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
+Con esta estructura se aplican los principios de claridad, navegación enfocada y facilidad de uso: el Cliente de Carga nunca ve opciones de administración de flota que no puede usar, y el Coordinador Logístico accede a cada función operativa con una sola selección del menú lateral, sin menús anidados.
+
+> **Enlace al diagrama de arquitectura de información (Miro):** pendiente de completar por el equipo.
+
+### 4.2.2. Labeling Systems
+
+El sistema de rotulado de FríoTrack usa una sola palabra o una frase corta y estable para nombrar cada función, y emplea la misma etiqueta en el menú, en el título de la pantalla y en el encabezado de la ruta de navegación (*breadcrumb*). Las etiquetas de acción usan verbos en infinitivo o imperativo que nombran el resultado («Registrar acción correctiva», «Descargar reporte térmico»). La plataforma soporta español latinoamericano (`es_419`), idioma base del producto, e inglés (`en_US`), de modo que la terminología se mantiene uniforme en ambos idiomas.
+
+**Tabla 4.6**
+
+*Etiquetas de navegación y su descripción*
+
+
+| Inglés (`en_US`) | Español latinoamericano (`es_419`) | Descripción |
+| :--- | :--- | :--- |
+| **Home** | Inicio | Presenta la propuesta de valor de FríoTrack y el panel simulado de una unidad refrigerada. |
+| **About us** | Quiénes somos | Presenta al equipo BlackStartup, su misión y su visión. |
+| **What we do** | Lo que hacemos | Explica las capacidades de la plataforma: panel en tiempo casi real, alertas, historial, mapa, flota, búsqueda y avisos. |
+| **How it works** | Cómo funciona | Resume en cuatro pasos cómo empezar a usar la plataforma. |
+| **Who it's for** | Para quién | Describe los dos segmentos de usuarios y lo que cada uno obtiene de la plataforma. |
+| **Pricing** | Planes | Muestra los tres planes referenciales según el tamaño de la flota. |
+| **Team** | Equipo | Presenta a los cinco integrantes del equipo y su rol. |
+| **Contact** | Contacto | Ofrece un formulario para comunicarse con el equipo. |
+| **Terms and conditions** | Términos y condiciones | Presenta las condiciones generales del servicio. |
+| **Log in** | Iniciar sesión | Permite a un usuario registrado ingresar a su cuenta. |
+| **Sign up** | Registrarse | Inicia la creación de una cuenta. |
+| **Dashboard** | Dashboard | Muestra el mapa de unidades activas, los indicadores y los envíos que requieren atención. |
+| **Shipments** | Envíos | Lista, busca y registra envíos; da acceso al detalle de cada uno. |
+| **Vehicles** | Vehículos | Administra las unidades refrigeradas y su sensor asignado. |
+| **Drivers** | Conductores | Administra los conductores y su disponibilidad. |
+| **History** | Historial | Consulta envíos anteriores y descarga sus reportes térmicos. |
+| **Notifications** | Notificaciones | Reúne los avisos de alertas, incidencias y entregas. |
+| **Settings** | Configuración | Gestiona el perfil, la contraseña y el idioma. |
+| **Incoming shipments** | Envíos por recibir | Lista los envíos asociados al Cliente de Carga que están programados o en tránsito. |
+
+*Nota.* Elaboración propia.
+
+Además de las etiquetas de navegación, la plataforma define un vocabulario controlado para los estados, que se usa de forma idéntica en chips, filtros, notificaciones y reportes.
+
+**Tabla 4.7**
+
+*Vocabulario controlado de estados*
+
+
+| Dominio | Inglés (`en_US`) | Español latinoamericano (`es_419`) |
+| :--- | :--- | :--- |
+| **Estado del envío** | Draft · Scheduled · In transit · Delivered · Cancelled | Borrador · Programado · En tránsito · Entregado · Cancelado |
+| **Estado térmico** | Within range · Warning · Critical · No signal | Dentro del rango · Advertencia · Crítico · Sin señal |
+| **Estado de la alerta** | Active · Acknowledged · Resolved | Activa · Reconocida · Resuelta |
+| **Estado de la unidad** | Available · In transit · In maintenance | Disponible · En tránsito · En mantenimiento |
+
+*Nota.* Elaboración propia.
+
+### 4.2.3. SEO Tags and Meta Tags
+
+Los SEO Tags y Meta Tags de FríoTrack describen el contenido de cada página al navegador y a los motores de búsqueda. Se distinguen dos casos. La Landing Page y las páginas de acceso son públicas y se optimizan para el posicionamiento, con términos como cadena de frío, transporte refrigerado, monitoreo de temperatura y trazabilidad. Las vistas de la Web Application requieren autenticación, por lo que sus metadatos solo sirven para identificar la pestaña del navegador y **no deben indexarse**: se marcan con la directiva `noindex` de la etiqueta *robots* (Google Search Central, s. f.). Los metadatos no reemplazan los mecanismos de autenticación y autorización de la plataforma.
+
+**Tabla 4.8**
+
+*Etiquetas title, description, keywords, author y robots por página*
+
+
+| Página | Title | Description | Keywords | Author | Robots |
+| :--- | :--- | :--- | :--- | :--- | :---: |
+| **Landing Page** | FríoTrack \| Monitoreo de la cadena de frío en transporte | Monitorea en tiempo casi real la temperatura, la humedad y la ubicación de tus unidades refrigeradas. Recibe alertas y consulta el historial del viaje. | cadena de frío, transporte refrigerado, monitoreo de temperatura, trazabilidad, alertas, Perú | BlackStartup | `index, follow` |
+| **Iniciar sesión / Registro** | Accede a FríoTrack \| Iniciar sesión o registrarse | Inicia sesión o crea tu cuenta de Coordinador Logístico o de Cliente de Carga en FríoTrack. | FríoTrack, iniciar sesión, registro, coordinador logístico, cliente de carga | BlackStartup | `index, follow` |
+| **Recuperar contraseña** | Recuperar contraseña \| FríoTrack | Solicita un enlace para restablecer la contraseña de tu cuenta de FríoTrack. | recuperar contraseña, FríoTrack | BlackStartup | `noindex, nofollow` |
+| **Dashboard** | Dashboard \| FríoTrack | Consulta las unidades activas, los envíos en tránsito y las alertas que requieren atención. | dashboard, envíos, alertas, unidades activas | BlackStartup | `noindex, nofollow` |
+| **Envíos** | Envíos \| FríoTrack | Busca, programa y da seguimiento a los envíos refrigerados de tu empresa. | envíos, transporte refrigerado, seguimiento | BlackStartup | `noindex, nofollow` |
+| **Detalle del envío** | Envío FT-2418 \| FríoTrack | Revisa las lecturas de temperatura y humedad, la ruta y las alertas del envío. | detalle del envío, lecturas, ruta, alertas | BlackStartup | `noindex, nofollow` |
+| **Historial** | Historial de envíos \| FríoTrack | Consulta envíos anteriores y descarga sus reportes térmicos. | historial, reporte térmico, envíos entregados | BlackStartup | `noindex, nofollow` |
+| **Configuración** | Configuración \| FríoTrack | Administra tu perfil, tu contraseña y el idioma de la plataforma. | perfil, configuración, idioma | BlackStartup | `noindex, nofollow` |
+
+*Nota.* El *title* de la vista de detalle incluye el código del envío que se está consultando. Elaboración propia.
+
+Los títulos se limitan a un máximo aproximado de 60 caracteres y las descripciones a unos 160 caracteres, longitudes que evitan que los resultados de búsqueda se trunquen. Todas las páginas declaran la codificación de caracteres, el atributo `lang` de la etiqueta `html` según el idioma elegido (`es-419` o `en`) y la etiqueta *viewport*, indispensable para que la interfaz se adapte a pantallas móviles. La Landing Page incorpora además las etiquetas *Open Graph* (`og:title`, `og:description`, `og:image` y `og:type`) para que el enlace se muestre con una vista previa al compartirse en redes y mensajería; la imagen de vista previa usa la dirección absoluta que exige ese mecanismo. Al cambiar de idioma con el selector, la Landing Page actualiza también el título, la descripción y las etiquetas Open Graph. A modo de ejemplo, el encabezado de la Landing Page se define así:
+
+```html
+<html lang="es-419">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FríoTrack | Monitoreo de la cadena de frío en transporte</title>
+  <meta name="description" content="Monitorea en tiempo casi real la temperatura, la humedad y la ubicación de tus unidades refrigeradas. Recibe alertas y consulta el historial del viaje.">
+  <meta name="keywords" content="cadena de frío, transporte refrigerado, monitoreo de temperatura, trazabilidad, alertas, Perú">
+  <meta name="author" content="BlackStartup">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0F172A">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="FríoTrack">
+  <meta property="og:title" content="FríoTrack | Monitoreo de la cadena de frío en transporte">
+  <meta property="og:description" content="Sabe en todo momento si tu carga refrigerada sigue en rango.">
+  <meta property="og:image" content="https://upc-pre-202620-1asi0730-8088-friotrack.github.io/friotrack-landing/assets/images/og-friotrack.png">
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+```
+
+### 4.2.4. Searching Systems
+
+Los mecanismos de búsqueda y filtrado de FríoTrack permiten localizar un envío, una unidad o un conductor sin recorrer manualmente listas extensas. Todas las búsquedas se ejecutan únicamente sobre los registros que el usuario tiene autorizados: el Coordinador Logístico consulta los envíos, unidades y conductores de su empresa, y el Cliente de Carga solo los envíos en los que figura como destinatario. La barra de búsqueda global del encabezado y las barras propias de cada lista comparten el mismo comportamiento.
+
+#### Searching System para envíos
+
+La lista de envíos incluye una barra de búsqueda de texto libre. Se busca de manera parcial y sin distinguir mayúsculas de minúsculas.
+
+**Tabla 4.9**
+
+*Criterios de búsqueda de la lista de envíos*
+
+
+| Criterio | Descripción |
+| :--- | :--- |
+| **Código de envío** | Localiza un envío por su identificador, por ejemplo «FT-2418». |
+| **Placa del vehículo** | Localiza los envíos que usan una unidad determinada. |
+| **Destino** | Localiza los envíos cuyo destino coincide con el texto ingresado. |
+| **Cliente de Carga** | Localiza los envíos asignados a un cliente (solo para el Coordinador Logístico). |
+
+*Nota.* Elaboración propia.
+
+Los resultados muestran el código, la carga y su rango térmico, la ruta, la unidad y el conductor, la última lectura, el estado térmico, el estado del envío y la llegada estimada. Cuando no existen coincidencias, la lista presenta un mensaje que indica que no se encontraron envíos para el criterio ingresado y ofrece la acción «Limpiar búsqueda».
+
+#### Searching System mediante filtros
+
+Los filtros complementan la búsqueda de texto y reducen la lista según atributos concretos. Pueden combinarse y, cuando se usa más de uno, la lista muestra solo los registros que cumplen todas las condiciones.
+
+**Tabla 4.10**
+
+*Filtros disponibles por lista*
+
+
+| Filtro | Descripción | Lista donde se ofrece |
+| :--- | :--- | :--- |
+| **Estado** | Programado, En tránsito, Entregado o Cancelado. | Envíos, Historial |
+| **Estado térmico** | Dentro del rango, Advertencia, Crítico o Sin señal. | Envíos, Envíos por recibir |
+| **Producto o tipo de carga** | Limita la lista a una carga determinada, por ejemplo arándanos o palta Hass. | Envíos, Historial |
+| **Destino** | Limita la lista a los envíos que llegan a una ubicación. | Envíos, Historial |
+| **Rango de fechas** | Fecha inicial y final de salida o de entrega. | Historial |
+| **Estado de la unidad** | Disponible, En tránsito o En mantenimiento. | Vehículos |
+
+*Nota.* Elaboración propia.
+
+La interfaz muestra los filtros activos como chips que pueden quitarse de a uno y ofrece la acción «Limpiar filtros» para volver a la lista completa. Al regresar desde el detalle de un envío a la lista, los filtros y la búsqueda se conservan, para evitar que el usuario tenga que repetirlos.
+
+#### Searching System para el Coordinador Logístico y para el Cliente de Carga
+
+El Coordinador Logístico dispone de búsqueda y filtros en Envíos, Vehículos (por placa o marca), Conductores (por nombre o licencia) e Historial, y además de la barra global del encabezado, que lleva directamente al detalle de un envío. Esto responde a la hipótesis de uso del Capítulo I sobre la localización de envíos, unidades o rutas en segundos.
+
+El Cliente de Carga dispone de los mismos mecanismos básicos, pero solo en Envíos por recibir e Historial y limitados a los envíos que le fueron asignados. No puede buscar unidades ni conductores, ya que esa información pertenece a la empresa de transporte.
+
+### 4.2.5. Navigation Systems
+
+El sistema de navegación permite recorrer la plataforma de forma clara, predecible y coherente con el perfil del usuario. Se compone de tres tipos de navegación (global, local y contextual) que siguen la clasificación de Rosenfeld et al. (2015), y de elementos de apoyo, como la ruta de navegación, la barra de búsqueda, el selector de idioma y el ícono de notificaciones con contador de avisos sin leer.
+
+#### Navigation System de la Landing Page
+
+La Landing Page usa una barra horizontal en escritorio y un menú desplegable en móviles. El enlace «Iniciar sesión» y el botón «Registrarse» se mantienen visibles en todo momento, ya que son las dos acciones que persiguen los visitantes.
+
+**Tabla 4.11**
+
+*Opciones de navegación de la Landing Page*
+
+
+| Nombre | Descripción |
+| :--- | :--- |
+| **Inicio / Home** | Lleva a la sección principal con la propuesta de valor y los llamados a la acción. |
+| **Quiénes somos / About us** | Desplaza a la presentación del equipo con su misión y su visión. |
+| **Lo que hacemos / What we do** | Desplaza a la sección con las siete funcionalidades de la plataforma. |
+| **Planes / Pricing** | Desplaza a los tres planes referenciales. |
+| **Equipo / Team** | Desplaza a la sección con los cinco integrantes del equipo. |
+| **Contacto / Contact** | Desplaza al formulario de contacto. |
+| **Ver cómo funciona** | Botón del héroe: desplaza a la sección de los cuatro pasos. |
+| **Términos y condiciones** | Abre la página con las condiciones generales del servicio (pie de página). |
+| **ES \| EN** | Cambia el idioma de la Landing Page. |
+| **Iniciar sesión / Log in** | Abre la ventana modal de inicio de sesión. |
+| **Registrarse / Sign up** | Abre la ventana modal de creación de cuenta. |
+
+*Nota.* Elaboración propia.
+
+Las secciones «Cómo funciona», «Para quién», «Corredores» y «Metas» no figuran en la barra superior para no sobrecargarla con más de seis enlaces. Se alcanzan con el desplazamiento y, en el caso de las dos primeras, con el botón «Ver cómo funciona» del héroe y con los enlaces del pie de página. La ventana modal de acceso es provisional: en la versión final, «Iniciar sesión» y «Registrarse» conducirán a las pantallas de acceso de la Web Application (sección 4.4), donde el usuario elige su perfil (Coordinador Logístico o Cliente de Carga). Esa elección solo orienta el registro; no otorga privilegios ni reemplaza la autenticación.
+
+#### Navigation System para el Coordinador Logístico
+
+El Coordinador Logístico navega mediante una barra lateral fija en escritorio (que se reemplaza por una barra inferior de cuatro destinos en móvil) y un encabezado con búsqueda global, selector de idioma, notificaciones y menú de la cuenta.
+
+**Tabla 4.12**
+
+*Navegación principal del Coordinador Logístico*
+
+
+| Nombre | Descripción |
+| :--- | :--- |
+| **Dashboard** | Resume las unidades activas en el mapa, los indicadores y los envíos que requieren atención. |
+| **Envíos / Shipments** | Lista los envíos, permite programar uno nuevo y da acceso a su detalle. |
+| **Vehículos / Vehicles** | Registra y actualiza las unidades refrigeradas y su sensor. |
+| **Conductores / Drivers** | Registra conductores y muestra su disponibilidad. |
+| **Historial / History** | Consulta envíos concluidos y sus reportes térmicos. |
+| **Notificaciones / Notifications** | Muestra los avisos de alertas, incidencias y entregas, con contador de avisos sin leer. |
+| **Configuración / Settings** | Gestiona el perfil, la contraseña y el idioma. |
+
+*Nota.* Elaboración propia.
+
+Las acciones que dependen del estado del envío no forman parte de la navegación principal, sino que aparecen dentro del detalle solo cuando corresponden: *Iniciar traslado* (envío programado), *Registrar acción correctiva* (alerta activa), *Registrar incidencia*, *Marcar como entregado* (envío en tránsito), *Cancelar envío* (envío programado) y *Descargar reporte térmico* (envío entregado).
+
+#### Navigation System para el Cliente de Carga
+
+La interfaz del Cliente de Carga se centra en consultar y verificar. Su menú tiene solo cuatro opciones, todas de lectura, y no incluye funciones de creación ni de administración.
+
+**Tabla 4.13**
+
+*Navegación principal del Cliente de Carga*
+
+
+| Nombre | Descripción |
+| :--- | :--- |
+| **Envíos por recibir / Incoming shipments** | Muestra en el mapa y en una lista los envíos asignados al cliente. |
+| **Historial / History** | Consulta envíos anteriores y descarga sus reportes térmicos. |
+| **Notificaciones / Notifications** | Presenta los avisos de incidencias y de cambios de estado de sus envíos. |
+| **Configuración / Settings** | Gestiona el perfil, la contraseña y el idioma. |
+
+*Nota.* Elaboración propia.
+
+La vista de detalle del Cliente de Carga incluye un aviso permanente de «Vista de solo lectura», que indica que las acciones operativas las gestiona la empresa de transporte.
+
+#### Navigation System del detalle de un envío
+
+Dentro del detalle de cada envío se usa navegación local mediante pestañas que organizan la información en cinco secciones. La pestaña Alertas muestra un contador cuando existen alertas activas.
+
+**Tabla 4.14**
+
+*Pestañas del detalle de un envío*
+
+
+| Nombre | Descripción |
+| :--- | :--- |
+| **Resumen / Summary** | Presenta los indicadores principales (temperatura, humedad, última lectura y llegada estimada), el gráfico de lecturas y el mapa. |
+| **Lecturas / Readings** | Muestra la serie completa de lecturas de temperatura y humedad con su hora. |
+| **Ruta y posiciones / Route and positions** | Muestra la ruta planificada y las posiciones reportadas con su fecha y fuente. |
+| **Alertas / Alerts** | Lista las alertas del envío y permite registrar la acción correctiva. |
+| **Historial de estados / Status history** | Presenta cronológicamente los cambios de estado del envío. |
+
+*Nota.* Elaboración propia.
+
+La información geográfica indica de forma explícita si corresponde a una ruta planificada o a una posición reportada, con su hora y fuente, de modo que una posición estimada no se presente como seguimiento continuo. La ruta de navegación (por ejemplo, Envíos › FT-2421) permite retroceder un nivel en cualquier momento.
