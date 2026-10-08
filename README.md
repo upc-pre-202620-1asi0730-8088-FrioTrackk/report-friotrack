@@ -827,3 +827,80 @@ En segundo lugar, existe un impacto directo en las pérdidas y en la operación 
 En tercer lugar, se identifica una alta disposición hacia la adopción de alertas automáticas de vencimiento y aplicaciones móviles sencillas. Ambos comerciantes, con edades de 22 y 40 años, coincidieron en el interés por una aplicación accesible desde su celular Android que les permita recibir avisos sobre productos próximos a vencer y revisar sus existencias sin depender del registro manual.
 
 En cuarto lugar, respecto a la viabilidad comercial, la disposición a pagar está condicionada a que la solución sea económicamente accesible para negocios de pequeña escala: la entrevistada de San Juan de Lurigancho indicó estar dispuesta a pagar entre 30 y 50 soles mensuales por una herramienta que facilite la gestión de su inventario. En síntesis, este segmento requiere una aplicación simple y de bajo costo que automatice el control de vencimientos y reduzca las pérdidas por deterioro, sin exigir conocimientos técnicos avanzados para su uso diario.
+
+## 2.3. Needfinding
+
+Para realizar el proceso de *needfinding* en **FrioTrack**, se llevaron a cabo entrevistas en profundidad con actores clave de los segmentos objetivo. Estas incluyeron representantes de empresas distribuidoras de productos perecibles, así como propietarios y administradores de tiendas y bodegas. Las entrevistas permitieron conocer sus actividades diarias, métodos de control de inventario y principales dificultades relacionadas con la conservación de productos, el control de temperatura, el vencimiento y las pérdidas de productos perecibles.
+
+A partir de esta exploración, se identificaron oportunidades de mejora relacionadas con el uso de controles manuales, la falta de supervisión continua, las dificultades para realizar un seguimiento adecuado del inventario y el acceso limitado a herramientas tecnológicas sencillas. También se evidenció una diferencia entre el registro de información y la capacidad de tomar decisiones preventivas de manera oportuna.
+
+Durante las entrevistas se identificaron necesidades recurrentes, principalmente la posibilidad de recibir alertas ante variaciones de temperatura, contar con mayor visibilidad del inventario y facilitar el control de las fechas de vencimiento. Asimismo, se identificó la necesidad de contar con herramientas que permitan gestionar estos procesos de manera sencilla.
+
+De esta manera, se identificó una oportunidad para desarrollar **FrioTrack**, una plataforma digital orientada al monitoreo de la cadena de frío y la gestión de productos perecibles, buscando reducir las pérdidas y facilitar el control de las operaciones.
+
+### 2.3.1. User Personas
+
+**Segmento objetivo: Jefes de almacén y supervisores logísticos de distribuidoras medianas**
+
+<div align="center">
+  <img src="assets/images/chapter-02/user-persona.jpg" alt="User Persona - Segmento 1 - Parte 1" width="600">
+</div>
+
+<div align="center">
+  <img src="assets/images/chapter-02/user-persona2.jpg" alt="User Persona - Segmento 1 - Parte 2" width="600">
+</div>
+
+**Segmento Objetivo: Propietarios y administradores de bodegas y puestos en mercados de abastos:**
+
+<div align="center">
+  <img src="assets/images/chapter-02/user-persona-segmento2.jpg" alt="User Persona - Segmento 2 - Parte 1" width="600">
+</div>
+
+<div align="center">
+  <img src="assets/images/chapter-02/user-persona-segmento2-2.jpg" alt="User Persona - Segmento 2 - Parte 2" width="600">
+</div>
+
+### 2.3.2. User Task Matrix
+
+| **Task** | **Javier Mendoza (Jefe de Almacén y Logística)** |  | **Rosa Huamán (Propietaria de Bodega)** |  |
+|---|---|---|---|---|
+|  | **Frequency** | **Importance** | **Frequency** | **Importance** |
+| Monitorear temperatura de cámaras/vitrinas | High | High | High | High |
+| Registrar fecha de vencimiento y lote de productos | High | High | Medium | High |
+| Verificar rotación de inventario bajo criterio FEFO | High | High | Medium | High |
+| Detectar desviaciones térmicas fuera de horario laboral | High | High | Low | High |
+| Revisar manualmente el estado físico de los equipos de frío | Medium | High | High | High |
+| Lanzar promociones o remates por caducidad cercana | Low | Medium | High | High |
+| Preparar pedidos o despachos para clientes/rutas | High | High | High | High |
+| Generar reportes de mermas y pérdidas económicas | Medium | High | Low | Medium |
+| Justificar trazabilidad térmica ante clientes o auditorías | Medium | High | Low | Low |
+| Coordinar mantenimiento de equipos de refrigeración | Low | High | Low | High |
+| Separar y desechar mercadería deteriorada/vencida | Medium | High | Medium | High |
+
+### 2.3.3. User Journey Mapping
+
+**Segmento objetivo: Jefes de almacén y supervisores logísticos de distribuidoras medianas**
+
+<div align="center">
+  <img src="assets/images/chapter-02/user-journey-mapping.jpg" alt="User Journey Mapping - Segmento 1" width="600">
+</div>
+
+**Segmento objetivo: Propietarios y administradores de bodegas y puestos en mercados de abastos**
+
+<div align="center">
+  <img src="assets/images/chapter-02/user-journey-mapping-seg2.jpg" alt="User Journey Mapping - Segmento 2" width="600">
+</div>
+
+### 2.3.4. Empathy Mapping
+
+**Segmento objetivo: Jefes de almacén y supervisores logísticos de distribuidoras medianas**
+
+<div align="center">
+  <img src="assets/images/chapter-02/empathy-mapping-seg1.jpg" alt="Empathy Mapping - Segmento 1" width="600">
+</div>
+
+**Segmento objetivo: Propietarios y administradores de bodegas y puestos en mercados de abastos**
+
+<div align="center">
+  <img src="assets/images/chapter-02/empathy-mapping-seg2.jpg" alt="Empathy Mapping - Segmento 2" width="600">
+</div>
