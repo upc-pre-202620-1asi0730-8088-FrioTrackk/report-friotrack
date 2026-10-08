@@ -441,4 +441,5 @@ El ciclo de vida de desarrollo de FríoTrack está sujeto a un conjunto de restr
 **Hypothesis Statement 7:**
 *We believe we will achieve* a high Net Promoter Score (NPS) among early adopters
 *If* logistics coordinators with high daily operational volumes
-*Attain* the ability to find specific shipments, units, or routes within seconds, minimizing s
+*Attain* the ability to find specific shipments, units, or routes within seconds, minimizing search fatigue
+*With* an advanced search bar and multi-criteria filters on the active shipments dashboard.
