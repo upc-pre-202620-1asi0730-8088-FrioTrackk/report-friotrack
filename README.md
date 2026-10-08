@@ -2841,3 +2841,117 @@ Cada columna corresponde a un contexto: IAM, Fleet, Shipment, Monitoring y Alert
 #### 4.6.4.3. Otros contenedores
 
 La landing tiene contenido/estilo (`index.html`, CSS), internacionalización (`i18n.js` y diccionarios), navegación/planes/contacto (`app.js`) y simulador identificado (`hero-sim.js`). El almacén PostgreSQL es un contenedor de datos, cuyo detalle se presenta en 4.8; no se lo representa como una aplicación con controladores. Las teselas, sensores y correo son sistemas externos, no contenedores que el equipo implementa.
+
+## 4.7. Software Object-Oriented Design
+
+### 4.7.1. Class Diagrams
+
+**Estado:** los diagramas backend y de base de datos representan diseño. Las clases no acreditan API ni PostgreSQL ejecutándose. Para el cliente se añade una especificación UML editable en `assets/architecture/frontend-classes.puml`, con modelos, enumeraciones, contrato de repositorio, visibilidad y multiplicidades. La fuente editable utiliza la alternativa Diagram-as-Code permitida en el statement; su importación por el equipo no acredita compilación ni ejecución del producto.
+
+#### Modelo del cliente TB1
+
+El UML representa un **modelo lógico de objetos y módulos JavaScript**, no clases, interfaces de JavaScript con comprobación de tipos ni inyección de dependencias implementadas. `AppStore` abstrae el estado y comandos de `demo-repository.js`; `Operations` representa funciones exportadas de `operations.js`; `IDemoRepository` expresa un contrato de diseño. Los objetos reales de la demo se organizan en arreglos y se guardan en localStorage.
+
+**Modelo del cliente TB1 · aplicación y acceso**
+
+![Modelo lógico del cliente: aplicación, repositorio y perfiles](assets/images/chapter-04/frontend-classes-app-tb1.svg)
+
+**Modelo del cliente TB1 · envíos, recursos y monitoreo**
+
+![Modelo lógico del cliente: envíos, recursos, lecturas y alertas](assets/images/chapter-04/frontend-classes-domain-tb1.svg)
+
+El envío referencia una unidad, conductor y cliente por sus IDs; conserva ruta, peso, fechas, versión y los límites mínimo/máximo de temperatura y humedad. Incluye lecturas con coordenadas, historial y alertas asociadas. La capacidad de la unidad, los recursos disponibles y el solapamiento temporal condicionan la programación. Las asociaciones con multiplicidades documentan ese contrato; `ThermalRange` agrupa lógicamente campos numéricos que hoy están en el objeto de envío.
+
+La acción correctiva reconoce una alerta; su estado sigue abierto hasta que una nueva lectura de ejemplo cumple ambos rangos. Los avisos opcionales se dirigen al cliente asignado. Las enumeraciones reflejan valores de diseño y estados derivados, sin inventar autenticación. Los SVG se generaron localmente y se revisaron visualmente; **no son capturas de PlantUML ni de una herramienta compartida**. La fuente PlantUML queda disponible para importación y revisión del equipo.
+
+El diseño del backend propone clases y agregados para los cinco contextos de la sección 4.6. La fuente editable es [backend-classes-tb1.puml](assets/architecture/backend-classes-tb1.puml); el catálogo común de entidades, atributos, relaciones y restricciones se conserva en [backend-model-tb1.json](assets/architecture/backend-model-tb1.json). Las figuras son **dibujos vectoriales programáticos de esa especificación**, revisados localmente. No se ejecutó el compilador PlantUML ni se implementaron estas clases, la API o PostgreSQL. Se utiliza la alternativa Diagram-as-Code admitida por el statement, página 29.
+
+En UML, `−` indica un atributo privado y `+` una operación pública. El rombo de `Shipment` a `ThermalRange` indica composición; las asociaciones por ID y sus multiplicidades representan vínculos del diseño. Los colores agrupan contextos. Para mantener legibilidad, se dividen los modelos en cuatro paneles: recursos, envío, monitoreo y alertas. Las figuras muestran asociaciones principales; la fuente editable y la Tabla 4.32 contienen las 27 relaciones persistentes, incluidas las que atraviesan paneles.
+
+Se proponen las siguientes decisiones:
+
+- `Organization` identifica la empresa de transporte. Las cuentas, unidades, conductores y envíos referencian esa empresa; el servidor futuro deberá verificar empresa, rol y permiso para cada operación. La cadena `organization` de los perfiles de la demo local no equivale a esta normalización ni acredita aislamiento entre empresas.
+- Las asociaciones entre agregados se expresan mediante IDs. `FleetAllocation` reserva unidad y conductor para el intervalo del envío, y `ShipmentHistoryEvent` conserva acciones, responsable y fecha. Programar envío y reserva deberá ser una operación atómica que rechace solapamientos y exceso de capacidad.
+- `ThermalRange` contiene **mínimo y máximo de temperatura en °C, mínimo y máximo de humedad relativa en %, y tolerancia en minutos**. `ShipmentMonitoring` recibe una copia al iniciar el monitoreo. Las lecturas históricas se evalúan con esa copia; el diseño no permite reescribir retroactivamente sus límites (US17).
+- El contrato previsto conserva `DRAFT → SCHEDULED → IN_TRANSIT → DELIVERED` y la cancelación de borrador o programado de US34. La demo local admite cancelación únicamente de un envío programado y rechaza cancelación durante tránsito o después de entrega; no persiste borradores. En el diseño, un borrador no reserva recursos; cancelar antes del tránsito libera las reservas existentes y entregar detiene el monitoreo y libera los recursos.
+- JWT corresponde al contrato técnico propuesto TS01; no se presenta como autenticación implementada en TB1. La recuperación con token de uso único, la tolerancia temporal, la severidad y la detección automática de silencio son diseño previsto; las capturas del frontend no acreditan esos servicios.
+
+#### Diagrama de clases 1 · IAM, Fleet & Resource Management y Shipment Management
+
+IAM contiene `Organization`, `UserAccount` y `PasswordResetToken`; los roles previstos son `LOGISTICS_COORDINATOR` y `CARGO_CLIENT`. Fleet & Resource Management contiene unidades, conductores, sensores y reservas. Shipment Management organiza el envío, sus cuatro límites ambientales y el historial. Un Cliente de Carga se vincula mediante `clientId`; esa relación condiciona la consulta y las notificaciones del envío.
+
+**Figura 4.96**
+
+*Modelo de clases previsto: recursos y operación de envío, en dos paneles*
+
+**Panel de recursos e identidad**
+
+![UML backend previsto: organización, cuentas, recuperación, unidades, conductores y sensores](assets/images/chapter-04/backend-classes-resources-tb1.svg)
+
+**Panel del envío, reserva y trazabilidad**
+
+![UML backend previsto: envío, cuatro límites, reserva e historial](assets/images/chapter-04/backend-classes-shipment-tb1.svg)
+
+*Nota.* SVG programáticos del modelo previsto; no son capturas del compilador. El [PNG de AV1](assets/images/chapter-04/class-diagram-1.png) se preserva como antecedente y contiene el modelo anterior, sin mínimo de humedad.
+
+**Tabla 4.29**
+
+*Clases previstas de IAM, Fleet & Resource Management y Shipment Management*
+
+| Clase | Contexto | Tipo | Responsabilidad prevista |
+| :--- | :--- | :--- | :--- |
+| `Organization` | IAM | Entidad | Identificar la empresa de transporte asociada con usuarios, recursos y envíos. |
+| `UserAccount` | IAM | Agregado raíz | Mantener identidad, rol, idioma, resumen de contraseña, estado de cuenta e intentos fallidos; participar en autenticación y actualización del perfil. |
+| `PasswordResetToken` | IAM | Entidad | Conservar el resumen del token, vencimiento y fecha de uso; impedir reutilización. |
+| `UserRole` | IAM | Enumeración | `LOGISTICS_COORDINATOR` y `CARGO_CLIENT`; los permisos se verifican en cada caso de uso. |
+| `Vehicle` | Fleet & Resource | Agregado raíz | Conservar placa, capacidad y estado; comprobar disponibilidad para una reserva. |
+| `Sensor` | Fleet & Resource | Entidad | Conservar identidad del dispositivo y asignación opcional a una unidad. |
+| `Driver` | Fleet & Resource | Agregado raíz | Conservar identidad, licencia y estado; comprobar disponibilidad. |
+| `FleetAllocation` | Fleet & Resource | Agregado raíz | Reservar unidad y conductor por intervalo; conservar y liberar la reserva. |
+| `Shipment` | Shipment | Agregado raíz | Conservar empresa, coordinador, cliente, carga, peso, ruta, fechas, versión y rangos; validar programación y transiciones. |
+| `ThermalRange` | Shipment | Objeto de valor | Agrupar mínimos y máximos de temperatura y humedad y tolerancia; comprobar ambos rangos de manera inclusiva. |
+| `ShipmentHistoryEvent` | Shipment | Entidad | Conservar acción, responsable, fecha, nota y estados anterior/posterior cuando corresponda. |
+| `ShipmentStatus` | Shipment | Enumeración | `DRAFT`, `SCHEDULED`, `IN_TRANSIT`, `DELIVERED`, `CANCELLED`. |
+
+*Nota.* Responsabilidades de diseño; no acreditan implementación ni resultados de ejecución del backend.
+
+#### Diagrama de clases 2 · Monitoring & Telemetry y Alert & Reporting
+
+`ShipmentMonitoring` mantiene la copia del rango, lecturas, posiciones y condición de señal del envío. `SensorReading` evalúa temperatura y humedad contra ambos intervalos. `Alert` distingue temperatura, humedad y pérdida de señal; una lectura que origina una alerta puede no existir en una pérdida de comunicación. `CorrectiveAction` conserva la respuesta del coordinador; `Notification`, `Incident` y `ThermalReport` preservan avisos, eventos operativos y evidencia del envío. Estos objetos se separan en dos paneles para facilitar su lectura.
+
+**Figura 4.97**
+
+*Modelo de clases previsto: monitoreo y atención, en dos paneles*
+
+**Panel de monitoreo y telemetría**
+
+![UML backend previsto: monitoreo, lectura ambiental y posición](assets/images/chapter-04/backend-classes-monitoring-tb1.svg)
+
+**Panel de alertas, acciones y evidencia**
+
+![UML backend previsto: alerta, acción correctiva, aviso, incidencia e informe](assets/images/chapter-04/backend-classes-alerts-tb1.svg)
+
+*Nota.* SVG programáticos del modelo previsto; no se ejecutó PlantUML. El [PNG de AV1](assets/images/chapter-04/class-diagram-2.png) permanece como antecedente; sus tipos adicionales de alerta no se incorporan al alcance vigente sin una historia que los sustente.
+
+**Tabla 4.30**
+
+*Clases previstas de Monitoring & Telemetry y Alert & Reporting*
+
+| Clase | Contexto | Tipo | Responsabilidad prevista |
+| :--- | :--- | :--- | :--- |
+| `ShipmentMonitoring` | Monitoring & Telemetry | Agregado raíz | Conservar cuatro límites y tolerancia de inicio; registrar lecturas y posiciones; detectar silencio configurable y detenerse al concluir el envío. |
+| `SensorReading` | Monitoring & Telemetry | Entidad | Conservar temperatura, humedad y fecha; indicar si ambos valores satisfacen los rangos del monitoreo. |
+| `PositionReport` | Monitoring & Telemetry | Entidad | Conservar latitud, longitud y fecha de reporte válidas. |
+| `SignalStatus` | Monitoring & Telemetry | Enumeración | `ONLINE`, `NO_SIGNAL`; el umbral temporal debe configurarse y validarse. |
+| `Alert` | Alert & Reporting | Agregado raíz | Conservar tipo, severidad, estado y fechas; reconocer una acción y resolver solo con evidencia posterior de recuperación. |
+| `CorrectiveAction` | Alert & Reporting | Entidad | Conservar alerta, comentario, responsable, fecha y elección de notificar al cliente asignado. |
+| `Notification` | Alert & Reporting | Agregado raíz | Conservar destinatario, envío, origen opcional y fecha de lectura. |
+| `Incident` | Alert & Reporting | Agregado raíz | Conservar una incidencia operativa, responsable y fecha del traslado. |
+| `ThermalReport` | Alert & Reporting | Agregado raíz | Conservar referencia de un archivo y resumen generado del envío; no certificar condiciones que carecen de mediciones. |
+| `AlertType` | Alert & Reporting | Enumeración | `TEMPERATURE`, `HUMIDITY`, `NO_SIGNAL`. |
+| `AlertStatus` | Alert & Reporting | Enumeración | `ACTIVE`, `ACKNOWLEDGED`, `RESOLVED`. |
+| `AlertSeverity` | Alert & Reporting | Enumeración | `WARNING`, `CRITICAL`; clasificación temporal prevista en US13, pendiente de integración. |
+
+*Nota.* La fuente PlantUML incluye las enumeraciones y sus dependencias; los paneles muestran las entidades y agregados persistentes.
+
+Una acción válida cambia la alerta de `ACTIVE` a `ACKNOWLEDGED` y puede generar un aviso únicamente para el cliente asignado (US35). **Registrar la acción no demuestra recuperación.** La resolución requiere una lectura posterior dentro de ambos rangos; el historial conserva la alerta y su atención.
