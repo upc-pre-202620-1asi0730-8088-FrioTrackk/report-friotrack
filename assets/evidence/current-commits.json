@@ -319,5 +319,16 @@
       "repository": "friotrack-frontend",
       "branch": "main"
     }
+  ],
+  "consolidationCommits": [
+    {
+      "sha": "06144a7647cec13030e819eeb7288f482bc5bd91",
+      "author": "rodrigoxd67",
+      "date": "2026-10-08T23:17:51-05:00",
+      "subject": "docs(tb1): consolidate report with authenticated Azure deployment",
+      "body": "Update the report index, version history, Student Outcome and Sprint 2 evidence using the current repositories and verified commit metadata. Align the backlog identifiers with implemented workflows, restore referenced design assets and document the deployed supporting API, conclusions and delivery annexes.",
+      "repository": "report-friotrack",
+      "branch": "develop"
+    }
   ]
 }

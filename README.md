@@ -115,6 +115,8 @@ La actividad de este repositorio se registra entre el 07 y el 08 de octubre de 2
 | Saavedra Flores, Rodrigo Andree | rodrigoxd67 | 11 | Portada, Student Outcome e incorporación del Capítulo IV; integración de acceso/API en frontend. [d525d9e](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/d525d9e34c6469488dca96042e610adbd6739b6d). |
 | Vera Solsol, Nayely Macarena | Macaxprogram29 | 4 | User Stories, Impact Mapping, Product Backlog e índice del Capítulo III. [3cc5e02](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/3cc5e023893f00728f4a7d80ea836a7c0451247e). |
 
+El commit de consolidación de esta edición se registra por separado en 5.2.2.4 y no se suma al corte previo de colaboración.
+
 Los registros completos y sus fechas están en [current-commits.json](assets/evidence/current-commits.json). La integración de autenticación, API y configuración Azure se registra además en el [frontend](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend). La evaluación individual corresponde al Team Leader y no se deduce de la cantidad de commits.
 
 ### Organización del informe
@@ -3399,6 +3401,7 @@ Los registros siguientes pertenecen al repositorio actual del informe y al front
 
 | Repository | Branch | CommitId | CommitMessage | CommitMessageBody | Committed on Date |
 | --- | --- | --- | --- | --- | --- |
+| report-friotrack | `develop` | [06144a7](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/06144a7647cec13030e819eeb7288f482bc5bd91) | docs(tb1): consolidate report with authenticated Azure deployment | Update the report index, version history, Student Outcome and Sprint 2 evidence using the current repositories and verified commit metadata. Align the backlog identifiers with implemented workflows, restore referenced design assets and document the deployed supporting API, conclusions and delivery annexes. | 2026-10-08T23:17:51-05:00 |
 | report-friotrack | `develop` | [369cc99](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/369cc991c51dd2424aded38766728918bf27de71) | docs(chapter-02): update interview video link | — | 2026-10-08T18:18:11-05:00 |
 | report-friotrack | `develop` | [c216ca0](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/c216ca06517fca1c2496cf31b83e54c73eefe686) | docs(chapter-02): update interviews and photographic evidence | — | 2026-10-08T17:51:58-05:00 |
 | report-friotrack | `develop` | [5875269](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/58752691c08a90ce27e2d2cf3c8ca0cb5b10565c) | docs(chapter-05): edit report | — | 2026-10-08T16:47:09-05:00 |
