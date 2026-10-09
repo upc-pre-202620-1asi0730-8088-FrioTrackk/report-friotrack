@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-07",
+  "captures": [
+    {
+      "path": "report/assets/images/chapter-05/tb1-frontend-alerts-es.jpg",
+      "width": 1265,
+      "height": 712,
+      "sha256": "9cff570255f343cc2ba3520d65121cac4ec304bb9e46bf609260eb2ad97a29b1"
+    },
+    {
+      "path": "report/assets/images/chapter-05/tb1-frontend-client-es.jpg",
+      "width": 1280,
+      "height": 900,
+      "sha256": "8fe565c807ff9127c5cbd6c5fa64db547d0d4449e06b091f69d304d3fe01cda9"
+    },
+    {
+      "path": "report/assets/images/chapter-05/tb1-frontend-client-mobile.jpg",
+      "width": 375,
+      "height": 811,
+      "sha256": "cd48793466290dc43b42f4f5be7fb98c543904e1c9ec4745997511b06f97996d"
+    },
+    {
+      "path": "report/assets/images/chapter-05/tb1-frontend-dashboard-en.jpg",
+      "width": 1265,
+      "height": 712,
+      "sha256": "11fcab0c2f275e1ed8fd8b2a62dab32516ec93d49c76fe7a85cb7049e71d804a"
+    },
+    {
+      "path": "report/assets/images/chapter-05/tb1-frontend-detail-es.jpg",
+      "width": 1265,
+      "height": 712,
+      "sha256": "85ae8b1c8f3447ee35030087b7fd06b01aa2042ac2cca279961fc92765c1e92c"
+    },
+    {
+      "path": "report/assets/images/chapter-05/tb1-frontend-scheduling.jpg",
+      "width": 1265,
+      "height": 712,
+      "sha256": "0274b8236718a71ea88e92720de7f0b433e1aa6fbab1a39b6dd5c4a53d61f34f"
+    },
+    {
+      "path": "report/assets/images/chapter-05/tb1-landing-desktop.jpg",
+      "width": 1265,
+      "height": 712,
+      "sha256": "24c02a09c1c5e200f755f8e380b6abbe4a6800de3337fc43fd5e5ba0bb4d684f"
+    },
+    {
+      "path": "report/assets/images/chapter-05/tb1-landing-mobile.jpg",
+      "width": 375,
+      "height": 811,
+      "sha256": "37b848778e2ae2ee3fccf528ada81a6461d7fa1f8126940c00d0368d65d786c8"
+    },
+    {
+      "path": "report/assets/images/chapter-05/tb1-landing-team.jpg",
+      "width": 1265,
+      "height": 712,
+      "sha256": "e036b57b890218d595387fe9183cb9221ce978f23d2acd11b26d59e2348ad5ec"
+    },
+    {
+      "path": "report/assets/images/chapter-05/tb1-product-video.jpg",
+      "width": 1265,
+      "height": 712,
+      "sha256": "3d4ca34414a6603437bcc02a9eb40d9ccfd3dd287b87a4bd39b16d9322a0643d"
+    }
+  ],
+  "scope": "Actual CUA screenshots of local demo; no mock-ups or published-site evidence."
+}

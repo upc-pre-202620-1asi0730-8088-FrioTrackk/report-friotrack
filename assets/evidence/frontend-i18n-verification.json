@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-07",
+  "status": "passed",
+  "dictionaryKeysPerLanguage": 234,
+  "staticReferencedKeys": 166,
+  "sourceFiles": 24,
+  "missingKeys": [],
+  "emptyTranslations": [],
+  "scope": "Dictionary parity and static translation/domain-error references. Dynamic rendering was reviewed separately through CUA; this is not a complete language or accessibility audit."
+}

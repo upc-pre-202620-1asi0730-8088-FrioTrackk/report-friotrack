@@ -1,0 +1,104 @@
+{
+  "reviewDate": "2026-10-07",
+  "scope": "Local TB1 frontend with explicitly labelled sample data",
+  "domainTests": {
+    "command": "node --test tests/operations.test.js",
+    "passed": 15,
+    "failed": 0,
+    "durationMilliseconds": 153.2764,
+    "latestRevisionNote": "Previous 15/15 domain run retained; not repeated for chart aria-label formatting because domain logic and stored readings did not change.",
+    "status": "passed"
+  },
+  "productionBuild": {
+    "command": "node node_modules/vite/bin/vite.js build",
+    "viteVersion": "7.3.7",
+    "modulesTransformed": 223,
+    "status": "passed",
+    "warnings": [],
+    "chunksKilobytes": {
+      "application": 111.67,
+      "vue": 101.46,
+      "primevue": 368.61,
+      "leaflet": 149.97
+    },
+    "finalBuildSeconds": 4.59
+  },
+  "browserQA": {
+    "status": "selected_flows_verified_by_root",
+    "note": "Root verified selected interactions through the official CUA browser. This does not claim complete WCAG conformance or all browser/viewport coverage.",
+    "confirmed": [
+      "Schedule sample shipment and reject invalid dates/ranges",
+      "Corrective action acknowledges the alert without premature resolution",
+      "Explicit landing EN/ES language applies to the SPA",
+      "Mobile 390px shipment list and client details: document scrollWidth 375px, internal table scroll",
+      "Closed mobile sidebar hidden/inert; opening moves focus, Shift+Tab wraps, Escape returns focus to menu button",
+      "Client detail shows sample CSV/map access without coordinator management actions",
+      "Cancellation action present for scheduled FT-0005 and absent for in-transit FT-0006 and delivered FT-0004",
+      "Current cancellation control visible for scheduled FT-0005, absent for in-transit FT-0006 and delivered FT-0004 (root CUA); no cancellation mutation performed through UI in this check",
+      "Latest temperature chart accessible label checked by root CUA in ES and EN; at most one decimal and no raw floating-point residue"
+    ],
+    "latestReview": {
+      "date": "2026-10-07",
+      "cancellationControls": {
+        "scheduledFT0005": "visible",
+        "inTransitFT0006": "absent",
+        "deliveredFT0004": "absent"
+      },
+      "mutationScope": "Control visibility only; cancellation behavior covered by prior domain tests",
+      "consoleWarningsOrErrorsObserved": [],
+      "proofImage": "work/frontend-final-review.png",
+      "proofImageSha256": "e84b047cc33fb79ada388ca994c4173d5d3d56da88e694a573eb97aed53e9327",
+      "proofScope": "Actual local FT-0006 page, English, viewport screenshot; no cloud deployment"
+    }
+  },
+  "deployment": {
+    "status": "not_published",
+    "publicURL": null
+  },
+  "apiAndAuthentication": {
+    "status": "not_implemented",
+    "sampleProfilesOnly": true,
+    "passwordsStored": false
+  },
+  "accessibilityLocale": {
+    "primeVue": "Reactive EN/ES, including aria.close and option-selection announcements",
+    "conformity": "No WCAG certification claimed",
+    "validation": "Root owns browser interaction verification",
+    "freeText": "Preserved; only known sample metadata translated for display",
+    "status": "implemented",
+    "leaflet": "Zoom titles/aria and attribution localized on language changes",
+    "temperatureChart": {
+      "ariaValues": "Intl.NumberFormat using the active es-419/en-US locale, no grouping and at most one fractional digit",
+      "storedReadings": "Unchanged; formatting affects only the chart accessible label",
+      "browserValidation": "Root CUA observed FT-0004 chart label in ES and EN: -20.1, -19.9, -19.7, -19.4 degrees Celsius; no raw binary floating-point residue. Stored readings unchanged."
+    }
+  },
+  "mobileNavigation": {
+    "layout": "Table scrolling confined with min-width:0 on flex/grid containers",
+    "escape": "Close and return focus to menu button",
+    "open": "Initial focus and Tab focus containment",
+    "closed": "visibility:hidden, inert, aria-hidden",
+    "browserValidation": "Confirmed by root CUA at width 390px; document scrollWidth 375px for shipment list and client detail; keyboard focus cycle and Escape verified",
+    "status": "implemented"
+  },
+  "shipmentLifecycle": {
+    "catalogReference": "US34 acceptance criterion 3: cancellation only from DRAFT or SCHEDULED",
+    "implementedStates": [
+      "scheduled",
+      "in-transit",
+      "delivered",
+      "cancelled"
+    ],
+    "persistedDrafts": false,
+    "cancellation": "Scheduled only, with a note; rejected in transit and after delivery",
+    "resourceReservations": "Scheduled cancellation releases availability for another overlapping allocation",
+    "verification": "Expanded two existing domain tests; all 15 domain tests passed. Root CUA verified cancellation-control visibility in three current states; actual cancellation mutation covered by domain tests, not a new browser mutation.",
+    "status": "domain_tests_and_build_passed"
+  },
+  "landingRouteIntegration": {
+    "browserValidation": "Explicit EN/ES landing language confirmed by root CUA",
+    "language": "Explicit valid lang=en/es hash query overrides saved preference on mount and change",
+    "role": "Explicit role query updates on same login/register page",
+    "status": "implemented"
+  }
+}
