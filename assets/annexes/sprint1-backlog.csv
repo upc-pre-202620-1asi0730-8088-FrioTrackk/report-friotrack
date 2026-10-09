@@ -1,5 +1,5 @@
 ﻿Story Id,Story Title,Task Id,Task Title,Task Description,Estimation (Hours),Assigned To,Status
-US01,Propuesta de valor en Landing,S1-T01,Revisar propuesta y segmentos,Contrastar el contenido histórico con Coordinador Logístico y Cliente de Carga; retirar promesas fuera del alcance.,2,Por confirmar,To-Review
-US02,Corredores logísticos en Landing,S1-T02,Verificar cobertura propuesta,Comprobar los cuatro corredores y que no se presenten como cobertura comercial garantizada.,2,Por confirmar,To-Review
-US03,Formulario de contacto comercial,S1-T03,Revisar formulario de contacto,Validar campos y errores; la recepción efectiva requiere configurar y probar un receptor real.,3,Por confirmar,In-Process
-US31,Planes y acceso desde la Landing,S1-T04,Revisar planes y acceso,"Comprobar periodicidad, precios referenciales y CTA; falta enlazar una app pública vigente.",3,Por confirmar,To-Review
+US23,Propuesta de valor en Landing,S1-T01,Implementar presentación,"Comunicar problema, propuesta y segmentos.",No registrada,Benjamin / Alexander,Publicado
+US24,Corredores logísticos en Landing,S1-T02,Presentar corredores,"Mostrar las rutas propuestas de La Libertad, Ica, Piura y Lambayeque.",No registrada,Benjamin,Publicado
+US25,Formulario de contacto comercial,S1-T03,Implementar formulario,Validar datos de contacto; integrar receptor comercial.,No registrada,Benjamin,Parcial: falta receptor
+US27,Preguntas frecuentes (FAQ),S1-T04,Incorporar FAQ,Mostrar preguntas y respuestas de la propuesta.,No registrada,Benjamin,Publicado

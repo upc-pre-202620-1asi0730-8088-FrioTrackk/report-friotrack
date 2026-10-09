@@ -1,0 +1,855 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1874" height="8467.32" viewBox="0 0 1874 8467.32" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTozMWExYjJjNi1hYTI2LTQ0ZTktYTE2ZS04MGQ2MmJiZTBjZWUAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaEQ1WsEXTcZ8zT66+VubvccAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDoxNTQyNTRhNi0xZjQyLTQ4YjQtYjZiYS02ZDZjOWEzMTJiNDhscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoQPAHH45ZsigmDnt4g6VQIQAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggZY2lA3bOXCwC7reEKx9uZiikrXEwZpYVleNCAdYSMgikZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaKk4LoYHS67IxDxSzcwI/kEAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCAsz+ETQydgDokuHIuVtXSYaVxFN4Id+Wj10oAMAoOON2RuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBigZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjMxYTFiMmM2LWFhMjYtNDRlOS1hMTZlLTgwZDYyYmJlMGNlZS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjk4ZDIyN2NlLTNhNzMtNGNiMy1hMGZhLThiMDc3NWNmZmQ3NnJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCBljaUDds5cLALut4QrH25mKKStcTBmlhWV40IB1hIyCKJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFgg3tjlPZa1E3Fxgr3GXMBEKNQhYulh5JHLpWYFzMPF/MaiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFgg40lS0WUJFSQdx39ze8L0SWqzRYlEEwvoaDSIgkBuoo90Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQLj0VqSvtix7l7n+fKDzQ7XjvHKfdSfhjjAo7AueeH0GxZ8aGLp+J4mj7UbmuMr0ISfNe+5zlv3V30xTc/q5x18=</c2pa:manifest></metadata><rect id="Lienzo" width="1874" height="8467.32" fill="#EEF2F6"/><text x="80" y="124" font-family="Inter" font-size="56" font-weight="800" fill="#0B3D91">FríoTrack · Arquitectura de información y User Flows</text><text x="80" y="176" font-family="Inter" font-size="26" font-weight="400" fill="#475569">Mapas de sitio y flujos de usuario</text><text x="80" y="274" font-family="Inter" font-size="30" font-weight="700" fill="#0F172A">Mapa del sitio – Landing</text><svg id="Mapa del sitio Landing" x="80" y="300" width="1660" height="889" viewBox="0 0 1660 889" xmlns="http://www.w3.org/2000/svg"><defs></defs><rect id="Fondo" width="1660" height="889" fill="#FFFFFF"/><g id="d"><rect x="0" y="0" width="1660" height="889" fill="#ffffff"/><g id="tr"><g id="nb-root"><rect x="716.7" y="36" width="226.59" height="44" rx="10" fill="#0b5ed7"/><rect x="717.2" y="36.5" width="225.59" height="43" rx="9.5" fill="none" stroke="#084bae" stroke-width="1"/><text x="739.7" y="63.82" font-family="Inter" font-size="16" font-weight="600" fill="#ffffff">Landing Page FríoTrack</text></g><g id="kids"><g id="kid"><g id="nb-grp"><rect x="322.59" y="132" width="554.8" height="38" rx="10" fill="#eaf2fe"/><rect x="323.09" y="132.5" width="553.8" height="37" rx="9.5" fill="none" stroke="#bbd5f8" stroke-width="1"/><text x="339.59" y="155.59" font-family="Inter" font-size="14" font-weight="600" fill="#084bae">index.html · Página principal (una sola página con navegación por secciones)</text></g><g id="div"><g id="div"><rect x="49" y="186" width="265" height="174" rx="12" fill="#eaf2fe"/><rect x="49.5" y="186.5" width="264" height="173" rx="11.5" fill="none" stroke="#bbd5f8" stroke-width="1"/><g id="div"><g id="span"><rect x="64" y="199" width="26" height="26" rx="13" fill="#0b5ed7"/><text x="74.19" y="215.98" font-family="Inter" font-size="13" font-weight="700" fill="#ffffff">1</text></g><g id="b"><text x="100" y="216.9" font-family="Inter" font-size="14.5" font-weight="700" fill="#084bae">Encabezado y héroe</text></g></g><g id="div"><g id="nb-sub"><rect x="64" y="233" width="235" height="34" rx="10" fill="#f8fafc"/><rect x="64.5" y="233.5" width="234" height="33" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="77" y="254.05" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Barra de navegación</text></g><g id="nb-sub"><rect x="64" y="273" width="235" height="34" rx="10" fill="#f8fafc"/><rect x="64.5" y="273.5" width="234" height="33" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="77" y="294.05" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Propuesta de valor</text></g><g id="nb-sub"><rect x="64" y="313" width="235" height="34" rx="10" fill="#f8fafc"/><rect x="64.5" y="313.5" width="234" height="33" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="77" y="334.05" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Panel simulado con alerta</text></g></g></g><g id="div"><rect x="328" y="186" width="265" height="174" rx="12" fill="#eaf2fe"/><rect x="328.5" y="186.5" width="264" height="173" rx="11.5" fill="none" stroke="#bbd5f8" stroke-width="1"/><g id="div"><g id="span"><rect x="343" y="199" width="26" height="26" rx="13" fill="#0b5ed7"/><text x="351.89" y="215.98" font-family="Inter" font-size="13" font-weight="700" fill="#ffffff">2</text></g><g id="b"><text x="379" y="216.9" font-family="Inter" font-size="14.5" font-weight="700" fill="#084bae">El problema</text></g></g><g id="div"><g id="nb-sub"><rect x="343" y="233" width="235" height="34" rx="10" fill="#f8fafc"/><rect x="343.5" y="233.5" width="234" height="33" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="356" y="254.05" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Tres indicadores</text></g><g id="nb-sub"><rect x="343" y="273" width="235" height="34" rx="10" fill="#f8fafc"/><rect x="343.5" y="273.5" width="234" height="33" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="356" y="294.05" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Hoy, en ruta / Con FríoTrack</text></g></g></g><g id="div"><rect x="607" y="186" width="265" height="174" rx="12" fill="#eaf2fe"/><rect x="607.5" y="186.5" width="264" height="173" rx="11.5" fill="none" stroke="#bbd5f8" stroke-width="1"/><g id="div"><g id="span"><rect x="622" y="199" width="26" height="26" rx="13" fill="#0b5ed7"/><text x="630.8" y="215.98" font-family="Inter" font-size="13" font-weight="700" fill="#ffffff">3</text></g><g id="b"><text x="658" y="216.9" font-family="Inter" font-size="14.5" font-weight="700" fill="#084bae">Quiénes somos</text></g></g><g id="div"><g id="nb-sub"><rect x="622" y="233" width="235" height="52" rx="10" fill="#f8fafc"/><rect x="622.5" y="233.5" width="234" height="51" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="635" y="254.05" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Presentación del equipo</text><text x="635" y="272.05" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">BlackStartup</text></g><g id="nb-sub"><rect x="622" y="291" width="235" height="34" rx="10" fill="#f8fafc"/><rect x="622.5" y="291.5" width="234" height="33" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="635" y="312.05" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Misión y visión</text></g></g></g><g id="div"><rect x="886" y="186" width="265" height="174" rx="12" fill="#eaf2fe"/><rect x="886.5" y="186.5" width="264" height="173" rx="11.5" fill="none" stroke="#bbd5f8" stroke-width="1"/><g id="div"><g id="span"><rect x="901" y="199" width="26" height="26" rx="13" fill="#0b5ed7"/><text x="909.59" y="215.98" font-family="Inter" font-size="13" font-weight="700" fill="#ffffff">4</text></g><g id="b"><text x="937" y="216.9" font-family="Inter" font-size="14.5" font-weight="700" fill="#084bae">Lo que hacemos</text></g></g><g id="div"><g id="nb-sub"><rect x="901" y="233" width="235" height="34" rx="10" fill="#f8fafc"/><rect x="901.5" y="233.5" width="234" height="33" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="914" y="254.05" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Siete funcionalidades</text></g></g></g><g id="div"><rect x="49" y="374" width="265" height="174" rx="12" fill="#eaf2fe"/><rect x="49.5" y="374.5" width="264" height="173" rx="11.5" fill="none" stroke="#bbd5f8" stroke-width="1"/><g id="div"><g id="span"><rect x="64" y="387" width="26" height="26" rx="13" fill="#0b5ed7"/><text x="72.84" y="403.98" font-family="Inter" font-size="13" font-weight="700" fill="#ffffff">5</text></g><g id="b"><text x="100" y="404.9" font-family="Inter" font-size="14.5" font-weight="700" fill="#084bae">Cómo funciona</text></g></g><g id="div"><g id="nb-sub"><rect x="64" y="421" width="235" height="34" rx="10" fill="#f8fafc"/><rect x="64.5" y="421.5" width="234" height="33" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="77" y="442.05" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Cuatro pasos para empezar</text></g></g></g><g id="div"><rect x="328" y="374" width="265" height="174" rx="12" fill="#eaf2fe"/><rect x="328.5" y="374.5" width="264" height="173" rx="11.5" fill="none" stroke="#bbd5f8" stroke-width="1"/><g id="div"><g id="span"><rect x="343" y="387" width="26" height="26" rx="13" fill="#0b5ed7"/><text x="351.77" y="403.98" font-family="Inter" font-size="13" font-weight="700" fill="#ffffff">6</text></g><g id="b"><text x="379" y="404.9" font-family="Inter" font-size="14.5" font-weight="700" fill="#084bae">Corredores</text></g></g><g id="div"><g id="nb-sub"><rect x="343" y="421" width="235" height="52" rx="10" fill="#f8fafc"/><rect x="343.5" y="421.5" width="234" height="51" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="356" y="442.05" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Piura, Lambayeque, La Libertad e</text><text x="356" y="460.05" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Ica hacia Lima</text></g></g></g><g id="div"><rect x="607" y="374" width="265" height="174" rx="12" fill="#eaf2fe"/><rect x="607.5" y="374.5" width="264" height="173" rx="11.5" fill="none" stroke="#bbd5f8" stroke-width="1"/><g id="div"><g id="span"><rect x="622" y="387" width="26" height="26" rx="13" fill="#0b5ed7"/><text x="631.22" y="403.98" font-family="Inter" font-size="13" font-weight="700" fill="#ffffff">7</text></g><g id="b"><text x="658" y="404.9" font-family="Inter" font-size="14.5" font-weight="700" fill="#084bae">Para quién</text></g></g><g id="div"><g id="nb-sub"><rect x="622" y="421" width="235" height="52" rx="10" fill="#f8fafc"/><rect x="622.5" y="421.5" width="234" height="51" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="635" y="442.05" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Empresas de transporte</text><text x="635" y="460.05" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">refrigerado</text></g><g id="nb-sub"><rect x="622" y="479" width="235" height="52" rx="10" fill="#f8fafc"/><rect x="622.5" y="479.5" width="234" height="51" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="635" y="500.05" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Productores, exportadores y</text><text x="635" y="518.05" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">compradores</text></g></g></g><g id="div"><rect x="886" y="374" width="265" height="174" rx="12" fill="#eaf2fe"/><rect x="886.5" y="374.5" width="264" height="173" rx="11.5" fill="none" stroke="#bbd5f8" stroke-width="1"/><g id="div"><g id="span"><rect x="901" y="387" width="26" height="26" rx="13" fill="#0b5ed7"/><text x="909.77" y="403.98" font-family="Inter" font-size="13" font-weight="700" fill="#ffffff">8</text></g><g id="b"><text x="937" y="404.9" font-family="Inter" font-size="14.5" font-weight="700" fill="#084bae">Planes</text></g></g><g id="div"><g id="nb-sub"><rect x="901" y="421" width="235" height="34" rx="10" fill="#f8fafc"/><rect x="901.5" y="421.5" width="234" height="33" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="914" y="442.05" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Básico</text></g><g id="nb-sub"><rect x="901" y="461" width="235" height="34" rx="10" fill="#f8fafc"/><rect x="901.5" y="461.5" width="234" height="33" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="914" y="482.05" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Profesional</text></g><g id="nb-sub"><rect x="901" y="501" width="235" height="34" rx="10" fill="#f8fafc"/><rect x="901.5" y="501.5" width="234" height="33" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="914" y="522.05" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Empresarial</text></g></g></g><g id="div"><rect x="49" y="562" width="265" height="134" rx="12" fill="#eaf2fe"/><rect x="49.5" y="562.5" width="264" height="133" rx="11.5" fill="none" stroke="#bbd5f8" stroke-width="1"/><g id="div"><g id="span"><rect x="64" y="575" width="26" height="26" rx="13" fill="#0b5ed7"/><text x="72.77" y="591.98" font-family="Inter" font-size="13" font-weight="700" fill="#ffffff">9</text></g><g id="b"><text x="100" y="592.9" font-family="Inter" font-size="14.5" font-weight="700" fill="#084bae">Metas</text></g></g><g id="div"><g id="nb-sub"><rect x="64" y="609" width="235" height="34" rx="10" fill="#f8fafc"/><rect x="64.5" y="609.5" width="234" height="33" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="77" y="630.05" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Cuatro indicadores de éxito</text></g></g></g><g id="div"><rect x="328" y="562" width="265" height="134" rx="12" fill="#eaf2fe"/><rect x="328.5" y="562.5" width="264" height="133" rx="11.5" fill="none" stroke="#bbd5f8" stroke-width="1"/><g id="div"><g id="span"><rect x="343" y="575" width="26" height="26" rx="13" fill="#0b5ed7"/><text x="348.81" y="591.98" font-family="Inter" font-size="13" font-weight="700" fill="#ffffff">10</text></g><g id="b"><text x="379" y="592.9" font-family="Inter" font-size="14.5" font-weight="700" fill="#084bae">Equipo</text></g></g><g id="div"><g id="nb-sub"><rect x="343" y="609" width="235" height="34" rx="10" fill="#f8fafc"/><rect x="343.5" y="609.5" width="234" height="33" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="356" y="630.05" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Cinco integrantes</text></g></g></g><g id="div"><rect x="607" y="562" width="265" height="134" rx="12" fill="#eaf2fe"/><rect x="607.5" y="562.5" width="264" height="133" rx="11.5" fill="none" stroke="#bbd5f8" stroke-width="1"/><g id="div"><g id="span"><rect x="622" y="575" width="26" height="26" rx="13" fill="#0b5ed7"/><text x="629.39" y="591.98" font-family="Inter" font-size="13" font-weight="700" fill="#ffffff">11</text></g><g id="b"><text x="658" y="592.9" font-family="Inter" font-size="14.5" font-weight="700" fill="#084bae">Contacto</text></g></g><g id="div"><g id="nb-sub"><rect x="622" y="609" width="235" height="34" rx="10" fill="#f8fafc"/><rect x="622.5" y="609.5" width="234" height="33" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="635" y="630.05" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Formulario de contacto</text></g></g></g><g id="div"><rect x="886" y="562" width="265" height="134" rx="12" fill="#eaf2fe"/><rect x="886.5" y="562.5" width="264" height="133" rx="11.5" fill="none" stroke="#bbd5f8" stroke-width="1"/><g id="div"><g id="span"><rect x="901" y="575" width="26" height="26" rx="13" fill="#0b5ed7"/><text x="907.09" y="591.98" font-family="Inter" font-size="13" font-weight="700" fill="#ffffff">12</text></g><g id="b"><text x="937" y="592.9" font-family="Inter" font-size="14.5" font-weight="700" fill="#084bae">Pie de página</text></g></g><g id="div"><g id="nb-sub"><rect x="901" y="609" width="235" height="34" rx="10" fill="#f8fafc"/><rect x="901.5" y="609.5" width="234" height="33" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="914" y="630.05" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Enlaces del producto y la empresa</text></g><g id="nb-sub"><rect x="901" y="649" width="235" height="34" rx="10" fill="#f8fafc"/><rect x="901.5" y="649.5" width="234" height="33" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="914" y="670.05" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Idioma y datos legales</text></g></g></g></g><rect x="600" y="106" width="560" height="2" fill="#94a3b8"/><rect x="600" y="108" width="2" height="24" fill="#94a3b8"/></g><g id="kid"><rect x="1160" y="106" width="115" height="2" fill="#94a3b8"/><g id="nb-grp"><rect x="1169" y="132" width="212" height="56" rx="10" fill="#eaf2fe"/><rect x="1169.5" y="132.5" width="211" height="55" rx="9.5" fill="none" stroke="#bbd5f8" stroke-width="1"/><text x="1234.59" y="155.59" font-family="Inter" font-size="14" font-weight="600" fill="#084bae">Terms-and-</text><text x="1225.13" y="173.59" font-family="Inter" font-size="14" font-weight="600" fill="#084bae">Condition.html</text></g><g id="subs"><rect x="1170" y="202" width="2" height="76" fill="#cbd5e1"/><g id="nb-sub"><rect x="1184" y="202" width="196" height="34" rx="10" fill="#f8fafc"/><rect x="1184.5" y="202.5" width="195" height="33" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="1197" y="223.05" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Nueve cláusulas (ES / EN)</text></g><g id="nb-sub"><rect x="1184" y="244" width="196" height="34" rx="10" fill="#f8fafc"/><rect x="1184.5" y="244.5" width="195" height="33" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="1197" y="265.05" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Protección de datos</text></g></g><rect x="1275" y="106" width="115" height="2" fill="#94a3b8"/><rect x="1275" y="108" width="2" height="24" fill="#94a3b8"/></g><g id="kid"><rect x="1388" y="106" width="115" height="2" fill="#94a3b8"/><rect x="1501" y="108" width="2" height="24" fill="#94a3b8"/><g id="nb-ext"><rect x="1401.05" y="132" width="207.89" height="38" rx="10" fill="#e0f7f5"/><rect x="1401.55" y="132.5" width="206.89" height="37" rx="9.5" fill="none" stroke="#9fdcd5" stroke-width="1"/><text x="1418.05" y="155.59" font-family="Inter" font-size="14" font-weight="600" fill="#00796b">Ventana modal de acceso</text></g><g id="subs"><rect x="1400" y="184" width="2" height="94" fill="#cbd5e1"/><g id="nb-sub"><rect x="1414" y="184" width="196" height="34" rx="10" fill="#f8fafc"/><rect x="1414.5" y="184.5" width="195" height="33" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="1427" y="205.05" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Iniciar sesión</text></g><g id="nb-sub"><rect x="1414" y="226" width="196" height="52" rx="10" fill="#f8fafc"/><rect x="1414.5" y="226.5" width="195" height="51" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="1427" y="247.05" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Registrarse (con aceptación</text><text x="1427" y="265.05" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">de términos)</text></g></g></g></g><g id="div"><g id="div"><g id="span"><g id="pi-arrow-down"><g id="icon-arrow-down" transform="translate(1457.911 714.911) scale(1.42406)" fill="#00796b"><g><path d="M12,19.75a.74.74,0,0,1-.53-.22l-6-6a.75.75,0,0,1,1.06-1.06L12,17.94l5.47-5.47a.75.75,0,0,1,1.06,1.06l-6,6A.74.74,0,0,1,12,19.75Z"/><path d="M12,19.75a.76.76,0,0,1-.75-.75V5a.75.75,0,0,1,1.5,0V19A.76.76,0,0,1,12,19.75Z"/></g></g></g></g><g id="nb-appbox"><rect x="1350" y="757" width="250" height="56" rx="10" fill="#00796b"/><rect x="1350.5" y="757.5" width="249" height="55" rx="9.5" fill="none" stroke="#00796b" stroke-width="1"/><text x="1368.31" y="780.59" font-family="Inter" font-size="14" font-weight="600" fill="#ffffff">Web Application (vista según el</text><text x="1424.5" y="798.59" font-family="Inter" font-size="14" font-weight="600" fill="#ffffff">rol del usuario)</text></g></g></g></g><g id="legend"><g id="span"><g id="i"><rect x="40" y="836" width="14" height="14" rx="4" fill="#eaf2fe"/><rect x="40.5" y="836.5" width="13" height="13" rx="3.5" fill="none" stroke="#cbd5e1" stroke-width="1"/></g><text x="60" y="847.87" font-family="Inter" font-size="12" font-weight="400" fill="#475569">Página y secciones</text></g><g id="span"><g id="i"><rect x="187.56" y="836" width="14" height="14" rx="4" fill="#f8fafc"/><rect x="188.06" y="836.5" width="13" height="13" rx="3.5" fill="none" stroke="#cbd5e1" stroke-width="1"/></g><text x="207.56" y="847.87" font-family="Inter" font-size="12" font-weight="400" fill="#475569">Contenido</text></g><g id="span"><g id="i"><rect x="283.97" y="836" width="14" height="14" rx="4" fill="#e0f7f5"/><rect x="284.47" y="836.5" width="13" height="13" rx="3.5" fill="none" stroke="#cbd5e1" stroke-width="1"/></g><text x="303.97" y="847.87" font-family="Inter" font-size="12" font-weight="400" fill="#475569">Punto de entrada a la aplicación</text></g></g></g></svg><text x="80" y="1373" font-family="Inter" font-size="30" font-weight="700" fill="#0F172A">Mapa del sitio – Aplicación web</text><svg id="Mapa del sitio Web app" x="80" y="1399" width="1714" height="1193" viewBox="0 0 1714 1193" xmlns="http://www.w3.org/2000/svg"><defs></defs><rect id="Fondo" width="1714" height="1193" fill="#FFFFFF"/><g id="d"><rect x="0" y="0" width="1714" height="1193" fill="#ffffff"/><g id="div"><g id="div"><g id="nb-root"><rect x="742" y="36" width="230" height="62" rx="10" fill="#0b5ed7"/><rect x="742.5" y="36.5" width="229" height="61" rx="9.5" fill="none" stroke="#084bae" stroke-width="1"/><text x="793.48" y="63.82" font-family="Inter" font-size="16" font-weight="600" fill="#ffffff">Web Application</text><text x="821.14" y="81.82" font-family="Inter" font-size="16" font-weight="600" fill="#ffffff">FríoTrack</text></g></g><g id="panel"><rect x="40.5" y="120.5" width="1633" height="173" rx="15.5" fill="none" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="5 4"/><g id="tr"><g id="nb-ext"><rect x="751.64" y="143" width="210.72" height="38" rx="10" fill="#e0f7f5"/><rect x="752.14" y="143.5" width="209.72" height="37" rx="9.5" fill="none" stroke="#9fdcd5" stroke-width="1"/><text x="768.64" y="166.59" font-family="Inter" font-size="14" font-weight="600" fill="#00796b">Acceso y cuenta (público)</text></g><g id="kids"><g id="kid"><g id="nb"><rect x="567.06" y="233" width="221.16" height="38" rx="10" fill="#ffffff"/><rect x="567.56" y="233.5" width="220.16" height="37" rx="9.5" fill="none" stroke="#cbd5e1" stroke-width="1"/><text x="584.06" y="256.59" font-family="Inter" font-size="14" font-weight="600" fill="#0f172a">Registro con elección de rol</text></g><rect x="677.64" y="207" width="119.58" height="2" fill="#94a3b8"/><rect x="677.64" y="209" width="2" height="24" fill="#94a3b8"/></g><g id="kid"><rect x="797.22" y="207" width="78.47" height="2" fill="#94a3b8"/><g id="nb"><rect x="806.22" y="233" width="138.94" height="38" rx="10" fill="#ffffff"/><rect x="806.72" y="233.5" width="137.94" height="37" rx="9.5" fill="none" stroke="#cbd5e1" stroke-width="1"/><text x="823.22" y="256.59" font-family="Inter" font-size="14" font-weight="600" fill="#0f172a">Inicio de sesión</text></g><rect x="875.69" y="207" width="78.47" height="2" fill="#94a3b8"/><rect x="875.69" y="209" width="2" height="24" fill="#94a3b8"/></g><g id="kid"><rect x="952.17" y="207" width="100.88" height="2" fill="#94a3b8"/><rect x="1051.05" y="209" width="2" height="24" fill="#94a3b8"/><g id="nb"><rect x="963.16" y="233" width="183.77" height="38" rx="10" fill="#ffffff"/><rect x="963.66" y="233.5" width="182.77" height="37" rx="9.5" fill="none" stroke="#cbd5e1" stroke-width="1"/><text x="980.16" y="256.59" font-family="Inter" font-size="14" font-weight="600" fill="#0f172a">Recuperar contraseña</text></g></g></g></g></g><g id="div"><g id="h4"><text x="40" y="329.73" font-family="Inter" font-size="13" font-weight="700" fill="#64748b" letter-spacing="1.04">PERFIL 1 · COORDINADOR LOGÍSTICO (EMPRESA DE TRANSPORTE REFRIGERADO)</text></g><g id="panel"><rect x="40.5" y="348" width="1633" height="365" rx="15.5" fill="none" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="5 4"/><g id="tr"><g id="nb-grp"><rect x="759.73" y="370.5" width="194.52" height="38" rx="10" fill="#eaf2fe"/><rect x="760.23" y="371" width="193.52" height="37" rx="9.5" fill="none" stroke="#bbd5f8" stroke-width="1"/><text x="776.73" y="394.46" font-family="Inter" font-size="15" font-weight="600" fill="#084bae">Coordinador Logístico</text></g><g id="kids"><g id="kid"><g id="nb"><rect x="119.08" y="460.5" width="107.84" height="38" rx="10" fill="#ffffff"/><rect x="119.58" y="461" width="106.84" height="37" rx="9.5" fill="none" stroke="#cbd5e1" stroke-width="1"/><text x="136.08" y="484.09" font-family="Inter" font-size="14" font-weight="600" fill="#0f172a">Dashboard</text></g><g id="subs"><rect x="68" y="512.5" width="2" height="76" fill="#cbd5e1"/><g id="nb-sub"><rect x="82" y="512.5" width="196" height="34" rx="10" fill="#f8fafc"/><rect x="82.5" y="513" width="195" height="33" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="95" y="533.55" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Mapa de unidades activas</text></g><g id="nb-sub"><rect x="82" y="554.5" width="196" height="34" rx="10" fill="#f8fafc"/><rect x="82.5" y="555" width="195" height="33" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="95" y="575.55" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Envíos activos y alertas</text></g></g><rect x="173" y="434.5" width="114" height="2" fill="#94a3b8"/><rect x="173" y="436.5" width="2" height="24" fill="#94a3b8"/></g><g id="kid"><rect x="287" y="434.5" width="114" height="2" fill="#94a3b8"/><g id="nb"><rect x="361.55" y="460.5" width="78.91" height="38" rx="10" fill="#ffffff"/><rect x="362.05" y="461" width="77.91" height="37" rx="9.5" fill="none" stroke="#cbd5e1" stroke-width="1"/><text x="378.55" y="484.09" font-family="Inter" font-size="14" font-weight="600" fill="#0f172a">Envíos</text></g><g id="subs"><rect x="296" y="512.5" width="2" height="118" fill="#cbd5e1"/><g id="nb-sub"><rect x="310" y="512.5" width="196" height="34" rx="10" fill="#f8fafc"/><rect x="310.5" y="513" width="195" height="33" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="323" y="533.55" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Lista, búsqueda y filtros</text></g><g id="nb-sub"><rect x="310" y="554.5" width="196" height="34" rx="10" fill="#f8fafc"/><rect x="310.5" y="555" width="195" height="33" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="323" y="575.55" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Nuevo envío (4 pasos)</text></g><g id="nb-sub"><rect x="310" y="596.5" width="196" height="34" rx="10" fill="#f8fafc"/><rect x="310.5" y="597" width="195" height="33" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="323" y="617.55" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Detalle del envío</text></g></g><rect x="401" y="434.5" width="114" height="2" fill="#94a3b8"/><rect x="401" y="436.5" width="2" height="24" fill="#94a3b8"/></g><g id="kid"><rect x="515" y="434.5" width="114" height="2" fill="#94a3b8"/><g id="nb"><rect x="578.75" y="460.5" width="100.5" height="38" rx="10" fill="#ffffff"/><rect x="579.25" y="461" width="99.5" height="37" rx="9.5" fill="none" stroke="#cbd5e1" stroke-width="1"/><text x="595.75" y="484.09" font-family="Inter" font-size="14" font-weight="600" fill="#0f172a">Vehículos</text></g><g id="subs"><rect x="524" y="512.5" width="2" height="94" fill="#cbd5e1"/><g id="nb-sub"><rect x="538" y="512.5" width="196" height="34" rx="10" fill="#f8fafc"/><rect x="538.5" y="513" width="195" height="33" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="551" y="533.55" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Lista de vehículos</text></g><g id="nb-sub"><rect x="538" y="554.5" width="196" height="52" rx="10" fill="#f8fafc"/><rect x="538.5" y="555" width="195" height="51" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="551" y="575.55" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Registrar o editar vehículo y</text><text x="551" y="593.55" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">sensor</text></g></g><rect x="629" y="434.5" width="114" height="2" fill="#94a3b8"/><rect x="629" y="436.5" width="2" height="24" fill="#94a3b8"/></g><g id="kid"><rect x="743" y="434.5" width="114" height="2" fill="#94a3b8"/><g id="nb"><rect x="796.28" y="460.5" width="121.42" height="38" rx="10" fill="#ffffff"/><rect x="796.78" y="461" width="120.42" height="37" rx="9.5" fill="none" stroke="#cbd5e1" stroke-width="1"/><text x="813.28" y="484.09" font-family="Inter" font-size="14" font-weight="600" fill="#0f172a">Conductores</text></g><g id="subs"><rect x="752" y="512.5" width="2" height="76" fill="#cbd5e1"/><g id="nb-sub"><rect x="766" y="512.5" width="196" height="34" rx="10" fill="#f8fafc"/><rect x="766.5" y="513" width="195" height="33" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="779" y="533.55" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Lista de conductores</text></g><g id="nb-sub"><rect x="766" y="554.5" width="196" height="34" rx="10" fill="#f8fafc"/><rect x="766.5" y="555" width="195" height="33" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="779" y="575.55" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Registrar conductor</text></g></g><rect x="857" y="434.5" width="114" height="2" fill="#94a3b8"/><rect x="857" y="436.5" width="2" height="24" fill="#94a3b8"/></g><g id="kid"><rect x="971" y="434.5" width="114" height="2" fill="#94a3b8"/><g id="nb"><rect x="1039.91" y="460.5" width="90.19" height="38" rx="10" fill="#ffffff"/><rect x="1040.41" y="461" width="89.19" height="37" rx="9.5" fill="none" stroke="#cbd5e1" stroke-width="1"/><text x="1056.91" y="484.09" font-family="Inter" font-size="14" font-weight="600" fill="#0f172a">Historial</text></g><g id="subs"><rect x="980" y="512.5" width="2" height="94" fill="#cbd5e1"/><g id="nb-sub"><rect x="994" y="512.5" width="196" height="34" rx="10" fill="#f8fafc"/><rect x="994.5" y="513" width="195" height="33" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="1007" y="533.55" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Búsqueda y filtros</text></g><g id="nb-sub"><rect x="994" y="554.5" width="196" height="52" rx="10" fill="#f8fafc"/><rect x="994.5" y="555" width="195" height="51" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="1007" y="575.55" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Reporte térmico (PDF /</text><text x="1007" y="593.55" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">CSV)</text></g></g><rect x="1085" y="434.5" width="114" height="2" fill="#94a3b8"/><rect x="1085" y="436.5" width="2" height="24" fill="#94a3b8"/></g><g id="kid"><rect x="1199" y="434.5" width="114" height="2" fill="#94a3b8"/><g id="nb"><rect x="1246.91" y="460.5" width="132.17" height="38" rx="10" fill="#ffffff"/><rect x="1247.41" y="461" width="131.17" height="37" rx="9.5" fill="none" stroke="#cbd5e1" stroke-width="1"/><text x="1263.91" y="484.09" font-family="Inter" font-size="14" font-weight="600" fill="#0f172a">Notificaciones</text></g><g id="subs"><rect x="1208" y="512.5" width="2" height="34" fill="#cbd5e1"/><g id="nb-sub"><rect x="1222" y="512.5" width="196" height="34" rx="10" fill="#f8fafc"/><rect x="1222.5" y="513" width="195" height="33" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="1235" y="533.55" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Bandeja y estado de lectura</text></g></g><rect x="1313" y="434.5" width="114" height="2" fill="#94a3b8"/><rect x="1313" y="436.5" width="2" height="24" fill="#94a3b8"/></g><g id="kid"><rect x="1425" y="434.5" width="114" height="2" fill="#94a3b8"/><rect x="1537" y="436.5" width="2" height="24" fill="#94a3b8"/><g id="nb"><rect x="1475.84" y="460.5" width="130.31" height="38" rx="10" fill="#ffffff"/><rect x="1476.34" y="461" width="129.31" height="37" rx="9.5" fill="none" stroke="#cbd5e1" stroke-width="1"/><text x="1492.84" y="484.09" font-family="Inter" font-size="14" font-weight="600" fill="#0f172a">Configuración</text></g><g id="subs"><rect x="1436" y="512.5" width="2" height="118" fill="#cbd5e1"/><g id="nb-sub"><rect x="1450" y="512.5" width="196" height="34" rx="10" fill="#f8fafc"/><rect x="1450.5" y="513" width="195" height="33" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="1463" y="533.55" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Perfil</text></g><g id="nb-sub"><rect x="1450" y="554.5" width="196" height="34" rx="10" fill="#f8fafc"/><rect x="1450.5" y="555" width="195" height="33" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="1463" y="575.55" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Contraseña</text></g><g id="nb-sub"><rect x="1450" y="596.5" width="196" height="34" rx="10" fill="#f8fafc"/><rect x="1450.5" y="597" width="195" height="33" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="1463" y="617.55" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Idioma (ES / EN)</text></g></g></g></g><g id="div"><g id="nb-alert"><rect x="547.2" y="652.5" width="619.58" height="38" rx="10" fill="#fef3c7"/><rect x="547.7" y="653" width="618.58" height="37" rx="9.5" fill="none" stroke="#f3d28a" stroke-width="1"/><text x="564.2" y="675.55" font-family="Inter" font-size="12.5" font-weight="600" fill="#92400e">Detalle del envío: pestañas Resumen · Lecturas · Ruta y posiciones · Alertas · Historial de estados</text></g></g></g></g></g><g id="div"><g id="h4"><text x="40" y="749.23" font-family="Inter" font-size="13" font-weight="700" fill="#64748b" letter-spacing="1.04">PERFIL 2 · CLIENTE DE CARGA (PRODUCTOR, EXPORTADOR O COMPRADOR)</text></g><g id="panel"><rect x="40.5" y="767.5" width="1633" height="389" rx="15.5" fill="none" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="5 4"/><g id="tr"><g id="nb-grp"><rect x="779.97" y="790" width="154.05" height="38" rx="10" fill="#eaf2fe"/><rect x="780.47" y="790.5" width="153.05" height="37" rx="9.5" fill="none" stroke="#bbd5f8" stroke-width="1"/><text x="796.97" y="813.96" font-family="Inter" font-size="15" font-weight="600" fill="#084bae">Cliente de Carga</text></g><g id="kids"><g id="kid"><g id="nb"><rect x="324.95" y="880" width="152.09" height="38" rx="10" fill="#ffffff"/><rect x="325.45" y="880.5" width="151.09" height="37" rx="9.5" fill="none" stroke="#cbd5e1" stroke-width="1"/><text x="341.95" y="903.59" font-family="Inter" font-size="14" font-weight="600" fill="#0f172a">Envíos por recibir</text></g><g id="subs"><rect x="296" y="932" width="2" height="52" fill="#cbd5e1"/><g id="nb-sub"><rect x="310" y="932" width="196" height="52" rx="10" fill="#f8fafc"/><rect x="310.5" y="932.5" width="195" height="51" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="323" y="953.05" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Lista y mapa de envíos</text><text x="323" y="971.05" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">asociados</text></g></g><rect x="401" y="854" width="114" height="2" fill="#94a3b8"/><rect x="401" y="856" width="2" height="24" fill="#94a3b8"/></g><g id="kid"><rect x="515" y="854" width="114" height="2" fill="#94a3b8"/><g id="nb"><rect x="556.09" y="880" width="145.8" height="38" rx="10" fill="#ffffff"/><rect x="556.59" y="880.5" width="144.8" height="37" rx="9.5" fill="none" stroke="#cbd5e1" stroke-width="1"/><text x="573.09" y="903.59" font-family="Inter" font-size="14" font-weight="600" fill="#0f172a">Detalle del envío</text></g><g id="subs"><rect x="524" y="932" width="2" height="202" fill="#cbd5e1"/><g id="nb-sub"><rect x="538" y="932" width="196" height="34" rx="10" fill="#f8fafc"/><rect x="538.5" y="932.5" width="195" height="33" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="551" y="953.05" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Resumen</text></g><g id="nb-sub"><rect x="538" y="974" width="196" height="34" rx="10" fill="#f8fafc"/><rect x="538.5" y="974.5" width="195" height="33" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="551" y="995.05" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Lecturas</text></g><g id="nb-sub"><rect x="538" y="1016" width="196" height="34" rx="10" fill="#f8fafc"/><rect x="538.5" y="1016.5" width="195" height="33" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="551" y="1037.05" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Ruta y posiciones</text></g><g id="nb-sub"><rect x="538" y="1058" width="196" height="34" rx="10" fill="#f8fafc"/><rect x="538.5" y="1058.5" width="195" height="33" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="551" y="1079.05" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Alertas</text></g><g id="nb-sub"><rect x="538" y="1100" width="196" height="34" rx="10" fill="#f8fafc"/><rect x="538.5" y="1100.5" width="195" height="33" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="551" y="1121.05" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Historial de estados</text></g></g><rect x="629" y="854" width="114" height="2" fill="#94a3b8"/><rect x="629" y="856" width="2" height="24" fill="#94a3b8"/></g><g id="kid"><rect x="743" y="854" width="114" height="2" fill="#94a3b8"/><g id="nb"><rect x="811.91" y="880" width="90.19" height="38" rx="10" fill="#ffffff"/><rect x="812.41" y="880.5" width="89.19" height="37" rx="9.5" fill="none" stroke="#cbd5e1" stroke-width="1"/><text x="828.91" y="903.59" font-family="Inter" font-size="14" font-weight="600" fill="#0f172a">Historial</text></g><g id="subs"><rect x="752" y="932" width="2" height="94" fill="#cbd5e1"/><g id="nb-sub"><rect x="766" y="932" width="196" height="34" rx="10" fill="#f8fafc"/><rect x="766.5" y="932.5" width="195" height="33" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="779" y="953.05" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Búsqueda y filtros</text></g><g id="nb-sub"><rect x="766" y="974" width="196" height="52" rx="10" fill="#f8fafc"/><rect x="766.5" y="974.5" width="195" height="51" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="779" y="995.05" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Reporte térmico (PDF /</text><text x="779" y="1013.05" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">CSV)</text></g></g><rect x="857" y="854" width="114" height="2" fill="#94a3b8"/><rect x="857" y="856" width="2" height="24" fill="#94a3b8"/></g><g id="kid"><rect x="971" y="854" width="114" height="2" fill="#94a3b8"/><g id="nb"><rect x="1018.91" y="880" width="132.17" height="38" rx="10" fill="#ffffff"/><rect x="1019.41" y="880.5" width="131.17" height="37" rx="9.5" fill="none" stroke="#cbd5e1" stroke-width="1"/><text x="1035.91" y="903.59" font-family="Inter" font-size="14" font-weight="600" fill="#0f172a">Notificaciones</text></g><g id="subs"><rect x="980" y="932" width="2" height="34" fill="#cbd5e1"/><g id="nb-sub"><rect x="994" y="932" width="196" height="34" rx="10" fill="#f8fafc"/><rect x="994.5" y="932.5" width="195" height="33" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="1007" y="953.05" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Bandeja y estado de lectura</text></g></g><rect x="1085" y="854" width="114" height="2" fill="#94a3b8"/><rect x="1085" y="856" width="2" height="24" fill="#94a3b8"/></g><g id="kid"><rect x="1197" y="854" width="114" height="2" fill="#94a3b8"/><rect x="1309" y="856" width="2" height="24" fill="#94a3b8"/><g id="nb"><rect x="1247.84" y="880" width="130.31" height="38" rx="10" fill="#ffffff"/><rect x="1248.34" y="880.5" width="129.31" height="37" rx="9.5" fill="none" stroke="#cbd5e1" stroke-width="1"/><text x="1264.84" y="903.59" font-family="Inter" font-size="14" font-weight="600" fill="#0f172a">Configuración</text></g><g id="subs"><rect x="1208" y="932" width="2" height="118" fill="#cbd5e1"/><g id="nb-sub"><rect x="1222" y="932" width="196" height="34" rx="10" fill="#f8fafc"/><rect x="1222.5" y="932.5" width="195" height="33" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="1235" y="953.05" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Perfil</text></g><g id="nb-sub"><rect x="1222" y="974" width="196" height="34" rx="10" fill="#f8fafc"/><rect x="1222.5" y="974.5" width="195" height="33" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="1235" y="995.05" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Contraseña</text></g><g id="nb-sub"><rect x="1222" y="1016" width="196" height="34" rx="10" fill="#f8fafc"/><rect x="1222.5" y="1016.5" width="195" height="33" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1"/><text x="1235" y="1037.05" font-family="Inter" font-size="12.5" font-weight="500" fill="#475569">Idioma (ES / EN)</text></g></g></g></g></g></g></g></g></g></svg><text x="80" y="2776" font-family="Inter" font-size="30" font-weight="700" fill="#0F172A">User flow – Programar un envío</text><svg id="User flow Programar envío" x="80" y="2802" width="1180" height="1802.66" viewBox="0 0 1180 1802.66" xmlns="http://www.w3.org/2000/svg"><defs></defs><rect id="Fondo" width="1180" height="1802.66" fill="#FFFFFF"/><g id="d"><rect x="0" y="0" width="1180" height="1802.66" fill="#ffffff"/><svg width="1124" height="1742.66" viewBox="0.00 0.00 843.49 1306.84" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="28" y="28">
+<g id="p58_graph0" transform="scale(1 1) rotate(0) translate(14.4 1292.4352)">
+<title>G</title>
+<polygon fill="#ffffff" stroke="#000000" points="-14.4,14.4 -14.4,-1292.4352 829.0898,-1292.4352 829.0898,14.4 -14.4,14.4" stroke-opacity="0" stroke-width="1px"/>
+<!-- s -->
+<g id="p58_node1">
+<title>s</title>
+<ellipse fill="#0b5ed7" stroke="#084bae" stroke-width="1.4px" cx="634.6876" cy="-1249.1852" rx="109.2676" ry="28.7007"/>
+<text text-anchor="middle" x="634.6876" y="-1252.7852" font-family="Inter" font-size="11.16px" fill="#ffffff" stroke="none" font-weight="400">Coordinador con sesión</text>
+<text text-anchor="middle" x="634.6876" y="-1238.3852" font-family="Inter" font-size="11.16px" fill="#ffffff" stroke="none" font-weight="400">iniciada</text>
+</g>
+<!-- dash -->
+<g id="p58_node2">
+<title>dash</title>
+<path fill="#eaf2fe" stroke="#0b5ed7" stroke-width="1.4px" d="M663.8706,-1183.3352C663.8706,-1183.3352 605.5046,-1183.3352 605.5046,-1183.3352 599.5046,-1183.3352 593.5046,-1177.3352 593.5046,-1171.3352 593.5046,-1171.3352 593.5046,-1159.3352 593.5046,-1159.3352 593.5046,-1153.3352 599.5046,-1147.3352 605.5046,-1147.3352 605.5046,-1147.3352 663.8706,-1147.3352 663.8706,-1147.3352 669.8706,-1147.3352 675.8706,-1153.3352 675.8706,-1159.3352 675.8706,-1159.3352 675.8706,-1171.3352 675.8706,-1171.3352 675.8706,-1177.3352 669.8706,-1183.3352 663.8706,-1183.3352"/>
+<text text-anchor="middle" x="634.6876" y="-1161.7352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">Dashboard</text>
+</g>
+<!-- s&#45;&gt;dash -->
+<g id="p58_edge1">
+<title>s-&gt;dash</title>
+<path fill="none" stroke="#475569" stroke-width="1.3px" d="M634.6876,-1220.3288C634.6876,-1211.1385 634.6876,-1201.0173 634.6876,-1191.9901"/>
+<polygon fill="#475569" stroke="#475569" stroke-width="1.3px" points="637.4877,-1191.7364 634.6876,-1183.7365 631.8877,-1191.7365 637.4877,-1191.7364"/>
+</g>
+<!-- nuevo -->
+<g id="p58_node3">
+<title>nuevo</title>
+<path fill="#eaf2fe" stroke="#0b5ed7" stroke-width="1.4px" d="M696.0808,-1110.2357C696.0808,-1110.2357 573.2944,-1110.2357 573.2944,-1110.2357 567.2944,-1110.2357 561.2944,-1104.2357 561.2944,-1098.2357 561.2944,-1098.2357 561.2944,-1081.6348 561.2944,-1081.6348 561.2944,-1075.6348 567.2944,-1069.6348 573.2944,-1069.6348 573.2944,-1069.6348 696.0808,-1069.6348 696.0808,-1069.6348 702.0808,-1069.6348 708.0808,-1075.6348 708.0808,-1081.6348 708.0808,-1081.6348 708.0808,-1098.2357 708.0808,-1098.2357 708.0808,-1104.2357 702.0808,-1110.2357 696.0808,-1110.2357"/>
+<text text-anchor="middle" x="634.6876" y="-1093.5352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">Nuevo envío · paso 1</text>
+<text text-anchor="middle" x="634.6876" y="-1079.1352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">Carga y rango térmico</text>
+</g>
+<!-- dash&#45;&gt;nuevo -->
+<g id="p58_edge2">
+<title>dash-&gt;nuevo</title>
+<path fill="none" stroke="#475569" stroke-width="1.3px" d="M634.6876,-1147.083C634.6876,-1138.5209 634.6876,-1128.1157 634.6876,-1118.5425"/>
+<polygon fill="#475569" stroke="#475569" stroke-width="1.3px" points="637.4877,-1118.411 634.6876,-1110.411 631.8877,-1118.4111 637.4877,-1118.411"/>
+</g>
+<!-- d2 -->
+<g id="p58_node4">
+<title>d2</title>
+<polygon fill="#fef3c7" stroke="#f5a524" stroke-width="1.4px" points="533.6876,-1032.3365 469.6964,-999.7352 533.6876,-967.134 597.6788,-999.7352 533.6876,-1032.3365"/>
+<text text-anchor="middle" x="533.6876" y="-1003.3352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">¿Campos</text>
+<text text-anchor="middle" x="533.6876" y="-988.9352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">válidos?</text>
+</g>
+<!-- nuevo&#45;&gt;d2 -->
+<g id="p58_edge3">
+<title>nuevo-&gt;d2</title>
+<path fill="none" stroke="#475569" stroke-width="1.3px" d="M611.7691,-1069.4675C597.3824,-1056.6191 578.6876,-1039.9234 563.1978,-1026.0899"/>
+<polygon fill="#475569" stroke="#475569" stroke-width="1.3px" points="565.0483,-1023.9884 557.2163,-1020.748 561.3181,-1028.1652 565.0483,-1023.9884"/>
+</g>
+<!-- e2 -->
+<g id="p58_node5">
+<title>e2</title>
+<path fill="#fdecee" stroke="#e63946" stroke-width="1.4px" d="M802.692,-1020.0357C802.692,-1020.0357 672.6832,-1020.0357 672.6832,-1020.0357 666.6832,-1020.0357 660.6832,-1014.0357 660.6832,-1008.0357 660.6832,-1008.0357 660.6832,-991.4348 660.6832,-991.4348 660.6832,-985.4348 666.6832,-979.4348 672.6832,-979.4348 672.6832,-979.4348 802.692,-979.4348 802.692,-979.4348 808.692,-979.4348 814.692,-985.4348 814.692,-991.4348 814.692,-991.4348 814.692,-1008.0357 814.692,-1008.0357 814.692,-1014.0357 808.692,-1020.0357 802.692,-1020.0357"/>
+<text text-anchor="middle" x="737.6876" y="-1003.3352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">Error por campo</text>
+<text text-anchor="middle" x="737.6876" y="-988.9352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">(mín. &lt; máx., peso &gt; 0)</text>
+</g>
+<!-- d2&#45;&gt;e2 -->
+<g id="p58_edge4">
+<title>d2-&gt;e2</title>
+<path fill="none" stroke="#b42318" stroke-width="1.3px" stroke-dasharray="5px, 2px" d="M597.9545,-999.7352C615.1719,-999.7352 634.059,-999.7352 652.2269,-999.7352"/>
+<polygon fill="#b42318" stroke="#b42318" stroke-width="1.3px" points="652.5151,-1002.5353 660.5151,-999.7352 652.5151,-996.9353 652.5151,-1002.5353"/>
+<text text-anchor="middle" x="629.1843" y="-1006.0352" font-family="Inter" font-size="10.23px" fill="#b42318" stroke="none" font-weight="400"> No</text>
+</g>
+<!-- paso2 -->
+<g id="p58_node6">
+<title>paso2</title>
+<path fill="#eaf2fe" stroke="#0b5ed7" stroke-width="1.4px" d="M571.5326,-917.6357C571.5326,-917.6357 495.8426,-917.6357 495.8426,-917.6357 489.8426,-917.6357 483.8426,-911.6357 483.8426,-905.6357 483.8426,-905.6357 483.8426,-889.0348 483.8426,-889.0348 483.8426,-883.0348 489.8426,-877.0348 495.8426,-877.0348 495.8426,-877.0348 571.5326,-877.0348 571.5326,-877.0348 577.5326,-877.0348 583.5326,-883.0348 583.5326,-889.0348 583.5326,-889.0348 583.5326,-905.6357 583.5326,-905.6357 583.5326,-911.6357 577.5326,-917.6357 571.5326,-917.6357"/>
+<text text-anchor="middle" x="533.6876" y="-900.9352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">Paso 2</text>
+<text text-anchor="middle" x="533.6876" y="-886.5352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">Ruta y horario</text>
+</g>
+<!-- d2&#45;&gt;paso2 -->
+<g id="p58_edge6">
+<title>d2-&gt;paso2</title>
+<path fill="none" stroke="#146c36" stroke-width="1.3px" d="M533.6876,-967.0537C533.6876,-953.8018 533.6876,-938.6371 533.6876,-925.8426"/>
+<polygon fill="#146c36" stroke="#146c36" stroke-width="1.3px" points="536.4877,-925.8209 533.6876,-917.8209 530.8877,-925.8209 536.4877,-925.8209"/>
+<text text-anchor="middle" x="542.5459" y="-939.0352" font-family="Inter" font-size="10.23px" fill="#146c36" stroke="none" font-weight="400"> Sí</text>
+</g>
+<!-- e2&#45;&gt;nuevo -->
+<g id="p58_edge5">
+<title>e2-&gt;nuevo</title>
+<path fill="none" stroke="#b42318" stroke-width="1.3px" stroke-dasharray="5px, 2px" d="M714.4078,-1020.122C699.5454,-1033.1375 680.1465,-1050.1256 664.2063,-1064.0849"/>
+<polygon fill="#b42318" stroke="#b42318" stroke-width="1.3px" points="662.2337,-1062.0904 658.0599,-1069.4675 665.9231,-1066.3034 662.2337,-1062.0904"/>
+</g>
+<!-- d3 -->
+<g id="p58_node7">
+<title>d3</title>
+<polygon fill="#fef3c7" stroke="#f5a524" stroke-width="1.4px" points="418.6876,-839.7365 322.662,-807.1352 418.6876,-774.534 514.7132,-807.1352 418.6876,-839.7365"/>
+<text text-anchor="middle" x="418.6876" y="-810.7352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">¿Salida futura y</text>
+<text text-anchor="middle" x="418.6876" y="-796.3352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">ruta definida?</text>
+</g>
+<!-- paso2&#45;&gt;d3 -->
+<g id="p58_edge7">
+<title>paso2-&gt;d3</title>
+<path fill="none" stroke="#475569" stroke-width="1.3px" d="M507.5923,-876.8675C491.9134,-864.5698 471.7407,-848.7474 454.5753,-835.2837"/>
+<polygon fill="#475569" stroke="#475569" stroke-width="1.3px" points="455.9389,-832.7947 447.9161,-830.0605 452.4828,-837.201 455.9389,-832.7947"/>
+</g>
+<!-- e3 -->
+<g id="p58_node8">
+<title>e3</title>
+<path fill="#fdecee" stroke="#e63946" stroke-width="1.4px" d="M708.7316,-827.4357C708.7316,-827.4357 590.6436,-827.4357 590.6436,-827.4357 584.6436,-827.4357 578.6436,-821.4357 578.6436,-815.4357 578.6436,-815.4357 578.6436,-798.8348 578.6436,-798.8348 578.6436,-792.8348 584.6436,-786.8348 590.6436,-786.8348 590.6436,-786.8348 708.7316,-786.8348 708.7316,-786.8348 714.7316,-786.8348 720.7316,-792.8348 720.7316,-798.8348 720.7316,-798.8348 720.7316,-815.4357 720.7316,-815.4357 720.7316,-821.4357 714.7316,-827.4357 708.7316,-827.4357"/>
+<text text-anchor="middle" x="649.6876" y="-810.7352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">Aviso: corrige</text>
+<text text-anchor="middle" x="649.6876" y="-796.3352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">fecha u origen/destino</text>
+</g>
+<!-- d3&#45;&gt;e3 -->
+<g id="p58_edge8">
+<title>d3-&gt;e3</title>
+<path fill="none" stroke="#b42318" stroke-width="1.3px" stroke-dasharray="5px, 2px" d="M514.9797,-807.1352C533.4447,-807.1352 552.5836,-807.1352 570.4366,-807.1352"/>
+<polygon fill="#b42318" stroke="#b42318" stroke-width="1.3px" points="570.5419,-809.9353 578.5419,-807.1352 570.5418,-804.3353 570.5419,-809.9353"/>
+<text text-anchor="middle" x="546.683" y="-813.4352" font-family="Inter" font-size="10.23px" fill="#b42318" stroke="none" font-weight="400"> No</text>
+</g>
+<!-- paso3 -->
+<g id="p58_node9">
+<title>paso3</title>
+<path fill="#eaf2fe" stroke="#0b5ed7" stroke-width="1.4px" d="M470.5501,-725.0357C470.5501,-725.0357 366.8251,-725.0357 366.8251,-725.0357 360.8251,-725.0357 354.8251,-719.0357 354.8251,-713.0357 354.8251,-713.0357 354.8251,-696.4348 354.8251,-696.4348 354.8251,-690.4348 360.8251,-684.4348 366.8251,-684.4348 366.8251,-684.4348 470.5501,-684.4348 470.5501,-684.4348 476.5501,-684.4348 482.5501,-690.4348 482.5501,-696.4348 482.5501,-696.4348 482.5501,-713.0357 482.5501,-713.0357 482.5501,-719.0357 476.5501,-725.0357 470.5501,-725.0357"/>
+<text text-anchor="middle" x="418.6876" y="-708.3352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">Paso 3</text>
+<text text-anchor="middle" x="418.6876" y="-693.9352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">Unidad y conductor</text>
+</g>
+<!-- d3&#45;&gt;paso3 -->
+<g id="p58_edge10">
+<title>d3-&gt;paso3</title>
+<path fill="none" stroke="#146c36" stroke-width="1.3px" d="M418.6876,-774.4537C418.6876,-761.2018 418.6876,-746.0371 418.6876,-733.2426"/>
+<polygon fill="#146c36" stroke="#146c36" stroke-width="1.3px" points="421.4877,-733.2209 418.6876,-725.2209 415.8877,-733.2209 421.4877,-733.2209"/>
+<text text-anchor="middle" x="427.5459" y="-746.4352" font-family="Inter" font-size="10.23px" fill="#146c36" stroke="none" font-weight="400"> Sí</text>
+</g>
+<!-- e3&#45;&gt;paso2 -->
+<g id="p58_edge9">
+<title>e3-&gt;paso2</title>
+<path fill="none" stroke="#b42318" stroke-width="1.3px" stroke-dasharray="5px, 2px" d="M623.4696,-827.522C606.5832,-840.6526 584.497,-857.8266 566.4562,-871.8548"/>
+<polygon fill="#b42318" stroke="#b42318" stroke-width="1.3px" points="564.6064,-869.7463 560.0098,-876.8675 568.044,-874.1671 564.6064,-869.7463"/>
+</g>
+<!-- d4 -->
+<g id="p58_node10">
+<title>d4</title>
+<polygon fill="#fef3c7" stroke="#f5a524" stroke-width="1.4px" points="122.6876,-647.1365 -.1879,-614.5352 122.6876,-581.934 245.5631,-614.5352 122.6876,-647.1365"/>
+<text text-anchor="middle" x="122.6876" y="-618.1352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">¿Unidad y conductor</text>
+<text text-anchor="middle" x="122.6876" y="-603.7352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">disponibles?</text>
+</g>
+<!-- paso3&#45;&gt;d4 -->
+<g id="p58_edge11">
+<title>paso3-&gt;d4</title>
+<path fill="none" stroke="#475569" stroke-width="1.3px" d="M354.8244,-685.2742C305.4598,-670.2313 237.3947,-649.4899 187.7344,-634.3569"/>
+<polygon fill="#475569" stroke="#475569" stroke-width="1.3px" points="188.3967,-631.6317 179.9279,-631.9781 186.7643,-636.9885 188.3967,-631.6317"/>
+</g>
+<!-- e4 -->
+<g id="p58_node11">
+<title>e4</title>
+<path fill="#fdecee" stroke="#e63946" stroke-width="1.4px" d="M516.7352,-634.8357C516.7352,-634.8357 320.64,-634.8357 320.64,-634.8357 314.64,-634.8357 308.64,-628.8357 308.64,-622.8357 308.64,-622.8357 308.64,-606.2348 308.64,-606.2348 308.64,-600.2348 314.64,-594.2348 320.64,-594.2348 320.64,-594.2348 516.7352,-594.2348 516.7352,-594.2348 522.7352,-594.2348 528.7352,-600.2348 528.7352,-606.2348 528.7352,-606.2348 528.7352,-622.8357 528.7352,-622.8357 528.7352,-628.8357 522.7352,-634.8357 516.7352,-634.8357"/>
+<text text-anchor="middle" x="418.6876" y="-618.1352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">Lista sin opciones:</text>
+<text text-anchor="middle" x="418.6876" y="-603.7352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">elegir otra unidad o guardar borrador</text>
+</g>
+<!-- d4&#45;&gt;e4 -->
+<g id="p58_edge12">
+<title>d4-&gt;e4</title>
+<path fill="none" stroke="#b42318" stroke-width="1.3px" stroke-dasharray="5px, 2px" d="M245.6467,-614.5352C263.6911,-614.5352 282.247,-614.5352 300.199,-614.5352"/>
+<polygon fill="#b42318" stroke="#b42318" stroke-width="1.3px" points="300.4008,-617.3353 308.4007,-614.5352 300.4007,-611.7353 300.4008,-617.3353"/>
+<text text-anchor="middle" x="277.0195" y="-620.8352" font-family="Inter" font-size="10.23px" fill="#b42318" stroke="none" font-weight="400"> No</text>
+</g>
+<!-- rev -->
+<g id="p58_node12">
+<title>rev</title>
+<path fill="#eaf2fe" stroke="#0b5ed7" stroke-width="1.4px" d="M174.8966,-532.5352C174.8966,-532.5352 72.4786,-532.5352 72.4786,-532.5352 66.4786,-532.5352 60.4786,-526.5352 60.4786,-520.5352 60.4786,-520.5352 60.4786,-508.5352 60.4786,-508.5352 60.4786,-502.5352 66.4786,-496.5352 72.4786,-496.5352 72.4786,-496.5352 174.8966,-496.5352 174.8966,-496.5352 180.8966,-496.5352 186.8966,-502.5352 186.8966,-508.5352 186.8966,-508.5352 186.8966,-520.5352 186.8966,-520.5352 186.8966,-526.5352 180.8966,-532.5352 174.8966,-532.5352"/>
+<text text-anchor="middle" x="123.6876" y="-510.9352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">Paso 4 · Revisión</text>
+</g>
+<!-- d4&#45;&gt;rev -->
+<g id="p58_edge14">
+<title>d4-&gt;rev</title>
+<path fill="none" stroke="#146c36" stroke-width="1.3px" d="M123.015,-581.7915C123.1474,-568.5551 123.2982,-553.4797 123.4233,-540.9611"/>
+<polygon fill="#146c36" stroke="#146c36" stroke-width="1.3px" points="126.2252,-540.7845 123.5054,-532.7569 120.6254,-540.7284 126.2252,-540.7845"/>
+<text text-anchor="middle" x="132.5459" y="-553.8352" font-family="Inter" font-size="10.23px" fill="#146c36" stroke="none" font-weight="400"> Sí</text>
+</g>
+<!-- e4&#45;&gt;paso3 -->
+<g id="p58_edge13">
+<title>e4-&gt;paso3</title>
+<path fill="none" stroke="#b42318" stroke-width="1.3px" stroke-dasharray="5px, 2px" d="M418.6876,-634.922C418.6876,-647.1312 418.6876,-662.8361 418.6876,-676.2575"/>
+<polygon fill="#b42318" stroke="#b42318" stroke-width="1.3px" points="415.8877,-676.2674 418.6876,-684.2675 421.4877,-676.2675 415.8877,-676.2674"/>
+</g>
+<!-- d5 -->
+<g id="p58_node13">
+<title>d5</title>
+<polygon fill="#fef3c7" stroke="#f5a524" stroke-width="1.4px" points="126.6876,-459.3365 54.722,-426.7352 126.6876,-394.134 198.6532,-426.7352 126.6876,-459.3365"/>
+<text text-anchor="middle" x="126.6876" y="-430.3352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">¿Confirmar</text>
+<text text-anchor="middle" x="126.6876" y="-415.9352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">el envío?</text>
+</g>
+<!-- rev&#45;&gt;d5 -->
+<g id="p58_edge15">
+<title>rev-&gt;d5</title>
+<path fill="none" stroke="#475569" stroke-width="1.3px" d="M124.3092,-496.343C124.599,-487.8614 124.9564,-477.4031 125.3052,-467.1944"/>
+<polygon fill="#475569" stroke="#475569" stroke-width="1.3px" points="128.1067,-467.1943 125.5816,-459.1033 122.51,-467.003 128.1067,-467.1943"/>
+</g>
+<!-- canc -->
+<g id="p58_node14">
+<title>canc</title>
+<path fill="#fdecee" stroke="#e63946" stroke-width="1.4px" d="M326.6912,-444.7352C326.6912,-444.7352 278.684,-444.7352 278.684,-444.7352 272.684,-444.7352 266.684,-438.7352 266.684,-432.7352 266.684,-432.7352 266.684,-420.7352 266.684,-420.7352 266.684,-414.7352 272.684,-408.7352 278.684,-408.7352 278.684,-408.7352 326.6912,-408.7352 326.6912,-408.7352 332.6912,-408.7352 338.6912,-414.7352 338.6912,-420.7352 338.6912,-420.7352 338.6912,-432.7352 338.6912,-432.7352 338.6912,-438.7352 332.6912,-444.7352 326.6912,-444.7352"/>
+<text text-anchor="middle" x="302.6876" y="-423.1352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">Cancelar</text>
+</g>
+<!-- d5&#45;&gt;canc -->
+<g id="p58_edge16">
+<title>d5-&gt;canc</title>
+<path fill="none" stroke="#b42318" stroke-width="1.3px" stroke-dasharray="5px, 2px" d="M198.7814,-426.7352C219.0329,-426.7352 240.4469,-426.7352 258.539,-426.7352"/>
+<polygon fill="#b42318" stroke="#b42318" stroke-width="1.3px" points="258.6018,-429.5353 266.6018,-426.7352 258.6017,-423.9353 258.6018,-429.5353"/>
+<text text-anchor="middle" x="232.6781" y="-433.0352" font-family="Inter" font-size="10.23px" fill="#b42318" stroke="none" font-weight="400"> No</text>
+</g>
+<!-- sis -->
+<g id="p58_node18">
+<title>sis</title>
+<path fill="#e0f7f5" stroke="#00796b" stroke-width="1.4px" stroke-dasharray="5px, 2px" d="M207.5243,-332.2357C207.5243,-332.2357 45.8509,-332.2357 45.8509,-332.2357 39.8509,-332.2357 33.8509,-326.2357 33.8509,-320.2357 33.8509,-320.2357 33.8509,-303.6348 33.8509,-303.6348 33.8509,-297.6348 39.8509,-291.6348 45.8509,-291.6348 45.8509,-291.6348 207.5243,-291.6348 207.5243,-291.6348 213.5243,-291.6348 219.5243,-297.6348 219.5243,-303.6348 219.5243,-303.6348 219.5243,-320.2357 219.5243,-320.2357 219.5243,-326.2357 213.5243,-332.2357 207.5243,-332.2357"/>
+<text text-anchor="middle" x="126.6876" y="-315.5352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">Validar disponibilidad,</text>
+<text text-anchor="middle" x="126.6876" y="-301.1352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">reservar recursos y programar</text>
+</g>
+<!-- d5&#45;&gt;sis -->
+<g id="p58_edge21">
+<title>d5-&gt;sis</title>
+<path fill="none" stroke="#146c36" stroke-width="1.3px" d="M126.6876,-393.8382C126.6876,-377.0246 126.6876,-356.758 126.6876,-340.5916"/>
+<polygon fill="#146c36" stroke="#146c36" stroke-width="1.3px" points="129.4877,-340.5513 126.6876,-332.5513 123.8877,-340.5514 129.4877,-340.5513"/>
+<text text-anchor="middle" x="135.5459" y="-366.0352" font-family="Inter" font-size="10.23px" fill="#146c36" stroke="none" font-weight="400"> Sí</text>
+</g>
+<!-- d6 -->
+<g id="p58_node15">
+<title>d6</title>
+<polygon fill="#fef3c7" stroke="#f5a524" stroke-width="1.4px" points="314.6876,-344.5365 251.5208,-311.9352 314.6876,-279.334 377.8544,-311.9352 314.6876,-344.5365"/>
+<text text-anchor="middle" x="314.6876" y="-315.5352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">¿Guardar</text>
+<text text-anchor="middle" x="314.6876" y="-301.1352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">borrador?</text>
+</g>
+<!-- canc&#45;&gt;d6 -->
+<g id="p58_edge17">
+<title>canc-&gt;d6</title>
+<path fill="none" stroke="#475569" stroke-width="1.3px" d="M304.589,-408.5448C306.1966,-393.1657 308.5561,-370.5932 310.5902,-351.1339"/>
+<polygon fill="#475569" stroke="#475569" stroke-width="1.3px" points="313.3919,-351.2626 311.4389,-343.0148 307.8222,-350.6803 313.3919,-351.2626"/>
+</g>
+<!-- borr -->
+<g id="p58_node16">
+<title>borr</title>
+<path fill="#eaf2fe" stroke="#0b5ed7" stroke-width="1.4px" d="M451.8836,-215.1352C451.8836,-215.1352 351.4916,-215.1352 351.4916,-215.1352 345.4916,-215.1352 339.4916,-209.1352 339.4916,-203.1352 339.4916,-203.1352 339.4916,-191.1352 339.4916,-191.1352 339.4916,-185.1352 345.4916,-179.1352 351.4916,-179.1352 351.4916,-179.1352 451.8836,-179.1352 451.8836,-179.1352 457.8836,-179.1352 463.8836,-185.1352 463.8836,-191.1352 463.8836,-191.1352 463.8836,-203.1352 463.8836,-203.1352 463.8836,-209.1352 457.8836,-215.1352 451.8836,-215.1352"/>
+<text text-anchor="middle" x="401.6876" y="-193.5352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">Borrador guardado</text>
+</g>
+<!-- d6&#45;&gt;borr -->
+<g id="p58_edge18">
+<title>d6-&gt;borr</title>
+<path fill="none" stroke="#146c36" stroke-width="1.3px" d="M333.7414,-288.885C340.7492,-280.2626 348.6812,-270.3303 355.6876,-261.1352 365.3933,-248.3978 375.8385,-233.931 384.3187,-221.9779"/>
+<polygon fill="#146c36" stroke="#146c36" stroke-width="1.3px" points="386.7339,-223.412 389.0642,-215.2627 382.1605,-220.1801 386.7339,-223.412"/>
+<text text-anchor="middle" x="374.5459" y="-251.2352" font-family="Inter" font-size="10.23px" fill="#146c36" stroke="none" font-weight="400"> Sí</text>
+</g>
+<!-- xf -->
+<g id="p58_node17">
+<title>xf</title>
+<ellipse fill="#b42318" stroke="#b42318" stroke-width="1.4px" cx="374.6876" cy="-94.7352" rx="68.2118" ry="18.8368"/>
+<text text-anchor="middle" x="374.6876" y="-91.1352" font-family="Inter" font-size="11.16px" fill="#ffffff" stroke="none" font-weight="400">Fin sin envío</text>
+</g>
+<!-- d6&#45;&gt;xf -->
+<g id="p58_edge20">
+<title>d6-&gt;xf</title>
+<path fill="none" stroke="#b42318" stroke-width="1.3px" stroke-dasharray="5px, 2px" d="M306.1383,-283.5481C298.4789,-252.9208 290.6786,-203.3063 306.5749,-164.3352 314.1058,-145.8726 329.154,-129.6494 343.1947,-117.5208"/>
+<polygon fill="#b42318" stroke="#b42318" stroke-width="1.3px" points="345.182,-119.51 349.5444,-112.2429 341.6023,-115.2034 345.182,-119.51"/>
+<text text-anchor="middle" x="315.244" y="-193.8352" font-family="Inter" font-size="10.23px" fill="#b42318" stroke="none" font-weight="400"> No</text>
+</g>
+<!-- borr&#45;&gt;xf -->
+<g id="p58_edge19">
+<title>borr-&gt;xf</title>
+<path fill="none" stroke="#475569" stroke-width="1.3px" d="M396.8605,-178.8282C392.6513,-162.8644 386.4914,-139.5023 381.7318,-121.4511"/>
+<polygon fill="#475569" stroke="#475569" stroke-width="1.3px" points="384.4027,-120.5983 379.6555,-113.5766 378.9878,-122.0261 384.4027,-120.5983"/>
+</g>
+<!-- d7 -->
+<g id="p58_node19">
+<title>d7</title>
+<polygon fill="#fef3c7" stroke="#f5a524" stroke-width="1.4px" points="131.6876,-229.7365 36.8641,-197.1352 131.6876,-164.534 226.5111,-197.1352 131.6876,-229.7365"/>
+<text text-anchor="middle" x="131.6876" y="-200.7352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">¿Recursos aún</text>
+<text text-anchor="middle" x="131.6876" y="-186.3352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">libres?</text>
+</g>
+<!-- sis&#45;&gt;d7 -->
+<g id="p58_edge22">
+<title>sis-&gt;d7</title>
+<path fill="none" stroke="#475569" stroke-width="1.3px" d="M127.5815,-291.4113C128.2294,-276.5345 129.127,-255.9267 129.9177,-237.7714"/>
+<polygon fill="#475569" stroke="#475569" stroke-width="1.3px" points="132.7214,-237.7461 130.2722,-229.6318 127.1267,-237.5024 132.7214,-237.7461"/>
+</g>
+<!-- e5 -->
+<g id="p58_node20">
+<title>e5</title>
+<path fill="#fdecee" stroke="#e63946" stroke-width="1.4px" d="M647.5524,-217.4357C647.5524,-217.4357 507.8228,-217.4357 507.8228,-217.4357 501.8228,-217.4357 495.8228,-211.4357 495.8228,-205.4357 495.8228,-205.4357 495.8228,-188.8348 495.8228,-188.8348 495.8228,-182.8348 501.8228,-176.8348 507.8228,-176.8348 507.8228,-176.8348 647.5524,-176.8348 647.5524,-176.8348 653.5524,-176.8348 659.5524,-182.8348 659.5524,-188.8348 659.5524,-188.8348 659.5524,-205.4357 659.5524,-205.4357 659.5524,-211.4357 653.5524,-217.4357 647.5524,-217.4357"/>
+<text text-anchor="middle" x="577.6876" y="-200.7352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">Banner: «Otro envío usa</text>
+<text text-anchor="middle" x="577.6876" y="-186.3352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">estos recursos»</text>
+</g>
+<!-- d7&#45;&gt;e5 -->
+<g id="p58_edge23">
+<title>d7-&gt;e5</title>
+<path fill="none" stroke="#b42318" stroke-width="1.3px" stroke-dasharray="5px, 2px" d="M178.2501,-213.8978C217.997,-227.2673 276.9944,-244.9078 330.1312,-252.1352 397.6287,-261.3159 473.965,-239.3087 523.8004,-220.4592"/>
+<polygon fill="#b42318" stroke="#b42318" stroke-width="1.3px" points="525.108,-222.9561 531.5658,-217.4663 523.094,-217.7307 525.108,-222.9561"/>
+<text text-anchor="middle" x="338.6876" y="-251.2352" font-family="Inter" font-size="10.23px" fill="#b42318" stroke="none" font-weight="400"> No</text>
+</g>
+<!-- prog -->
+<g id="p58_node21">
+<title>prog</title>
+<path fill="#eaf2fe" stroke="#0b5ed7" stroke-width="1.4px" d="M236.9349,-115.0357C236.9349,-115.0357 26.4403,-115.0357 26.4403,-115.0357 20.4403,-115.0357 14.4403,-109.0357 14.4403,-103.0357 14.4403,-103.0357 14.4403,-86.4348 14.4403,-86.4348 14.4403,-80.4348 20.4403,-74.4348 26.4403,-74.4348 26.4403,-74.4348 236.9349,-74.4348 236.9349,-74.4348 242.9349,-74.4348 248.9349,-80.4348 248.9349,-86.4348 248.9349,-86.4348 248.9349,-103.0357 248.9349,-103.0357 248.9349,-109.0357 242.9349,-115.0357 236.9349,-115.0357"/>
+<text text-anchor="middle" x="131.6876" y="-98.3352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">Lista de envíos · Estado: Programado</text>
+<text text-anchor="middle" x="131.6876" y="-83.9352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">(se notifica al Cliente de Carga)</text>
+</g>
+<!-- d7&#45;&gt;prog -->
+<g id="p58_edge25">
+<title>d7-&gt;prog</title>
+<path fill="none" stroke="#146c36" stroke-width="1.3px" d="M131.6876,-164.4537C131.6876,-151.2018 131.6876,-136.0371 131.6876,-123.2426"/>
+<polygon fill="#146c36" stroke="#146c36" stroke-width="1.3px" points="134.4877,-123.2209 131.6876,-115.2209 128.8877,-123.2209 134.4877,-123.2209"/>
+<text text-anchor="middle" x="140.5459" y="-136.4352" font-family="Inter" font-size="10.23px" fill="#146c36" stroke="none" font-weight="400"> Sí</text>
+</g>
+<!-- e5&#45;&gt;paso3 -->
+<g id="p58_edge24">
+<title>e5-&gt;paso3</title>
+<path fill="none" stroke="#b42318" stroke-width="1.3px" stroke-dasharray="5px, 2px" d="M577.6876,-217.4578C577.6876,-240.4024 577.6876,-278.8505 577.6876,-311.9352 577.6876,-614.5352 577.6876,-614.5352 577.6876,-614.5352 577.6876,-657.857 532.4804,-680.6247 490.2767,-692.4406"/>
+<polygon fill="#b42318" stroke="#b42318" stroke-width="1.3px" points="489.4556,-689.7615 482.4428,-694.5219 490.8936,-695.1738 489.4556,-689.7615"/>
+</g>
+<!-- f -->
+<g id="p58_node22">
+<title>f</title>
+<ellipse fill="#146c36" stroke="#146c36" stroke-width="1.4px" cx="131.6876" cy="-18.6676" rx="57.9785" ry="18.8368"/>
+<text text-anchor="middle" x="131.6876" y="-15.0676" font-family="Inter" font-size="11.16px" fill="#ffffff" stroke="none" font-weight="400">Fin exitoso</text>
+</g>
+<!-- prog&#45;&gt;f -->
+<g id="p58_edge26">
+<title>prog-&gt;f</title>
+<path fill="none" stroke="#475569" stroke-width="1.3px" d="M131.6876,-74.3505C131.6876,-65.5901 131.6876,-55.2247 131.6876,-45.8264"/>
+<polygon fill="#475569" stroke="#475569" stroke-width="1.3px" points="134.4877,-45.5411 131.6876,-37.5411 128.8877,-45.5411 134.4877,-45.5411"/>
+</g>
+</g>
+</svg></g></svg><text x="80" y="4788.66" font-family="Inter" font-size="30" font-weight="700" fill="#0F172A">User flow – Atender una alerta</text><svg id="User flow Atender alerta" x="80" y="4814.66" width="1001.33" height="1760" viewBox="0 0 1001.33 1760" xmlns="http://www.w3.org/2000/svg"><defs></defs><rect id="Fondo" width="1001.33" height="1760" fill="#FFFFFF"/><g id="d"><rect x="0" y="0" width="1001.33" height="1760" fill="#ffffff"/><svg width="945.33" height="1700" viewBox="0.00 0.00 708.82 1274.64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="28" y="28">
+<g id="p59_graph0" transform="scale(1 1) rotate(0) translate(14.4 1260.2352)">
+<title>G</title>
+<polygon fill="#ffffff" stroke="#000000" points="-14.4,14.4 -14.4,-1260.2352 694.4222,-1260.2352 694.4222,14.4 -14.4,14.4" stroke-opacity="0" stroke-width="1px"/>
+<!-- s -->
+<g id="p59_node1">
+<title>s</title>
+<ellipse fill="#0b5ed7" stroke="#084bae" stroke-width="1.4px" cx="450.692" cy="-1216.9852" rx="80.7443" ry="28.7007"/>
+<text text-anchor="middle" x="450.692" y="-1220.5852" font-family="Inter" font-size="11.16px" fill="#ffffff" stroke="none" font-weight="400">Una lectura llega</text>
+<text text-anchor="middle" x="450.692" y="-1206.1852" font-family="Inter" font-size="11.16px" fill="#ffffff" stroke="none" font-weight="400">del sensor</text>
+</g>
+<!-- ev -->
+<g id="p59_node2">
+<title>ev</title>
+<path fill="#e0f7f5" stroke="#00796b" stroke-width="1.4px" stroke-dasharray="5px, 2px" d="M508.8815,-1151.0357C508.8815,-1151.0357 392.5025,-1151.0357 392.5025,-1151.0357 386.5025,-1151.0357 380.5025,-1145.0357 380.5025,-1139.0357 380.5025,-1139.0357 380.5025,-1122.4348 380.5025,-1122.4348 380.5025,-1116.4348 386.5025,-1110.4348 392.5025,-1110.4348 392.5025,-1110.4348 508.8815,-1110.4348 508.8815,-1110.4348 514.8815,-1110.4348 520.8815,-1116.4348 520.8815,-1122.4348 520.8815,-1122.4348 520.8815,-1139.0357 520.8815,-1139.0357 520.8815,-1145.0357 514.8815,-1151.0357 508.8815,-1151.0357"/>
+<text text-anchor="middle" x="450.692" y="-1134.3352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">Evaluar lectura contra</text>
+<text text-anchor="middle" x="450.692" y="-1119.9352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">el rango configurado</text>
+</g>
+<!-- s&#45;&gt;ev -->
+<g id="p59_edge1">
+<title>s-&gt;ev</title>
+<path fill="none" stroke="#475569" stroke-width="1.3px" d="M450.692,-1187.7849C450.692,-1178.5804 450.692,-1168.4279 450.692,-1159.2703"/>
+<polygon fill="#475569" stroke="#475569" stroke-width="1.3px" points="453.4921,-1159.1957 450.692,-1151.1958 447.8921,-1159.1958 453.4921,-1159.1957"/>
+</g>
+<!-- d1 -->
+<g id="p59_node3">
+<title>d1</title>
+<polygon fill="#fef3c7" stroke="#f5a524" stroke-width="1.4px" points="296.692,-1073.1365 229.5116,-1040.5352 296.692,-1007.934 363.8724,-1040.5352 296.692,-1073.1365"/>
+<text text-anchor="middle" x="296.692" y="-1044.1352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">¿Fuera de</text>
+<text text-anchor="middle" x="296.692" y="-1029.7352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">rango?</text>
+</g>
+<!-- ev&#45;&gt;d1 -->
+<g id="p59_edge2">
+<title>ev-&gt;d1</title>
+<path fill="none" stroke="#475569" stroke-width="1.3px" d="M415.747,-1110.2675C391.516,-1096.075 359.2699,-1077.188 334.4489,-1062.65"/>
+<polygon fill="#475569" stroke="#475569" stroke-width="1.3px" points="335.6486,-1060.1078 327.3304,-1058.4806 332.8183,-1064.9399 335.6486,-1060.1078"/>
+</g>
+<!-- ok -->
+<g id="p59_node4">
+<title>ok</title>
+<path fill="#e0f7f5" stroke="#00796b" stroke-width="1.4px" stroke-dasharray="5px, 2px" d="M529.5494,-1060.8357C529.5494,-1060.8357 439.8346,-1060.8357 439.8346,-1060.8357 433.8346,-1060.8357 427.8346,-1054.8357 427.8346,-1048.8357 427.8346,-1048.8357 427.8346,-1032.2348 427.8346,-1032.2348 427.8346,-1026.2348 433.8346,-1020.2348 439.8346,-1020.2348 439.8346,-1020.2348 529.5494,-1020.2348 529.5494,-1020.2348 535.5494,-1020.2348 541.5494,-1026.2348 541.5494,-1032.2348 541.5494,-1032.2348 541.5494,-1048.8357 541.5494,-1048.8357 541.5494,-1054.8357 535.5494,-1060.8357 529.5494,-1060.8357"/>
+<text text-anchor="middle" x="484.692" y="-1044.1352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">Estado térmico:</text>
+<text text-anchor="middle" x="484.692" y="-1029.7352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">Dentro del rango</text>
+</g>
+<!-- d1&#45;&gt;ok -->
+<g id="p59_edge3">
+<title>d1-&gt;ok</title>
+<path fill="none" stroke="#146c36" stroke-width="1.3px" d="M364.0333,-1040.5352C382.124,-1040.5352 401.6509,-1040.5352 419.6161,-1040.5352"/>
+<polygon fill="#146c36" stroke="#146c36" stroke-width="1.3px" points="419.7497,-1043.3353 427.7497,-1040.5352 419.7496,-1037.7353 419.7497,-1043.3353"/>
+<text text-anchor="middle" x="396.0228" y="-1046.8352" font-family="Inter" font-size="10.23px" fill="#146c36" stroke="none" font-weight="400"> No</text>
+</g>
+<!-- d2 -->
+<g id="p59_node5">
+<title>d2</title>
+<polygon fill="#fef3c7" stroke="#f5a524" stroke-width="1.4px" points="296.692,-958.3365 199.5261,-925.7352 296.692,-893.134 393.8579,-925.7352 296.692,-958.3365"/>
+<text text-anchor="middle" x="296.692" y="-929.3352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">¿Excede la</text>
+<text text-anchor="middle" x="296.692" y="-914.9352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">tolerancia (min)?</text>
+</g>
+<!-- d1&#45;&gt;d2 -->
+<g id="p59_edge4">
+<title>d1-&gt;d2</title>
+<path fill="none" stroke="#b42318" stroke-width="1.3px" stroke-dasharray="5px, 2px" d="M296.692,-1007.6382C296.692,-994.9087 296.692,-980.1999 296.692,-966.7897"/>
+<polygon fill="#b42318" stroke="#b42318" stroke-width="1.3px" points="299.4921,-966.6371 296.692,-958.6371 293.8921,-966.6371 299.4921,-966.6371"/>
+<text text-anchor="middle" x="305.5503" y="-979.8352" font-family="Inter" font-size="10.23px" fill="#b42318" stroke="none" font-weight="400"> Sí</text>
+</g>
+<!-- f -->
+<g id="p59_node19">
+<title>f</title>
+<ellipse fill="#146c36" stroke="#146c36" stroke-width="1.4px" cx="387.692" cy="-18.6676" rx="57.9785" ry="18.8368"/>
+<text text-anchor="middle" x="387.692" y="-15.0676" font-family="Inter" font-size="11.16px" fill="#ffffff" stroke="none" font-weight="400">Fin exitoso</text>
+</g>
+<!-- ok&#45;&gt;f -->
+<!-- adv -->
+<g id="p59_node6">
+<title>adv</title>
+<path fill="#fdecee" stroke="#e63946" stroke-width="1.4px" d="M667.8528,-946.0357C667.8528,-946.0357 545.5312,-946.0357 545.5312,-946.0357 539.5312,-946.0357 533.5312,-940.0357 533.5312,-934.0357 533.5312,-934.0357 533.5312,-917.4348 533.5312,-917.4348 533.5312,-911.4348 539.5312,-905.4348 545.5312,-905.4348 545.5312,-905.4348 667.8528,-905.4348 667.8528,-905.4348 673.8528,-905.4348 679.8528,-911.4348 679.8528,-917.4348 679.8528,-917.4348 679.8528,-934.0357 679.8528,-934.0357 679.8528,-940.0357 673.8528,-946.0357 667.8528,-946.0357"/>
+<text text-anchor="middle" x="606.692" y="-929.3352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">Estado: Advertencia</text>
+<text text-anchor="middle" x="606.692" y="-914.9352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">(chip ámbar en la lista)</text>
+</g>
+<!-- d2&#45;&gt;adv -->
+<g id="p59_edge5">
+<title>d2-&gt;adv</title>
+<path fill="none" stroke="#b42318" stroke-width="1.3px" stroke-dasharray="5px, 2px" d="M393.9274,-925.7352C436.1218,-925.7352 484.9806,-925.7352 525.2287,-925.7352"/>
+<polygon fill="#b42318" stroke="#b42318" stroke-width="1.3px" points="525.4197,-928.5353 533.4196,-925.7352 525.4196,-922.9353 525.4197,-928.5353"/>
+<text text-anchor="middle" x="463.6933" y="-932.0352" font-family="Inter" font-size="10.23px" fill="#b42318" stroke="none" font-weight="400"> No</text>
+</g>
+<!-- crit -->
+<g id="p59_node7">
+<title>crit</title>
+<path fill="#e0f7f5" stroke="#00796b" stroke-width="1.4px" stroke-dasharray="5px, 2px" d="M352.8484,-843.6357C352.8484,-843.6357 240.5356,-843.6357 240.5356,-843.6357 234.5356,-843.6357 228.5356,-837.6357 228.5356,-831.6357 228.5356,-831.6357 228.5356,-815.0348 228.5356,-815.0348 228.5356,-809.0348 234.5356,-803.0348 240.5356,-803.0348 240.5356,-803.0348 352.8484,-803.0348 352.8484,-803.0348 358.8484,-803.0348 364.8484,-809.0348 364.8484,-815.0348 364.8484,-815.0348 364.8484,-831.6357 364.8484,-831.6357 364.8484,-837.6357 358.8484,-843.6357 352.8484,-843.6357"/>
+<text text-anchor="middle" x="296.692" y="-826.9352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">Crear alerta crítica y</text>
+<text text-anchor="middle" x="296.692" y="-812.5352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">enviar notificación</text>
+</g>
+<!-- d2&#45;&gt;crit -->
+<g id="p59_edge6">
+<title>d2-&gt;crit</title>
+<path fill="none" stroke="#b42318" stroke-width="1.3px" stroke-dasharray="5px, 2px" d="M296.692,-893.0537C296.692,-879.8018 296.692,-864.6371 296.692,-851.8426"/>
+<polygon fill="#b42318" stroke="#b42318" stroke-width="1.3px" points="299.4921,-851.8209 296.692,-843.8209 293.8921,-851.8209 299.4921,-851.8209"/>
+<text text-anchor="middle" x="305.5503" y="-865.0352" font-family="Inter" font-size="10.23px" fill="#b42318" stroke="none" font-weight="400"> Sí</text>
+</g>
+<!-- adv&#45;&gt;ev -->
+<g id="p59_edge7">
+<title>adv-&gt;ev</title>
+<path fill="none" stroke="#475569" stroke-width="1.3px" stroke-dasharray="5px, 2px" d="M604.7067,-946.1787C600.7485,-976.9952 589.3293,-1035.734 557.692,-1073.3352 546.0991,-1087.1135 530.33,-1098.0876 514.4622,-1106.5949"/>
+<polygon fill="#475569" stroke="#475569" stroke-width="1.3px" points="513.0191,-1104.1882 507.1793,-1110.3312 515.5754,-1109.1707 513.0191,-1104.1882"/>
+<text text-anchor="middle" x="626.2309" y="-1037.2352" font-family="Inter" font-size="10.23px" fill="#334155" stroke="none" font-weight="400"> nueva lectura</text>
+</g>
+<!-- noti -->
+<g id="p59_node8">
+<title>noti</title>
+<path fill="#eaf2fe" stroke="#0b5ed7" stroke-width="1.4px" d="M347.5373,-765.8357C347.5373,-765.8357 245.8467,-765.8357 245.8467,-765.8357 239.8467,-765.8357 233.8467,-759.8357 233.8467,-753.8357 233.8467,-753.8357 233.8467,-737.2348 233.8467,-737.2348 233.8467,-731.2348 239.8467,-725.2348 245.8467,-725.2348 245.8467,-725.2348 347.5373,-725.2348 347.5373,-725.2348 353.5373,-725.2348 359.5373,-731.2348 359.5373,-737.2348 359.5373,-737.2348 359.5373,-753.8357 359.5373,-753.8357 359.5373,-759.8357 353.5373,-765.8357 347.5373,-765.8357"/>
+<text text-anchor="middle" x="296.692" y="-749.1352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">Notificaciones</text>
+<text text-anchor="middle" x="296.692" y="-734.7352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">(campana / correo)</text>
+</g>
+<!-- crit&#45;&gt;noti -->
+<g id="p59_edge8">
+<title>crit-&gt;noti</title>
+<path fill="none" stroke="#475569" stroke-width="1.3px" d="M296.692,-802.8942C296.692,-794.0497 296.692,-783.5478 296.692,-773.9625"/>
+<polygon fill="#475569" stroke="#475569" stroke-width="1.3px" points="299.4921,-773.8397 296.692,-765.8398 293.8921,-773.8398 299.4921,-773.8397"/>
+</g>
+<!-- det -->
+<g id="p59_node9">
+<title>det</title>
+<path fill="#eaf2fe" stroke="#0b5ed7" stroke-width="1.4px" d="M246.7036,-688.0357C246.7036,-688.0357 152.6804,-688.0357 152.6804,-688.0357 146.6804,-688.0357 140.6804,-682.0357 140.6804,-676.0357 140.6804,-676.0357 140.6804,-659.4348 140.6804,-659.4348 140.6804,-653.4348 146.6804,-647.4348 152.6804,-647.4348 152.6804,-647.4348 246.7036,-647.4348 246.7036,-647.4348 252.7036,-647.4348 258.7036,-653.4348 258.7036,-659.4348 258.7036,-659.4348 258.7036,-676.0357 258.7036,-676.0357 258.7036,-682.0357 252.7036,-688.0357 246.7036,-688.0357"/>
+<text text-anchor="middle" x="199.692" y="-671.3352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">Detalle del envío</text>
+<text text-anchor="middle" x="199.692" y="-656.9352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">pestaña Alertas</text>
+</g>
+<!-- noti&#45;&gt;det -->
+<g id="p59_edge9">
+<title>noti-&gt;det</title>
+<path fill="none" stroke="#475569" stroke-width="1.3px" d="M271.2064,-725.0942C259.0653,-715.3563 244.4193,-703.6093 231.5516,-693.2886"/>
+<polygon fill="#475569" stroke="#475569" stroke-width="1.3px" points="233,-690.8609 225.0074,-688.0398 229.4962,-695.2294 233,-690.8609"/>
+</g>
+<!-- d3 -->
+<g id="p59_node10">
+<title>d3</title>
+<polygon fill="#fef3c7" stroke="#f5a524" stroke-width="1.4px" points="110.692,-610.1365 23.4846,-577.5352 110.692,-544.934 197.8994,-577.5352 110.692,-610.1365"/>
+<text text-anchor="middle" x="110.692" y="-581.1352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">¿Registrar</text>
+<text text-anchor="middle" x="110.692" y="-566.7352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">acción ahora?</text>
+</g>
+<!-- det&#45;&gt;d3 -->
+<g id="p59_edge10">
+<title>det-&gt;d3</title>
+<path fill="none" stroke="#475569" stroke-width="1.3px" d="M179.4965,-647.2675C167.8441,-635.4579 152.9843,-620.3978 140.0585,-607.2976"/>
+<polygon fill="#475569" stroke="#475569" stroke-width="1.3px" points="141.8861,-605.1633 134.2741,-601.4353 137.8998,-609.0965 141.8861,-605.1633"/>
+</g>
+<!-- pen -->
+<g id="p59_node11">
+<title>pen</title>
+<path fill="#fdecee" stroke="#e63946" stroke-width="1.4px" d="M415.5632,-597.8357C415.5632,-597.8357 273.8208,-597.8357 273.8208,-597.8357 267.8208,-597.8357 261.8208,-591.8357 261.8208,-585.8357 261.8208,-585.8357 261.8208,-569.2348 261.8208,-569.2348 261.8208,-563.2348 267.8208,-557.2348 273.8208,-557.2348 273.8208,-557.2348 415.5632,-557.2348 415.5632,-557.2348 421.5632,-557.2348 427.5632,-563.2348 427.5632,-569.2348 427.5632,-569.2348 427.5632,-585.8357 427.5632,-585.8357 427.5632,-591.8357 421.5632,-597.8357 415.5632,-597.8357"/>
+<text text-anchor="middle" x="344.692" y="-581.1352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">La alerta sigue activa</text>
+<text text-anchor="middle" x="344.692" y="-566.7352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">y se recuerda cada 15 min</text>
+</g>
+<!-- d3&#45;&gt;pen -->
+<g id="p59_edge11">
+<title>d3-&gt;pen</title>
+<path fill="none" stroke="#b42318" stroke-width="1.3px" stroke-dasharray="5px, 2px" d="M198.1577,-577.5352C216.2819,-577.5352 235.4177,-577.5352 253.6658,-577.5352"/>
+<polygon fill="#b42318" stroke="#b42318" stroke-width="1.3px" points="253.9808,-580.3353 261.9808,-577.5352 253.9807,-574.7353 253.9808,-580.3353"/>
+<text text-anchor="middle" x="230.0261" y="-583.8352" font-family="Inter" font-size="10.23px" fill="#b42318" stroke="none" font-weight="400"> No</text>
+</g>
+<!-- mod -->
+<g id="p59_node12">
+<title>mod</title>
+<path fill="#eaf2fe" stroke="#0b5ed7" stroke-width="1.4px" d="M162.8624,-495.4357C162.8624,-495.4357 58.5216,-495.4357 58.5216,-495.4357 52.5216,-495.4357 46.5216,-489.4357 46.5216,-483.4357 46.5216,-483.4357 46.5216,-466.8348 46.5216,-466.8348 46.5216,-460.8348 52.5216,-454.8348 58.5216,-454.8348 58.5216,-454.8348 162.8624,-454.8348 162.8624,-454.8348 168.8624,-454.8348 174.8624,-460.8348 174.8624,-466.8348 174.8624,-466.8348 174.8624,-483.4357 174.8624,-483.4357 174.8624,-489.4357 168.8624,-495.4357 162.8624,-495.4357"/>
+<text text-anchor="middle" x="110.692" y="-478.7352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">Modal «Registrar</text>
+<text text-anchor="middle" x="110.692" y="-464.3352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">acción correctiva»</text>
+</g>
+<!-- d3&#45;&gt;mod -->
+<g id="p59_edge13">
+<title>d3-&gt;mod</title>
+<path fill="none" stroke="#146c36" stroke-width="1.3px" d="M110.692,-544.8537C110.692,-531.6018 110.692,-516.4371 110.692,-503.6426"/>
+<polygon fill="#146c36" stroke="#146c36" stroke-width="1.3px" points="113.4921,-503.6209 110.692,-495.6209 107.8921,-503.6209 113.4921,-503.6209"/>
+<text text-anchor="middle" x="119.5503" y="-516.8352" font-family="Inter" font-size="10.23px" fill="#146c36" stroke="none" font-weight="400"> Sí</text>
+</g>
+<!-- pen&#45;&gt;noti -->
+<g id="p59_edge12">
+<title>pen-&gt;noti</title>
+<path fill="none" stroke="#b42318" stroke-width="1.3px" stroke-dasharray="5px, 2px" d="M338.8333,-598.0408C330.3328,-627.7923 314.5437,-683.0542 304.8913,-716.8375"/>
+<polygon fill="#b42318" stroke="#b42318" stroke-width="1.3px" points="302.0833,-716.4737 302.5777,-724.9351 307.4678,-718.0122 302.0833,-716.4737"/>
+</g>
+<!-- d4 -->
+<g id="p59_node13">
+<title>d4</title>
+<polygon fill="#fef3c7" stroke="#f5a524" stroke-width="1.4px" points="84.692,-417.5365 -.1924,-384.9352 84.692,-352.334 169.5764,-384.9352 84.692,-417.5365"/>
+<text text-anchor="middle" x="84.692" y="-388.5352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">¿Acción</text>
+<text text-anchor="middle" x="84.692" y="-374.1352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">seleccionada?</text>
+</g>
+<!-- mod&#45;&gt;d4 -->
+<g id="p59_edge14">
+<title>mod-&gt;d4</title>
+<path fill="none" stroke="#475569" stroke-width="1.3px" d="M104.7922,-454.6675C102.0434,-445.1311 98.6836,-433.4752 95.5036,-422.4433"/>
+<polygon fill="#475569" stroke="#475569" stroke-width="1.3px" points="98.1376,-421.4714 93.2313,-414.5599 92.7566,-423.0224 98.1376,-421.4714"/>
+</g>
+<!-- e1 -->
+<g id="p59_node14">
+<title>e1</title>
+<path fill="#fdecee" stroke="#e63946" stroke-width="1.4px" d="M423.8854,-402.9352C423.8854,-402.9352 245.4986,-402.9352 245.4986,-402.9352 239.4986,-402.9352 233.4986,-396.9352 233.4986,-390.9352 233.4986,-390.9352 233.4986,-378.9352 233.4986,-378.9352 233.4986,-372.9352 239.4986,-366.9352 245.4986,-366.9352 245.4986,-366.9352 423.8854,-366.9352 423.8854,-366.9352 429.8854,-366.9352 435.8854,-372.9352 435.8854,-378.9352 435.8854,-378.9352 435.8854,-390.9352 435.8854,-390.9352 435.8854,-396.9352 429.8854,-402.9352 423.8854,-402.9352"/>
+<text text-anchor="middle" x="334.692" y="-381.3352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">Error: «Selecciona una acción»</text>
+</g>
+<!-- d4&#45;&gt;e1 -->
+<g id="p59_edge15">
+<title>d4-&gt;e1</title>
+<path fill="none" stroke="#b42318" stroke-width="1.3px" stroke-dasharray="5px, 2px" d="M169.6794,-384.9352C187.3559,-384.9352 206.2258,-384.9352 224.6555,-384.9352"/>
+<polygon fill="#b42318" stroke="#b42318" stroke-width="1.3px" points="225.0863,-387.7353 233.0863,-384.9352 225.0862,-382.1353 225.0863,-387.7353"/>
+<text text-anchor="middle" x="201.3647" y="-391.2352" font-family="Inter" font-size="10.23px" fill="#b42318" stroke="none" font-weight="400"> No</text>
+</g>
+<!-- gua -->
+<g id="p59_node15">
+<title>gua</title>
+<path fill="#e0f7f5" stroke="#00796b" stroke-width="1.4px" stroke-dasharray="5px, 2px" d="M133.7044,-302.9352C133.7044,-302.9352 47.6796,-302.9352 47.6796,-302.9352 41.6796,-302.9352 35.6796,-296.9352 35.6796,-290.9352 35.6796,-290.9352 35.6796,-278.9352 35.6796,-278.9352 35.6796,-272.9352 41.6796,-266.9352 47.6796,-266.9352 47.6796,-266.9352 133.7044,-266.9352 133.7044,-266.9352 139.7044,-266.9352 145.7044,-272.9352 145.7044,-278.9352 145.7044,-278.9352 145.7044,-290.9352 145.7044,-290.9352 145.7044,-296.9352 139.7044,-302.9352 133.7044,-302.9352"/>
+<text text-anchor="middle" x="90.692" y="-281.3352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">Guardar acción</text>
+</g>
+<!-- d4&#45;&gt;gua -->
+<g id="p59_edge17">
+<title>d4-&gt;gua</title>
+<path fill="none" stroke="#146c36" stroke-width="1.3px" d="M86.6069,-353.0197C87.4095,-339.6443 88.3317,-324.2736 89.0966,-311.5252"/>
+<polygon fill="#146c36" stroke="#146c36" stroke-width="1.3px" points="91.9134,-311.3284 89.5976,-303.175 86.3234,-310.9929 91.9134,-311.3284"/>
+<text text-anchor="middle" x="97.5503" y="-324.2352" font-family="Inter" font-size="10.23px" fill="#146c36" stroke="none" font-weight="400"> Sí</text>
+</g>
+<!-- e1&#45;&gt;mod -->
+<g id="p59_edge16">
+<title>e1-&gt;mod</title>
+<path fill="none" stroke="#b42318" stroke-width="1.3px" stroke-dasharray="5px, 2px" d="M289.6438,-403.0752C254.9626,-417.0405 206.7502,-436.4547 169.1052,-451.6135"/>
+<polygon fill="#b42318" stroke="#b42318" stroke-width="1.3px" points="167.6163,-449.1945 161.2413,-454.7801 169.7081,-454.3891 167.6163,-449.1945"/>
+</g>
+<!-- d5 -->
+<g id="p59_node16">
+<title>d5</title>
+<polygon fill="#fef3c7" stroke="#f5a524" stroke-width="1.4px" points="101.692,-229.7365 4.495,-197.1352 101.692,-164.534 198.889,-197.1352 101.692,-229.7365"/>
+<text text-anchor="middle" x="101.692" y="-200.7352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">¿Lectura vuelve</text>
+<text text-anchor="middle" x="101.692" y="-186.3352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">al rango?</text>
+</g>
+<!-- gua&#45;&gt;d5 -->
+<g id="p59_edge18">
+<title>gua-&gt;d5</title>
+<path fill="none" stroke="#475569" stroke-width="1.3px" d="M92.9712,-266.743C94.0744,-257.9373 95.4446,-247.0008 96.7696,-236.4252"/>
+<polygon fill="#475569" stroke="#475569" stroke-width="1.3px" points="99.5525,-236.7357 97.7688,-228.4496 93.9959,-236.0394 99.5525,-236.7357"/>
+</g>
+<!-- res -->
+<g id="p59_node17">
+<title>res</title>
+<path fill="#e0f7f5" stroke="#00796b" stroke-width="1.4px" stroke-dasharray="5px, 2px" d="M203.5429,-115.0357C203.5429,-115.0357 97.8411,-115.0357 97.8411,-115.0357 91.8411,-115.0357 85.8411,-109.0357 85.8411,-103.0357 85.8411,-103.0357 85.8411,-86.4348 85.8411,-86.4348 85.8411,-80.4348 91.8411,-74.4348 97.8411,-74.4348 97.8411,-74.4348 203.5429,-74.4348 203.5429,-74.4348 209.5429,-74.4348 215.5429,-80.4348 215.5429,-86.4348 215.5429,-86.4348 215.5429,-103.0357 215.5429,-103.0357 215.5429,-109.0357 209.5429,-115.0357 203.5429,-115.0357"/>
+<text text-anchor="middle" x="150.692" y="-98.3352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">Alerta resuelta;</text>
+<text text-anchor="middle" x="150.692" y="-83.9352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">historial actualizado</text>
+</g>
+<!-- d5&#45;&gt;res -->
+<g id="p59_edge19">
+<title>d5-&gt;res</title>
+<path fill="none" stroke="#146c36" stroke-width="1.3px" d="M115.2112,-168.8829C122.1585,-154.3644 130.5911,-136.742 137.4921,-122.3203"/>
+<polygon fill="#146c36" stroke="#146c36" stroke-width="1.3px" points="140.0178,-123.5289 140.9453,-115.1039 134.9663,-121.1117 140.0178,-123.5289"/>
+<text text-anchor="middle" x="141.5503" y="-136.4352" font-family="Inter" font-size="10.23px" fill="#146c36" stroke="none" font-weight="400"> Sí</text>
+</g>
+<!-- inc -->
+<g id="p59_node18">
+<title>inc</title>
+<path fill="#fdecee" stroke="#e63946" stroke-width="1.4px" d="M422.7144,-217.4357C422.7144,-217.4357 274.6696,-217.4357 274.6696,-217.4357 268.6696,-217.4357 262.6696,-211.4357 262.6696,-205.4357 262.6696,-205.4357 262.6696,-188.8348 262.6696,-188.8348 262.6696,-182.8348 268.6696,-176.8348 274.6696,-176.8348 274.6696,-176.8348 422.7144,-176.8348 422.7144,-176.8348 428.7144,-176.8348 434.7144,-182.8348 434.7144,-188.8348 434.7144,-188.8348 434.7144,-205.4357 434.7144,-205.4357 434.7144,-211.4357 428.7144,-217.4357 422.7144,-217.4357"/>
+<text text-anchor="middle" x="348.692" y="-200.7352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">Registrar incidencia y</text>
+<text text-anchor="middle" x="348.692" y="-186.3352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">notificar al Cliente de Carga</text>
+</g>
+<!-- d5&#45;&gt;inc -->
+<g id="p59_edge21">
+<title>d5-&gt;inc</title>
+<path fill="none" stroke="#b42318" stroke-width="1.3px" stroke-dasharray="5px, 2px" d="M198.9584,-197.1352C217.1043,-197.1352 236.0423,-197.1352 254.1059,-197.1352"/>
+<polygon fill="#b42318" stroke="#b42318" stroke-width="1.3px" points="254.338,-199.9353 262.3379,-197.1352 254.3379,-194.3353 254.338,-199.9353"/>
+<text text-anchor="middle" x="230.8606" y="-203.4352" font-family="Inter" font-size="10.23px" fill="#b42318" stroke="none" font-weight="400"> No</text>
+</g>
+<!-- res&#45;&gt;f -->
+<g id="p59_edge20">
+<title>res-&gt;f</title>
+<path fill="none" stroke="#475569" stroke-width="1.3px" d="M214.2037,-74.3505C253.2104,-61.8309 302.431,-46.033 338.4727,-34.4651"/>
+<polygon fill="#475569" stroke="#475569" stroke-width="1.3px" points="339.6524,-37.0272 346.414,-31.9162 337.941,-31.6951 339.6524,-37.0272"/>
+</g>
+<!-- xf -->
+<g id="p59_node20">
+<title>xf</title>
+<ellipse fill="#b42318" stroke="#b42318" stroke-width="1.4px" cx="348.692" cy="-94.7352" rx="84.7313" ry="18.8368"/>
+<text text-anchor="middle" x="348.692" y="-91.1352" font-family="Inter" font-size="11.16px" fill="#ffffff" stroke="none" font-weight="400">Fin con incidencia</text>
+</g>
+<!-- inc&#45;&gt;xf -->
+<g id="p59_edge22">
+<title>inc-&gt;xf</title>
+<path fill="none" stroke="#475569" stroke-width="1.3px" d="M348.692,-176.4131C348.692,-160.7866 348.692,-139.2049 348.692,-122.1502"/>
+<polygon fill="#475569" stroke="#475569" stroke-width="1.3px" points="351.4921,-121.6998 348.692,-113.6998 345.8921,-121.6998 351.4921,-121.6998"/>
+</g>
+</g>
+</svg></g></svg><text x="80" y="6758.66" font-family="Inter" font-size="30" font-weight="700" fill="#0F172A">User flow – Cliente consulta un reporte</text><svg id="User flow Cliente reporte" x="80" y="6784.66" width="805.33" height="1602.66" viewBox="0 0 805.33 1602.66" xmlns="http://www.w3.org/2000/svg"><defs></defs><rect id="Fondo" width="805.33" height="1602.66" fill="#FFFFFF"/><g id="d"><rect x="0" y="0" width="805.33" height="1602.66" fill="#ffffff"/><svg width="749.33" height="1542.66" viewBox="0.00 0.00 562.50 1157.27" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="28" y="28">
+<g id="p60_graph0" transform="scale(1 1) rotate(0) translate(14.4 1142.8705)">
+<title>G</title>
+<polygon fill="#ffffff" stroke="#000000" points="-14.4,14.4 -14.4,-1142.8705 548.0976,-1142.8705 548.0976,14.4 -14.4,14.4" stroke-opacity="0" stroke-width="1px"/>
+<!-- s -->
+<g id="p60_node1">
+<title>s</title>
+<ellipse fill="#0b5ed7" stroke="#084bae" stroke-width="1.4px" cx="92.6684" cy="-1109.8029" rx="36.5434" ry="18.8368"/>
+<text text-anchor="middle" x="92.6684" y="-1106.2029" font-family="Inter" font-size="11.16px" fill="#ffffff" stroke="none" font-weight="400">Inicio</text>
+</g>
+<!-- login -->
+<g id="p60_node2">
+<title>login</title>
+<path fill="#eaf2fe" stroke="#0b5ed7" stroke-width="1.4px" d="M129.67,-1054.1352C129.67,-1054.1352 55.6668,-1054.1352 55.6668,-1054.1352 49.6668,-1054.1352 43.6668,-1048.1352 43.6668,-1042.1352 43.6668,-1042.1352 43.6668,-1030.1352 43.6668,-1030.1352 43.6668,-1024.1352 49.6668,-1018.1352 55.6668,-1018.1352 55.6668,-1018.1352 129.67,-1018.1352 129.67,-1018.1352 135.67,-1018.1352 141.67,-1024.1352 141.67,-1030.1352 141.67,-1030.1352 141.67,-1042.1352 141.67,-1042.1352 141.67,-1048.1352 135.67,-1054.1352 129.67,-1054.1352"/>
+<text text-anchor="middle" x="92.6684" y="-1032.5352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">Iniciar sesión</text>
+</g>
+<!-- s&#45;&gt;login -->
+<g id="p60_edge1">
+<title>s-&gt;login</title>
+<path fill="none" stroke="#475569" stroke-width="1.3px" d="M92.6684,-1090.8316C92.6684,-1082.2148 92.6684,-1071.8771 92.6684,-1062.5201"/>
+<polygon fill="#475569" stroke="#475569" stroke-width="1.3px" points="95.4685,-1062.2802 92.6684,-1054.2802 89.8685,-1062.2803 95.4685,-1062.2802"/>
+</g>
+<!-- d1 -->
+<g id="p60_node3">
+<title>d1</title>
+<polygon fill="#fef3c7" stroke="#f5a524" stroke-width="1.4px" points="92.6684,-980.9365 5.5184,-948.3352 92.6684,-915.734 179.8184,-948.3352 92.6684,-980.9365"/>
+<text text-anchor="middle" x="92.6684" y="-951.9352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">¿Perfil Cliente</text>
+<text text-anchor="middle" x="92.6684" y="-937.5352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">de Carga?</text>
+</g>
+<!-- login&#45;&gt;d1 -->
+<g id="p60_edge2">
+<title>login-&gt;d1</title>
+<path fill="none" stroke="#475569" stroke-width="1.3px" d="M92.6684,-1017.943C92.6684,-1009.5407 92.6684,-999.1984 92.6684,-989.0807"/>
+<polygon fill="#475569" stroke="#475569" stroke-width="1.3px" points="95.4685,-989.056 92.6684,-981.056 89.8685,-989.0561 95.4685,-989.056"/>
+</g>
+<!-- e1 -->
+<g id="p60_node4">
+<title>e1</title>
+<path fill="#fdecee" stroke="#e63946" stroke-width="1.4px" d="M374.5076,-968.6357C374.5076,-968.6357 254.8292,-968.6357 254.8292,-968.6357 248.8292,-968.6357 242.8292,-962.6357 242.8292,-956.6357 242.8292,-956.6357 242.8292,-940.0348 242.8292,-940.0348 242.8292,-934.0348 248.8292,-928.0348 254.8292,-928.0348 254.8292,-928.0348 374.5076,-928.0348 374.5076,-928.0348 380.5076,-928.0348 386.5076,-934.0348 386.5076,-940.0348 386.5076,-940.0348 386.5076,-956.6357 386.5076,-956.6357 386.5076,-962.6357 380.5076,-968.6357 374.5076,-968.6357"/>
+<text text-anchor="middle" x="314.6684" y="-951.9352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">Redirigir al Dashboard</text>
+<text text-anchor="middle" x="314.6684" y="-937.5352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">del Coordinador</text>
+</g>
+<!-- d1&#45;&gt;e1 -->
+<g id="p60_edge3">
+<title>d1-&gt;e1</title>
+<path fill="none" stroke="#b42318" stroke-width="1.3px" stroke-dasharray="5px, 2px" d="M180.09,-948.3352C198.0828,-948.3352 216.9421,-948.3352 234.6568,-948.3352"/>
+<polygon fill="#b42318" stroke="#b42318" stroke-width="1.3px" points="234.7082,-951.1353 242.7082,-948.3352 234.7081,-945.5353 234.7082,-951.1353"/>
+<text text-anchor="middle" x="211.4961" y="-954.6352" font-family="Inter" font-size="10.23px" fill="#b42318" stroke="none" font-weight="400"> No</text>
+</g>
+<!-- inc -->
+<g id="p60_node5">
+<title>inc</title>
+<path fill="#eaf2fe" stroke="#0b5ed7" stroke-width="1.4px" d="M141.6652,-866.3352C141.6652,-866.3352 43.6716,-866.3352 43.6716,-866.3352 37.6716,-866.3352 31.6716,-860.3352 31.6716,-854.3352 31.6716,-854.3352 31.6716,-842.3352 31.6716,-842.3352 31.6716,-836.3352 37.6716,-830.3352 43.6716,-830.3352 43.6716,-830.3352 141.6652,-830.3352 141.6652,-830.3352 147.6652,-830.3352 153.6652,-836.3352 153.6652,-842.3352 153.6652,-842.3352 153.6652,-854.3352 153.6652,-854.3352 153.6652,-860.3352 147.6652,-866.3352 141.6652,-866.3352"/>
+<text text-anchor="middle" x="92.6684" y="-844.7352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">Envíos por recibir</text>
+</g>
+<!-- d1&#45;&gt;inc -->
+<g id="p60_edge4">
+<title>d1-&gt;inc</title>
+<path fill="none" stroke="#146c36" stroke-width="1.3px" d="M92.6684,-915.5915C92.6684,-902.3551 92.6684,-887.2797 92.6684,-874.7611"/>
+<polygon fill="#146c36" stroke="#146c36" stroke-width="1.3px" points="95.4685,-874.5568 92.6684,-866.5569 89.8685,-874.5569 95.4685,-874.5568"/>
+<text text-anchor="middle" x="101.5267" y="-887.6352" font-family="Inter" font-size="10.23px" fill="#146c36" stroke="none" font-weight="400"> Sí</text>
+</g>
+<!-- d2 -->
+<g id="p60_node6">
+<title>d2</title>
+<polygon fill="#fef3c7" stroke="#f5a524" stroke-width="1.4px" points="92.6684,-793.1365 -.1687,-760.5352 92.6684,-727.934 185.5055,-760.5352 92.6684,-793.1365"/>
+<text text-anchor="middle" x="92.6684" y="-764.1352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">¿Tiene envíos</text>
+<text text-anchor="middle" x="92.6684" y="-749.7352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">asignados?</text>
+</g>
+<!-- inc&#45;&gt;d2 -->
+<g id="p60_edge5">
+<title>inc-&gt;d2</title>
+<path fill="none" stroke="#475569" stroke-width="1.3px" d="M92.6684,-830.143C92.6684,-821.7407 92.6684,-811.3984 92.6684,-801.2807"/>
+<polygon fill="#475569" stroke="#475569" stroke-width="1.3px" points="95.4685,-801.256 92.6684,-793.256 89.8685,-801.2561 95.4685,-801.256"/>
+</g>
+<!-- vac -->
+<g id="p60_node7">
+<title>vac</title>
+<path fill="#fdecee" stroke="#e63946" stroke-width="1.4px" d="M458.5435,-780.8357C458.5435,-780.8357 260.7933,-780.8357 260.7933,-780.8357 254.7933,-780.8357 248.7933,-774.8357 248.7933,-768.8357 248.7933,-768.8357 248.7933,-752.2348 248.7933,-752.2348 248.7933,-746.2348 254.7933,-740.2348 260.7933,-740.2348 260.7933,-740.2348 458.5435,-740.2348 458.5435,-740.2348 464.5435,-740.2348 470.5435,-746.2348 470.5435,-752.2348 470.5435,-752.2348 470.5435,-768.8357 470.5435,-768.8357 470.5435,-774.8357 464.5435,-780.8357 458.5435,-780.8357"/>
+<text text-anchor="middle" x="359.6684" y="-764.1352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">Estado vacío:</text>
+<text text-anchor="middle" x="359.6684" y="-749.7352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">«Aún no tienes envíos asignados»</text>
+</g>
+<!-- d2&#45;&gt;vac -->
+<g id="p60_edge6">
+<title>d2-&gt;vac</title>
+<path fill="none" stroke="#b42318" stroke-width="1.3px" stroke-dasharray="5px, 2px" d="M185.6772,-760.5352C203.2963,-760.5352 221.9547,-760.5352 240.256,-760.5352"/>
+<polygon fill="#b42318" stroke="#b42318" stroke-width="1.3px" points="240.6346,-763.3353 248.6345,-760.5352 240.6345,-757.7353 240.6346,-763.3353"/>
+<text text-anchor="middle" x="217.1589" y="-766.8352" font-family="Inter" font-size="10.23px" fill="#b42318" stroke="none" font-weight="400"> No</text>
+</g>
+<!-- det -->
+<g id="p60_node8">
+<title>det</title>
+<path fill="#eaf2fe" stroke="#0b5ed7" stroke-width="1.4px" d="M139.68,-678.4357C139.68,-678.4357 45.6568,-678.4357 45.6568,-678.4357 39.6568,-678.4357 33.6568,-672.4357 33.6568,-666.4357 33.6568,-666.4357 33.6568,-649.8348 33.6568,-649.8348 33.6568,-643.8348 39.6568,-637.8348 45.6568,-637.8348 45.6568,-637.8348 139.68,-637.8348 139.68,-637.8348 145.68,-637.8348 151.68,-643.8348 151.68,-649.8348 151.68,-649.8348 151.68,-666.4357 151.68,-666.4357 151.68,-672.4357 145.68,-678.4357 139.68,-678.4357"/>
+<text text-anchor="middle" x="92.6684" y="-661.7352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">Detalle del envío</text>
+<text text-anchor="middle" x="92.6684" y="-647.3352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">(solo lectura)</text>
+</g>
+<!-- d2&#45;&gt;det -->
+<g id="p60_edge7">
+<title>d2-&gt;det</title>
+<path fill="none" stroke="#146c36" stroke-width="1.3px" d="M92.6684,-727.8537C92.6684,-714.6018 92.6684,-699.4371 92.6684,-686.6426"/>
+<polygon fill="#146c36" stroke="#146c36" stroke-width="1.3px" points="95.4685,-686.6209 92.6684,-678.6209 89.8685,-686.6209 95.4685,-686.6209"/>
+<text text-anchor="middle" x="101.5267" y="-699.8352" font-family="Inter" font-size="10.23px" fill="#146c36" stroke="none" font-weight="400"> Sí</text>
+</g>
+<!-- d3 -->
+<g id="p60_node9">
+<title>d3</title>
+<polygon fill="#fef3c7" stroke="#f5a524" stroke-width="1.4px" points="92.6684,-600.5365 15.7967,-567.9352 92.6684,-535.334 169.5401,-567.9352 92.6684,-600.5365"/>
+<text text-anchor="middle" x="92.6684" y="-571.5352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">¿El sensor</text>
+<text text-anchor="middle" x="92.6684" y="-557.1352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">tiene señal?</text>
+</g>
+<!-- det&#45;&gt;d3 -->
+<g id="p60_edge8">
+<title>det-&gt;d3</title>
+<path fill="none" stroke="#475569" stroke-width="1.3px" d="M92.6684,-637.6675C92.6684,-629.1398 92.6684,-618.9173 92.6684,-608.9617"/>
+<polygon fill="#475569" stroke="#475569" stroke-width="1.3px" points="95.4685,-608.7048 92.6684,-600.7048 89.8685,-608.7048 95.4685,-608.7048"/>
+</g>
+<!-- sin -->
+<g id="p60_node10">
+<title>sin</title>
+<path fill="#fdecee" stroke="#e63946" stroke-width="1.4px" d="M441.8594,-588.2357C441.8594,-588.2357 245.4774,-588.2357 245.4774,-588.2357 239.4774,-588.2357 233.4774,-582.2357 233.4774,-576.2357 233.4774,-576.2357 233.4774,-559.6348 233.4774,-559.6348 233.4774,-553.6348 239.4774,-547.6348 245.4774,-547.6348 245.4774,-547.6348 441.8594,-547.6348 441.8594,-547.6348 447.8594,-547.6348 453.8594,-553.6348 453.8594,-559.6348 453.8594,-559.6348 453.8594,-576.2357 453.8594,-576.2357 453.8594,-582.2357 447.8594,-588.2357 441.8594,-588.2357"/>
+<text text-anchor="middle" x="343.6684" y="-571.5352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">Banner «Sin señal desde HH:MM»</text>
+<text text-anchor="middle" x="343.6684" y="-557.1352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">y última lectura conocida</text>
+</g>
+<!-- d3&#45;&gt;sin -->
+<g id="p60_edge9">
+<title>d3-&gt;sin</title>
+<path fill="none" stroke="#b42318" stroke-width="1.3px" stroke-dasharray="5px, 2px" d="M169.6825,-567.9352C187.2094,-567.9352 206.2273,-567.9352 225.0387,-567.9352"/>
+<polygon fill="#b42318" stroke="#b42318" stroke-width="1.3px" points="225.0832,-570.7353 233.0832,-567.9352 225.0831,-565.1353 225.0832,-570.7353"/>
+<text text-anchor="middle" x="201.3385" y="-574.2352" font-family="Inter" font-size="10.23px" fill="#b42318" stroke="none" font-weight="400"> No</text>
+</g>
+<!-- ver -->
+<g id="p60_node11">
+<title>ver</title>
+<path fill="#eaf2fe" stroke="#0b5ed7" stroke-width="1.4px" d="M287.6916,-485.9352C287.6916,-485.9352 147.6452,-485.9352 147.6452,-485.9352 141.6452,-485.9352 135.6452,-479.9352 135.6452,-473.9352 135.6452,-473.9352 135.6452,-461.9352 135.6452,-461.9352 135.6452,-455.9352 141.6452,-449.9352 147.6452,-449.9352 147.6452,-449.9352 287.6916,-449.9352 287.6916,-449.9352 293.6916,-449.9352 299.6916,-455.9352 299.6916,-461.9352 299.6916,-461.9352 299.6916,-473.9352 299.6916,-473.9352 299.6916,-479.9352 293.6916,-485.9352 287.6916,-485.9352"/>
+<text text-anchor="middle" x="217.6684" y="-464.3352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">Ver lecturas, ruta y alertas</text>
+</g>
+<!-- d3&#45;&gt;ver -->
+<g id="p60_edge11">
+<title>d3-&gt;ver</title>
+<path fill="none" stroke="#146c36" stroke-width="1.3px" d="M119.484,-546.4827C139.8096,-530.2223 167.7073,-507.9041 188.5719,-491.2124"/>
+<polygon fill="#146c36" stroke="#146c36" stroke-width="1.3px" points="190.5827,-493.1896 195.0805,-486.0056 187.0844,-488.8167 190.5827,-493.1896"/>
+<text text-anchor="middle" x="179.5267" y="-507.2352" font-family="Inter" font-size="10.23px" fill="#146c36" stroke="none" font-weight="400"> Sí</text>
+</g>
+<!-- sin&#45;&gt;ver -->
+<g id="p60_edge10">
+<title>sin-&gt;ver</title>
+<path fill="none" stroke="#b42318" stroke-width="1.3px" stroke-dasharray="5px, 2px" d="M317.8664,-547.4574C297.248,-531.0936 268.3479,-508.157 246.8808,-491.1197"/>
+<polygon fill="#b42318" stroke="#b42318" stroke-width="1.3px" points="248.4816,-488.8155 240.4746,-486.0354 245.0003,-493.2019 248.4816,-488.8155"/>
+</g>
+<!-- d4 -->
+<g id="p60_node12">
+<title>d4</title>
+<polygon fill="#fef3c7" stroke="#f5a524" stroke-width="1.4px" points="217.6684,-412.7365 148.7758,-380.1352 217.6684,-347.534 286.561,-380.1352 217.6684,-412.7365"/>
+<text text-anchor="middle" x="217.6684" y="-383.7352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">¿Envío</text>
+<text text-anchor="middle" x="217.6684" y="-369.3352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">entregado?</text>
+</g>
+<!-- ver&#45;&gt;d4 -->
+<g id="p60_edge12">
+<title>ver-&gt;d4</title>
+<path fill="none" stroke="#475569" stroke-width="1.3px" d="M217.6684,-449.743C217.6684,-441.3407 217.6684,-430.9984 217.6684,-420.8807"/>
+<polygon fill="#475569" stroke="#475569" stroke-width="1.3px" points="220.4685,-420.856 217.6684,-412.856 214.8685,-420.8561 220.4685,-420.856"/>
+</g>
+<!-- esp -->
+<g id="p60_node13">
+<title>esp</title>
+<path fill="#fdecee" stroke="#e63946" stroke-width="1.4px" d="M521.7268,-400.4357C521.7268,-400.4357 361.61,-400.4357 361.61,-400.4357 355.61,-400.4357 349.61,-394.4357 349.61,-388.4357 349.61,-388.4357 349.61,-371.8348 349.61,-371.8348 349.61,-365.8348 355.61,-359.8348 361.61,-359.8348 361.61,-359.8348 521.7268,-359.8348 521.7268,-359.8348 527.7268,-359.8348 533.7268,-365.8348 533.7268,-371.8348 533.7268,-371.8348 533.7268,-388.4357 533.7268,-388.4357 533.7268,-394.4357 527.7268,-400.4357 521.7268,-400.4357"/>
+<text text-anchor="middle" x="441.6684" y="-383.7352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">Botón «Descargar reporte»</text>
+<text text-anchor="middle" x="441.6684" y="-369.3352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">deshabilitado hasta la entrega</text>
+</g>
+<!-- d4&#45;&gt;esp -->
+<g id="p60_edge13">
+<title>d4-&gt;esp</title>
+<path fill="none" stroke="#b42318" stroke-width="1.3px" stroke-dasharray="5px, 2px" d="M286.3981,-380.1352C303.6844,-380.1352 322.5958,-380.1352 341.0876,-380.1352"/>
+<polygon fill="#b42318" stroke="#b42318" stroke-width="1.3px" points="341.547,-382.9353 349.547,-380.1352 341.547,-377.3353 341.547,-382.9353"/>
+<text text-anchor="middle" x="318.0018" y="-386.4352" font-family="Inter" font-size="10.23px" fill="#b42318" stroke="none" font-weight="400"> No</text>
+</g>
+<!-- gen -->
+<g id="p60_node14">
+<title>gen</title>
+<path fill="#e0f7f5" stroke="#00796b" stroke-width="1.4px" stroke-dasharray="5px, 2px" d="M295.128,-298.1352C295.128,-298.1352 140.2088,-298.1352 140.2088,-298.1352 134.2088,-298.1352 128.2088,-292.1352 128.2088,-286.1352 128.2088,-286.1352 128.2088,-274.1352 128.2088,-274.1352 128.2088,-268.1352 134.2088,-262.1352 140.2088,-262.1352 140.2088,-262.1352 295.128,-262.1352 295.128,-262.1352 301.128,-262.1352 307.128,-268.1352 307.128,-274.1352 307.128,-274.1352 307.128,-286.1352 307.128,-286.1352 307.128,-292.1352 301.128,-298.1352 295.128,-298.1352"/>
+<text text-anchor="middle" x="217.6684" y="-276.5352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">Generar reporte térmico PDF</text>
+</g>
+<!-- d4&#45;&gt;gen -->
+<g id="p60_edge14">
+<title>d4-&gt;gen</title>
+<path fill="none" stroke="#146c36" stroke-width="1.3px" d="M217.6684,-347.3915C217.6684,-334.1551 217.6684,-319.0797 217.6684,-306.5611"/>
+<polygon fill="#146c36" stroke="#146c36" stroke-width="1.3px" points="220.4685,-306.3568 217.6684,-298.3569 214.8685,-306.3569 220.4685,-306.3568"/>
+<text text-anchor="middle" x="226.5267" y="-319.4352" font-family="Inter" font-size="10.23px" fill="#146c36" stroke="none" font-weight="400"> Sí</text>
+</g>
+<!-- d5 -->
+<g id="p60_node15">
+<title>d5</title>
+<polygon fill="#fef3c7" stroke="#f5a524" stroke-width="1.4px" points="115.6684,-224.9365 50.4457,-192.3352 115.6684,-159.734 180.8911,-192.3352 115.6684,-224.9365"/>
+<text text-anchor="middle" x="115.6684" y="-195.9352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">¿Reporte</text>
+<text text-anchor="middle" x="115.6684" y="-181.5352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">generado?</text>
+</g>
+<!-- gen&#45;&gt;d5 -->
+<g id="p60_edge15">
+<title>gen-&gt;d5</title>
+<path fill="none" stroke="#475569" stroke-width="1.3px" d="M196.5339,-261.943C181.9039,-249.3497 162.2112,-232.3986 145.9222,-218.3773"/>
+<polygon fill="#475569" stroke="#475569" stroke-width="1.3px" points="147.5251,-216.0625 139.6352,-212.9655 143.8717,-220.3067 147.5251,-216.0625"/>
+</g>
+<!-- err -->
+<g id="p60_node16">
+<title>err</title>
+<path fill="#fdecee" stroke="#e63946" stroke-width="1.4px" d="M384.8543,-212.6357C384.8543,-212.6357 256.4825,-212.6357 256.4825,-212.6357 250.4825,-212.6357 244.4825,-206.6357 244.4825,-200.6357 244.4825,-200.6357 244.4825,-184.0348 244.4825,-184.0348 244.4825,-178.0348 250.4825,-172.0348 256.4825,-172.0348 256.4825,-172.0348 384.8543,-172.0348 384.8543,-172.0348 390.8543,-172.0348 396.8543,-178.0348 396.8543,-184.0348 396.8543,-184.0348 396.8543,-200.6357 396.8543,-200.6357 396.8543,-206.6357 390.8543,-212.6357 384.8543,-212.6357"/>
+<text text-anchor="middle" x="320.6684" y="-195.9352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">Mensaje de error</text>
+<text text-anchor="middle" x="320.6684" y="-181.5352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">y opción «Reintentar»</text>
+</g>
+<!-- d5&#45;&gt;err -->
+<g id="p60_edge16">
+<title>d5-&gt;err</title>
+<path fill="none" stroke="#b42318" stroke-width="1.3px" stroke-dasharray="5px, 2px" d="M181.0953,-192.3352C198.573,-192.3352 217.7127,-192.3352 236.0628,-192.3352"/>
+<polygon fill="#b42318" stroke="#b42318" stroke-width="1.3px" points="236.4296,-195.1353 244.4296,-192.3352 236.4295,-189.5353 236.4296,-195.1353"/>
+<text text-anchor="middle" x="212.6776" y="-198.6352" font-family="Inter" font-size="10.23px" fill="#b42318" stroke="none" font-weight="400"> No</text>
+</g>
+<!-- pdf -->
+<g id="p60_node17">
+<title>pdf</title>
+<path fill="#eaf2fe" stroke="#0b5ed7" stroke-width="1.4px" d="M164.6796,-110.3352C164.6796,-110.3352 66.6572,-110.3352 66.6572,-110.3352 60.6572,-110.3352 54.6572,-104.3352 54.6572,-98.3352 54.6572,-98.3352 54.6572,-86.3352 54.6572,-86.3352 54.6572,-80.3352 60.6572,-74.3352 66.6572,-74.3352 66.6572,-74.3352 164.6796,-74.3352 164.6796,-74.3352 170.6796,-74.3352 176.6796,-80.3352 176.6796,-86.3352 176.6796,-86.3352 176.6796,-98.3352 176.6796,-98.3352 176.6796,-104.3352 170.6796,-110.3352 164.6796,-110.3352"/>
+<text text-anchor="middle" x="115.6684" y="-88.7352" font-family="Inter" font-size="11.16px" fill="#0f172a" stroke="none" font-weight="400">Descarga del PDF</text>
+</g>
+<!-- d5&#45;&gt;pdf -->
+<g id="p60_edge18">
+<title>d5-&gt;pdf</title>
+<path fill="none" stroke="#146c36" stroke-width="1.3px" d="M115.6684,-159.5915C115.6684,-146.3551 115.6684,-131.2797 115.6684,-118.7611"/>
+<polygon fill="#146c36" stroke="#146c36" stroke-width="1.3px" points="118.4685,-118.5568 115.6684,-110.5569 112.8685,-118.5569 118.4685,-118.5568"/>
+<text text-anchor="middle" x="124.5267" y="-131.6352" font-family="Inter" font-size="10.23px" fill="#146c36" stroke="none" font-weight="400"> Sí</text>
+</g>
+<!-- err&#45;&gt;gen -->
+<g id="p60_edge17">
+<title>err-&gt;gen</title>
+<path fill="none" stroke="#b42318" stroke-width="1.3px" stroke-dasharray="5px, 2px" d="M296.8339,-212.6524C281.4141,-225.7967 261.2885,-242.9523 245.1884,-256.6765"/>
+<polygon fill="#b42318" stroke="#b42318" stroke-width="1.3px" points="243.2819,-254.6223 239.0101,-261.943 246.9147,-258.8841 243.2819,-254.6223"/>
+</g>
+<!-- f -->
+<g id="p60_node18">
+<title>f</title>
+<ellipse fill="#146c36" stroke="#146c36" stroke-width="1.4px" cx="115.6684" cy="-18.6676" rx="57.9785" ry="18.8368"/>
+<text text-anchor="middle" x="115.6684" y="-15.0676" font-family="Inter" font-size="11.16px" fill="#ffffff" stroke="none" font-weight="400">Fin exitoso</text>
+</g>
+<!-- pdf&#45;&gt;f -->
+<g id="p60_edge19">
+<title>pdf-&gt;f</title>
+<path fill="none" stroke="#475569" stroke-width="1.3px" d="M115.6684,-74.1253C115.6684,-65.4912 115.6684,-55.0045 115.6684,-45.4841"/>
+<polygon fill="#475569" stroke="#475569" stroke-width="1.3px" points="118.4685,-45.4372 115.6684,-37.4372 112.8685,-45.4373 118.4685,-45.4372"/>
+</g>
+</g>
+</svg></g></svg></svg>

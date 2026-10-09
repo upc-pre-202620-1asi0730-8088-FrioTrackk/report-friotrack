@@ -1,0 +1,285 @@
+@startuml
+title FríoTrack — backend previsto TB1
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+note as Scope
+Diseño previsto. No API ni PostgreSQL ejecutados.
+No compilación PlantUML realizada.
+end note
+package "IAM" {
+class Organization {
+  - id: UUID
+  - name: String
+  + rename(name: String): void
+}
+class UserAccount {
+  - id: UUID
+  - organizationId: UUID
+  - email: String
+  - passwordHash: String
+  - fullName: String
+  - role: UserRole
+  - preferredLanguage: String
+  - enabled: Boolean
+  - failedAttempts: Integer
+  - lockedUntil: DateTimeOffset?
+  + authenticate(password: String): Boolean
+  + changePassword(password: String): void
+  + updateProfile(name, language): void
+}
+class PasswordResetToken {
+  - id: UUID
+  - userId: UUID
+  - tokenHash: String
+  - expiresAt: DateTimeOffset
+  - usedAt: DateTimeOffset?
+  + isValid(at: DateTimeOffset): Boolean
+  + markUsed(at: DateTimeOffset): void
+}
+}
+package "Fleet" {
+class Vehicle {
+  - id: UUID
+  - organizationId: UUID
+  - plate: String
+  - capacityTons: Decimal
+  - enabled: Boolean
+  + isAvailable(from, until): Boolean
+  + changeCapacity(tons: Decimal): void
+  + disable(): void
+}
+class Driver {
+  - id: UUID
+  - organizationId: UUID
+  - fullName: String
+  - licenseNumber: String
+  - enabled: Boolean
+  + isAvailable(from, until): Boolean
+  + disable(): void
+}
+class Sensor {
+  - id: UUID
+  - vehicleId: UUID?
+  - serialCode: String
+  - enabled: Boolean
+  + assign(vehicleId: UUID): void
+  + disable(): void
+}
+class FleetAllocation {
+  - id: UUID
+  - shipmentId: UUID
+  - vehicleId: UUID
+  - driverId: UUID
+  - reservedFrom: DateTimeOffset
+  - reservedUntil: DateTimeOffset
+  - status: String
+  - releasedAt: DateTimeOffset?
+  + reserve(): void
+  + release(at: DateTimeOffset): void
+}
+}
+package "Shipment" {
+class Shipment {
+  - id: UUID
+  - code: String
+  - organizationId: UUID
+  - coordinatorId: UUID
+  - clientId: UUID
+  - cargo: String
+  - weightTons: Decimal
+  - origin: String
+  - destination: String
+  - minTempC: Decimal
+  - maxTempC: Decimal
+  - minHumidityPct: Decimal
+  - maxHumidityPct: Decimal
+  - toleranceMinutes: Integer
+  - plannedDeparture: DateTimeOffset
+  - estimatedArrival: DateTimeOffset
+  - status: ShipmentStatus
+  - version: Int64
+  + schedule(resources, client): void
+  + startTransit(): void
+  + markDelivered(): void
+  + cancel(reason: String): void
+  + updateRange(range: ThermalRange): void
+}
+class ShipmentHistoryEvent {
+  - id: UUID
+  - shipmentId: UUID
+  - actorId: UUID
+  - action: String
+  - fromStatus: String?
+  - toStatus: String?
+  - note: String
+  - recordedAt: DateTimeOffset
+}
+}
+package "Monitoring" {
+class ShipmentMonitoring {
+  - id: UUID
+  - shipmentId: UUID
+  - minTempC: Decimal
+  - maxTempC: Decimal
+  - minHumidityPct: Decimal
+  - maxHumidityPct: Decimal
+  - toleranceMinutes: Integer
+  - maxSilenceMinutes: Integer
+  - signalStatus: SignalStatus
+  - lastReadingAt: DateTimeOffset?
+  - startedAt: DateTimeOffset
+  - stoppedAt: DateTimeOffset?
+  + start(range: ThermalRange): void
+  + recordReading(reading): void
+  + detectCommunicationGap(at): void
+  + stop(at: DateTimeOffset): void
+}
+class SensorReading {
+  - id: Int64
+  - monitoringId: UUID
+  - temperatureC: Decimal
+  - humidityPct: Decimal
+  - withinBothRanges: Boolean
+  - recordedAt: DateTimeOffset
+  + evaluate(range: ThermalRange): Boolean
+}
+class PositionReport {
+  - id: Int64
+  - monitoringId: UUID
+  - latitude: Decimal
+  - longitude: Decimal
+  - recordedAt: DateTimeOffset
+}
+}
+package "Alert & Reporting" {
+class Alert {
+  - id: UUID
+  - shipmentId: UUID
+  - triggerReadingId: Int64?
+  - type: AlertType
+  - severity: AlertSeverity
+  - status: AlertStatus
+  - openedAt: DateTimeOffset
+  - acknowledgedAt: DateTimeOffset?
+  - resolvedAt: DateTimeOffset?
+  + acknowledge(action: CorrectiveAction): void
+  + resolveWithNormalReading(reading): void
+}
+class CorrectiveAction {
+  - id: UUID
+  - alertId: UUID
+  - registeredBy: UUID
+  - comment: String
+  - notifyClient: Boolean
+  - registeredAt: DateTimeOffset
+}
+class Notification {
+  - id: UUID
+  - userId: UUID
+  - shipmentId: UUID
+  - alertId: UUID?
+  - kind: String
+  - createdAt: DateTimeOffset
+  - readAt: DateTimeOffset?
+  + markRead(at: DateTimeOffset): void
+}
+class Incident {
+  - id: UUID
+  - shipmentId: UUID
+  - registeredBy: UUID
+  - description: String
+  - registeredAt: DateTimeOffset
+}
+class ThermalReport {
+  - id: UUID
+  - shipmentId: UUID
+  - generatedBy: UUID
+  - generatedAt: DateTimeOffset
+  - filePath: String
+  - summary: JsonSnapshot
+  + generateSnapshot(shipment): void
+}
+}
+class ThermalRange <<value object>> {
+  - minTempC: Decimal
+  - maxTempC: Decimal
+  - minHumidityPct: Decimal
+  - maxHumidityPct: Decimal
+  - toleranceMinutes: Integer
+  + contains(temperatureC, humidityPct): Boolean
+}
+Organization "1" --> "0..*" UserAccount : organizationId
+Organization "1" --> "0..*" Vehicle : organizationId
+Organization "1" --> "0..*" Driver : organizationId
+Organization "1" --> "0..*" Shipment : organizationId
+UserAccount "1" --> "0..*" PasswordResetToken : userId
+Vehicle "0..1" --> "0..1" Sensor : vehicleId
+Shipment "1" --> "0..1" FleetAllocation : shipmentId
+Vehicle "1" --> "0..*" FleetAllocation : vehicleId
+Driver "1" --> "0..*" FleetAllocation : driverId
+UserAccount "1" --> "0..*" Shipment : coordinatorId
+UserAccount "1" --> "0..*" Shipment : clientId
+Shipment "1" --> "0..*" ShipmentHistoryEvent : shipmentId
+UserAccount "1" --> "0..*" ShipmentHistoryEvent : actorId
+Shipment "1" --> "0..1" ShipmentMonitoring : shipmentId
+ShipmentMonitoring "1" --> "0..*" SensorReading : monitoringId
+ShipmentMonitoring "1" --> "0..*" PositionReport : monitoringId
+Shipment "1" --> "0..*" Alert : shipmentId
+SensorReading "0..1" --> "0..*" Alert : triggerReadingId
+Alert "1" --> "0..*" CorrectiveAction : alertId
+UserAccount "1" --> "0..*" CorrectiveAction : registeredBy
+UserAccount "1" --> "0..*" Notification : userId
+Shipment "1" --> "0..*" Notification : shipmentId
+Alert "0..1" --> "0..*" Notification : alertId
+Shipment "1" --> "0..*" Incident : shipmentId
+UserAccount "1" --> "0..*" Incident : registeredBy
+Shipment "1" --> "0..*" ThermalReport : shipmentId
+UserAccount "1" --> "0..*" ThermalReport : generatedBy
+Shipment "1" *-- "1" ThermalRange : configured range
+ShipmentMonitoring "1" *-- "1" ThermalRange : immutable snapshot
+enum UserRole {
+LOGISTICS_COORDINATOR
+CARGO_CLIENT
+}
+enum ShipmentStatus {
+DRAFT
+SCHEDULED
+IN_TRANSIT
+DELIVERED
+CANCELLED
+}
+enum AlertStatus {
+ACTIVE
+ACKNOWLEDGED
+RESOLVED
+}
+enum AlertType {
+TEMPERATURE
+HUMIDITY
+NO_SIGNAL
+}
+enum AlertSeverity {
+WARNING
+CRITICAL
+}
+enum SignalStatus {
+ONLINE
+NO_SIGNAL
+}
+UserAccount ..> UserRole
+Shipment ..> ShipmentStatus
+ShipmentMonitoring ..> SignalStatus
+Alert ..> AlertType
+Alert ..> AlertStatus
+Alert ..> AlertSeverity
+note right of ThermalRange
+-50 <= minTempC < maxTempC <= 50
+0 <= minHumidityPct < maxHumidityPct <= 100
+toleranceMinutes >= 0
+contains checks BOTH ranges inclusively.
+end note
+note bottom of Alert
+Action acknowledges; it does not prove recovery.
+A later reading normal in both ranges resolves.
+end note
+@enduml

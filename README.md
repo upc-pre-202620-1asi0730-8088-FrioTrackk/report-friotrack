@@ -11,7 +11,7 @@ Carrera de Ingeniería de Software<br>
 **NRC**
 ### 8088
 
-## Informe de Trabajo Final
+## Informe de Trabajo Final · TB1
 
 **Docente**<br>
 ### Bautista Ubillús, Efraín Ricardo
@@ -55,7 +55,7 @@ Proyecto<br>
 
 **Periodo 202620**
 
-**Octubre 2026**
+**Octubre 2026 · v2.0.0**
 
 </div>
 
@@ -81,6 +81,11 @@ El siguiente registro conserva las actividades documentadas para AV1 en el repos
 | AV1 | 19/09/2026 | Vera Solsol, Nayely Macarena | Elaboración del Impact Mapping. |
 | AV1 | 19/09/2026 | Vera Solsol, Nayely Macarena | Diseño y actualización de User Stories. |
 | AV1 | 19/09/2026 | Vera Solsol, Nayely Macarena | Elaboración del Product Backlog. |
+| TB1 | 08/10/2026 | Atauje Barreto, Alexander Sebastián | Integración del Capítulo I y de la estructura del informe en el repositorio actual. |
+| TB1 | 08/10/2026 | Daga Chávez, Joaquín Leonardo | Incorporación del Capítulo II, fotografías y enlaces de entrevistas. |
+| TB1 | 08/10/2026 | Vera Solsol, Nayely Macarena | Integración de User Stories, Impact Mapping y Product Backlog del Capítulo III. |
+| TB1 | 08/10/2026 | Saavedra Flores, Rodrigo Andree | Incorporación del Capítulo IV; integración de autenticación, API y despliegue Azure en frontend. |
+| TB1 · v2.0.0 | 08/10/2026 | Saavedra Flores, Rodrigo Andree | Actualización del índice, Capítulo V, trazabilidad de commits, conclusiones, bibliografía y anexos del informe. |
 
 <div style="page-break-after: always;"></div>
 
@@ -88,53 +93,43 @@ El siguiente registro conserva las actividades documentadas para AV1 en el repos
 
 ### Entrega AV1
 
-Para el desarrollo del informe de FríoTrack, el equipo BlackStartup distribuyó las actividades de investigación, especificación de requisitos, diseño e implementación entre sus integrantes. La siguiente tabla presenta las responsabilidades documentadas para la entrega AV1.
+El equipo distribuyó las actividades de investigación, requisitos, diseño e implementación. El registro de versiones conserva las responsabilidades de AV1; la incorporación posterior de los archivos al nuevo repositorio mantiene esa atribución.
 
-| Integrante | Tareas asignadas |
-|---|---|
-| **Atauje Barreto, Alexander Sebastián** | Introducción, Startup Profile, descripción de la startup, perfiles del equipo, Solution Profile, antecedentes y problemática, Lean UX Process y segmentos objetivo. Implementación de las secciones Services y Milestones / How It Works de la Landing Page, modularización y gestión de ramas. |
-| **Bardales Rodriguez, Benjamin Elias** | Domain-Driven Software Architecture, Design-Level Event Storming, diagramas de contexto, contenedores y componentes, diagramas de clases y diseño de base de datos. Implementación de la mayor parte de la Landing Page con HTML5, CSS3 y JavaScript. |
-| **Daga Chávez, Joaquín Leonardo** | Requirements Specification del Capítulo III: definición de Epics, User Stories y criterios de aceptación en Gherkin. |
-| **Saavedra Flores, Rodrigo Andree** | Documentación de Product Implementation, Validation & Deployment del Capítulo V y apoyo en la implementación y despliegue de la Landing Page. |
-| **Vera Solsol, Nayely Macarena** | Impact Mapping, User Stories, Product Backlog y configuración y gestión del tablero de Trello. |
+| Integrante | Responsabilidad registrada en AV1 |
+| --- | --- |
+| Atauje Barreto, Alexander Sebastián | Startup Profile, Solution Profile, Lean UX, organización del informe y secciones de la landing. |
+| Bardales Rodriguez, Benjamin Elias | Arquitectura, diagramas, base de datos y mayor parte de la landing. |
+| Daga Chávez, Joaquín Leonardo | Historias y criterios de aceptación en Gherkin. |
+| Saavedra Flores, Rodrigo Andree | Capítulo V y apoyo al despliegue de la landing. |
+| Vera Solsol, Nayely Macarena | Impact Mapping, User Stories, Product Backlog y Trello. |
 
-Durante AV1 se desarrollaron los capítulos I a IV y se avanzó el Capítulo V hasta las secciones correspondientes al Sprint 1. Asimismo, se incorporaron la carátula, el registro de versiones, las evidencias de colaboración, las conclusiones y los anexos.
+### Entrega TB1
+
+La actividad de este repositorio se registra entre el 07 y el 08 de octubre de 2026. La siguiente tabla cuenta commits sin merges sobre `develop`, antes de la consolidación de esta versión. La publicación de un archivo por una cuenta no modifica la autoría histórica del artefacto.
+
+| Team Member | GitHub Username | Report commits (excluding merges) | Evidence |
+| --- | --- | --- | --- |
+| Atauje Barreto, Alexander Sebastián | Alexander1Alexander2 | 10 | Capítulo I, navegación e integración del Capítulo V. [5875269](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/58752691c08a90ce27e2d2cf3c8ca0cb5b10565c). |
+| Bardales Rodriguez, Benjamin Elias | Benja72312 | 0 | Diseño y landing de AV1; sin commits en este conjunto del nuevo informe. Registro AV1 de responsabilidades. |
+| Daga Chávez, Joaquín Leonardo | Eshnikeee | 8 | Capítulo II, entrevistas, fotografías y enlaces de video. [369cc99](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/369cc991c51dd2424aded38766728918bf27de71). |
+| Saavedra Flores, Rodrigo Andree | rodrigoxd67 | 11 | Portada, Student Outcome e incorporación del Capítulo IV; integración de acceso/API en frontend. [d525d9e](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/d525d9e34c6469488dca96042e610adbd6739b6d). |
+| Vera Solsol, Nayely Macarena | Macaxprogram29 | 4 | User Stories, Impact Mapping, Product Backlog e índice del Capítulo III. [3cc5e02](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/3cc5e023893f00728f4a7d80ea836a7c0451247e). |
+
+Los registros completos y sus fechas están en [current-commits.json](assets/evidence/current-commits.json). La integración de autenticación, API y configuración Azure se registra además en el [frontend](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend). La evaluación individual corresponde al Team Leader y no se deduce de la cantidad de commits.
 
 ### Organización del informe
 
-Este repositorio utiliza las siguientes ramas:
+El informe completo está en este `README.md`. Los capítulos, imágenes y anexos se integran sobre la rama existente `develop`; `main` contiene la versión publicada. El índice usa anclas internas y funciona en ambas ramas y en la etiqueta de entrega.
 
-- **main:** portada, registro de versiones, información de colaboración e índice del informe.
-- **develop:** capítulos, recursos y avances del informe.
-
-Los enlaces del índice dirigen a los archivos de la rama `develop`.
-
-### Repositorios y organización
-
-- [Organización actual de FríoTrack](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk)
-- [Repositorio actual del informe](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack)
-- [Contenido del informe en develop](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/tree/develop)
-- [Repositorio anterior del informe — historial de AV1](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/report-friotrack)
-
-### Evidencias de colaboración de AV1
-
-El historial y las evidencias de colaboración de AV1 corresponden al repositorio anterior. Los nuevos aportes quedarán registrados en el historial de este repositorio.
-
-[Consultar evidencia de colaboración de AV1](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/report-friotrack/blob/develop/assets/images/chapter-00/commits-friotrack-report.png)
-
-### Participación del equipo
-
-- Atauje Barreto, Alexander Sebastián
-- Bardales Rodriguez, Benjamin Elias
-- Daga Chávez, Joaquín Leonardo
-- Saavedra Flores, Rodrigo Andree
-- Vera Solsol, Nayely Macarena
-
-<div style="page-break-after: always;"></div>
+- [Organización FríoTrack](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk)
+- [Informe en develop](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/tree/develop)
+- [Informe en main](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/tree/main)
+- [Historial del informe](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commits/develop/)
 
 ## Contenido
 
 - [Student Outcome](#student-outcome)
+  - [ABET – EAC - Student Outcome 5](#abet--eac---student-outcome-5)
 - [Capítulo I: Introducción](#capítulo-i-introducción)
   - [1.1. Startup Profile](#11-startup-profile)
     - [1.1.1. Descripción de la Startup](#111-descripción-de-la-startup)
@@ -168,13 +163,35 @@ El historial y las evidencias de colaboración de AV1 corresponden al repositori
   - [3.3. Product Backlog](#33-product-backlog)
 - [Capítulo IV: Product Design](#capítulo-iv-product-design)
   - [4.1. Style Guidelines](#41-style-guidelines)
+    - [4.1.1. General Style Guidelines](#411-general-style-guidelines)
+    - [4.1.2. Web Style Guidelines](#412-web-style-guidelines)
   - [4.2. Information Architecture](#42-information-architecture)
+    - [4.2.1. Organization Systems](#421-organization-systems)
+    - [4.2.2. Labeling Systems](#422-labeling-systems)
+    - [4.2.3. SEO Tags and Meta Tags](#423-seo-tags-and-meta-tags)
+    - [4.2.4. Searching Systems](#424-searching-systems)
+    - [4.2.5. Navigation Systems](#425-navigation-systems)
   - [4.3. Landing Page UI Design](#43-landing-page-ui-design)
+    - [4.3.1. Landing Page Wireframe](#431-landing-page-wireframe)
+    - [4.3.2. Landing Page Mock-up](#432-landing-page-mock-up)
   - [4.4. Web Applications UX/UI Design](#44-web-applications-uxui-design)
+    - [4.4.1. Web Applications Wireframes](#441-web-applications-wireframes)
+    - [4.4.2. Web Applications Wireflow Diagrams](#442-web-applications-wireflow-diagrams)
+    - [4.4.3. Web Applications Mock-ups](#443-web-applications-mock-ups)
+    - [4.4.4. Web Applications User Flow Diagrams](#444-web-applications-user-flow-diagrams)
   - [4.5. Web Applications Prototyping](#45-web-applications-prototyping)
   - [4.6. Domain-Driven Software Architecture](#46-domain-driven-software-architecture)
+    - [4.6.1. Design-Level EventStorming](#461-design-level-eventstorming)
+    - [4.6.2. Software Architecture Context Diagram](#462-software-architecture-context-diagram)
+    - [4.6.3. Software Architecture Container Diagrams](#463-software-architecture-container-diagrams)
+    - [4.6.4. Software Architecture Component Diagrams](#464-software-architecture-component-diagrams)
+      - [4.6.4.1. Componentes del frontend](#4641-componentes-del-frontend)
+      - [4.6.4.2. Componentes del backend](#4642-componentes-del-backend)
+      - [4.6.4.3. Otros contenedores](#4643-otros-contenedores)
   - [4.7. Software Object-Oriented Design](#47-software-object-oriented-design)
+    - [4.7.1. Class Diagrams](#471-class-diagrams)
   - [4.8. Database Design](#48-database-design)
+    - [4.8.1. Database Diagrams](#481-database-diagrams)
 - [Capítulo V: Product Implementation, Validation & Deployment](#capítulo-v-product-implementation-validation--deployment)
   - [5.1. Software Configuration Management](#51-software-configuration-management)
     - [5.1.1. Software Development Environment Configuration](#511-software-development-environment-configuration)
@@ -200,17 +217,19 @@ El historial y las evidencias de colaboración de AV1 corresponden al repositori
       - [5.2.2.6. Services Documentation Evidence for Sprint Review](#5226-services-documentation-evidence-for-sprint-review)
       - [5.2.2.7. Software Deployment Evidence for Sprint Review](#5227-software-deployment-evidence-for-sprint-review)
       - [5.2.2.8. Team Collaboration Insights during Sprint](#5228-team-collaboration-insights-during-sprint)
-- [Conclusiones, Bibliografía y Anexos][backmatter]
+- [Conclusiones y Recomendaciones](#conclusiones-y-recomendaciones)
+  - [Conclusiones](#conclusiones)
+  - [Recomendaciones](#recomendaciones)
+- [Bibliografía](#bibliografía)
+- [Anexos](#anexos)
+  - [Anexo A. Participant Performance Report](#anexo-a-participant-performance-report)
+  - [Anexo B. Repositorios del proyecto](#anexo-b-repositorios-del-proyecto)
+  - [Anexo C. Acceso a los productos publicados](#anexo-c-acceso-a-los-productos-publicados)
+  - [Anexo D. Tablero, diseño e investigación](#anexo-d-tablero-diseño-e-investigación)
+  - [Anexo E. Videos](#anexo-e-videos)
+  - [Anexo F. Entregables TB1](#anexo-f-entregables-tb1)
+  - [Anexo G. Registros de verificación](#anexo-g-registros-de-verificación)
 
-[student-outcome]: https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/develop/report/01-student-outcome.md
-[chapter-1]: https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/develop/report/11-chapter1-introduction.md
-[chapter-2]: https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/develop/report/12-chapter2-requirements.md
-[chapter-3]: https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/develop/report/13-chapter3-requirements-spec.md
-[chapter-4]: https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/develop/report/14-chapter4-product-design.md
-[chapter-5]: https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/develop/report/15-chapter5-product-impl.md
-[backmatter]: https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/develop/report/16-backmatter.md
-
----
 
 ## Student Outcome
 
@@ -218,53 +237,30 @@ El historial y las evidencias de colaboración de AV1 corresponden al repositori
 
 Capacidad de funcionar eficazmente en un equipo cuyos miembros proporcionan liderazgo de forma conjunta, crean un entorno colaborativo e inclusivo, establecen metas, planifican tareas y cumplen objetivos.
 
-<table>
-  <thead>
-    <tr>
-      <th>Criterio específico</th>
-      <th>Acciones realizadas</th>
-      <th>Conclusiones</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td valign="top">
-        <strong>Trabaja en equipo para proporcionar liderazgo en forma conjunta.</strong>
-      </td>
-      <td valign="top">
-        <ul>
-          <li><strong>[TB1] Atauje Barreto, Alexander Sebastián:</strong> Coordinó la distribución de tareas entre los capítulos I al V como Team Leader. Lideró la redacción del Capítulo I, incluyendo Startup Profile, Solution Profile y Lean UX Process, y brindó apoyo en tareas de backend y en la implementación de la Landing Page.</li>
-          <li><strong>[TB1] Bardales Rodriguez, Benjamin Elias:</strong> Lideró el desarrollo del Capítulo IV, incluyendo la arquitectura de software, los diagramas de clases y el diseño de base de datos. Asimismo, condujo la mayor parte de la implementación de la Landing Page con HTML5, CSS3 y JavaScript.</li>
-          <li><strong>[TB1] Daga Chávez, Joaquín Leonardo:</strong> Lideró la documentación del Capítulo III, organizando las User Stories y sus criterios de aceptación. Colaboró en la estructuración del Impact Mapping y del Product Backlog.</li>
-          <li><strong>[TB1] Saavedra Flores, Rodrigo Andree:</strong> Lideró la redacción del Capítulo V, correspondiente a Product Implementation, Validation &amp; Deployment, y colaboró en la implementación y despliegue de la Landing Page.</li>
-          <li><strong>[TB1] Vera Solsol, Nayely Macarena:</strong> Lideró la elaboración del Impact Mapping, participó en la redacción de User Stories por roles de negocio y contribuyó a la priorización y refinamiento del Product Backlog.</li>
-        </ul>
-      </td>
-      <td valign="top">
-        La distribución de responsabilidades permitió compartir el liderazgo técnico y funcional. Los integrantes coordinaron sus aportes para mantener la coherencia entre los requisitos, el diseño, la implementación y la documentación de FríoTrack.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <strong>Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos.</strong>
-      </td>
-      <td valign="top">
-        <ul>
-          <li><strong>[TB1] Atauje Barreto, Alexander Sebastián:</strong> Estableció las metas y el cronograma del equipo, coordinó las reuniones de Sprint Planning y realizó el seguimiento de los entregables. También apoyó en tareas de otros capítulos según las necesidades del equipo.</li>
-          <li><strong>[TB1] Bardales Rodriguez, Benjamin Elias:</strong> Planificó las actividades del Capítulo IV y de la Landing Page, coordinando el diseño técnico y la implementación de la interfaz con los plazos acordados.</li>
-          <li><strong>[TB1] Daga Chávez, Joaquín Leonardo:</strong> Organizó la redacción del Capítulo III, las User Stories y los criterios de aceptación en Gherkin. Participó en la priorización del Product Backlog de acuerdo con la planificación del equipo.</li>
-          <li><strong>[TB1] Saavedra Flores, Rodrigo Andree:</strong> Planificó las actividades de documentación del Capítulo V y coordinó su apoyo en la implementación y despliegue de la Landing Page para contribuir a los objetivos de la entrega.</li>
-          <li><strong>[TB1] Vera Solsol, Nayely Macarena:</strong> Coordinó la incorporación del Impact Mapping en el informe, planificó la redacción de User Stories y participó en la estimación del Product Backlog mediante puntos de historia basados en la secuencia de Fibonacci.</li>
-        </ul>
-      </td>
-      <td valign="top">
-        La planificación y el seguimiento de tareas facilitaron la coordinación de los aportes individuales. El apoyo entre integrantes permitió atender las necesidades del equipo y avanzar hacia los objetivos establecidos para la entrega.
-      </td>
-    </tr>
-  </tbody>
-</table>
+#### Liderazgo compartido
 
----
+| Integrante | AV1: responsabilidades registradas | TB1: acciones y evidencia |
+| --- | --- | --- |
+| Atauje Barreto, Alexander Sebastián | Startup Profile, Lean UX y coordinación del informe. | Capítulo I, navegación e integración del Capítulo V. [5875269](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/58752691c08a90ce27e2d2cf3c8ca0cb5b10565c) |
+| Bardales Rodriguez, Benjamin Elias | Arquitectura, diseño y desarrollo de landing. | Diseño y landing de AV1; sin commits en este conjunto del nuevo informe. Aporte histórico consignado en el registro de versiones. |
+| Daga Chávez, Joaquín Leonardo | Especificación de historias y Gherkin. | Capítulo II, entrevistas, fotografías y enlaces de video. [369cc99](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/369cc991c51dd2424aded38766728918bf27de71) |
+| Saavedra Flores, Rodrigo Andree | Configuración de desarrollo y despliegue de landing. | Portada, Student Outcome e incorporación del Capítulo IV; integración de acceso/API en frontend. [d525d9e](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/d525d9e34c6469488dca96042e610adbd6739b6d) |
+| Vera Solsol, Nayely Macarena | Impact Mapping, historias, backlog y Trello. | User Stories, Impact Mapping, Product Backlog e índice del Capítulo III. [3cc5e02](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/3cc5e023893f00728f4a7d80ea836a7c0451247e) |
+
+La distribución por capítulos mantiene el liderazgo por especialidad. La integración enlaza la investigación y los requisitos con el diseño y con una versión publicada de la aplicación. El historial distingue la elaboración inicial de los artefactos y su incorporación al nuevo informe.
+
+#### Colaboración, metas y cumplimiento de objetivos
+
+| Integrante | Aporte al objetivo de TB1 | Resultado documentado |
+| --- | --- | --- |
+| Atauje Barreto, Alexander Sebastián | Consolidar propuesta, alcance y estructura del trabajo. | Capítulo I e integración de la documentación del Sprint 2. |
+| Bardales Rodriguez, Benjamin Elias | Proporcionar la base de diseño y landing para la aplicación. | Artefactos AV1 conservados y utilizados como referencia; no se registra actividad adicional bajo su cuenta en el nuevo informe. |
+| Daga Chávez, Joaquín Leonardo | Mantener la investigación y sus fuentes en el informe. | Capítulo II, nuevas fotografías y actualización de enlaces de entrevistas. |
+| Saavedra Flores, Rodrigo Andree | Integrar el producto y sus evidencias de ejecución. | Autenticación, API, despliegue Azure y documentación de validación en el repositorio frontend. |
+| Vera Solsol, Nayely Macarena | Relacionar necesidades, historias y prioridades. | Capítulo III con Impact Mapping y Product Backlog. |
+
+La entrega técnica ofrece una aplicación accesible desde Azure y documentación que permite revisar sus resultados. La confirmación de acuerdos del sprint y la evaluación del desempeño deben acompañarse de las actas y del Participant Performance Report del líder. Las contribuciones verificables no sustituyen esos documentos.
+
 # Capítulo I: Introducción
 
 ## 1.1. Startup Profile
@@ -279,7 +275,7 @@ A pesar de este impacto económico, el sector de transporte de carga refrigerada
 
 Esta brecha de trazabilidad origina un problema operativo severo y persistente. Cuando la temperatura de conservación se altera (sea por desperfectos mecánicos en la unidad de refrigeración, aperturas de puerta innecesarias o prolongadas, errores en el empaquetado o picos de calor ambiental en carretera), no existe evidencia técnica e inmediata que permita precisar la hora exacta del incidente, calcular el nivel de afectación de la carga o deslindar la responsabilidad contractual entre los involucrados (transportista, agroexportador y comprador). FríoTrack resuelve esta problemática unificando en un panel interactivo la lectura continua de temperatura y humedad, el posicionamiento geográfico por GPS y la emisión automática de alertas, dotando a los encargados de logística y control de calidad de la información necesaria para coordinar acciones correctivas antes de que la mercadería quede inservible.
 
-A nivel internacional, la Organización de las Naciones Unidas para la Alimentación y la Agricultura (FAO, 2022) advierte que el Perú pierde más de 12 millones de toneladas de alimentos a lo largo de su cadena productiva, y destaca que la automatización y el monitoreo remoto en las etapas de postcosecha y transporte son estrategias clave para reducir las mermas en alimentos con rangos térmicos estrictos. La visión de desarrollo de FríoTrack responde directamente a esta recomendación.
+A nivel internacional, la Organización de las Naciones Unidas para la Alimentación y la Agricultura (FAO, 2026) advierte que el Perú pierde más de 12 millones de toneladas de alimentos a lo largo de su cadena productiva, y destaca que la automatización y el monitoreo remoto en las etapas de postcosecha y transporte son estrategias clave para reducir las mermas en alimentos con rangos térmicos estrictos. La visión de desarrollo de FríoTrack responde directamente a esta recomendación.
 
 En su etapa inicial, FríoTrack enfoca sus operaciones en el mercado peruano. El Ministerio de Transportes y Comunicaciones (MTC, 2023), a través del *Plan Nacional de Servicios e Infraestructura Logística de Transporte al 2032*, identifica 41 corredores logísticos a nivel nacional, de los cuales los que conectan La Libertad, Ica, Piura y Lambayeque con Lima Metropolitana y el Callao concentran una parte importante de las cadenas logísticas del país. FríoTrack prioriza justamente estos corredores como zona de operación inicial, cubriendo el traslado entre las zonas agrícolas y productivas más importantes del país y los terminales portuarios, plantas procesadoras y principales centros de abasto de Lima Metropolitana. A mediano plazo, la infraestructura del sistema contempla la expansión hacia rutas internacionales de transporte terrestre en la región. Toda la plataforma se encuentra optimizada para funcionar fluidamente desde navegadores web en computadoras y dispositivos móviles, presentando una interfaz limpia y accesible pensada para usuarios con diversos niveles de experiencia tecnológica.
 
@@ -307,7 +303,7 @@ FríoTrack es una plataforma web distribuida enfocada en la gestión inteligente
 
 El transporte refrigerado de alimentos en el Perú representa un eslabón determinante dentro de la cadena de valor agroalimentaria y agroexportadora. Un fallo en este proceso genera pérdidas financieras e incrementa riesgos en la inocuidad alimentaria. Como se señaló, el Perú ocupa el puesto 61 de 139 países en el Índice de Desempeño Logístico del Banco Mundial (2023), lo que evidencia que la coordinación de la cadena de suministro y la trazabilidad de la carga refrigerada en el país presentan brechas estructurales frente a otros mercados de la región.
 
-La FAO (2022) señala que el Perú pierde más de 12 millones de toneladas de alimentos a lo largo de la cadena productiva, y que buena parte de esas pérdidas ocurre en etapas donde la ausencia de monitoreo remoto impide corregir a tiempo fallas en la conservación térmica de los productos. Esto es particularmente relevante para alimentos con rangos térmicos estrictos, como los que produce y exporta el Perú (arándanos, palta, uva, productos hidrobiológicos), cuya calidad comercial se deteriora con variaciones de temperatura de pocas horas.
+La FAO (2026) señala que el Perú pierde más de 12 millones de toneladas de alimentos a lo largo de la cadena productiva, y que buena parte de esas pérdidas ocurre en etapas donde la ausencia de monitoreo remoto impide corregir a tiempo fallas en la conservación térmica de los productos. Esto es particularmente relevante para alimentos con rangos térmicos estrictos, como los que produce y exporta el Perú (arándanos, palta, uva, productos hidrobiológicos), cuya calidad comercial se deteriora con variaciones de temperatura de pocas horas.
 
 Para estructurar formalmente la problemática, el equipo desarrolló el análisis **5W's + 2H's**:
 
@@ -344,7 +340,7 @@ Para estructurar formalmente la problemática, el equipo desarrolló el análisi
   * Al iniciar el viaje se ajusta manualmente el equipo refrigerador. Durante el traslado no existen revisiones telemáticas continuas. El conductor nota un fallo solo si la unidad emite sonidos anómalos o cuando se descarga el producto en destino, momento en que el daño a la carga es irreversible y no existen registros para determinar el punto de falla.
 
 * **How Much (¿Cuánto impacta el problema?)**
-  * Más de 12 millones de toneladas de alimentos se pierden a lo largo de la cadena productiva peruana (FAO, 2022).
+  * Más de 12 millones de toneladas de alimentos se pierden a lo largo de la cadena productiva peruana (FAO, 2026).
   * Desecho total o desvalorización comercial de lotes enteros por excursiones térmicas no detectadas.
   * Conflictos comerciales entre generadores de carga y transportistas ante la falta de evidencias objetivas.
   * Descalificación comercial de transportistas que no ofrecen trazabilidad frente a clientes exportadores.
@@ -367,7 +363,7 @@ El ciclo de vida de desarrollo de FríoTrack está sujeto a un conjunto de restr
 * **Restricciones Tecnológicas del Cliente:** el frontend cliente se implementará sobre Vue.js utilizando JavaScript/TypeScript y la librería de componentes PrimeVue, garantizando un diseño alineado a los estándares de Material Design y adaptable a distintos dispositivos.
 * **Restricciones de Integración y Documentación:** el sistema debe consumir un servicio externo de mapas (Google Maps API o Leaflet/OpenStreetMap) para la visualización gráfica de rutas en tiempo real, e integrarse mediante llamadas API RESTful documentadas técnicamente con OpenAPI Specification (OAS) a través de Swagger.
 * **Restricciones de Proceso y Calidad de Código:** el proyecto debe gestionarse bajo el marco de trabajo ágil Scrum. El código fuente debe almacenarse en repositorios dentro de una organización pública en GitHub, aplicando GitFlow, nomenclatura estandarizada en inglés, Conventional Commits, y versionamiento formal bajo Semantic Versioning (SemVer 2.0.0).
-* **Restricciones de Idioma y Accesibilidad:** FríoTrack está diseñado de forma nativa en español para asegurar usabilidad óptima entre transportistas y productores peruanos. No obstante, para alinearse con las directrices de ingeniería globales y los requisitos de acreditación del curso, el sistema se desarrollará con un marco de internacionalización (i18n), con soporte técnico en inglés y español, y atributos ARIA para garantizar la accesibilidad web (a11y).
+* **Restricciones de Idioma y Accesibilidad:** FríoTrack utiliza inglés como idioma inicial y ofrece español latinoamericano para asegurar usabilidad óptima entre transportistas y productores peruanos. No obstante, para alinearse con las directrices de ingeniería globales y los requisitos de acreditación del curso, el sistema se desarrollará con un marco de internacionalización (i18n), con soporte técnico en inglés y español, y atributos ARIA para garantizar la accesibilidad web (a11y).
 
 ### 1.2.2. Lean UX Process
 
@@ -386,7 +382,7 @@ El ciclo de vida de desarrollo de FríoTrack está sujeto a un conjunto de restr
 #### 1.2.2.2. Lean UX Assumptions
 
 **Business Assumptions**
-1. Creemos que existe un mercado de empresas de transporte refrigerado, productores agrícolas y agroexportadores en el Perú dispuestos a adoptar una plataforma digital de monitoreo térmico, dado el impacto de las pérdidas de alimentos reportadas por la FAO (2022) y las brechas de desempeño logístico señaladas por el Banco Mundial (2023).
+1. Creemos que existe un mercado de empresas de transporte refrigerado, productores agrícolas y agroexportadores en el Perú dispuestos a adoptar una plataforma digital de monitoreo térmico, dado el impacto de las pérdidas de alimentos reportadas por la FAO (2026) y las brechas de desempeño logístico señaladas por el Banco Mundial (2023).
 2. Creemos que un modelo de negocio basado en suscripción mensual por volumen de flota es viable y comercialmente aceptable para las PYMEs del sector logístico.
 3. Creemos que FríoTrack puede diferenciarse de las soluciones de rastreo GPS genéricas mediante su enfoque especializado en trazabilidad térmica, su estructura de costos accesible y una interfaz simplificada.
 4. Creemos que la integración con sensores IoT de temperatura/humedad y con servicios externos de geolocalización es técnicamente factible dentro del alcance del proyecto.
@@ -481,7 +477,7 @@ El Lean UX Canvas es una herramienta ágil que sintetiza los elementos clave del
 
 ## 1.3. Segmentos objetivo
 
-La delimitación de los segmentos objetivo de FríoTrack responde al diagnóstico sobre las falencias en el transporte terrestre de productos perecibles descritas por la FAO (2022) y el Banco Mundial (2023), la factibilidad de contacto directo para las fases de validación operativa, y el mapa de corredores logísticos identificado por el MTC (2023). A partir de este análisis, se han estructurado dos grupos clave de usuarios cuyos roles interactúan de forma directa y complementaria a lo largo de la cadena de suministro agroalimentaria:
+La delimitación de los segmentos objetivo de FríoTrack responde al diagnóstico sobre las falencias en el transporte terrestre de productos perecibles descritas por la FAO (2026) y el Banco Mundial (2023), la factibilidad de contacto directo para las fases de validación operativa, y el mapa de corredores logísticos identificado por el MTC (2023). A partir de este análisis, se han estructurado dos grupos clave de usuarios cuyos roles interactúan de forma directa y complementaria a lo largo de la cadena de suministro agroalimentaria:
 
 ---
 
@@ -513,7 +509,7 @@ Este segmento reúne a los actores de la cadena comercial que despachan o recepc
 El perfil de los profesionales que conforman este segmento abarca un rango etario que va de los 28 a los 60 años. Geográficamente, la actividad se concentra en Lima Metropolitana y en los valles agrícolas de alta productividad dedicados a la exportación —La Libertad, Ica, Piura y Lambayeque—, en línea con el crecimiento de las exportaciones agropecuarias no tradicionales reportado por el INEI (2023). La composición académica y la tipología de negocio son heterogéneas, abarcando desde supervisores de campo con formación técnica hasta gerentes de calidad y logística con estudios universitarios de grado y posgrado. Se trata de organizaciones que mueven volúmenes constantes de carga refrigerada y cuyo nivel de operación está condicionado por la observancia de normas y certificaciones internacionales de inocuidad alimentaria.
 
 **Características psicográficas y conductuales**
-Existe una marcada sensibilidad hacia la variable del tiempo y el control de la temperatura, dado que cualquier alteración en la refrigeración compromete de forma directa la vida útil, el valor comercial y la inocuidad del producto. Esta situación genera una constante frustración operativa ante la falta de comunicación proactiva por parte de las empresas de transporte respecto a las condiciones de la carga en tránsito. En comparación con el sector transportista, este segmento exhibe una mayor familiaridad con herramientas digitales de gestión de datos e implementación de sistemas de calidad. Asimismo, demuestran un claro interés por adoptar tecnologías que reduzcan la incertidumbre dentro de sus cadenas de suministro, en un contexto donde la FAO (2022) señala la trazabilidad térmica como un factor crítico para reducir pérdidas de alimentos.
+Existe una marcada sensibilidad hacia la variable del tiempo y el control de la temperatura, dado que cualquier alteración en la refrigeración compromete de forma directa la vida útil, el valor comercial y la inocuidad del producto. Esta situación genera una constante frustración operativa ante la falta de comunicación proactiva por parte de las empresas de transporte respecto a las condiciones de la carga en tránsito. En comparación con el sector transportista, este segmento exhibe una mayor familiaridad con herramientas digitales de gestión de datos e implementación de sistemas de calidad. Asimismo, demuestran un claro interés por adoptar tecnologías que reduzcan la incertidumbre dentro de sus cadenas de suministro, en un contexto donde la FAO (2026) señala la trazabilidad térmica como un factor crítico para reducir pérdidas de alimentos.
 
 **Puntos de dolor (Pain Points)**
 * Incertidumbre sobre el mantenimiento del rango térmico adecuado en los productos recibidos al concluir el traslado.
@@ -942,6 +938,8 @@ En cuarto lugar, respecto a la viabilidad comercial, la disposición a pagar est
 
 ## 2.3. Needfinding
 
+Las entrevistas de esta sección exploran conservación, distribución e inventario. Sus personas y mapas se conservan como resultados de esa investigación. El producto implementado se concentra en transporte refrigerado y utiliza los perfiles de Coordinador Logístico y Cliente de Carga del Capítulo I; la validación específica de estos perfiles se debe ampliar antes de trasladar hallazgos de inventario al alcance de transporte.
+
 Para realizar el proceso de *needfinding* en **FrioTrack**, se llevaron a cabo entrevistas en profundidad con actores clave de los segmentos objetivo. Estas incluyeron representantes de empresas distribuidoras de productos perecibles, así como propietarios y administradores de tiendas y bodegas. Las entrevistas permitieron conocer sus actividades diarias, métodos de control de inventario y principales dificultades relacionadas con la conservación de productos, el control de temperatura, el vencimiento y las pérdidas de productos perecibles.
 
 A partir de esta exploración, se identificaron oportunidades de mejora relacionadas con el uso de controles manuales, la falta de supervisión continua, las dificultades para realizar un seguimiento adecuado del inventario y el acceso limitado a herramientas tecnológicas sencillas. También se evidenció una diferencia entre el registro de información y la capacidad de tomar decisiones preventivas de manera oportuna.
@@ -1017,7 +1015,7 @@ De esta manera, se identificó una oportunidad para desarrollar **FrioTrack**, u
   <img src="assets/images/chapter-02/empathy-mapping-seg2.jpg" alt="Empathy Mapping - Segmento 2" width="600">
 </div>
 
-### 2.4. Big Picture EventStorming
+## 2.4. Big Picture EventStorming
 
 En la sesión de **Big Picture EventStorming**, el equipo exploró de forma visual el panorama general del dominio de **FrioTrack**, enfocado en la telemetría IoT para la cadena de frío y la gestión de inventarios de productos perecibles. Se identificaron los principales eventos del ciclo de vida de los productos, desde la recepción e ingreso de la mercadería hasta su despacho, considerando el monitoreo de las condiciones de almacenamiento y transporte.
 
@@ -1027,10 +1025,10 @@ Asimismo, se identificaron los sistemas externos que interactúan con la platafo
 
 <div align="center">
   <img src="assets/images/chapter-02/big-picture.jpg" alt="Big Picture EventStorming - FrioTrack" width="600">
-  <p><i>Figura X. Big Picture EventStorming del proyecto FrioTrack.</i></p>
+  <p><i>Figura 2.1. Big Picture EventStorming exploratorio de FríoTrack.</i></p>
 </div>
 
-### 2.5. Ubiquitous Language
+## 2.5. Ubiquitous Language
 
 El **Ubiquitous Language** de **FrioTrack** establece un lenguaje común entre los integrantes del equipo y los usuarios del sistema. Los siguientes términos representan los conceptos principales del dominio de monitoreo de la cadena de frío y gestión de productos perecibles.
 
@@ -1136,6 +1134,12 @@ El **Ubiquitous Language** de **FrioTrack** establece un lenguaje común entre l
 | **TS06** | Endpoint de exportación de reportes | Como **developer**, quiero implementar un endpoint en la API que compile y exporte datos históricos en archivos estructurados. | - **Escenario 1:** Dado que el cliente solicita la exportación de un envío concluido, cuando genera el archivo, entonces retorna el flujo de bytes para descarga con HTTP 200 OK. <br>- **Escenario 2:** Dado que el ID del envío solicitado no existe o no ha finalizado, cuando procesa la solicitud, entonces responde HTTP 404 Not Found. | EP07 |
 | **TS07** | Documentación Swagger OpenAPI | Como **developer**, quiero configurar la especificación OpenAPI mediante Swagger para documentar los endpoints. | - **Escenario 1:** Dado que la aplicación arranca en desarrollo, cuando inicializa el middleware Swagger, entonces la interfaz gráfica se muestra accesible en la ruta `/swagger`. <br>- **Escenario 2:** Dado que la aplicación arranca en entorno de producción, cuando intenta invocar la ruta de documentación, entonces el sistema bloquea el acceso respondiendo HTTP 403 Forbidden. | EP07 |
 
+| **US31** | Planes y acceso desde la Landing | Como **visitante**, quiero consultar los planes y acceder a la aplicación con el idioma seleccionado. | - **Escenario 1:** Dado que el visitante elige su segmento e idioma, cuando abre el acceso, entonces llega al login público con role y lang conservados. <br>- **Escenario 2:** Dado que el servicio de acceso no responde, cuando intenta ingresar, entonces conserva la landing y muestra un enlace recuperable. | EP06 |
+| **US32** | Registro de Cliente de Carga | Como **cliente de carga**, quiero crear mi cuenta para consultar los envíos que me asignen. | - **Escenario 1:** Dado que los datos son válidos y acepta términos, cuando envía el registro, entonces la API crea una cuenta cargo-client e inicia sesión. <br>- **Escenario 2:** Dado que se solicita un rol de coordinador, cuando procesa el registro público, entonces rechaza la elevación con HTTP 403. | EP05 |
+| **US33** | Programación de envío refrigerado | Como **coordinador logístico**, quiero programar carga, ruta, fechas, cliente y recursos con rangos ambientales. | - **Escenario 1:** Dado que todos los datos son válidos y los recursos están disponibles, cuando confirma, entonces guarda el envío y reserva los recursos. <br>- **Escenario 2:** Dado que la capacidad es insuficiente o hay solapamiento, cuando confirma, entonces rechaza el envío sin reservar parcialmente. | EP04 |
+| **US34** | Gestión de estados del envío | Como **coordinador logístico**, quiero iniciar, entregar o cancelar un envío con historial. | - **Escenario 1:** Dado que un envío programado cumple las condiciones de inicio, cuando inicia el viaje, entonces pasa a in-transit y registra el evento. <br>- **Escenario 2:** Dado que un envío está en tránsito o entregado, cuando solicita cancelarlo, entonces rechaza la cancelación. | EP04 |
+| **US35** | Registro de acción correctiva | Como **coordinador logístico**, quiero registrar una acción ante una alerta y conservar su trazabilidad. | - **Escenario 1:** Dado que la alerta existe y el comentario es válido, cuando guarda la acción, entonces registra autor y fecha y reconoce la alerta sin cerrarla. <br>- **Escenario 2:** Dado que el comentario está vacío, cuando intenta guardar, entonces rechaza la acción y solicita completar el campo. | EP02 |
+| **US36** | Consulta de envíos del Cliente de Carga | Como **cliente de carga**, quiero consultar únicamente mis envíos, lecturas, alertas e historial. | - **Escenario 1:** Dado que la sesión cliente es válida, cuando consulta el workspace, entonces recibe solo sus envíos y recursos relacionados. <br>- **Escenario 2:** Dado que el cliente solicita una operación de coordinación, cuando el servidor verifica el rol, entonces responde HTTP 403. | EP03 |
 
 ## 3.2. Impact Mapping
 <img src="assets/images/chapter-03/impact_mapping01.png" alt="Impact Mapping de FríoTrack" width="100%">
@@ -1185,6 +1189,12 @@ El **Ubiquitous Language** de **FrioTrack** establece un lenguaje común entre l
 | **36** | TS06 | Endpoint de exportación de reportes | Como **developer**, quiero implementar un endpoint en la API que compile y exporte datos históricos en archivos estructurados. | 5 |
 | **37** | TS07 | Documentación Swagger OpenAPI | Como **developer**, quiero configurar la especificación OpenAPI mediante Swagger para documentar los endpoints. | 2 |
 
+| **38** | US31 | Planes y acceso desde la Landing | Como **visitante**, quiero consultar los planes y acceder a la aplicación con el idioma seleccionado. | 2 |
+| **39** | US32 | Registro de Cliente de Carga | Como **cliente de carga**, quiero crear mi cuenta para consultar los envíos que me asignen. | 3 |
+| **40** | US33 | Programación de envío refrigerado | Como **coordinador logístico**, quiero programar carga, ruta, fechas, cliente y recursos con rangos ambientales. | 5 |
+| **41** | US34 | Gestión de estados del envío | Como **coordinador logístico**, quiero iniciar, entregar o cancelar un envío con historial. | 3 |
+| **42** | US35 | Registro de acción correctiva | Como **coordinador logístico**, quiero registrar una acción ante una alerta y conservar su trazabilidad. | 3 |
+| **43** | US36 | Consulta de envíos del Cliente de Carga | Como **cliente de carga**, quiero consultar únicamente mis envíos, lecturas, alertas e historial. | 5 |
 
 ## Referencia y Enlace Público
 - **Herramienta de gestión:** Trello
@@ -1529,7 +1539,7 @@ Los títulos se limitan a un máximo aproximado de 60 caracteres y las descripci
   <meta property="og:site_name" content="FríoTrack">
   <meta property="og:title" content="FríoTrack | Monitoreo de la cadena de frío en transporte">
   <meta property="og:description" content="Sabe en todo momento si tu carga refrigerada sigue en rango.">
-  <meta property="og:image" content="https://upc-pre-202620-1asi0730-8088-friotrack.github.io/friotrack-landing/assets/images/og-friotrack.png">
+  <meta property="og:image" content="https://friotracktb1bce6db1b.z22.web.core.windows.net/landing/assets/images/og-friotrack.png">
   <meta name="twitter:card" content="summary_large_image">
 </head>
 ```
@@ -1685,7 +1695,7 @@ La información geográfica indica de forma explícita si corresponde a una ruta
 
 La Landing Page es la primera interacción de un potencial usuario con FríoTrack. Su diseño busca que el visitante comprenda en pocos segundos qué problema resuelve la plataforma, para quién está pensada y cómo comenzar. Para lograrlo se recurre a un recorrido vertical de doce secciones que se puede recorrer con la vista, en línea con la observación de Krug (2014) de que los usuarios de la web escanean las páginas en lugar de leerlas completas. Cada sección tiene un único propósito y un titular que se entiende por sí solo, y la barra de navegación permite saltar directamente a las secciones principales.
 
-La Landing Page se implementó con HTML, CSS y JavaScript sin bibliotecas externas y se publica en el repositorio [`friotrack-landing`](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/friotrack-landing) del equipo, con el sitio disponible en [GitHub Pages](https://upc-pre-202620-1asi0730-8088-friotrack.github.io/friotrack-landing/). Las capturas de este capítulo corresponden a esa implementación, de modo que el diseño que se documenta es el mismo que se entrega. La franja de cargas que se ubica bajo el héroe se documenta dentro de la sección 1, porque forma con él un solo bloque visual, y por eso el recorrido se mantiene en doce secciones.
+La Landing Page se implementó con HTML, CSS y JavaScript sin bibliotecas externas y se publica en el repositorio [`friotrack-landing`](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-landing) del equipo, con el sitio disponible en [GitHub Pages](https://friotracktb1bce6db1b.z22.web.core.windows.net/landing/). Las capturas de este capítulo corresponden a esa implementación, de modo que el diseño que se documenta es el mismo que se entrega. La franja de cargas que se ubica bajo el héroe se documenta dentro de la sección 1, porque forma con él un solo bloque visual, y por eso el recorrido se mantiene en doce secciones.
 
 **Tabla 4.15**
 
@@ -2044,7 +2054,7 @@ La Landing Page incluye interacciones que los mock-ups estáticos no muestran. L
 
 *Nota.* Elaboración propia.
 
-**Verificación.** No se dispone de scripts ni resultados que respalden la afirmación histórica de “72 comprobaciones”; se retira. Las verificaciones realizadas para TB1 se registran con resultados y límites en el capítulo V y en `work/verification-results.json` dentro del ZIP compartido del avance. No equivalen a evaluación con usuarios ni a certificación WCAG.
+**Verificación.** Las comprobaciones de la implementación están documentadas en el Capítulo V y en los registros de pruebas adjuntos. La evaluación con usuarios y la auditoría integral de accesibilidad requieren evidencias específicas.
 
 ## 4.4. Web Applications UX/UI Design
 
@@ -2667,8 +2677,8 @@ El recorrido que se muestra en la Figura 4.86 sigue el camino principal del Coor
 | :--- | :--- |
 | Prototipo interactivo en HTML (archivo del repositorio) | [`assets/prototype/friotrack-prototype.html`](assets/prototype/friotrack-prototype.html). Para verlo, descargue el archivo y ábralo en un navegador. |
 | Archivo de Figma del Bloque 4 (Product Design) | [figma.com/design/eJ6Ceq0H0FP0xWseNnKFFv](https://www.figma.com/design/eJ6Ceq0H0FP0xWseNnKFFv). Contiene las páginas Portada, 4.1 Style Guidelines, 4.2 IA y User Flows, 4.3 Landing Page y 4.5 Web App (wireframes y mock-ups). Las capturas de cada página están en [`assets/figma/capturas/`](assets/figma/README.md) y los archivos SVG de origen en [`assets/figma/svg/`](assets/figma/README.md). |
-| Landing Page publicada (GitHub Pages) | [upc-pre-202620-1asi0730-8088-friotrack.github.io/friotrack-landing](https://upc-pre-202620-1asi0730-8088-friotrack.github.io/friotrack-landing/) |
-| Repositorio de la Landing Page | [github.com/upc-pre-202620-1asi0730-8088-FrioTrack/friotrack-landing](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/friotrack-landing) |
+| Landing Page publicada (Azure) | [FríoTrack Landing Page](https://friotracktb1bce6db1b.z22.web.core.windows.net/landing/) |
+| Repositorio de la Landing Page | [github.com/upc-pre-202620-1asi0730-8088-FrioTrack/friotrack-landing](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-landing) |
 | Video demostrativo del prototipo | Pendiente de completar por el equipo. |
 
 ## 4.6. Domain-Driven Software Architecture
@@ -2788,7 +2798,7 @@ El diagrama general presenta los eventos de dominio de los cinco contextos organ
 
 #### BC1 · IAM (Identity & Access Management)
 
-El contexto IAM cubre el ciclo de vida de la cuenta. El registro exige un correo único y una contraseña de al menos ocho caracteres con letras y números, y al concluir se envía un correo de confirmación mediante el servicio de correo. Cada inicio de sesión exitoso redirige al usuario según su perfil: al Dashboard, si es Coordinador Logístico, o a Envíos por recibir, si es Cliente de Carga. Tras cinco intentos fallidos consecutivos se bloquea la cuenta. La recuperación de contraseña envía un enlace sin revelar si el correo existe, con el fin de no facilitar la enumeración de cuentas.
+El diseño objetivo del contexto IAM cubre el ciclo de vida de la cuenta. La API de TB1 exige un correo único, contraseña de al menos doce caracteres y consentimiento para el registro público de Cliente de Carga. El correo de confirmación y la recuperación pertenecen al diseño posterior. Cada inicio de sesión exitoso redirige al usuario según su perfil: al Dashboard, si es Coordinador Logístico, o a Envíos por recibir, si es Cliente de Carga. En la API actual, login y registro están limitados a quince solicitudes por minuto e IP; el bloqueo por cuenta es una política prevista. La recuperación de contraseña envía un enlace sin revelar si el correo existe, con el fin de no facilitar la enumeración de cuentas.
 
 **Figura 4.88**
 
@@ -2814,7 +2824,7 @@ Este contexto gestiona los recursos físicos de la empresa de transporte. Sus re
 
 #### BC3 · Shipment Management
 
-Este es el contexto central del negocio. El diseño previsto permite al Coordinador Logístico definir un borrador con su rango térmico y luego programarlo; el borrador persistido sigue fuera de la demo local. Al programar, la política del contexto solicita la reserva de recursos: si se reservan, se avisa al Cliente de Carga; si no están disponibles, no se confirma la programación. Esta secuencia corresponde al flujo 1 de la sección 4.4.4. Antes del tránsito puede cancelarse el envío programado y liberar la reserva. Al iniciar el traslado se abre el monitoreo; la entrega lo detiene y libera los recursos. No se permite cancelar un envío en tránsito ni entregado.
+Este es el contexto central del negocio. El diseño previsto permite al Coordinador Logístico definir un borrador con su rango térmico y luego programarlo; el borrador persistido queda fuera de la implementación TB1. Al programar, la política del contexto solicita la reserva de recursos: si se reservan, se avisa al Cliente de Carga; si no están disponibles, no se confirma la programación. Esta secuencia corresponde al flujo 1 de la sección 4.4.4. Antes del tránsito puede cancelarse el envío programado y liberar la reserva. Al iniciar el traslado se abre el monitoreo; la entrega lo detiene y libera los recursos. No se permite cancelar un envío en tránsito ni entregado.
 
 **Figura 4.90**
 
@@ -2902,19 +2912,20 @@ El diagrama de contenedores (nivel 2 del modelo C4) descompone FríoTrack en sus
 | :--- | :--- | :--- | :--- |
 | **Landing Page** | HTML, CSS y JavaScript, sitio estático | Presentar la propuesta de valor y dirigir al registro o al inicio de sesión. | Contenido público que no requiere lógica de servidor y que se sirve de forma estática y rápida. |
 | **Aplicación web (SPA)** | Vue 3, Vite, PrimeVue, Leaflet | Interfaz del Coordinador Logístico y del Cliente de Carga: dashboard, envíos, alertas, historial y reportes. | Vue 3 y Vite permiten una interfaz reactiva; PrimeVue (PrimeTek, s. f.) aporta los componentes descritos en la sección 4.1.2; Leaflet (Agafonkin, s. f.) dibuja los mapas con las teselas de OpenStreetMap. |
-| **API web** | ASP.NET Core Web API, C# | Aplicar las reglas de negocio, autenticar con JWT, recibir las lecturas de los sensores, evaluar alertas y generar los reportes PDF. | Centraliza las reglas del dominio en un único lugar; los tokens JWT (Jones et al., 2015) permiten autenticar sin mantener sesión en el servidor; la API se documenta con OpenAPI. |
-| **Base de datos** | PostgreSQL | Almacenar usuarios, flota, envíos, lecturas, alertas, notificaciones y reportes. | Base relacional con integridad referencial, tipos para fecha y hora con zona horaria y soporte de campos JSON (The PostgreSQL Global Development Group, s. f.). |
+| **API de apoyo** | ASP.NET Core, C#, .NET 10 | Validar credenciales, sesiones, permisos y comandos; filtrar la información por cliente. | Servidor publicado en App Service; token opaco de sesión y persistencia JSON. |
+| **Almacén implementado** | Archivo JSON privado | Conservar cuentas, sesiones y operaciones en una sola instancia. | Archivo fuera del hosting público; reemplazo relacional previsto para el backend objetivo. |
+| **Base de datos objetivo** | PostgreSQL (diseño) | Almacenar usuarios, flota, envíos, lecturas, alertas, notificaciones y reportes. | Base relacional con integridad referencial, tipos para fecha y hora con zona horaria y soporte de campos JSON (The PostgreSQL Global Development Group, s. f.). |
 | **OpenStreetMap** | Sistema externo | Proveer las teselas del mapa. | Alternativa abierta que no exige licencia comercial de mapas. |
 | **Sensores** | Sistema externo | Reportar lecturas y posiciones. | Cada unidad lleva un sensor asignado en el contexto Fleet & Resource Management. |
 | **Servicio de correo** | Sistema externo | Entregar correos transaccionales. | Evita operar un servidor de correo propio. |
 
 *Nota.* Elaboración propia.
 
-En la arquitectura objetivo, la aplicación web usa REST/JSON sobre HTTPS y credenciales emitidas por IAM. Una aplicación web describe el producto que utiliza el navegador; SPA describe su estrategia de navegación y renderizado del cliente. El contenedor cliente será una aplicación Vue de tipo SPA, separado del contenedor de API y de la landing. En TB1 la aplicación usa un repositorio local de demostración; aún no emite JWT ni consume una API interna desplegada. Los sensores envían sus lecturas a un punto de acceso específico de la API. La API es el único contenedor que accede a la base de datos y a los sistemas externos de correo, de modo que las credenciales y las reglas de negocio no se exponen al navegador.
+La aplicación Vue consume la API de apoyo mediante HTTPS y JSON. El servidor valida credenciales, emite tokens opacos, filtra el workspace por cliente y procesa comandos autorizados. La API persiste en un archivo JSON privado. El diseño de backend final añade EF Core, PostgreSQL, OpenAPI, sensores y correo; esos componentes se diferencian de la implementación de TB1.
 
 ### 4.6.4. Software Architecture Component Diagrams
 
-Se separan los componentes del contenedor cliente y del contenedor API según los cinco Bounded Contexts. Los diagramas describen responsabilidades y contratos; el backend es un diseño pendiente de implementación y la primera aplicación cliente usa almacenamiento local de prueba. Las fuentes editables están en `assets/architecture/`: Mermaid, PlantUML y Structurizr DSL. Su traslado a la herramienta solicitada por el curso y las capturas compartidas siguen pendientes.
+Se separan los componentes del cliente y del backend objetivo por sus responsabilidades. El frontend actual utiliza el adaptador HTTP de workspace y sesión. Las fuentes editables de esta sección están en `assets/architecture/`; el diseño por capas del backend final se mantiene como evolución de la API de apoyo desplegada.
 
 #### 4.6.4.1. Componentes del frontend
 
@@ -2922,15 +2933,15 @@ Se separan los componentes del contenedor cliente y del contenedor API según lo
 
 | Contexto/componente | Tecnología | Responsabilidad | Relación |
 |---|---|---|---|
-| IAM: Access/Profile views | Vue y PrimeVue | Selección de perfil demo y preferencias; registro y login de diseño | AppStore obtiene el perfil demo; autenticación servidor pendiente |
+| IAM: Access/Profile views | Vue y PrimeVue | Login con credenciales, registro de cliente y preferencias | API verifica identidad y asigna rol; sesión en sessionStorage |
 | Fleet: Resource views | Vue, formularios PrimeVue | Crear/editar vehículos y conductores, asociar sensores de prueba | Valida unicidad y disponibilidad en operations.js |
-| Shipment: List/Detail/Wizard views | Vue y PrimeVue | Programar en cuatro pasos, cambiar estados permitidos y buscar | AppStore coordina validación y persistencia local |
+| Shipment: List/Detail/Wizard views | Vue y PrimeVue | Programar en cuatro pasos, cambiar estados permitidos y buscar | El adaptador HTTP envía comandos; API valida y persiste |
 | Monitoring: Reading/Map components | Vue y Leaflet | Lecturas y ubicaciones de ejemplo, rango térmico y señal | Lecturas demo; teselas OpenStreetMap vía HTTPS |
-| Alert & Reporting: Alert/History views | Vue | Acciones correctivas, avisos internos e historial de prueba | Aplica permisos del perfil; exportación identificada como demo |
-| AppStore / LocalDemoRepository | JavaScript y localStorage | Estado reactivo y persistencia local con versión | Adaptador sustituible por HTTP en AV2; no frontera de seguridad |
+| Alert & Reporting: Alert/History views | Vue | Acciones correctivas, avisos internos e historial de prueba | API verifica permisos; exportación identifica datos de prueba |
+| Workspace repository | JavaScript, fetch y sessionStorage | Estado reactivo, sesión y comandos HTTP | Conecta con API ASP.NET Core; la autorización reside en servidor |
 | Shared UI / i18n / navigation | Vue, PrimeVue y JavaScript | Layout, foco, rutas hash e inglés/español | Utilizado por todas las vistas |
 
-La autorización local evita acciones incompatibles durante la demostración; un usuario puede manipular el navegador. La API futura validará identidad, tenant y permisos en cada solicitud. No se representan reglas del dominio como componentes de UI ni se declara que localStorage sea una base de datos compartida.
+La interfaz limita los controles según el perfil y la API verifica la autorización en cada solicitud. El cliente recibe únicamente sus envíos y recursos relacionados. El aislamiento por organización y las transacciones relacionales forman parte del backend objetivo; no se atribuyen al almacén JSON actual.
 
 #### 4.6.4.2. Componentes del backend
 
@@ -2958,11 +2969,11 @@ La landing tiene contenido/estilo (`index.html`, CSS), internacionalización (`i
 
 ### 4.7.1. Class Diagrams
 
-**Estado:** los diagramas backend y de base de datos representan diseño. Las clases no acreditan API ni PostgreSQL ejecutándose. Para el cliente se añade una especificación UML editable en `assets/architecture/frontend-classes.puml`, con modelos, enumeraciones, contrato de repositorio, visibilidad y multiplicidades. La fuente editable utiliza la alternativa Diagram-as-Code permitida en el statement; su importación por el equipo no acredita compilación ni ejecución del producto.
+**Estado:** los diagramas de backend y base de datos describen el diseño objetivo. El cliente utiliza un módulo JavaScript de sesión y workspace; su modelo lógico actual se muestra a continuación. Las fuentes PlantUML y Mermaid permiten revisar relaciones y responsabilidades sin confundirlas con clases JavaScript implementadas.
 
 #### Modelo del cliente TB1
 
-El UML representa un **modelo lógico de objetos y módulos JavaScript**, no clases, interfaces de JavaScript con comprobación de tipos ni inyección de dependencias implementadas. `AppStore` abstrae el estado y comandos de `demo-repository.js`; `Operations` representa funciones exportadas de `operations.js`; `IDemoRepository` expresa un contrato de diseño. Los objetos reales de la demo se organizan en arreglos y se guardan en localStorage.
+El UML representa un modelo lógico de objetos y módulos JavaScript. El módulo `workspace-repository.js` mantiene referencias reactivas `data` y `profile` y expone login, register, logout, execute y restoreSession. Envía solicitudes HTTPS a la API; los objetos de envíos y lecturas recibidos alimentan las vistas. Las reglas de dominio del cliente se conservan en `operations.js` y la validación del servidor en `api/Operations.cs`.
 
 **Modelo del cliente TB1 · aplicación y acceso**
 
@@ -2976,17 +2987,17 @@ El envío referencia una unidad, conductor y cliente por sus IDs; conserva ruta,
 
 La acción correctiva reconoce una alerta; su estado sigue abierto hasta que una nueva lectura de ejemplo cumple ambos rangos. Los avisos opcionales se dirigen al cliente asignado. Las enumeraciones reflejan valores de diseño y estados derivados, sin inventar autenticación. Los SVG se generaron localmente y se revisaron visualmente; **no son capturas de PlantUML ni de una herramienta compartida**. La fuente PlantUML queda disponible para importación y revisión del equipo.
 
-El diseño del backend propone clases y agregados para los cinco contextos de la sección 4.6. La fuente editable es [backend-classes-tb1.puml](assets/architecture/backend-classes-tb1.puml); el catálogo común de entidades, atributos, relaciones y restricciones se conserva en [backend-model-tb1.json](assets/architecture/backend-model-tb1.json). Las figuras son **dibujos vectoriales programáticos de esa especificación**, revisados localmente. No se ejecutó el compilador PlantUML ni se implementaron estas clases, la API o PostgreSQL. Se utiliza la alternativa Diagram-as-Code admitida por el statement, página 29.
+El diseño del backend propone agregados para los cinco contextos de 4.6. La fuente [backend-classes-tb1.puml](assets/architecture/backend-classes-tb1.puml) y el [catálogo de entidades](assets/architecture/backend-model-tb1.json) documentan relaciones y restricciones del modelo objetivo. Las figuras son vistas SVG de ese modelo; la API de apoyo desplegada no implementa todavía toda esta estructura ni PostgreSQL.
 
 En UML, `−` indica un atributo privado y `+` una operación pública. El rombo de `Shipment` a `ThermalRange` indica composición; las asociaciones por ID y sus multiplicidades representan vínculos del diseño. Los colores agrupan contextos. Para mantener legibilidad, se dividen los modelos en cuatro paneles: recursos, envío, monitoreo y alertas. Las figuras muestran asociaciones principales; la fuente editable y la Tabla 4.32 contienen las 27 relaciones persistentes, incluidas las que atraviesan paneles.
 
 Se proponen las siguientes decisiones:
 
-- `Organization` identifica la empresa de transporte. Las cuentas, unidades, conductores y envíos referencian esa empresa; el servidor futuro deberá verificar empresa, rol y permiso para cada operación. La cadena `organization` de los perfiles de la demo local no equivale a esta normalización ni acredita aislamiento entre empresas.
+- `Organization` identifica la empresa de transporte. Las cuentas, unidades, conductores y envíos referencian esa empresa; el servidor futuro deberá verificar empresa, rol y permiso para cada operación. La cadena `organization` de los perfiles de la API de apoyo no equivale a esta normalización ni acredita aislamiento entre empresas.
 - Las asociaciones entre agregados se expresan mediante IDs. `FleetAllocation` reserva unidad y conductor para el intervalo del envío, y `ShipmentHistoryEvent` conserva acciones, responsable y fecha. Programar envío y reserva deberá ser una operación atómica que rechace solapamientos y exceso de capacidad.
-- `ThermalRange` contiene **mínimo y máximo de temperatura en °C, mínimo y máximo de humedad relativa en %, y tolerancia en minutos**. `ShipmentMonitoring` recibe una copia al iniciar el monitoreo. Las lecturas históricas se evalúan con esa copia; el diseño no permite reescribir retroactivamente sus límites (US17).
-- El contrato previsto conserva `DRAFT → SCHEDULED → IN_TRANSIT → DELIVERED` y la cancelación de borrador o programado de US34. La demo local admite cancelación únicamente de un envío programado y rechaza cancelación durante tránsito o después de entrega; no persiste borradores. En el diseño, un borrador no reserva recursos; cancelar antes del tránsito libera las reservas existentes y entregar detiene el monitoreo y libera los recursos.
-- JWT corresponde al contrato técnico propuesto TS01; no se presenta como autenticación implementada en TB1. La recuperación con token de uso único, la tolerancia temporal, la severidad y la detección automática de silencio son diseño previsto; las capturas del frontend no acreditan esos servicios.
+- `ThermalRange` contiene **mínimo y máximo de temperatura en °C, mínimo y máximo de humedad relativa en %, y tolerancia en minutos**. `ShipmentMonitoring` recibe una copia al iniciar el monitoreo. Las lecturas históricas se evalúan con esa copia; el diseño no permite reescribir retroactivamente sus límites (US08).
+- El contrato previsto conserva `DRAFT → SCHEDULED → IN_TRANSIT → DELIVERED` y la cancelación de borrador o programado de US34. La implementación TB1 admite cancelación únicamente de un envío programado y rechaza cancelación durante tránsito o después de entrega; no persiste borradores. En el diseño, un borrador no reserva recursos; cancelar antes del tránsito libera las reservas existentes y entregar detiene el monitoreo y libera los recursos.
+- JWT corresponde al contrato técnico propuesto TS05; en TB1 se utilizan tokens opacos de sesión, no JWT. La recuperación con token de uso único, la tolerancia temporal, la severidad y la detección automática de silencio son diseño previsto; las capturas del frontend no acreditan esos servicios.
 
 #### Diagrama de clases 1 · IAM, Fleet & Resource Management y Shipment Management
 
@@ -3004,7 +3015,7 @@ IAM contiene `Organization`, `UserAccount` y `PasswordResetToken`; los roles pre
 
 ![UML backend previsto: envío, cuatro límites, reserva e historial](assets/images/chapter-04/backend-classes-shipment-tb1.svg)
 
-*Nota.* SVG programáticos del modelo previsto; no son capturas del compilador. El [PNG de AV1](assets/images/chapter-04/class-diagram-1.png) se preserva como antecedente y contiene el modelo anterior, sin mínimo de humedad.
+*Nota.* Vistas SVG del modelo de clases previsto. El [PNG de AV1](assets/images/chapter-04/class-diagram-1.png) se preserva como antecedente y contiene el modelo anterior, sin mínimo de humedad.
 
 **Tabla 4.29**
 
@@ -3043,7 +3054,7 @@ IAM contiene `Organization`, `UserAccount` y `PasswordResetToken`; los roles pre
 
 ![UML backend previsto: alerta, acción correctiva, aviso, incidencia e informe](assets/images/chapter-04/backend-classes-alerts-tb1.svg)
 
-*Nota.* SVG programáticos del modelo previsto; no se ejecutó PlantUML. El [PNG de AV1](assets/images/chapter-04/class-diagram-2.png) permanece como antecedente; sus tipos adicionales de alerta no se incorporan al alcance vigente sin una historia que los sustente.
+*Nota.* Vistas SVG del modelo de clases previsto. El [PNG de AV1](assets/images/chapter-04/class-diagram-2.png) permanece como antecedente; sus tipos adicionales de alerta no se incorporan al alcance vigente sin una historia que los sustente.
 
 **Tabla 4.30**
 
@@ -3062,7 +3073,7 @@ IAM contiene `Organization`, `UserAccount` y `PasswordResetToken`; los roles pre
 | `ThermalReport` | Alert & Reporting | Agregado raíz | Conservar referencia de un archivo y resumen generado del envío; no certificar condiciones que carecen de mediciones. |
 | `AlertType` | Alert & Reporting | Enumeración | `TEMPERATURE`, `HUMIDITY`, `NO_SIGNAL`. |
 | `AlertStatus` | Alert & Reporting | Enumeración | `ACTIVE`, `ACKNOWLEDGED`, `RESOLVED`. |
-| `AlertSeverity` | Alert & Reporting | Enumeración | `WARNING`, `CRITICAL`; clasificación temporal prevista en US13, pendiente de integración. |
+| `AlertSeverity` | Alert & Reporting | Enumeración | `WARNING`, `CRITICAL`; clasificación de severidad prevista en US04; su política temporal requiere integración. |
 
 *Nota.* La fuente PlantUML incluye las enumeraciones y sus dependencias; los paneles muestran las entidades y agregados persistentes.
 
@@ -3072,7 +3083,7 @@ Una acción válida cambia la alerta de `ACTIVE` a `ACKNOWLEDGED` y puede genera
 
 ### 4.8.1. Database Diagrams
 
-Se propone un esquema relacional de **17 tablas** para PostgreSQL. La fuente editable [database-tb1.mmd](assets/architecture/database-tb1.mmd) y el catálogo [backend-model-tb1.json](assets/architecture/backend-model-tb1.json) documentan columnas, claves, opcionalidad y 27 relaciones. No se ejecutaron Mermaid, SQL, migraciones ni una instancia de PostgreSQL. Las figuras son vistas vectoriales programáticas por contexto; el esquema responde al modelo de transporte actual y a los dos roles de usuario. `Organization` es una normalización prevista de la empresa, no una seguridad multitenant ya implementada.
+Se propone un esquema relacional de **17 tablas** para PostgreSQL. La fuente [database-tb1.mmd](assets/architecture/database-tb1.mmd) y el [catálogo](assets/architecture/backend-model-tb1.json) documentan columnas, claves y 27 relaciones. Las vistas por contexto corresponden al diseño objetivo; la aplicación TB1 utiliza el almacén JSON privado descrito en 5.2.2.6. La entidad Organization establece un diseño de aislamiento por empresa aún no implementado.
 
 **Figura 4.98**
 
@@ -3125,13 +3136,13 @@ Se propone un esquema relacional de **17 tablas** para PostgreSQL. La fuente edi
 **Decisiones de diseño.** Se proponen las siguientes restricciones y patrones:
 
 - Usar UUID en las tablas de negocio y `bigint` en lecturas y posiciones; usar `timestamptz` para comparar instantes y `numeric` para los valores y límites ambientales.
-- Incluir `min_temp_c`, `max_temp_c`, `min_humidity_pct` y `max_humidity_pct` tanto en `shipments` como en `shipment_monitorings`. Los límites de inicio y la tolerancia forman una copia que conserva la interpretación de las mediciones históricas (US17).
+- Incluir `min_temp_c`, `max_temp_c`, `min_humidity_pct` y `max_humidity_pct` tanto en `shipments` como en `shipment_monitorings`. Los límites de inicio y la tolerancia forman una copia que conserva la interpretación de las mediciones históricas (US08).
 - Validar `min_temp_c < max_temp_c`, `0 ≤ min_humidity_pct < max_humidity_pct ≤ 100` y tolerancia no negativa. El frontend actual acepta temperatura entre −50 y 50 °C; estos son límites operativos del prototipo, no una recomendación universal de conservación. La futura validación deberá conservar los rangos admitidos por el contrato aprobado.
 - Validar peso positivo que no supere capacidad; salida anterior a llegada; origen diferente del destino; recursos habilitados y cliente autorizado. La reserva y programación deberán confirmar ambas asignaciones de forma atómica y rechazar intervalos solapados de unidad o conductor.
 - Aplicar unicidad a placa, licencia, serial, correo y código de envío; prever una asignación de sensor por unidad, una reserva por envío y un monitoreo por envío. La asociación opcional de sensor y los estados de borrador/inicio explican las cardinalidades `0..1`; una reserva liberada permanece para trazabilidad.
 - Limitar mediante `CHECK` los estados y roles previstos; comprobar coordenadas `−90..90` para latitud y `−180..180` para longitud. La severidad temporal y el máximo silencio configurable necesitan validación al integrar telemetría real.
 - Prever índices por empresa y estado del envío, por monitoreo/fecha de lectura, por envío/estado de alerta y por destinatario/fecha de lectura del aviso. Guardar el resumen del informe como `jsonb` conserva su contexto de generación; la copia de límites es una decisión deliberada de trazabilidad.
-- Verificar permisos y pertenencia en el servidor futuro; una FK por sí sola no garantiza que coordinador, cliente y recursos estén autorizados para una empresa. La selección de perfil y localStorage del frontend no sustituyen esa verificación.
+- La API actual verifica sesión, rol y asociación del cliente al envío. El backend relacional deberá añadir pertenencia por empresa; una FK por sí sola no garantiza aislamiento por organización.
 
 Las siguientes relaciones documentan el esquema completo. Las cardinalidades se leen **padre → hija**; una hija con FK no nullable referencia exactamente un padre, y la tabla indica cuántas hijas puede tener ese padre. Las relaciones opcionales especifican ambos extremos.
 
@@ -3179,61 +3190,68 @@ El diseño prevé consultas de envíos autorizados por empresa y cliente, últim
 
 ### 5.1.1. Software Development Environment Configuration
 
-El entorno separa gestión del proyecto, requisitos, diseño, implementación, pruebas y despliegue. El frontend corresponde al stack Vue, JavaScript y PrimeVue indicado en el statement. El backend se mantiene como diseño previsto en ASP.NET Core, C# y Entity Framework Core para las siguientes iteraciones.
+FríoTrack integra una Landing Page, una aplicación Vue para el Coordinador Logístico y el Cliente de Carga, y una API de apoyo en ASP.NET Core. La entrega TB1 publica la landing actualizada y la primera aplicación frontend en Azure. El acceso utiliza cuentas con correo y contraseña; las lecturas y los registros iniciales de transporte son datos de prueba.
 
-| Discipline | Tools / technologies | Application in FríoTrack | Current evidence |
+| Discipline | Tools / technologies | Application in FríoTrack | Evidence |
 | --- | --- | --- | --- |
-| Project Management | Trello y GitHub | Planificar historias, tareas, responsables y revisiones. | Board histórico disponible; actualización Sprint 2 pendiente. |
-| Requirements Management | Markdown, catálogo de historias y Gherkin | Conservar IDs, títulos, criterios y trazabilidad con capítulo III. | Selección propuesta de 15 historias y 55 SP. |
-| Product UX/UI Design | Figma, UXPressia y Miro/FigJam | Validar investigación, flujos, prototipos y modelado colaborativo. | Artefactos previos y borradores; falta trabajo real en herramientas compartidas. |
-| Landing Development | HTML5, CSS3 y JavaScript | Presentar propuesta, corredores, planes y acceso por perfil. | Versión histórica publicada; correcciones fuente y ejecución local. |
-| Frontend Development | Vue 3, JavaScript, PrimeVue 4, Vite y Leaflet | Construir programación, consulta, monitoreo, alertas, flota e historial. | Primera versión local 0.1.0 y fuente publicada. |
-| Backend Development | ASP.NET Core, C#, EF Core; PostgreSQL propuesto | Implementar posteriormente servicios y persistencia compartida. | Diseño AV2; sin API ni base de datos operativas. |
-| Software Testing | Node test runner y navegador | Revisar reglas de dominio, compilación y recorridos observables. | 15 pruebas aprobadas, build y capturas del 07/10/2026. |
-| Software Documentation | Markdown, README y OpenAPI/Swagger previsto | Documentar configuración, alcance y evidencias; OpenAPI cuando existan servicios. | Capítulo y recibos locales; sin Swagger de servicios ejecutados. |
-| Software Deployment | GitHub Pages histórico; AWS o Azure para frontend TB1 | Publicar versiones comprobables y enlazar landing con aplicación. | Compilación preparada; cuenta y publicación cloud pendientes. |
+| Project Management | Trello y GitHub | Product Backlog, tareas y seguimiento del informe. | Tablero y captura en 3.3; historial de commits del repositorio actual. |
+| Requirements Management | Markdown y Gherkin | Historias, criterios de aceptación y trazabilidad del Sprint 2. | Catálogo de 3.1 y backlog de 5.2.2.3. |
+| Product UX/UI Design | Figma y prototipo HTML | Guía visual, wireframes, mock-ups y flujos por perfil. | Artefactos y enlace de diseño de 4.5. |
+| Landing Development | HTML5, CSS3 y JavaScript | Presentación de la propuesta, corredores, planes y acceso a la aplicación. | Landing publicada en Azure Storage. |
+| Frontend Development | Vue 3, JavaScript, PrimeVue 4, Vite y Leaflet | Programación, recursos, monitoreo, alertas, historial y consulta del cliente. | Código integrado en `friotrack-frontend/main`. |
+| Backend Development | C# y ASP.NET Core, .NET 10 | Autenticación, autorización, consulta y comandos de la aplicación. | API publicada en Azure App Service; código en `friotrack-frontend/api`. |
+| Software Testing | Node test runner y pruebas HTTP | Reglas de dominio, autenticación, aislamiento por cliente y validaciones. | 15 pruebas frontend y 26 comprobaciones API locales; 12 comprobaciones HTTPS del servicio publicado. |
+| Software Documentation | Markdown, Mermaid y PlantUML | Informe, configuración, contratos y diseños editables. | Informe y fuentes en este repositorio; contratos del servicio en 5.2.2.6. |
+| Software Deployment | Azure Storage y Azure App Service | Hosting estático y ejecución del servicio de apoyo. | Configuración y verificaciones en 5.2.2.7. |
+
+El backend objetivo del producto contempla EF Core, PostgreSQL y OpenAPI. La API de apoyo de esta iteración persiste en un archivo JSON privado de una sola instancia; esas tecnologías del diseño final no se presentan como implementadas.
 
 ### 5.1.2. Source Code Management
 
-Los productos se organizan en cuatro repositorios de la organización de FríoTrack. El frontend es la aplicación web de TB1: no se necesita otro repositorio para la misma aplicación.
+La organización del equipo es [upc-pre-202620-1asi0730-8088-FrioTrackk](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk). Los enlaces siguientes corresponden a los productos de FríoTrack.
 
-| Repository | Source branch | Pull Request | Scope / recorded state |
-| --- | --- | --- | --- |
-| [report-friotrack](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/report-friotrack/tree/feature/tb1-report-corrections) | `feature/tb1-report-corrections` | [PR #12](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/report-friotrack/pull/12) | Informe y evidencias TB1. Draft hacia develop; sin merge en el corte del 07/10/2026. |
-| [friotrack-landing](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/friotrack-landing/tree/feature/tb1-landing-corrections) | `feature/tb1-landing-corrections` | [PR #7](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/friotrack-landing/pull/7) | Landing actualizada. Draft hacia develop; sin merge en el corte del 07/10/2026. |
-| [friotrack-frontend](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/friotrack-frontend/tree/feature/tb1-frontend-application) | `feature/tb1-frontend-application` | [PR #1](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/friotrack-frontend/pull/1) | Primera aplicación frontend. Draft hacia develop; sin merge en el corte del 07/10/2026. |
-| [friotrack-api](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/friotrack-api/tree/feature/av2-api-design) | `feature/av2-api-design` | [PR #1](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/friotrack-api/pull/1) | Diseño previsto para AV2. Draft hacia develop; sin merge en el corte del 07/10/2026. |
+| Repository | Branch / location | Content |
+| --- | --- | --- |
+| [report-friotrack](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack) | `develop` → `main` | Informe acumulativo, imágenes, anexos y evidencias. |
+| [friotrack-landing](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-landing) | Repositorio independiente de la landing | HTML, estilos, internacionalización y contenido público. La publicación Azure se identifica mediante sus hashes de archivos. |
+| [friotrack-frontend](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend) | `main`; servicio en [`api/`](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/tree/main/api) | Aplicación Vue, API de apoyo, pruebas y scripts de despliegue. |
 
-La integración registrada sigue ramas `feature/` con PR hacia `develop`, preservando los antecedentes de AV1 y `main`. Las revisiones cruzadas, la integración final y cualquier versión de entrega deben registrarse cuando el equipo las realice. No se declara una rama release, etiqueta o merge que no conste en las evidencias.
+La consolidación del informe se realiza sobre la rama existente `develop` y se integra en `main` para publicar `v2.0.0`. Se conserva el historial previo. Los mensajes nuevos siguen Conventional Commits y describen el cambio en inglés. El versionado del informe es independiente de la versión del paquete frontend y de la versión devuelta por `/api/health`.
 
-Los mensajes nuevos siguen Conventional Commits: `type(scope): imperative English description`, con cuerpo en inglés que explica el cambio y su finalidad. Ejemplos reales son `feat(operations): add TB1 sample shipment workspace` y `docs(frontend): document setup validation and cloud limits`. Los tipos se eligen por el cambio: docs, feat, fix, chore, test o refactor cuando corresponda. Los mensajes exactos y sus cuerpos figuran en 5.2.2.4.
-
-Se usa SemVer como convención de versionado: MAJOR para cambios incompatibles, MINOR para funcionalidades compatibles y PATCH para correcciones. `0.1.0` es la versión de desarrollo del paquete frontend; no acredita una etiqueta release ni un despliegue. Los once commits de la integración están registrados bajo la identidad Git de Alexander Sebastián Atauje Barreto.
+La integración del frontend está registrada en los [PR #4](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/pull/4) y [PR #5](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/pull/5). Su revisión publicada es [`dc49d7e`](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/commit/dc49d7e28e13c8d0f78fa913dd5353ea162012c6).
 
 ### 5.1.3. Source Code Style Guide & Conventions
 
 | Technology / artifact | Convention | Purpose |
 | --- | --- | --- |
-| HTML5 y CSS3 | HTML semántico, labels asociados, alt significativo, clases inglesas y variables de marca. | Mantener estructura comprensible y experiencia consistente. |
-| JavaScript | camelCase en variables/funciones, PascalCase en componentes y clases, módulos explícitos. | Separar responsabilidades y mantener nombres coherentes. |
-| Vue y PrimeVue | Componentes PascalCase, props explícitas, estado reactivo, mensajes localizados. | Evitar lógica de dominio duplicada en vistas. |
-| Dominio frontend | Reglas en src/domains/operations.js; datos de ejemplo en seed.js. | Probar permisos locales, estados, reservas y validaciones sin depender de Vue. |
-| Persistencia frontend | Adaptador en src/infrastructure/demo-repository.js. | Separar la demo local de una futura integración REST. |
-| C# / ASP.NET Core previsto | PascalCase público, camelCase en parámetros, interfaces I<Name>, DTO y capas separadas. | Mantener coherencia con el stack de backend del curso. |
-| Gherkin | Dado-Cuando-Entonces o Given-When-Then; resultado observable y referencia a US. | Vincular aceptación y pruebas a requisitos del capítulo III. |
-| Markdown y commits | Encabezados numerados, enlaces relativos, estado de evidencia explícito; commits en inglés. | Facilitar revisión y exportación del informe. |
+| HTML y CSS | Estructura semántica, etiquetas de formulario, textos alternativos y variables de marca. | Presentación consistente y controles comprensibles. |
+| JavaScript y Vue | camelCase en funciones y variables; PascalCase en componentes; módulos explícitos. | Separar vistas, reglas y acceso HTTP. |
+| PrimeVue e i18n | Mensajes y etiquetas localizados; inglés inicial y español latinoamericano. | Mantener los dos idiomas en navegación y validaciones. |
+| Acceso HTTP | `src/infrastructure/workspace-repository.js`. | Centralizar login, registro, sesión, consulta y comandos. |
+| Reglas de negocio | `src/domains/operations.js` y `api/Operations.cs`. | Validar fechas, rangos, recursos, transiciones y permisos. |
+| C# | PascalCase público, camelCase en parámetros y tipos explícitos. | Mantener consistencia del servicio. |
+| Gherkin | Given/When/Then o Dado/Cuando/Entonces, con resultados observables. | Vincular requisitos con aceptación. |
+| Markdown y Git | Encabezados numerados, enlaces comprobables y commits descriptivos. | Facilitar lectura, revisión y trazabilidad. |
 
-El vocabulario del dominio es envío refrigerado, unidad, conductor, cliente, lectura, rango, alerta y acción correctiva. Inventario de bodegas, FEFO, proveedores de mercadería y módulos Angular del ejemplo no se incorporan como alcance de FríoTrack.
+Las contraseñas, claves de Azure y tokens de acceso se excluyen del control de versiones. Las variables `VITE_*` contienen únicamente configuración pública.
 
 ### 5.1.4. Software Deployment Configuration
 
-La landing es un sitio estático. Su configuración de integración está en `assets/js/config.js`: `frontendBaseUrl` debe apuntar a la URL HTTPS pública del frontend cuando exista. `contactEndpoint` permanece sin receptor y debe configurarse y probarse antes de declarar envío efectivo.
+La aplicación se compila con `npm ci` y `npm run build`. Los archivos de `dist/` se publican en el contenedor `$web` de Azure Storage. La landing ocupa `/landing/` y la aplicación la raíz del sitio. La navegación Vue utiliza rutas hash, por lo que el refresco de una vista conserva el punto de entrada sin reescrituras de rutas del servidor.
 
-La aplicación Vue se compila con `npm run build`. El artefacto a publicar es el contenido de `dist/`, con rutas hash y un base path apropiado al destino. El ejemplo de entorno permite ajustar `VITE_BASE_PATH` y `VITE_LANDING_URL`; las variables `VITE_*` son públicas en el cliente y no deben contener secretos. AWS o Azure es el requisito de plataforma confirmado por el equipo.
+La configuración de producción define `VITE_API_URL` y `VITE_LANDING_URL`. La API se compila mediante `dotnet publish`, se empaqueta en ZIP y se publica en Azure App Service. CORS permite el origen del frontend; las credenciales iniciales se configuran en el servidor. Los datos persistidos se guardan en `HOME/data`, fuera de los archivos públicos del sitio.
 
-La ejecución local no se ha trasladado aún a una cuenta cloud. Al hacerlo, se verifican HTTPS, carga de recursos, refresco de rutas, perfil e idioma de CTA, desktop/mobile y versión exacta. Los datos de localStorage pertenecen a cada navegador y origen, por lo que no se trasladan automáticamente del localhost al dominio público. Desplegar el frontend no crea autenticación, API o base de datos compartida.
+| Setting | Value |
+| --- | --- |
+| Resource group | `rg-friotrack-tb1` |
+| Region | West US |
+| Static hosting | StorageV2, Standard LRS; `friotracktb1bce6db1b` |
+| API hosting | Windows App Service, .NET 10; `friotrack-api-bce6db1b` |
+| App Service plan | `plan-friotrack-free`, Free F1; Always On desactivado |
+| Transport | HTTPS; TLS mínimo 1.2 en App Service |
+| Persistence | Archivo JSON privado; una sola instancia |
 
-La configuración futura del backend contemplará HTTPS, secretos de servidor, CORS limitado, conexión PostgreSQL, migraciones y OpenAPI.
+El plan F1 puede requerir un arranque después de periodos de inactividad. La landing mantiene el formulario de contacto sin receptor comercial configurado; su validación no se presenta como una solicitud recibida.
 
 ## 5.2. Landing Page, Services & Applications Implementation
 
@@ -3241,308 +3259,411 @@ La configuración futura del backend contemplará HTTPS, secretos de servidor, C
 
 #### 5.2.1.1. Sprint Planning 1
 
-El Sprint 1 constituye el antecedente de implementación de la landing y se mantiene acumulativamente para TB1. La planificación histórica declara una reunión virtual el 08/09/2026 a las 19:00, pero no se dispone de un acta adicional que confirme asistentes y acuerdos. Por ello, esos datos se conservan como antecedentes declarados.
+El Sprint 1 desarrolló la Landing Page de AV1. Su objetivo fue presentar el problema de la cadena de frío, los segmentos objetivo, los corredores propuestos y el acceso a FríoTrack.
 
 | Field | Recorded detail |
 | --- | --- |
 | Sprint # | Sprint 1 |
-| Date | 08/09/2026, declarado en AV1; acta por confirmar. |
-| Time | 19:00, declarado en AV1; acta por confirmar. |
-| Location | Reunión virtual declarada; plataforma y registro por confirmar. |
-| Prepared By | Por confirmar con la planificación original. |
-| Attendees (to planning meeting) | Por confirmar mediante registro original; no se presume asistencia de todos. |
-| Sprint 1 Goal | Reformulación retrospectiva: comunicar la propuesta de transporte refrigerado, cobertura propuesta, planes y acceso por segmento. |
-| Sprint 1 Velocity | No existe una capacidad acordada verificable ni resultado aceptado medido. |
-| Sum of Story Points | 10 SP propuestos en la reconciliación actual: US01 + US02 + US03 + US31. |
-
-Sprint Goal reformulado: Our focus is on communicating FríoTrack’s cold-chain transport proposal. We believe it delivers a clear understanding of shipment monitoring to logistics coordinators and cargo clients. This will be confirmed when visitors can identify both segments, consult the four proposed corridors and reference plans, switch between English and Spanish, and reach the appropriate frontend entry point, with contact outcomes accurately identified.
-
-La recepción de contacto y el enlace a una app pública siguen pendientes de cierre.
+| Date / Time | 08/09/2026, 19:00, según el registro AV1. |
+| Location | Reunión virtual registrada en AV1. |
+| Prepared By | Equipo BlackStartup. |
+| Attendees | La relación de asistentes no se adjunta en el registro disponible. |
+| Sprint 1 Goal | Present the cold-chain transport proposal, target users and proposed corridors through a bilingual landing page. |
+| Sprint 1 Velocity | No consta medición de velocidad en el registro disponible. |
+| Sum of Story Points | 9 SP: US23, US24, US25 y US27 del catálogo vigente. |
 
 #### 5.2.1.2. Aspect Leaders and Collaborators
 
-El registro de versiones AV1 declara aportes por disciplina. Se conserva esa atribución como antecedente; las letras L/C de la planificación original deben contrastarse con tareas y evidencias antes de reutilizarse como liderazgo ejercido.
-
-| Team Member (Last Name, First Name) | GitHub Username | Declared AV1 contribution |
+| Team Member | GitHub Username | Contribution recorded for AV1 |
 | --- | --- | --- |
-| Atauje Barreto, Alexander Sebastián | Alexander1Alexander2 | Introducción, startup profile y frontmatter. |
-| Bardales Rodriguez, Benjamin Elias | Benja72312 | Arquitectura, diseño y mayor parte de la landing. |
+| Atauje Barreto, Alexander Sebastián | Alexander1Alexander2 | Startup Profile, Solution Profile, estructura del informe y secciones de la landing. |
+| Bardales Rodriguez, Benjamin Elias | Benja72312 | Arquitectura, diseño y mayor parte de la implementación de la landing. |
 | Daga Chávez, Joaquín Leonardo | Eshnikeee | Historias y criterios de aceptación. |
-| Saavedra Flores, Rodrigo Andree | rodrigoxd67 | Capítulo V y apoyo a implementación/despliegue de landing. |
-| Vera Solsol, Nayely Macarena | Macaxprogram29 | Impact Mapping y Product Backlog. |
-
-Los usernames proceden del informe. La identidad de publicación de Alexander está verificada en los recibos de integración; los demás deben confirmar su cuenta si ha cambiado.
+| Saavedra Flores, Rodrigo Andree | rodrigoxd67 | Capítulo V y apoyo al despliegue de la landing. |
+| Vera Solsol, Nayely Macarena | Macaxprogram29 | Impact Mapping, Product Backlog y Trello. |
 
 #### 5.2.1.3. Sprint Backlog 1
 
-La reconstrucción del backlog usa los IDs y títulos canónicos del capítulo III. Las horas son una propuesta de revisión de 10 horas y no horas ejecutadas por integrantes. Los estados describen el material revisable, no aceptación completa.
+Los identificadores se relacionan con el catálogo actual de 3.1. Se conservan los resultados de AV1 y se distingue el formulario de contacto de las secciones publicadas.
 
 | Story Id | Story Title | Task Id | Task Title | Task Description | Estimation (Hours) | Assigned To | Status |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| US01 | Propuesta de valor en Landing | S1-T01 | Revisar propuesta y segmentos | Contrastar el contenido histórico con Coordinador Logístico y Cliente de Carga; retirar promesas fuera del alcance. | 2 | Por confirmar | To-Review |
-| US02 | Corredores logísticos en Landing | S1-T02 | Verificar cobertura propuesta | Comprobar los cuatro corredores y que no se presenten como cobertura comercial garantizada. | 2 | Por confirmar | To-Review |
-| US03 | Formulario de contacto comercial | S1-T03 | Revisar formulario de contacto | Validar campos y errores; la recepción efectiva requiere configurar y probar un receptor real. | 3 | Por confirmar | In-Process |
-| US31 | Planes y acceso desde la Landing | S1-T04 | Revisar planes y acceso | Comprobar periodicidad, precios referenciales y CTA; falta enlazar una app pública vigente. | 3 | Por confirmar | To-Review |
-
-Las historias suman 3 + 3 + 2 + 2 = 10 SP propuestos, contados una sola vez. El [board histórico de BlackStartup](https://trello.com/b/6qrvOukt/blackstartup-friotrack) debe actualizarse y comprobarse con el catálogo vigente. La captura del board actualizado es un pendiente.
+| US23 | Propuesta de valor en Landing | S1-T01 | Implementar presentación | Comunicar problema, propuesta y segmentos. | No registrada | Benjamin / Alexander | Publicado |
+| US24 | Corredores logísticos en Landing | S1-T02 | Presentar corredores | Mostrar las rutas propuestas de La Libertad, Ica, Piura y Lambayeque. | No registrada | Benjamin | Publicado |
+| US25 | Formulario de contacto comercial | S1-T03 | Implementar formulario | Validar datos de contacto; integrar receptor comercial. | No registrada | Benjamin | Parcial: falta receptor |
+| US27 | Preguntas frecuentes (FAQ) | S1-T04 | Incorporar FAQ | Mostrar preguntas y respuestas de la propuesta. | No registrada | Benjamin | Publicado |
 
 #### 5.2.1.4. Development Evidence for Sprint Review
 
-El historial de la landing acredita las siguientes revisiones y merges del antecedente AV1. Los mensajes históricos se mantienen con su idioma original; la convención en inglés se aplica a los nuevos commits.
+El repositorio de la landing conserva los commits del desarrollo AV1. Las fechas siguientes corresponden al calendario de Lima.
 
-| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Commited on (Date) |
+| Repository | Branch | CommitId | CommitMessage | CommitMessageBody | Committed on Date |
 | --- | --- | --- | --- | --- | --- |
-| friotrack-landing | main / historia AV1 | [02b76e5](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/friotrack-landing/commit/02b76e5) | Merge pull request #6 from upc-pre-202620-1asi0730-8088-FrioTrack/develop | release: publicar la landing rediseñada en main | 2026-09-19 |
-| friotrack-landing | Historial AV1 | [c63b6b0](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/friotrack-landing/commit/c63b6b0) | Merge pull request #3 from upc-pre-202620-1asi0730-8088-FrioTrack/feature/terms-and-conditions | feat: bilingual terms and conditions page | 2026-09-19 |
-| friotrack-landing | Historial AV1 | [c64f54f](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/friotrack-landing/commit/c64f54f) | Merge pull request #2 from upc-pre-202620-1asi0730-8088-FrioTrack/feature/landing-page | feat: landing page markup, scripts and team assets | 2026-09-19 |
-| friotrack-landing | Historial AV1 | [4b602ba](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/friotrack-landing/commit/4b602ba) | docs: actualizar el README con el nuevo diseño y la estructura de archivos | Sin cuerpo adicional. | 2026-09-19 |
-
-Las correcciones posteriores TB1 se publicaron en la rama y PR de 5.1.2. Su despliegue nuevo continúa pendiente. Los commits de esas correcciones se registran en Sprint 2.
+| friotrack-landing | main | [02b76e5](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-landing/commit/02b76e5e97803fbbcc176bdec8492da8d4fa585e) | Merge pull request #6 from upc-pre-202620-1asi0730-8088-FrioTrack/develop | release: publicar la landing rediseñada en main | 19/09/2026 |
+| friotrack-landing | main | [c63b6b0](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-landing/commit/c63b6b0b8613cb2b161aa352bd25e47e7e3c9aca) | Merge pull request #3 from upc-pre-202620-1asi0730-8088-FrioTrack/feature/terms-and-conditions | feat: bilingual terms and conditions page | 19/09/2026 |
+| friotrack-landing | main | [c64f54f](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-landing/commit/c64f54f4b18ddd96ee4c6ebe514835d20baa07b9) | Merge pull request #2 from upc-pre-202620-1asi0730-8088-FrioTrack/feature/landing-page | feat: landing page markup, scripts and team assets | 19/09/2026 |
 
 #### 5.2.1.5. Execution Evidence for Sprint Review
 
-Las dos primeras capturas conservan la ejecución histórica de la landing AV1. La versión original incluía secciones de presentación y acceso demostrativo; los mensajes de inventario/FEFO o resultados comerciales no forman parte del alcance validado del dominio actual.
+Las capturas siguientes corresponden a la landing AV1. La ejecución de la versión actual y el acceso a la aplicación se presentan en Sprint 2.
 
-![Figura 5.1. Landing histórica AV1: presentación del servicio.](assets/images/chapter-05/landing_1.png)
+![Figura 5.1. Presentación de la landing AV1.](assets/images/chapter-05/landing_1.png)
 
-![Figura 5.2. Landing histórica AV1: sección de contenido.](assets/images/chapter-05/landing_2.png)
-
-Las correcciones TB1 se presentan por separado en 5.2.2.5. El enlace de Stream de ejecución y explicación del Sprint 1 debe incorporarse cuando el grupo lo proporcione.
+![Figura 5.2. Contenido de la landing AV1.](assets/images/chapter-05/landing_2.png)
 
 #### 5.2.1.6. Services Documentation Evidence for Sprint Review
 
-No se implementaron Web Services internos para la landing del Sprint 1. No existe evidencia de Swagger, recepción comercial o correo enviados por esa versión. El contacto sin receptor corresponde a integración pendiente.
+La landing de Sprint 1 fue un sitio estático. No implementó Web Services internos. El formulario de contacto requiere un receptor para completar US25.
 
 #### 5.2.1.7. Software Deployment Evidence for Sprint Review
 
-La [landing histórica de FríoTrack en GitHub Pages](https://upc-pre-202620-1asi0730-8088-friotrack.github.io/friotrack-landing/) conserva la publicación AV1. La configuración registrada usa `main` y la raíz del sitio; las capturas siguientes son históricas y no muestran el despliegue de las correcciones TB1.
+La publicación AV1 utilizó GitHub Pages. Se conservan sus capturas de configuración y publicación como antecedentes. La URL vigente de la landing TB1 es [FríoTrack en Azure](https://friotracktb1bce6db1b.z22.web.core.windows.net/landing/).
 
-![Figura 5.3. Configuración histórica GitHub Pages AV1.](assets/images/chapter-05/git_1.png)
+![Figura 5.3. Configuración GitHub Pages de AV1.](assets/images/chapter-05/git_1.png)
 
-![Figura 5.4. Publicación histórica de la landing AV1.](assets/images/chapter-05/git_3.png)
-
-El nuevo despliegue, versión y fecha de la landing corregida se incorporarán en 5.2.2.7 después de publicarla.
+![Figura 5.4. Publicación de la landing AV1.](assets/images/chapter-05/git_3.png)
 
 #### 5.2.1.8. Team Collaboration Insights during Sprint
 
-![Figura 5.5. Captura histórica de colaboración AV1.](assets/images/chapter-05/git_2.png)
+La participación de AV1 se conserva en el registro de versiones y en la tabla de responsabilidades. Esta captura pertenece a esa entrega; la actividad del nuevo repositorio se presenta por separado en Sprint 2.
 
-Los conteos deben identificar repositorio, periodo, rama y si incluyen merges. Las contribuciones del informe no se suman como si fueran commits de la landing. La evaluación individual debe contrastar cambios, tareas y revisiones, no solo la cantidad de commits.
+![Figura 5.5. Colaboración registrada en AV1.](assets/images/chapter-05/git_2.png)
 
 ### 5.2.2. Sprint 2
 
 #### 5.2.2.1. Sprint Planning 2
 
-La segunda iteración se orienta a la primera FríoTrack Frontend Web Application, construida con Vue, JavaScript y PrimeVue. El coordinador puede revisar programación, recursos, condiciones térmicas y acciones; el cliente puede consultar los envíos asociados a su perfil. La implementación actual permite demostrar esos recorridos con datos locales de ejemplo.
-
-La siguiente planificación es una propuesta para validación del equipo. No registra una reunión celebrada, un compromiso de 55 SP ni la aceptación de historias.
+El Sprint 2 entrega la primera aplicación web de FríoTrack y actualiza la landing. El Coordinador Logístico dispone de programación, recursos, monitoreo y acciones correctivas; el Cliente de Carga consulta los envíos asociados a su cuenta. La revisión técnica comprende el acceso con credenciales, la autorización del servidor y la publicación en Azure.
 
 | Field | FríoTrack Sprint Planning 2 |
 | --- | --- |
-| Sprint # | Sprint 2 |
-| Date | Pendiente: fecha real de Sprint Planning y referencia del acta. |
-| Time | Pendiente: hora real y zona America/Lima. |
-| Location | Pendiente: plataforma o lugar utilizado por el equipo. |
-| Prepared By | Pendiente de confirmar el responsable del acta. Team Leader: Atauje Barreto, Alexander Sebastián. |
-| Attendees (to planning meeting) | Pendiente: registrar asistentes reales, ausencias y acuerdos. |
-| Sprint 1 Review Summary | Landing AV1 publicada; correcciones de segmentos, IDs, contacto, CTA y documentación preparadas. Falta validar aceptación y receptor real. |
-| Sprint 1 Retrospective Summary | Propuesta de mejora: integrar temprano, conservar IDs, revisar PR con otro integrante, actualizar board y separar muestras de evidencias reales. El equipo debe registrar su retrospectiva real. |
-| Sprint 2 Goal | Our focus is on delivering the first FríoTrack Vue web application for cold-chain shipments. We believe it delivers operational visibility and traceable corrective actions to logistics coordinators and cargo clients. This will be confirmed when a coordinator schedules a shipment with valid resources, reviews sample thermal conditions, records an action, and a cargo client consults only assigned shipments, from a verified public deployment and in both supported languages. |
-| Sprint 2 Velocity | Capacidad en SP que el equipo puede aceptar: pendiente de acordar. No se reemplaza por horas ni por el total propuesto. |
-| Sum of Story Points | 55 SP propuestos de 15 historias únicas; sujetos a acuerdo y a un alcance viable para TB1. |
+| Sprint # | Sprint 2 — TB1 |
+| Date / Time / Location | El acta de la reunión de planificación no está adjunta. El periodo de integración técnica registrado es 07–08/10/2026, America/Lima. |
+| Prepared By | Equipo BlackStartup; Team Leader: Atauje Barreto, Alexander Sebastián. |
+| Attendees | No consta una relación de asistentes en los archivos del informe. |
+| Sprint 1 Review Summary | Landing implementada; el formulario comercial aún requiere receptor. Se actualizaron los accesos hacia la aplicación pública. |
+| Sprint 1 Retrospective Summary | Para esta iteración se consolidan requisitos, fuentes, pruebas y evidencias en los repositorios del equipo. No se adjunta acta de retrospectiva. |
+| Sprint 2 Goal | Deliver the first FríoTrack web application on Azure. Logistics coordinators can manage refrigerated shipments and corrective actions; cargo clients can securely consult their assigned shipments through an authenticated bilingual interface. |
+| Sprint 2 Velocity | No se registra velocidad aceptada por el equipo. |
+| Sum of Story Points | 75 SP de 20 historias relacionadas con la implementación; no equivalen a puntos aceptados ni a velocidad. |
 
-Outcome: primera aplicación navegable y publicada. Impact: visibilidad de estados, lecturas y atención de alertas. Customers: Coordinador Logístico y Cliente de Carga. Evento de confirmación: review de cuatro recorridos completos desde una URL pública verificada. Métrica propuesta: 4 de 4 recorridos sin errores bloqueantes, en desktop/mobile y EN/ES, acompañados por rechazo de fechas/rangos inválidos, recursos solapados y consulta de envío ajeno. La métrica aún no está alcanzada, pues faltan el despliegue y la aceptación del equipo.
-
-La suma de 55 SP describe el catálogo seleccionado y debe contrastarse con criterios completos, capacidad y alcance de demostración antes de comprometerla.
+Los criterios de revisión técnica son: rechazar credenciales incorrectas, restaurar una sesión válida, impedir acciones de coordinación desde una cuenta cliente, filtrar los envíos por cliente, conservar los parámetros de idioma y perfil desde la landing y comprobar los archivos publicados. Las verificaciones disponibles se detallan en 5.2.2.5.
 
 #### 5.2.2.2. Aspect Leaders and Collaborators
 
-Los aspectos del sprint corresponden a la aplicación y a sus evidencias: acceso y entrada pública, programación y recursos, monitoreo, alertas/trazabilidad y calidad/despliegue. El Team Leader está confirmado; los líderes y colaboradores de cada aspecto aún deben acordarse. La siguiente matriz debe completarse con L y C vinculadas a las tareas reales.
+La distribución se basa en las responsabilidades registradas y en los aportes verificables. L identifica al líder del aspecto y C al colaborador. La integración técnica de acceso y despliegue está registrada bajo la cuenta `rodrigoxd67`.
 
-| Team Member (Last Name, First Name) | GitHub Username | Access & Public Entry | Scheduling & Resources | Monitoring | Alerts & Traceability | Quality & Deployment |
-| --- | --- | --- | --- | --- | --- | --- |
-| Atauje Barreto, Alexander Sebastián | Alexander1Alexander2 | Por acordar | Por acordar | Por acordar | Por acordar | Por acordar |
-| Bardales Rodriguez, Benjamin Elias | Benja72312 | Por acordar | Por acordar | Por acordar | Por acordar | Por acordar |
-| Daga Chávez, Joaquín Leonardo | Eshnikeee | Por acordar | Por acordar | Por acordar | Por acordar | Por acordar |
-| Saavedra Flores, Rodrigo Andree | rodrigoxd67 | Por acordar | Por acordar | Por acordar | Por acordar | Por acordar |
-| Vera Solsol, Nayely Macarena | Macaxprogram29 | Por acordar | Por acordar | Por acordar | Por acordar | Por acordar |
+| Team Member | GitHub Username | Requirements / research | Product design | Report consolidation | Access / API / deployment |
+| --- | --- | --- | --- | --- | --- |
+| Atauje Barreto, Alexander Sebastián | Alexander1Alexander2 | C — Capítulo I | — | L — estructura e integración | — |
+| Bardales Rodriguez, Benjamin Elias | Benja72312 | — | L — diseño y landing registrados en AV1 | — | — |
+| Daga Chávez, Joaquín Leonardo | Eshnikeee | L — Capítulo II y entrevistas | — | C | — |
+| Saavedra Flores, Rodrigo Andree | rodrigoxd67 | — | C — incorporación del Capítulo IV | C — Student Outcome y Capítulo V | L |
+| Vera Solsol, Nayely Macarena | Macaxprogram29 | L — Capítulo III y backlog | — | C | — |
 
-L = Leader; C = Collaborator. Las celdas pendientes no son asignaciones ejercidas. Cada liderazgo confirmado debe corresponder a las tareas de 5.2.2.3 y a cambios o revisiones registrados.
+La actividad de publicación del nuevo repositorio se diferencia de la autoría histórica del diseño. El detalle de commits por integrante figura en 5.2.2.8.
 
 #### 5.2.2.3. Sprint Backlog 2
 
-El backlog adapta el ejemplo a programación de envíos, flota, monitoreo y consulta del cliente. Usa los títulos e IDs canónicos del capítulo III, conserva 55 SP y descompone trabajo funcional y de cierre. Las estimaciones en horas son propuestas para discutir con el grupo y no un registro de tiempo trabajado. Los responsables deben sustituirse por nombres después de acordar la asignación.
-
-Board: [Trello histórico BlackStartup](https://trello.com/b/6qrvOukt/blackstartup-friotrack). Pendiente de evidencia: URL y captura del board Sprint 2 actualizado, con acceso comprobado, IDs vigentes, responsables y estados.
-
-Estados: To-do = trabajo no iniciado acreditadamente; In-Process = alcance parcial con cierre pendiente; To-Review = implementación de demostración disponible para revisión; Done = aceptación documentada contra el alcance acordado.
+El backlog utiliza los IDs del Capítulo III. **Verificado** indica que la función indicada cuenta con comprobación técnica; **Parcial** indica que existe una implementación con criterios del producto aún abiertos; **Pendiente** identifica trabajo sin evidencia de cierre. Estos estados no sustituyen el acta de aceptación del equipo. Las horas no registradas se muestran como tal.
 
 | Story Id | Story Title | Task Id | Task Title | Task Description | Estimation (Hours) | Assigned To | Status |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| US33 | Programación de envío refrigerado | S2-T01 | Construir programación en cuatro pasos | Carga, ruta y fechas; recursos y cliente; rangos; revisión y confirmación. El borrador queda en memoria y no se persiste como DRAFT. | 6 | Por acordar con el equipo | To-Review |
-| US33 | Programación de envío refrigerado | S2-T02 | Revisar errores de programación | Comprobar campos obligatorios, llegada posterior a salida, capacidad y rechazo sin reservas parciales. | 3 | Por acordar con el equipo | To-Review |
-| US19 | Registro de nueva unidad refrigerada | S2-T03 | Registrar y editar unidades | Validar placa y sensor únicos, capacidad positiva y protección de recursos asignados. | 3 | Por acordar con el equipo | To-Review |
-| US21 | Registro de conductores | S2-T04 | Registrar y editar conductores | Validar nombre y licencia única; proteger los registros vinculados a viajes programados o activos. | 3 | Por acordar con el equipo | To-Review |
-| US22 | Asignación de conductor a vehículo | S2-T05 | Reservar vehículo y conductor | Comprobar disponibilidad y solapamiento antes de confirmar la programación con ambos recursos. | 4 | Por acordar con el equipo | To-Review |
-| US34 | Gestión de estados del envío | S2-T06 | Gestionar inicio y entrega | Aplicar scheduled → in-transit → delivered, permisos locales y retención del historial. | 3 | Por acordar con el equipo | To-Review |
-| US34 | Gestión de estados del envío | S2-T07 | Gestionar cancelación programada | Solicitar comentario, liberar reservas y rechazar cancelación durante tránsito o después de entrega. DRAFT persistido no está implementado. | 3 | Por acordar con el equipo | To-Review |
-| US10 | Telemetría en vivo en el panel | S2-T08 | Mostrar panel de monitoreo | Presentar última lectura de muestra, temperatura, humedad, estado e identificación de procedencia; no simular conexión a sensores. | 4 | Por acordar con el equipo | To-Review |
-| US11 | Mapa de rutas y posiciones | S2-T09 | Mostrar ruta y posición de muestra | Usar ilustración local y mapa Leaflet/OSM opcional con atribución; conservar la información si no se carga el proveedor externo. | 4 | Por acordar con el equipo | To-Review |
-| US12 | Búsqueda y filtros de envíos | S2-T10 | Implementar búsqueda y filtros | Consultar los envíos accesibles por código, atributos y estado, distinguiendo resultados vacíos. | 3 | Por acordar con el equipo | To-Review |
-| US14 | Detalle de telemetría por unidad | S2-T11 | Mostrar detalle térmico | Presentar valores, fecha, rango, gráfica y tabla accesible de lecturas; los datos son ejemplos almacenados. | 4 | Por acordar con el equipo | To-Review |
-| US17 | Configuración de umbrales térmicos | S2-T12 | Validar rangos de la carga | Exigir mínimo menor que máximo y humedad entre 0 y 100; preservar rangos de operaciones iniciadas. Verificar por separado los criterios de tolerancia del catálogo. | 3 | Por acordar con el equipo | To-Review |
-| US18 | Historial de alertas emitidas | S2-T13 | Consultar alertas e historial | Mostrar alertas abiertas, reconocidas y cerradas, con vínculo a lectura y acciones de ejemplo. | 3 | Por acordar con el equipo | To-Review |
-| US35 | Registro de acción correctiva | S2-T14 | Registrar acción correctiva | Guardar comentario, autor local y fecha; reconocer la alerta sin cerrarla automáticamente. | 3 | Por acordar con el equipo | To-Review |
-| US35 | Registro de acción correctiva | S2-T15 | Verificar aviso y recuperación | Dirigir el aviso interno solo al cliente asignado y cerrar la térmica únicamente tras una lectura posterior dentro de ambos rangos. | 3 | Por acordar con el equipo | To-Review |
-| US36 | Consulta de envíos del Cliente de Carga | S2-T16 | Construir consulta del cliente | Mostrar solo envíos asociados, detalle, lecturas, alertas, acciones e historial, sin controles de gestión. | 4 | Por acordar con el equipo | To-Review |
-| US36 | Consulta de envíos del Cliente de Carga | S2-T17 | Probar acceso a envío ajeno | Rechazar consultas y exportaciones de otro cliente, y operaciones de escritura desde el perfil cliente, mediante reglas de la demo. | 2 | Por acordar con el equipo | To-Review |
-| US23 | Consulta de historial térmico | S2-T18 | Consultar historial térmico | Filtrar envíos y consultar lecturas identificadas como muestra; verificar por separado la identificación de periodos sin información. | 4 | Por acordar con el equipo | To-Review |
-| US30 | Gestión de idiomas (i18n) | S2-T19 | Implementar idioma y formatos | EN inicial, ES latinoamericano, preferencia local y traducción de textos, validaciones y mensajes accesibles de componentes. | 3 | Por acordar con el equipo | To-Review |
-| US30 | Gestión de idiomas (i18n) | S2-T20 | Revisar entrada desde landing | Conservar role/lang en enlaces de acceso y registro; el idioma explícito debe prevalecer sobre una preferencia guardada. | 2 | Por acordar con el equipo | To-Review |
-| Soporte | Actividad transversal sin SP adicional | S2-T21 | Configurar frontend independiente | Mantener Vue, JavaScript, PrimeVue, Vite, lockfile, ejemplo de entorno y separación entre vistas, dominio y adaptador. | 3 | Por acordar con el equipo | To-Review |
-| Soporte | Actividad transversal sin SP adicional | S2-T22 | Revisar build y pruebas | Revisar el resultado registrado de 15 pruebas y build; repetir sobre la versión definitiva cuando se introduzcan cambios. | 2 | Por acordar con el equipo | To-Review |
-| Soporte | Actividad transversal sin SP adicional | S2-T23 | Cerrar revisión responsive y a11y | Completar recorridos desktop/mobile, teclado, formularios y reduced-motion; los controles ya revisados no acreditan una auditoría integral. | 4 | Por acordar con el equipo | In-Process |
-| Soporte | Actividad transversal sin SP adicional | S2-T24 | Desplegar frontend en AWS o Azure | Con cuenta disponible, publicar dist, comprobar HTTPS y guardar versión, fecha, configuración y capturas reales. | 4 | Por acordar con el equipo | To-do |
-| Soporte | Actividad transversal sin SP adicional | S2-T25 | Publicar landing y actualizar CTA | Sustituir enlaces locales por la URL verificada; publicar la landing corregida y probar ambos perfiles e idiomas. | 3 | Por acordar con el equipo | To-do |
-| Soporte | Actividad transversal sin SP adicional | S2-T26 | Conectar contacto comercial | Configurar receptor autorizado y comprobar éxito, error HTTP y fallo de red sin falsos mensajes de recepción. | 3 | Por acordar con el equipo | To-do |
-| Soporte | Actividad transversal sin SP adicional | S2-T27 | Actualizar board y planificación | Registrar reunión, L/C, responsables, horas acordadas, capacidad en SP, criterios y estados; guardar URL y captura del Sprint 2. | 3 | Por acordar con el equipo | To-do |
-| Soporte | Actividad transversal sin SP adicional | S2-T28 | Realizar revisión cruzada y analytics | Revisar PRs con personas distintas al autor y registrar aportes reales por integrante, producto, periodo y rama. | 3 | Por acordar con el equipo | To-do |
-| Soporte | Actividad transversal sin SP adicional | S2-T29 | Grabar y explicar navegación | El grupo revisa el soporte de pantalla, graba la explicación y publica en Stream con permisos comprobados. | 3 | Por acordar con el equipo | To-do |
-| Soporte | Actividad transversal sin SP adicional | S2-T30 | Consolidar evidencias del sprint | Incorporar acta de review/retro, board, videos, URLs y capturas cloud al capítulo y al informe final. | 3 | Por acordar con el equipo | To-do |
+| US19 | Inicio de sesión en el sistema | S2-T01 | Integrar credenciales | Validar correo y contraseña en API, error genérico y redirección por rol. | No registrada | Rodrigo | Verificado |
+| US20 | Cierre de sesión seguro | S2-T02 | Revocar sesión | Invalidar token en servidor y limpiar la sesión del navegador. | No registrada | Rodrigo | Verificado |
+| US32 | Registro de Cliente de Carga | S2-T03 | Crear cuenta cliente | Validar datos, contraseña y consentimiento; impedir autoasignación de coordinador. | No registrada | Rodrigo | Verificado por pruebas API |
+| US33 | Programación de envío refrigerado | S2-T04 | Programar en cuatro pasos | Validar carga, fechas, cliente, recursos y rangos; persistir al confirmar. | No registrada | Rodrigo — integración API | Parcial: sin borrador persistido |
+| US14, US15 | Registro / edición de unidad | S2-T05 | Gestionar unidades | Validar capacidad, placa y sensor únicos; proteger recursos asignados. | No registrada | Rodrigo — integración API | Implementado; revisión funcional del equipo abierta |
+| US16, US17 | Conductores / asignación | S2-T06 | Gestionar recursos | Validar licencia única, disponibilidad y solapamiento al programar. | No registrada | Rodrigo — integración API | Parcial: vigencia de licencia no verificada |
+| US34 | Gestión de estados del envío | S2-T07 | Gestionar ciclo del envío | Inicio, entrega y cancelación de programados; historial y liberación de recursos. | No registrada | Rodrigo — integración API | Parcial: sin estado DRAFT persistido |
+| US01, US02, US05 | Panel / mapa / detalle | S2-T08 | Presentar monitoreo | Mostrar lecturas, ubicación ilustrativa, gráfica y tabla. | No registrada | Rodrigo — integración API | Parcial: datos de prueba; sin sensores ni vibración |
+| US03 | Búsqueda y filtros de envíos | S2-T09 | Localizar envíos | Filtrar la información autorizada y mostrar resultados vacíos. | No registrada | Rodrigo — integración API | Implementado; filtros completos por revisar |
+| US08 | Configuración de umbrales térmicos | S2-T10 | Validar rangos | Exigir mínimo menor que máximo y humedad entre 0 y 100. | No registrada | Rodrigo — integración API | Verificado para rangos del envío |
+| US09, US35 | Historial de alertas / acción correctiva | S2-T11 | Atender alerta | Guardar acción, autor y fecha; reconocer sin cerrar automáticamente. | No registrada | Rodrigo — integración API | Parcial: filtros del catálogo por revisar |
+| US10, US11 | Historial / exportación | S2-T12 | Consultar y exportar | Presentar historial y CSV identificado como datos de prueba. | No registrada | Rodrigo — integración API | Parcial: exportación en cliente |
+| US36 | Consulta de envíos del Cliente de Carga | S2-T13 | Aislar información por cliente | Filtrar en servidor envíos, alertas y recursos; impedir comandos de coordinación. | No registrada | Rodrigo | Verificado |
+| US30 | Gestión de multi-idioma (i18n) | S2-T14 | Integrar EN / ES | Idioma inicial inglés; conservar idioma explícito desde la landing. | No registrada | Rodrigo — integración publicada | Verificado en recorridos registrados |
+| US31 | Planes y acceso desde la Landing | S2-T15 | Conectar entradas públicas | Dirigir cada segmento al login de la aplicación Azure. | No registrada | Rodrigo | Verificado |
+| Soporte | Despliegue y pruebas | S2-T16 | Publicar aplicación y API | Compilar, desplegar y comprobar HTTPS, permisos y archivos. | No registrada | Rodrigo | Verificado |
+| Soporte | Actualización del informe | S2-T17 | Consolidar documentación | Integrar capítulos, índice, commits, conclusiones y anexos. | No registrada | Alexander / Joaquín / Nayely / Rodrigo | Integrado en informe |
+| US25 | Formulario de contacto comercial | S2-T18 | Conectar receptor | Comprobar recepción efectiva y errores de transporte. | No registrada | Sin asignación registrada | Pendiente |
+| Soporte | Evidencias de equipo | S2-T19 | Completar actas y exposición | Adjuntar planning, review, retrospectiva, exposición y evaluación individual. | No registrada | Equipo / Team Leader | Pendiente de adjuntos |
 
-Total propuesto de tareas: 30 tareas y 98 horas. Las actividades de soporte tienen identificadores de tarea, pero no se inventan nuevos TS/US del catálogo ni se les suman SP. Una misma historia puede tener varias tareas: sus puntos se cuentan una sola vez.
+Las historias relacionadas suman 75 SP una sola vez: US01, US02, US03, US05, US08, US09, US10, US11, US14, US15, US16, US17, US19, US20, US30, US32, US33, US34, US35 y US36. US31 corresponde a la actualización de la landing y se registra aparte con 2 SP. Las tareas de soporte no agregan puntos de historia.
 
-Historias seleccionadas y frontera de aceptación:
-
-| Story Id | Story Title | SP proposed | Local coverage for TB1 | Remaining acceptance scope |
-| --- | --- | --- | --- | --- |
-| US10 | Telemetría en vivo en el panel | 5 | Panel y lecturas de muestra | Recepción continua de sensores y verificación de señal del producto operativo. |
-| US11 | Mapa de rutas y posiciones | 5 | Ruta y coordenadas de ejemplo; OSM opcional | Posiciones recibidas de dispositivos y todos los casos del proveedor. |
-| US12 | Búsqueda y filtros de envíos | 3 | Lista, búsqueda y filtros locales | Revisión integral de todos los filtros y consultas con permisos de servidor. |
-| US14 | Detalle de telemetría por unidad | 3 | Detalle, gráfica y tabla de lecturas | Series reales, intervalos completos y autorización en backend. |
-| US17 | Configuración de umbrales térmicos | 3 | Rangos térmicos y de humedad; guardas locales | Confirmar tolerancia y todos los criterios; trasladar reglas a servicios. |
-| US18 | Historial de alertas emitidas | 3 | Alertas de muestra y acciones | Filtros completos, eventos de sensores y retención en servidor. |
-| US19 | Registro de nueva unidad refrigerada | 3 | Registro/edición y unicidad local de unidad | Persistencia compartida y validación del ámbito de empresa en servidor. |
-| US21 | Registro de conductores | 3 | Registro/edición y licencia única local | Persistencia compartida y validación en servidor. |
-| US22 | Asignación de conductor a vehículo | 3 | Reserva local y rechazo de solapamiento | Transacciones y concurrencia segura entre usuarios. |
-| US23 | Consulta de historial térmico | 5 | Consulta local de historial de muestra | Evidencia real de sensores y conservación para auditoría. |
-| US30 | Gestión de idiomas (i18n) | 3 | EN/ES, persistencia y controles revisados | Recorrido final completo de ambas interfaces y versión desplegada. |
-| US33 | Programación de envío refrigerado | 5 | Programación confirmada en cuatro pasos | DRAFT persistido y criterios completos del producto objetivo. |
-| US34 | Gestión de estados del envío | 3 | Inicio, entrega y cancelación scheduled | DRAFT persistido; aceptación de todos los criterios y seguridad servidor. |
-| US35 | Registro de acción correctiva | 3 | Nota, reconocimiento y aviso interno | Entrega externa si se acuerda; validación de producto operativo. |
-| US36 | Consulta de envíos del Cliente de Carga | 5 | Consulta y aislamiento local del cliente | Autenticación real y autorización en servidor. |
-
-Total: 55 SP propuestos. La tabla distingue lo revisable de la demo y lo pendiente del producto objetivo. El statement sitúa la primera Web Services desplegada en AV2. CSV e incidencias son controles auxiliares presentes, pero no añaden historias comprometidas ni puntos por duplicado a esta selección.
+El [Product Backlog en Trello](https://trello.com/b/6qrvOukt/blackstartup-fr%C3%ADotrack) y su captura se conservan en 3.3. La tabla del sprint y el [CSV correspondiente](assets/annexes/sprint2-backlog.csv) permiten contrastar la implementación con los criterios; la captura existente no acredita todos los estados actuales del Sprint 2.
 
 #### 5.2.2.4. Development Evidence for Sprint Review
 
-Las fuentes de FríoTrack se publicaron en cuatro ramas y PRs de borrador. El corte de integración registra 11 commits nuevos: 5 del informe, 2 de landing, 3 de frontend y 1 de diseño API para AV2. Las fechas son metadatos reales de Git con zona UTC-05.
+Los registros siguientes pertenecen al repositorio actual del informe y al frontend integrado. Reproducen los mensajes y fechas de Git. Los cuerpos vacíos se indican con «—». La [tabla completa de commits](assets/annexes/commits-sprint2.csv) y el [registro JSON](assets/evidence/current-commits.json) conservan la metadata consultada.
 
-Autor y committer de esta integración: Alexander Sebastián Atauje Barreto, usuario `Alexander1Alexander2`, correo noreply vinculado `300703256+Alexander1Alexander2@users.noreply.github.com`. Las filas reproducen subject y body exactos en inglés.
-
-| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Commited on (Date) |
+| Repository | Branch | CommitId | CommitMessage | CommitMessageBody | Committed on Date |
 | --- | --- | --- | --- | --- | --- |
-| report-friotrack | `feature/tb1-report-corrections` | [f464354a8be8](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/report-friotrack/commit/f464354a8be8a8599aff78046737dbf35d4debc0) | docs(history): preserve AV1 sources and exclude local artifacts | Archive the inherited AV1 chapter III and retain earlier source snapshots while excluding private configuration and generated workspace files. | 2026-10-07T19:32:14-05:00 |
-| report-friotrack | `feature/tb1-report-corrections` | [77339d1d1ddf](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/report-friotrack/commit/77339d1d1ddff1cc9fa9163469339afee815b893) | docs(requirements): reconcile TB1 research scope and backlog | Align target segments, interview instruments, canonical stories and sprint criteria with the statement and teacher feedback. Keep unperformed research and team decisions pending. | 2026-10-07T19:32:14-05:00 |
-| report-friotrack | `feature/tb1-report-corrections` | [8a1762e73bfe](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/report-friotrack/commit/8a1762e73bfe8041a875d54e7faa8512ca8150db) | docs(architecture): align frontend and planned backend designs | Document the Vue frontend and planned ASP.NET Core domain model with editable diagrams. Preserve historical assets and distinguish design from executable backend functionality. | 2026-10-07T19:32:15-05:00 |
-| report-friotrack | `feature/tb1-report-corrections` | [a581e2b2eace](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/report-friotrack/commit/a581e2b2eaceed9a36b95582239fc453f8415191) | docs(tb1): add implementation evidence and delivery guidance | Document the local frontend, landing corrections, observed checks and delivery artifacts. Keep cloud hosting, interviews and group evidence explicitly pending. | 2026-10-07T19:32:49-05:00 |
-| report-friotrack | `feature/tb1-report-corrections` | [d136e48ec32f](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/report-friotrack/commit/d136e48ec32fd061c6cd2226a4682d4f33dc3c9a) | docs(tb1): record verified GitHub integration and export evidence | Record the published feature branches, actual commit metadata and draft pull requests after they exist. Verify the regenerated report export and keep team research, reviews and AWS or Azure hosting pending. | 2026-10-07T21:05:15-05:00 |
-| friotrack-landing | `feature/tb1-landing-corrections` | [e1c0d416fe18](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/friotrack-landing/commit/e1c0d416fe18283e5b4938b5d621be0b81025624) | fix(landing): align bilingual entry and contact workflows | Default new visitors to English, route role CTAs to the local Vue sample and preserve failed contact requests. Add the supplied team photos without claiming message delivery or a new deployment. | 2026-10-07T19:32:49-05:00 |
-| friotrack-landing | `feature/tb1-landing-corrections` | [7c7a4ea2badd](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/friotrack-landing/commit/7c7a4ea2badd215e4749dc85e7938d9bd8ab07b2) | docs(landing): document TB1 source integration and limits | Explain standalone frontend setup, centralized configuration and actual contact behavior. Preserve the historical Pages reference and document the pending AWS or Azure deployment. | 2026-10-07T19:32:50-05:00 |
-| friotrack-frontend | `feature/tb1-frontend-application` | [47de7fabc006](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/friotrack-frontend/commit/47de7fabc006d426ce94e4a1df788c6deb4aa773) | chore(project): configure standalone Vue frontend tooling | Configure Vue, PrimeVue and Vite with the dependency lockfile, portable environment example and exclusions for dependencies, builds and private settings. | 2026-10-07T19:32:50-05:00 |
-| friotrack-frontend | `feature/tb1-frontend-application` | [473d5c1b04c4](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/friotrack-frontend/commit/473d5c1b04c405d96f0ed4dcd06bb56475a9f252) | feat(operations): add TB1 sample shipment workspace | Implement local shipment planning, lifecycle, monitoring, fleet, client views and bilingual navigation. Include domain tests for ownership, resource allocation and lifecycle invariants; the adapter remains a local sample. | 2026-10-07T19:33:08-05:00 |
-| friotrack-frontend | `feature/tb1-frontend-application` | [eeac3703f79d](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/friotrack-frontend/commit/eeac3703f79d1a5c087fcb6e51c7da8ebe117b3b) | docs(frontend): document setup validation and cloud limits | Describe portable setup, the verified standalone build and domain tests, sample-data behavior and known constraints. Keep real authentication, backend integration and AWS or Azure hosting pending. | 2026-10-07T19:33:08-05:00 |
-| friotrack-api | `feature/av2-api-design` | [05d95306d58e](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/friotrack-api/commit/05d95306d58e41c09c96313aa760c659ce6f5e10) | docs(api): prepare AV2 scope and domain design | Document the planned ASP.NET Core, C# and EF Core service with the existing editable domain designs. No executable API, database, endpoints, authentication, migrations or passing API tests are claimed. | 2026-10-07T19:33:09-05:00 |
+| report-friotrack | `develop` | [369cc99](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/369cc991c51dd2424aded38766728918bf27de71) | docs(chapter-02): update interview video link | — | 2026-10-08T18:18:11-05:00 |
+| report-friotrack | `develop` | [c216ca0](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/c216ca06517fca1c2496cf31b83e54c73eefe686) | docs(chapter-02): update interviews and photographic evidence | — | 2026-10-08T17:51:58-05:00 |
+| report-friotrack | `develop` | [5875269](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/58752691c08a90ce27e2d2cf3c8ca0cb5b10565c) | docs(chapter-05): edit report | — | 2026-10-08T16:47:09-05:00 |
+| report-friotrack | `develop` | [d525d9e](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/d525d9e34c6469488dca96042e610adbd6739b6d) | docs(chapter-04): add 4.8 database design | — | 2026-10-08T15:16:56-05:00 |
+| report-friotrack | `develop` | [7530bcc](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/7530bcc800b711dbd4de43d79cc0603dbff04500) | docs(chapter-03): add section 3.3 product backlog | — | 2026-10-08T13:42:48-05:00 |
+| report-friotrack | `develop` | [37a975a](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/37a975a52afd0adc57e948f183140868695cd2c2) | docs(chapter1): update chapter 1 content | Revise and adjust content of chapter 1 introduction. | 2026-10-08T12:01:43-05:00 |
+| report-friotrack | `develop` | [c28876c](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/c28876cacc022a107a229ca6f64c1f5c1360903a) | docs(student-outcome): add SO5 teamwork contributions | — | 2026-10-08T00:05:36-05:00 |
+| friotrack-frontend | `main` | [9a2ad38](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/commit/9a2ad386cae79aba5fb77b9c1daf9a607bf8cec8) | feat(auth): connect role-based access to ASP.NET Core API | — | 2026-10-08T22:12:21-05:00 |
+| friotrack-frontend | `main` | [5bce6b1](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/commit/5bce6b1deced47d098e6237c20bb452dae93d0ac) | docs(azure): record deployment configuration and validation | — | 2026-10-08T22:13:05-05:00 |
 
-El commit `d136e48ec32fd061c6cd2226a4682d4f33dc3c9a` añade el registro final después del corte inicial de diez. Los registros completos se incluyen en [commits JSON](assets/evidence/github-final-commits.json) y [CSV de commits](assets/annexes/commits-sprint2.csv).
 
-Los PRs referenciados en 5.1.2 permanecían draft hacia develop, sin merge, en el registro del 07/10/2026.
+La versión frontend fue integrada primero en `develop` y después en `main`. La documentación del informe se consolida directamente en `develop`; el historial permite identificar la aportación de cada cuenta sin mezclar los conteos de repositorios diferentes.
 
 #### 5.2.2.5. Execution Evidence for Sprint Review
 
-La ejecución local presenta panel, lista y detalle de envíos, programación en cuatro pasos, unidades/conductores, alertas, acciones, historial y consulta del cliente. El acceso consiste en perfiles de demostración y registro local sin contraseñas; no equivale a identidad o autenticación de servidor. Las lecturas, coordenadas, empresas y clientes visibles son ejemplos.
+La versión publicada inicia sesión con correo y contraseña. El rol procede de la cuenta validada por el servidor. El parámetro `role` del enlace únicamente orienta el texto del acceso: no concede permisos.
 
-Resultados registrados el 07/10/2026:
-
-| Scenario | Observed result | Scope / limitation |
+| Scenario | Observed result | Evidence / scope |
 | --- | --- | --- |
-| Programación de envío | Se completaron los cuatro pasos y se creó FT-0005; persistió al recargar. | Reserva y estado locales; borrador no persistido. |
-| Validaciones | Se bloqueó avance por campos vacíos, llegada anterior a salida y rango térmico invertido. | Casos observados y pruebas de dominio; falta revisión final completa. |
-| Monitoreo y mapa | Se mostraron lecturas y ubicación de muestra; cargaron ocho teselas OSM con atribución. | Sin sensores/GPS conectados; el mapa externo requiere red. |
-| Acción correctiva | FT-0002 quedó reconocida y abierta; aviso interno al cliente asignado. | La nota no modifica la medición ni prueba seguridad de la carga. |
-| Recuperación térmica | Lectura manual de 4 °C y 86 % cerró la térmica; alertas abiertas pasaron de dos a una. | Dato de ejemplo ingresado manualmente. |
-| Cliente de carga | Andrea consultó FT-0001/2/4/5; FT-0003 mostró Envío no disponible. | Reglas locales; no autorización segura de servidor. |
-| Historial y CSV | FT-0002 mostró cinco lecturas y exportación identificada como muestra. | No es certificado de auditoría emitido por servidor. |
-| Idiomas y CTA | Inglés inicial, español es-419 y role/lang conservados en la entrada desde landing. | Integración local; aún falta URL cloud. |
-| Teclado y móvil | Foco, Tab/Shift+Tab y Escape revisados; drawer cerrado inerte; scroll interno de tabla. | Viewport 390 x 844 y revisión dirigida, sin certificación completa WCAG. |
-| Cancelación | Control visible en FT-0005 programado; ausente en tránsito/entregado. | Rechazo y liberación se verificaron por dominio; esa mutación no se repitió en navegador. |
+| Contraseña incorrecta | Acceso rechazado con mensaje en español. | Navegador sobre Azure y pruebas HTTP. |
+| Coordinador Logístico | Acceso al panel con cuatro envíos iniciales y acciones de gestión. | Captura del servicio publicado. |
+| Cliente de Carga | Tres envíos asignados; menú de gestión de flota ausente. | Captura del servicio publicado y filtrado del servidor. |
+| Consulta sin sesión | HTTP 401. | Suite HTTPS publicada. |
+| Comando de coordinador desde cliente | HTTP 403. | Suite API y autorización en servidor. |
+| Restauración y cierre de sesión | Refresco conserva sesión válida; logout revoca el token y vuelve al login. | Navegador y suite HTTPS. |
+| Registro público | Crea exclusivamente Cliente de Carga; rechaza escalamiento de rol. | Suite API local. |
+| Programación y recursos | Fechas, rangos, capacidad y reservas se validan; el servidor guarda la operación confirmada. | Pruebas de dominio e integración. |
+| Acción y recuperación térmica | La acción reconoce la alerta; una lectura posterior dentro de rango permite cerrar la térmica. | Pruebas y recorrido local de operaciones. |
+| Idiomas y acceso desde landing | El enlace del Cliente de Carga conserva español; acceso en inglés disponible. | Navegador, diccionarios y rutas. |
+| Telemetría y mapa | Lecturas y coordenadas de prueba; teselas OpenStreetMap con atribución. | No hay sensores físicos ni GPS conectados. |
 
-Vistas de la aplicación ejecutada localmente. Las imágenes siguientes son capturas del 07/10/2026, no prototipos Figma ni evidencia de despliegue.
+![Figura 5.6. Inicio de sesión con correo y contraseña en la aplicación publicada.](assets/images/chapter-05/azure-login-es.jpg)
 
-![Figura 5.6. Panel del Coordinador Logístico en inglés con indicadores de muestra.](assets/images/chapter-05/tb1-frontend-dashboard-en.jpg)
+![Figura 5.7. Panel del Coordinador Logístico autenticado en Azure.](assets/images/chapter-05/azure-coordinator-es.jpg)
 
-![Figura 5.7. Paso 4 de programación: revisión de carga, ruta, recursos, cliente y rangos.](assets/images/chapter-05/tb1-frontend-scheduling.jpg)
+![Figura 5.8. Consulta del Cliente de Carga autenticado en Azure.](assets/images/chapter-05/azure-client-es.jpg)
 
-![Figura 5.8. Alerta reconocida mediante acción correctiva, todavía abierta.](assets/images/chapter-05/tb1-frontend-alerts-es.jpg)
+![Figura 5.9. Acceso del Cliente de Carga desde la landing publicada.](assets/images/chapter-05/azure-landing-client-es.jpg)
 
-![Figura 5.9. Detalle térmico y de humedad después de una lectura normal de ejemplo.](assets/images/chapter-05/tb1-frontend-detail-es.jpg)
+Se conservan las capturas locales del 07/10/2026 para mostrar la programación y las acciones de monitoreo. Corresponden a la iteración previa de la interfaz; las cuatro imágenes anteriores muestran el acceso actual.
 
-![Figura 5.10. Consulta de envíos asociados al Cliente de Carga en escritorio.](assets/images/chapter-05/tb1-frontend-client-es.jpg)
+![Figura 5.10. Revisión de los cuatro pasos de programación, recorrido local.](assets/images/chapter-05/tb1-frontend-scheduling.jpg)
 
-![Figura 5.11. Detalle del cliente en móvil; el viewport de revisión fue 390 x 844.](assets/images/chapter-05/tb1-frontend-client-mobile.jpg)
+![Figura 5.11. Registro de acción correctiva, recorrido local.](assets/images/chapter-05/tb1-frontend-alerts-es.jpg)
 
-Landing corregida, ejecutada localmente: se comprobó alternancia mensual/anual de planes, navegación a términos EN/ES, entrada por segmento y las fotografías del equipo. Los precios continúan siendo referenciales. El formulario sin receptor identifica validación de muestra y no declara mensaje recibido ni reunión agendada.
+![Figura 5.12. Historial térmico con lecturas de prueba, recorrido local.](assets/images/chapter-05/tb1-frontend-detail-es.jpg)
 
-![Figura 5.12. Landing TB1 corregida en escritorio, revisión local.](assets/images/chapter-05/tb1-landing-desktop.jpg)
+La validación de las fuentes actuales registra **15 pruebas de dominio frontend**, **26 comprobaciones API locales**, compilación Vue/Vite con **222 módulos** y publicación compilada de .NET 10. El servicio Azure registra **12 comprobaciones HTTPS**. Los conteos local y cloud pertenecen a suites distintas y no se suman como pruebas únicas de cobertura.
 
-![Figura 5.13. Landing TB1 corregida en móvil, revisión local.](assets/images/chapter-05/tb1-landing-mobile.jpg)
+Los recibos están en [validación del repositorio](assets/evidence/repository-verification.json), [API publicada](assets/evidence/azure-api-verification.json) y [recorridos de navegador](assets/evidence/azure-browser-verification.json). Las capturas cloud muestran el viewport efectivo del navegador utilizado; no certifican todos los tamaños ni el cumplimiento integral de WCAG.
 
-![Figura 5.14. Sección del equipo con las cinco fotografías suministradas.](assets/images/chapter-05/tb1-landing-team.jpg)
-
-Verificación automática registrada: 15 de 15 pruebas de dominio aprobadas; build Vite 7.3.7 con 223 módulos sin advertencias. La copia standalone también completó instalación con lockfile, pruebas y build. Las pruebas revisan permisos locales, rangos, fechas, capacidad, reservas, versiones obsoletas, estados, cancelación, unicidad, reconocimiento, recuperación térmica y CSV. La landing registra seis comprobaciones de fuente; los diccionarios frontend tienen 234 claves por idioma y 166 referencias estáticas sin faltantes.
-
-Las tres muestras de contraste del detalle dieron 17,06:1, 4,55:1 y 5,58:1; no representan todos los colores y estados. Las reglas de `prefers-reduced-motion` están en la fuente, pero no hay prueba funcional con esa preferencia activada.
-
-Video de navegación y explicación del Sprint 2: se incluye [material de apoyo de pantalla](assets/annexes/frioTrack-productnavigation-sprint2-apoyo.mp4), de 4 minutos y 46 segundos, creado a partir de 152 capturas muestreadas de interacciones locales reales. Se muestran programación, rangos inválidos, inicio de viaje, lectura fuera de rango, acción, recuperación normal, cliente, idiomas y móvil. No tiene audio ni cámaras del grupo.
-
-Enlace Microsoft Stream: pendiente de grabación y explicación del grupo, publicación y verificación de permisos para el docente.
-
-![Figura 5.15. Estado final FT-0006 del recorrido local usado para el apoyo de pantalla.](assets/images/chapter-05/tb1-product-video.jpg)
+Se incluye el [video de apoyo del recorrido local](assets/annexes/frioTrack-productnavigation-sprint2-apoyo.mp4), de 4:46, sin narración ni cámaras. Muestra programación, validaciones, lecturas, acciones, cliente e idiomas de la iteración local anterior. La exposición del equipo y el video narrado del Sprint Review requieren sus archivos y enlaces de entrega.
 
 #### 5.2.2.6. Services Documentation Evidence for Sprint Review
 
-La sección de servicios se conserva conforme al statement. La versión TB1 actual no consume Web Services internos ni una Fake API de json-server. Usa `LocalDemoRepository` sobre localStorage. OpenStreetMap suministra teselas cartográficas externas, no servicios de programación, autenticación o telemetría del negocio.
+La aplicación consume la API de apoyo en `https://friotrack-api-bce6db1b.azurewebsites.net/api`. Su implementación y sus pruebas están en el [repositorio frontend](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/tree/main/api). Este servicio autentica cuentas, filtra información y procesa comandos; no utiliza json-server ni requiere un repositorio mock adicional.
 
-| Component / integration | Implemented interaction | Documentation evidence | State |
+| Action | HTTP method / syntax | Parameters / body | Response |
 | --- | --- | --- | --- |
-| Adaptador local de demostración | Las vistas usan src/infrastructure/demo-repository.js y reglas en src/domains/operations.js. | README frontend, fuente publicada, pruebas y recibos incluidos. | Implementado localmente; no es endpoint HTTP. |
-| OpenStreetMap / Leaflet | Carga opcional de teselas públicas y atribución. | Captura del detalle y comprobación registrada de carga. | Servicio externo cartográfico; posiciones ficticias. |
-| Formulario landing | Validación y control de errores; contactEndpoint sin receptor. | Fuente de configuración y regresiones de landing. | Recepción real pendiente; no endpoint operativo acreditado. |
-| API de FríoTrack | ASP.NET Core, C# y EF Core previstos; PostgreSQL propuesto. | Repositorio friotrack-api, rama feature/av2-api-design y commit 05d95306d58e. | Diseño AV2; sin servidor, rutas verificadas ni Swagger ejecutado. |
+| Health | `GET /api/health` | Sin parámetros ni autenticación. | `200`: `status`, `service`, `version`. |
+| Login | `POST /api/auth/login` | JSON `email`, `password`. | `200`: `token`, `expiresAt`, `profile`, `state`; `401`: credenciales inválidas; `429`: límite de intentos. |
+| Client registration | `POST /api/auth/register` | JSON `name`, `email`, `organization`, `password`, `consent`; rol permitido `cargo-client`. | `200`: sesión de nueva cuenta; `400`: datos inválidos; `403`: rol no permitido. |
+| Authorized workspace | `GET /api/workspace` | Cabecera `Authorization: Bearer <token>`. | `200`: `profile` y `state` filtrado; `401`: sesión ausente, vencida o revocada. |
+| Application command | `POST /api/commands` | Bearer; JSON `type`, `payload`. Ejemplos: `createShipment`, `recordAction`, `updateProfile`. | `200`: `profile`, `state`, `result`; `400`: validación; `401`: sesión inválida; `403`: operación no permitida; `404`: envío no disponible. |
+| Logout | `POST /api/auth/logout` | Bearer; cuerpo vacío `{}`. | `204`: token revocado; `401`: sesión inválida. |
 
-Al existir servicios implementados, su documentación deberá incluir acción, verbo HTTP, sintaxis, parámetros, respuestas/códigos y ejemplos, enlace OpenAPI desplegado o local antes del despliegue, capturas de interacción, repositorio y commits de documentación. La primera Web Services desplegada aparece en AV2.
+Example health response:
 
-La sustitución del adaptador local requerirá autenticación, autorización por empresa/cliente, persistencia compartida, transacciones para reservas, control de concurrencia y lectura de sensores. Publicar una SPA estática en AWS o Azure no implementa automáticamente esas capacidades.
+```json
+{"status":"ok","service":"FrioTrack","version":"2.0"}
+```
+
+Example login request (replace the placeholder with the privately supplied password):
+
+```http
+POST /api/auth/login
+Content-Type: application/json
+
+{"email":"coordinador@friotrack.app","password":"<private-password>"}
+```
+
+An invalid login returns HTTP 401 with `{"code":"invalidCredentials"}`. A successful login returns an opaque random token with an eight-hour expiry. The browser stores it in `sessionStorage`; logout revokes its hash in the server. The token is not a JWT. Passwords use individually salted PBKDF2-SHA256 hashes with 210,000 iterations. Public registration cannot grant coordinator privileges.
+
+The deployed service uses a private single-instance JSON store. Physical telemetry ingestion, relational transactions, organization tenancy, verified email, password recovery and external notifications remain outside this implementation. OpenAPI/Swagger for the final backend remains TS07; this endpoint table is manual contract documentation and does not claim a deployed Swagger interface. Documentation changes are recorded in frontend commit [`5bce6b1`](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/commit/5bce6b1deced47d098e6237c20bb452dae93d0ac).
 
 #### 5.2.2.7. Software Deployment Evidence for Sprint Review
 
-TB1 exige la landing actualizada y la primera versión frontend desplegadas. El estado comprobable del corte es el siguiente:
+La nueva landing y la primera aplicación frontend se publicaron en Azure. La publicación estática registrada finalizó el **08/10/2026 a las 21:35, America/Lima** (`2026-10-09T02:35:30.171Z`). La verificación compara archivos publicados con sus SHA-256 locales.
 
-| Product | Source / runtime reference | Recorded deployment state | Evidence still required |
-| --- | --- | --- | --- |
-| Landing AV1 | GitHub Pages histórico de 5.2.1.7. | Publicación histórica observada. | Recomprobar acceso; no confundir con landing TB1. |
-| Landing TB1 | [Fuente corregida](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/friotrack-landing/tree/feature/tb1-landing-corrections); ejecución local. | Código publicado; nueva versión web pendiente. | URL pública, fecha, revisión publicada, capturas de configuración y CTA a cloud. |
-| Frontend TB1 | [Aplicación Vue](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrack/friotrack-frontend/tree/feature/tb1-frontend-application); build local. | AWS o Azure pendiente de cuenta y publicación. | URL HTTPS, configuración real, versión/hash y flujos EN/ES desktop/mobile. |
-| API y PostgreSQL | Repositorio de diseño AV2; sin URL de ejecución. | No implementados; primera API desplegada prevista en AV2. | Cuando existan: servicio operativo, documentación y evidencias correspondientes. |
+| Product | Public URL | Deployment / evidence |
+| --- | --- | --- |
+| Landing Page | [Abrir FríoTrack](https://friotracktb1bce6db1b.z22.web.core.windows.net/landing/) | Azure Storage, directorio `/landing/`; CTA hacia login por perfil e idioma. |
+| Frontend Web Application | [Abrir aplicación](https://friotracktb1bce6db1b.z22.web.core.windows.net/) | Azure Storage, raíz `$web`; bundle `index-CF3heRjH.js`. |
+| Coordinador Logístico | [Iniciar sesión](https://friotracktb1bce6db1b.z22.web.core.windows.net/#/login?role=coordinator&lang=es) | Credenciales verificadas por la API; rol de coordinación. |
+| Cliente de Carga | [Iniciar sesión](https://friotracktb1bce6db1b.z22.web.core.windows.net/#/login?role=cargo-client&lang=es) | Credenciales verificadas por la API; consulta de envíos asignados. |
+| Supporting API | [Comprobar estado](https://friotrack-api-bce6db1b.azurewebsites.net/api/health) | Azure App Service, .NET 10 y Free F1. |
+
+El [registro estático](assets/evidence/azure-deployment.json), el [registro API](assets/evidence/azure-api-deployment.json) y la [comparación de archivos](assets/evidence/azure-file-verification.json) documentan los recursos, la fecha y los resultados. **34 archivos** de la publicación conjunta frontend/landing coincidieron con sus hashes locales; una ruta inexistente respondió HTTP 404. La validación posterior del repositorio frontend confirmó los **20 archivos** correspondientes a su propio build. El recibo conjunto no atribuye a `friotrack-landing/main` los cambios de entrada que todavía no están sincronizados allí.
+
+Las capturas 5.6–5.9 muestran la ejecución sobre las URLs públicas. La [guía de despliegue](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/blob/main/docs/azure-deployment.md) contiene los comandos de compilación, publicación y verificación. El sitio publica términos en el footer de ambas interfaces. Los correos iniciales son `coordinador@friotrack.app` y `cliente@friotrack.app`; sus contraseñas se entregan por separado y no se incorporan al informe público.
 
 #### 5.2.2.8. Team Collaboration Insights during Sprint
 
-La integración observada deja las fuentes revisables en GitHub. Su autoría registrada permite reproducir los cambios, pero no acredita por sí sola la participación de los cinco integrantes. Los siguientes números corresponden exclusivamente a los once commits de integración del 07/10/2026.
+El nuevo informe registra aportes por capítulo y por cuenta GitHub. El periodo considerado es el **07–08/10/2026**, sobre el historial de `develop` previo a la consolidación `v2.0.0`. Se excluyen merges; no se suman commits del frontend a los del informe.
 
-| Team Member | GitHub Username | Integration commits in this evidence set | Draft PRs attributed to this publication | Cross-reviews / team evidence |
-| --- | --- | --- | --- | --- |
-| Atauje Barreto, Alexander Sebastián | Alexander1Alexander2 | 11 | 4 | Pendiente: revisiones sustantivas, board y decisiones del equipo. |
-| Bardales Rodriguez, Benjamin Elias | Benja72312 | No documentados en este conjunto | No documentados en este conjunto | Pendiente; registrar cambios y revisiones reales. |
-| Daga Chávez, Joaquín Leonardo | Eshnikeee | No documentados en este conjunto | No documentados en este conjunto | Pendiente; registrar cambios y revisiones reales. |
-| Saavedra Flores, Rodrigo Andree | rodrigoxd67 | No documentados en este conjunto | No documentados en este conjunto | Pendiente; registrar cambios y revisiones reales. |
-| Vera Solsol, Nayely Macarena | Macaxprogram29 | No documentados en este conjunto | No documentados en este conjunto | Pendiente; registrar cambios y revisiones reales. |
+| Team Member | GitHub Username | Report commits (excluding merges) | Evidence |
+| --- | --- | --- | --- |
+| Atauje Barreto, Alexander Sebastián | Alexander1Alexander2 | 10 | Capítulo I, navegación e integración del Capítulo V. [5875269](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/58752691c08a90ce27e2d2cf3c8ca0cb5b10565c). |
+| Bardales Rodriguez, Benjamin Elias | Benja72312 | 0 | Diseño y landing de AV1; sin commits en este conjunto del nuevo informe. Registro AV1 de responsabilidades. |
+| Daga Chávez, Joaquín Leonardo | Eshnikeee | 8 | Capítulo II, entrevistas, fotografías y enlaces de video. [369cc99](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/369cc991c51dd2424aded38766728918bf27de71). |
+| Saavedra Flores, Rodrigo Andree | rodrigoxd67 | 11 | Portada, Student Outcome e incorporación del Capítulo IV; integración de acceso/API en frontend. [d525d9e](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/d525d9e34c6469488dca96042e610adbd6739b6d). |
+| Vera Solsol, Nayely Macarena | Macaxprogram29 | 4 | User Stories, Impact Mapping, Product Backlog e índice del Capítulo III. [3cc5e02](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/3cc5e023893f00728f4a7d80ea836a7c0451247e). |
+
+
+Bardales Rodriguez, Benjamin Elias conserva la contribución de diseño y landing registrada en AV1; no se le atribuyen commits que no figuren en este conjunto del nuevo informe. Las incorporaciones efectuadas por otra cuenta se identifican como tales. La calidad de la participación se valora junto con las tareas, resultados y evaluación del Team Leader; los conteos no constituyen una calificación individual.
+
+
+# Conclusiones y Recomendaciones
+
+## Conclusiones
+
+FríoTrack aborda la visibilidad del transporte refrigerado mediante programación de envíos, administración de recursos, consulta térmica y atención de alertas. El informe relaciona estos procesos con los perfiles de Coordinador Logístico y Cliente de Carga. Las entrevistas de distribuidores y comerciantes aportan contexto sobre conservación y pérdidas; los resultados de inventario y vencimientos no se convierten en funcionalidades implementadas de transporte.
+
+La entrega incorpora la primera aplicación Vue/PrimeVue publicada en Azure y una landing actualizada que conduce al acceso correspondiente. El inicio de sesión valida correo y contraseña en ASP.NET Core. La consulta y los comandos se autorizan en el servidor, y la cuenta cliente recibe únicamente sus envíos y recursos relacionados. El cierre de sesión revoca el token.
+
+La validación registrada comprende 15 pruebas de dominio frontend, 26 comprobaciones locales de la API y 12 comprobaciones HTTPS del servicio publicado, además de compilación y comparación de archivos mediante SHA-256. Las capturas muestran el acceso y las vistas autenticadas sobre las URLs públicas. Estas comprobaciones permiten reproducir la revisión técnica; no miden adopción comercial, satisfacción ni reducción real de pérdidas.
+
+La arquitectura diferencia los contenedores actualmente desplegados del diseño posterior con EF Core y PostgreSQL. El servicio de apoyo utiliza un archivo JSON privado de una sola instancia. Las lecturas y coordenadas iniciales son datos de prueba; la recepción de sensores físicos, recuperación de contraseña, correo externo y Swagger del backend final continúan en el roadmap.
+
+El nuevo repositorio consolida el trabajo por capítulo y registra los commits de las cuentas participantes. Los anexos reúnen los enlaces del producto, evidencias técnicas y materiales de apoyo, y especifican los documentos académicos que todavía requieren adjuntarse por el equipo.
+
+## Recomendaciones
+
+Completar la validación con usuarios de transporte refrigerado y clientes de carga, distinguiendo sus necesidades de las entrevistas orientadas a almacenes y bodegas. Actualizar las personas, mapas e instrumentos según esos hallazgos y conservar los registros originales de las entrevistas.
+
+Para la siguiente iteración, evolucionar la API hacia persistencia relacional con EF Core, transacciones para reservas, aislamiento por empresa y contratos OpenAPI. Integrar dispositivos solo después de validar su identidad, sus marcas de tiempo y la recepción de lecturas. Mantener visible la procedencia de datos de prueba mientras no exista telemetría real.
+
+Cerrar el receptor del formulario comercial, sincronizar en el repositorio independiente de landing la configuración publicada y repetir los recorridos de aceptación en ambos idiomas. Ampliar la revisión de accesibilidad y tamaños de pantalla a los controles y estados que aún no tienen evidencia completa.
+
+Adjuntar las actas del sprint, el video narrado del Sprint Review, la exposición del equipo, el Keynote y la evaluación individual del Team Leader. Los enlaces privados deben permitir el acceso del docente y corresponder a los archivos reales de la entrega.
+
+# Bibliografía
+
+
+* Agafonkin, V. (s. f.). *Leaflet: An open-source JavaScript library for interactive maps*. [https://leafletjs.com](https://leafletjs.com)
+* Andersson, R. (s. f.). *Inter* [Tipografía]. [https://rsms.me/inter/](https://rsms.me/inter/)
+* Banco Mundial. (2023). *Logistics Performance Index 2023: Mind the gap*. [LPI report 2023](https://lpi.worldbank.org/sites/default/files/2023-04/LPI_2023_report_with_layout.pdf)
+* Brandolini, A. (2021). *Introducing EventStorming*. Leanpub. [https://leanpub.com/introducing_eventstorming](https://leanpub.com/introducing_eventstorming)
+* Brown, S. (s. f.). *The C4 model for visualising software architecture*. Leanpub. [https://leanpub.com/visualising-software-architecture](https://leanpub.com/visualising-software-architecture)
+* Buxton, B. (2007). *Sketching user experiences: Getting the design right and the right design*. Morgan Kaufmann.
+* Chen, P. P.-S. (1976). The entity-relationship model—Toward a unified view of data. *ACM Transactions on Database Systems, 1*(1), 9–36. [https://doi.org/10.1145/320434.320440](https://doi.org/10.1145/320434.320440)
+* Elmasri, R., y Navathe, S. B. (2016). *Fundamentals of database systems* (7.ª ed.). Pearson.
+* Evans, E. (2003). *Domain-driven design: Tackling complexity in the heart of software*. Addison-Wesley.
+* Fowler, M. (2002). *Patterns of enterprise application architecture*. Addison-Wesley.
+* Fowler, M. (2004). *UML distilled: A brief guide to the standard object modeling language* (3.ª ed.). Addison-Wesley.
+* Garrett, J. J. (2011). *The elements of user experience: User-centered design for the web and beyond* (2.ª ed.). New Riders.
+* Google. (s. f.). *Material Design 3*. [https://m3.material.io/](https://m3.material.io/)
+* Google Search Central. (s. f.). *Robots meta tags specifications*. [https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag)
+* Instituto Nacional de Estadística e Informática. (2024, 15 de febrero). *Producción nacional disminuyó 0,55 % en el año 2023*. [Comunicado INEI](https://www.gob.pe/institucion/inei/noticias/906643-produccion-nacional-disminuyo-0-55-en-el-ano-2023).
+* International Organization for Standardization. (2019). *Ergonomics of human-system interaction — Part 210: Human-centred design for interactive systems* (ISO 9241-210:2019). [https://www.iso.org/standard/77520.html](https://www.iso.org/standard/77520.html)
+* Jones, M., Bradley, J., y Sakimura, N. (2015). *JSON Web Token (JWT)* (RFC 7519). Internet Engineering Task Force. [https://www.rfc-editor.org/info/rfc7519](https://www.rfc-editor.org/info/rfc7519)
+* Krug, S. (2014). *Don't make me think, revisited: A common sense approach to web usability* (3.ª ed.). New Riders.
+* Marcotte, E. (2010, 25 de mayo). Responsive web design. *A List Apart*. [https://alistapart.com/article/responsive-web-design/](https://alistapart.com/article/responsive-web-design/)
+* Mercier, S., Villeneuve, S., Mondor, M., y Uysal, I. (2017). Time–temperature management along the food cold chain: A review of recent developments. *Comprehensive Reviews in Food Science and Food Safety, 16*(4), 647–667. [https://doi.org/10.1111/1541-4337.12269](https://doi.org/10.1111/1541-4337.12269)
+* Ministerio de Transportes y Comunicaciones. (2023). *Plan Nacional de Servicios e Infraestructura Logística de Transporte al 2032* (Resolución Ministerial N.° 362-2023-MTC/01). [Plan aprobado por MTC](https://www.gob.pe/institucion/mtc/normas-legales/4081616-362-2023-mtc-01)
+* Nielsen, J. (1994). *10 usability heuristics for user interface design*. Nielsen Norman Group. [https://www.nngroup.com/articles/ten-usability-heuristics/](https://www.nngroup.com/articles/ten-usability-heuristics/)
+* Norman, D. A. (2013). *The design of everyday things* (ed. rev. y ampliada). Basic Books.
+* OpenStreetMap Foundation. (s. f.). *OpenStreetMap*. [https://www.openstreetmap.org](https://www.openstreetmap.org)
+* Organización de las Naciones Unidas para la Alimentación y la Agricultura. (2026). *FAO y MIDAGRI fortalecen acciones para reducir la pérdida y desperdicio de alimentos en el Perú*. [Noticia FAO Perú](https://www.fao.org/peru/noticias/detail/fao-y-midagri-fortalecen-acciones-para-reducir-la-p%C3%A9rdida-y-desperdicio-de-alimentos-en-el-per%C3%BA/es).
+* The PostgreSQL Global Development Group. (s. f.). *PostgreSQL documentation*. [https://www.postgresql.org/docs/](https://www.postgresql.org/docs/)
+* PrimeTek. (s. f.). *PrimeVue*. [https://primevue.org](https://primevue.org)
+* Rosenfeld, L., Morville, P., y Arango, J. (2015). *Information architecture: For the web and beyond* (4.ª ed.). O'Reilly Media.
+* Vernon, V. (2013). *Implementing domain-driven design*. Addison-Wesley.
+* World Wide Web Consortium. (2023). *Accessible Rich Internet Applications (WAI-ARIA) 1.2*. [https://www.w3.org/TR/wai-aria-1.2/](https://www.w3.org/TR/wai-aria-1.2/)
+* World Wide Web Consortium. (2024). *Web Content Accessibility Guidelines (WCAG) 2.2*. [https://www.w3.org/TR/WCAG22/](https://www.w3.org/TR/WCAG22/)
+* Wroblewski, L. (2011). *Mobile first*. A Book Apart.
+
+
+* Tive. (s. f.). *Real-time trackers*. [Producto oficial](https://www.tive.com/products/real-time-trackers). Consultado el 06/10/2026.
+* Tive. (s. f.). *Cold chain monitoring*. [Solución oficial](https://www.tive.com/solutions/cold-chain-monitoring). Consultado el 06/10/2026.
+* Sensitech. (s. f.). *SensiWatch Platform*. [Plataforma oficial](https://www.sensitech.com/en/products/sensiwatch-platform/). Consultado el 06/10/2026.
+* Sensitech. (s. f.). *Food Supply Chain Visibility Solutions*. [Sector alimentos](https://www.sensitech.com/en/industries/food/). Consultado el 06/10/2026.
+* Controlant. (s. f.). *The Controlant Platform*. [Plataforma oficial](https://www.controlant.com/platform). Consultado el 06/10/2026.
+* Controlant. (s. f.). *System overview*. [Documentación oficial](https://support.controlant.com/en/20956-39992-system-overview.html). Consultado el 06/10/2026.
+* Portigal, S. (2013). *Interviewing users: How to uncover compelling insights*. Rosenfeld Media.
+* Goodman, E., Kuniavsky, M., y Moed, A. (2012). *Observing the user experience: A practitioner's guide to user research* (2.ª ed.). Morgan Kaufmann.
+* Microsoft. (s. f.). *C# coding conventions*. [Documentación oficial](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions).
+* Vue.js. (s. f.). *Style Guide*. [Documentación oficial](https://vuejs.org/style-guide/).
+* Semantic Versioning. (s. f.). *Semantic Versioning 2.0.0*. [Especificación](https://semver.org/).
+* Conventional Commits. (s. f.). *Conventional Commits 1.0.0*. [Especificación](https://www.conventionalcommits.org/en/v1.0.0/).
+
+* Microsoft. (s. f.). *Static website hosting in Azure Storage*. [Documentación oficial](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blob-static-website).
+* Microsoft. (s. f.). *Deploy an ASP.NET web app to Azure*. [Documentación oficial](https://learn.microsoft.com/en-us/azure/app-service/quickstart-dotnetcore).
+
+# Anexos
+
+## Anexo A. Participant Performance Report
+
+El Team Leader, Atauje Barreto, Alexander Sebastián, debe incorporar la evaluación individual en Word y PDF conforme al formato del enunciado y su escala 20/16/13/07/00. No se adjunta un informe evaluado y firmado en este repositorio. El registro de commits de 5.2.2.8 aporta trazabilidad, pero no sustituye la valoración del líder.
+
+## Anexo B. Repositorios del proyecto
+
+| Product | Repository / source | Content |
+| --- | --- | --- |
+| Project Report | [report-friotrack](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack) | Informe, recursos y anexos; consolidación en `develop` e integración en `main`. |
+| Landing Page | [friotrack-landing](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-landing) | Fuente independiente de la landing. |
+| Frontend Web Application | [friotrack-frontend](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend) | Vue/PrimeVue, pruebas y configuración Azure. |
+| Supporting API | [Código ASP.NET Core](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/tree/main/api) | Autenticación, autorización, persistencia y comandos. |
+
+La API de apoyo se mantiene junto al frontend. No se incorpora una dependencia de un repositorio mock ni un enlace a un proyecto ajeno.
+
+## Anexo C. Acceso a los productos publicados
+
+| Resource | URL |
+| --- | --- |
+| Landing Page | [FríoTrack](https://friotracktb1bce6db1b.z22.web.core.windows.net/landing/) |
+| Web Application | [Aplicación FríoTrack](https://friotracktb1bce6db1b.z22.web.core.windows.net/) |
+| Coordinador Logístico | [Acceso en español](https://friotracktb1bce6db1b.z22.web.core.windows.net/#/login?role=coordinator&lang=es) |
+| Cliente de Carga | [Acceso en español](https://friotracktb1bce6db1b.z22.web.core.windows.net/#/login?role=cargo-client&lang=es) |
+| API Health | [Estado del servicio](https://friotrack-api-bce6db1b.azurewebsites.net/api/health) |
+| Términos de la aplicación | [Terms and Conditions](https://friotracktb1bce6db1b.z22.web.core.windows.net/#/terms) |
+
+Los correos de las cuentas iniciales son `coordinador@friotrack.app` y `cliente@friotrack.app`. Las contraseñas se proporcionan de forma privada. La publicación no utiliza selección de perfil sin autenticación.
+
+## Anexo D. Tablero, diseño e investigación
+
+- [Product Backlog en Trello](https://trello.com/b/6qrvOukt/blackstartup-fr%C3%ADotrack): la captura incorporada en 3.3 conserva el tablero documentado.
+- [Diseño en Figma](https://www.figma.com/design/eJ6Ceq0H0FP0xWseNnKFFv): recurso citado en 4.5; su acceso depende de los permisos del archivo.
+- [Prototipo HTML](assets/prototype/friotrack-prototype.html): descargar y abrir en navegador; corresponde al diseño visual y se distingue de la aplicación implementada.
+- Registro, fotografías y enlaces de las entrevistas: sección 2.2.2. Se conservan los cinco registros incorporados por el equipo.
+- [Fuentes editables de arquitectura](assets/architecture/containers.mmd), [modelo de clases](assets/architecture/backend-classes-tb1.puml) y [modelo de datos](assets/architecture/database-tb1.mmd).
+
+## Anexo E. Videos
+
+| Material | Location / state |
+| --- | --- |
+| Entrevistas | Enlaces y fotografías en 2.2.2. |
+| Prototipo | Animación de 4.5 y prototipo HTML; el video narrado no está adjunto. |
+| Navegación Sprint 2 | [Video local de apoyo, 4:46](assets/annexes/frioTrack-productnavigation-sprint2-apoyo.mp4), sin audio ni cámaras; muestra la iteración local anterior. |
+| Exposición TB1 | Archivo y enlace de entrega no adjuntos. El video de apoyo no sustituye la exposición de los integrantes. |
+
+## Anexo F. Entregables TB1
+
+La matriz utiliza las secciones TB1 del enunciado, página 32, y distingue los archivos presentes de los materiales que debe adjuntar el equipo.
+
+| Deliverable | Evidence available | Completion item |
+| --- | --- | --- |
+| Final Project Doc Report | Informe acumulativo, índice, registro, Student Outcome, cinco capítulos, conclusiones, bibliografía y anexos. | Revisión final del equipo y exportación en el formato de entrega solicitado. |
+| Landing actualizada | Publicación Azure y acceso a aplicación. | Sincronizar la configuración publicada en el repositorio independiente. |
+| Primera Frontend Web Application | Vue/PrimeVue en Azure; login y permisos del servidor. | Review del equipo contra todos los criterios seleccionados. |
+| Sprint 2: ocho subsecciones | Planning, responsables, backlog, desarrollo, ejecución, servicios, despliegue y colaboración en 5.2.2. | Adjuntar actas de planning, review y retrospectiva. |
+| Keynote TB1 | No adjunto en el repositorio. | Presentación final del equipo. |
+| Individual Member Performance Report | Identificación del Team Leader y evidencia de contribuciones. | Word/PDF evaluados por el líder. |
+| Videos y archivos complementarios | Entrevistas, prototipo HTML, imágenes, recibos y video de apoyo. | Exposición y video narrado con enlaces y permisos del docente. |
+
+## Anexo G. Registros de verificación
+
+| Record | Purpose |
+| --- | --- |
+| [Current commits](assets/evidence/current-commits.json) | Metadatos del nuevo informe y del frontend integrado. |
+| [Repository verification](assets/evidence/repository-verification.json) | Pruebas, compilación y correspondencia del build frontend. |
+| [Static deployment](assets/evidence/azure-deployment.json) | Publicación conjunta de frontend y landing. |
+| [API deployment](assets/evidence/azure-api-deployment.json) | App Service, plan y configuración del servicio. |
+| [Published files](assets/evidence/azure-file-verification.json) | Comparación SHA-256 de los archivos públicos. |
+| [API HTTPS checks](assets/evidence/azure-api-verification.json) | Autenticación y autorización del servicio publicado. |
+| [Browser checks](assets/evidence/azure-browser-verification.json) | Login, aislamiento de cuenta, refresco y logout. |
+
+Los registros de la revisión local anterior se conservan en el [archivo de evidencias del 07/10/2026](assets/evidence/archive/2026-10-07/README.md). Sus estados de publicación pertenecen a esa fecha y no describen el despliegue actual.
