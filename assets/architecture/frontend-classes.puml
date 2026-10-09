@@ -1,0 +1,32 @@
+@startuml
+title FríoTrack — modelo lógico del cliente integrado
+class WorkspaceRepository <<module>> {
+  +data: Ref<WorkspaceData>
+  +profile: Ref<Profile?>
+  +login(draft): Promise<Profile>
+  +register(draft): Promise<Profile>
+  +logout(): Promise<void>
+  +execute(type, payload): Promise<Object>
+  +restoreSession(): Promise<void>
+  -request(path, body): Promise<Object>
+}
+class WorkspaceData <<logical object>> {
+  +schema: Number
+  +revision: Number
+  +profiles: Profile[]
+  +vehicles: Vehicle[]
+  +drivers: Driver[]
+  +shipments: Shipment[]
+  +alerts: Alert[]
+  +notifications: Notification[]
+}
+class DomainOperations <<module>>
+class WorkspaceStore <<server service>>
+WorkspaceRepository --> WorkspaceData : updates reactive state
+WorkspaceRepository ..> WorkspaceStore : HTTPS JSON and bearer token
+WorkspaceStore --> WorkspaceData : filters by actor
+note bottom
+Logical representation of modules and data objects.
+The server validates permissions and persists private JSON.
+end note
+@enduml

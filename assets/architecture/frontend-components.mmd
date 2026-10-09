@@ -1,0 +1,10 @@
+flowchart TB
+  IAM[Access and Profile views] --> Repository
+  Fleet[Resource views] --> Repository
+  Shipment[Wizard List Detail] --> Repository
+  Monitoring[Readings and Map] --> Repository
+  Alerts[Actions History and CSV] --> Repository
+  Repository[Workspace repository / reactive data and profile] -->|fetch HTTPS JSON| API[ASP.NET Core API]
+  Repository --> Session[(sessionStorage: opaque token)]
+  Monitoring -->|HTTPS tiles| OSM[OpenStreetMap]
+  API -->|role and customerId filtering| State[(Private single-instance JSON)]

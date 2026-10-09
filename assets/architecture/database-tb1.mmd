@@ -1,0 +1,183 @@
+erDiagram
+  organizations {
+    uuid id PK "PK"
+    varchar name "proposed field"
+  }
+  users {
+    uuid id PK "PK"
+    uuid organization_id FK "FK"
+    varchar email UK "UK"
+    varchar password_hash "proposed field"
+    varchar full_name "proposed field"
+    varchar role "proposed field"
+    varchar preferred_language "proposed field"
+    boolean enabled "proposed field"
+    integer failed_attempts "proposed field"
+    datetime locked_until "nullable"
+  }
+  password_reset_tokens {
+    uuid id PK "PK"
+    uuid user_id FK "FK"
+    varchar token_hash UK "UK"
+    datetime expires_at "proposed field"
+    datetime used_at "nullable"
+  }
+  vehicles {
+    uuid id PK "PK"
+    uuid organization_id FK "FK"
+    varchar plate UK "UK"
+    numeric capacity_tons "proposed field"
+    boolean enabled "proposed field"
+  }
+  drivers {
+    uuid id PK "PK"
+    uuid organization_id FK "FK"
+    varchar full_name "proposed field"
+    varchar license_number UK "UK"
+    boolean enabled "proposed field"
+  }
+  sensors {
+    uuid id PK "PK"
+    uuid vehicle_id FK "FK UK nullable"
+    varchar serial_code UK "UK"
+    boolean enabled "proposed field"
+  }
+  fleet_allocations {
+    uuid id PK "PK"
+    uuid shipment_id FK "FK UK"
+    uuid vehicle_id FK "FK"
+    uuid driver_id FK "FK"
+    datetime reserved_from "proposed field"
+    datetime reserved_until "proposed field"
+    varchar status "proposed field"
+    datetime released_at "nullable"
+  }
+  shipments {
+    uuid id PK "PK"
+    varchar code UK "UK"
+    uuid organization_id FK "FK"
+    uuid coordinator_id FK "FK"
+    uuid client_id FK "FK"
+    varchar cargo "proposed field"
+    numeric weight_tons "proposed field"
+    varchar origin "proposed field"
+    varchar destination "proposed field"
+    numeric min_temp_c "proposed field"
+    numeric max_temp_c "proposed field"
+    numeric min_humidity_pct "proposed field"
+    numeric max_humidity_pct "proposed field"
+    integer tolerance_minutes "proposed field"
+    datetime planned_departure "proposed field"
+    datetime estimated_arrival "proposed field"
+    varchar status "proposed field"
+    bigint version "proposed field"
+  }
+  shipment_history {
+    uuid id PK "PK"
+    uuid shipment_id FK "FK"
+    uuid actor_id FK "FK"
+    varchar action "proposed field"
+    varchar from_status "nullable"
+    varchar to_status "nullable"
+    text note "proposed field"
+    datetime recorded_at "proposed field"
+  }
+  shipment_monitorings {
+    uuid id PK "PK"
+    uuid shipment_id FK "FK UK"
+    numeric min_temp_c "proposed field"
+    numeric max_temp_c "proposed field"
+    numeric min_humidity_pct "proposed field"
+    numeric max_humidity_pct "proposed field"
+    integer tolerance_minutes "proposed field"
+    integer max_silence_minutes "proposed field"
+    varchar signal_status "proposed field"
+    datetime last_reading_at "nullable"
+    datetime started_at "proposed field"
+    datetime stopped_at "nullable"
+  }
+  sensor_readings {
+    bigint id PK "PK"
+    uuid monitoring_id FK "FK"
+    numeric temperature_c "proposed field"
+    numeric humidity_pct "proposed field"
+    boolean within_both_ranges "proposed field"
+    datetime recorded_at "proposed field"
+  }
+  position_reports {
+    bigint id PK "PK"
+    uuid monitoring_id FK "FK"
+    numeric latitude "proposed field"
+    numeric longitude "proposed field"
+    datetime recorded_at "proposed field"
+  }
+  alerts {
+    uuid id PK "PK"
+    uuid shipment_id FK "FK"
+    bigint trigger_reading_id FK "FK nullable"
+    varchar type "proposed field"
+    varchar severity "proposed field"
+    varchar status "proposed field"
+    datetime opened_at "proposed field"
+    datetime acknowledged_at "nullable"
+    datetime resolved_at "nullable"
+  }
+  corrective_actions {
+    uuid id PK "PK"
+    uuid alert_id FK "FK"
+    uuid registered_by FK "FK"
+    text comment "proposed field"
+    boolean notify_client "proposed field"
+    datetime registered_at "proposed field"
+  }
+  notifications {
+    uuid id PK "PK"
+    uuid user_id FK "FK"
+    uuid shipment_id FK "FK"
+    uuid alert_id FK "FK nullable"
+    varchar kind "proposed field"
+    datetime created_at "proposed field"
+    datetime read_at "nullable"
+  }
+  incidents {
+    uuid id PK "PK"
+    uuid shipment_id FK "FK"
+    uuid registered_by FK "FK"
+    text description "proposed field"
+    datetime registered_at "proposed field"
+  }
+  thermal_reports {
+    uuid id PK "PK"
+    uuid shipment_id FK "FK"
+    uuid generated_by FK "FK"
+    datetime generated_at "proposed field"
+    text file_path "proposed field"
+    jsonb summary "proposed field"
+  }
+  organizations ||--o{ users : organization_id
+  organizations ||--o{ vehicles : organization_id
+  organizations ||--o{ drivers : organization_id
+  organizations ||--o{ shipments : organization_id
+  users ||--o{ password_reset_tokens : user_id
+  vehicles o|--o| sensors : vehicle_id
+  shipments ||--o| fleet_allocations : shipment_id
+  vehicles ||--o{ fleet_allocations : vehicle_id
+  drivers ||--o{ fleet_allocations : driver_id
+  users ||--o{ shipments : coordinator_id
+  users ||--o{ shipments : client_id
+  shipments ||--o{ shipment_history : shipment_id
+  users ||--o{ shipment_history : actor_id
+  shipments ||--o| shipment_monitorings : shipment_id
+  shipment_monitorings ||--o{ sensor_readings : monitoring_id
+  shipment_monitorings ||--o{ position_reports : monitoring_id
+  shipments ||--o{ alerts : shipment_id
+  sensor_readings o|--o{ alerts : trigger_reading_id
+  alerts ||--o{ corrective_actions : alert_id
+  users ||--o{ corrective_actions : registered_by
+  users ||--o{ notifications : user_id
+  shipments ||--o{ notifications : shipment_id
+  alerts o|--o{ notifications : alert_id
+  shipments ||--o{ incidents : shipment_id
+  users ||--o{ incidents : registered_by
+  shipments ||--o{ thermal_reports : shipment_id
+  users ||--o{ thermal_reports : generated_by

@@ -1,0 +1,1006 @@
+{
+  "status": "planned_backend_design_not_implementation",
+  "date": "2026-10-07",
+  "entities": [
+    {
+      "name": "Organization",
+      "table": "organizations",
+      "context": "IAM",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "flags": "PK"
+        },
+        {
+          "name": "name",
+          "type": "varchar(160)",
+          "flags": ""
+        }
+      ],
+      "methods": [
+        "+ rename(name: String): void"
+      ]
+    },
+    {
+      "name": "UserAccount",
+      "table": "users",
+      "context": "IAM",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "flags": "PK"
+        },
+        {
+          "name": "organization_id",
+          "type": "uuid",
+          "flags": "FK"
+        },
+        {
+          "name": "email",
+          "type": "varchar(254)",
+          "flags": "UK"
+        },
+        {
+          "name": "password_hash",
+          "type": "varchar(255)",
+          "flags": ""
+        },
+        {
+          "name": "full_name",
+          "type": "varchar(160)",
+          "flags": ""
+        },
+        {
+          "name": "role",
+          "type": "varchar(24)",
+          "flags": ""
+        },
+        {
+          "name": "preferred_language",
+          "type": "varchar(8)",
+          "flags": ""
+        },
+        {
+          "name": "enabled",
+          "type": "boolean",
+          "flags": ""
+        },
+        {
+          "name": "failed_attempts",
+          "type": "integer",
+          "flags": ""
+        },
+        {
+          "name": "locked_until",
+          "type": "timestamptz",
+          "flags": "nullable"
+        }
+      ],
+      "methods": [
+        "+ authenticate(password: String): Boolean",
+        "+ changePassword(password: String): void",
+        "+ updateProfile(name, language): void"
+      ]
+    },
+    {
+      "name": "PasswordResetToken",
+      "table": "password_reset_tokens",
+      "context": "IAM",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "flags": "PK"
+        },
+        {
+          "name": "user_id",
+          "type": "uuid",
+          "flags": "FK"
+        },
+        {
+          "name": "token_hash",
+          "type": "varchar(64)",
+          "flags": "UK"
+        },
+        {
+          "name": "expires_at",
+          "type": "timestamptz",
+          "flags": ""
+        },
+        {
+          "name": "used_at",
+          "type": "timestamptz",
+          "flags": "nullable"
+        }
+      ],
+      "methods": [
+        "+ isValid(at: DateTimeOffset): Boolean",
+        "+ markUsed(at: DateTimeOffset): void"
+      ]
+    },
+    {
+      "name": "Vehicle",
+      "table": "vehicles",
+      "context": "Fleet",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "flags": "PK"
+        },
+        {
+          "name": "organization_id",
+          "type": "uuid",
+          "flags": "FK"
+        },
+        {
+          "name": "plate",
+          "type": "varchar(20)",
+          "flags": "UK"
+        },
+        {
+          "name": "capacity_tons",
+          "type": "numeric(10,3)",
+          "flags": ""
+        },
+        {
+          "name": "enabled",
+          "type": "boolean",
+          "flags": ""
+        }
+      ],
+      "methods": [
+        "+ isAvailable(from, until): Boolean",
+        "+ changeCapacity(tons: Decimal): void",
+        "+ disable(): void"
+      ]
+    },
+    {
+      "name": "Driver",
+      "table": "drivers",
+      "context": "Fleet",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "flags": "PK"
+        },
+        {
+          "name": "organization_id",
+          "type": "uuid",
+          "flags": "FK"
+        },
+        {
+          "name": "full_name",
+          "type": "varchar(160)",
+          "flags": ""
+        },
+        {
+          "name": "license_number",
+          "type": "varchar(40)",
+          "flags": "UK"
+        },
+        {
+          "name": "enabled",
+          "type": "boolean",
+          "flags": ""
+        }
+      ],
+      "methods": [
+        "+ isAvailable(from, until): Boolean",
+        "+ disable(): void"
+      ]
+    },
+    {
+      "name": "Sensor",
+      "table": "sensors",
+      "context": "Fleet",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "flags": "PK"
+        },
+        {
+          "name": "vehicle_id",
+          "type": "uuid",
+          "flags": "FK UK nullable"
+        },
+        {
+          "name": "serial_code",
+          "type": "varchar(40)",
+          "flags": "UK"
+        },
+        {
+          "name": "enabled",
+          "type": "boolean",
+          "flags": ""
+        }
+      ],
+      "methods": [
+        "+ assign(vehicleId: UUID): void",
+        "+ disable(): void"
+      ]
+    },
+    {
+      "name": "FleetAllocation",
+      "table": "fleet_allocations",
+      "context": "Fleet",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "flags": "PK"
+        },
+        {
+          "name": "shipment_id",
+          "type": "uuid",
+          "flags": "FK UK"
+        },
+        {
+          "name": "vehicle_id",
+          "type": "uuid",
+          "flags": "FK"
+        },
+        {
+          "name": "driver_id",
+          "type": "uuid",
+          "flags": "FK"
+        },
+        {
+          "name": "reserved_from",
+          "type": "timestamptz",
+          "flags": ""
+        },
+        {
+          "name": "reserved_until",
+          "type": "timestamptz",
+          "flags": ""
+        },
+        {
+          "name": "status",
+          "type": "varchar(16)",
+          "flags": ""
+        },
+        {
+          "name": "released_at",
+          "type": "timestamptz",
+          "flags": "nullable"
+        }
+      ],
+      "methods": [
+        "+ reserve(): void",
+        "+ release(at: DateTimeOffset): void"
+      ]
+    },
+    {
+      "name": "Shipment",
+      "table": "shipments",
+      "context": "Shipment",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "flags": "PK"
+        },
+        {
+          "name": "code",
+          "type": "varchar(20)",
+          "flags": "UK"
+        },
+        {
+          "name": "organization_id",
+          "type": "uuid",
+          "flags": "FK"
+        },
+        {
+          "name": "coordinator_id",
+          "type": "uuid",
+          "flags": "FK"
+        },
+        {
+          "name": "client_id",
+          "type": "uuid",
+          "flags": "FK"
+        },
+        {
+          "name": "cargo",
+          "type": "varchar(160)",
+          "flags": ""
+        },
+        {
+          "name": "weight_tons",
+          "type": "numeric(10,3)",
+          "flags": ""
+        },
+        {
+          "name": "origin",
+          "type": "varchar(100)",
+          "flags": ""
+        },
+        {
+          "name": "destination",
+          "type": "varchar(100)",
+          "flags": ""
+        },
+        {
+          "name": "min_temp_c",
+          "type": "numeric(5,2)",
+          "flags": ""
+        },
+        {
+          "name": "max_temp_c",
+          "type": "numeric(5,2)",
+          "flags": ""
+        },
+        {
+          "name": "min_humidity_pct",
+          "type": "numeric(5,2)",
+          "flags": ""
+        },
+        {
+          "name": "max_humidity_pct",
+          "type": "numeric(5,2)",
+          "flags": ""
+        },
+        {
+          "name": "tolerance_minutes",
+          "type": "integer",
+          "flags": ""
+        },
+        {
+          "name": "planned_departure",
+          "type": "timestamptz",
+          "flags": ""
+        },
+        {
+          "name": "estimated_arrival",
+          "type": "timestamptz",
+          "flags": ""
+        },
+        {
+          "name": "status",
+          "type": "varchar(16)",
+          "flags": ""
+        },
+        {
+          "name": "version",
+          "type": "bigint",
+          "flags": ""
+        }
+      ],
+      "methods": [
+        "+ schedule(resources, client): void",
+        "+ startTransit(): void",
+        "+ markDelivered(): void",
+        "+ cancel(reason: String): void",
+        "+ updateRange(range: ThermalRange): void"
+      ]
+    },
+    {
+      "name": "ShipmentHistoryEvent",
+      "table": "shipment_history",
+      "context": "Shipment",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "flags": "PK"
+        },
+        {
+          "name": "shipment_id",
+          "type": "uuid",
+          "flags": "FK"
+        },
+        {
+          "name": "actor_id",
+          "type": "uuid",
+          "flags": "FK"
+        },
+        {
+          "name": "action",
+          "type": "varchar(40)",
+          "flags": ""
+        },
+        {
+          "name": "from_status",
+          "type": "varchar(16)",
+          "flags": "nullable"
+        },
+        {
+          "name": "to_status",
+          "type": "varchar(16)",
+          "flags": "nullable"
+        },
+        {
+          "name": "note",
+          "type": "text",
+          "flags": ""
+        },
+        {
+          "name": "recorded_at",
+          "type": "timestamptz",
+          "flags": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "ShipmentMonitoring",
+      "table": "shipment_monitorings",
+      "context": "Monitoring",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "flags": "PK"
+        },
+        {
+          "name": "shipment_id",
+          "type": "uuid",
+          "flags": "FK UK"
+        },
+        {
+          "name": "min_temp_c",
+          "type": "numeric(5,2)",
+          "flags": ""
+        },
+        {
+          "name": "max_temp_c",
+          "type": "numeric(5,2)",
+          "flags": ""
+        },
+        {
+          "name": "min_humidity_pct",
+          "type": "numeric(5,2)",
+          "flags": ""
+        },
+        {
+          "name": "max_humidity_pct",
+          "type": "numeric(5,2)",
+          "flags": ""
+        },
+        {
+          "name": "tolerance_minutes",
+          "type": "integer",
+          "flags": ""
+        },
+        {
+          "name": "max_silence_minutes",
+          "type": "integer",
+          "flags": ""
+        },
+        {
+          "name": "signal_status",
+          "type": "varchar(16)",
+          "flags": ""
+        },
+        {
+          "name": "last_reading_at",
+          "type": "timestamptz",
+          "flags": "nullable"
+        },
+        {
+          "name": "started_at",
+          "type": "timestamptz",
+          "flags": ""
+        },
+        {
+          "name": "stopped_at",
+          "type": "timestamptz",
+          "flags": "nullable"
+        }
+      ],
+      "methods": [
+        "+ start(range: ThermalRange): void",
+        "+ recordReading(reading): void",
+        "+ detectCommunicationGap(at): void",
+        "+ stop(at: DateTimeOffset): void"
+      ]
+    },
+    {
+      "name": "SensorReading",
+      "table": "sensor_readings",
+      "context": "Monitoring",
+      "fields": [
+        {
+          "name": "id",
+          "type": "bigint",
+          "flags": "PK"
+        },
+        {
+          "name": "monitoring_id",
+          "type": "uuid",
+          "flags": "FK"
+        },
+        {
+          "name": "temperature_c",
+          "type": "numeric(5,2)",
+          "flags": ""
+        },
+        {
+          "name": "humidity_pct",
+          "type": "numeric(5,2)",
+          "flags": ""
+        },
+        {
+          "name": "within_both_ranges",
+          "type": "boolean",
+          "flags": ""
+        },
+        {
+          "name": "recorded_at",
+          "type": "timestamptz",
+          "flags": ""
+        }
+      ],
+      "methods": [
+        "+ evaluate(range: ThermalRange): Boolean"
+      ]
+    },
+    {
+      "name": "PositionReport",
+      "table": "position_reports",
+      "context": "Monitoring",
+      "fields": [
+        {
+          "name": "id",
+          "type": "bigint",
+          "flags": "PK"
+        },
+        {
+          "name": "monitoring_id",
+          "type": "uuid",
+          "flags": "FK"
+        },
+        {
+          "name": "latitude",
+          "type": "numeric(9,6)",
+          "flags": ""
+        },
+        {
+          "name": "longitude",
+          "type": "numeric(9,6)",
+          "flags": ""
+        },
+        {
+          "name": "recorded_at",
+          "type": "timestamptz",
+          "flags": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Alert",
+      "table": "alerts",
+      "context": "Alert & Reporting",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "flags": "PK"
+        },
+        {
+          "name": "shipment_id",
+          "type": "uuid",
+          "flags": "FK"
+        },
+        {
+          "name": "trigger_reading_id",
+          "type": "bigint",
+          "flags": "FK nullable"
+        },
+        {
+          "name": "type",
+          "type": "varchar(16)",
+          "flags": ""
+        },
+        {
+          "name": "severity",
+          "type": "varchar(16)",
+          "flags": ""
+        },
+        {
+          "name": "status",
+          "type": "varchar(16)",
+          "flags": ""
+        },
+        {
+          "name": "opened_at",
+          "type": "timestamptz",
+          "flags": ""
+        },
+        {
+          "name": "acknowledged_at",
+          "type": "timestamptz",
+          "flags": "nullable"
+        },
+        {
+          "name": "resolved_at",
+          "type": "timestamptz",
+          "flags": "nullable"
+        }
+      ],
+      "methods": [
+        "+ acknowledge(action: CorrectiveAction): void",
+        "+ resolveWithNormalReading(reading): void"
+      ]
+    },
+    {
+      "name": "CorrectiveAction",
+      "table": "corrective_actions",
+      "context": "Alert & Reporting",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "flags": "PK"
+        },
+        {
+          "name": "alert_id",
+          "type": "uuid",
+          "flags": "FK"
+        },
+        {
+          "name": "registered_by",
+          "type": "uuid",
+          "flags": "FK"
+        },
+        {
+          "name": "comment",
+          "type": "text",
+          "flags": ""
+        },
+        {
+          "name": "notify_client",
+          "type": "boolean",
+          "flags": ""
+        },
+        {
+          "name": "registered_at",
+          "type": "timestamptz",
+          "flags": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Notification",
+      "table": "notifications",
+      "context": "Alert & Reporting",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "flags": "PK"
+        },
+        {
+          "name": "user_id",
+          "type": "uuid",
+          "flags": "FK"
+        },
+        {
+          "name": "shipment_id",
+          "type": "uuid",
+          "flags": "FK"
+        },
+        {
+          "name": "alert_id",
+          "type": "uuid",
+          "flags": "FK nullable"
+        },
+        {
+          "name": "kind",
+          "type": "varchar(40)",
+          "flags": ""
+        },
+        {
+          "name": "created_at",
+          "type": "timestamptz",
+          "flags": ""
+        },
+        {
+          "name": "read_at",
+          "type": "timestamptz",
+          "flags": "nullable"
+        }
+      ],
+      "methods": [
+        "+ markRead(at: DateTimeOffset): void"
+      ]
+    },
+    {
+      "name": "Incident",
+      "table": "incidents",
+      "context": "Alert & Reporting",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "flags": "PK"
+        },
+        {
+          "name": "shipment_id",
+          "type": "uuid",
+          "flags": "FK"
+        },
+        {
+          "name": "registered_by",
+          "type": "uuid",
+          "flags": "FK"
+        },
+        {
+          "name": "description",
+          "type": "text",
+          "flags": ""
+        },
+        {
+          "name": "registered_at",
+          "type": "timestamptz",
+          "flags": ""
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "ThermalReport",
+      "table": "thermal_reports",
+      "context": "Alert & Reporting",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "flags": "PK"
+        },
+        {
+          "name": "shipment_id",
+          "type": "uuid",
+          "flags": "FK"
+        },
+        {
+          "name": "generated_by",
+          "type": "uuid",
+          "flags": "FK"
+        },
+        {
+          "name": "generated_at",
+          "type": "timestamptz",
+          "flags": ""
+        },
+        {
+          "name": "file_path",
+          "type": "text",
+          "flags": ""
+        },
+        {
+          "name": "summary",
+          "type": "jsonb",
+          "flags": ""
+        }
+      ],
+      "methods": [
+        "+ generateSnapshot(shipment): void"
+      ]
+    }
+  ],
+  "relations": [
+    [
+      "Organization",
+      "UserAccount",
+      "organization_id",
+      "1",
+      "0..*"
+    ],
+    [
+      "Organization",
+      "Vehicle",
+      "organization_id",
+      "1",
+      "0..*"
+    ],
+    [
+      "Organization",
+      "Driver",
+      "organization_id",
+      "1",
+      "0..*"
+    ],
+    [
+      "Organization",
+      "Shipment",
+      "organization_id",
+      "1",
+      "0..*"
+    ],
+    [
+      "UserAccount",
+      "PasswordResetToken",
+      "user_id",
+      "1",
+      "0..*"
+    ],
+    [
+      "Vehicle",
+      "Sensor",
+      "vehicle_id",
+      "0..1",
+      "0..1"
+    ],
+    [
+      "Shipment",
+      "FleetAllocation",
+      "shipment_id",
+      "1",
+      "0..1"
+    ],
+    [
+      "Vehicle",
+      "FleetAllocation",
+      "vehicle_id",
+      "1",
+      "0..*"
+    ],
+    [
+      "Driver",
+      "FleetAllocation",
+      "driver_id",
+      "1",
+      "0..*"
+    ],
+    [
+      "UserAccount",
+      "Shipment",
+      "coordinator_id",
+      "1",
+      "0..*"
+    ],
+    [
+      "UserAccount",
+      "Shipment",
+      "client_id",
+      "1",
+      "0..*"
+    ],
+    [
+      "Shipment",
+      "ShipmentHistoryEvent",
+      "shipment_id",
+      "1",
+      "0..*"
+    ],
+    [
+      "UserAccount",
+      "ShipmentHistoryEvent",
+      "actor_id",
+      "1",
+      "0..*"
+    ],
+    [
+      "Shipment",
+      "ShipmentMonitoring",
+      "shipment_id",
+      "1",
+      "0..1"
+    ],
+    [
+      "ShipmentMonitoring",
+      "SensorReading",
+      "monitoring_id",
+      "1",
+      "0..*"
+    ],
+    [
+      "ShipmentMonitoring",
+      "PositionReport",
+      "monitoring_id",
+      "1",
+      "0..*"
+    ],
+    [
+      "Shipment",
+      "Alert",
+      "shipment_id",
+      "1",
+      "0..*"
+    ],
+    [
+      "SensorReading",
+      "Alert",
+      "trigger_reading_id",
+      "0..1",
+      "0..*"
+    ],
+    [
+      "Alert",
+      "CorrectiveAction",
+      "alert_id",
+      "1",
+      "0..*"
+    ],
+    [
+      "UserAccount",
+      "CorrectiveAction",
+      "registered_by",
+      "1",
+      "0..*"
+    ],
+    [
+      "UserAccount",
+      "Notification",
+      "user_id",
+      "1",
+      "0..*"
+    ],
+    [
+      "Shipment",
+      "Notification",
+      "shipment_id",
+      "1",
+      "0..*"
+    ],
+    [
+      "Alert",
+      "Notification",
+      "alert_id",
+      "0..1",
+      "0..*"
+    ],
+    [
+      "Shipment",
+      "Incident",
+      "shipment_id",
+      "1",
+      "0..*"
+    ],
+    [
+      "UserAccount",
+      "Incident",
+      "registered_by",
+      "1",
+      "0..*"
+    ],
+    [
+      "Shipment",
+      "ThermalReport",
+      "shipment_id",
+      "1",
+      "0..*"
+    ],
+    [
+      "UserAccount",
+      "ThermalReport",
+      "generated_by",
+      "1",
+      "0..*"
+    ]
+  ],
+  "constraints": [
+    "-50 <= minTempC < maxTempC <= 50; 0 <= minHumidityPct < maxHumidityPct <= 100; toleranceMinutes >= 0.",
+    "Snapshot of all four limits and tolerance when monitoring starts; no retroactive rewrite.",
+    "plannedDeparture < estimatedArrival; weightTons > 0 and weightTons <= vehicle.capacityTons.",
+    "Scheduling creates shipment and reservation atomically; active vehicle/driver reservations cannot overlap.",
+    "Organization/resource permissions and assigned client must be checked by future server, never browser alone.",
+    "DRAFT has no reservation; SCHEDULED -> IN_TRANSIT -> DELIVERED; cancellation from DRAFT/SCHEDULED releases resources (US34). Current local demo only permits scheduled cancellation; persisted DRAFT remains planned design.",
+    "Acknowledgement preserves an open excursion; a later normal reading in BOTH ranges resolves it.",
+    "Communication gap uses configured maxSilenceMinutes; delivered/cancelled shipments stop monitoring.",
+    "Database relation design only. No API, migrations, database engine or diagram compiler executed."
+  ],
+  "frontEndSources": [
+    "apps/friotrack-web/src/domains/operations.js",
+    "apps/friotrack-web/src/domains/seed.js"
+  ],
+  "requirements": [
+    "US09",
+    "US17",
+    "US22",
+    "US23",
+    "US33",
+    "US34",
+    "US35",
+    "US36",
+    "US37"
+  ]
+}
