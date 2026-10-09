@@ -55,7 +55,7 @@ Proyecto<br>
 
 **Periodo 202620**
 
-**Octubre 2026 · v2.0.0**
+**Octubre 2026**
 
 </div>
 
@@ -3654,7 +3654,7 @@ Los correos de las cuentas iniciales son `coordinador@friotrack.app` y `cliente@
 - [Product Backlog en Trello](https://trello.com/b/6qrvOukt/blackstartup-fr%C3%ADotrack): la captura incorporada en 3.3 conserva el tablero documentado.
 - [Diseño en Figma](https://www.figma.com/design/eJ6Ceq0H0FP0xWseNnKFFv): recurso citado en 4.5; su acceso depende de los permisos del archivo.
 - [Prototipo HTML](assets/prototype/friotrack-prototype.html): descargar y abrir en navegador; corresponde al diseño visual y se distingue de la aplicación implementada.
-- Registro, fotografías y enlaces de las entrevistas: sección 2.2.2. Se conservan los cinco registros incorporados por el equipo.
+- [Video consolidado de las entrevistas en Microsoft Stream](https://upcedupe-my.sharepoint.com/personal/u202219829_upc_edu_pe/_layouts/15/stream.aspx?id=%2Fpersonal%2Fu202219829%5Fupc%5Fedu%5Fpe%2FDocuments%2FConsolidado%2Dentrevistas%2Emp4). Fichas y fotografías en [2.2.2. Registro de entrevistas](#222-registro-de-entrevistas).
 - [Fuentes editables de arquitectura](assets/architecture/containers.mmd), [modelo de clases](assets/architecture/backend-classes-tb1.puml) y [modelo de datos](assets/architecture/database-tb1.mmd).
 
 ## Anexo E. Videos de Exposiciones
