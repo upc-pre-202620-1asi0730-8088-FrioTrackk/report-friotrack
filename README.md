@@ -35,7 +35,7 @@ Proyecto<br>
   </tr>
   <tr>
     <td>u202421137</td>
-    <td>Bardales Rodriguez, Benjamin Elias</td>
+    <td>Bardales Rodriguez, Benjamin Elias (retirado)</td>
   </tr>
   <tr>
     <td>u202219829</td>
@@ -86,6 +86,7 @@ El siguiente registro conserva las actividades documentadas para AV1 en el repos
 | TB1 | 08/10/2026 | Vera Solsol, Nayely Macarena | Integración de User Stories, Impact Mapping y Product Backlog del Capítulo III. |
 | TB1 | 08/10/2026 | Saavedra Flores, Rodrigo Andree | Incorporación del Capítulo IV; integración de autenticación, API y despliegue Azure en frontend. |
 | TB1 · v2.0.0 | 08/10/2026 | Saavedra Flores, Rodrigo Andree | Actualización del índice, Capítulo V, trazabilidad de commits, conclusiones, bibliografía y anexos del informe. |
+| TB1 | 09/10/2026 | Saavedra Flores, Rodrigo Andree | Incorporación de Contributors, actualización de videos, matriz de responsables, performance y archivos de entrega. |
 
 <div style="page-break-after: always;"></div>
 
@@ -105,17 +106,17 @@ El equipo distribuyó las actividades de investigación, requisitos, diseño e i
 
 ### Entrega TB1
 
-La actividad de este repositorio se registra entre el 07 y el 08 de octubre de 2026. La siguiente tabla cuenta commits sin merges sobre `develop`, antes de la consolidación de esta versión. La publicación de un archivo por una cuenta no modifica la autoría histórica del artefacto.
+El equipo activo está conformado por Alexander, Joaquín, Rodrigo y Nayely. Benjamin se retiró antes de esta entrega. La tabla refleja el corte de `main` de la captura de Contributors: **35 commits sin merges**, hasta la integración de `v2.0.0` (`fdd34cb`). Las correcciones posteriores de esta entrega se consultan en el historial de `develop` y `main`.
 
 | Team Member | GitHub Username | Report commits (excluding merges) | Evidence |
 | --- | --- | --- | --- |
 | Atauje Barreto, Alexander Sebastián | Alexander1Alexander2 | 10 | Capítulo I, navegación e integración del Capítulo V. [5875269](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/58752691c08a90ce27e2d2cf3c8ca0cb5b10565c). |
-| Bardales Rodriguez, Benjamin Elias | Benja72312 | 0 | Diseño y landing de AV1; sin commits en este conjunto del nuevo informe. Registro AV1 de responsabilidades. |
+| Bardales Rodriguez, Benjamin Elias | Benja72312 | 0 | Retirado del equipo en TB1; sin participación en esta entrega. Se conservan sus aportes históricos de AV1. |
 | Daga Chávez, Joaquín Leonardo | Eshnikeee | 8 | Capítulo II, entrevistas, fotografías y enlaces de video. [369cc99](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/369cc991c51dd2424aded38766728918bf27de71). |
-| Saavedra Flores, Rodrigo Andree | rodrigoxd67 | 11 | Portada, Student Outcome e incorporación del Capítulo IV; integración de acceso/API en frontend. [d525d9e](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/d525d9e34c6469488dca96042e610adbd6739b6d). |
+| Saavedra Flores, Rodrigo Andree | rodrigoxd67 | 13 | Portada, Student Outcome e incorporación del Capítulo IV; integración de acceso/API en frontend. [d525d9e](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/d525d9e34c6469488dca96042e610adbd6739b6d). |
 | Vera Solsol, Nayely Macarena | Macaxprogram29 | 4 | User Stories, Impact Mapping, Product Backlog e índice del Capítulo III. [3cc5e02](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/3cc5e023893f00728f4a7d80ea836a7c0451247e). |
 
-El commit de consolidación de esta edición se registra por separado en 5.2.2.4 y no se suma al corte previo de colaboración.
+La captura de GitHub Contributors y los metadatos del mismo corte se presentan en 5.2.2.8.
 
 Los registros completos y sus fechas están en [current-commits.json](assets/evidence/current-commits.json). La integración de autenticación, API y configuración Azure se registra además en el [frontend](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend). La evaluación individual corresponde al Team Leader y no se deduce de la cantidad de commits.
 
@@ -228,7 +229,7 @@ El informe completo está en este `README.md`. Los capítulos, imágenes y anexo
   - [Anexo B. Repositorios del proyecto](#anexo-b-repositorios-del-proyecto)
   - [Anexo C. Acceso a los productos publicados](#anexo-c-acceso-a-los-productos-publicados)
   - [Anexo D. Tablero, diseño e investigación](#anexo-d-tablero-diseño-e-investigación)
-  - [Anexo E. Videos](#anexo-e-videos)
+  - [Anexo E. Videos de Exposiciones](#anexo-e-videos-de-exposiciones)
   - [Anexo F. Entregables TB1](#anexo-f-entregables-tb1)
   - [Anexo G. Registros de verificación](#anexo-g-registros-de-verificación)
 
@@ -244,7 +245,7 @@ Capacidad de funcionar eficazmente en un equipo cuyos miembros proporcionan lide
 | Integrante | AV1: responsabilidades registradas | TB1: acciones y evidencia |
 | --- | --- | --- |
 | Atauje Barreto, Alexander Sebastián | Startup Profile, Lean UX y coordinación del informe. | Capítulo I, navegación e integración del Capítulo V. [5875269](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/58752691c08a90ce27e2d2cf3c8ca0cb5b10565c) |
-| Bardales Rodriguez, Benjamin Elias | Arquitectura, diseño y desarrollo de landing. | Diseño y landing de AV1; sin commits en este conjunto del nuevo informe. Aporte histórico consignado en el registro de versiones. |
+| Bardales Rodriguez, Benjamin Elias | Arquitectura, diseño y desarrollo de landing. | Retirado del equipo en TB1; sus aportes de AV1 permanecen en el registro histórico. |
 | Daga Chávez, Joaquín Leonardo | Especificación de historias y Gherkin. | Capítulo II, entrevistas, fotografías y enlaces de video. [369cc99](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/369cc991c51dd2424aded38766728918bf27de71) |
 | Saavedra Flores, Rodrigo Andree | Configuración de desarrollo y despliegue de landing. | Portada, Student Outcome e incorporación del Capítulo IV; integración de acceso/API en frontend. [d525d9e](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/d525d9e34c6469488dca96042e610adbd6739b6d) |
 | Vera Solsol, Nayely Macarena | Impact Mapping, historias, backlog y Trello. | User Stories, Impact Mapping, Product Backlog e índice del Capítulo III. [3cc5e02](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/3cc5e023893f00728f4a7d80ea836a7c0451247e) |
@@ -256,12 +257,12 @@ La distribución por capítulos mantiene el liderazgo por especialidad. La integ
 | Integrante | Aporte al objetivo de TB1 | Resultado documentado |
 | --- | --- | --- |
 | Atauje Barreto, Alexander Sebastián | Consolidar propuesta, alcance y estructura del trabajo. | Capítulo I e integración de la documentación del Sprint 2. |
-| Bardales Rodriguez, Benjamin Elias | Proporcionar la base de diseño y landing para la aplicación. | Artefactos AV1 conservados y utilizados como referencia; no se registra actividad adicional bajo su cuenta en el nuevo informe. |
+| Bardales Rodriguez, Benjamin Elias | Sin asignación en TB1 por retiro del integrante. | Retirado en TB1, sin actividades asignadas en Sprint 2. Evaluación individual: 00. |
 | Daga Chávez, Joaquín Leonardo | Mantener la investigación y sus fuentes en el informe. | Capítulo II, nuevas fotografías y actualización de enlaces de entrevistas. |
 | Saavedra Flores, Rodrigo Andree | Integrar el producto y sus evidencias de ejecución. | Autenticación, API, despliegue Azure y documentación de validación en el repositorio frontend. |
 | Vera Solsol, Nayely Macarena | Relacionar necesidades, historias y prioridades. | Capítulo III con Impact Mapping y Product Backlog. |
 
-La entrega técnica ofrece una aplicación accesible desde Azure y documentación que permite revisar sus resultados. La confirmación de acuerdos del sprint y la evaluación del desempeño deben acompañarse de las actas y del Participant Performance Report del líder. Las contribuciones verificables no sustituyen esos documentos.
+La entrega técnica ofrece una aplicación accesible desde Azure, el informe consolidado y la exposición del equipo. El Participant Performance Report del Anexo A registra las responsabilidades y calificaciones individuales. Las reuniones del sprint se describen en 5.2.2.1; sus actas formales no están adjuntas.
 
 # Capítulo I: Introducción
 
@@ -290,7 +291,7 @@ En su etapa inicial, FríoTrack enfoca sus operaciones en el mercado peruano. El
 | Foto | Descripción |
 |:---:|:---|
 | <img src="assets/images/chapter-01/u20241f246.png" alt="Alexander Atauje" width="120"> | **Atauje Barreto, Alexander Sebastián — u20241f246**<br>Estudiante de la carrera de Ingeniería de Software. Posee conocimientos en desarrollo web frontend con HTML, CSS y JavaScript, así como en el diseño de interfaces de usuario. Aporta al equipo habilidades en prototipado, organización de tareas y aplicación del marco de trabajo Scrum. |
-| <img src="assets/images/chapter-01/u202421137.png" alt="Benjamin Bardales" width="120"> | **Bardales Rodriguez, Benjamin Elias — u202421137**<br>Estudiante de la carrera de Ingeniería de Software. Cuenta con experiencia en lógica de programación con C++ y Python, además de gestión de bases de datos relacionales. Su contribución principal se enfoca en la estructuración de la lógica de negocio y arquitectura de software. |
+| <img src="assets/images/chapter-01/u202421137.png" alt="Benjamin Bardales" width="120"> | **Bardales Rodriguez, Benjamin Elias — u202421137 (retirado en TB1)**<br>Estudiante de la carrera de Ingeniería de Software. Cuenta con experiencia en lógica de programación con C++ y Python, además de gestión de bases de datos relacionales. Sus contribuciones de AV1 se enfocaron en el diseño y la arquitectura de software. Se retiró antes de TB1 y no tiene responsabilidades asignadas en Sprint 2. |
 | <img src="assets/images/chapter-01/u202219829.png" alt="Joaquín Daga" width="120"> | **Daga Chávez, Joaquín Leonardo — u202219829**<br>Estudiante de la carrera de Ingeniería de Software. Especializado en el análisis de requisitos y documentación técnica de proyectos. Domina herramientas de control de versiones con Git y GitHub, aportando rigor en la gestión del repositorio y el aseguramiento de la calidad de la documentación. |
 | <img src="assets/images/chapter-01/u20241D811.png" alt="Rodrigo Saavedra" width="120"> | **Saavedra Flores, Rodrigo Andree — u20241D811**<br>Estudiante de la carrera de Ingeniería de Software. Tiene fortalezas en el diseño UX/UI con Figma y modelado de procesos. Aporta al equipo capacidad analítica para la investigación de mercado, definición de segmentos objetivo y experiencia de usuario. |
 | <img src="assets/images/chapter-01/u20231h171.png" alt="Nayely Vera" width="120"> | **Vera Solsol, Nayely Macarena — u20231H17**<br>Mi nombre es Nayely Macarena Vera Solsol, tengo 20 años y estoy cursando el 5to ciclo de la carrera de Ingeniería de Software. Me apasiona el proceso de aprendizaje continuo y el trabajo colaborativo, aportando compromiso, adaptabilidad y buena comunicación al equipo. Cuento con conocimientos en C++ y actualmente me encuentro reforzando mi nivel de inglés para ampliar mis oportunidades profesionales y responder de manera efectiva a los retos tecnológicos actuales. Me comprometo a aportar de forma activa, responsable y dedicado al desarrollo del proyecto para lograr resultados de calidad. |
@@ -754,6 +755,9 @@ El diseño de las guías de entrevista siguió buenas prácticas de *needfinding
 
 ### 2.2.2. Registro de entrevistas
 
+Las entrevistas se reúnen en un [video consolidado publicado en Microsoft Stream](https://upcedupe-my.sharepoint.com/personal/u202219829_upc_edu_pe/_layouts/15/stream.aspx?id=%2Fpersonal%2Fu202219829%5Fupc%5Fedu%5Fpe%2FDocuments%2FConsolidado%2Dentrevistas%2Emp4). Las fichas y fotografías siguientes identifican a cada participante y sus hallazgos.
+
+
 A continuación, se presenta el registro de las entrevistas realizadas a los representantes de cada segmento objetivo.
 
 #### Entrevistas segmento 1:
@@ -1135,7 +1139,6 @@ El **Ubiquitous Language** de **FrioTrack** establece un lenguaje común entre l
 | **US30** | Gestión de multi-idioma (i18n) | Como **usuario del sistema**, quiero alternar entre español e inglés en la interfaz para facilitar la operación a socios extranjeros. | - **Escenario 1:** Dado que selecciona el selector de idioma, cuando cambia a inglés, entonces traduce todos los textos estáticos y dinámicos de la interfaz. <br>- **Escenario 2:** Dado que falta la clave de traducción para un componente específico, cuando renderiza, entonces muestra la cadena por defecto en español como fallback. | EP07 |
 | **TS06** | Endpoint de exportación de reportes | Como **developer**, quiero implementar un endpoint en la API que compile y exporte datos históricos en archivos estructurados. | - **Escenario 1:** Dado que el cliente solicita la exportación de un envío concluido, cuando genera el archivo, entonces retorna el flujo de bytes para descarga con HTTP 200 OK. <br>- **Escenario 2:** Dado que el ID del envío solicitado no existe o no ha finalizado, cuando procesa la solicitud, entonces responde HTTP 404 Not Found. | EP07 |
 | **TS07** | Documentación Swagger OpenAPI | Como **developer**, quiero configurar la especificación OpenAPI mediante Swagger para documentar los endpoints. | - **Escenario 1:** Dado que la aplicación arranca en desarrollo, cuando inicializa el middleware Swagger, entonces la interfaz gráfica se muestra accesible en la ruta `/swagger`. <br>- **Escenario 2:** Dado que la aplicación arranca en entorno de producción, cuando intenta invocar la ruta de documentación, entonces el sistema bloquea el acceso respondiendo HTTP 403 Forbidden. | EP07 |
-
 | **US31** | Planes y acceso desde la Landing | Como **visitante**, quiero consultar los planes y acceder a la aplicación con el idioma seleccionado. | - **Escenario 1:** Dado que el visitante elige su segmento e idioma, cuando abre el acceso, entonces llega al login público con role y lang conservados. <br>- **Escenario 2:** Dado que el servicio de acceso no responde, cuando intenta ingresar, entonces conserva la landing y muestra un enlace recuperable. | EP06 |
 | **US32** | Registro de Cliente de Carga | Como **cliente de carga**, quiero crear mi cuenta para consultar los envíos que me asignen. | - **Escenario 1:** Dado que los datos son válidos y acepta términos, cuando envía el registro, entonces la API crea una cuenta cargo-client e inicia sesión. <br>- **Escenario 2:** Dado que se solicita un rol de coordinador, cuando procesa el registro público, entonces rechaza la elevación con HTTP 403. | EP05 |
 | **US33** | Programación de envío refrigerado | Como **coordinador logístico**, quiero programar carga, ruta, fechas, cliente y recursos con rangos ambientales. | - **Escenario 1:** Dado que todos los datos son válidos y los recursos están disponibles, cuando confirma, entonces guarda el envío y reserva los recursos. <br>- **Escenario 2:** Dado que la capacidad es insuficiente o hay solapamiento, cuando confirma, entonces rechaza el envío sin reservar parcialmente. | EP04 |
@@ -1190,7 +1193,6 @@ El **Ubiquitous Language** de **FrioTrack** establece un lenguaje común entre l
 | **35** | US30 | Gestión de multi-idioma (i18n) | Como **usuario del sistema**, quiero alternar entre español e inglés en la interfaz para facilitar la operación a socios extranjeros. | 3 |
 | **36** | TS06 | Endpoint de exportación de reportes | Como **developer**, quiero implementar un endpoint en la API que compile y exporte datos históricos en archivos estructurados. | 5 |
 | **37** | TS07 | Documentación Swagger OpenAPI | Como **developer**, quiero configurar la especificación OpenAPI mediante Swagger para documentar los endpoints. | 2 |
-
 | **38** | US31 | Planes y acceso desde la Landing | Como **visitante**, quiero consultar los planes y acceder a la aplicación con el idioma seleccionado. | 2 |
 | **39** | US32 | Registro de Cliente de Carga | Como **cliente de carga**, quiero crear mi cuenta para consultar los envíos que me asignen. | 3 |
 | **40** | US33 | Programación de envío refrigerado | Como **coordinador logístico**, quiero programar carga, ruta, fechas, cliente y recursos con rangos ambientales. | 5 |
@@ -1451,7 +1453,6 @@ Los dos mapas del sitio que se muestran a continuación resumen la estructura re
 
 Con esta estructura se aplican los principios de claridad, navegación enfocada y facilidad de uso: el Cliente de Carga nunca ve opciones de administración de flota que no puede usar, y el Coordinador Logístico accede a cada función operativa con una sola selección del menú lateral, sin menús anidados.
 
-> **Enlace al diagrama de arquitectura de información (Miro):** pendiente de completar por el equipo.
 
 ### 4.2.2. Labeling Systems
 
@@ -1627,7 +1628,7 @@ La Landing Page usa una barra horizontal en escritorio y un menú desplegable en
 
 *Nota.* Elaboración propia.
 
-Las secciones «Cómo funciona», «Para quién», «Corredores» y «Metas» no figuran en la barra superior para no sobrecargarla con más de seis enlaces. Se alcanzan con el desplazamiento y, en el caso de las dos primeras, con el botón «Ver cómo funciona» del héroe y con los enlaces del pie de página. La ventana modal de acceso es provisional: en la versión final, «Iniciar sesión» y «Registrarse» conducirán a las pantallas de acceso de la Web Application (sección 4.4), donde el usuario elige su perfil (Coordinador Logístico o Cliente de Carga). Esa elección solo orienta el registro; no otorga privilegios ni reemplaza la autenticación.
+Las secciones «Cómo funciona», «Para quién», «Corredores» y «Metas» no figuran en la barra superior para no sobrecargarla con más de seis enlaces. Se alcanzan con el desplazamiento y, en el caso de las dos primeras, con el botón «Ver cómo funciona» del héroe y con los enlaces del pie de página. Los accesos de la landing publicada conducen a las vistas de login y registro de la aplicación. El perfil seleccionado orienta la navegación; la API valida la identidad y asigna los permisos de la cuenta.
 
 #### Navigation System para el Coordinador Logístico
 
@@ -2048,7 +2049,7 @@ La Landing Page incluye interacciones que los mock-ups estáticos no muestran. L
 | **Pestañas «Para quién» (sección 7)** | Alternan entre los dos segmentos con el ratón o con las teclas de flecha, Inicio y Fin. |
 | **Planes (sección 8)** | El selector Mensual \| Anual actualiza los precios (el plan anual equivale a diez mensualidades). |
 | **Formulario de contacto (sección 11)** | Valida los campos obligatorios y confirma en pantalla. Mientras no exista un servicio que reciba los datos, la confirmación aclara que es una versión demostrativa y que la información no se envía. |
-| **Iniciar sesión y Registrarse** | Abren una ventana modal. El inicio de sesión no exige un formato de contraseña; el registro exige al menos ocho caracteres con mayúscula, minúscula y número, y muestra un enlace a los términos y condiciones. En esta versión no se autentica: los botones se conectarán con las pantallas de acceso de la Web Application (sección 4.4). |
+| **Iniciar sesión y Registrarse** | Redirigen al acceso de la aplicación publicada en Azure. El login valida correo y contraseña mediante la API. El registro público crea cuentas de Cliente de Carga, exige una contraseña de al menos doce caracteres y consentimiento de términos. Los permisos se asignan en el servidor. |
 | **Menú móvil** | En pantallas de hasta 1240 px la navegación se reemplaza por un menú desplegable que se cierra al elegir una sección o al pulsar Escape. |
 | **Barra de navegación** | Es transparente sobre el héroe y pasa a fondo blanco con sombra ligera cuando el visitante se desplaza. El enlace de la sección visible se resalta en el menú. |
 | **Franja de cargas (sección 1)** | Las cargas cuidadas en ruta se desplazan lentamente de derecha a izquierda; con la preferencia de reducción de movimiento del sistema, la franja queda estática. |
@@ -2611,7 +2612,10 @@ Este flujo verifica primero que la cuenta corresponda al perfil de Cliente de Ca
 
 ## 4.5. Web Applications Prototyping
 
-> **Alcance de los artefactos:** el HTML histórico no sustituye el prototipo Figma solicitado. Los mock-ups móviles siguen siendo estáticos y no hay evidencia de enlaces de prototipo Figma. La aplicación Vue TB1 incorpora navegación responsive y cuatro pasos de programación; es una implementación demostrativa distinta del prototipo. El video de navegación y su captura/URL Microsoft Stream están pendientes.
+El [video del recorrido del prototipo funcional](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-prototypenavigation-sprint-2.mp4) complementa las pantallas y flujos de esta sección. Recorre el acceso, los envíos y la consulta del Cliente de Carga.
+
+
+Los wireframes y mock-ups se conservan en Figma y las pantallas navegables se consultan en el prototipo HTML. El video adjunto registra el recorrido de la aplicación local. Los mock-ups móviles representan el diseño; la navegación responsive y los cuatro pasos de programación se ejecutan en la aplicación Vue de TB1.
 
 El prototipo de FríoTrack reúne los mock-ups de la Web Application en una experiencia navegable con la que es posible recorrer los flujos principales antes de escribir código de producción. Su propósito es doble: validar con el equipo y con usuarios que las tareas se pueden completar con la estructura propuesta, y ofrecer una referencia concreta para la implementación. Siguiendo el ciclo iterativo de diseño y evaluación que plantea la norma ISO 9241-210 (International Organization for Standardization [ISO], 2019), el prototipo es el insumo para la evaluación que se realizará en la siguiente etapa.
 
@@ -2681,7 +2685,7 @@ El recorrido que se muestra en la Figura 4.86 sigue el camino principal del Coor
 | Archivo de Figma del Bloque 4 (Product Design) | [figma.com/design/eJ6Ceq0H0FP0xWseNnKFFv](https://www.figma.com/design/eJ6Ceq0H0FP0xWseNnKFFv). Contiene las páginas Portada, 4.1 Style Guidelines, 4.2 IA y User Flows, 4.3 Landing Page y 4.5 Web App (wireframes y mock-ups). Las capturas de cada página están en [`assets/figma/capturas/`](assets/figma/README.md) y los archivos SVG de origen en [`assets/figma/svg/`](assets/figma/README.md). |
 | Landing Page publicada (Azure) | [FríoTrack Landing Page](https://friotracktb1bce6db1b.z22.web.core.windows.net/landing/) |
 | Repositorio de la Landing Page | [github.com/upc-pre-202620-1asi0730-8088-FrioTrack/friotrack-landing](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-landing) |
-| Video demostrativo del prototipo | Pendiente de completar por el equipo. |
+| Video del prototipo funcional | [Recorrido local, 4:46](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-prototypenavigation-sprint-2.mp4). Acceso, programación, monitoreo, acciones correctivas y consulta de cliente. |
 
 ## 4.6. Domain-Driven Software Architecture
 
@@ -2796,7 +2800,6 @@ El diagrama general presenta los eventos de dominio de los cinco contextos organ
   <i>Nota.</i> Elaboración propia.
 </p>
 
-> **Enlace al tablero de EventStorming (Miro):** pendiente de completar por el equipo.
 
 #### BC1 · IAM (Identity & Access Management)
 
@@ -3218,7 +3221,7 @@ La organización del equipo es [upc-pre-202620-1asi0730-8088-FrioTrackk](https:/
 | [friotrack-landing](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-landing) | Repositorio independiente de la landing | HTML, estilos, internacionalización y contenido público. La publicación Azure se identifica mediante sus hashes de archivos. |
 | [friotrack-frontend](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend) | `main`; servicio en [`api/`](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/tree/main/api) | Aplicación Vue, API de apoyo, pruebas y scripts de despliegue. |
 
-La consolidación del informe se realiza sobre la rama existente `develop` y se integra en `main` para publicar `v2.0.0`. Se conserva el historial previo. Los mensajes nuevos siguen Conventional Commits y describen el cambio en inglés. El versionado del informe es independiente de la versión del paquete frontend y de la versión devuelta por `/api/health`.
+La versión `v2.0.0` se integró desde `develop` hacia `main`. Las correcciones de cierre de TB1 siguen el mismo flujo sobre esas ramas existentes. Se conserva el historial previo. Los mensajes nuevos siguen Conventional Commits y describen el cambio en inglés. El versionado del informe es independiente de la versión del paquete frontend y de la versión devuelta por `/api/health`.
 
 La integración del frontend está registrada en los [PR #4](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/pull/4) y [PR #5](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/pull/5). Su revisión publicada es [`dc49d7e`](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/commit/dc49d7e28e13c8d0f78fa913dd5353ea162012c6).
 
@@ -3353,17 +3356,17 @@ Los criterios de revisión técnica son: rechazar credenciales incorrectas, rest
 
 #### 5.2.2.2. Aspect Leaders and Collaborators
 
-La distribución se basa en las responsabilidades registradas y en los aportes verificables. L identifica al líder del aspecto y C al colaborador. La integración técnica de acceso y despliegue está registrada bajo la cuenta `rodrigoxd67`.
+La matriz identifica al líder (**L**) y a los colaboradores (**C**) de cada aspecto del Sprint 2. **—** indica que no se asignó participación en ese aspecto.
 
-| Team Member | GitHub Username | Requirements / research | Product design | Report consolidation | Access / API / deployment |
-| --- | --- | --- | --- | --- | --- |
-| Atauje Barreto, Alexander Sebastián | Alexander1Alexander2 | C — Capítulo I | — | L — estructura e integración | — |
-| Bardales Rodriguez, Benjamin Elias | Benja72312 | — | L — diseño y landing registrados en AV1 | — | — |
-| Daga Chávez, Joaquín Leonardo | Eshnikeee | L — Capítulo II y entrevistas | — | C | — |
-| Saavedra Flores, Rodrigo Andree | rodrigoxd67 | — | C — incorporación del Capítulo IV | C — Student Outcome y Capítulo V | L |
-| Vera Solsol, Nayely Macarena | Macaxprogram29 | L — Capítulo III y backlog | — | C | — |
+| Team Member | GitHub Username | Requisitos e investigación | Diseño de producto | Documentación e integración | Acceso, API y despliegue |
+| --- | --- | :---: | :---: | :---: | :---: |
+| Atauje Barreto, Alexander Sebastián | Alexander1Alexander2 | C | — | L | — |
+| Bardales Rodriguez, Benjamin Elias | Benja72312 | — | — | — | — |
+| Daga Chávez, Joaquín Leonardo | Eshnikeee | L | — | C | — |
+| Saavedra Flores, Rodrigo Andree | rodrigoxd67 | — | L | C | L |
+| Vera Solsol, Nayely Macarena | Macaxprogram29 | L | — | C | — |
 
-La actividad de publicación del nuevo repositorio se diferencia de la autoría histórica del diseño. El detalle de commits por integrante figura en 5.2.2.8.
+Alexander coordina la integración del informe; Joaquín mantiene la investigación y Nayely los requisitos y el backlog. Rodrigo integra el diseño documentado, la autenticación, la API y la publicación en Azure. Benjamin se retiró del equipo y no tiene asignación en este sprint. Sus aportes de AV1 se conservan en el registro de versiones.
 
 #### 5.2.2.3. Sprint Backlog 2
 
@@ -3389,7 +3392,7 @@ El backlog utiliza los IDs del Capítulo III. **Verificado** indica que la funci
 | Soporte | Despliegue y pruebas | S2-T16 | Publicar aplicación y API | Compilar, desplegar y comprobar HTTPS, permisos y archivos. | No registrada | Rodrigo | Verificado |
 | Soporte | Actualización del informe | S2-T17 | Consolidar documentación | Integrar capítulos, índice, commits, conclusiones y anexos. | No registrada | Alexander / Joaquín / Nayely / Rodrigo | Integrado en informe |
 | US25 | Formulario de contacto comercial | S2-T18 | Conectar receptor | Comprobar recepción efectiva y errores de transporte. | No registrada | Sin asignación registrada | Pendiente |
-| Soporte | Evidencias de equipo | S2-T19 | Completar actas y exposición | Adjuntar planning, review, retrospectiva, exposición y evaluación individual. | No registrada | Equipo / Team Leader | Pendiente de adjuntos |
+| Soporte | Evidencias de equipo | S2-T19 | Documentar la revisión del equipo | Incorporar exposición y evaluación individual; adjuntar actas de planning, review y retrospectiva. | No registrada | Equipo / Team Leader | Exposición y performance adjuntos; actas no adjuntas |
 
 Las historias relacionadas suman 75 SP una sola vez: US01, US02, US03, US05, US08, US09, US10, US11, US14, US15, US16, US17, US19, US20, US30, US32, US33, US34, US35 y US36. US31 corresponde a la actualización de la landing y se registra aparte con 2 SP. Las tareas de soporte no agregan puntos de historia.
 
@@ -3416,6 +3419,9 @@ Los registros siguientes pertenecen al repositorio actual del informe y al front
 La versión frontend fue integrada primero en `develop` y después en `main`. La documentación del informe se consolida directamente en `develop`; el historial permite identificar la aportación de cada cuenta sin mezclar los conteos de repositorios diferentes.
 
 #### 5.2.2.5. Execution Evidence for Sprint Review
+
+El [video de navegación de la landing](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241f246_upc_edu_pe/IQCIdLQEmG0QR77AHqB7XKiLAX3ECReoBPpED2vK8Yo_XVU?e=dNn9kj) muestra el recorrido de sus secciones. La [exposición TB1 del equipo](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241f246_upc_edu_pe/IQC4w2_KdIdwRKtwBLE2p42hAcwnvH1gZGqr8sHyok5YSUM?e=XakQp8) acompaña la presentación de artefactos; los enlaces y archivos están organizados en el Anexo E.
+
 
 La versión publicada inicia sesión con correo y contraseña. El rol procede de la cuenta validada por el servidor. El parámetro `role` del enlace únicamente orienta el texto del acceso: no concede permisos.
 
@@ -3453,7 +3459,7 @@ La validación de las fuentes actuales registra **15 pruebas de dominio frontend
 
 Los recibos están en [validación del repositorio](assets/evidence/repository-verification.json), [API publicada](assets/evidence/azure-api-verification.json) y [recorridos de navegador](assets/evidence/azure-browser-verification.json). Las capturas cloud muestran el viewport efectivo del navegador utilizado; no certifican todos los tamaños ni el cumplimiento integral de WCAG.
 
-Se incluye el [video de apoyo del recorrido local](assets/annexes/frioTrack-productnavigation-sprint2-apoyo.mp4), de 4:46, sin narración ni cámaras. Muestra programación, validaciones, lecturas, acciones, cliente e idiomas de la iteración local anterior. La exposición del equipo y el video narrado del Sprint Review requieren sus archivos y enlaces de entrega.
+El [video del prototipo funcional](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-prototypenavigation-sprint-2.mp4), de 4:46, recorre programación, validaciones, lecturas, acciones y consulta de cliente de la aplicación local. La navegación de la landing y la exposición del equipo están publicadas en Stream y se enlazan en el Anexo E.
 
 #### 5.2.2.6. Services Documentation Evidence for Sprint Review
 
@@ -3505,18 +3511,22 @@ Las capturas 5.6–5.9 muestran la ejecución sobre las URLs públicas. La [guí
 
 #### 5.2.2.8. Team Collaboration Insights during Sprint
 
-El nuevo informe registra aportes por capítulo y por cuenta GitHub. El periodo considerado es el **07–08/10/2026**, sobre el historial de `develop` previo a la consolidación `v2.0.0`. Se excluyen merges; no se suman commits del frontend a los del informe.
+La siguiente captura corresponde a **35 commits sin merges en `main`**, al corte de `fdd34cb` posterior a la integración de `v2.0.0`. Se contabilizan únicamente commits del informe. Los cambios de cierre de TB1 posteriores a la captura aparecen en el historial del repositorio.
+
+![Contribuciones del equipo en GitHub para el informe FríoTrack](assets/images/chapter-05/github-contributors-tb1.png)
+
+*Figura. GitHub Contributors del repositorio report-friotrack: Rodrigo 13, Alexander 10, Joaquín 8 y Nayely 4. Captura proporcionada por el equipo para la entrega TB1.*
 
 | Team Member | GitHub Username | Report commits (excluding merges) | Evidence |
 | --- | --- | --- | --- |
 | Atauje Barreto, Alexander Sebastián | Alexander1Alexander2 | 10 | Capítulo I, navegación e integración del Capítulo V. [5875269](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/58752691c08a90ce27e2d2cf3c8ca0cb5b10565c). |
-| Bardales Rodriguez, Benjamin Elias | Benja72312 | 0 | Diseño y landing de AV1; sin commits en este conjunto del nuevo informe. Registro AV1 de responsabilidades. |
+| Bardales Rodriguez, Benjamin Elias | Benja72312 | 0 | Retirado del equipo en TB1; sin participación en esta entrega. Se conservan sus aportes históricos de AV1. |
 | Daga Chávez, Joaquín Leonardo | Eshnikeee | 8 | Capítulo II, entrevistas, fotografías y enlaces de video. [369cc99](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/369cc991c51dd2424aded38766728918bf27de71). |
-| Saavedra Flores, Rodrigo Andree | rodrigoxd67 | 11 | Portada, Student Outcome e incorporación del Capítulo IV; integración de acceso/API en frontend. [d525d9e](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/d525d9e34c6469488dca96042e610adbd6739b6d). |
+| Saavedra Flores, Rodrigo Andree | rodrigoxd67 | 13 | Portada, Student Outcome e incorporación del Capítulo IV; integración de acceso/API en frontend. [d525d9e](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/d525d9e34c6469488dca96042e610adbd6739b6d). |
 | Vera Solsol, Nayely Macarena | Macaxprogram29 | 4 | User Stories, Impact Mapping, Product Backlog e índice del Capítulo III. [3cc5e02](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/3cc5e023893f00728f4a7d80ea836a7c0451247e). |
 
 
-Bardales Rodriguez, Benjamin Elias conserva la contribución de diseño y landing registrada en AV1; no se le atribuyen commits que no figuren en este conjunto del nuevo informe. Las incorporaciones efectuadas por otra cuenta se identifican como tales. La calidad de la participación se valora junto con las tareas, resultados y evaluación del Team Leader; los conteos no constituyen una calificación individual.
+Benjamin no participó en TB1 por su retiro; el Participant Performance Report registra 00. Los cuatro integrantes activos mantienen la evaluación de 20 consignada en el documento compartido por el equipo. El número de commits sirve como evidencia de colaboración y no determina la calificación.
 
 
 # Conclusiones y Recomendaciones
@@ -3541,7 +3551,7 @@ Para la siguiente iteración, evolucionar la API hacia persistencia relacional c
 
 Cerrar el receptor del formulario comercial, sincronizar en el repositorio independiente de landing la configuración publicada y repetir los recorridos de aceptación en ambos idiomas. Ampliar la revisión de accesibilidad y tamaños de pantalla a los controles y estados que aún no tienen evidencia completa.
 
-Adjuntar las actas del sprint, el video narrado del Sprint Review, la exposición del equipo, el Keynote y la evaluación individual del Team Leader. Los enlaces privados deben permitir el acceso del docente y corresponder a los archivos reales de la entrega.
+Conservar las actas de planificación, review y retrospectiva del sprint junto con las evidencias del equipo. Verificar que los enlaces institucionales del Anexo E permitan el acceso del docente.
 
 # Bibliografía
 
@@ -3600,7 +3610,20 @@ Adjuntar las actas del sprint, el video narrado del Sprint Review, la exposició
 
 ## Anexo A. Participant Performance Report
 
-El Team Leader, Atauje Barreto, Alexander Sebastián, debe incorporar la evaluación individual en Word y PDF conforme al formato del enunciado y su escala 20/16/13/07/00. No se adjunta un informe evaluado y firmado en este repositorio. El registro de commits de 5.2.2.8 aporta trazabilidad, pero no sustituye la valoración del líder.
+**Startup:** BlackStartup. **Producto:** FríoTrack. **Entrega:** TB1. **Team Leader:** Atauje Barreto, Alexander Sebastián.
+
+La evaluación conserva las calificaciones del [documento compartido por el equipo](https://docs.google.com/document/d/1qjp2CxUwGgXeMQdRhGMtJkPAc8xUnZu7Pc3QzG-SSwY/edit?tab=t.0) y actualiza las responsabilidades de TB1. Benjamin se retiró y no participó en esta entrega.
+
+| Ítem | Estudiante | Calificación asignada |
+| --- | --- | :---: |
+| 1 | Atauje Barreto, Alexander Sebastián | 20 |
+| 2 | Bardales Rodriguez, Benjamin Elias | 00 |
+| 3 | Daga Chávez, Joaquín Leonardo | 20 |
+| 4 | Saavedra Flores, Rodrigo Andree | 20 |
+| 5 | Vera Solsol, Nayely Macarena | 20 |
+
+- [Participant Performance Report en Word](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-performance-tb1.docx).
+- [Participant Performance Report en PDF](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-performance-tb1.pdf).
 
 ## Anexo B. Repositorios del proyecto
 
@@ -3611,7 +3634,7 @@ El Team Leader, Atauje Barreto, Alexander Sebastián, debe incorporar la evaluac
 | Frontend Web Application | [friotrack-frontend](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend) | Vue/PrimeVue, pruebas y configuración Azure. |
 | Supporting API | [Código ASP.NET Core](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/tree/main/api) | Autenticación, autorización, persistencia y comandos. |
 
-La API de apoyo se mantiene junto al frontend. No se incorpora una dependencia de un repositorio mock ni un enlace a un proyecto ajeno.
+La API de apoyo se mantiene junto al frontend, en la carpeta `api`.
 
 ## Anexo C. Acceso a los productos publicados
 
@@ -3624,7 +3647,7 @@ La API de apoyo se mantiene junto al frontend. No se incorpora una dependencia d
 | API Health | [Estado del servicio](https://friotrack-api-bce6db1b.azurewebsites.net/api/health) |
 | Términos de la aplicación | [Terms and Conditions](https://friotracktb1bce6db1b.z22.web.core.windows.net/#/terms) |
 
-Los correos de las cuentas iniciales son `coordinador@friotrack.app` y `cliente@friotrack.app`. Las contraseñas se proporcionan de forma privada. La publicación no utiliza selección de perfil sin autenticación.
+Los correos de las cuentas iniciales son `coordinador@friotrack.app` y `cliente@friotrack.app`. Las contraseñas se proporcionan de forma privada.
 
 ## Anexo D. Tablero, diseño e investigación
 
@@ -3634,28 +3657,43 @@ Los correos de las cuentas iniciales son `coordinador@friotrack.app` y `cliente@
 - Registro, fotografías y enlaces de las entrevistas: sección 2.2.2. Se conservan los cinco registros incorporados por el equipo.
 - [Fuentes editables de arquitectura](assets/architecture/containers.mmd), [modelo de clases](assets/architecture/backend-classes-tb1.puml) y [modelo de datos](assets/architecture/database-tb1.mmd).
 
-## Anexo E. Videos
+## Anexo E. Videos de Exposiciones
 
-| Material | Location / state |
-| --- | --- |
-| Entrevistas | Enlaces y fotografías en 2.2.2. |
-| Prototipo | Animación de 4.5 y prototipo HTML; el video narrado no está adjunto. |
-| Navegación Sprint 2 | [Video local de apoyo, 4:46](assets/annexes/frioTrack-productnavigation-sprint2-apoyo.mp4), sin audio ni cámaras; muestra la iteración local anterior. |
-| Exposición TB1 | Archivo y enlace de entrega no adjuntos. El video de apoyo no sustituye la exposición de los integrantes. |
+Los materiales siguientes corresponden a la investigación, el prototipo, la navegación de la landing y la exposición de TB1. Los enlaces de Stream utilizan el acceso institucional compartido por el equipo.
+
+| Material | Archivo o enlace | Contenido |
+| --- | --- | --- |
+| Entrevistas | [Entrevistas consolidadas en Stream](https://upcedupe-my.sharepoint.com/personal/u202219829_upc_edu_pe/_layouts/15/stream.aspx?id=%2Fpersonal%2Fu202219829%5Fupc%5Fedu%5Fpe%2FDocuments%2FConsolidado%2Dentrevistas%2Emp4) | Registro audiovisual consolidado de las entrevistas descritas en 2.2.2; duración: 30:56. |
+| Prototipo | [Recorrido del prototipo funcional, 4:46](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-prototypenavigation-sprint-2.mp4) | Video local de apoyo: acceso, panel, envíos y consulta por Cliente de Carga. Sin narración; complementa el prototipo HTML de 4.5. |
+| Navegación Sprint 2 | [Recorrido de la Landing Page en Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241f246_upc_edu_pe/IQCIdLQEmG0QR77AHqB7XKiLAX3ECReoBPpED2vK8Yo_XVU?e=dNn9kj) | Navegación de las secciones de la landing y sus accesos a la aplicación; duración: 1:50. |
+| Exposición TB1 | [Exposición del equipo en Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241f246_upc_edu_pe/IQC4w2_KdIdwRKtwBLE2p42hAcwnvH1gZGqr8sHyok5YSUM?e=XakQp8) | Presentación del proyecto, los artefactos y la implementación de TB1; duración: 16:43. El MP4 se incluye en el paquete de entrega con la nomenclatura `upc-pre-202620-1asi0730-8088-blackstartup-expo-tb1.mp4`. |
+
+[![Exposición TB1 publicada en Microsoft Stream](assets/images/chapter-05/expo-tb1-stream.png)](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241f246_upc_edu_pe/IQC4w2_KdIdwRKtwBLE2p42hAcwnvH1gZGqr8sHyok5YSUM?e=XakQp8)
+
+*Figura. Exposición del equipo BlackStartup publicada en Stream; duración del archivo: 16:43.*
+
+[![Navegación de la Landing Page publicada en Stream](assets/images/chapter-05/landing-tb1-stream.png)](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241f246_upc_edu_pe/IQCIdLQEmG0QR77AHqB7XKiLAX3ECReoBPpED2vK8Yo_XVU?e=dNn9kj)
+
+*Figura. Recorrido de la landing FríoTrack; duración del archivo: 1:50.*
+
+[![Entrevistas consolidadas publicadas en Stream](assets/images/chapter-05/interviews-tb1-stream.png)](https://upcedupe-my.sharepoint.com/personal/u202219829_upc_edu_pe/_layouts/15/stream.aspx?id=%2Fpersonal%2Fu202219829%5Fupc%5Fedu%5Fpe%2FDocuments%2FConsolidado%2Dentrevistas%2Emp4)
+
+*Figura. Registro consolidado de entrevistas del equipo BlackStartup.*
 
 ## Anexo F. Entregables TB1
 
-La matriz utiliza las secciones TB1 del enunciado, página 32, y distingue los archivos presentes de los materiales que debe adjuntar el equipo.
+La entrega se organiza según el enunciado de TB1, páginas 31–32. Los archivos utilizan el periodo 202620, el curso 1ASI0730, el NRC 8088 y el nombre de la startup BlackStartup.
 
-| Deliverable | Evidence available | Completion item |
+| Entregable | Archivo o enlace | Formato |
 | --- | --- | --- |
-| Final Project Doc Report | Informe acumulativo, índice, registro, Student Outcome, cinco capítulos, conclusiones, bibliografía y anexos. | Revisión final del equipo y exportación en el formato de entrega solicitado. |
-| Landing actualizada | Publicación Azure y acceso a aplicación. | Sincronizar la configuración publicada en el repositorio independiente. |
-| Primera Frontend Web Application | Vue/PrimeVue en Azure; login y permisos del servidor. | Review del equipo contra todos los criterios seleccionados. |
-| Sprint 2: ocho subsecciones | Planning, responsables, backlog, desarrollo, ejecución, servicios, despliegue y colaboración en 5.2.2. | Adjuntar actas de planning, review y retrospectiva. |
-| Keynote TB1 | No adjunto en el repositorio. | Presentación final del equipo. |
-| Individual Member Performance Report | Identificación del Team Leader y evidencia de contribuciones. | Word/PDF evaluados por el líder. |
-| Videos y archivos complementarios | Entrevistas, prototipo HTML, imágenes, recibos y video de apoyo. | Exposición y video narrado con enlaces y permisos del docente. |
+| Final Project Documentation Report | [Informe completo](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-report-tb1.pdf): carátula, versiones, colaboración, índice, Student Outcome, cinco capítulos, conclusiones, bibliografía y anexos. | PDF |
+| Final Project Keynote | [Presentación](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-keynote-tb1.pptx) y [versión PDF](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-keynote-tb1.pdf). | PPTX y PDF |
+| Individual Member Performance Report | [Word](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-performance-tb1.docx) y [PDF](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-performance-tb1.pdf), con responsabilidades y calificaciones individuales. | DOCX y PDF |
+| Landing Page actualizada | [Landing FríoTrack](https://friotracktb1bce6db1b.z22.web.core.windows.net/landing/). | Publicación Azure |
+| Primera Frontend Web Application | [Aplicación FríoTrack](https://friotracktb1bce6db1b.z22.web.core.windows.net/): Vue/PrimeVue, inicio de sesión y permisos por cuenta. | Publicación Azure |
+| Sprint 2 | Secciones 5.2.2.1–5.2.2.8: planificación, responsables, backlog, desarrollo, ejecución, servicios, despliegue y colaboración. | Incluido en el informe |
+| Videos | Enlaces institucionales del Anexo E y MP4 en el paquete de entrega. | Stream y MP4 |
+| Artefactos y proyectos complementarios | Código frontend/API/landing, prototipo, imágenes, fuentes de diagramas y evidencias de verificación en el ZIP complementario. | ZIP |
 
 ## Anexo G. Registros de verificación
 
@@ -3668,5 +3706,3 @@ La matriz utiliza las secciones TB1 del enunciado, página 32, y distingue los a
 | [Published files](assets/evidence/azure-file-verification.json) | Comparación SHA-256 de los archivos públicos. |
 | [API HTTPS checks](assets/evidence/azure-api-verification.json) | Autenticación y autorización del servicio publicado. |
 | [Browser checks](assets/evidence/azure-browser-verification.json) | Login, aislamiento de cuenta, refresco y logout. |
-
-Los registros de la revisión local anterior se conservan en el [archivo de evidencias del 07/10/2026](assets/evidence/archive/2026-10-07/README.md). Sus estados de publicación pertenecen a esa fecha y no describen el despliegue actual.
