@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="780" viewBox="0 0 1400 780"><defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9" fill="#52667a"/></marker></defs><rect width="100%" height="100%" fill="white"/>
+<text x="45" y="48" font-family="Arial,sans-serif" font-size="26" fill="#122d48" font-weight="700" text-anchor="start">FríoTrack  Modelo táctico DDD  IAM  Genérico  Presentado al final</text>
+<text x="45" y="78" font-family="Arial,sans-serif" font-size="16" fill="#4b6072" font-weight="400" text-anchor="start">Diseño objetivo; las clases, puertos y eventos siguientes no equivalen a una implementación en la API JSON de TB1.</text>
+<rect x="55" y="155" width="410" height="220" rx="8" fill="#eaf3fa" stroke="#527b9f" stroke-width="2"/>
+<text x="73" y="182" font-family="Arial,sans-serif" font-size="13" fill="#52667a" font-weight="400" text-anchor="start">Aggregate Root</text>
+<text x="73" y="208" font-family="Arial,sans-serif" font-size="19" fill="#142e48" font-weight="700" text-anchor="start">UserAccount</text>
+<text x="73" y="237" font-family="Arial,sans-serif" font-size="16" fill="#20384e" font-weight="400" text-anchor="start">- id, organizationId, email, role</text>
+<text x="73" y="260" font-family="Arial,sans-serif" font-size="16" fill="#20384e" font-weight="400" text-anchor="start">- passwordHash, enabled</text>
+<text x="73" y="283" font-family="Arial,sans-serif" font-size="16" fill="#20384e" font-weight="400" text-anchor="start">+ changePassword()  + updateProfile()</text>
+<rect x="500" y="155" width="410" height="220" rx="8" fill="#f5f8fb" stroke="#527b9f" stroke-width="2"/>
+<text x="518" y="182" font-family="Arial,sans-serif" font-size="13" fill="#52667a" font-weight="400" text-anchor="start">Entity interna</text>
+<text x="518" y="208" font-family="Arial,sans-serif" font-size="19" fill="#142e48" font-weight="700" text-anchor="start">PasswordResetToken</text>
+<text x="518" y="237" font-family="Arial,sans-serif" font-size="16" fill="#20384e" font-weight="400" text-anchor="start">- id, tokenHash, expiresAt, usedAt</text>
+<text x="518" y="260" font-family="Arial,sans-serif" font-size="16" fill="#20384e" font-weight="400" text-anchor="start">+ isValid(at)  + markUsed(at)</text>
+<rect x="945" y="155" width="410" height="220" rx="8" fill="#f5f8fb" stroke="#527b9f" stroke-width="2"/>
+<text x="963" y="182" font-family="Arial,sans-serif" font-size="13" fill="#52667a" font-weight="400" text-anchor="start">Aggregate Root independiente</text>
+<text x="963" y="208" font-family="Arial,sans-serif" font-size="19" fill="#142e48" font-weight="700" text-anchor="start">Organization</text>
+<text x="963" y="237" font-family="Arial,sans-serif" font-size="16" fill="#20384e" font-weight="400" text-anchor="start">- id, name</text>
+<text x="963" y="260" font-family="Arial,sans-serif" font-size="16" fill="#20384e" font-weight="400" text-anchor="start">+ rename(name)</text>
+<polyline points="465,230 500,230" fill="none" stroke="#52667a" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="480" y="210" font-family="Arial,sans-serif" font-size="14" fill="#344d63" font-weight="400" text-anchor="middle">1  ◆  0..*</text>
+<text x="55" y="435" font-family="Arial,sans-serif" font-size="17" fill="#20384e" font-weight="400" text-anchor="start">Otros agregados se referencian por ID; no hay composición ni navegación directa entre contextos.</text>
+<rect x="55" y="480" width="1288" height="120" rx="8" fill="#edf5fb" stroke="#527b9f" stroke-width="2"/>
+<text x="73" y="507" font-family="Arial,sans-serif" font-size="13" fill="#52667a" font-weight="400" text-anchor="start">Puerto de repositorio en Domain</text>
+<text x="73" y="533" font-family="Arial,sans-serif" font-size="19" fill="#142e48" font-weight="700" text-anchor="start">IUserAccountRepository / IOrganizationRepository</text>
+<text x="73" y="562" font-family="Arial,sans-serif" font-size="16" fill="#20384e" font-weight="400" text-anchor="start">Un repositorio persiste un agregado raíz; Infrastructure implementa el contrato.</text>
+<polyline points="260,480 260,375" fill="none" stroke="#52667a" stroke-width="2" marker-end="url(#arrow)" stroke-dasharray="7 5"/>
+<text x="345" y="462" font-family="Arial,sans-serif" font-size="14" fill="#344d63" font-weight="400" text-anchor="middle">Persiste raíz</text>
+<text x="55" y="650" font-family="Arial,sans-serif" font-size="17" fill="#20384e" font-weight="700" text-anchor="start">Eventos previstos: UserRegistered / PasswordChanged</text>
+<text x="55" y="695" font-family="Arial,sans-serif" font-size="16" fill="#20384e" font-weight="400" text-anchor="start">Los contextos operativos usan UserId / OrganizationId; no mantienen asociaciones de objetos IAM.</text>
+<text x="45" y="756" font-family="Arial,sans-serif" font-size="13" fill="#596d7e" font-weight="400" text-anchor="start">Leyenda UML: ◆ composición interna; referencia entre agregados por ID; repositorios solo para raíces. Diseño objetivo.</text>
+</svg>

@@ -1,29 +1,46 @@
-workspace "FrioTrack" "Current TB1 containers and planned evolution" {
+workspace "FrioTrack" "TB1 implemented architecture" {
   model {
-    user = person "Coordinator or Cargo Client" "Uses an authenticated account"
-    maps = softwareSystem "OpenStreetMap" "External map tiles"
-    system = softwareSystem "FrioTrack" {
-      landing = container "Landing Page" "Public proposal and entry links" "HTML CSS JavaScript / Azure Storage"
-      frontend = container "Web Application" "Authenticated shipment views" "Vue PrimeVue / Azure Storage"
-      api = container "Supporting API" "Accounts, role authorization and commands" "ASP.NET Core C# / Azure App Service"
-      store = container "Private store" "Single-instance persisted state" "JSON / HOME/data"
-      database = container "Relational database (planned)" "Target backend design" "PostgreSQL / EF Core"
+    coordinator = person "Logistics Coordinator" "Schedules shipments and manages resources"
+    client = person "Cargo Client" "Consults assigned shipments"
+    visitor = person "Visitor" "Reads the product proposal"
+    maps = softwareSystem "OpenStreetMap" "External map tile service"
+    friotrack = softwareSystem "FrioTrack" {
+      landing = container "Landing Page" "Public product site at /landing/" "HTML CSS JavaScript"
+      web = container "Web Application" "Serves index.html and the SPA bundle" "Azure Storage Static Website"
+      spa = container "Single Page Application" "Runs in the user browser; authenticated views" "Vue 3 PrimeVue JavaScript"
+      api = container "Supporting API" "Authenticates, authorizes and validates commands" "ASP.NET Core 10 C#"
+      store = container "Private state store" "Single-instance accounts sessions and workspace" "JSON file"
     }
-    user -> landing "Reads proposal"
-    user -> frontend "Uses account"
-    landing -> frontend "Opens role and language entry link"
-    frontend -> api "Authenticates and sends authorized requests" "HTTPS JSON / opaque bearer token"
-    frontend -> maps "Loads map tiles" "HTTPS"
-    api -> store "Reads and persists accepted state"
-    api -> database "Planned migration"
+    visitor -> landing "Reads proposal" "HTTPS"
+    landing -> web "Navigates through CTA" "HTTPS URL"
+    coordinator -> web "Requests page" "HTTPS"
+    client -> web "Requests page" "HTTPS"
+    web -> spa "Delivers application" "HTML JavaScript CSS / HTTPS"
+    coordinator -> spa "Uses interactive views"
+    client -> spa "Uses assigned shipment views"
+    spa -> api "Authenticates and executes commands" "HTTPS JSON / opaque bearer token"
+    spa -> maps "Loads map tiles" "HTTPS"
+    api -> store "Reads and persists accepted state" "Local file I/O"
   }
   views {
-    container system "Containers" {
+    systemContext friotrack "Context" {
+      include *
+      autoLayout lr
+    }
+    container friotrack "Containers" {
       include *
       autoLayout tb
     }
     styles {
-      element "Element" { color #142b45 background #e0f2fe }
+      element "Person" {
+        shape Person
+        background #e5e7eb
+        color #142b45
+      }
+      element "Container" {
+        background #e0f2fe
+        color #142b45
+      }
     }
   }
 }

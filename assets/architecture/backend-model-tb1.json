@@ -1002,5 +1002,13 @@
     "US35",
     "US36",
     "US37"
+  ],
+  "modelPurpose": "Relational persistence projection of the target design, not the aggregate ownership model or implemented JSON API.",
+  "contextPresentationOrder": [
+    "Shipment Management",
+    "Monitoring and Telemetry",
+    "Fleet and Resources",
+    "Alert and Reporting",
+    "IAM"
   ]
 }

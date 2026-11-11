@@ -1,10 +1,19 @@
 flowchart TB
-  IAM[Access and Profile views] --> Repository
-  Fleet[Resource views] --> Repository
-  Shipment[Wizard List Detail] --> Repository
-  Monitoring[Readings and Map] --> Repository
-  Alerts[Actions History and CSV] --> Repository
-  Repository[Workspace repository / reactive data and profile] -->|fetch HTTPS JSON| API[ASP.NET Core API]
-  Repository --> Session[(sessionStorage: opaque token)]
-  Monitoring -->|HTTPS tiles| OSM[OpenStreetMap]
-  API -->|role and customerId filtering| State[(Private single-instance JSON)]
+  subgraph spa[SPA Vue 3]
+    shipment[Shipment presentation / domain]
+    monitoring[Monitoring presentation / domain]
+    fleet[Fleet presentation / domain]
+    alerts[Alerts Reporting presentation / domain]
+    iam[IAM presentation / domain - Generic]
+    app[shared/application Workspace use cases]
+    port[WorkspaceGateway port]
+    adapter[RestWorkspaceGateway fetch adapter]
+    shipment --> app
+    monitoring --> app
+    fleet --> app
+    alerts --> app
+    iam --> app
+    app --> port
+    adapter -. implements .-> port
+  end
+  adapter -->|HTTPS JSON| api[API container]

@@ -1,9 +1,12 @@
 flowchart TB
-  Visitor[Visitor / Coordinator / Cargo Client] --> Landing[Landing: HTML CSS JavaScript on Azure Storage]
-  Landing -->|role and lang entry link| SPA[Vue PrimeVue SPA on Azure Storage]
-  SPA -->|HTTPS JSON and opaque bearer token| API[ASP.NET Core C# API on Azure App Service]
-  SPA -->|HTTPS map tiles| OSM[OpenStreetMap external]
-  API -->|private file read/write| JSON[(Single-instance JSON under HOME/data)]
-  Sensors[Physical sensors - planned] -.-> API
-  API -.-> DB[(PostgreSQL / EF Core - planned)]
-  API -.-> Mail[Mail service - planned]
+  visitor[Visitante] -->|HTTPS| landing[Landing Page HTML CSS JS]
+  users[Coordinador y Cliente] -->|Solicita página HTTPS| web[Web Application servidor estático Azure]
+  landing -->|CTA URL| web
+  subgraph system[FríoTrack TB1]
+    landing
+    web -->|Entrega HTML JS CSS| spa[SPA Vue ejecutada en navegador]
+    spa -->|HTTPS JSON Bearer opaco| api[API ASP.NET Core 10]
+    api -->|Lectura y escritura| store[(Archivo JSON privado)]
+  end
+  users -->|Interactúa| spa
+  spa -->|Teselas HTTPS| maps[OpenStreetMap externo]

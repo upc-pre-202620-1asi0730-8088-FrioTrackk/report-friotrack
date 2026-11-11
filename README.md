@@ -2757,11 +2757,11 @@ El dominio se dividió en cinco contextos delimitados. La separación sigue las 
 
 | Bounded Context | Tipo de subdominio | Responsabilidad | Agregados principales | Pantallas relacionadas |
 | :--- | :---: | :--- | :--- | :--- |
-| **IAM** (Identity & Access Management) | Genérico | Registrar cuentas, autenticar, bloquear tras intentos fallidos, recuperar contraseñas y gestionar el perfil y el idioma. | `UserAccount`, `AuthSession`, `UserProfile` | Iniciar sesión, Crear cuenta, Recuperar contraseña, Configuración |
-| **Fleet & Resource Management** | De apoyo | Administrar vehículos, sensores y conductores, y reservar o liberar recursos para los envíos. | `Vehicle`, `Driver`, `FleetAllocation` | Vehículos, Conductores, paso 3 del registro de un envío |
 | **Shipment Management** | *Core* | Definir, programar, iniciar, entregar y cancelar envíos con su rango térmico y su ruta. | `Shipment` | Dashboard, Envíos, Nuevo envío, Detalle del envío |
 | **Monitoring & Telemetry** | *Core* | Recibir lecturas y posiciones del sensor, evaluarlas contra el rango, detectar la pérdida de señal y exponer las series. | `ShipmentMonitoring` | Detalle del envío (Resumen, Lecturas, Ruta y posiciones), mapas y gráficos |
+| **Fleet & Resource Management** | De apoyo | Administrar vehículos, sensores y conductores, y reservar o liberar recursos para los envíos. | `Vehicle`, `Driver`, `FleetAllocation` | Vehículos, Conductores, paso 3 del registro de un envío |
 | **Alert & Reporting** | De apoyo | Generar alertas, notificar, registrar acciones correctivas e incidencias y producir el reporte térmico. | `Alert`, `Notification`, `Incident`, `ThermalReport` | Notificaciones, pestaña Alertas, acción correctiva, Historial, reportes |
+| **IAM** (Identity & Access Management) | Genérico | Registrar cuentas, autenticar, bloquear tras intentos fallidos, recuperar contraseñas y gestionar el perfil y el idioma. | `UserAccount`, `AuthSession`, `UserProfile` | Iniciar sesión, Crear cuenta, Recuperar contraseña, Configuración |
 
 *Nota.* Elaboración propia.
 
@@ -2796,43 +2796,17 @@ La Tabla 4.25 lista las interacciones y se corresponde con los números que apar
 
 #### Diagrama general
 
-El diagrama general presenta los eventos de dominio de los cinco contextos organizados en calles (*swimlanes*), una por contexto, y las once integraciones de la Tabla 4.25 como flechas numeradas.
+El diagrama general presenta los contratos previstos de los cinco contextos. Shipment y Monitoring aparecen primero, luego Fleet y Alert & Reporting, y finalmente IAM. Los números remiten a las once interacciones de la Tabla 4.25; los eventos no acreditan un dispatcher ejecutado en TB1.
 
 **Figura 4.87**
 
 *Diagrama general de EventStorming de nivel de diseño*
 
 <p align="center">
-  <img src="assets/images/chapter-04/eventstorming-general.png" alt="Diagrama general de EventStorming de nivel de diseño" width="1000"><br>
+  <img src="assets/images/chapter-04/eventstorming-ordered-corrected.svg" alt="Diagrama general de EventStorming de nivel de diseño" width="1000"><br>
   <i>Nota.</i> Elaboración propia.
 </p>
 
-
-#### BC1 · IAM (Identity & Access Management)
-
-El diseño objetivo del contexto IAM cubre el ciclo de vida de la cuenta. La API de TB1 exige un correo único, contraseña de al menos doce caracteres y consentimiento para el registro público de Cliente de Carga. El correo de confirmación y la recuperación pertenecen al diseño posterior. Cada inicio de sesión exitoso redirige al usuario según su perfil: al Dashboard, si es Coordinador Logístico, o a Envíos por recibir, si es Cliente de Carga. En la API actual, login y registro están limitados a quince solicitudes por minuto e IP; el bloqueo por cuenta es una política prevista. La recuperación de contraseña envía un enlace sin revelar si el correo existe, con el fin de no facilitar la enumeración de cuentas.
-
-**Figura 4.88**
-
-*EventStorming del contexto IAM*
-
-<p align="center">
-  <img src="assets/images/chapter-04/eventstorming-bc1-iam.png" alt="EventStorming del contexto IAM" width="1000"><br>
-  <i>Nota.</i> Elaboración propia.
-</p>
-
-#### BC2 · Fleet & Resource Management
-
-Este contexto gestiona los recursos físicos de la empresa de transporte. Sus reglas más importantes son la unicidad de la placa y de la licencia, y la ausencia de traslape de horarios: una unidad o un conductor no pueden reservarse para dos envíos a la vez. Una unidad enviada a mantenimiento deja de aparecer como disponible. La reserva y la liberación no las decide el usuario directamente, sino que las provocan por política los eventos del contexto Shipment Management.
-
-**Figura 4.89**
-
-*EventStorming del contexto Fleet & Resource Management*
-
-<p align="center">
-  <img src="assets/images/chapter-04/eventstorming-bc2-fleet.png" alt="EventStorming del contexto Fleet & Resource Management" width="1000"><br>
-  <i>Nota.</i> Elaboración propia.
-</p>
 
 #### BC3 · Shipment Management
 
@@ -2860,6 +2834,19 @@ El contexto recibe las lecturas y las posiciones de los sensores y las evalúa. 
   <i>Nota.</i> Elaboración propia.
 </p>
 
+#### BC2 · Fleet & Resource Management
+
+Este contexto gestiona los recursos físicos de la empresa de transporte. Sus reglas más importantes son la unicidad de la placa y de la licencia, y la ausencia de traslape de horarios: una unidad o un conductor no pueden reservarse para dos envíos a la vez. Una unidad enviada a mantenimiento deja de aparecer como disponible. La reserva y la liberación no las decide el usuario directamente, sino que las provocan por política los eventos del contexto Shipment Management.
+
+**Figura 4.89**
+
+*EventStorming del contexto Fleet & Resource Management*
+
+<p align="center">
+  <img src="assets/images/chapter-04/eventstorming-bc2-fleet.png" alt="EventStorming del contexto Fleet & Resource Management" width="1000"><br>
+  <i>Nota.</i> Elaboración propia.
+</p>
+
 #### BC5 · Alert & Reporting
 
 Este contexto reacciona a los eventos de monitoreo. Al recibir la solicitud de una alerta, la política del contexto la clasifica como advertencia o como crítica según la tolerancia, la registra y genera una notificación para el Coordinador Logístico y el Cliente de Carga (con envío de correo en el caso de alertas críticas). El Coordinador registra la acción correctiva desde la ventana modal descrita en la sección 4.4; si marcó la casilla «Notificar al Cliente de Carga», se envía además una notificación al cliente. La alerta se cierra cuando la lectura vuelve al rango. El contexto también registra incidencias, genera el reporte térmico en PDF y controla la lectura de las notificaciones.
@@ -2873,223 +2860,111 @@ Este contexto reacciona a los eventos de monitoreo. Al recibir la solicitud de u
   <i>Nota.</i> Elaboración propia.
 </p>
 
-### 4.6.2. Software Architecture Context Diagram
+#### BC1 · IAM (Identity & Access Management)
 
-El diagrama de contexto (nivel 1 del modelo C4) muestra FríoTrack como una sola caja y a su alrededor las personas que lo usan y los sistemas externos con los que se comunica (Brown, s. f.). Su utilidad es acordar el alcance del sistema con lectores no técnicos.
+El diseño objetivo del contexto IAM cubre el ciclo de vida de la cuenta. La API de TB1 exige un correo único, contraseña de al menos doce caracteres y consentimiento para el registro público de Cliente de Carga. El correo de confirmación y la recuperación pertenecen al diseño posterior. Cada inicio de sesión exitoso redirige al usuario según su perfil: al Dashboard, si es Coordinador Logístico, o a Envíos por recibir, si es Cliente de Carga. En la API actual, login y registro están limitados a quince solicitudes por minuto e IP; el bloqueo por cuenta es una política prevista. En el diseño objetivo, la recuperación de contraseña envía un enlace sin revelar si el correo existe, con el fin de no facilitar la enumeración de cuentas.
 
-**Figura 4.93**
+**Figura 4.88**
 
-*Diagrama de contexto del sistema FríoTrack (modelo C4, nivel 1)*
+*EventStorming del contexto IAM*
 
 <p align="center">
-  <img src="assets/images/chapter-04/c4-contexto.png" alt="Diagrama de contexto del sistema FríoTrack (modelo C4, nivel 1)" width="1000"><br>
-  <i>Nota.</i> Elaboración propia, con base en el modelo C4.
+  <img src="assets/images/chapter-04/eventstorming-bc1-iam.png" alt="EventStorming del contexto IAM" width="1000"><br>
+  <i>Nota.</i> Elaboración propia.
 </p>
 
-**Tabla 4.26**
+### 4.6.2. Software Architecture Context Diagram
 
-*Elementos del diagrama de contexto*
+El nivel 1 muestra FríoTrack como un sistema, las dos personas que usan sus operaciones y el proveedor externo de teselas. Se presenta el alcance evidenciado de TB1: las lecturas son de demostración y no se afirma recepción de sensores físicos ni entrega de correo. El visitante usa la landing pública del mismo sistema.
 
+![C4 nivel 1 del sistema FríoTrack](assets/images/chapter-04/c4-context-tb1-corrected.svg)
 
-| Elemento | Tipo | Descripción y relación con FríoTrack |
-| :--- | :--- | :--- |
-| **Coordinador Logístico** | Persona | Empresa de transporte. Programa envíos, administra unidades y conductores y atiende alertas. Usa el sistema mediante HTTPS. |
-| **Cliente de Carga** | Persona | Productor, exportador o comprador. Consulta el estado térmico de sus envíos y descarga reportes. Usa el sistema mediante HTTPS. |
-| **FríoTrack** | Sistema | Plataforma web para el monitoreo casi en tiempo real de temperatura, humedad y posición de cargas refrigeradas. |
-| **Sensores de temperatura, humedad y GPS** | Sistema externo | Dispositivos instalados en cada unidad. Envían lecturas y posiciones a FríoTrack mediante HTTPS con formato JSON. |
-| **Servicio de correo electrónico** | Sistema externo | Entrega los correos de confirmación de cuenta, de recuperación de contraseña y de alertas críticas. |
-| **OpenStreetMap** | Sistema externo | Provee las teselas de los mapas donde se muestran rutas y posiciones (OpenStreetMap Foundation, s. f.). |
-
-*Nota.* Elaboración propia.
+Las relaciones indican quién utiliza el sistema y qué servicio externo consume. La evolución contempla sensores autenticados y correo transaccional, sujetos a implementación y validación posteriores.
 
 ### 4.6.3. Software Architecture Container Diagrams
 
-El diagrama de contenedores (nivel 2 del modelo C4) descompone FríoTrack en sus unidades ejecutables y muestra las decisiones tecnológicas. Un contenedor, en este modelo, es una aplicación o un almacén de datos que debe estar en ejecución para que el sistema funcione, y no un contenedor de Docker.
+Una [aplicación o almacén de datos es un contenedor C4](https://c4model.com/diagrams/container). La **Web Application** es el servidor que entrega `index.html`, JavaScript y CSS; la **Single Page Application** es el programa Vue que se ejecuta en el navegador. Se representan por separado, con la entrega del bundle y el consumo HTTPS de la API como relaciones distintas.
 
-**Figura 4.94**
+![C4 nivel 2 con Web Application y SPA separadas](assets/images/chapter-04/c4-containers-tb1.svg)
 
-*Diagrama de contenedores de FríoTrack (modelo C4, nivel 2)*
+| Contenedor propio | Tecnología | Responsabilidad y comunicación |
+| --- | --- | --- |
+| Landing Page | HTML, CSS y JavaScript | Presenta el producto en `/landing/`; sus CTA abren la URL de la aplicación. |
+| Web Application | Azure Storage Static Website | Sirve el documento y bundle compilado. Comparte recurso de hosting con la landing y no ejecuta código Vue. |
+| Single Page Application | Vue 3, PrimeVue y Leaflet | Ejecuta vistas en el navegador; consume la API con HTTPS/JSON y las teselas con HTTPS. |
+| API de apoyo | ASP.NET Core 10 y C# | Autentica con token opaco, autoriza cada solicitud, filtra el workspace y valida comandos. |
+| Almacén privado | Archivo JSON de una instancia | Persiste cuentas, sesiones y operaciones mediante acceso local del servidor; no está expuesto como archivo público. |
 
-<p align="center">
-  <img src="assets/images/chapter-04/c4-containers-tb1.svg" alt="Diagrama de contenedores de FríoTrack (modelo C4, nivel 2)" width="1000"><br>
-  <i>Nota.</i> Elaboración propia, con base en el modelo C4.
-</p>
-
-**Tabla 4.27**
-
-*Contenedores de FríoTrack y decisiones tecnológicas*
-
-
-| Contenedor | Tecnología | Responsabilidad | Justificación |
-| :--- | :--- | :--- | :--- |
-| **Landing Page** | HTML, CSS y JavaScript, sitio estático | Presentar la propuesta de valor y dirigir al registro o al inicio de sesión. | Contenido público que no requiere lógica de servidor y que se sirve de forma estática y rápida. |
-| **Aplicación web (SPA)** | Vue 3, Vite, PrimeVue, Leaflet | Interfaz del Coordinador Logístico y del Cliente de Carga: dashboard, envíos, alertas, historial y reportes. | Vue 3 y Vite permiten una interfaz reactiva; PrimeVue (PrimeTek, s. f.) aporta los componentes descritos en la sección 4.1.2; Leaflet (Agafonkin, s. f.) dibuja los mapas con las teselas de OpenStreetMap. |
-| **API de apoyo** | ASP.NET Core, C#, .NET 10 | Validar credenciales, sesiones, permisos y comandos; filtrar la información por cliente. | Servidor publicado en App Service; token opaco de sesión y persistencia JSON. |
-| **Almacén implementado** | Archivo JSON privado | Conservar cuentas, sesiones y operaciones en una sola instancia. | Archivo fuera del hosting público; reemplazo relacional previsto para el backend objetivo. |
-| **Base de datos objetivo** | PostgreSQL (diseño) | Almacenar usuarios, flota, envíos, lecturas, alertas, notificaciones y reportes. | Base relacional con integridad referencial, tipos para fecha y hora con zona horaria y soporte de campos JSON (The PostgreSQL Global Development Group, s. f.). |
-| **OpenStreetMap** | Sistema externo | Proveer las teselas del mapa. | Alternativa abierta que no exige licencia comercial de mapas. |
-| **Sensores** | Sistema externo | Reportar lecturas y posiciones. | Cada unidad lleva un sensor asignado en el contexto Fleet & Resource Management. |
-| **Servicio de correo** | Sistema externo | Entregar correos transaccionales. | Evita operar un servidor de correo propio. |
-
-*Nota.* Elaboración propia.
-
-La aplicación Vue consume la API de apoyo mediante HTTPS y JSON. El servidor valida credenciales, emite tokens opacos, filtra el workspace por cliente y procesa comandos autorizados. La API persiste en un archivo JSON privado. El diseño de backend final añade EF Core, PostgreSQL, OpenAPI, sensores y correo; esos componentes se diferencian de la implementación de TB1.
+OpenStreetMap es un sistema externo. EF Core, PostgreSQL, la ingesta IoT y el correo pertenecen al diseño objetivo y no aparecen como contenedores ejecutados de TB1. Hosting y repositorios no determinan el número de contenedores: varias unidades lógicas pueden compartir un recurso de Azure o un repositorio.
 
 ### 4.6.4. Software Architecture Component Diagrams
 
-Se separan los componentes del cliente y del backend objetivo por sus responsabilidades. El frontend actual utiliza el adaptador HTTP de workspace y sesión. Las fuentes editables de esta sección están en `assets/architecture/`; el diseño por capas del backend final se mantiene como evolución de la API de apoyo desplegada.
-
 #### 4.6.4.1. Componentes del frontend
 
-![Componentes del frontend Vue](assets/images/chapter-04/c4-frontend-tb1.svg)
+El alcance del nivel 3 es únicamente la SPA. La copia corregida organiza el cliente en `shipment-management`, `monitoring`, `fleet`, `alerts-reporting` e `iam`; el contexto genérico se presenta al final. Cada contexto contiene sus páginas, componentes y políticas de dominio cuando aplica. `shared/application/workspace.js` coordina estado y casos de uso. Depende del puerto `WorkspaceGateway`, implementado por `RestWorkspaceGateway`; `main.js` compone el adaptador y la aplicación.
 
-| Contexto/componente | Tecnología | Responsabilidad | Relación |
-|---|---|---|---|
-| IAM: Access/Profile views | Vue y PrimeVue | Login con credenciales, registro de cliente y preferencias | API verifica identidad y asigna rol; sesión en sessionStorage |
-| Fleet: Resource views | Vue, formularios PrimeVue | Crear/editar vehículos y conductores, asociar sensores de prueba | Valida unicidad y disponibilidad en operations.js |
-| Shipment: List/Detail/Wizard views | Vue y PrimeVue | Programar en cuatro pasos, cambiar estados permitidos y buscar | El adaptador HTTP envía comandos; API valida y persiste |
-| Monitoring: Reading/Map components | Vue y Leaflet | Lecturas y ubicaciones de ejemplo, rango térmico y señal | Lecturas demo; teselas OpenStreetMap vía HTTPS |
-| Alert & Reporting: Alert/History views | Vue | Acciones correctivas, avisos internos e historial de prueba | API verifica permisos; exportación identifica datos de prueba |
-| Workspace repository | JavaScript, fetch y sessionStorage | Estado reactivo, sesión y comandos HTTP | Conecta con API ASP.NET Core; la autorización reside en servidor |
-| Shared UI / i18n / navigation | Vue, PrimeVue y JavaScript | Layout, foco, rutas hash e inglés/español | Utilizado por todas las vistas |
+![C4 nivel 3 de componentes de la SPA](assets/images/chapter-04/c4-frontend-tb1.svg)
 
-La interfaz limita los controles según el perfil y la API verifica la autorización en cada solicitud. El cliente recibe únicamente sus envíos y recursos relacionados. El aislamiento por organización y las transacciones relacionales forman parte del backend objetivo; no se atribuyen al almacén JSON actual.
+Las políticas de dominio son funciones JavaScript sin dependencias de Vue, red ni almacenamiento. Los fixtures y el simulador de comandos se reservan a pruebas. La API conserva la autoridad de permisos y reglas: ocultar un control de interfaz no sustituye una comprobación en servidor.
 
-#### 4.6.4.2. Componentes del backend
+#### 4.6.4.2. Componentes del backend objetivo
 
-![Componentes de la API por contexto y capa](assets/images/chapter-04/c4-backend-tb1.svg)
+![Diseño objetivo de componentes backend por contexto y capa](assets/images/chapter-04/c4-backend-tb1.svg)
 
-Cada columna corresponde a un contexto: IAM, Fleet, Shipment, Monitoring y Alert & Reporting. En cada uno, **Interfaces** expone controladores REST y DTO; **Application** coordina command/query handlers, validación de solicitud y transacciones; **Domain** contiene agregados, objetos de valor, reglas y puertos; **Infrastructure** implementa esos puertos con EF Core y adaptadores. Interfaces depende de Application, Application de Domain, e Infrastructure implementa interfaces definidas hacia el interior. El dominio no depende de EF Core, controladores ni correo externo.
+Este diagrama documenta la **evolución prevista**, con Interfaces REST, Application, Domain e Infrastructure dentro de cada bounded context. Interfaces convierte solicitudes y respuestas; Application coordina los casos de uso; Domain protege invariantes y declara puertos; Infrastructure implementa persistencia y servicios externos. El dominio no depende de ASP.NET, EF Core ni DTO. [Microsoft documenta esta dirección de dependencias para el diseño DDD](https://learn.microsoft.com/en-us/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/ddd-oriented-microservice).
 
-| Componente | Tecnología propuesta | Responsabilidad |
-|---|---|---|
-| REST controllers / DTO | ASP.NET Core y C# | Validar forma de solicitud, identidad y mapear respuestas HTTP |
-| Command/query handlers | C# | Coordinar casos de uso por contexto y una unidad de trabajo |
-| Aggregates / domain services / ports | C# | Proteger rangos, reservas y transiciones; emitir eventos internos |
-| Repository / UnitOfWork adapters | EF Core y PostgreSQL | Guardar agregados; unicidad, FK y transacciones |
-| In-process event dispatcher | C# | Publicar eventos después de aceptar el caso de uso; reacciones de aplicación |
-| Sensor adapter | C# | Traducir datos de sensores al comando RecordReading |
-| Mail / Report adapters | C# | Aislar correo externo y generación de documento térmico |
+En TB1 existe una API de apoyo con estado JSON. La reorganización local separa responsabilidades técnicas, pero no acredita los agregados tipados, repositorios EF Core, transacciones relacionales ni el dispatcher de eventos de este diseño objetivo. `ShipmentScheduled`, `ReadingOutOfRange` y los demás eventos describen contratos previstos. La programación debe validar y confirmar reservas antes de aceptar el envío, sin depender de una reacción eventual que permita sobreasignación.
 
-`ShipmentScheduled` solicita reserva; `TransitStarted` activa monitoreo; `ReadingOutOfRange` y `SignalLost` solicitan alertas; entrega/cancelación liberan recursos. Estas son integraciones **propuestas**, no un bus implementado. La reserva que condiciona la programación debe ser validada y confirmada dentro del caso de uso; un evento aceptado no justifica sobreasignar recursos.
+#### 4.6.4.3. Fuentes y trazabilidad
 
-#### 4.6.4.3. Otros contenedores
-
-La landing tiene contenido/estilo (`index.html`, CSS), internacionalización (`i18n.js` y diccionarios), navegación/planes/contacto (`app.js`) y simulador identificado (`hero-sim.js`). El almacén PostgreSQL es un contenedor de datos, cuyo detalle se presenta en 4.8; no se lo representa como una aplicación con controladores. Las teselas, sensores y correo son sistemas externos, no contenedores que el equipo implementa.
+Las fuentes [Structurizr DSL](assets/architecture/architecture.dsl), [contenedores Mermaid](assets/architecture/containers.mmd), [componentes Mermaid](assets/architecture/frontend-components.mmd) y [modelo táctico PlantUML](assets/architecture/backend-classes-tb1.puml) quedan editables. Los SVG son vistas explicativas generadas localmente, con alcance, tecnología, responsabilidad y dirección de relaciones; no se presentan como capturas de una herramienta colaborativa. El diseño de datos objetivo se conserva en 4.8.
 
 ## 4.7. Software Object-Oriented Design
 
 ### 4.7.1. Class Diagrams
 
-**Estado:** los diagramas de backend y base de datos describen el diseño objetivo. El cliente utiliza un módulo JavaScript de sesión y workspace; su modelo lógico actual se muestra a continuación. Las fuentes PlantUML y Mermaid permiten revisar relaciones y responsabilidades sin confundirlas con clases JavaScript implementadas.
+El modelo táctico DDD siguiente es el **diseño objetivo del backend**, separado del modelo de datos JSON y de los módulos de la SPA. Los estereotipos distinguen `Aggregate Root`, `Entity`, `Value Object`, repositorios y eventos. Cada agregado protege sus invariantes; las entidades internas se modifican a través de su raíz. Las referencias entre agregados o contextos se mantienen por identificadores. Los repositorios corresponden a raíces de agregado, sin introducir un repositorio por tabla o por objeto de valor.
 
-#### Modelo del cliente TB1
+#### 4.7.1.1. Shipment Management
 
-El UML representa un modelo lógico de objetos y módulos JavaScript. El módulo `workspace-repository.js` mantiene referencias reactivas `data` y `profile` y expone login, register, logout, execute y restoreSession. Envía solicitudes HTTPS a la API; los objetos de envíos y lecturas recibidos alimentan las vistas. Las reglas de dominio del cliente se conservan en `operations.js` y la validación del servidor en `api/Operations.cs`.
+![Agregado Shipment y objetos internos del contexto core](assets/images/chapter-04/backend-ddd-shipment-corrected.svg)
 
-**Modelo del cliente TB1 · aplicación y acceso**
+`Shipment` conserva el identificador del cliente, recursos, ruta, fechas, versión y un `ThermalRange`. El objeto de valor valida mínimo ≤ máximo en temperatura y humedad; no tiene identidad ni setters que eludan invariantes. `ShipmentHistoryEvent` pertenece al agregado. Las transiciones objetivo son `DRAFT → SCHEDULED → IN_TRANSIT → DELIVERED`; la cancelación se permite antes del tránsito. La aplicación coordina con Fleet y confirma reserva y capacidad antes de aceptar programación. Los recursos se referencian por ID y no se componen dentro de Shipment.
 
-![Modelo lógico del cliente: aplicación, repositorio y perfiles](assets/images/chapter-04/frontend-classes-app-tb1.svg)
+#### 4.7.1.2. Monitoring and Telemetry
 
-**Modelo del cliente TB1 · envíos, recursos y monitoreo**
+![Agregado de monitoreo y su copia inmutable del rango](assets/images/chapter-04/backend-ddd-monitoring-corrected.svg)
 
-![Modelo lógico del cliente: envíos, recursos, lecturas y alertas](assets/images/chapter-04/frontend-classes-domain-tb1.svg)
+`ShipmentMonitoring` es la raíz que registra `SensorReading` y `PositionReport`. `MonitoredRange` es una copia inmutable propia del contexto: no comparte una instancia mutable del modelo Shipment. Una lectura incluye fecha y valores ambientales; la posición valida coordenadas. El modelo contempla pérdida de señal y evaluación por tolerancia temporal. `ReadingOutOfRange`, `ReadingWithinRange` y `SignalLost` son eventos previstos, no una ingesta física implementada en TB1.
 
-El envío referencia una unidad, conductor y cliente por sus IDs; conserva ruta, peso, fechas, versión y los límites mínimo/máximo de temperatura y humedad. Incluye lecturas con coordenadas, historial y alertas asociadas. La capacidad de la unidad, los recursos disponibles y el solapamiento temporal condicionan la programación. Las asociaciones con multiplicidades documentan ese contrato; `ThermalRange` agrupa lógicamente campos numéricos que hoy están en el objeto de envío.
+#### 4.7.1.3. Fleet and Resource Management
 
-La acción correctiva reconoce una alerta; su estado sigue abierto hasta que una nueva lectura de ejemplo cumple ambos rangos. Los avisos opcionales se dirigen al cliente asignado. Las enumeraciones reflejan valores de diseño y estados derivados, sin inventar autenticación. Los SVG se generaron localmente y se revisaron visualmente; **no son capturas de PlantUML ni de una herramienta compartida**. La fuente PlantUML queda disponible para importación y revisión del equipo.
+![Raíces de agregado y reservas de Fleet](assets/images/chapter-04/backend-ddd-resources-corrected.svg)
 
-El diseño del backend propone agregados para los cinco contextos de 4.6. La fuente [backend-classes-tb1.puml](assets/architecture/backend-classes-tb1.puml) y el [catálogo de entidades](assets/architecture/backend-model-tb1.json) documentan relaciones y restricciones del modelo objetivo. Las figuras son vistas SVG de ese modelo; la API de apoyo desplegada no implementa todavía toda esta estructura ni PostgreSQL.
+`Vehicle`, `Driver` y `FleetAllocation` son raíces independientes. `Sensor` se administra dentro de Vehicle. Una reserva conserva `shipmentId`, `vehicleId`, `driverId` e intervalo; impide solapamiento y libera recursos al cancelar o entregar. La coordinación de programación y reserva exige una unidad de trabajo y una estrategia transaccional consistente; un evento posterior no sustituye la validación de disponibilidad. Los repositorios gestionan raíces completas.
 
-En UML, `−` indica un atributo privado y `+` una operación pública. El rombo de `Shipment` a `ThermalRange` indica composición; las asociaciones por ID y sus multiplicidades representan vínculos del diseño. Los colores agrupan contextos. Para mantener legibilidad, se dividen los modelos en cuatro paneles: recursos, envío, monitoreo y alertas. Las figuras muestran asociaciones principales; la fuente editable y la Tabla 4.32 contienen las 27 relaciones persistentes, incluidas las que atraviesan paneles.
+#### 4.7.1.4. Alert and Reporting
 
-Se proponen las siguientes decisiones:
+![Agregado de alerta y raíces de evidencia del contexto de apoyo](assets/images/chapter-04/backend-ddd-alerts-corrected.svg)
 
-- `Organization` identifica la empresa de transporte. Las cuentas, unidades, conductores y envíos referencian esa empresa; el servidor futuro deberá verificar empresa, rol y permiso para cada operación. La cadena `organization` de los perfiles de la API de apoyo no equivale a esta normalización ni acredita aislamiento entre empresas.
-- Las asociaciones entre agregados se expresan mediante IDs. `FleetAllocation` reserva unidad y conductor para el intervalo del envío, y `ShipmentHistoryEvent` conserva acciones, responsable y fecha. Programar envío y reserva deberá ser una operación atómica que rechace solapamientos y exceso de capacidad.
-- `ThermalRange` contiene **mínimo y máximo de temperatura en °C, mínimo y máximo de humedad relativa en %, y tolerancia en minutos**. `ShipmentMonitoring` recibe una copia al iniciar el monitoreo. Las lecturas históricas se evalúan con esa copia; el diseño no permite reescribir retroactivamente sus límites (US08).
-- El contrato previsto conserva `DRAFT → SCHEDULED → IN_TRANSIT → DELIVERED` y la cancelación de borrador o programado de US34. La implementación TB1 admite cancelación únicamente de un envío programado y rechaza cancelación durante tránsito o después de entrega; no persiste borradores. En el diseño, un borrador no reserva recursos; cancelar antes del tránsito libera las reservas existentes y entregar detiene el monitoreo y libera los recursos.
-- JWT corresponde al contrato técnico propuesto TS05; en TB1 se utilizan tokens opacos de sesión, no JWT. La recuperación con token de uso único, la tolerancia temporal, la severidad y la detección automática de silencio son diseño previsto; las capturas del frontend no acreditan esos servicios.
+`Alert` contiene `CorrectiveAction`; reconocer la atención cambia `ACTIVE → ACKNOWLEDGED`, y resolver exige evidencia posterior de recuperación dentro de ambos rangos. `RecoveryEvidence` conserva identidad de lectura, instante y resultado normalizado como objeto de valor local; evita recibir una entidad mutable de Monitoring. `Notification`, `Incident` y `ThermalReport` son raíces independientes relacionadas mediante IDs. El informe conserva una instantánea y no certifica condiciones sin mediciones. Los destinatarios deben corresponder al cliente asignado.
 
-#### Diagrama de clases 1 · IAM, Fleet & Resource Management y Shipment Management
+#### 4.7.1.5. IAM
 
-IAM contiene `Organization`, `UserAccount` y `PasswordResetToken`; los roles previstos son `LOGISTICS_COORDINATOR` y `CARGO_CLIENT`. Fleet & Resource Management contiene unidades, conductores, sensores y reservas. Shipment Management organiza el envío, sus cuatro límites ambientales y el historial. Un Cliente de Carga se vincula mediante `clientId`; esa relación condiciona la consulta y las notificaciones del envío.
+![Modelo genérico de identidad presentado después del dominio operativo](assets/images/chapter-04/backend-ddd-iam-corrected.svg)
 
-**Figura 4.96**
+IAM es un subdominio genérico y se documenta al final. `UserAccount` es raíz de agregado y administra `PasswordResetToken`; `Organization` es otra raíz. Los demás contextos reciben `UserId`, `OrganizationId` y permisos mediante contratos, sin navegar objetos internos de identidad. El diseño contempla recuperación con token de uso único y bloqueo por cuenta. La API TB1 utiliza sesiones con token opaco; no se la describe como JWT ni se acredita recuperación por correo.
 
-*Modelo de clases previsto: recursos y operación de envío, en dos paneles*
+#### 4.7.1.6. Correspondencia con el código y los datos
 
-**Panel de recursos e identidad**
+| Elemento | Alcance de la copia corregida | Diseño objetivo |
+| --- | --- | --- |
+| SPA | Módulos por contexto, políticas JavaScript puras, puerto y adaptador HTTP | Mantener límites y contratos al integrar el backend final. |
+| API de apoyo | C# con estado JSON, control de sesión, autorización y comandos | Migrar reglas a agregados tipados y coordinar casos de uso por contexto. |
+| Persistencia | Un archivo JSON privado | Repositorios de raíces con EF Core, PostgreSQL, restricciones y transacciones. |
+| Telemetría y eventos | Datos de demostración | Ingesta autenticada, políticas temporales y eventos internos consistentes. |
 
-![UML backend previsto: organización, cuentas, recuperación, unidades, conductores y sensores](assets/images/chapter-04/backend-classes-resources-tb1.svg)
-
-**Panel del envío, reserva y trazabilidad**
-
-![UML backend previsto: envío, cuatro límites, reserva e historial](assets/images/chapter-04/backend-classes-shipment-tb1.svg)
-
-*Nota.* Vistas SVG del modelo de clases previsto. El [PNG de AV1](assets/images/chapter-04/class-diagram-1.png) se preserva como antecedente y contiene el modelo anterior, sin mínimo de humedad.
-
-**Tabla 4.29**
-
-*Clases previstas de IAM, Fleet & Resource Management y Shipment Management*
-
-| Clase | Contexto | Tipo | Responsabilidad prevista |
-| :--- | :--- | :--- | :--- |
-| `Organization` | IAM | Entidad | Identificar la empresa de transporte asociada con usuarios, recursos y envíos. |
-| `UserAccount` | IAM | Agregado raíz | Mantener identidad, rol, idioma, resumen de contraseña, estado de cuenta e intentos fallidos; participar en autenticación y actualización del perfil. |
-| `PasswordResetToken` | IAM | Entidad | Conservar el resumen del token, vencimiento y fecha de uso; impedir reutilización. |
-| `UserRole` | IAM | Enumeración | `LOGISTICS_COORDINATOR` y `CARGO_CLIENT`; los permisos se verifican en cada caso de uso. |
-| `Vehicle` | Fleet & Resource | Agregado raíz | Conservar placa, capacidad y estado; comprobar disponibilidad para una reserva. |
-| `Sensor` | Fleet & Resource | Entidad | Conservar identidad del dispositivo y asignación opcional a una unidad. |
-| `Driver` | Fleet & Resource | Agregado raíz | Conservar identidad, licencia y estado; comprobar disponibilidad. |
-| `FleetAllocation` | Fleet & Resource | Agregado raíz | Reservar unidad y conductor por intervalo; conservar y liberar la reserva. |
-| `Shipment` | Shipment | Agregado raíz | Conservar empresa, coordinador, cliente, carga, peso, ruta, fechas, versión y rangos; validar programación y transiciones. |
-| `ThermalRange` | Shipment | Objeto de valor | Agrupar mínimos y máximos de temperatura y humedad y tolerancia; comprobar ambos rangos de manera inclusiva. |
-| `ShipmentHistoryEvent` | Shipment | Entidad | Conservar acción, responsable, fecha, nota y estados anterior/posterior cuando corresponda. |
-| `ShipmentStatus` | Shipment | Enumeración | `DRAFT`, `SCHEDULED`, `IN_TRANSIT`, `DELIVERED`, `CANCELLED`. |
-
-*Nota.* Responsabilidades de diseño; no acreditan implementación ni resultados de ejecución del backend.
-
-#### Diagrama de clases 2 · Monitoring & Telemetry y Alert & Reporting
-
-`ShipmentMonitoring` mantiene la copia del rango, lecturas, posiciones y condición de señal del envío. `SensorReading` evalúa temperatura y humedad contra ambos intervalos. `Alert` distingue temperatura, humedad y pérdida de señal; una lectura que origina una alerta puede no existir en una pérdida de comunicación. `CorrectiveAction` conserva la respuesta del coordinador; `Notification`, `Incident` y `ThermalReport` preservan avisos, eventos operativos y evidencia del envío. Estos objetos se separan en dos paneles para facilitar su lectura.
-
-**Figura 4.97**
-
-*Modelo de clases previsto: monitoreo y atención, en dos paneles*
-
-**Panel de monitoreo y telemetría**
-
-![UML backend previsto: monitoreo, lectura ambiental y posición](assets/images/chapter-04/backend-classes-monitoring-tb1.svg)
-
-**Panel de alertas, acciones y evidencia**
-
-![UML backend previsto: alerta, acción correctiva, aviso, incidencia e informe](assets/images/chapter-04/backend-classes-alerts-tb1.svg)
-
-*Nota.* Vistas SVG del modelo de clases previsto. El [PNG de AV1](assets/images/chapter-04/class-diagram-2.png) permanece como antecedente; sus tipos adicionales de alerta no se incorporan al alcance vigente sin una historia que los sustente.
-
-**Tabla 4.30**
-
-*Clases previstas de Monitoring & Telemetry y Alert & Reporting*
-
-| Clase | Contexto | Tipo | Responsabilidad prevista |
-| :--- | :--- | :--- | :--- |
-| `ShipmentMonitoring` | Monitoring & Telemetry | Agregado raíz | Conservar cuatro límites y tolerancia de inicio; registrar lecturas y posiciones; detectar silencio configurable y detenerse al concluir el envío. |
-| `SensorReading` | Monitoring & Telemetry | Entidad | Conservar temperatura, humedad y fecha; indicar si ambos valores satisfacen los rangos del monitoreo. |
-| `PositionReport` | Monitoring & Telemetry | Entidad | Conservar latitud, longitud y fecha de reporte válidas. |
-| `SignalStatus` | Monitoring & Telemetry | Enumeración | `ONLINE`, `NO_SIGNAL`; el umbral temporal debe configurarse y validarse. |
-| `Alert` | Alert & Reporting | Agregado raíz | Conservar tipo, severidad, estado y fechas; reconocer una acción y resolver solo con evidencia posterior de recuperación. |
-| `CorrectiveAction` | Alert & Reporting | Entidad | Conservar alerta, comentario, responsable, fecha y elección de notificar al cliente asignado. |
-| `Notification` | Alert & Reporting | Agregado raíz | Conservar destinatario, envío, origen opcional y fecha de lectura. |
-| `Incident` | Alert & Reporting | Agregado raíz | Conservar una incidencia operativa, responsable y fecha del traslado. |
-| `ThermalReport` | Alert & Reporting | Agregado raíz | Conservar referencia de un archivo y resumen generado del envío; no certificar condiciones que carecen de mediciones. |
-| `AlertType` | Alert & Reporting | Enumeración | `TEMPERATURE`, `HUMIDITY`, `NO_SIGNAL`. |
-| `AlertStatus` | Alert & Reporting | Enumeración | `ACTIVE`, `ACKNOWLEDGED`, `RESOLVED`. |
-| `AlertSeverity` | Alert & Reporting | Enumeración | `WARNING`, `CRITICAL`; clasificación de severidad prevista en US04; su política temporal requiere integración. |
-
-*Nota.* La fuente PlantUML incluye las enumeraciones y sus dependencias; los paneles muestran las entidades y agregados persistentes.
-
-Una acción válida cambia la alerta de `ACTIVE` a `ACKNOWLEDGED` y puede generar un aviso únicamente para el cliente asignado (US35). **Registrar la acción no demuestra recuperación.** La resolución requiere una lectura posterior dentro de ambos rangos; el historial conserva la alerta y su atención.
+Las [clases y puertos del modelo objetivo](assets/architecture/backend-classes-tb1.puml) son fuente editable. El [catálogo persistente](assets/architecture/backend-model-tb1.json) y los diagramas de 4.8 describen la proyección relacional; una tabla de base de datos no define por sí sola un agregado. Los cambios locales de esta revisión requieren su integración y un nuevo despliegue antes de atribuirlos a las URLs de TB1.
 
 ## 4.8. Database Design
 
