@@ -32,11 +32,12 @@
     "teamAcceptanceNotInvented": true
   },
   "cover": {
-    "format": "Markdown in README.md",
+    "format": "Editable README content with original centered wrapper and centered member table",
     "content": "Restored original TB1 cover text and member information",
     "fullPageImageRemoved": true,
     "docxCoverArtifactsRemoved": true,
-    "visualReview": "passed after Markdown export"
+    "visualReview": "passed after Markdown export",
+    "alignment": "center"
   },
   "limitations": [
     "Historical Azure receipts are unchanged and do not validate this source revision in production.",

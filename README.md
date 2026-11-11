@@ -1,7 +1,9 @@
-![Logo de la Universidad Peruana de Ciencias Aplicadas](assets/images/upc-logo.png)
+<div align="center">
 
-Universidad Peruana de Ciencias Aplicadas  
-Carrera de Ingeniería de Software
+<img src="assets/images/upc-logo.png" width="110" alt="Logo de la Universidad Peruana de Ciencias Aplicadas">
+
+Universidad Peruana de Ciencias Aplicadas<br>
+Carrera de Ingeniería de Software<br>
 
 ### 1ASI0730
 ### Aplicaciones Web
@@ -11,28 +13,51 @@ Carrera de Ingeniería de Software
 
 ## Informe de Trabajo Final · TB1
 
-**Docente**
+**Docente**<br>
 ### Bautista Ubillús, Efraín Ricardo
 
-Equipo  
+Equipo<br>
 **BlackStartup**
 
-Proyecto  
-**FríoTrack**
+Proyecto<br>
+**FríoTrack**<br><br>
 
-**Integrantes**
+**Integrantes**<br><br>
 
-| Código | Apellidos y Nombres |
-| --- | --- |
-| u20241f246 | Atauje Barreto, Alexander Sebastián |
-| u202421137 | Bardales Rodriguez, Benjamin Elias (retirado) |
-| u202219829 | Daga Chávez, Joaquín Leonardo |
-| u20241D811 | Saavedra Flores, Rodrigo Andree |
-| u20231H17 | Vera Solsol, Nayely Macarena |
+<table align="center">
+  <tr>
+    <th>Código</th>
+    <th>Apellidos y Nombres</th>
+  </tr>
+  <tr>
+    <td>u20241f246</td>
+    <td>Atauje Barreto, Alexander Sebastián</td>
+  </tr>
+  <tr>
+    <td>u202421137</td>
+    <td>Bardales Rodriguez, Benjamin Elias (retirado)</td>
+  </tr>
+  <tr>
+    <td>u202219829</td>
+    <td>Daga Chávez, Joaquín Leonardo</td>
+  </tr>
+  <tr>
+    <td>u20241D811</td>
+    <td>Saavedra Flores, Rodrigo Andree</td>
+  </tr>
+  <tr>
+    <td>u20231H17</td>
+    <td>Vera Solsol, Nayely Macarena</td>
+  </tr>
+</table>
+
+<br>
 
 **Periodo 202620**
 
 **Octubre 2026**
+
+</div>
 
 ## Registro de Versiones del Informe
 
@@ -3081,7 +3106,7 @@ La [consulta pública previa a la corrección del 10 de noviembre de 2026](asset
 
 | Producto | Versión de corrección | Alcance |
 | --- | --- | --- |
-| [Informe](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/releases) | `v2.0.2` | Revisión documental de TB1 con carátula en Markdown, colaboración, requisitos, sprints y arquitectura. |
+| [Informe](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/releases) | `v2.0.3` | Revisión documental de TB1 con carátula centrada en README, colaboración, requisitos, sprints y arquitectura. |
 | [Frontend](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/releases) | `0.1.1` | Organización por contextos, puerto/adaptador HTTP, separación técnica del servicio y pruebas locales. |
 | [Landing Page](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-landing/releases) | `0.1.0` | Primera release del repositorio, con acceso por perfil/idioma y resultado de contacto coherente. |
 | [Web Services](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-api/releases) | `0.1.0` | Primera release independiente de la API ASP.NET Core con persistencia JSON. |

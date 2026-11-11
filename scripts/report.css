@@ -25,7 +25,7 @@ blockquote {margin:10px 0; padding-left:14px; border-left:3px solid #cbd5df;}
 .markdown-cover h3 {font-size:12pt;margin:.65em 0;}
 .markdown-cover h2 {font-size:17pt;margin:.8em 0;}
 .markdown-cover p {margin:.75em 0;}
-.markdown-cover table {font-size:10pt;width:100%;margin:1.2em auto;}
+.markdown-cover table {font-size:10pt;width:auto;max-width:90%;margin:1.2em auto;}
 .markdown-cover th,.markdown-cover td {padding:6px 8px;}
 .figure-caption {break-after:avoid;}
 div[align="center"]:has(img) {break-inside:avoid;}
