@@ -1,0 +1,20 @@
+﻿Story Id,Story Title,Task Id,Task Title,Task Description,Estimation (Hours),Assigned To,Status
+US19,Inicio de sesión en el sistema,S2-T01,Integrar credenciales,"Validar correo y contraseña en API, error genérico y redirección por rol.",No registrada,Rodrigo,Verificado
+US20,Cierre de sesión seguro,S2-T02,Revocar sesión,Invalidar token en servidor y limpiar la sesión del navegador.,No registrada,Rodrigo,Verificado
+US32,Registro de Cliente de Carga,S2-T03,Crear cuenta cliente,"Validar datos, contraseña y consentimiento; impedir autoasignación de coordinador.",No registrada,Rodrigo,Verificado por pruebas API
+US33,Programación de envío refrigerado,S2-T04,Programar en cuatro pasos,"Validar carga, fechas, cliente, recursos y rangos; persistir al confirmar.",No registrada,Rodrigo — integración API,Parcial: sin borrador persistido
+"US14, US15",Registro / edición de unidad,S2-T05,Gestionar unidades,"Validar capacidad, placa y sensor únicos; proteger recursos asignados.",No registrada,Rodrigo — integración API,Implementado; revisión funcional del equipo abierta
+"US16, US17",Conductores / asignación,S2-T06,Gestionar recursos,"Validar licencia única, disponibilidad y solapamiento al programar.",No registrada,Rodrigo — integración API,Parcial: vigencia de licencia no verificada
+US34,Gestión de estados del envío,S2-T07,Gestionar ciclo del envío,"Inicio, entrega y cancelación de programados; historial y liberación de recursos.",No registrada,Rodrigo — integración API,Parcial: sin estado DRAFT persistido
+"US01, US02, US05",Panel / mapa / detalle,S2-T08,Presentar monitoreo,"Mostrar lecturas, ubicación ilustrativa, gráfica y tabla.",No registrada,Rodrigo — integración API,Parcial: datos de prueba; sin sensores ni vibración
+US03,Búsqueda y filtros de envíos,S2-T09,Localizar envíos,Filtrar la información autorizada y mostrar resultados vacíos.,No registrada,Rodrigo — integración API,Implementado; filtros completos por revisar
+US08,Configuración de umbrales térmicos,S2-T10,Validar rangos,Exigir mínimo menor que máximo y humedad entre 0 y 100.,No registrada,Rodrigo — integración API,Verificado para rangos del envío
+"US09, US35",Historial de alertas / acción correctiva,S2-T11,Atender alerta,"Guardar acción, autor y fecha; reconocer sin cerrar automáticamente.",No registrada,Rodrigo — integración API,Parcial: filtros del catálogo por revisar
+"US10, US11",Historial / exportación,S2-T12,Consultar y exportar,Presentar historial y CSV identificado como datos de prueba.,No registrada,Rodrigo — integración API,Parcial: exportación en cliente
+US36,Consulta de envíos del Cliente de Carga,S2-T13,Aislar información por cliente,"Filtrar en servidor envíos, alertas y recursos; impedir comandos de coordinación.",No registrada,Rodrigo,Verificado
+US30,Gestión de multi-idioma (i18n),S2-T14,Integrar EN / ES,Idioma inicial inglés; conservar idioma explícito desde la landing.,No registrada,Rodrigo — integración publicada,Verificado en recorridos registrados
+US31,Planes y acceso desde la Landing,S2-T15,Conectar entradas públicas,Dirigir cada segmento al login de la aplicación Azure.,No registrada,Rodrigo,Verificado
+Soporte,Despliegue y pruebas,S2-T16,Publicar aplicación y API,"Compilar, desplegar y comprobar HTTPS, permisos y archivos.",No registrada,Rodrigo,Verificado
+Soporte,Actualización del informe,S2-T17,Consolidar documentación,"Integrar capítulos, índice, commits, conclusiones y anexos.",No registrada,Alexander / Joaquín / Nayely / Rodrigo,Integrado en informe
+US25,Formulario de contacto comercial,S2-T18,Conectar receptor,Comprobar recepción efectiva y errores de transporte.,No registrada,Sin asignación registrada,Pendiente
+Soporte,Evidencias de equipo,S2-T19,Documentar la revisión del equipo,"Incorporar exposición y evaluación individual; adjuntar actas de planning, review y retrospectiva.",No registrada,Equipo / Team Leader,Exposición y performance adjuntos; actas no adjuntas
