@@ -50,8 +50,8 @@
 <text x="988" y="707" font-family="Arial,sans-serif" font-size="13" fill="#52667a" font-weight="400" text-anchor="start">Adaptador · fetch / JSON</text>
 <text x="988" y="733" font-family="Arial,sans-serif" font-size="19" fill="#142e48" font-weight="700" text-anchor="start">RestWorkspaceGateway</text>
 <text x="988" y="762" font-family="Arial,sans-serif" font-size="16" fill="#20384e" font-weight="400" text-anchor="start">Implementa el puerto HTTP.</text>
-<polyline points="555,585 555,625 260,625 260,680" fill="none" stroke="#52667a" stroke-width="2" marker-end="url(#arrow)"/>
-<text x="350" y="609" font-family="Arial,sans-serif" font-size="14" fill="#344d63" font-weight="400" text-anchor="middle">Consulta reglas</text>
+<polyline points="191,313 50,340 50,635 260,635 260,680" fill="none" stroke="#52667a" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="260" y="617" font-family="Arial,sans-serif" font-size="14" fill="#344d63" font-weight="400" text-anchor="middle">Presentación consulta políticas</text>
 <polyline points="695,585 695,680" fill="none" stroke="#52667a" stroke-width="2" marker-end="url(#arrow)"/>
 <text x="730" y="637" font-family="Arial,sans-serif" font-size="14" fill="#344d63" font-weight="400" text-anchor="middle">Usa</text>
 <polyline points="970,740 900,740" fill="none" stroke="#52667a" stroke-width="2" marker-end="url(#arrow)" stroke-dasharray="7 5"/>

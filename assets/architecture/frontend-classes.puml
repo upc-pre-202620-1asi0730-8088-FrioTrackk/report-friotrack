@@ -1,32 +1,34 @@
 @startuml
-title FríoTrack — modelo lógico del cliente integrado
-class WorkspaceRepository <<module>> {
-  +data: Ref<WorkspaceData>
-  +profile: Ref<Profile?>
-  +login(draft): Promise<Profile>
-  +register(draft): Promise<Profile>
-  +logout(): Promise<void>
-  +execute(type, payload): Promise<Object>
-  +restoreSession(): Promise<void>
-  -request(path, body): Promise<Object>
+title FrioTrack frontend modules and HTTP boundary
+skinparam classAttributeIconSize 0
+package "SPA" {
+class WorkspaceApplication <<module>> {
+  + data: Ref<WorkspaceData>
+  + profile: Ref<Profile>
+  + login(draft)
+  + register(draft)
+  + logout()
+  + execute(type, payload)
+  + restoreSession()
 }
-class WorkspaceData <<logical object>> {
-  +schema: Number
-  +revision: Number
-  +profiles: Profile[]
-  +vehicles: Vehicle[]
-  +drivers: Driver[]
-  +shipments: Shipment[]
-  +alerts: Alert[]
-  +notifications: Notification[]
+class ContextPresentation <<VuePagesAndRouter>>
+ContextPresentation --> WorkspaceApplication : invokes use cases
+abstract class WorkspaceGateway <<ApplicationPort>>
+class RestWorkspaceGateway <<HttpAdapter>>
+class ShipmentPolicies <<PureFunctions>>
+class ThermalPolicies <<PureFunctions>>
+class AccessPolicies <<PureFunctions>>
+WorkspaceApplication --> WorkspaceGateway : depends on contract
+RestWorkspaceGateway --|> WorkspaceGateway : implements
+ContextPresentation ..> ShipmentPolicies
+ContextPresentation ..> ThermalPolicies
+ContextPresentation ..> AccessPolicies
 }
-class DomainOperations <<module>>
-class WorkspaceStore <<server service>>
-WorkspaceRepository --> WorkspaceData : updates reactive state
-WorkspaceRepository ..> WorkspaceStore : HTTPS JSON and bearer token
-WorkspaceStore --> WorkspaceData : filters by actor
+class SupportingApi <<ASP.NET Core Container>>
+RestWorkspaceGateway ..> SupportingApi : HTTPS JSON / opaque bearer
 note bottom
-Logical representation of modules and data objects.
-The server validates permissions and persists private JSON.
+Module view, not a claim of typed backend aggregates.
+HTTP requests and session handling remain in the adapter.
+Domain policies do not depend on Vue or persistence.
 end note
 @enduml

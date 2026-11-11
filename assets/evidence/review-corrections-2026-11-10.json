@@ -1,0 +1,64 @@
+{
+  "reviewDate": "2026-11-10",
+  "timezone": "America/Lima",
+  "scope": "Source and report correction; no new Azure deployment",
+  "frontend": {
+    "testsPassed": 18,
+    "productionBuild": "passed",
+    "ci": "passed",
+    "ciUrl": "https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/actions/runs/42952300997"
+  },
+  "supportingApi": {
+    "framework": "net10.0",
+    "sdk": "10.0.404",
+    "publish": "passed",
+    "integrationChecksPassed": 26,
+    "independentRepository": "https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-api",
+    "standaloneChecksPassed": 26
+  },
+  "requirements": {
+    "stories": 43,
+    "gherkinScenarios": 86,
+    "genericContextPresentedLast": "IAM"
+  },
+  "backlog": {
+    "sprint1Tasks": 8,
+    "sprint2Tasks": 50,
+    "reviewEstimateRangeHours": [
+      4,
+      8
+    ],
+    "historicalEstimatesPreserved": true,
+    "teamAcceptanceNotInvented": true
+  },
+  "cover": {
+    "templateStructurePreserved": true,
+    "visualReview": "passed"
+  },
+  "limitations": [
+    "Historical Azure receipts are unchanged and do not validate this source revision in production.",
+    "Collaborative contribution balance, current Trello states, task acceptance and team meeting records require actual team work.",
+    "Typed DDD backend aggregates, PostgreSQL and physical sensor ingestion remain target design."
+  ],
+  "report": {
+    "localReferencesChecked": 311,
+    "brokenLocalReferences": 0,
+    "renderedImages": 173,
+    "pdfPages": 225,
+    "visualReview": "passed after caption and table layout corrections"
+  },
+  "landing": {
+    "javascriptFilesChecked": 7,
+    "translationKeysPerLanguage": 274,
+    "localReferencesChecked": 88,
+    "browserViewports": [
+      1440,
+      390
+    ],
+    "languages": [
+      "es",
+      "en"
+    ],
+    "httpAndNetworkErrorStates": "passed with intercepted local requests"
+  }
+}

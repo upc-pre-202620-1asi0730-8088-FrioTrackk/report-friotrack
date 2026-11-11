@@ -13,6 +13,10 @@ flowchart TB
     fleet --> app
     alerts --> app
     iam --> app
+    policies[Pure policies per context]
+    shipment --> policies
+    monitoring --> policies
+    iam --> policies
     app --> port
     adapter -. implements .-> port
   end

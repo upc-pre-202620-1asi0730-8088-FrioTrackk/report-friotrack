@@ -1,0 +1,36 @@
+{
+  "reference": "assets/templates/upc-report-cover-reference.docx",
+  "reference_sha256": "c56b8590d5a9cac1e8a9980c8865aa210b1a6247d61fd15939d12cc3a3819f50",
+  "output": "deliverables/upc-pre-202620-1asi0730-8088-blackstartup-report-cover-tb1.docx",
+  "output_sha256": "bbefa0938e1bf5d5153252301eeb14a761e58fa63135bf74c0c358d727f98ec6",
+  "changed_parts": [
+    "word/document.xml"
+  ],
+  "preserved_parts_byte_identical": 21,
+  "non_text_document_structure_identical": true,
+  "editable_slots": {
+    "7": "8088",
+    "10": "Bautista Ubillús, Efraín Ricardo",
+    "15": "FríoTrack",
+    "20": "u20241f246",
+    "21": "Atauje Barreto, Alexander Sebastián",
+    "22": "u202421137",
+    "23": "Bardales Rodriguez, Benjamin Elias (retirado)",
+    "24": "u202219829",
+    "25": "Daga Chávez, Joaquín Leonardo",
+    "26": "u20241D811",
+    "27": "Saavedra Flores, Rodrigo Andree",
+    "28": "u20231H17",
+    "29": "Vera Solsol, Nayely Macarena",
+    "30": "",
+    "31": "",
+    "35": "Octubre 2026"
+  },
+  "visual_validation": {
+    "status": "passed",
+    "method": "Microsoft Word native PDF export and page PNG inspection of reference and final",
+    "pages": 1,
+    "date": "2026-11-10",
+    "docxResavedByWord": false
+  }
+}

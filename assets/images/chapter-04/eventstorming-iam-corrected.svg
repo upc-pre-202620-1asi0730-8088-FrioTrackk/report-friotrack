@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="800" viewBox="0 0 1400 800"><defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9" fill="#52667a"/></marker></defs><rect width="100%" height="100%" fill="white"/>
+<text x="45" y="48" font-family="Arial,sans-serif" font-size="26" fill="#122d48" font-weight="700" text-anchor="start">FríoTrack  EventStorming  IAM  Identidad y acceso</text>
+<text x="45" y="78" font-family="Arial,sans-serif" font-size="16" fill="#4b6072" font-weight="400" text-anchor="start">Comandos y políticas en azul; eventos en naranja. El estado de implementación se declara en el texto.</text>
+<rect x="55" y="145" width="640" height="138" rx="8" fill="#edf5fb" stroke="#527b9f" stroke-width="2"/>
+<text x="73" y="172" font-family="Arial,sans-serif" font-size="13" fill="#52667a" font-weight="400" text-anchor="start">Comando / evento de entrada</text>
+<text x="73" y="198" font-family="Arial,sans-serif" font-size="19" fill="#142e48" font-weight="700" text-anchor="start">RegisterClient</text>
+<text x="73" y="227" font-family="Arial,sans-serif" font-size="16" fill="#20384e" font-weight="400" text-anchor="start">Correo único, consentimiento y contraseña ≥ 12 caracteres.</text>
+<rect x="805" y="145" width="540" height="138" rx="8" fill="#fff1d5" stroke="#b98a45" stroke-width="2"/>
+<text x="823" y="172" font-family="Arial,sans-serif" font-size="13" fill="#52667a" font-weight="400" text-anchor="start">Evento de dominio</text>
+<text x="823" y="198" font-family="Arial,sans-serif" font-size="19" fill="#142e48" font-weight="700" text-anchor="start">UserRegistered / SessionCreated</text>
+<polyline points="695,215 805,215" fill="none" stroke="#52667a" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="55" y="320" width="640" height="138" rx="8" fill="#edf5fb" stroke="#527b9f" stroke-width="2"/>
+<text x="73" y="347" font-family="Arial,sans-serif" font-size="13" fill="#52667a" font-weight="400" text-anchor="start">Comando / evento de entrada</text>
+<text x="73" y="373" font-family="Arial,sans-serif" font-size="19" fill="#142e48" font-weight="700" text-anchor="start">Login</text>
+<text x="73" y="402" font-family="Arial,sans-serif" font-size="16" fill="#20384e" font-weight="400" text-anchor="start">Credenciales válidas; rol asignado por el servidor.</text>
+<rect x="805" y="320" width="540" height="138" rx="8" fill="#fff1d5" stroke="#b98a45" stroke-width="2"/>
+<text x="823" y="347" font-family="Arial,sans-serif" font-size="13" fill="#52667a" font-weight="400" text-anchor="start">Evento de dominio</text>
+<text x="823" y="373" font-family="Arial,sans-serif" font-size="19" fill="#142e48" font-weight="700" text-anchor="start">SessionCreated</text>
+<polyline points="695,390 805,390" fill="none" stroke="#52667a" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="55" y="495" width="640" height="138" rx="8" fill="#edf5fb" stroke="#527b9f" stroke-width="2"/>
+<text x="73" y="522" font-family="Arial,sans-serif" font-size="13" fill="#52667a" font-weight="400" text-anchor="start">Comando / evento de entrada</text>
+<text x="73" y="548" font-family="Arial,sans-serif" font-size="19" fill="#142e48" font-weight="700" text-anchor="start">Logout</text>
+<text x="73" y="577" font-family="Arial,sans-serif" font-size="16" fill="#20384e" font-weight="400" text-anchor="start">Revocación del token de sesión actual.</text>
+<rect x="805" y="495" width="540" height="138" rx="8" fill="#fff1d5" stroke="#b98a45" stroke-width="2"/>
+<text x="823" y="522" font-family="Arial,sans-serif" font-size="13" fill="#52667a" font-weight="400" text-anchor="start">Evento de dominio</text>
+<text x="823" y="548" font-family="Arial,sans-serif" font-size="19" fill="#142e48" font-weight="700" text-anchor="start">SessionRevoked</text>
+<polyline points="695,565 805,565" fill="none" stroke="#52667a" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="55" y="730" font-family="Arial,sans-serif" font-size="16" fill="#20384e" font-weight="400" text-anchor="start">Diseño pendiente: recuperación por correo con token de uso único y bloqueo por cuenta. No implementados en TB1.</text>
+<text x="45" y="776" font-family="Arial,sans-serif" font-size="13" fill="#596d7e" font-weight="400" text-anchor="start">El diagrama no afirma ejecución de sensores físicos, correo transaccional ni un dispatcher de eventos.</text>
+</svg>

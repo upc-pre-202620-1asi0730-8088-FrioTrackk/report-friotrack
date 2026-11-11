@@ -1,0 +1,414 @@
+[
+  {
+    "name": "report-friotrack",
+    "url": "https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack",
+    "private": false,
+    "checkedAt": "2026-11-10T22:34:49.6077804Z",
+    "defaultBranch": "main",
+    "pushedAt": "2026-10-09T08:25:05Z",
+    "releases": [
+      {
+        "url": "https://api.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/releases/407505744",
+        "assets_url": "https://api.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/releases/407505744/assets",
+        "upload_url": "https://uploads.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/releases/407505744/assets{?name,label}",
+        "html_url": "https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/releases/tag/v2.0.0",
+        "id": 407505744,
+        "author": {
+          "login": "rodrigoxd67",
+          "id": 219700315,
+          "node_id": "U_kgDODRhcWw",
+          "avatar_url": "https://avatars.githubusercontent.com/u/219700315?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/rodrigoxd67",
+          "html_url": "https://github.com/rodrigoxd67",
+          "followers_url": "https://api.github.com/users/rodrigoxd67/followers",
+          "following_url": "https://api.github.com/users/rodrigoxd67/following{/other_user}",
+          "gists_url": "https://api.github.com/users/rodrigoxd67/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/rodrigoxd67/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/rodrigoxd67/subscriptions",
+          "organizations_url": "https://api.github.com/users/rodrigoxd67/orgs",
+          "repos_url": "https://api.github.com/users/rodrigoxd67/repos",
+          "events_url": "https://api.github.com/users/rodrigoxd67/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/rodrigoxd67/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "node_id": "RE_kwDOVAXxDc4YSgtQ",
+        "tag_name": "v2.0.0",
+        "target_commitish": "fdd34cb4575c8acaaf26382990d6d1dea4d1ae5a",
+        "name": "FríoTrack Project Report v2.0.0",
+        "draft": false,
+        "immutable": false,
+        "prerelease": false,
+        "created_at": "2026-10-09T04:20:54Z",
+        "updated_at": "2026-10-09T04:21:16Z",
+        "published_at": "2026-10-09T04:21:16Z",
+        "assets": [],
+        "tarball_url": "https://api.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/tarball/v2.0.0",
+        "zipball_url": "https://api.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/zipball/v2.0.0",
+        "body": "# FríoTrack Project Report v2.0.0\n\nConsolidated TB1 version of the FríoTrack project report.\n\n## Included\n\n- Corrected table of contents and links to the team's current repositories.\n- Updated version history, collaboration records and Student Outcome evidence.\n- Sprint 2 documentation covering planning, responsibilities, backlog, development, execution, services, deployment and collaboration.\n- Backlog identifiers aligned with shipment planning, lifecycle, corrective actions and cargo-client access.\n- Email/password sign-in and server authorization documented for both user roles.\n- Azure deployment URLs, execution screenshots and verification records.\n- Architecture diagrams aligned with the deployed supporting API and its private JSON store; relational backend evolution identified separately.\n- Restored editable architecture sources, visual-design assets and HTML prototype.\n- Updated conclusions, bibliography and delivery annexes.\n\n## Validation\n\nInternal Markdown targets and anchors resolve; all eight Sprint 2 subsections are present. The catalog contains 43 stories, with 75 SP across 20 Sprint 2 stories. Existing receipts record 15 frontend domain tests, 26 local API checks and 12 deployed HTTPS checks, each with its own scope.\n\n## Related products\n\n- [FríoTrack Landing Page](https://friotracktb1bce6db1b.z22.web.core.windows.net/landing/)\n- [FríoTrack Web Application](https://friotracktb1bce6db1b.z22.web.core.windows.net/)\n- [FríoTrack Frontend source and supporting API](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend)\n\n## Delivery annexes\n\nThe report identifies the planning/review records, narrated videos, team presentation and Team Leader assessment that still need to be attached. Operational seed records are test data; physical sensors and the final relational/OpenAPI backend are outside this implementation.\n\n**Full changelog:** [1.0.0...v2.0.0](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/compare/1.0.0...v2.0.0)\n"
+      },
+      {
+        "url": "https://api.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/releases/407401096",
+        "assets_url": "https://api.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/releases/407401096/assets",
+        "upload_url": "https://uploads.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/releases/407401096/assets{?name,label}",
+        "html_url": "https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/releases/tag/1.0.0",
+        "id": 407401096,
+        "author": {
+          "login": "rodrigoxd67",
+          "id": 219700315,
+          "node_id": "U_kgDODRhcWw",
+          "avatar_url": "https://avatars.githubusercontent.com/u/219700315?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/rodrigoxd67",
+          "html_url": "https://github.com/rodrigoxd67",
+          "followers_url": "https://api.github.com/users/rodrigoxd67/followers",
+          "following_url": "https://api.github.com/users/rodrigoxd67/following{/other_user}",
+          "gists_url": "https://api.github.com/users/rodrigoxd67/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/rodrigoxd67/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/rodrigoxd67/subscriptions",
+          "organizations_url": "https://api.github.com/users/rodrigoxd67/orgs",
+          "repos_url": "https://api.github.com/users/rodrigoxd67/repos",
+          "events_url": "https://api.github.com/users/rodrigoxd67/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/rodrigoxd67/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "node_id": "RE_kwDOVAXxDc4YSHKI",
+        "tag_name": "1.0.0",
+        "target_commitish": "main",
+        "name": "1.0.0",
+        "draft": false,
+        "immutable": false,
+        "prerelease": false,
+        "created_at": "2026-10-09T01:12:56Z",
+        "updated_at": "2026-10-09T01:19:40Z",
+        "published_at": "2026-10-09T01:19:40Z",
+        "assets": [],
+        "tarball_url": "https://api.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/tarball/1.0.0",
+        "zipball_url": "https://api.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/zipball/1.0.0",
+        "body": "# FríoTrack — Release v1.0.0\r\n\r\nPrimera versión estable de **FríoTrack**, correspondiente a la entrega **AV1**.\r\n\r\n## Principales avances\r\n\r\n- Investigación del problema, entrevistas, Needfinding y definición de requerimientos.\r\n- User Stories, Product Backlog, Impact Mapping y Ubiquitous Language.\r\n- Style Guidelines, Information Architecture y diseño UX/UI de la Landing Page y Web Application.\r\n- Modelado mediante EventStorming, DDD, C4, diagramas de clases y diseño de base de datos.\r\n- Implementación y despliegue de la primera versión de la Landing Page.\r\n- Documentación del Sprint 1 y evidencias del trabajo colaborativo del equipo.\r\n\r\n## Próximos avances\r\n\r\nLa Web Application, la RESTful API y la integración con la base de datos se desarrollarán en los siguientes avances."
+      }
+    ],
+    "tags": [
+      {
+        "name": "v2.0.0",
+        "zipball_url": "https://api.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/zipball/refs/tags/v2.0.0",
+        "tarball_url": "https://api.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/tarball/refs/tags/v2.0.0",
+        "commit": {
+          "sha": "fdd34cb4575c8acaaf26382990d6d1dea4d1ae5a",
+          "url": "https://api.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commits/fdd34cb4575c8acaaf26382990d6d1dea4d1ae5a"
+        },
+        "node_id": "REF_kwDOVAXxDbByZWZzL3RhZ3MvdjIuMC4w"
+      },
+      {
+        "name": "1.0.0",
+        "zipball_url": "https://api.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/zipball/refs/tags/1.0.0",
+        "tarball_url": "https://api.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/tarball/refs/tags/1.0.0",
+        "commit": {
+          "sha": "cdbeee3e7b6c33d11a69d216a36b0b055e12a736",
+          "url": "https://api.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commits/cdbeee3e7b6c33d11a69d216a36b0b055e12a736"
+        },
+        "node_id": "REF_kwDOVAXxDa9yZWZzL3RhZ3MvMS4wLjA"
+      }
+    ],
+    "branches": [
+      {
+        "name": "develop",
+        "commit": {
+          "sha": "1e44f6267c3c8ffcbb4128aa7e3be43faa073273",
+          "url": "https://api.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commits/1e44f6267c3c8ffcbb4128aa7e3be43faa073273"
+        },
+        "protected": false
+      },
+      {
+        "name": "main",
+        "commit": {
+          "sha": "13eef7e4ed4bae41a62ce96831ff781c703e56e1",
+          "url": "https://api.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commits/13eef7e4ed4bae41a62ce96831ff781c703e56e1"
+        },
+        "protected": false
+      }
+    ]
+  },
+  {
+    "name": "friotrack-frontend",
+    "url": "https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend",
+    "private": false,
+    "checkedAt": "2026-11-10T22:34:54.4548933Z",
+    "defaultBranch": "main",
+    "pushedAt": "2026-10-09T03:23:01Z",
+    "releases": [
+      {
+        "url": "https://api.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/releases/407466779",
+        "assets_url": "https://api.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/releases/407466779/assets",
+        "upload_url": "https://uploads.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/releases/407466779/assets{?name,label}",
+        "html_url": "https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/releases/tag/0.1.0",
+        "id": 407466779,
+        "author": {
+          "login": "rodrigoxd67",
+          "id": 219700315,
+          "node_id": "U_kgDODRhcWw",
+          "avatar_url": "https://avatars.githubusercontent.com/u/219700315?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/rodrigoxd67",
+          "html_url": "https://github.com/rodrigoxd67",
+          "followers_url": "https://api.github.com/users/rodrigoxd67/followers",
+          "following_url": "https://api.github.com/users/rodrigoxd67/following{/other_user}",
+          "gists_url": "https://api.github.com/users/rodrigoxd67/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/rodrigoxd67/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/rodrigoxd67/subscriptions",
+          "organizations_url": "https://api.github.com/users/rodrigoxd67/orgs",
+          "repos_url": "https://api.github.com/users/rodrigoxd67/repos",
+          "events_url": "https://api.github.com/users/rodrigoxd67/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/rodrigoxd67/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "node_id": "RE_kwDOVAMGZc4YSXMb",
+        "tag_name": "0.1.0",
+        "target_commitish": "main",
+        "name": "Version 0.1.0",
+        "draft": false,
+        "immutable": false,
+        "prerelease": false,
+        "created_at": "2026-10-09T03:15:33Z",
+        "updated_at": "2026-10-09T03:23:02Z",
+        "published_at": "2026-10-09T03:23:02Z",
+        "assets": [],
+        "tarball_url": "https://api.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/tarball/0.1.0",
+        "zipball_url": "https://api.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/zipball/0.1.0",
+        "body": "## Features\r\n\r\n- Add email and password sign-in for logistics coordinators and cargo clients.\r\n- Integrate an ASP.NET Core API for authentication, sessions and role-based permissions.\r\n- Restrict cargo clients to their assigned shipments and associated resources.\r\n- Connect shipment, fleet, alert and profile operations to the API.\r\n- Add cargo-client registration and server-side session revocation on sign-out.\r\n- Replace the sample-profile selector and remove academic labels from the interface.\r\n- Update English and Spanish content for the authenticated user flows.\r\n- Deploy the frontend and supporting API to Microsoft Azure.\r\n- Add deployment documentation, screenshots and verification records.\r\n\r\n## Validation\r\n\r\n- Pass 15 frontend domain tests and 26 API integration checks.\r\n- Build the Vue frontend and publish the ASP.NET Core API successfully.\r\n- Verify that the compiled frontend matches the version deployed on Azure.\r\n\r\n**Full changelog:** [d944ba1...dc49d7e](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/compare/d944ba1...dc49d7e)"
+      },
+      {
+        "url": "https://api.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/releases/407452922",
+        "assets_url": "https://api.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/releases/407452922/assets",
+        "upload_url": "https://uploads.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/releases/407452922/assets{?name,label}",
+        "html_url": "https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/releases/tag/0.0.3",
+        "id": 407452922,
+        "author": {
+          "login": "rodrigoxd67",
+          "id": 219700315,
+          "node_id": "U_kgDODRhcWw",
+          "avatar_url": "https://avatars.githubusercontent.com/u/219700315?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/rodrigoxd67",
+          "html_url": "https://github.com/rodrigoxd67",
+          "followers_url": "https://api.github.com/users/rodrigoxd67/followers",
+          "following_url": "https://api.github.com/users/rodrigoxd67/following{/other_user}",
+          "gists_url": "https://api.github.com/users/rodrigoxd67/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/rodrigoxd67/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/rodrigoxd67/subscriptions",
+          "organizations_url": "https://api.github.com/users/rodrigoxd67/orgs",
+          "repos_url": "https://api.github.com/users/rodrigoxd67/repos",
+          "events_url": "https://api.github.com/users/rodrigoxd67/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/rodrigoxd67/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "node_id": "RE_kwDOVAMGZc4YSTz6",
+        "tag_name": "0.0.3",
+        "target_commitish": "main",
+        "name": "Version 0.0.3",
+        "draft": false,
+        "immutable": false,
+        "prerelease": false,
+        "created_at": "2026-10-09T02:57:48Z",
+        "updated_at": "2026-10-09T03:01:58Z",
+        "published_at": "2026-10-09T03:01:58Z",
+        "assets": [],
+        "tarball_url": "https://api.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/tarball/0.0.3",
+        "zipball_url": "https://api.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/zipball/0.0.3",
+        "body": "v0.0.3\r\n\r\nMerge branch 'release/v0.0.3' into main"
+      },
+      {
+        "url": "https://api.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/releases/407451439",
+        "assets_url": "https://api.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/releases/407451439/assets",
+        "upload_url": "https://uploads.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/releases/407451439/assets{?name,label}",
+        "html_url": "https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/releases/tag/0.0.1",
+        "id": 407451439,
+        "author": {
+          "login": "rodrigoxd67",
+          "id": 219700315,
+          "node_id": "U_kgDODRhcWw",
+          "avatar_url": "https://avatars.githubusercontent.com/u/219700315?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/rodrigoxd67",
+          "html_url": "https://github.com/rodrigoxd67",
+          "followers_url": "https://api.github.com/users/rodrigoxd67/followers",
+          "following_url": "https://api.github.com/users/rodrigoxd67/following{/other_user}",
+          "gists_url": "https://api.github.com/users/rodrigoxd67/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/rodrigoxd67/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/rodrigoxd67/subscriptions",
+          "organizations_url": "https://api.github.com/users/rodrigoxd67/orgs",
+          "repos_url": "https://api.github.com/users/rodrigoxd67/repos",
+          "events_url": "https://api.github.com/users/rodrigoxd67/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/rodrigoxd67/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "node_id": "RE_kwDOVAMGZc4YSTcv",
+        "tag_name": "0.0.1",
+        "target_commitish": "main",
+        "name": "Version 0.0.1",
+        "draft": false,
+        "immutable": false,
+        "prerelease": false,
+        "created_at": "2026-10-09T02:57:48Z",
+        "updated_at": "2026-10-09T02:59:55Z",
+        "published_at": "2026-10-09T02:59:55Z",
+        "assets": [],
+        "tarball_url": "https://api.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/tarball/0.0.1",
+        "zipball_url": "https://api.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/zipball/0.0.1",
+        "body": "Version_v0.0.1\r\n\r\nMerge branch 'release/Version_v0.0.1' into main"
+      }
+    ],
+    "tags": [
+      {
+        "name": "0.1.0",
+        "zipball_url": "https://api.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/zipball/refs/tags/0.1.0",
+        "tarball_url": "https://api.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/tarball/refs/tags/0.1.0",
+        "commit": {
+          "sha": "dc49d7e28e13c8d0f78fa913dd5353ea162012c6",
+          "url": "https://api.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/commits/dc49d7e28e13c8d0f78fa913dd5353ea162012c6"
+        },
+        "node_id": "REF_kwDOVAMGZa9yZWZzL3RhZ3MvMC4xLjA"
+      },
+      {
+        "name": "0.0.3",
+        "zipball_url": "https://api.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/zipball/refs/tags/0.0.3",
+        "tarball_url": "https://api.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/tarball/refs/tags/0.0.3",
+        "commit": {
+          "sha": "d944ba12409c8d4056f329e5dd2b7562942ae189",
+          "url": "https://api.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/commits/d944ba12409c8d4056f329e5dd2b7562942ae189"
+        },
+        "node_id": "REF_kwDOVAMGZa9yZWZzL3RhZ3MvMC4wLjM"
+      },
+      {
+        "name": "0.0.1",
+        "zipball_url": "https://api.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/zipball/refs/tags/0.0.1",
+        "tarball_url": "https://api.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/tarball/refs/tags/0.0.1",
+        "commit": {
+          "sha": "d944ba12409c8d4056f329e5dd2b7562942ae189",
+          "url": "https://api.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/commits/d944ba12409c8d4056f329e5dd2b7562942ae189"
+        },
+        "node_id": "REF_kwDOVAMGZa9yZWZzL3RhZ3MvMC4wLjE"
+      }
+    ],
+    "branches": [
+      {
+        "name": "develop",
+        "commit": {
+          "sha": "17a6017b43c06eb6d59b9ddd797d92235e9de26d",
+          "url": "https://api.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/commits/17a6017b43c06eb6d59b9ddd797d92235e9de26d"
+        },
+        "protected": false
+      },
+      {
+        "name": "feature/authentication-azure-integration",
+        "commit": {
+          "sha": "5bce6b1deced47d098e6237c20bb452dae93d0ac",
+          "url": "https://api.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/commits/5bce6b1deced47d098e6237c20bb452dae93d0ac"
+        },
+        "protected": false
+      },
+      {
+        "name": "feature/tb1-frontend-application",
+        "commit": {
+          "sha": "eeac3703f79d1a5c087fcb6e51c7da8ebe117b3b",
+          "url": "https://api.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/commits/eeac3703f79d1a5c087fcb6e51c7da8ebe117b3b"
+        },
+        "protected": false
+      },
+      {
+        "name": "main",
+        "commit": {
+          "sha": "dc49d7e28e13c8d0f78fa913dd5353ea162012c6",
+          "url": "https://api.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/commits/dc49d7e28e13c8d0f78fa913dd5353ea162012c6"
+        },
+        "protected": false
+      }
+    ]
+  },
+  {
+    "name": "friotrack-landing",
+    "url": "https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-landing",
+    "private": false,
+    "checkedAt": "2026-11-10T22:34:56.3133647Z",
+    "defaultBranch": "main",
+    "pushedAt": "2026-10-09T00:42:29Z",
+    "releases": [],
+    "tags": [],
+    "branches": [
+      {
+        "name": "develop",
+        "commit": {
+          "sha": "3d27c8aadc2457e6f5fd0288339d304b237b04cc",
+          "url": "https://api.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-landing/commits/3d27c8aadc2457e6f5fd0288339d304b237b04cc"
+        },
+        "protected": false
+      },
+      {
+        "name": "feature/global-styles-and-i18n",
+        "commit": {
+          "sha": "16c95e8cfa8d2a25b2e190fd84dbd6c2acaab0ce",
+          "url": "https://api.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-landing/commits/16c95e8cfa8d2a25b2e190fd84dbd6c2acaab0ce"
+        },
+        "protected": false
+      },
+      {
+        "name": "feature/landing-page",
+        "commit": {
+          "sha": "4b602ba9f2c6942bb2ac54865ba8caf5c3f2a214",
+          "url": "https://api.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-landing/commits/4b602ba9f2c6942bb2ac54865ba8caf5c3f2a214"
+        },
+        "protected": false
+      },
+      {
+        "name": "feature/landing-redesign-i18n",
+        "commit": {
+          "sha": "94852c82537f6472327754e8abc40909af807562",
+          "url": "https://api.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-landing/commits/94852c82537f6472327754e8abc40909af807562"
+        },
+        "protected": false
+      },
+      {
+        "name": "feature/landing-redesign-styles",
+        "commit": {
+          "sha": "ad46916bdfd3d44c105e19cd43ab04a16519092c",
+          "url": "https://api.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-landing/commits/ad46916bdfd3d44c105e19cd43ab04a16519092c"
+        },
+        "protected": false
+      },
+      {
+        "name": "feature/tb1-landing-corrections",
+        "commit": {
+          "sha": "7c7a4ea2badd215e4749dc85e7938d9bd8ab07b2",
+          "url": "https://api.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-landing/commits/7c7a4ea2badd215e4749dc85e7938d9bd8ab07b2"
+        },
+        "protected": false
+      },
+      {
+        "name": "feature/terms-and-conditions",
+        "commit": {
+          "sha": "a0b34f23a7942623a96d5b85152e3fab9e8da72e",
+          "url": "https://api.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-landing/commits/a0b34f23a7942623a96d5b85152e3fab9e8da72e"
+        },
+        "protected": false
+      },
+      {
+        "name": "main",
+        "commit": {
+          "sha": "02b76e5e97803fbbcc176bdec8492da8d4fa585e",
+          "url": "https://api.github.com/repos/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-landing/commits/02b76e5e97803fbbcc176bdec8492da8d4fa585e"
+        },
+        "protected": false
+      }
+    ]
+  }
+]

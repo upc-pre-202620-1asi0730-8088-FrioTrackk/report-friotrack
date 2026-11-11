@@ -983,14 +983,15 @@
     "plannedDeparture < estimatedArrival; weightTons > 0 and weightTons <= vehicle.capacityTons.",
     "Scheduling creates shipment and reservation atomically; active vehicle/driver reservations cannot overlap.",
     "Organization/resource permissions and assigned client must be checked by future server, never browser alone.",
-    "DRAFT has no reservation; SCHEDULED -> IN_TRANSIT -> DELIVERED; cancellation from DRAFT/SCHEDULED releases resources (US34). Current local demo only permits scheduled cancellation; persisted DRAFT remains planned design.",
+    "DRAFT has no reservation; SCHEDULED -> IN_TRANSIT -> DELIVERED; cancellation from DRAFT/SCHEDULED releases resources (US34). TB1 API only permits scheduled cancellation; persisted DRAFT remains planned design.",
     "Acknowledgement preserves an open excursion; a later normal reading in BOTH ranges resolves it.",
     "Communication gap uses configured maxSilenceMinutes; delivered/cancelled shipments stop monitoring.",
-    "Database relation design only. No API, migrations, database engine or diagram compiler executed."
+    "Database relation design only. The supporting JSON API exists; this relational target does not claim executed migrations, PostgreSQL or a compiled UML artifact."
   ],
   "frontEndSources": [
-    "apps/friotrack-web/src/domains/operations.js",
-    "apps/friotrack-web/src/domains/seed.js"
+    "src/shipment-management/domain/shipment-policy.js",
+    "src/monitoring/domain/thermal-status.js",
+    "src/shared/application/workspace.js"
   ],
   "requirements": [
     "US09",
@@ -1000,8 +1001,7 @@
     "US33",
     "US34",
     "US35",
-    "US36",
-    "US37"
+    "US36"
   ],
   "modelPurpose": "Relational persistence projection of the target design, not the aggregate ownership model or implemented JSON API.",
   "contextPresentationOrder": [
