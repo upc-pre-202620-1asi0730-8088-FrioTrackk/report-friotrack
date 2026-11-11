@@ -1,1 +1,5 @@
 .idea/
+report.html
+tmp/
+node_modules/
+__pycache__/
