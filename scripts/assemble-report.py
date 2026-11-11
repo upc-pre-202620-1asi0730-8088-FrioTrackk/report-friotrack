@@ -3,7 +3,7 @@ from pypdf import PdfReader,PdfWriter
 from reportlab.pdfgen import canvas
 import io,json
 repo=Path(__file__).resolve().parents[1]
-writer=PdfWriter();writer.append(str(repo/'deliverables/upc-pre-202620-1asi0730-8088-blackstartup-report-cover-tb1.pdf'));writer.append(str(repo/'tmp/report-body.pdf'))
+writer=PdfWriter();writer.append(str(repo/'tmp/report-body.pdf'))
 writer.add_metadata({'/Title':'FríoTrack Informe del Trabajo Final TB1','/Author':'Alexander1Alexander2','/Subject':'Revisión documental de TB1 del 10 de noviembre de 2026'})
 for n,page in enumerate(writer.pages[1:],2):
  data=io.BytesIO(); w=float(page.mediabox.width); h=float(page.mediabox.height)

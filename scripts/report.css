@@ -20,7 +20,13 @@ code {font-family:Consolas,monospace; font-size:.9em; overflow-wrap:anywhere;}
 pre {white-space:pre-wrap; padding:10px; background:#f3f5f7; border:1px solid #ddd;}
 ul,ol {padding-left:22px;}
 blockquote {margin:10px 0; padding-left:14px; border-left:3px solid #cbd5df;}
-.report-cover img {width:100%; max-height:none;}
+.markdown-cover {break-after:page; break-inside:avoid; min-height:240mm; text-align:center; font-size:10pt; line-height:1.15;}
+.markdown-cover img {width:70px; max-height:70px;}
+.markdown-cover h3 {font-size:12pt;margin:.65em 0;}
+.markdown-cover h2 {font-size:17pt;margin:.8em 0;}
+.markdown-cover p {margin:.75em 0;}
+.markdown-cover table {font-size:10pt;width:100%;margin:1.2em auto;}
+.markdown-cover th,.markdown-cover td {padding:6px 8px;}
 .figure-caption {break-after:avoid;}
 div[align="center"]:has(img) {break-inside:avoid;}
 .persona-composite {break-inside:avoid; width:135mm; margin:5mm auto;}

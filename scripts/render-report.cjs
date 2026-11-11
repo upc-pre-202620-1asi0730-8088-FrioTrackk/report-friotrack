@@ -37,7 +37,8 @@ const fs=require('fs'),path=require('path'),{pathToFileURL}=require('url');
     else break;
    }
   }
-  const cover=document.querySelector('.report-cover'); if(cover){const next=cover.nextElementSibling;if(next?.getAttribute('style')?.includes('page-break'))next.remove();cover.remove();}
+  const registry=document.getElementById('registro-de-versiones-del-informe');
+  if(registry){const cover=document.createElement('section');cover.className='markdown-cover';document.body.prepend(cover);let node=cover.nextElementSibling;while(node&&node!==registry){const next=node.nextElementSibling;cover.append(node);node=next;}}
   return {broken,images:document.images.length,tables:document.querySelectorAll('table').length};
  });
  if(stats.broken.length) throw new Error('Broken images: '+JSON.stringify(stats.broken));

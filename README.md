@@ -1,10 +1,38 @@
-<div class="report-cover" align="center">
+![Logo de la Universidad Peruana de Ciencias Aplicadas](assets/images/upc-logo.png)
 
-<img src="assets/images/front-matter/caratula-tb1.png" alt="Carátula oficial FríoTrack TB1 con el formato del documento de referencia UPC" width="760">
+Universidad Peruana de Ciencias Aplicadas  
+Carrera de Ingeniería de Software
 
-</div>
+### 1ASI0730
+### Aplicaciones Web
 
-<div style="page-break-after: always;"></div>
+**NRC**
+### 8088
+
+## Informe de Trabajo Final · TB1
+
+**Docente**
+### Bautista Ubillús, Efraín Ricardo
+
+Equipo  
+**BlackStartup**
+
+Proyecto  
+**FríoTrack**
+
+**Integrantes**
+
+| Código | Apellidos y Nombres |
+| --- | --- |
+| u20241f246 | Atauje Barreto, Alexander Sebastián |
+| u202421137 | Bardales Rodriguez, Benjamin Elias (retirado) |
+| u202219829 | Daga Chávez, Joaquín Leonardo |
+| u20241D811 | Saavedra Flores, Rodrigo Andree |
+| u20231H17 | Vera Solsol, Nayely Macarena |
+
+**Periodo 202620**
+
+**Octubre 2026**
 
 ## Registro de Versiones del Informe
 
@@ -78,7 +106,7 @@ El gráfico resume los **35 commits sin merges** del snapshot de `main` con cort
 
 ### Organización del informe
 
-La [carátula editable](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-report-cover-tb1.docx) conserva el formato del ejemplo institucional; su versión renderizada abre este informe. El informe completo está en este `README.md`. Los capítulos, imágenes y anexos se integran sobre la rama existente `develop`; `main` contiene la versión publicada. El índice usa anclas internas y funciona en ambas ramas y en la etiqueta de entrega.
+La carátula y el informe completo se mantienen en Markdown dentro de este `README.md`. Los capítulos, imágenes y anexos se integran sobre la rama existente `develop`; `main` contiene la versión publicada. El índice usa anclas internas y funciona en ambas ramas y en la etiqueta de entrega.
 
 - [Organización FríoTrack](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk)
 - [Informe en develop](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/tree/develop)
@@ -3053,7 +3081,7 @@ La [consulta pública previa a la corrección del 10 de noviembre de 2026](asset
 
 | Producto | Versión de corrección | Alcance |
 | --- | --- | --- |
-| [Informe](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/releases) | `v2.0.1` | Revisión documental de TB1, carátula institucional, colaboración, requisitos, sprints y arquitectura. |
+| [Informe](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/releases) | `v2.0.2` | Revisión documental de TB1 con carátula en Markdown, colaboración, requisitos, sprints y arquitectura. |
 | [Frontend](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/releases) | `0.1.1` | Organización por contextos, puerto/adaptador HTTP, separación técnica del servicio y pruebas locales. |
 | [Landing Page](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-landing/releases) | `0.1.0` | Primera release del repositorio, con acceso por perfil/idioma y resultado de contacto coherente. |
 | [Web Services](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-api/releases) | `0.1.0` | Primera release independiente de la API ASP.NET Core con persistencia JSON. |

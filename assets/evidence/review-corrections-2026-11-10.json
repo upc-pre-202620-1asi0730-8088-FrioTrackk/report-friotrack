@@ -32,8 +32,11 @@
     "teamAcceptanceNotInvented": true
   },
   "cover": {
-    "templateStructurePreserved": true,
-    "visualReview": "passed"
+    "format": "Markdown in README.md",
+    "content": "Restored original TB1 cover text and member information",
+    "fullPageImageRemoved": true,
+    "docxCoverArtifactsRemoved": true,
+    "visualReview": "passed after Markdown export"
   },
   "limitations": [
     "Historical Azure receipts are unchanged and do not validate this source revision in production.",
@@ -41,11 +44,11 @@
     "Typed DDD backend aggregates, PostgreSQL and physical sensor ingestion remain target design."
   ],
   "report": {
-    "localReferencesChecked": 311,
+    "localReferencesChecked": 310,
     "brokenLocalReferences": 0,
-    "renderedImages": 173,
+    "renderedImages": 174,
     "pdfPages": 225,
-    "visualReview": "passed after caption and table layout corrections"
+    "visualReview": "Report body previously reviewed; restored Markdown cover and following page visually checked"
   },
   "landing": {
     "javascriptFilesChecked": 7,
