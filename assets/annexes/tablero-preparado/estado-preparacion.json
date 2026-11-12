@@ -1,0 +1,16 @@
+{
+  "preparedAt": "2026-11-11",
+  "scope": "Preparation only; external board unchanged",
+  "tasks": 58,
+  "sprints": {
+    "1": 8,
+    "2": 50
+  },
+  "proposedLists": {
+    "To Review": 35,
+    "To Do": 23
+  },
+  "currentAssigneesUnconfirmed": 58,
+  "acceptedTasksRecorded": 0,
+  "publicBoardRead": "Board, JSON and API URLs could not be read through the available web tool; no conclusion about privacy or current cards"
+}

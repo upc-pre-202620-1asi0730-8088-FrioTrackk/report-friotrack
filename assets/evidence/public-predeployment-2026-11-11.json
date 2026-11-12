@@ -1,0 +1,36 @@
+{
+  "verifiedAt": "2026-11-12T04:11:20.492348+00:00",
+  "scope": "Public predeployment GET requests; no cloud mutations",
+  "results": [
+    {
+      "component": "frontend",
+      "url": "https://friotracktb1bce6db1b.z22.web.core.windows.net/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "remoteSha256": "35823daaf76a19fe717d8a7ded2d53dbd3ba5d9dedc13259b9ca21ff146de431",
+      "localSha256": "d585b650cc51b96744f86e1d0efd96998b4d72a1445aaac95e321eb11ed0a48a",
+      "matchesCurrentSource": false
+    },
+    {
+      "component": "landing",
+      "url": "https://friotracktb1bce6db1b.z22.web.core.windows.net/landing/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "remoteSha256": "b75309112070e059dcc35da5304f8760f0e17e3e35fd3305413d163637e9d5f5",
+      "localSha256": "cae713ca83c497f8b43d59967a5f90b0990066224a495c1bce221d67a3ce2de7",
+      "matchesCurrentSource": false
+    },
+    {
+      "component": "api",
+      "url": "https://friotrack-api-bce6db1b.azurewebsites.net/api/health",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "remoteSha256": "7c3f68b304a25ecb6ff24aff0990d29bfea3a710eaec585bc0d70359ec872245",
+      "health": {
+        "status": "ok",
+        "service": "FrioTrack",
+        "version": "2.0"
+      }
+    }
+  ]
+}

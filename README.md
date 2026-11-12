@@ -88,6 +88,8 @@ El siguiente registro conserva las actividades documentadas para AV1 en el repos
 | Revisión TB1 | 10/11/2026 | Atauje Barreto, Alexander Sebastián | Corrección de carátula, gráficos, escenarios, sprint goals, estados, C4, modelo DDD y configuración de repositorios a partir de las observaciones de evaluación. |
 | Revisión TB1 · v2.0.4 | 11/11/2026 | Atauje Barreto, Alexander Sebastián | Incorporación de los 22 diagramas aprobados, fuentes editables, contratos I01–I13, alineación DDD y ERD, actualización de gráficos y consistencia de planificación y evidencias. Carátula sin cambios. |
 
+| Revisión TB1 · v2.0.5 | 11/11/2026 | Atauje Barreto, Alexander Sebastián | Registro de integración local de landing, SPA y API; preparación trazable del tablero y procedimiento de publicación verificada, con accesos y aceptación pendientes explícitos. |
+
 <div style="page-break-after: always;"></div>
 
 ## Project Report Collaboration Insights
@@ -3060,7 +3062,7 @@ La [consulta pública previa a la corrección del 10 de noviembre de 2026](asset
 
 | Producto | Versión de corrección | Alcance |
 | --- | --- | --- |
-| [Informe](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/releases) | `v2.0.4` | Revisión documental de TB1 con 22 diagramas, fuentes editables, consistencia DDD y evidencias fechadas; carátula conservada. |
+| [Informe](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/releases) | `v2.0.5` | Diagramas y evidencias fechadas; integración local ES/EN y móvil/escritorio, preparación del tablero y publicación verificada. Carátula conservada. |
 | [Frontend](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/releases) | `0.1.1` | Organización por contextos, puerto/adaptador HTTP, separación técnica del servicio y pruebas locales. |
 | [Landing Page](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-landing/releases) | `0.1.0` | Primera release del repositorio, con acceso por perfil/idioma y resultado de contacto coherente. |
 | [Web Services](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-api/releases) | `0.1.0` | Primera release independiente de la API ASP.NET Core con persistencia JSON. |
@@ -3144,7 +3146,7 @@ Los estados permitidos son **To Do** (actividad pendiente), **In Process** (acti
 | Story Id | Story Title | Task Id | Task Title | Task Description | Estimation de revisión (h) | Horas históricas | Assigned To histórico | Status | Evidence / Review Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | US23 | Propuesta de valor en Landing | S1-T01A | Componer propuesta y segmentos | Mantener contenido, estructura semántica y estilos de la propuesta de valor en ambos idiomas. | 6 | No registrada | Benjamin / Alexander | To Review | Contenido publicado; falta aceptación registrada del equipo. |
-| US23 | Propuesta de valor en Landing | S1-T01B | Revisar experiencia responsive | Comprobar lectura y acceso a enlaces en escritorio y móvil, registrar resultados y corregir desbordamientos. | 4 | No registrada | Benjamin / Alexander | To Do | No se adjunta revisión específica que cierre todos los criterios de esta tarea. |
+| US23 | Propuesta de valor en Landing | S1-T01B | Revisar experiencia responsive | Comprobar lectura y acceso a enlaces en escritorio y móvil, registrar resultados y corregir desbordamientos. | 4 | No registrada | Benjamin / Alexander | To Review | Revisión técnica local del 11/11: landing ES/EN a 390 y 1440 px sin desbordamiento y CTA por perfil/idioma comprobados. Falta aceptación del equipo y revisión de la versión desplegada. |
 | US24 | Corredores logísticos en Landing | S1-T02A | Documentar corredores propuestos | Mantener corredores y distinguir cobertura propuesta de cobertura contratada o verificada. | 4 | No registrada | Benjamin | To Review | Sección publicada; revisar exactitud y alcance de las afirmaciones. |
 | US24 | Corredores logísticos en Landing | S1-T02B | Validar contenido y acceso por idioma | Revisar los cuatro corredores y el canal de consulta en inglés y español con evidencia reproducible. | 4 | No registrada | Benjamin | To Do | Revisión de aceptación por idioma no registrada para esta tarea. |
 | US25 | Formulario de contacto comercial | S1-T03A | Implementar validación comercial | Validar campos, formato de correo y consentimiento sin mostrar éxito antes de una recepción confirmada. | 4 | No registrada | Benjamin | To Review | Validación local implementada; el receptor permanece pendiente. |
@@ -3446,6 +3448,13 @@ Para la siguiente iteración, evolucionar la API hacia persistencia relacional c
 Cerrar el receptor del formulario comercial, desplegar las fuentes corregidas que ya están sincronizadas en los repositorios y repetir los recorridos de aceptación en ambos idiomas. Ampliar la revisión de accesibilidad y tamaños de pantalla a los controles y estados que aún no tienen evidencia completa.
 
 Conservar las actas de planificación, review y retrospectiva del sprint junto con las evidencias del equipo. Verificar que los enlaces institucionales del Anexo E permitan el acceso del docente.
+
+
+### Cierre de evidencias de la revisión de noviembre
+
+La [guía de cierre de evidencias](assets/annexes/cierre-evidencias-tb1.md) relaciona los pasos de Trello, revisión del equipo y publicación de fuentes. La [prueba de integración local del 11/11](assets/evidence/local-integrated-acceptance.json) pasó 157 comprobaciones sobre landing, bundle de producción y API ASP.NET Core aislada, con ambos perfiles, español/inglés y anchos de 390/1440 px. No utiliza un perfil personal de navegador ni acredita una revisión de Azure o aceptación del equipo.
+
+La [comprobación pública previa a publicar](assets/evidence/public-predeployment-2026-11-11.json) confirmó HTTP 200 en landing, SPA y health API; los HTML publicados de landing y SPA todavía difieren de las fuentes corregidas. Los [26 checks locales de API](assets/evidence/local-api-verification-2026-11-11.json) conservan su corte por separado. Una coincidencia de hashes posterior demostrará publicación, sin sustituir los recorridos de aceptación funcional.
 
 # Bibliografía
 

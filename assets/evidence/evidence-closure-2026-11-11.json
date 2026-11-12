@@ -1,0 +1,32 @@
+{
+  "reviewDate": "2026-11-11",
+  "timezone": "America/Lima",
+  "reportVersion": "v2.0.5",
+  "frontendTests": 18,
+  "apiLocalChecks": 26,
+  "productionBuildModules": 228,
+  "integratedLocalChecks": 157,
+  "integratedStatus": "passed",
+  "integratedViewports": [
+    390,
+    1440
+  ],
+  "languages": [
+    "es",
+    "en"
+  ],
+  "cloudPublication": "Pending Microsoft authentication; no new deployment claimed",
+  "trello": "58 cards prepared; connection and actual board update pending",
+  "teamAcceptance": "Not invented; prepared record remains empty",
+  "coverChanged": false,
+  "report": {
+    "pdfPages": 238,
+    "pdfBytes": 33818097,
+    "pdfSha256": "f813088e54e43155884df7349fb0d8d5920b50f425a7715befc10f35fdfaf1fc",
+    "localReferencesChecked": 324,
+    "brokenLocalReferences": 0,
+    "additionalDocumentReferencesChecked": 8,
+    "coverIdentical": true,
+    "pdfMachineLocalLinks": 0
+  }
+}

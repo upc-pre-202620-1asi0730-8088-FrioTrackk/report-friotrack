@@ -15,3 +15,11 @@
 Las fechas de autor del gráfico se conservan tal como aparecen en los metadatos Git. Los conteos no acreditan por sí solos identidad, horas invertidas, revisión de tareas o una contribución equilibrada, y no se suman con los de otros productos.
 
 Las imágenes de datos operativos utilizan registros de prueba. Los recibos técnicos no sustituyen actas, exposición ni evaluación individual del equipo.
+
+## Cierre técnico del 11/11/2026
+
+- [Integración local](local-integrated-acceptance.json): 157 comprobaciones aprobadas con API real aislada y bundle de producción, ES/EN, 390/1440 px. No acredita Azure ni captura del escritorio.
+- [API local](local-api-verification-2026-11-11.json): 26 comprobaciones de autenticación, persistencia, comandos y permisos.
+- [Consulta pública previa](public-predeployment-2026-11-11.json): frontend, landing y API disponibles; los HTML todavía difieren de las fuentes corregidas en ese corte.
+- [Preparación del tablero](../annexes/tablero-preparado/estado-preparacion.json): 58 tareas propuestas, sin actualización externa ni aceptación inventada.
+- [Guía de cierre](../annexes/cierre-evidencias-tb1.md): acceso Trello/Azure requerido y revisión auténtica del equipo.

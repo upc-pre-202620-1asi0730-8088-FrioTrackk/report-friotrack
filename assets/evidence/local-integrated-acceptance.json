@@ -1,0 +1,1053 @@
+{
+  "scope": "Local headless integration against an isolated actual ASP.NET Core API and production frontend bundle; not desktop capture and not Azure acceptance",
+  "verifiedAt": "2026-11-12T04:16:55.054Z",
+  "viewports": [
+    390,
+    1440
+  ],
+  "languages": [
+    "es",
+    "en"
+  ],
+  "checks": [
+    {
+      "name": "Actual API rejects unauthenticated workspace",
+      "status": 401
+    },
+    {
+      "name": "Landing explicit language",
+      "width": 390,
+      "lang": "es"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "landing-390-es",
+      "viewport": 390,
+      "document": 390,
+      "body": 390
+    },
+    {
+      "name": "Landing CTA preserves profile and language",
+      "width": 390,
+      "lang": "es",
+      "role": "coordinator"
+    },
+    {
+      "name": "Landing CTA preserves profile and language",
+      "width": 390,
+      "lang": "es",
+      "role": "cargo-client"
+    },
+    {
+      "name": "Landing modal closes with Escape",
+      "width": 390,
+      "lang": "es"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "login-390-es-coordinator",
+      "viewport": 390,
+      "document": 390,
+      "body": 390
+    },
+    {
+      "name": "Wrong password rejected in selected language",
+      "width": 390,
+      "lang": "es"
+    },
+    {
+      "name": "Actual API login and authenticated dashboard",
+      "width": 390,
+      "lang": "es",
+      "role": "coordinator"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "dashboard-390-es-coordinator",
+      "viewport": 390,
+      "document": 390,
+      "body": 390
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "/shipments-390-es-coordinator",
+      "viewport": 390,
+      "document": 390,
+      "body": 390
+    },
+    {
+      "name": "Authenticated route renders",
+      "width": 390,
+      "lang": "es",
+      "role": "coordinator",
+      "route": "/shipments"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "/alerts-390-es-coordinator",
+      "viewport": 390,
+      "document": 390,
+      "body": 390
+    },
+    {
+      "name": "Authenticated route renders",
+      "width": 390,
+      "lang": "es",
+      "role": "coordinator",
+      "route": "/alerts"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "/history-390-es-coordinator",
+      "viewport": 390,
+      "document": 390,
+      "body": 390
+    },
+    {
+      "name": "Authenticated route renders",
+      "width": 390,
+      "lang": "es",
+      "role": "coordinator",
+      "route": "/history"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "/profile-390-es-coordinator",
+      "viewport": 390,
+      "document": 390,
+      "body": 390
+    },
+    {
+      "name": "Authenticated route renders",
+      "width": 390,
+      "lang": "es",
+      "role": "coordinator",
+      "route": "/profile"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "/fleet-390-es-coordinator",
+      "viewport": 390,
+      "document": 390,
+      "body": 390
+    },
+    {
+      "name": "Authenticated route renders",
+      "width": 390,
+      "lang": "es",
+      "role": "coordinator",
+      "route": "/fleet"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "/shipments/new-390-es-coordinator",
+      "viewport": 390,
+      "document": 390,
+      "body": 390
+    },
+    {
+      "name": "Authenticated route renders",
+      "width": 390,
+      "lang": "es",
+      "role": "coordinator",
+      "route": "/shipments/new"
+    },
+    {
+      "name": "Session survives reload",
+      "width": 390,
+      "lang": "es",
+      "role": "coordinator"
+    },
+    {
+      "name": "Mobile navigation dialog Escape",
+      "lang": "es",
+      "role": "coordinator"
+    },
+    {
+      "name": "Logout clears and revokes actual session",
+      "width": 390,
+      "lang": "es",
+      "role": "coordinator"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "login-390-es-cargo-client",
+      "viewport": 390,
+      "document": 390,
+      "body": 390
+    },
+    {
+      "name": "Actual API login and authenticated dashboard",
+      "width": 390,
+      "lang": "es",
+      "role": "cargo-client"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "dashboard-390-es-cargo-client",
+      "viewport": 390,
+      "document": 390,
+      "body": 390
+    },
+    {
+      "name": "Client isolation and server-side command denial",
+      "width": 390,
+      "lang": "es",
+      "shipments": 3,
+      "forbiddenStatus": 403
+    },
+    {
+      "name": "Client cannot navigate to fleet",
+      "width": 390,
+      "lang": "es"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "/shipments-390-es-cargo-client",
+      "viewport": 390,
+      "document": 390,
+      "body": 390
+    },
+    {
+      "name": "Authenticated route renders",
+      "width": 390,
+      "lang": "es",
+      "role": "cargo-client",
+      "route": "/shipments"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "/alerts-390-es-cargo-client",
+      "viewport": 390,
+      "document": 390,
+      "body": 390
+    },
+    {
+      "name": "Authenticated route renders",
+      "width": 390,
+      "lang": "es",
+      "role": "cargo-client",
+      "route": "/alerts"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "/history-390-es-cargo-client",
+      "viewport": 390,
+      "document": 390,
+      "body": 390
+    },
+    {
+      "name": "Authenticated route renders",
+      "width": 390,
+      "lang": "es",
+      "role": "cargo-client",
+      "route": "/history"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "/profile-390-es-cargo-client",
+      "viewport": 390,
+      "document": 390,
+      "body": 390
+    },
+    {
+      "name": "Authenticated route renders",
+      "width": 390,
+      "lang": "es",
+      "role": "cargo-client",
+      "route": "/profile"
+    },
+    {
+      "name": "Session survives reload",
+      "width": 390,
+      "lang": "es",
+      "role": "cargo-client"
+    },
+    {
+      "name": "Mobile navigation dialog Escape",
+      "lang": "es",
+      "role": "cargo-client"
+    },
+    {
+      "name": "Logout clears and revokes actual session",
+      "width": 390,
+      "lang": "es",
+      "role": "cargo-client"
+    },
+    {
+      "name": "Landing explicit language",
+      "width": 390,
+      "lang": "en"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "landing-390-en",
+      "viewport": 390,
+      "document": 390,
+      "body": 390
+    },
+    {
+      "name": "Landing CTA preserves profile and language",
+      "width": 390,
+      "lang": "en",
+      "role": "coordinator"
+    },
+    {
+      "name": "Landing CTA preserves profile and language",
+      "width": 390,
+      "lang": "en",
+      "role": "cargo-client"
+    },
+    {
+      "name": "Landing modal closes with Escape",
+      "width": 390,
+      "lang": "en"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "login-390-en-coordinator",
+      "viewport": 390,
+      "document": 390,
+      "body": 390
+    },
+    {
+      "name": "Wrong password rejected in selected language",
+      "width": 390,
+      "lang": "en"
+    },
+    {
+      "name": "Actual API login and authenticated dashboard",
+      "width": 390,
+      "lang": "en",
+      "role": "coordinator"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "dashboard-390-en-coordinator",
+      "viewport": 390,
+      "document": 390,
+      "body": 390
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "/shipments-390-en-coordinator",
+      "viewport": 390,
+      "document": 390,
+      "body": 390
+    },
+    {
+      "name": "Authenticated route renders",
+      "width": 390,
+      "lang": "en",
+      "role": "coordinator",
+      "route": "/shipments"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "/alerts-390-en-coordinator",
+      "viewport": 390,
+      "document": 390,
+      "body": 390
+    },
+    {
+      "name": "Authenticated route renders",
+      "width": 390,
+      "lang": "en",
+      "role": "coordinator",
+      "route": "/alerts"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "/history-390-en-coordinator",
+      "viewport": 390,
+      "document": 390,
+      "body": 390
+    },
+    {
+      "name": "Authenticated route renders",
+      "width": 390,
+      "lang": "en",
+      "role": "coordinator",
+      "route": "/history"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "/profile-390-en-coordinator",
+      "viewport": 390,
+      "document": 390,
+      "body": 390
+    },
+    {
+      "name": "Authenticated route renders",
+      "width": 390,
+      "lang": "en",
+      "role": "coordinator",
+      "route": "/profile"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "/fleet-390-en-coordinator",
+      "viewport": 390,
+      "document": 390,
+      "body": 390
+    },
+    {
+      "name": "Authenticated route renders",
+      "width": 390,
+      "lang": "en",
+      "role": "coordinator",
+      "route": "/fleet"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "/shipments/new-390-en-coordinator",
+      "viewport": 390,
+      "document": 390,
+      "body": 390
+    },
+    {
+      "name": "Authenticated route renders",
+      "width": 390,
+      "lang": "en",
+      "role": "coordinator",
+      "route": "/shipments/new"
+    },
+    {
+      "name": "Session survives reload",
+      "width": 390,
+      "lang": "en",
+      "role": "coordinator"
+    },
+    {
+      "name": "Mobile navigation dialog Escape",
+      "lang": "en",
+      "role": "coordinator"
+    },
+    {
+      "name": "Logout clears and revokes actual session",
+      "width": 390,
+      "lang": "en",
+      "role": "coordinator"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "login-390-en-cargo-client",
+      "viewport": 390,
+      "document": 390,
+      "body": 390
+    },
+    {
+      "name": "Actual API login and authenticated dashboard",
+      "width": 390,
+      "lang": "en",
+      "role": "cargo-client"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "dashboard-390-en-cargo-client",
+      "viewport": 390,
+      "document": 390,
+      "body": 390
+    },
+    {
+      "name": "Client isolation and server-side command denial",
+      "width": 390,
+      "lang": "en",
+      "shipments": 3,
+      "forbiddenStatus": 403
+    },
+    {
+      "name": "Client cannot navigate to fleet",
+      "width": 390,
+      "lang": "en"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "/shipments-390-en-cargo-client",
+      "viewport": 390,
+      "document": 390,
+      "body": 390
+    },
+    {
+      "name": "Authenticated route renders",
+      "width": 390,
+      "lang": "en",
+      "role": "cargo-client",
+      "route": "/shipments"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "/alerts-390-en-cargo-client",
+      "viewport": 390,
+      "document": 390,
+      "body": 390
+    },
+    {
+      "name": "Authenticated route renders",
+      "width": 390,
+      "lang": "en",
+      "role": "cargo-client",
+      "route": "/alerts"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "/history-390-en-cargo-client",
+      "viewport": 390,
+      "document": 390,
+      "body": 390
+    },
+    {
+      "name": "Authenticated route renders",
+      "width": 390,
+      "lang": "en",
+      "role": "cargo-client",
+      "route": "/history"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "/profile-390-en-cargo-client",
+      "viewport": 390,
+      "document": 390,
+      "body": 390
+    },
+    {
+      "name": "Authenticated route renders",
+      "width": 390,
+      "lang": "en",
+      "role": "cargo-client",
+      "route": "/profile"
+    },
+    {
+      "name": "Session survives reload",
+      "width": 390,
+      "lang": "en",
+      "role": "cargo-client"
+    },
+    {
+      "name": "Mobile navigation dialog Escape",
+      "lang": "en",
+      "role": "cargo-client"
+    },
+    {
+      "name": "Logout clears and revokes actual session",
+      "width": 390,
+      "lang": "en",
+      "role": "cargo-client"
+    },
+    {
+      "name": "Landing explicit language",
+      "width": 1440,
+      "lang": "es"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "landing-1440-es",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440
+    },
+    {
+      "name": "Landing CTA preserves profile and language",
+      "width": 1440,
+      "lang": "es",
+      "role": "coordinator"
+    },
+    {
+      "name": "Landing CTA preserves profile and language",
+      "width": 1440,
+      "lang": "es",
+      "role": "cargo-client"
+    },
+    {
+      "name": "Landing modal closes with Escape",
+      "width": 1440,
+      "lang": "es"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "login-1440-es-coordinator",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440
+    },
+    {
+      "name": "Wrong password rejected in selected language",
+      "width": 1440,
+      "lang": "es"
+    },
+    {
+      "name": "Actual API login and authenticated dashboard",
+      "width": 1440,
+      "lang": "es",
+      "role": "coordinator"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "dashboard-1440-es-coordinator",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "/shipments-1440-es-coordinator",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440
+    },
+    {
+      "name": "Authenticated route renders",
+      "width": 1440,
+      "lang": "es",
+      "role": "coordinator",
+      "route": "/shipments"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "/alerts-1440-es-coordinator",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440
+    },
+    {
+      "name": "Authenticated route renders",
+      "width": 1440,
+      "lang": "es",
+      "role": "coordinator",
+      "route": "/alerts"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "/history-1440-es-coordinator",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440
+    },
+    {
+      "name": "Authenticated route renders",
+      "width": 1440,
+      "lang": "es",
+      "role": "coordinator",
+      "route": "/history"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "/profile-1440-es-coordinator",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440
+    },
+    {
+      "name": "Authenticated route renders",
+      "width": 1440,
+      "lang": "es",
+      "role": "coordinator",
+      "route": "/profile"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "/fleet-1440-es-coordinator",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440
+    },
+    {
+      "name": "Authenticated route renders",
+      "width": 1440,
+      "lang": "es",
+      "role": "coordinator",
+      "route": "/fleet"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "/shipments/new-1440-es-coordinator",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440
+    },
+    {
+      "name": "Authenticated route renders",
+      "width": 1440,
+      "lang": "es",
+      "role": "coordinator",
+      "route": "/shipments/new"
+    },
+    {
+      "name": "Session survives reload",
+      "width": 1440,
+      "lang": "es",
+      "role": "coordinator"
+    },
+    {
+      "name": "Logout clears and revokes actual session",
+      "width": 1440,
+      "lang": "es",
+      "role": "coordinator"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "login-1440-es-cargo-client",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440
+    },
+    {
+      "name": "Actual API login and authenticated dashboard",
+      "width": 1440,
+      "lang": "es",
+      "role": "cargo-client"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "dashboard-1440-es-cargo-client",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440
+    },
+    {
+      "name": "Client isolation and server-side command denial",
+      "width": 1440,
+      "lang": "es",
+      "shipments": 3,
+      "forbiddenStatus": 403
+    },
+    {
+      "name": "Client cannot navigate to fleet",
+      "width": 1440,
+      "lang": "es"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "/shipments-1440-es-cargo-client",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440
+    },
+    {
+      "name": "Authenticated route renders",
+      "width": 1440,
+      "lang": "es",
+      "role": "cargo-client",
+      "route": "/shipments"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "/alerts-1440-es-cargo-client",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440
+    },
+    {
+      "name": "Authenticated route renders",
+      "width": 1440,
+      "lang": "es",
+      "role": "cargo-client",
+      "route": "/alerts"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "/history-1440-es-cargo-client",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440
+    },
+    {
+      "name": "Authenticated route renders",
+      "width": 1440,
+      "lang": "es",
+      "role": "cargo-client",
+      "route": "/history"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "/profile-1440-es-cargo-client",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440
+    },
+    {
+      "name": "Authenticated route renders",
+      "width": 1440,
+      "lang": "es",
+      "role": "cargo-client",
+      "route": "/profile"
+    },
+    {
+      "name": "Session survives reload",
+      "width": 1440,
+      "lang": "es",
+      "role": "cargo-client"
+    },
+    {
+      "name": "Logout clears and revokes actual session",
+      "width": 1440,
+      "lang": "es",
+      "role": "cargo-client"
+    },
+    {
+      "name": "Landing explicit language",
+      "width": 1440,
+      "lang": "en"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "landing-1440-en",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440
+    },
+    {
+      "name": "Landing CTA preserves profile and language",
+      "width": 1440,
+      "lang": "en",
+      "role": "coordinator"
+    },
+    {
+      "name": "Landing CTA preserves profile and language",
+      "width": 1440,
+      "lang": "en",
+      "role": "cargo-client"
+    },
+    {
+      "name": "Landing modal closes with Escape",
+      "width": 1440,
+      "lang": "en"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "login-1440-en-coordinator",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440
+    },
+    {
+      "name": "Wrong password rejected in selected language",
+      "width": 1440,
+      "lang": "en"
+    },
+    {
+      "name": "Actual API login and authenticated dashboard",
+      "width": 1440,
+      "lang": "en",
+      "role": "coordinator"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "dashboard-1440-en-coordinator",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "/shipments-1440-en-coordinator",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440
+    },
+    {
+      "name": "Authenticated route renders",
+      "width": 1440,
+      "lang": "en",
+      "role": "coordinator",
+      "route": "/shipments"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "/alerts-1440-en-coordinator",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440
+    },
+    {
+      "name": "Authenticated route renders",
+      "width": 1440,
+      "lang": "en",
+      "role": "coordinator",
+      "route": "/alerts"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "/history-1440-en-coordinator",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440
+    },
+    {
+      "name": "Authenticated route renders",
+      "width": 1440,
+      "lang": "en",
+      "role": "coordinator",
+      "route": "/history"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "/profile-1440-en-coordinator",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440
+    },
+    {
+      "name": "Authenticated route renders",
+      "width": 1440,
+      "lang": "en",
+      "role": "coordinator",
+      "route": "/profile"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "/fleet-1440-en-coordinator",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440
+    },
+    {
+      "name": "Authenticated route renders",
+      "width": 1440,
+      "lang": "en",
+      "role": "coordinator",
+      "route": "/fleet"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "/shipments/new-1440-en-coordinator",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440
+    },
+    {
+      "name": "Authenticated route renders",
+      "width": 1440,
+      "lang": "en",
+      "role": "coordinator",
+      "route": "/shipments/new"
+    },
+    {
+      "name": "Session survives reload",
+      "width": 1440,
+      "lang": "en",
+      "role": "coordinator"
+    },
+    {
+      "name": "Logout clears and revokes actual session",
+      "width": 1440,
+      "lang": "en",
+      "role": "coordinator"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "login-1440-en-cargo-client",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440
+    },
+    {
+      "name": "Actual API login and authenticated dashboard",
+      "width": 1440,
+      "lang": "en",
+      "role": "cargo-client"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "dashboard-1440-en-cargo-client",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440
+    },
+    {
+      "name": "Client isolation and server-side command denial",
+      "width": 1440,
+      "lang": "en",
+      "shipments": 3,
+      "forbiddenStatus": 403
+    },
+    {
+      "name": "Client cannot navigate to fleet",
+      "width": 1440,
+      "lang": "en"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "/shipments-1440-en-cargo-client",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440
+    },
+    {
+      "name": "Authenticated route renders",
+      "width": 1440,
+      "lang": "en",
+      "role": "cargo-client",
+      "route": "/shipments"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "/alerts-1440-en-cargo-client",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440
+    },
+    {
+      "name": "Authenticated route renders",
+      "width": 1440,
+      "lang": "en",
+      "role": "cargo-client",
+      "route": "/alerts"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "/history-1440-en-cargo-client",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440
+    },
+    {
+      "name": "Authenticated route renders",
+      "width": 1440,
+      "lang": "en",
+      "role": "cargo-client",
+      "route": "/history"
+    },
+    {
+      "name": "No horizontal page overflow",
+      "page": "/profile-1440-en-cargo-client",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440
+    },
+    {
+      "name": "Authenticated route renders",
+      "width": 1440,
+      "lang": "en",
+      "role": "cargo-client",
+      "route": "/profile"
+    },
+    {
+      "name": "Session survives reload",
+      "width": 1440,
+      "lang": "en",
+      "role": "cargo-client"
+    },
+    {
+      "name": "Logout clears and revokes actual session",
+      "width": 1440,
+      "lang": "en",
+      "role": "cargo-client"
+    }
+  ],
+  "failures": [],
+  "pageErrors": [],
+  "limitations": [
+    "Map tile and external font requests are blocked; live map provider is not validated.",
+    "Physical telemetry, full WCAG and all business stories are not certified.",
+    "Cloud API URL is redirected by the test transport to the actual isolated local API; responses are not mocked."
+  ],
+  "sources": {
+    "friotrack-frontend": "7527cf23b0468ea06fc137fa72b8220ee9c21b6a",
+    "friotrack-landing": "1de2988d4f2f7b829d99f0d3a3649ca36bac8adb",
+    "friotrack-api": "083e97d12246c6114b8c34be2888864f688b17be"
+  },
+  "status": "passed",
+  "completedAt": "2026-11-12T04:17:06.932Z",
+  "checksPassed": 157
+}

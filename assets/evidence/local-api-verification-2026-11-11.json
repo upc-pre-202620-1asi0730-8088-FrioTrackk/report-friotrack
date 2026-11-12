@@ -1,0 +1,6 @@
+{
+  "verifiedAt": "2026-11-12T04:11:21.944Z",
+  "api": "http://127.0.0.1:56922/api",
+  "passed": 26,
+  "scope": "local authentication, registration, persistence and shipment commands"
+}
