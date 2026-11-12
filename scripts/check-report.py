@@ -1,6 +1,7 @@
 from pathlib import Path
 from urllib.parse import unquote
-import re,json,csv,html,collections
+import re,json,csv,html,collections,hashlib
+import xml.etree.ElementTree as ET
 
 repo=Path(__file__).resolve().parents[1]
 text=(repo/'README.md').read_text(encoding='utf-8-sig')
@@ -47,4 +48,20 @@ assert all(not s['invalidHours'] and not s['invalidStatus'] for s in sprints.val
 assert 'IAM' in results['boundedContextHeadings'][-1], 'Generic context must follow operational contexts'
 for phrase in ['Our focus is on','We believe it delivers','This will be confirmed when']:
     assert text.count(phrase)>=2, 'Missing Sprint Goal template clause: '+phrase
+architecture=repo/'assets/architecture/chapter-04'
+manifest=json.loads((architecture/'manifest.json').read_text(encoding='utf-8-sig'))
+assert len(manifest)==22 and len({d['id'] for d in manifest})==22, 'Expected22distinctarchitectureviews'
+for entry in manifest:
+    for kind in ('svg','png'):
+        asset=(architecture/entry[kind]).resolve()
+        assert asset.is_relative_to(repo.resolve()) and asset.is_file(), 'Missing architecture image: '+entry['id']
+        assert hashlib.sha256(asset.read_bytes()).hexdigest()==entry['sha256'][kind], 'Architecture image differs from manifest: '+entry['id']
+    diagram=ET.parse(architecture/entry['drawio']).getroot()
+    assert diagram.tag=='mxfile' and len(diagram.findall('diagram'))==1, 'Invalid native editable: '+entry['id']
+    assert (architecture/'fuentes'/f"{entry['id']}.json").is_file(), 'Missing model source: '+entry['id']
+    assert '/revision-2026-11-11/'+entry['id']+'.png' in text, 'Architecture view missing from report: '+entry['id']
+results['architectureViews']=len(manifest)
+for n in (1,2):
+    planning=text.split(f'#### 5.2.{n}.{1}. Sprint Planning {n}',1)[1].split(f'#### 5.2.{n}.2.',1)[0]
+    assert all(f'| {field} |' in planning for field in ('Date','Time','Location')), 'Separate planning date/time/location required'
 print(json.dumps(results,ensure_ascii=True,indent=2))

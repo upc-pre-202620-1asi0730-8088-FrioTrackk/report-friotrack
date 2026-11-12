@@ -8,6 +8,30 @@ const fs=require('fs'),path=require('path'),{pathToFileURL}=require('url');
  await page.goto(pathToFileURL(path.join(repo,'report.html')).href,{waitUntil:'networkidle'});
  const stats=await page.evaluate(async()=>{
   await Promise.all([...document.images].map(i=>i.decode().catch(()=>null)));
+  // Keep the published Markdown PNGs, and use vector originals for PDF zoom.
+  for(const img of [...document.images]) {
+   if(!img.getAttribute('src').includes('/revision-2026-11-11/'))continue;
+   img.src=img.getAttribute('src').replace(/\.png$/,'.svg');
+   await img.decode();
+   const figure=document.createElement('figure');figure.className='architecture-figure';
+   const parent=img.parentElement;
+   const preceding=parent.previousElementSibling;
+   const intro=[];
+   if(preceding?.matches('h3,h4'))intro.unshift(preceding);
+   else if(preceding?.matches('p')){
+    const heading=preceding.previousElementSibling;
+    if(heading?.matches('h3,h4'))intro.push(heading,preceding);
+    else if(preceding.children.length===1&&preceding.firstElementChild?.matches('strong'))intro.push(preceding);
+    else if(preceding.querySelector('strong')&&preceding.textContent.startsWith('Detalle de'))intro.push(preceding);
+   }
+   const following=parent.nextElementSibling;
+   parent.before(figure);
+   for(const node of intro)figure.append(node);
+   figure.append(img);
+   const caption=document.createElement('figcaption');caption.textContent=img.alt;figure.append(caption);
+   if(following?.matches('p')&&!following.querySelector('img')&&following.textContent.length<1100&&!(following.children.length===1&&following.firstElementChild?.matches('strong'))&&!following.textContent.startsWith('Detalle de'))figure.append(following);
+   if(!parent.textContent.trim()&&!parent.children.length)parent.remove();
+  }
   const broken=[...document.images].filter(i=>!i.naturalWidth).map(i=>i.getAttribute('src'));
   for(const t of document.querySelectorAll('table')){
    const title=t.querySelector('thead')?.innerText||'';
@@ -39,6 +63,13 @@ const fs=require('fs'),path=require('path'),{pathToFileURL}=require('url');
   }
   const registry=document.getElementById('registro-de-versiones-del-informe');
   if(registry){const cover=document.createElement('section');cover.className='markdown-cover';document.body.prepend(cover);let node=cover.nextElementSibling;while(node&&node!==registry){const next=node.nextElementSibling;cover.append(node);node=next;}}
+  // PDF references must remain usable after downloading the report.
+  const publicRepo='https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/';
+  for(const link of document.querySelectorAll('a[href]')){
+   const target=link.getAttribute('href');
+   if(!target||target.startsWith('#')||/^[a-z][a-z0-9+.-]*:/i.test(target))continue;
+   link.href=publicRepo+'blob/main/'+target.replace(/^\.\//,'');
+  }
   return {broken,images:document.images.length,tables:document.querySelectorAll('table').length};
  });
  if(stats.broken.length) throw new Error('Broken images: '+JSON.stringify(stats.broken));

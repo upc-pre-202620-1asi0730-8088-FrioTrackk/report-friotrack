@@ -4,7 +4,7 @@ from reportlab.pdfgen import canvas
 import io,json
 repo=Path(__file__).resolve().parents[1]
 writer=PdfWriter();writer.append(str(repo/'tmp/report-body.pdf'))
-writer.add_metadata({'/Title':'FríoTrack Informe del Trabajo Final TB1','/Author':'Alexander1Alexander2','/Subject':'Revisión documental de TB1 del 10 de noviembre de 2026'})
+writer.add_metadata({'/Title':'FríoTrack Informe del Trabajo Final TB1','/Author':'Alexander1Alexander2','/Subject':'Revisión documental de TB1 del 11 de noviembre de 2026'})
 for n,page in enumerate(writer.pages[1:],2):
  data=io.BytesIO(); w=float(page.mediabox.width); h=float(page.mediabox.height)
  c=canvas.Canvas(data,pagesize=(w,h));c.setFont('Helvetica',8);c.setFillColorRGB(.4,.4,.4);c.drawCentredString(w/2,20,str(n));c.save();data.seek(0);page.merge_page(PdfReader(data).pages[0])

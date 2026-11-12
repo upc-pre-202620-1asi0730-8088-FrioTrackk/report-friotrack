@@ -86,6 +86,7 @@ El siguiente registro conserva las actividades documentadas para AV1 en el repos
 | TB1 · v2.0.0 | 08/10/2026 | Saavedra Flores, Rodrigo Andree | Actualización del índice, Capítulo V, trazabilidad de commits, conclusiones, bibliografía y anexos del informe. |
 | TB1 | 09/10/2026 | Saavedra Flores, Rodrigo Andree | Incorporación de Contributors, actualización de videos, matriz de responsables, performance y archivos de entrega. |
 | Revisión TB1 | 10/11/2026 | Atauje Barreto, Alexander Sebastián | Corrección de carátula, gráficos, escenarios, sprint goals, estados, C4, modelo DDD y configuración de repositorios a partir de las observaciones de evaluación. |
+| Revisión TB1 · v2.0.4 | 11/11/2026 | Atauje Barreto, Alexander Sebastián | Incorporación de los 22 diagramas aprobados, fuentes editables, contratos I01–I13, alineación DDD y ERD, actualización de gráficos y consistencia de planificación y evidencias. Carátula sin cambios. |
 
 <div style="page-break-after: always;"></div>
 
@@ -128,6 +129,14 @@ El gráfico resume los **35 commits sin merges** del snapshot de `main` con cort
 ![Captura original de GitHub Contributors para report-friotrack](assets/images/chapter-05/github-contributors-tb1.png)
 
 *Captura histórica entregada por el equipo. [GitHub Contributors del informe](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/graphs/contributors). La colaboración de la siguiente iteración requiere aportes reales en cada repositorio.*
+
+### Corte de revisión del 11 de noviembre de 2026
+
+![Commits del reporte por autor y fecha al corte previo a esta revisión](assets/images/chapter-05/report-collaboration-2026-11-11.png)
+
+El corte reproducible anterior a esta revisión es `02022660eb5954dd0ead0ef5f33d39c1db45b02e`: **43 commits sin merges**, con Alexander 16, Rodrigo 15, Joaquín 8 y Nayely 4. El [registro por autor y fecha](assets/evidence/report-collaboration-2026-11-11.json) permite contrastar el gráfico. Este corte incluye correcciones posteriores a TB1; no se mezcla con el snapshot histórico de 35 commits ni acredita aportes equivalentes entre productos. Los commits de la presente revisión se consultan en el historial posterior a ese corte.
+
+El [seguimiento de observaciones del docente](assets/annexes/correcciones-docente-2026-11-11.md) relaciona cada corrección con su sección y distingue los pendientes que requieren evidencia real del equipo.
 
 ### Organización del informe
 
@@ -2715,276 +2724,221 @@ El punto de partida del modelado fueron los problemas del Capítulo I (la falta 
 
 ### 4.6.1. Design-Level EventStorming
 
-#### Notación
+#### Notación y alcance
 
-El EventStorming de nivel de diseño ordena, de izquierda a derecha y en una línea de tiempo, los eventos de dominio que ocurren en el sistema y, alrededor de ellos, los comandos que los provocan, los agregados que los emiten y las políticas que reaccionan. Se agregaron dos elementos de apoyo: las reglas de negocio que protegen a cada agregado y las vistas (*read models*) que consumen las pantallas. La Tabla 4.23 muestra la notación usada en los diagramas de esta sección.
+Los diagramas emplean notas adhesivas sobre una cuadrícula y agrupan el trabajo dentro de cada bounded context. Las notas distinguen actores, comandos, agregados, eventos, políticas y vistas. La distribución compacta facilita la lectura del taller; la proximidad entre dos notas no establece por sí sola una relación causal. La matriz I01–I13 explicita los contratos de integración y las fuentes editables conservan sus descripciones.
 
-**Tabla 4.23**
-
-*Notación de los diagramas de EventStorming*
-
+**Tabla 4.23. Notación de EventStorming**
 
 | Elemento | Color | Significado |
-| :--- | :---: | :--- |
-| **Actor** | Amarillo claro | Persona o rol que ejecuta un comando. |
-| **Comando** | Azul | Intención de un actor o de una política de cambiar el estado del sistema. |
-| **Agregado** | Amarillo | Entidad raíz que valida las reglas y emite los eventos. |
-| **Evento de dominio** | Naranja | Hecho relevante que ya ocurrió, en pasado. |
-| **Política** | Lila | Regla «cuando ocurre X, entonces hacer Y» que conecta un evento con un comando. |
-| **Regla de negocio** | Blanco con borde lila discontinuo | Restricción que el agregado debe garantizar. |
-| **Sistema externo** | Rosado | Sistema fuera del control de FríoTrack. |
-| **Vista (*read model*)** | Verde | Información que una pantalla presenta al usuario. |
-| **Evento o comando externo** | Tono claro con borde discontinuo | Elemento que pertenece a otro contexto delimitado. |
+| --- | --- | --- |
+| Actor | Amarillo claro | Persona o rol que solicita una operación. |
+| Comando | Azul claro | Intención de modificar el estado, sujeta a autorización y reglas. |
+| Agregado | Amarillo | Raíz que protege las invariantes del contexto. |
+| Evento de dominio | Naranja | Hecho de negocio que ya ocurrió. |
+| Política / contrato | Rosado o lila | Reacción prevista o punto de integración entre contextos. |
+| Vista de consulta | Verde | Información que consume la interfaz. |
+| Sistema externo | Gris | Actor técnico fuera de FríoTrack. |
 
-*Nota.* Elaboración propia, con base en la notación de EventStorming (Brandolini, 2021).
+Las reglas complementarias se describen en el texto y en los atributos de las formas editables. Son un **diseño objetivo**: la API JSON de TB1 no implementa todos estos agregados, la ingesta física, el dispatcher de eventos ni los procesos temporales automáticos.
 
 #### Bounded Contexts
 
-El dominio se dividió en cinco contextos delimitados. La separación sigue las cuatro preguntas que orientaron el análisis: qué parte del negocio genera valor diferencial (subdominio *core*), qué partes lo apoyan pero no lo diferencian (*supporting*), cuáles son genéricas y podrían resolverse con soluciones estándar (*generic*), y dónde cambia el significado de un término. Por ejemplo, «envío» significa una programación con rango térmico en Shipment Management, una reserva de horario en Fleet & Resource Management y una serie de lecturas en Monitoring & Telemetry.
+**Tabla 4.24. Contextos delimitados de FríoTrack**
 
-**Tabla 4.24**
+| Bounded Context | Subdominio | Responsabilidad | Raíces de agregado previstas |
+| --- | --- | --- | --- |
+| Shipment Management | Core | Definir, programar, iniciar, entregar y cancelar el envío con ruta y rango ambiental. | `Shipment` |
+| Monitoring & Telemetry | Core | Registrar lecturas y posiciones; evaluar temperatura, humedad y continuidad de señal. | `ShipmentMonitoring` |
+| Fleet & Resource Management | De apoyo | Administrar recursos y confirmar reservas sin solapamiento. | `Vehicle`, `Driver`, `Sensor`, `FleetAllocation` |
+| Alert & Reporting | De apoyo | Gestionar alertas, atención, avisos, incidencias y evidencia del reporte. | `Alert`, `Notification`, `Incident`, `ThermalReport` |
+| IAM | Genérico | Administrar cuentas, organizaciones y acceso. | `UserAccount`, `Organization` |
 
-*Bounded Contexts de FríoTrack*
-
-
-| Bounded Context | Tipo de subdominio | Responsabilidad | Agregados principales | Pantallas relacionadas |
-| :--- | :---: | :--- | :--- | :--- |
-| **Shipment Management** | *Core* | Definir, programar, iniciar, entregar y cancelar envíos con su rango térmico y su ruta. | `Shipment` | Dashboard, Envíos, Nuevo envío, Detalle del envío |
-| **Monitoring & Telemetry** | *Core* | Recibir lecturas y posiciones del sensor, evaluarlas contra el rango, detectar la pérdida de señal y exponer las series. | `ShipmentMonitoring` | Detalle del envío (Resumen, Lecturas, Ruta y posiciones), mapas y gráficos |
-| **Fleet & Resource Management** | De apoyo | Administrar vehículos, sensores y conductores, y reservar o liberar recursos para los envíos. | `Vehicle`, `Driver`, `FleetAllocation` | Vehículos, Conductores, paso 3 del registro de un envío |
-| **Alert & Reporting** | De apoyo | Generar alertas, notificar, registrar acciones correctivas e incidencias y producir el reporte térmico. | `Alert`, `Notification`, `Incident`, `ThermalReport` | Notificaciones, pestaña Alertas, acción correctiva, Historial, reportes |
-| **IAM** (Identity & Access Management) | Genérico | Registrar cuentas, autenticar, bloquear tras intentos fallidos, recuperar contraseñas y gestionar el perfil y el idioma. | `UserAccount`, `AuthSession`, `UserProfile` | Iniciar sesión, Crear cuenta, Recuperar contraseña, Configuración |
-
-*Nota.* Elaboración propia.
-
-Shipment Management y Monitoring & Telemetry son los contextos *core* porque en ellos reside el valor diferencial de FríoTrack: programar con un rango térmico explícito y vigilar continuamente su cumplimiento. IAM es genérico y podría resolverse con una solución estándar de identidad, aunque se implementa en la propia API para simplificar el alcance inicial.
+Shipment y Monitoring concentran el valor diferencial de la cadena de frío. Fleet y Alert & Reporting apoyan la operación. IAM es genérico y se presenta al final; la sesión es una responsabilidad de aplicación, no una raíz adicional inventada en el modelo táctico.
 
 #### Relaciones entre contextos y matriz de interdependencias
 
-En el diseño propuesto de la API, los contextos se relacionan mediante eventos de dominio internos de un monolito modular: un contexto publica un evento y otro reacciona con un comando propio, sin acceder a los datos internos del primero. En el mapa de contextos, Shipment Management es el proveedor (*upstream*) de Fleet & Resource Management y de Monitoring & Telemetry en una relación de cliente y proveedor (*Customer/Supplier*), y Monitoring & Telemetry lo es de Alert & Reporting. No se propone un broker ni microservicios independientes para TB1. IAM opera como servicio abierto (*Open Host Service*) que entrega la identidad y el perfil del usuario a los demás contextos mediante un token. Los sensores, por ser un sistema externo, se aíslan con una capa anticorrupción que traduce sus mensajes al comando `RecordReading` (Evans, 2003).
+Se propone un monolito modular con contratos internos y referencias por ID, sin acceso directo a entidades mutables de otro contexto. No se requiere un broker para este diseño. IAM ofrece identidad y permisos a los casos de uso; un adaptador de ingesta previsto valida y traduce los mensajes del sensor antes de invocar Monitoring.
 
-La Tabla 4.25 lista las interacciones y se corresponde con los números que aparecen en el diagrama general. Las interacciones 3 y 6 ocurren dentro de un mismo contexto y se incluyen para mantener continua la cadena desde la lectura hasta la notificación.
+Programar exige coordinar primero la reserva de unidad y conductor: `ShipmentScheduled` solo se emite después de confirmar recursos. La coordinación debe ser atómica y rechazar sin dejar una reserva parcial. El evento posterior no sustituye esa precondición. Monitoring publica resultados fechados; Alert & Reporting aplica su propia regla de recuperación.
 
-**Tabla 4.25**
+**Tabla 4.25. Contratos de integración del diseño objetivo**
 
-*Matriz de interdependencias entre contextos*
-
-
-| N.º | Origen (evento) | Destino (comando) | Descripción |
-| :---: | :--- | :--- | :--- |
-| 1 | `ShipmentScheduled` (Shipment Management) | `ReserveResources` (Fleet & Resource Management) | Al programar un envío se reservan la unidad y el conductor. Si no están disponibles, se emite `ResourcesUnavailable` y el envío vuelve a borrador. |
-| 2 | `TransitStarted` (Shipment Management) | `StartMonitoring` (Monitoring & Telemetry) | Al iniciar el traslado se abre el monitoreo con el rango térmico y la tolerancia del envío. |
-| 3 | `ReadingRecorded` (Monitoring & Telemetry) | `EvaluateReading` (Monitoring & Telemetry) | Cada lectura se evalúa contra el rango y la tolerancia; el resultado es `ReadingOutOfRange` o `ReadingWithinRange`. |
-| 4 | `ReadingOutOfRange` (Monitoring & Telemetry) | `RaiseAlert` (Alert & Reporting) | Una lectura fuera de rango solicita la creación de una alerta, advertencia o crítica según la tolerancia. |
-| 5 | `SignalLost` (Monitoring & Telemetry) | `RaiseAlert` (Alert & Reporting) | La pérdida de señal del sensor solicita una alerta de tipo «Sin señal». |
-| 6 | `AlertRaised` (Alert & Reporting) | `SendNotification` (Alert & Reporting) | Toda alerta genera una notificación para el Coordinador Logístico y para el Cliente de Carga. |
-| 7 | `ReadingWithinRange` (Monitoring & Telemetry) | `ResolveAlert` (Alert & Reporting) | Si existe una alerta activa y la lectura se normaliza, la alerta se cierra. |
-| 8 | `ShipmentDelivered` (Shipment Management) | `ReleaseResources` (Fleet & Resource Management) | Al entregar el envío se liberan la unidad y el conductor. |
-| 9 | `ShipmentDelivered` (Shipment Management) | `StopMonitoring` (Monitoring & Telemetry) | Al entregar el envío se detiene el monitoreo. La cancelación se admite antes de iniciar el tránsito. |
-| 10 | `ShipmentDelivered` (Shipment Management) | `GenerateThermalReport` (Alert & Reporting) | La entrega habilita la generación del reporte térmico, que el usuario solicita desde «Descargar reporte». |
-| 11 | `ShipmentCancelled` (Shipment Management) | `ReleaseResources` (Fleet & Resource Management) | Al cancelar el envío se liberan los recursos que tenía reservados. |
-
-*Nota.* Elaboración propia.
+| ID | Origen | Destino | Condición o efecto |
+| --- | --- | --- | --- |
+| I01 | `ScheduleShipment`, caso de uso de Shipment | `ReserveResources`, Fleet | Confirma unidad, conductor, capacidad e intervalo antes de aceptar la programación. |
+| I02 | `ResourcesReserved`, Fleet | `ConfirmShipmentSchedule`, Shipment | Confirma y emite `ShipmentScheduled`; `ResourcesUnavailable` rechaza sin cambios parciales. |
+| I03 | `TransitStarted`, Shipment | `StartMonitoring`, Monitoring | Conserva una copia inmutable de los cuatro límites y la tolerancia. |
+| I04 | `ReadingRecorded`, Monitoring | `EvaluateReading`, Monitoring | Evalúa temperatura y humedad con su rango local. |
+| I05 | `ReadingOutOfRange`, Monitoring | `RaiseThermalAlert`, Alert & Reporting | Informa envío, lectura de origen, instante y severidad prevista. |
+| I06 | `SignalLost`, Monitoring | `RaiseSignalLossAlert`, Alert & Reporting | La ausencia de comunicación no genera una temperatura ficticia. |
+| I07 | `AlertRaised`, Alert & Reporting | `CreateNotification`, mismo contexto | Dirige avisos al coordinador y al cliente asignado, sin marcarlos como leídos. |
+| I08 | `ReadingWithinRange`, Monitoring | `ResolveThermalAlert`, Alert & Reporting | Exige evidencia posterior a la desviación vigente y normal en ambos intervalos. |
+| I09 | `SignalRestored`, Monitoring | `ResolveSignalLossAlert`, Alert & Reporting | Cierra la pérdida de comunicación; no cierra por sí sola una excursión térmica. |
+| I10 | `ShipmentDelivered`, Shipment | `ReleaseResources`, Fleet | Libera unidad y conductor conservando la reserva histórica. |
+| I11 | `ShipmentDelivered`, Shipment | `StopMonitoring`, Monitoring | Finaliza el seguimiento y conserva las mediciones. |
+| I12 | `ShipmentDelivered`, Shipment | Habilitación de `GenerateThermalReport` | El usuario autorizado solicita el informe; la entrega no lo genera automáticamente. |
+| I13 | `ShipmentCancelled`, Shipment | `ReleaseResources`, Fleet | Solo se cancela antes del tránsito y se liberan las reservas existentes. |
 
 #### Diagrama general
 
-El diagrama general presenta los contratos previstos de los cinco contextos. Shipment y Monitoring aparecen primero, luego Fleet y Alert & Reporting, y finalmente IAM. Los números remiten a las once interacciones de la Tabla 4.25; los eventos no acreditan un dispatcher ejecutado en TB1.
+El mapa general reúne las trece integraciones. Presenta los dos contextos core, los dos de apoyo y, finalmente, IAM.
 
-**Figura 4.87**
-
-*Diagrama general de EventStorming de nivel de diseño*
-
-<p align="center">
-  <img src="assets/images/chapter-04/eventstorming-ordered-corrected.svg" alt="Diagrama general de EventStorming de nivel de diseño" width="1000"><br>
-  <i>Nota.</i> Elaboración propia.
-</p>
-
+![Figura 4.87. EventStorming general con integraciones I01–I13](assets/images/chapter-04/revision-2026-11-11/01-es-general.png)
 
 #### BC3 · Shipment Management
 
-Este es el contexto central del negocio. El diseño previsto permite al Coordinador Logístico definir un borrador con su rango térmico y luego programarlo; el borrador persistido queda fuera de la implementación TB1. Al programar, la política del contexto solicita la reserva de recursos: si se reservan, se avisa al Cliente de Carga; si no están disponibles, no se confirma la programación. Esta secuencia corresponde al flujo 1 de la sección 4.4.4. Antes del tránsito puede cancelarse el envío programado y liberar la reserva. Al iniciar el traslado se abre el monitoreo; la entrega lo detiene y libera los recursos. No se permite cancelar un envío en tránsito ni entregado.
+El borrador y la coordinación tipada pertenecen al diseño objetivo. Los estados previstos son `DRAFT → SCHEDULED → IN_TRANSIT → DELIVERED`; `CANCELLED` se permite únicamente desde `DRAFT` o `SCHEDULED`, con motivo. La reserva precede a la confirmación. La entrega detiene el monitoreo, libera recursos y habilita la solicitud del reporte.
 
-**Figura 4.90**
+![Figura 4.88. EventStorming de Shipment Management](assets/images/chapter-04/revision-2026-11-11/02-es-shipment.png)
 
-*EventStorming del contexto Shipment Management*
+#### BC4 · Monitoring and Telemetry
 
-<p align="center">
-  <img src="assets/images/chapter-04/eventstorming-bc3-shipment.png" alt="EventStorming del contexto Shipment Management" width="1000"><br>
-  <i>Nota.</i> Elaboración propia.
-</p>
+Cada seguimiento conserva `MonitoredRange`, una copia inmutable de límites y tolerancia. Las lecturas mantienen sus marcas de tiempo y procedencia. No se interpolan vacíos para presentarlos como mediciones reales ni se muestra una lectura antigua como actual.
 
-#### BC4 · Monitoring & Telemetry
+![Figura 4.89. EventStorming de Monitoring and Telemetry](assets/images/chapter-04/revision-2026-11-11/03-es-monitoring.png)
 
-El contexto recibe las lecturas y las posiciones de los sensores y las evalúa. Al iniciar el monitoreo copia el rango térmico y la tolerancia del envío, de modo que una modificación posterior del envío no altere retroactivamente la evaluación. Cada lectura se registra y se evalúa: si está fuera de rango se solicita una alerta al contexto Alert & Reporting; si está dentro y existe una alerta activa, se solicita su resolución. Una política adicional detecta la pérdida de señal cuando no llegan lecturas durante el tiempo máximo permitido y solicita una alerta «Sin señal», que en la interfaz se muestra con el banner «Sin señal desde HH:MM» y la última lectura conocida.
+**Detalle de evaluación térmica y salud de señal.** Una lectura posterior normal en temperatura y humedad puede acreditar recuperación térmica. `SignalRestored` acredita comunicación reciente y válida; las dos condiciones se evalúan de forma independiente. Registrar una acción correctiva reconoce la atención, pero no resuelve la alerta.
 
-**Figura 4.91**
+![Figura 4.90. Evaluación ambiental y recuperación de comunicación](assets/images/chapter-04/revision-2026-11-11/04-es-monitoring-detail.png)
 
-*EventStorming del contexto Monitoring & Telemetry*
+#### BC2 · Fleet and Resources
 
-<p align="center">
-  <img src="assets/images/chapter-04/eventstorming-bc4-monitoring-tb1.svg" alt="EventStorming del contexto Monitoring & Telemetry" width="1000"><br>
-  <i>Nota.</i> Elaboración propia.
-</p>
+`Vehicle`, `Driver`, `Sensor` y `FleetAllocation` son raíces independientes. El sensor puede existir sin unidad asignada y conserva un `vehicleId` opcional; no se compone dentro de `Vehicle`. La reserva verifica capacidad, disponibilidad e intervalo de ambos recursos antes de aceptar el envío.
 
-#### BC2 · Fleet & Resource Management
+![Figura 4.91. EventStorming de Fleet and Resources](assets/images/chapter-04/revision-2026-11-11/05-es-fleet.png)
 
-Este contexto gestiona los recursos físicos de la empresa de transporte. Sus reglas más importantes son la unicidad de la placa y de la licencia, y la ausencia de traslape de horarios: una unidad o un conductor no pueden reservarse para dos envíos a la vez. Una unidad enviada a mantenimiento deja de aparecer como disponible. La reserva y la liberación no las decide el usuario directamente, sino que las provocan por política los eventos del contexto Shipment Management.
+#### BC5 · Alert and Reporting
 
-**Figura 4.89**
+La atención cambia `ACTIVE → ACKNOWLEDGED`. Resolver exige evidencia apropiada al tipo de alerta. El reporte resume datos disponibles sin certificar condiciones no medidas. Crear una notificación no equivale a leerla: `MarkNotificationRead` exige una acción del destinatario autorizado.
 
-*EventStorming del contexto Fleet & Resource Management*
+![Figura 4.92. EventStorming de Alert and Reporting](assets/images/chapter-04/revision-2026-11-11/06-es-alerts-reporting.png)
 
-<p align="center">
-  <img src="assets/images/chapter-04/eventstorming-bc2-fleet.png" alt="EventStorming del contexto Fleet & Resource Management" width="1000"><br>
-  <i>Nota.</i> Elaboración propia.
-</p>
+#### BC1 · IAM
 
-#### BC5 · Alert & Reporting
+El contexto genérico cierra la sección. El registro público crea cuentas de Cliente de Carga; el servidor determina los permisos y no confía en un rol solicitado por URL. La API actual usa token opaco y contraseña de al menos doce caracteres. Recuperación por correo y bloqueo por cuenta se mantienen como diseño previsto cuando no hay evidencia ejecutada.
 
-Este contexto reacciona a los eventos de monitoreo. Al recibir la solicitud de una alerta, la política del contexto la clasifica como advertencia o como crítica según la tolerancia, la registra y genera una notificación para el Coordinador Logístico y el Cliente de Carga (con envío de correo en el caso de alertas críticas). El Coordinador registra la acción correctiva desde la ventana modal descrita en la sección 4.4; si marcó la casilla «Notificar al Cliente de Carga», se envía además una notificación al cliente. La alerta se cierra cuando la lectura vuelve al rango. El contexto también registra incidencias, genera el reporte térmico en PDF y controla la lectura de las notificaciones.
-
-**Figura 4.92**
-
-*EventStorming del contexto Alert & Reporting*
-
-<p align="center">
-  <img src="assets/images/chapter-04/eventstorming-alerts-corrected.svg" alt="EventStorming del contexto Alert & Reporting" width="1000"><br>
-  <i>Nota.</i> Elaboración propia.
-</p>
-
-#### BC1 · IAM (Identity & Access Management)
-
-El diseño objetivo del contexto IAM cubre el ciclo de vida de la cuenta. La API de TB1 exige un correo único, contraseña de al menos doce caracteres y consentimiento para el registro público de Cliente de Carga. El correo de confirmación y la recuperación pertenecen al diseño posterior. Cada inicio de sesión exitoso redirige al usuario según su perfil: al Dashboard, si es Coordinador Logístico, o a Envíos por recibir, si es Cliente de Carga. En la API actual, login y registro están limitados a quince solicitudes por minuto e IP; el bloqueo por cuenta es una política prevista. En el diseño objetivo, la recuperación de contraseña envía un enlace sin revelar si el correo existe, con el fin de no facilitar la enumeración de cuentas.
-
-**Figura 4.88**
-
-*EventStorming del contexto IAM*
-
-<p align="center">
-  <img src="assets/images/chapter-04/eventstorming-iam-corrected.svg" alt="EventStorming del contexto IAM" width="1000"><br>
-  <i>Nota.</i> Elaboración propia.
-</p>
+![Figura 4.93. EventStorming del contexto genérico IAM](assets/images/chapter-04/revision-2026-11-11/07-es-iam.png)
 
 ### 4.6.2. Software Architecture Context Diagram
 
-El nivel 1 muestra FríoTrack como un sistema, las dos personas que usan sus operaciones y el proveedor externo de teselas. Se presenta el alcance evidenciado de TB1: las lecturas son de demostración y no se afirma recepción de sensores físicos ni entrega de correo. El visitante usa la landing pública del mismo sistema.
+El nivel 1 delimita FríoTrack y sus relaciones con Coordinador Logístico, Cliente de Carga y sistemas externos. Los roles representan personas; los servicios de mapas y dispositivos previstos permanecen fuera de la frontera del producto. Las relaciones de ingesta física y correo se identifican como futuras.
 
-![C4 nivel 1 del sistema FríoTrack](assets/images/chapter-04/c4-context-tb1-corrected.svg)
-
-Las relaciones indican quién utiliza el sistema y qué servicio externo consume. La evolución contempla sensores autenticados y correo transaccional, sujetos a implementación y validación posteriores.
+![Figura 4.94. C4 nivel 1: contexto de FríoTrack](assets/images/chapter-04/revision-2026-11-11/08-c4-contexto.png)
 
 ### 4.6.3. Software Architecture Container Diagrams
 
-Una [aplicación o almacén de datos es un contenedor C4](https://c4model.com/diagrams/container). La **Web Application** es el servidor que entrega `index.html`, JavaScript y CSS; la **Single Page Application** es el programa Vue que se ejecuta en el navegador. Se representan por separado, con la entrega del bundle y el consumo HTTPS de la API como relaciones distintas.
+La **Web Application** entrega los archivos estáticos; la **Single Page Application** ejecuta el programa Vue dentro del navegador. Son contenedores distintos y se conectan mediante la entrega del bundle. La landing comparte el contenedor estático: no constituye aquí un quinto contenedor de ejecución.
 
-![C4 nivel 2 con Web Application y SPA separadas](assets/images/chapter-04/c4-containers-tb1.svg)
+![Figura 4.95. C4 nivel 2: cuatro contenedores con Web Application y SPA separadas](assets/images/chapter-04/revision-2026-11-11/09-c4-contenedores.png)
 
-| Contenedor propio | Tecnología | Responsabilidad y comunicación |
+| Contenedor | Tecnología | Responsabilidad |
 | --- | --- | --- |
-| Landing Page | HTML, CSS y JavaScript | Presenta el producto en `/landing/`; sus CTA abren la URL de la aplicación. |
-| Web Application | Azure Storage Static Website | Sirve el documento y bundle compilado. Comparte recurso de hosting con la landing y no ejecuta código Vue. |
-| Single Page Application | Vue 3, PrimeVue y Leaflet | Ejecuta vistas en el navegador; consume la API con HTTPS/JSON y las teselas con HTTPS. |
-| API de apoyo | ASP.NET Core 10 y C# | Autentica con token opaco, autoriza cada solicitud, filtra el workspace y valida comandos. |
-| Almacén privado | Archivo JSON de una instancia | Persiste cuentas, sesiones y operaciones mediante acceso local del servidor; no está expuesto como archivo público. |
+| Web Application | Azure Storage Static Website, HTML/CSS/JavaScript | Sirve la landing en `/landing/` y el documento y bundle de la SPA. |
+| Single Page Application | Vue 3, PrimeVue, Leaflet y Vite | Ejecuta vistas en el navegador; consume API y mapas por HTTPS. |
+| API de apoyo | ASP.NET Core 10 y C# | Autentica con token opaco, autoriza, filtra el workspace y valida comandos. |
+| Almacén privado | Archivo JSON de una instancia | Persiste cuentas, sesiones y operaciones; únicamente el servidor accede al archivo. |
 
-OpenStreetMap es un sistema externo. EF Core, PostgreSQL, la ingesta IoT y el correo pertenecen al diseño objetivo y no aparecen como contenedores ejecutados de TB1. Hosting y repositorios no determinan el número de contenedores: varias unidades lógicas pueden compartir un recurso de Azure o un repositorio.
+El servicio de mapas es externo. PostgreSQL, EF Core, ingesta IoT y correo pertenecen al diseño objetivo. Los repositorios y recursos de hosting no determinan el número de contenedores. Las evidencias Azure de octubre y la revisión de fuentes de noviembre tienen cortes distintos, detallados en el Capítulo V.
 
 ### 4.6.4. Software Architecture Component Diagrams
 
-#### 4.6.4.1. Componentes del frontend
+#### 4.6.4.1. Componentes de la API actual
 
-El alcance del nivel 3 es únicamente la SPA. La copia corregida organiza el cliente en `shipment-management`, `monitoring`, `fleet`, `alerts-reporting` e `iam`; el contexto genérico se presenta al final. Cada contexto contiene sus páginas, componentes y políticas de dominio cuando aplica. `shared/application/workspace.js` coordina estado y casos de uso. Depende del puerto `WorkspaceGateway`, implementado por `RestWorkspaceGateway`; `main.js` compone el adaptador y la aplicación.
+El nivel 3 abre únicamente la API de apoyo. Distingue composición, endpoints HTTP, autenticación/autorización, coordinación de comandos y acceso al almacén JSON. Los endpoints validan la sesión y las reglas del servidor; ocultar un control en la SPA no sustituye la autorización.
 
-![C4 nivel 3 de componentes de la SPA](assets/images/chapter-04/c4-frontend-tb1.svg)
+![Figura 4.96. C4 nivel 3: componentes de la API JSON implementada](assets/images/chapter-04/revision-2026-11-11/10-c4-componentes-api-actual.png)
 
-Las políticas de dominio son funciones JavaScript sin dependencias de Vue, red ni almacenamiento. Los fixtures y el simulador de comandos se reservan a pruebas. La API conserva la autoridad de permisos y reglas: ocultar un control de interfaz no sustituye una comprobación en servidor.
+La SPA se organiza en `shipment-management`, `monitoring`, `fleet`, `alerts-reporting`, `iam` y `shared`. Sus políticas JavaScript puras no dependen de Vue ni de HTTP. `shared/application/workspace.js` coordina el cliente mediante el puerto `WorkspaceGateway`, implementado por `RestWorkspaceGateway`; `main.js` compone la aplicación. Los fixtures y simuladores están fuera del bundle de producción.
 
-#### 4.6.4.2. Componentes del backend objetivo
+#### 4.6.4.2. Componentes de la API objetivo
 
-![Diseño objetivo de componentes backend por contexto y capa](assets/images/chapter-04/c4-backend-tb1.svg)
+![Figura 4.97. C4 nivel 3: arquitectura modular DDD propuesta](assets/images/chapter-04/revision-2026-11-11/11-c4-componentes-api-objetivo.png)
 
-Este diagrama documenta la **evolución prevista**, con Interfaces REST, Application, Domain e Infrastructure dentro de cada bounded context. Interfaces convierte solicitudes y respuestas; Application coordina los casos de uso; Domain protege invariantes y declara puertos; Infrastructure implementa persistencia y servicios externos. El dominio no depende de ASP.NET, EF Core ni DTO. [Microsoft documenta esta dirección de dependencias para el diseño DDD](https://learn.microsoft.com/en-us/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/ddd-oriented-microservice).
-
-En TB1 existe una API de apoyo con estado JSON. La reorganización local separa responsabilidades técnicas, pero no acredita los agregados tipados, repositorios EF Core, transacciones relacionales ni el dispatcher de eventos de este diseño objetivo. `ShipmentScheduled`, `ReadingOutOfRange` y los demás eventos describen contratos previstos. La programación debe validar y confirmar reservas antes de aceptar el envío, sin depender de una reacción eventual que permita sobreasignación.
+La evolución prevista organiza cada contexto en Interfaces, Application, Domain e Infrastructure. Interfaces convierte solicitudes y respuestas; Application coordina casos de uso; Domain protege invariantes y declara puertos; Infrastructure implementa persistencia y adaptadores. El dominio no depende de ASP.NET, EF Core ni DTO. La API actual no acredita agregados tipados, transacciones relacionales ni un dispatcher implementado.
 
 #### 4.6.4.3. Fuentes y trazabilidad
 
-Las fuentes [Structurizr DSL](assets/architecture/architecture.dsl), [contenedores Mermaid](assets/architecture/containers.mmd), [componentes Mermaid](assets/architecture/frontend-components.mmd) y [modelo táctico PlantUML](assets/architecture/backend-classes-tb1.puml) quedan editables. Los SVG son vistas explicativas generadas localmente, con alcance, tecnología, responsabilidad y dirección de relaciones; no se presentan como capturas de una herramienta colaborativa. El diseño de datos objetivo se conserva en 4.8.
+El [catálogo de 22 diagramas editables](assets/architecture/chapter-04/README.md) reúne enlaces de diagrams.net, archivos nativos `.drawio` y fuentes JSON. Las mismas vistas se conservan como PNG y SVG. El [manifiesto de imágenes](assets/architecture/chapter-04/manifest.json) identifica sección, dimensiones y SHA-256. El diagrama de API actual y el de API objetivo tienen alcance explícito; las vistas de clases y datos siguientes corresponden al diseño objetivo.
 
 ## 4.7. Software Object-Oriented Design
 
 ### 4.7.1. Class Diagrams
 
-El modelo táctico DDD siguiente es el **diseño objetivo del backend**, separado del modelo de datos JSON y de los módulos de la SPA. Los estereotipos distinguen `Aggregate Root`, `Entity`, `Value Object`, repositorios y eventos. Cada agregado protege sus invariantes; las entidades internas se modifican a través de su raíz. Las referencias entre agregados o contextos se mantienen por identificadores. Los repositorios corresponden a raíces de agregado, sin introducir un repositorio por tabla o por objeto de valor.
+El modelo táctico **objetivo del backend** distingue raíces de agregado, entidades, objetos de valor, repositorios y eventos. Cada raíz protege sus invariantes y controla sus entidades internas. Las referencias entre agregados se mantienen por ID; los repositorios corresponden a raíces y no a cada tabla. El modelo no describe clases tipadas ya implementadas en la API JSON.
 
 #### 4.7.1.1. Shipment Management
 
-![Agregado Shipment y objetos internos del contexto core](assets/images/chapter-04/backend-ddd-shipment-corrected.svg)
+![Figura 4.98. Modelo táctico DDD de Shipment Management](assets/images/chapter-04/revision-2026-11-11/12-uml-shipment.png)
 
-`Shipment` conserva el identificador del cliente, recursos, ruta, fechas, versión y un `ThermalRange`. El objeto de valor valida mínimo ≤ máximo en temperatura y humedad; no tiene identidad ni setters que eludan invariantes. `ShipmentHistoryEvent` pertenece al agregado. Las transiciones objetivo son `DRAFT → SCHEDULED → IN_TRANSIT → DELIVERED`; la cancelación se permite antes del tránsito. La aplicación coordina con Fleet y confirma reserva y capacidad antes de aceptar programación. Los recursos se referencian por ID y no se componen dentro de Shipment.
+`Shipment` conserva identificadores de empresa, cliente y recursos, ruta, fechas, versión y `ThermalRange`. El objeto de valor exige mínimo **menor que** máximo en temperatura y humedad y tolerancia no negativa; no tiene identidad ni setters que eludan invariantes. `ShipmentHistoryEvent` pertenece al agregado. Programar exige recursos confirmados; los estados y cancelaciones respetan las reglas de 4.6.1.
 
 #### 4.7.1.2. Monitoring and Telemetry
 
-![Agregado de monitoreo y su copia inmutable del rango](assets/images/chapter-04/backend-ddd-monitoring-corrected.svg)
+![Figura 4.99. Modelo DDD de monitoreo con MonitoredRange y eventos de señal](assets/images/chapter-04/revision-2026-11-11/13-uml-monitoring.png)
 
-`ShipmentMonitoring` es la raíz que registra `SensorReading` y `PositionReport`. `MonitoredRange` es una copia inmutable propia del contexto: no comparte una instancia mutable del modelo Shipment. Una lectura incluye fecha y valores ambientales; la posición valida coordenadas. El modelo contempla pérdida de señal y evaluación por tolerancia temporal. `ReadingOutOfRange`, `ReadingWithinRange` y `SignalLost` son eventos previstos, no una ingesta física implementada en TB1.
+`ShipmentMonitoring` administra `SensorReading` y `PositionReport`. `MonitoredRange` es una copia local inmutable, sin compartir el objeto mutable de Shipment. El modelo contempla `ReadingOutOfRange`, `ReadingWithinRange`, `SignalLost` y `SignalRestored`. Una lectura fuera de orden no demuestra recuperación posterior; recuperar comunicación no resuelve una excursión térmica. La ingesta física y la evaluación temporal automática siguen pendientes de implementación.
 
 #### 4.7.1.3. Fleet and Resource Management
 
-![Raíces de agregado y reservas de Fleet](assets/images/chapter-04/backend-ddd-resources-corrected.svg)
+![Figura 4.100. Modelo DDD de Vehicle, Driver, Sensor y FleetAllocation](assets/images/chapter-04/revision-2026-11-11/14-uml-fleet.png)
 
-`Vehicle`, `Driver` y `FleetAllocation` son raíces independientes. `Sensor` se administra dentro de Vehicle. Una reserva conserva `shipmentId`, `vehicleId`, `driverId` e intervalo; impide solapamiento y libera recursos al cancelar o entregar. La coordinación de programación y reserva exige una unidad de trabajo y una estrategia transaccional consistente; un evento posterior no sustituye la validación de disponibilidad. Los repositorios gestionan raíces completas.
+`Vehicle`, `Driver`, `Sensor` y `FleetAllocation` son raíces independientes, con repositorios propios. `Sensor.vehicleId` es opcional; la asignación no establece composición con Vehicle. La reserva conserva `shipmentId`, `vehicleId`, `driverId` e intervalo, rechaza solapamientos y se libera al cancelar antes del tránsito o al entregar. El caso de uso exige una coordinación atómica de programación y reserva.
 
 #### 4.7.1.4. Alert and Reporting
 
-![Agregado de alerta y raíces de evidencia del contexto de apoyo](assets/images/chapter-04/backend-ddd-alerts-corrected.svg)
+![Figura 4.101. Modelo DDD de alertas, atención, notificaciones e informes](assets/images/chapter-04/revision-2026-11-11/15-uml-alerts-reporting.png)
 
-`Alert` contiene `CorrectiveAction`; reconocer la atención cambia `ACTIVE → ACKNOWLEDGED`, y resolver exige evidencia posterior de recuperación dentro de ambos rangos. `RecoveryEvidence` conserva identidad de lectura, instante y resultado normalizado como objeto de valor local; evita recibir una entidad mutable de Monitoring. `Notification`, `Incident` y `ThermalReport` son raíces independientes relacionadas mediante IDs. El informe conserva una instantánea y no certifica condiciones sin mediciones. Los destinatarios deben corresponder al cliente asignado.
+`Alert` contiene `CorrectiveAction`. Atender reconoce la alerta; la resolución térmica exige evidencia posterior normal en ambos intervalos. `RecoveryEvidence` es un objeto de valor local con ID de lectura, instante y resultado, sin navegar una entidad mutable de Monitoring. `Notification`, `Incident` y `ThermalReport` son raíces independientes relacionadas mediante IDs. La notificación se lee solo por acción del destinatario y la entrega habilita una solicitud de informe.
 
 #### 4.7.1.5. IAM
 
-![Modelo genérico de identidad presentado después del dominio operativo](assets/images/chapter-04/backend-ddd-iam-corrected.svg)
+![Figura 4.102. Modelo DDD del contexto genérico IAM, presentado al final](assets/images/chapter-04/revision-2026-11-11/16-uml-iam.png)
 
-IAM es un subdominio genérico y se documenta al final. `UserAccount` es raíz de agregado y administra `PasswordResetToken`; `Organization` es otra raíz. Los demás contextos reciben `UserId`, `OrganizationId` y permisos mediante contratos, sin navegar objetos internos de identidad. El diseño contempla recuperación con token de uso único y bloqueo por cuenta. La API TB1 utiliza sesiones con token opaco; no se la describe como JWT ni se acredita recuperación por correo.
+`UserAccount` administra `PasswordResetToken`; `Organization` es otra raíz. Los demás contextos reciben identificadores y permisos mediante contratos. Recuperación con token de uso único, bloqueo por cuenta y aislamiento por empresa pertenecen al diseño previsto. La API TB1 mantiene sesiones con token opaco y no acredita recuperación por correo.
 
 #### 4.7.1.6. Correspondencia con el código y los datos
 
-| Elemento | Alcance de la copia corregida | Diseño objetivo |
+| Elemento | Implementado en las fuentes corregidas | Diseño objetivo |
 | --- | --- | --- |
-| SPA | Módulos por contexto, políticas JavaScript puras, puerto y adaptador HTTP | Mantener límites y contratos al integrar el backend final. |
-| API de apoyo | C# con estado JSON, control de sesión, autorización y comandos | Migrar reglas a agregados tipados y coordinar casos de uso por contexto. |
-| Persistencia | Un archivo JSON privado | Repositorios de raíces con EF Core, PostgreSQL, restricciones y transacciones. |
-| Telemetría y eventos | Datos de demostración | Ingesta autenticada, políticas temporales y eventos internos consistentes. |
+| SPA | Módulos por contexto, políticas puras y adaptador HTTP. | Mantener límites y contratos al integrar el backend final. |
+| API | C# con estado JSON, sesión, autorización y comandos. | Agregados tipados y casos de uso coordinados por contexto. |
+| Persistencia | Archivo JSON privado de una instancia. | Repositorios de raíces, EF Core, PostgreSQL y transacciones. |
+| Telemetría y eventos | Datos de demostración. | Ingesta autenticada, evaluación temporal y eventos internos. |
 
-Las [clases y puertos del modelo objetivo](assets/architecture/backend-classes-tb1.puml) son fuente editable. El [catálogo persistente](assets/architecture/backend-model-tb1.json) y los diagramas de 4.8 describen la proyección relacional; una tabla de base de datos no define por sí sola un agregado. Los cambios locales de esta revisión requieren su integración y un nuevo despliegue antes de atribuirlos a las URLs de TB1.
+Las [fuentes nativas de clases](assets/architecture/chapter-04/README.md), el [modelo PlantUML](assets/architecture/backend-classes-tb1.puml) y el [catálogo relacional](assets/architecture/backend-model-tb1.json) mantienen esta separación. Una tabla no define por sí sola un agregado. La revisión de fuentes requiere un nuevo despliegue antes de atribuir su comportamiento a las URLs históricas de TB1.
 
 ## 4.8. Database Design
 
 ### 4.8.1. Database Diagrams
 
-Se propone un esquema relacional de **17 tablas** para PostgreSQL. La fuente [database-tb1.mmd](assets/architecture/database-tb1.mmd) y el [catálogo](assets/architecture/backend-model-tb1.json) documentan columnas, claves y 27 relaciones. Las vistas por contexto corresponden al diseño objetivo; la aplicación TB1 utiliza el almacén JSON privado descrito en 5.2.2.6. La entidad Organization establece un diseño de aislamiento por empresa aún no implementado.
+El diseño relacional objetivo contiene **17 tablas y 27 claves foráneas** para PostgreSQL. Las vistas muestran columnas, tipos, PK, FK y cardinalidades. La API actual continúa con JSON: no se acreditan migraciones ni datos reales en PostgreSQL. `Organization` establece un aislamiento por empresa todavía no implementado.
 
-**Figura 4.98**
+**Esquema relacional general y vistas por contexto**
 
-*Diseño relacional previsto de FríoTrack, en cuatro paneles*
+![Figura 4.103. ERD general: 17 tablas y 27 claves foráneas](assets/images/chapter-04/revision-2026-11-11/17-erd-general.png)
 
-**Panel de envío, reserva e historial**
+**Shipment Management**
 
-![ERD previsto: envío con cuatro límites, reserva e historial](assets/images/chapter-04/database-shipment-tb1.svg)
+![Figura 4.104. ERD de Shipment Management](assets/images/chapter-04/revision-2026-11-11/18-erd-shipment.png)
 
-**Panel de monitoreo y telemetría**
+**Monitoring and Telemetry**
 
-![ERD previsto: copia de límites, lecturas y posiciones](assets/images/chapter-04/database-monitoring-tb1.svg)
+![Figura 4.105. ERD de Monitoring and Telemetry](assets/images/chapter-04/revision-2026-11-11/19-erd-monitoring.png)
 
-**Panel de alertas, atención y evidencia**
+**Fleet and Resource Management**
 
-![ERD previsto: alertas, acciones, avisos, incidencias e informes](assets/images/chapter-04/database-alerts-tb1.svg)
+![Figura 4.106. ERD de Fleet and Resource Management](assets/images/chapter-04/revision-2026-11-11/20-erd-fleet.png)
 
-**Panel de organización, cuentas y recursos**
+**Alert and Reporting**
 
-![ERD previsto: organización, cuentas, recuperación, unidades, conductores y sensores](assets/images/chapter-04/database-resources-tb1.svg)
+![Figura 4.107. ERD de Alert and Reporting](assets/images/chapter-04/revision-2026-11-11/21-erd-alerts-reporting.png)
 
-*Nota.* `PK` identifica una clave primaria; `FK`, una referencia; `UK`, una restricción de unicidad; `nullable`, un campo opcional. Las flechas identifican asociaciones principales y sus multiplicidades; la fuente Mermaid y la Tabla 4.32 contienen todas las relaciones. El [ERD PNG de AV1](assets/images/chapter-04/erd-friotrack.png) se conserva sin alteración como antecedente del modelo anterior.
+**IAM: contexto genérico al final**
+
+![Figura 4.108. ERD de IAM: contexto genérico al final](assets/images/chapter-04/revision-2026-11-11/22-erd-iam.png)
+
+`PK` indica clave primaria; `FK`, clave foránea; `UK`, unicidad; `nullable`, campo opcional. Las referencias a cuentas y envíos son contratos de persistencia y no composición de entidades entre contextos. Las fuentes [Mermaid](assets/architecture/database-tb1.mmd), [catálogo de columnas](assets/architecture/backend-model-tb1.json) y [diagramas nativos](assets/architecture/chapter-04/README.md) conservan el modelo editable. El [ERD de AV1](assets/images/chapter-04/erd-friotrack.png) es un antecedente histórico.
 
 **Tabla 4.31**
 
@@ -3078,8 +3032,8 @@ FríoTrack integra una Landing Page, una aplicación Vue para el Coordinador Log
 | Product UX/UI Design | Figma y prototipo HTML | Guía visual, wireframes, mock-ups y flujos por perfil. | Artefactos y enlace de diseño de 4.5. |
 | Landing Development | HTML5, CSS3 y JavaScript | Presentación de la propuesta, corredores, planes y acceso a la aplicación. | Landing publicada en Azure Storage. |
 | Frontend Development | Vue 3, JavaScript, PrimeVue 4, Vite y Leaflet | Programación, recursos, monitoreo, alertas, historial y consulta del cliente. | Código integrado en `friotrack-frontend/main`. |
-| Backend Development | C# y ASP.NET Core, .NET 10 | Autenticación, autorización, consulta y comandos de la aplicación. | API publicada en Azure App Service; código en `friotrack-frontend/api`. |
-| Software Testing | Node test runner y pruebas HTTP | Reglas de dominio, autenticación, aislamiento por cliente y validaciones. | 15 pruebas frontend y 26 comprobaciones API locales; 12 comprobaciones HTTPS del servicio publicado. |
+| Backend Development | C# y ASP.NET Core, .NET 10 | Autenticación, autorización, consulta y comandos de la aplicación. | Servicio Azure histórico; fuentes independientes en `friotrack-api`, con copia temporal en `friotrack-frontend/api`. |
+| Software Testing | Node test runner y pruebas HTTP | Reglas de dominio, autenticación, aislamiento por cliente y validaciones. | Revisión de fuentes del 10/11: 18 pruebas frontend y 26 comprobaciones API locales; el recibo HTTPS histórico de octubre contiene 12 comprobaciones distintas. |
 | Software Documentation | Markdown, Mermaid y PlantUML | Informe, configuración, contratos y diseños editables. | Informe y fuentes en este repositorio; contratos del servicio en 5.2.2.6. |
 | Software Deployment | Azure Storage y Azure App Service | Hosting estático y ejecución del servicio de apoyo. | Configuración y verificaciones en 5.2.2.7. |
 
@@ -3098,7 +3052,7 @@ La organización del equipo es [upc-pre-202620-1asi0730-8088-FrioTrackk](https:/
 
 La versión `v2.0.0` se integró desde `develop` hacia `main`. Las correcciones de cierre de TB1 siguen el mismo flujo sobre esas ramas existentes. Se conserva el historial previo. Los mensajes nuevos siguen Conventional Commits y describen el cambio en inglés. El versionado del informe es independiente de la versión del paquete frontend y de la versión devuelta por `/api/health`.
 
-La integración del frontend está registrada en los [PR #4](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/pull/4) y [PR #5](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/pull/5). Su revisión publicada es [`dc49d7e`](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/commit/dc49d7e28e13c8d0f78fa913dd5353ea162012c6).
+La integración del frontend está registrada en los [PR #4](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/pull/4) y [PR #5](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/pull/5). La revisión histórica de octubre es [`dc49d7e`](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/commit/dc49d7e28e13c8d0f78fa913dd5353ea162012c6). La corrección de fuentes publicada como `0.1.1` es [`a09062a`](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/commit/a09062a7109c34755345ca2e195f0d405fb180a2); su CI no acredita un nuevo despliegue Azure.
 
 #### Revisión de repositorios y releases
 
@@ -3106,14 +3060,14 @@ La [consulta pública previa a la corrección del 10 de noviembre de 2026](asset
 
 | Producto | Versión de corrección | Alcance |
 | --- | --- | --- |
-| [Informe](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/releases) | `v2.0.3` | Revisión documental de TB1 con carátula centrada en README, colaboración, requisitos, sprints y arquitectura. |
+| [Informe](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/releases) | `v2.0.4` | Revisión documental de TB1 con 22 diagramas, fuentes editables, consistencia DDD y evidencias fechadas; carátula conservada. |
 | [Frontend](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/releases) | `0.1.1` | Organización por contextos, puerto/adaptador HTTP, separación técnica del servicio y pruebas locales. |
 | [Landing Page](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-landing/releases) | `0.1.0` | Primera release del repositorio, con acceso por perfil/idioma y resultado de contacto coherente. |
 | [Web Services](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-api/releases) | `0.1.0` | Primera release independiente de la API ASP.NET Core con persistencia JSON. |
 
 Las etiquetas históricas se conservan. En frontend, `0.0.1` y `0.0.3` apuntan a `d944ba1`; no se usan para afirmar un incremento funcional entre esas versiones. Cada nueva release identifica un commit concreto y sus comprobaciones. Los cambios de esta revisión corresponden al código fuente y al reporte; las evidencias Azure de octubre no acreditan que esta revisión haya sido desplegada.
 
-GitFlow utiliza `feature/* → develop`, integración mediante pull request y publicación de `develop → main`. Las ramas `release/*` permiten estabilizar entregas posteriores; los `hotfix/*` parten de `main` y se integran en ambas ramas. Los pull requests y comprobaciones técnicas de esta corrección no sustituyen las revisiones o actas de los demás integrantes.
+GitFlow utiliza `feature/* → develop` y publicación de `develop → main`, con pull request cuando se requiere revisión de integración o lo exige la protección de rama. Las ramas `release/*` permiten estabilizar entregas posteriores; los `hotfix/*` parten de `main` y se integran en ambas ramas. Los pull requests y comprobaciones técnicas de esta corrección no sustituyen las revisiones o actas de los demás integrantes.
 
 ### 5.1.3. Source Code Style Guide & Conventions
 
@@ -3121,7 +3075,7 @@ El frontend utiliza Vue 3 con Composition API, JavaScript y componentes `PascalC
 
 La API sigue las convenciones C# `PascalCase` para tipos y miembros públicos, `camelCase` para variables y namespaces que expresan responsabilidad. La copia local separa composición, interfaces HTTP, aplicación e infraestructura del almacén JSON. Esta separación técnica no equivale a tener implementado todo el modelo DDD objetivo. El directorio independiente de Web Services permite publicar el producto sin depender del bundle Vue.
 
-Las interfaces deben mostrar español e inglés desde los diccionarios, sin mensajes de negocio duplicados en vistas. Los commits describen cambios concretos con Conventional Commits; las ramas `feature/*`, `release/*` y `hotfix/*` se integran mediante pull requests según GitFlow. Cada integrante debe aportar cambios propios y revisiones verificables en los productos que le correspondan.
+Las interfaces deben mostrar español e inglés desde los diccionarios, sin mensajes de negocio duplicados en vistas. Los commits describen cambios concretos con Conventional Commits; las ramas `feature/*`, `release/*` y `hotfix/*` se integran según GitFlow, con pull requests cuando la revisión o la protección de rama lo requieren. Cada integrante debe aportar cambios propios y revisiones verificables en los productos que le correspondan.
 
 ### 5.1.4. Software Deployment Configuration
 
@@ -3152,23 +3106,30 @@ El Sprint 1 desarrolló la Landing Page de AV1. Su objetivo fue presentar el pro
 | Field | Recorded detail |
 | --- | --- |
 | Sprint # | Sprint 1 |
-| Date / Time | 08/09/2026, 19:00, según el registro AV1. |
-| Location | Reunión virtual registrada en AV1. |
+| Date | 2026-09-08, según el registro AV1. |
+| Time | 07:00 PM (America/Lima), según el registro AV1. |
+| Location | Reunión virtual; plataforma y acta no adjuntas. |
 | Prepared By | Equipo BlackStartup. |
-| Attendees | La relación de asistentes no se adjunta en el registro disponible. |
+| Attendees (to planning meeting) | No registrado en la documentación disponible. |
+| Sprint 0 Review Summary | No aplica: primer sprint documentado. |
+| Sprint 0 Retrospective Summary | No aplica: no existe sprint previo documentado. |
 | Sprint 1 Goal | **Our focus is on** helping visitors understand the FríoTrack cold-chain transport proposal through a bilingual landing page.<br>**We believe it delivers** clear information about the proposed service and logistics corridors **to** refrigerated transport companies and cargo clients.<br>**This will be confirmed when** the sprint review demonstrates the value proposition, four proposed corridors and FAQ in English and Spanish without horizontal overflow at 390 px and 1440 px, and a valid commercial enquiry receives a real delivery confirmation. |
 | Sprint 1 Velocity | No consta la capacidad acordada en SP en el registro de planificación; los 9 SP relacionados no se presentan como velocidad aceptada. |
 | Sum of Story Points | 9 SP: US23, US24, US25 y US27 del catálogo vigente. |
 
 #### 5.2.1.2. Aspect Leaders and Collaborators
 
-| Team Member | GitHub Username | Contribution recorded for AV1 |
-| --- | --- | --- |
-| Atauje Barreto, Alexander Sebastián | Alexander1Alexander2 | Startup Profile, Solution Profile, estructura del informe y secciones de la landing. |
-| Bardales Rodriguez, Benjamin Elias | Benja72312 | Arquitectura, diseño y mayor parte de la implementación de la landing. |
-| Daga Chávez, Joaquín Leonardo | Eshnikeee | Historias y criterios de aceptación. |
-| Saavedra Flores, Rodrigo Andree | rodrigoxd67 | Capítulo V y apoyo al despliegue de la landing. |
-| Vera Solsol, Nayely Macarena | Macaxprogram29 | Impact Mapping, Product Backlog y Trello. |
+La matriz conserva los aportes registrados en AV1. **C** identifica una contribución documentada; **L** requiere una designación de liderazgo que no consta en el registro disponible. **—** indica que no se documenta aporte en ese aspecto. El equipo debe confirmar las designaciones pendientes, sin reconstruir actas históricas.
+
+| Team Member | GitHub Username | Producto e informe | Requisitos y backlog | Arquitectura y diseño | Landing y despliegue |
+| --- | --- | :---: | :---: | :---: | :---: |
+| Atauje Barreto, Alexander Sebastián | Alexander1Alexander2 | C | — | — | C |
+| Bardales Rodriguez, Benjamin Elias | Benja72312 | — | — | C | C |
+| Daga Chávez, Joaquín Leonardo | Eshnikeee | — | C | — | — |
+| Saavedra Flores, Rodrigo Andree | rodrigoxd67 | C | — | — | C |
+| Vera Solsol, Nayely Macarena | Macaxprogram29 | — | C | — | — |
+
+Alexander aportó la propuesta y la estructura del informe; Benjamin, arquitectura y mayor parte de la landing; Joaquín, historias y criterios; Rodrigo, Capítulo V y apoyo al despliegue; Nayely, Impact Mapping, backlog y Trello. Esta matriz no atribuye a AV1 el trabajo de corrección de noviembre.
 
 #### 5.2.1.3. Sprint Backlog 1
 
@@ -3236,7 +3197,9 @@ El Sprint 2 entrega la primera aplicación web de FríoTrack y actualiza la land
 | Field | FríoTrack Sprint Planning 2 |
 | --- | --- |
 | Sprint # | Sprint 2 — TB1 |
-| Date / Time / Location | El acta de la reunión de planificación no está adjunta. El periodo de integración técnica registrado es 07–08/10/2026, America/Lima. |
+| Date | No registrado; acta de planificación no adjunta. |
+| Time | No registrado; acta de planificación no adjunta. |
+| Location | No registrado; acta de planificación no adjunta. |
 | Prepared By | Equipo BlackStartup; Team Leader: Atauje Barreto, Alexander Sebastián. |
 | Attendees | No consta una relación de asistentes en los archivos del informe. |
 | Sprint 1 Review Summary | Landing implementada; el formulario comercial aún requiere receptor. Se actualizaron los accesos hacia la aplicación pública. |
@@ -3244,6 +3207,8 @@ El Sprint 2 entrega la primera aplicación web de FríoTrack y actualiza la land
 | Sprint 2 Goal | **Our focus is on** enabling logistics coordinators to operate refrigerated shipments and cargo clients to consult their assigned shipments through the bilingual application.<br>**We believe it delivers** centralized operational control and restricted access to shipment information **to** refrigerated transport companies and cargo clients.<br>**This will be confirmed when** the review demonstrates a coordinator scheduling a valid shipment and recording a corrective action, a cargo client receiving only assigned shipments and being denied a coordination command, and both profiles completing access in English and Spanish, with all four authorization and access checks passing. |
 | Sprint 2 Velocity | No consta la capacidad acordada por el equipo en la planificación; los SP relacionados no acreditan esa decisión ni la velocidad alcanzada. |
 | Sum of Story Points | 75 SP de 20 historias relacionadas con la implementación; no equivalen a puntos aceptados ni a velocidad. |
+
+El periodo de integración técnica registrado es 07–08/10/2026, America/Lima; no se presenta como fecha demostrada de la reunión de planificación.
 
 Los criterios de revisión técnica son: rechazar credenciales incorrectas, restaurar una sesión válida, impedir acciones de coordinación desde una cuenta cliente, filtrar los envíos por cliente, conservar los parámetros de idioma y perfil desde la landing y comprobar los archivos publicados. Las verificaciones disponibles se detallan en 5.2.2.5.
 
@@ -3309,7 +3274,7 @@ Los estados permitidos son **To Do** (actividad pendiente), **In Process** (acti
 | US16 | Registro de conductores | S2-T06B | Completar vigencia y validación | Aplicar la vigencia de la licencia y probar licencia vencida, inválida y duplicada. | 8 | No registrada | Rodrigo — integración API | To Do | Criterio de vigencia comprometido no verificado en el registro original. |
 | US17 | Asignación de conductor a vehículo | S2-T06C | Reservar conductor y unidad | Validar disponibilidad y solapamiento para la reserva conjunta durante el intervalo del envío. | 6 | No registrada | Rodrigo — integración API | To Review | Validación descrita en API; aceptación del equipo abierta. |
 | US17 | Asignación de conductor a vehículo | S2-T06D | Revisar reservas simultáneas | Comprobar solapamiento de conductor y vehículo y ausencia de reservas parciales ante rechazo. | 4 | No registrada | Rodrigo — integración API | To Do | Falta evidencia de aceptación integral de conflictos y simultaneidad. |
-| US31 | Planes y acceso desde la Landing | S2-T15A | Conectar entradas por segmento | Mantener enlaces de entrada al login con perfil e idioma sin asignar privilegios desde la URL. | 4 | No registrada | Rodrigo | To Review | Verificado en la publicación registrada; sincronización del repositorio landing pendiente de contrastar. |
+| US31 | Planes y acceso desde la Landing | S2-T15A | Conectar entradas por segmento | Mantener enlaces de entrada al login con perfil e idioma sin asignar privilegios desde la URL. | 4 | No registrada | Rodrigo | To Review | Entrada por perfil e idioma documentada en octubre; repositorio landing actualizado en release 0.1.0 del 10/11. Aceptación del equipo pendiente. |
 | US31 | Planes y acceso desde la Landing | S2-T15B | Revisar enlaces de entrada y fallo | Comprobar ambos segmentos e idiomas y documentar comportamiento cuando el acceso no responde. | 4 | No registrada | Rodrigo | To Do | No consta revisión integral del escenario de indisponibilidad. |
 | US25 | Formulario de contacto comercial | S2-T18A | Configurar receptor comercial | Definir destino autorizado y conectar el transporte de la solicitud con recepción confirmada. | 6 | No registrada | Sin asignación registrada | To Do | No hay receptor operativo acreditado ni asignación histórica registrada. |
 | US25 | Formulario de contacto comercial | S2-T18B | Verificar recepción y fallos | Ejecutar recepción válida, correo inválido y fallo de transporte y conservar evidencia del resultado real. | 4 | No registrada | Sin asignación registrada | To Do | Depende del receptor; no se acepta una confirmación solo local como recepción. |
@@ -3324,7 +3289,7 @@ Los estados permitidos son **To Do** (actividad pendiente), **In Process** (acti
 | Soporte | Despliegue y pruebas | S2-T16A | Preparar compilación y publicación | Generar build reproducible y paquetes separados de frontend y API con configuración documentada. | 6 | No registrada | Rodrigo | To Review | Build y publicación registrados en recibos técnicos; no implica release GitHub aceptada. |
 | Soporte | Despliegue y pruebas | S2-T16B | Verificar publicación y restricciones | Contrastar HTTPS, hashes de archivos, permisos y rutas inexistentes contra la versión entregada. | 4 | No registrada | Rodrigo | To Review | Recibos de verificación disponibles; confirmar artefactos del corte revisado. |
 | Soporte | Actualización del informe | S2-T17A | Integrar documentación trazable | Actualizar capítulos, enlaces, índice y anexos preservando atribuciones y los cortes de evidencia. | 6 | No registrada | Alexander / Joaquín / Nayely / Rodrigo | To Review | Contenido integrado en el informe; nueva revisión académica pendiente. |
-| Soporte | Actualización del informe | S2-T17B | Revisar consistencia y exportación | Comprobar tablas, referencias, diagramas y formato de los entregables antes de aceptar la documentación. | 4 | No registrada | Alexander / Joaquín / Nayely / Rodrigo | To Do | La revisión docente identifica correcciones abiertas; no se presume aceptación. |
+| Soporte | Actualización del informe | S2-T17B | Revisar consistencia y exportación | Comprobar tablas, referencias, diagramas y formato de los entregables antes de aceptar la documentación. | 4 | No registrada | Alexander / Joaquín / Nayely / Rodrigo | To Review | Revisión técnica del 11/11: 22 diagramas, referencias y exportación comprobados. Falta aceptación del equipo; no acredita ejecución conjunta por los asignados históricos. |
 | Soporte | Evidencias de equipo | S2-T19A | Revisar evidencias de exposición | Contrastar exposición y evaluación individual con integrantes y entrega y registrar documentos faltantes. | 4 | No registrada | Equipo / Team Leader | To Review | Exposición y performance adjuntos; revisión del contenido por equipo pendiente. |
 | Soporte | Evidencias de equipo | S2-T19B | Adjuntar actas auténticas del sprint | Incorporar registros reales de planning, review y retrospectiva y actualizar la captura del tablero. | 4 | No registrada | Equipo / Team Leader | To Do | Actas y captura actual de estados no adjuntas; no reconstruir reuniones inexistentes. |
 
@@ -3377,7 +3342,7 @@ La versión publicada inicia sesión con correo y contraseña. El rol procede de
 
 ![Figura 5.9. Acceso del Cliente de Carga desde la landing publicada.](assets/images/chapter-05/azure-landing-client-es.jpg)
 
-Se conservan las capturas locales del 07/10/2026 para mostrar la programación y las acciones de monitoreo. Corresponden a la iteración previa de la interfaz; las cuatro imágenes anteriores muestran el acceso actual.
+Se conservan las capturas locales del 07/10/2026 para mostrar la programación y las acciones de monitoreo. Corresponden a la iteración previa de la interfaz; las cuatro imágenes anteriores muestran el acceso de la publicación de octubre.
 
 ![Figura 5.10. Revisión de los cuatro pasos de programación, recorrido local.](assets/images/chapter-05/tb1-frontend-scheduling.jpg)
 
@@ -3385,7 +3350,7 @@ Se conservan las capturas locales del 07/10/2026 para mostrar la programación y
 
 ![Figura 5.12. Historial térmico con lecturas de prueba, recorrido local.](assets/images/chapter-05/tb1-frontend-detail-es.jpg)
 
-La validación de las fuentes actuales registra **15 pruebas de dominio frontend**, **26 comprobaciones API locales**, compilación Vue/Vite con **222 módulos** y publicación compilada de .NET 10. El servicio Azure registra **12 comprobaciones HTTPS**. Los conteos local y cloud pertenecen a suites distintas y no se suman como pruebas únicas de cobertura.
+El recibo histórico de octubre registra **15 pruebas de dominio frontend**, **26 comprobaciones API locales** y un build Vue/Vite de **222 módulos**. La [revisión de fuentes del 10/11/2026](assets/evidence/review-corrections-2026-11-10.json) registra **18 pruebas frontend**, build de producción y **26 comprobaciones locales de la API independiente**. El recibo Azure conserva **12 comprobaciones HTTPS de octubre**; no valida el despliegue de las fuentes corregidas de noviembre. Las suites y fechas se mantienen separadas, sin sumarlas como cobertura única.
 
 Los recibos están en [validación del repositorio](assets/evidence/repository-verification.json), [API publicada](assets/evidence/azure-api-verification.json) y [recorridos de navegador](assets/evidence/azure-browser-verification.json). Las capturas cloud muestran el viewport efectivo del navegador utilizado; no certifican todos los tamaños ni el cumplimiento integral de WCAG.
 
@@ -3435,7 +3400,7 @@ La nueva landing y la primera aplicación frontend se publicaron en Azure. La pu
 | Cliente de Carga | [Iniciar sesión](https://friotracktb1bce6db1b.z22.web.core.windows.net/#/login?role=cargo-client&lang=es) | Credenciales verificadas por la API; consulta de envíos asignados. |
 | Supporting API | [Comprobar estado](https://friotrack-api-bce6db1b.azurewebsites.net/api/health) | Azure App Service, .NET 10 y Free F1. |
 
-El [registro estático](assets/evidence/azure-deployment.json), el [registro API](assets/evidence/azure-api-deployment.json) y la [comparación de archivos](assets/evidence/azure-file-verification.json) documentan los recursos, la fecha y los resultados. **34 archivos** de la publicación conjunta frontend/landing coincidieron con sus hashes locales; una ruta inexistente respondió HTTP 404. La validación posterior del repositorio frontend confirmó los **20 archivos** correspondientes a su propio build. El recibo conjunto no atribuye a `friotrack-landing/main` los cambios de entrada que todavía no están sincronizados allí.
+El [registro estático](assets/evidence/azure-deployment.json), el [registro API](assets/evidence/azure-api-deployment.json) y la [comparación de archivos](assets/evidence/azure-file-verification.json) documentan los recursos, la fecha y los resultados. **34 archivos** de la publicación conjunta frontend/landing coincidieron con sus hashes locales; una ruta inexistente respondió HTTP 404. La validación posterior del repositorio frontend confirmó los **20 archivos** correspondientes a su propio build. El recibo conjunto identifica los archivos desplegados en octubre. La sincronización posterior del repositorio independiente de landing está publicada como `0.1.0` en [`1de2988`](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-landing/commit/1de2988d4f2f7b829d99f0d3a3649ca36bac8adb); ese cambio de fuentes no constituye un nuevo recibo Azure.
 
 Las capturas 5.6–5.9 muestran la ejecución sobre las URLs públicas. La [guía de despliegue](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/blob/main/docs/azure-deployment.md) contiene los comandos de compilación, publicación y verificación. El sitio publica términos en el footer de ambas interfaces. Los correos iniciales son `coordinador@friotrack.app` y `cliente@friotrack.app`; sus contraseñas se entregan por separado y no se incorporan al informe público.
 
@@ -3466,7 +3431,7 @@ FríoTrack aborda la visibilidad del transporte refrigerado mediante programaci�
 
 La entrega incorpora la primera aplicación Vue/PrimeVue publicada en Azure y una landing actualizada que conduce al acceso correspondiente. El inicio de sesión valida correo y contraseña en ASP.NET Core. La consulta y los comandos se autorizan en el servidor, y la cuenta cliente recibe únicamente sus envíos y recursos relacionados. El cierre de sesión revoca el token.
 
-La validación registrada comprende 15 pruebas de dominio frontend, 26 comprobaciones locales de la API y 12 comprobaciones HTTPS del servicio publicado, además de compilación y comparación de archivos mediante SHA-256. Las capturas muestran el acceso y las vistas autenticadas sobre las URLs públicas. Estas comprobaciones permiten reproducir la revisión técnica; no miden adopción comercial, satisfacción ni reducción real de pérdidas.
+La revisión de fuentes del 10/11 registra 18 pruebas frontend y 26 comprobaciones locales de la API. Los recibos de octubre conservan sus 15 pruebas frontend, build de 222 módulos y 12 comprobaciones HTTPS, además de la comparación de archivos mediante SHA-256. Las capturas muestran el acceso y las vistas autenticadas de aquella publicación; no certifican el despliegue de las correcciones de noviembre. Estas comprobaciones permiten reproducir la revisión técnica; no miden adopción comercial, satisfacción ni reducción real de pérdidas.
 
 La arquitectura diferencia los contenedores actualmente desplegados del diseño posterior con EF Core y PostgreSQL. El servicio de apoyo utiliza un archivo JSON privado de una sola instancia. Las lecturas y coordenadas iniciales son datos de prueba; la recepción de sensores físicos, recuperación de contraseña, correo externo y Swagger del backend final continúan en el roadmap.
 
@@ -3478,7 +3443,7 @@ Completar la validación con usuarios de transporte refrigerado y clientes de ca
 
 Para la siguiente iteración, evolucionar la API hacia persistencia relacional con EF Core, transacciones para reservas, aislamiento por empresa y contratos OpenAPI. Integrar dispositivos solo después de validar su identidad, sus marcas de tiempo y la recepción de lecturas. Mantener visible la procedencia de datos de prueba mientras no exista telemetría real.
 
-Cerrar el receptor del formulario comercial, sincronizar en el repositorio independiente de landing la configuración publicada y repetir los recorridos de aceptación en ambos idiomas. Ampliar la revisión de accesibilidad y tamaños de pantalla a los controles y estados que aún no tienen evidencia completa.
+Cerrar el receptor del formulario comercial, desplegar las fuentes corregidas que ya están sincronizadas en los repositorios y repetir los recorridos de aceptación en ambos idiomas. Ampliar la revisión de accesibilidad y tamaños de pantalla a los controles y estados que aún no tienen evidencia completa.
 
 Conservar las actas de planificación, review y retrospectiva del sprint junto con las evidencias del equipo. Verificar que los enlaces institucionales del Anexo E permitan el acceso del docente.
 
@@ -3628,7 +3593,10 @@ La entrega se organiza según el enunciado de TB1, páginas 31–32. Los archivo
 
 | Record | Purpose |
 | --- | --- |
-| [Revisión de correcciones](assets/evidence/review-corrections-2026-11-10.json) | Alcance, comprobaciones locales y límites de esta revisión. |
+| [Revisión de diagramas y reporte](assets/evidence/report-review-2026-11-11.json) | Integración de 22 diagramas, fuentes, comprobaciones y límites de la revisión del 11/11. |
+| [Observaciones del docente](assets/annexes/correcciones-docente-2026-11-11.md) | Trazabilidad de correcciones documentales y pendientes del equipo. |
+| [Colaboración al corte del 11/11](assets/evidence/report-collaboration-2026-11-11.json) | Historial real previo a esta revisión, por autor y fecha. |
+| [Revisión de fuentes del 10/11](assets/evidence/review-corrections-2026-11-10.json) | Comprobaciones locales y límites de la revisión anterior. |
 | [Current commits](assets/evidence/current-commits.json) | Metadatos del nuevo informe y del frontend integrado. |
 | [Repository verification](assets/evidence/repository-verification.json) | Pruebas, compilación y correspondencia del build frontend. |
 | [Static deployment](assets/evidence/azure-deployment.json) | Publicación conjunta de frontend y landing. |

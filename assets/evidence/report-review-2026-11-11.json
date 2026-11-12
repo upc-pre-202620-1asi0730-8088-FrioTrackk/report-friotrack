@@ -1,0 +1,48 @@
+{
+  "reviewDate": "2026-11-11",
+  "timezone": "America/Lima",
+  "scope": "Approved chapter IV diagrams and report consistency; no new deployment",
+  "diagrams": {
+    "count": 22,
+    "eventStorming": 7,
+    "c4": 4,
+    "dddClasses": 5,
+    "erd": 6,
+    "integrationContracts": 13,
+    "targetTables": 17,
+    "targetForeignKeys": 27,
+    "nativeEditableFiles": 23
+  },
+  "cover": {
+    "changed": false,
+    "sha256": "995d56185eb499aa85e4f07782b31e1f522abdf9f777f2162bbfc3f3026f7add"
+  },
+  "limitations": [
+    "Typed DDD aggregates, relational persistence and physical telemetry remain target design.",
+    "Current team acceptance, planning minutes and contribution balance require actual team evidence.",
+    "Azure receipts retain their original October scope."
+  ],
+  "validation": {
+    "localReferencesChecked": 320,
+    "brokenLocalReferences": 0,
+    "stories": 43,
+    "gherkinScenarios": 86,
+    "architectureViews": 22,
+    "backlogRowsMatchingMarkdown": 58,
+    "coverMatchesPreviousGitVersion": true,
+    "sprint1Tasks": 8,
+    "sprint2Tasks": 50,
+    "teamAcceptanceNotInvented": true
+  },
+  "report": {
+    "renderedImages": 178,
+    "brokenImages": 0,
+    "pdfPages": 237,
+    "pdfBytes": 33784478,
+    "pdfSha256": "d057c43106ae5a9d42a3330be100f199ea83e65770b1b83b36f3cb6943d14223",
+    "author": "Alexander1Alexander2",
+    "publicPdfLinksChecked": 226,
+    "machineLocalPdfLinks": 0,
+    "visualReview": "Chapter IV, collaboration chart, planning and adjacent pages inspected from rendered PDF; cover preserved"
+  }
+}

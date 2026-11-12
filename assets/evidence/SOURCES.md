@@ -6,4 +6,12 @@
 - Diseño y material local anterior: artefactos del Capítulo IV y archivo de evidencias fechado en `archive/2026-10-07/`.
 - Requisitos de entrega: enunciado UPC 1ASI0730, periodo 202620, sección TB1 y estructura de Sprint 2.
 
+## Revisión del código fuente y del informe de noviembre
+
+- La [revisión del 10/11/2026](review-corrections-2026-11-10.json) documenta las correcciones de código y del informe: 18 pruebas frontend, compilación de producción y 26 comprobaciones locales del servicio independiente. No registra un nuevo despliegue en Azure.
+- El recibo [repository-verification.json](repository-verification.json) conserva el corte histórico de octubre: 15 pruebas de dominio frontend, 222 módulos compilados y 26 comprobaciones locales de la API. Los recibos Azure y sus 12 comprobaciones HTTPS pertenecen a ese despliegue anterior; no validan la revisión de noviembre en producción.
+- El [corte de colaboración del 11/11/2026](report-collaboration-2026-11-11.json) cuenta los 43 commits sin merges alcanzables desde `02022660eb5954dd0ead0ef5f33d39c1db45b02e`, agrupados por el nombre de autor registrado en Git. El [gráfico de autores y fechas](../images/chapter-05/report-collaboration-2026-11-11.png) conserva este corte reproducible; no incluye los commits de la corrección posterior ni sustituye la captura histórica del equipo.
+
+Las fechas de autor del gráfico se conservan tal como aparecen en los metadatos Git. Los conteos no acreditan por sí solos identidad, horas invertidas, revisión de tareas o una contribución equilibrada, y no se suman con los de otros productos.
+
 Las imágenes de datos operativos utilizan registros de prueba. Los recibos técnicos no sustituyen actas, exposición ni evaluación individual del equipo.

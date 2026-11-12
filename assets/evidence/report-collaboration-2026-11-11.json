@@ -1,0 +1,276 @@
+{
+  "snapshotDateLocal": "2026-11-11",
+  "timezone": "America/Lima",
+  "repository": "https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack",
+  "commitCut": "02022660eb5954dd0ead0ef5f33d39c1db45b02e",
+  "source": "git log --no-merges --reverse --format=%H%x09%aI%x09%an <commitCut>",
+  "countingRule": "All commits reachable from commitCut, excluding merge commits. Grouped by exact Git author name; dates retain the author metadata timezone.",
+  "totalNonMergeCommits": 43,
+  "authors": [
+    {
+      "name": "Alexander1Alexander2",
+      "commits": 16
+    },
+    {
+      "name": "rodrigoxd67",
+      "commits": 15
+    },
+    {
+      "name": "Eshnikeee",
+      "commits": 8
+    },
+    {
+      "name": "Macaxprogram29",
+      "commits": 4
+    }
+  ],
+  "dailyCounts": {
+    "2026-10-07": {
+      "Alexander1Alexander2": 0,
+      "rodrigoxd67": 2,
+      "Eshnikeee": 0,
+      "Macaxprogram29": 0
+    },
+    "2026-10-08": {
+      "Alexander1Alexander2": 10,
+      "rodrigoxd67": 11,
+      "Eshnikeee": 8,
+      "Macaxprogram29": 4
+    },
+    "2026-10-09": {
+      "Alexander1Alexander2": 0,
+      "rodrigoxd67": 2,
+      "Eshnikeee": 0,
+      "Macaxprogram29": 0
+    },
+    "2026-11-10": {
+      "Alexander1Alexander2": 6,
+      "rodrigoxd67": 0,
+      "Eshnikeee": 0,
+      "Macaxprogram29": 0
+    }
+  },
+  "commits": [
+    {
+      "sha": "ea4165bde57c9c2b8f604c0f84d73caac8e4955a",
+      "authoredAt": "2026-10-07T22:34:48-05:00",
+      "author": "rodrigoxd67"
+    },
+    {
+      "sha": "cf1a35ecf9033b690c6b2d2fe03d8fc351435f44",
+      "authoredAt": "2026-10-07T22:53:31-05:00",
+      "author": "rodrigoxd67"
+    },
+    {
+      "sha": "c28876cacc022a107a229ca6f64c1f5c1360903a",
+      "authoredAt": "2026-10-08T00:05:36-05:00",
+      "author": "rodrigoxd67"
+    },
+    {
+      "sha": "99fd0affce908afdc775d0affebd302bcf4433e0",
+      "authoredAt": "2026-10-08T11:37:30-05:00",
+      "author": "Alexander1Alexander2"
+    },
+    {
+      "sha": "c7104a7777fbeccb5a9e400e5fa0abb04505722d",
+      "authoredAt": "2026-10-08T11:38:42-05:00",
+      "author": "Alexander1Alexander2"
+    },
+    {
+      "sha": "7002256662edfd9f68d8357b9cfb4269c0a9173c",
+      "authoredAt": "2026-10-08T11:41:00-05:00",
+      "author": "Alexander1Alexander2"
+    },
+    {
+      "sha": "25166ff2d3850f9b86af7318bf8af9f7e8109f25",
+      "authoredAt": "2026-10-08T11:42:12-05:00",
+      "author": "Alexander1Alexander2"
+    },
+    {
+      "sha": "cc40dc1f6557d594114e6f3a8b591320f9520ddd",
+      "authoredAt": "2026-10-08T11:43:32-05:00",
+      "author": "Alexander1Alexander2"
+    },
+    {
+      "sha": "d692d426add4d92baef33cb4a02be585e8e3be97",
+      "authoredAt": "2026-10-08T11:44:30-05:00",
+      "author": "Alexander1Alexander2"
+    },
+    {
+      "sha": "bc257f749c99c5dcf678e8514d11cb914a332dc6",
+      "authoredAt": "2026-10-08T11:47:53-05:00",
+      "author": "Alexander1Alexander2"
+    },
+    {
+      "sha": "37a975a52afd0adc57e948f183140868695cd2c2",
+      "authoredAt": "2026-10-08T12:01:43-05:00",
+      "author": "Alexander1Alexander2"
+    },
+    {
+      "sha": "beeb64ab2b977d400bba1c41f548cb9b742ddea7",
+      "authoredAt": "2026-10-08T12:37:50-05:00",
+      "author": "Eshnikeee"
+    },
+    {
+      "sha": "61972c71a0ad7c3679281029077db6a223e7738c",
+      "authoredAt": "2026-10-08T12:43:42-05:00",
+      "author": "Eshnikeee"
+    },
+    {
+      "sha": "23ec62284fb98466ca8fa410f112b771ef97ece3",
+      "authoredAt": "2026-10-08T12:45:06-05:00",
+      "author": "Eshnikeee"
+    },
+    {
+      "sha": "67a91dcad658f64a0496343f76ca85b1770b91ff",
+      "authoredAt": "2026-10-08T12:46:41-05:00",
+      "author": "Eshnikeee"
+    },
+    {
+      "sha": "b33502af4c961a9ad0da334fbdec7cc041de5f9b",
+      "authoredAt": "2026-10-08T12:47:26-05:00",
+      "author": "Eshnikeee"
+    },
+    {
+      "sha": "e26fde7822b68acc23e551e33df48f42218af3de",
+      "authoredAt": "2026-10-08T12:57:38-05:00",
+      "author": "Eshnikeee"
+    },
+    {
+      "sha": "98acdb32970e5a2d77d1e9a1bc709f17fd3a38a1",
+      "authoredAt": "2026-10-08T13:39:18-05:00",
+      "author": "Macaxprogram29"
+    },
+    {
+      "sha": "9d93f8f613e93d71b17e02a8c34a3224fe82fbbd",
+      "authoredAt": "2026-10-08T13:41:20-05:00",
+      "author": "Macaxprogram29"
+    },
+    {
+      "sha": "7530bcc800b711dbd4de43d79cc0603dbff04500",
+      "authoredAt": "2026-10-08T13:42:48-05:00",
+      "author": "Macaxprogram29"
+    },
+    {
+      "sha": "3cc5e023893f00728f4a7d80ea836a7c0451247e",
+      "authoredAt": "2026-10-08T13:55:43-05:00",
+      "author": "Macaxprogram29"
+    },
+    {
+      "sha": "838d7195e442c0f54801ffb2e9038877911c6aa1",
+      "authoredAt": "2026-10-08T14:37:24-05:00",
+      "author": "rodrigoxd67"
+    },
+    {
+      "sha": "14f95fd50c81d9b9c0f84cd6aca3ae1f92278a64",
+      "authoredAt": "2026-10-08T14:42:50-05:00",
+      "author": "rodrigoxd67"
+    },
+    {
+      "sha": "fc0fcd53d29aa92457e52f553d5af430fecda225",
+      "authoredAt": "2026-10-08T14:49:38-05:00",
+      "author": "rodrigoxd67"
+    },
+    {
+      "sha": "c8f6f5bb2846e11175de13239b84c31dab338a97",
+      "authoredAt": "2026-10-08T14:52:10-05:00",
+      "author": "rodrigoxd67"
+    },
+    {
+      "sha": "dc393662aaba6f90152eef2693570fcca43d6245",
+      "authoredAt": "2026-10-08T14:58:54-05:00",
+      "author": "rodrigoxd67"
+    },
+    {
+      "sha": "b5f29fc8381eef9ad93a3d7fad4d901e5ec720cd",
+      "authoredAt": "2026-10-08T15:00:19-05:00",
+      "author": "rodrigoxd67"
+    },
+    {
+      "sha": "e986ca4ee91fe10d534df3d9425f17208df895b8",
+      "authoredAt": "2026-10-08T15:02:22-05:00",
+      "author": "rodrigoxd67"
+    },
+    {
+      "sha": "d525d9e34c6469488dca96042e610adbd6739b6d",
+      "authoredAt": "2026-10-08T15:16:56-05:00",
+      "author": "rodrigoxd67"
+    },
+    {
+      "sha": "c31473adbcf79c1bf9f79d6ce1866167eccfdb67",
+      "authoredAt": "2026-10-08T16:39:06-05:00",
+      "author": "Alexander1Alexander2"
+    },
+    {
+      "sha": "58752691c08a90ce27e2d2cf3c8ca0cb5b10565c",
+      "authoredAt": "2026-10-08T16:47:09-05:00",
+      "author": "Alexander1Alexander2"
+    },
+    {
+      "sha": "c216ca06517fca1c2496cf31b83e54c73eefe686",
+      "authoredAt": "2026-10-08T17:51:58-05:00",
+      "author": "Eshnikeee"
+    },
+    {
+      "sha": "369cc991c51dd2424aded38766728918bf27de71",
+      "authoredAt": "2026-10-08T18:18:11-05:00",
+      "author": "Eshnikeee"
+    },
+    {
+      "sha": "06144a7647cec13030e819eeb7288f482bc5bd91",
+      "authoredAt": "2026-10-08T23:17:51-05:00",
+      "author": "rodrigoxd67"
+    },
+    {
+      "sha": "b73437e8112c20791a4ed3b75ec2f29d4aa5a5f2",
+      "authoredAt": "2026-10-08T23:19:03-05:00",
+      "author": "rodrigoxd67"
+    },
+    {
+      "sha": "f5d4cb83d77c5106e738d0a7bed324b1324ea2f7",
+      "authoredAt": "2026-10-09T03:00:07-05:00",
+      "author": "rodrigoxd67"
+    },
+    {
+      "sha": "1e44f6267c3c8ffcbb4128aa7e3be43faa073273",
+      "authoredAt": "2026-10-09T03:23:53-05:00",
+      "author": "rodrigoxd67"
+    },
+    {
+      "sha": "3a44f8d828bd9235d53322c831f9e20d587fac8f",
+      "authoredAt": "2026-11-10T22:13:25-05:00",
+      "author": "Alexander1Alexander2"
+    },
+    {
+      "sha": "426c82c4eb77b51c258cb397dc930f89a047ffb7",
+      "authoredAt": "2026-11-10T22:15:13-05:00",
+      "author": "Alexander1Alexander2"
+    },
+    {
+      "sha": "cf5773a7ccb3e64e52bd266d90eea7996b94e5a9",
+      "authoredAt": "2026-11-10T22:46:27-05:00",
+      "author": "Alexander1Alexander2"
+    },
+    {
+      "sha": "9f05f04f7a35f3269f0428430058c0f919b5a64a",
+      "authoredAt": "2026-11-10T22:46:28-05:00",
+      "author": "Alexander1Alexander2"
+    },
+    {
+      "sha": "36d328220060b08fd030ec161190f1852fedb2a4",
+      "authoredAt": "2026-11-10T22:54:01-05:00",
+      "author": "Alexander1Alexander2"
+    },
+    {
+      "sha": "02022660eb5954dd0ead0ef5f33d39c1db45b02e",
+      "authoredAt": "2026-11-10T22:58:40-05:00",
+      "author": "Alexander1Alexander2"
+    }
+  ],
+  "limitations": [
+    "A Git author name is metadata, not proof of identity or effort.",
+    "These figures concern the report repository only and do not measure other products.",
+    "The snapshot predates the 11 November report correction commits; it is not a live counter.",
+    "Commit count does not establish balanced collaboration, task acceptance or academic performance."
+  ]
+}
