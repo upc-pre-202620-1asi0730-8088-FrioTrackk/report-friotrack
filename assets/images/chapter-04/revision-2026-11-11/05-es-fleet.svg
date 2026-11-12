@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1814" height="495" viewBox="0 0 1814 495">
+<defs><pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#dfdfdf" stroke-width=".7"/></pattern><filter id="paper-shadow" x="-10%" y="-10%" width="125%" height="130%"><feDropShadow dx="1" dy="3" stdDeviation="2" flood-color="#000000" flood-opacity=".12"/></filter>
+<marker id="arrow" viewBox="0 0 12 10" refX="11" refY="5" markerWidth="10" markerHeight="9" orient="auto-start-reverse"><path d="M0 0 L12 5 L0 10Z" fill="#444"/></marker><marker id="open" viewBox="0 0 12 10" refX="11" refY="5" markerWidth="10" markerHeight="9" orient="auto-start-reverse"><path d="M0 0 L12 5 L0 10" fill="none" stroke="#333"/></marker><marker id="diamond" viewBox="0 0 12 10" refX="1" refY="5" markerWidth="12" markerHeight="10" orient="auto-start-reverse"><path d="M0 5 L6 0 L12 5 L6 10Z" fill="#222"/></marker><marker id="triangle" viewBox="0 0 12 10" refX="11" refY="5" markerWidth="12" markerHeight="10" orient="auto-start-reverse"><path d="M0 0 L12 5 L0 10Z" fill="white" stroke="#333"/></marker></defs>
+<rect width="100%" height="100%" fill="#f3f3f3"/>
+<rect width="100%" height="100%" fill="url(#grid)"/>
+<rect x="30" y="83" width="1754" height="350" rx="90" fill="none" stroke="#4b4b4b" stroke-width="1.1"/>
+<text x="907.0" y="67.28" font-family="Arial,sans-serif" font-size="28" font-weight="400" text-anchor="middle" fill="#222">Fleet &amp; Resource Management</text>
+<rect x="85.0" y="136" width="112.25" height="112.25" rx="0" fill="#fff9a4" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="141.125" y="188.215" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Coordinador</text>
+<text x="141.125" y="209.125" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">logístico</text>
+<rect x="224.25" y="136" width="112.25" height="112.25" rx="0" fill="#9fe5f9" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="280.375" y="188.215" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Register</text>
+<text x="280.375" y="209.125" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Vehicle</text>
+<rect x="363.5" y="136" width="112.25" height="112.25" rx="0" fill="#ffe86b" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="419.625" y="188.215" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Vehicle</text>
+<text x="419.625" y="209.125" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Aggregate</text>
+<rect x="502.75" y="136" width="112.25" height="112.25" rx="0" fill="#ffb373" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="558.875" y="188.215" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Vehicle</text>
+<text x="558.875" y="209.125" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Registered</text>
+<rect x="642.0" y="136" width="112.25" height="112.25" rx="0" fill="#68d990" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="698.125" y="188.215" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Catálogo de</text>
+<text x="698.125" y="209.125" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">unidades</text>
+<rect x="781.25" y="136" width="112.25" height="112.25" rx="0" fill="#9fe5f9" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="837.375" y="188.215" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Register</text>
+<text x="837.375" y="209.125" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Driver</text>
+<rect x="920.5" y="136" width="112.25" height="112.25" rx="0" fill="#ffe86b" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="976.625" y="188.215" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Driver</text>
+<text x="976.625" y="209.125" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Aggregate</text>
+<rect x="1059.75" y="136" width="112.25" height="112.25" rx="0" fill="#ffb373" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1115.875" y="188.215" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Driver</text>
+<text x="1115.875" y="209.125" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Registered</text>
+<rect x="1199.0" y="136" width="112.25" height="112.25" rx="0" fill="#68d990" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1255.125" y="188.215" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Directorio de</text>
+<text x="1255.125" y="209.125" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">conductores</text>
+<rect x="1338.25" y="136" width="112.25" height="112.25" rx="0" fill="#eda4df" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1394.375" y="188.215" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Schedule</text>
+<text x="1394.375" y="209.125" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Shipment</text>
+<rect x="1477.5" y="136" width="112.25" height="112.25" rx="0" fill="#9fe5f9" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1533.625" y="188.215" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Reserve</text>
+<text x="1533.625" y="209.125" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Resources</text>
+<rect x="1616.75" y="136" width="112.25" height="112.25" rx="0" fill="#ffe86b" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1672.875" y="177.76" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Fleet</text>
+<text x="1672.875" y="198.67" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Allocation</text>
+<text x="1672.875" y="219.57999999999998" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Aggregate</text>
+<rect x="154.625" y="282.75" width="112.25" height="112.25" rx="0" fill="#ffb373" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="210.75" y="334.965" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Resources</text>
+<text x="210.75" y="355.875" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Reserved</text>
+<rect x="293.875" y="282.75" width="112.25" height="112.25" rx="0" fill="#eda4df" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="350.0" y="334.965" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Confirm</text>
+<text x="350.0" y="355.875" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Schedule</text>
+<rect x="433.125" y="282.75" width="112.25" height="112.25" rx="0" fill="#9fe5f9" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="489.25" y="334.965" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Assign</text>
+<text x="489.25" y="355.875" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Sensor</text>
+<rect x="572.375" y="282.75" width="112.25" height="112.25" rx="0" fill="#ffe86b" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="628.5" y="334.965" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Sensor</text>
+<text x="628.5" y="355.875" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Aggregate</text>
+<rect x="711.625" y="282.75" width="112.25" height="112.25" rx="0" fill="#ffb373" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="767.75" y="334.965" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Sensor</text>
+<text x="767.75" y="355.875" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Assigned</text>
+<rect x="850.875" y="282.75" width="112.25" height="112.25" rx="0" fill="#68d990" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="907.0" y="324.51" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Inventario</text>
+<text x="907.0" y="345.42" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">de</text>
+<text x="907.0" y="366.33000000000004" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">dispositivos</text>
+<rect x="990.125" y="282.75" width="112.25" height="112.25" rx="0" fill="#eda4df" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1046.25" y="334.965" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Delivered /</text>
+<text x="1046.25" y="355.875" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Cancelled</text>
+<rect x="1129.375" y="282.75" width="112.25" height="112.25" rx="0" fill="#f29ce4" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1185.5" y="307.75" font-family="Arial,sans-serif" font-size="15" font-weight="400" text-anchor="middle" fill="#222">Al cerrar el</text>
+<text x="1185.5" y="326.2" font-family="Arial,sans-serif" font-size="15" font-weight="400" text-anchor="middle" fill="#222">envío</text>
+<text x="1185.5" y="344.65" font-family="Arial,sans-serif" font-size="15" font-weight="400" text-anchor="middle" fill="#222">Liberar</text>
+<text x="1185.5" y="363.09999999999997" font-family="Arial,sans-serif" font-size="15" font-weight="400" text-anchor="middle" fill="#222">reserva</text>
+<text x="1185.5" y="381.54999999999995" font-family="Arial,sans-serif" font-size="15" font-weight="400" text-anchor="middle" fill="#222">existente</text>
+<rect x="1268.625" y="282.75" width="112.25" height="112.25" rx="0" fill="#9fe5f9" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1324.75" y="334.965" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Release</text>
+<text x="1324.75" y="355.875" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Resources</text>
+<rect x="1407.875" y="282.75" width="112.25" height="112.25" rx="0" fill="#ffb373" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1464.0" y="334.965" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Resources</text>
+<text x="1464.0" y="355.875" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Released</text>
+<rect x="1547.125" y="282.75" width="112.25" height="112.25" rx="0" fill="#68d990" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1603.25" y="335.425" font-family="Arial,sans-serif" font-size="15" font-weight="400" text-anchor="middle" fill="#222">Disponibilidad</text>
+<text x="1603.25" y="353.875" font-family="Arial,sans-serif" font-size="15" font-weight="400" text-anchor="middle" fill="#222">de recursos</text>
+<text x="38" y="470.775" font-family="Arial,sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#555">FríoTrack · 4.6.1 · Apoyo · Diseño objetivo</text>
+</svg>

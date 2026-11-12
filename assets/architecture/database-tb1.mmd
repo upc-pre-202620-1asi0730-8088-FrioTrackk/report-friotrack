@@ -1,4 +1,6 @@
 erDiagram
+  %% Target PostgreSQL logical overview; this is not an executed migration.
+  %% Full varchar lengths and numeric precision/scale are in backend-model-tb1.json and the per-context ERDs.
   organizations {
     uuid id PK "PK"
     varchar name "proposed field"
@@ -13,14 +15,14 @@ erDiagram
     varchar preferred_language "proposed field"
     boolean enabled "proposed field"
     integer failed_attempts "proposed field"
-    datetime locked_until "nullable"
+    timestamptz locked_until "nullable"
   }
   password_reset_tokens {
     uuid id PK "PK"
     uuid user_id FK "FK"
     varchar token_hash UK "UK"
-    datetime expires_at "proposed field"
-    datetime used_at "nullable"
+    timestamptz expires_at "proposed field"
+    timestamptz used_at "nullable"
   }
   vehicles {
     uuid id PK "PK"
@@ -47,10 +49,10 @@ erDiagram
     uuid shipment_id FK "FK UK"
     uuid vehicle_id FK "FK"
     uuid driver_id FK "FK"
-    datetime reserved_from "proposed field"
-    datetime reserved_until "proposed field"
+    timestamptz reserved_from "proposed field"
+    timestamptz reserved_until "proposed field"
     varchar status "proposed field"
-    datetime released_at "nullable"
+    timestamptz released_at "nullable"
   }
   shipments {
     uuid id PK "PK"
@@ -67,8 +69,8 @@ erDiagram
     numeric min_humidity_pct "proposed field"
     numeric max_humidity_pct "proposed field"
     integer tolerance_minutes "proposed field"
-    datetime planned_departure "proposed field"
-    datetime estimated_arrival "proposed field"
+    timestamptz planned_departure "proposed field"
+    timestamptz estimated_arrival "proposed field"
     varchar status "proposed field"
     bigint version "proposed field"
   }
@@ -80,7 +82,7 @@ erDiagram
     varchar from_status "nullable"
     varchar to_status "nullable"
     text note "proposed field"
-    datetime recorded_at "proposed field"
+    timestamptz recorded_at "proposed field"
   }
   shipment_monitorings {
     uuid id PK "PK"
@@ -92,9 +94,9 @@ erDiagram
     integer tolerance_minutes "proposed field"
     integer max_silence_minutes "proposed field"
     varchar signal_status "proposed field"
-    datetime last_reading_at "nullable"
-    datetime started_at "proposed field"
-    datetime stopped_at "nullable"
+    timestamptz last_reading_at "nullable"
+    timestamptz started_at "proposed field"
+    timestamptz stopped_at "nullable"
   }
   sensor_readings {
     bigint id PK "PK"
@@ -102,14 +104,14 @@ erDiagram
     numeric temperature_c "proposed field"
     numeric humidity_pct "proposed field"
     boolean within_both_ranges "proposed field"
-    datetime recorded_at "proposed field"
+    timestamptz recorded_at "proposed field"
   }
   position_reports {
     bigint id PK "PK"
     uuid monitoring_id FK "FK"
     numeric latitude "proposed field"
     numeric longitude "proposed field"
-    datetime recorded_at "proposed field"
+    timestamptz recorded_at "proposed field"
   }
   alerts {
     uuid id PK "PK"
@@ -118,9 +120,9 @@ erDiagram
     varchar type "proposed field"
     varchar severity "proposed field"
     varchar status "proposed field"
-    datetime opened_at "proposed field"
-    datetime acknowledged_at "nullable"
-    datetime resolved_at "nullable"
+    timestamptz opened_at "proposed field"
+    timestamptz acknowledged_at "nullable"
+    timestamptz resolved_at "nullable"
   }
   corrective_actions {
     uuid id PK "PK"
@@ -128,7 +130,7 @@ erDiagram
     uuid registered_by FK "FK"
     text comment "proposed field"
     boolean notify_client "proposed field"
-    datetime registered_at "proposed field"
+    timestamptz registered_at "proposed field"
   }
   notifications {
     uuid id PK "PK"
@@ -136,21 +138,21 @@ erDiagram
     uuid shipment_id FK "FK"
     uuid alert_id FK "FK nullable"
     varchar kind "proposed field"
-    datetime created_at "proposed field"
-    datetime read_at "nullable"
+    timestamptz created_at "proposed field"
+    timestamptz read_at "nullable"
   }
   incidents {
     uuid id PK "PK"
     uuid shipment_id FK "FK"
     uuid registered_by FK "FK"
     text description "proposed field"
-    datetime registered_at "proposed field"
+    timestamptz registered_at "proposed field"
   }
   thermal_reports {
     uuid id PK "PK"
     uuid shipment_id FK "FK"
     uuid generated_by FK "FK"
-    datetime generated_at "proposed field"
+    timestamptz generated_at "proposed field"
     text file_path "proposed field"
     jsonb summary "proposed field"
   }

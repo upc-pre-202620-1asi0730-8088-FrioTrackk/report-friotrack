@@ -20,7 +20,9 @@
       ],
       "methods": [
         "+ rename(name: String): void"
-      ]
+      ],
+      "domainRole": "Aggregate Root",
+      "repository": "IOrganizationRepository"
     },
     {
       "name": "UserAccount",
@@ -79,10 +81,13 @@
         }
       ],
       "methods": [
-        "+ authenticate(password: String): Boolean",
-        "+ changePassword(password: String): void",
-        "+ updateProfile(name, language): void"
-      ]
+        "+ ensureActive(at): void",
+        "+ changePassword(newHash: String): void",
+        "+ updateProfile(name, language): void",
+        "+ registerFailedAttempt(at): void"
+      ],
+      "domainRole": "Aggregate Root",
+      "repository": "IUserAccountRepository"
     },
     {
       "name": "PasswordResetToken",
@@ -118,7 +123,9 @@
       "methods": [
         "+ isValid(at: DateTimeOffset): Boolean",
         "+ markUsed(at: DateTimeOffset): void"
-      ]
+      ],
+      "domainRole": "Entity",
+      "aggregateOwner": "UserAccount"
     },
     {
       "name": "Vehicle",
@@ -152,10 +159,12 @@
         }
       ],
       "methods": [
-        "+ isAvailable(from, until): Boolean",
         "+ changeCapacity(tons: Decimal): void",
+        "+ ensureEnabled(): void",
         "+ disable(): void"
-      ]
+      ],
+      "domainRole": "Aggregate Root",
+      "repository": "IVehicleRepository"
     },
     {
       "name": "Driver",
@@ -189,9 +198,11 @@
         }
       ],
       "methods": [
-        "+ isAvailable(from, until): Boolean",
+        "+ ensureEnabled(): void",
         "+ disable(): void"
-      ]
+      ],
+      "domainRole": "Aggregate Root",
+      "repository": "IDriverRepository"
     },
     {
       "name": "Sensor",
@@ -220,9 +231,12 @@
         }
       ],
       "methods": [
-        "+ assign(vehicleId: UUID): void",
+        "+ assignToVehicle(vehicleId: UUID): void",
+        "+ unassign(): void",
         "+ disable(): void"
-      ]
+      ],
+      "domainRole": "Aggregate Root",
+      "repository": "ISensorRepository"
     },
     {
       "name": "FleetAllocation",
@@ -273,7 +287,9 @@
       "methods": [
         "+ reserve(): void",
         "+ release(at: DateTimeOffset): void"
-      ]
+      ],
+      "domainRole": "Aggregate Root",
+      "repository": "IFleetAllocationRepository"
     },
     {
       "name": "Shipment",
@@ -372,12 +388,14 @@
         }
       ],
       "methods": [
-        "+ schedule(resources, client): void",
+        "+ schedule(): void",
         "+ startTransit(): void",
         "+ markDelivered(): void",
         "+ cancel(reason: String): void",
         "+ updateRange(range: ThermalRange): void"
-      ]
+      ],
+      "domainRole": "Aggregate Root",
+      "repository": "IShipmentRepository"
     },
     {
       "name": "ShipmentHistoryEvent",
@@ -425,7 +443,9 @@
           "flags": ""
         }
       ],
-      "methods": []
+      "methods": [],
+      "domainRole": "Entity",
+      "aggregateOwner": "Shipment"
     },
     {
       "name": "ShipmentMonitoring",
@@ -494,11 +514,14 @@
         }
       ],
       "methods": [
-        "+ start(range: ThermalRange): void",
-        "+ recordReading(reading): void",
+        "+ start(range: MonitoredRange): void",
+        "+ recordReading(reading: SensorReading): void",
+        "+ recordPosition(position: PositionReport): void",
         "+ detectCommunicationGap(at): void",
         "+ stop(at: DateTimeOffset): void"
-      ]
+      ],
+      "domainRole": "Aggregate Root",
+      "repository": "IShipmentMonitoringRepository"
     },
     {
       "name": "SensorReading",
@@ -537,8 +560,10 @@
         }
       ],
       "methods": [
-        "+ evaluate(range: ThermalRange): Boolean"
-      ]
+        "+ evaluate(range: MonitoredRange): Boolean"
+      ],
+      "domainRole": "Entity",
+      "aggregateOwner": "ShipmentMonitoring"
     },
     {
       "name": "PositionReport",
@@ -571,7 +596,9 @@
           "flags": ""
         }
       ],
-      "methods": []
+      "methods": [],
+      "domainRole": "Entity",
+      "aggregateOwner": "ShipmentMonitoring"
     },
     {
       "name": "Alert",
@@ -626,8 +653,10 @@
       ],
       "methods": [
         "+ acknowledge(action: CorrectiveAction): void",
-        "+ resolveWithNormalReading(reading): void"
-      ]
+        "+ resolve(evidence: RecoveryEvidence): void"
+      ],
+      "domainRole": "Aggregate Root",
+      "repository": "IAlertRepository"
     },
     {
       "name": "CorrectiveAction",
@@ -665,7 +694,9 @@
           "flags": ""
         }
       ],
-      "methods": []
+      "methods": [],
+      "domainRole": "Entity",
+      "aggregateOwner": "Alert"
     },
     {
       "name": "Notification",
@@ -710,7 +741,9 @@
       ],
       "methods": [
         "+ markRead(at: DateTimeOffset): void"
-      ]
+      ],
+      "domainRole": "Aggregate Root",
+      "repository": "INotificationRepository"
     },
     {
       "name": "Incident",
@@ -743,7 +776,9 @@
           "flags": ""
         }
       ],
-      "methods": []
+      "methods": [],
+      "domainRole": "Aggregate Root",
+      "repository": "IIncidentRepository"
     },
     {
       "name": "ThermalReport",
@@ -782,8 +817,10 @@
         }
       ],
       "methods": [
-        "+ generateSnapshot(shipment): void"
-      ]
+        "+ generateSnapshot(shipmentId: UUID): void"
+      ],
+      "domainRole": "Aggregate Root",
+      "repository": "IThermalReportRepository"
     }
   ],
   "relations": [
@@ -984,9 +1021,11 @@
     "Scheduling creates shipment and reservation atomically; active vehicle/driver reservations cannot overlap.",
     "Organization/resource permissions and assigned client must be checked by future server, never browser alone.",
     "DRAFT has no reservation; SCHEDULED -> IN_TRANSIT -> DELIVERED; cancellation from DRAFT/SCHEDULED releases resources (US34). TB1 API only permits scheduled cancellation; persisted DRAFT remains planned design.",
-    "Acknowledgement preserves an open excursion; a later normal reading in BOTH ranges resolves it.",
-    "Communication gap uses configured maxSilenceMinutes; delivered/cancelled shipments stop monitoring.",
-    "Database relation design only. The supporting JSON API exists; this relational target does not claim executed migrations, PostgreSQL or a compiled UML artifact."
+    "Acknowledgement preserves an open excursion. Thermal recovery requires a later valid reading in BOTH ranges; restoring communication only resolves a signal-loss alert.",
+    "Communication gap uses configured maxSilenceMinutes. SignalRestored requires recent valid communication; stale readings do not demonstrate current recovery. Delivery stops monitoring; cancellation is only allowed before transit.",
+    "Database relation design only. The supporting JSON API exists; this relational target does not claim executed migrations, PostgreSQL or a compiled UML artifact.",
+    "Sensor is an independent Aggregate Root with ISensorRepository. It may exist without an assigned vehicle; vehicle_id is an optional identity reference, not Vehicle ownership.",
+    "NotificationRead requires explicit action by the authorized recipient. ShipmentDelivered enables a report request; it does not generate the report automatically."
   ],
   "frontEndSources": [
     "src/shipment-management/domain/shipment-policy.js",
@@ -1010,5 +1049,66 @@
     "Fleet and Resources",
     "Alert and Reporting",
     "IAM"
-  ]
+  ],
+  "reviewedAt": "2026-11-11",
+  "domainModelSource": "chapter-04/fuentes/12-uml-shipment.json through 16-uml-iam.json",
+  "aggregateRoots": [
+    "Organization",
+    "UserAccount",
+    "Vehicle",
+    "Driver",
+    "Sensor",
+    "FleetAllocation",
+    "Shipment",
+    "ShipmentMonitoring",
+    "Alert",
+    "Notification",
+    "Incident",
+    "ThermalReport"
+  ],
+  "domainValueObjects": [
+    {
+      "id": "ThermalRange",
+      "attributes": [
+        "- minTempC: Decimal",
+        "- maxTempC: Decimal",
+        "- minHumidityPct: Decimal",
+        "- maxHumidityPct: Decimal",
+        "- toleranceMinutes: Integer"
+      ],
+      "methods": [
+        "+ contains(tempC, humidityPct): Boolean"
+      ]
+    },
+    {
+      "id": "MonitoredRange",
+      "attributes": [
+        "- minTempC: Decimal",
+        "- maxTempC: Decimal",
+        "- minHumidityPct: Decimal",
+        "- maxHumidityPct: Decimal",
+        "- toleranceMinutes: Integer"
+      ],
+      "methods": [
+        "+ contains(tempC, humidityPct): Boolean"
+      ]
+    },
+    {
+      "id": "RecoveryEvidence",
+      "attributes": [
+        "- readingId: Int64",
+        "- shipmentId: UUID",
+        "- recordedAt: DateTimeOffset",
+        "- signalRestored: Boolean",
+        "- withinBothRanges: Boolean"
+      ],
+      "methods": [
+        "+ resolves(type, openedAt): Boolean"
+      ]
+    }
+  ],
+  "domainEvents": {
+    "SignalLost": "No recent valid sensor communication; preserves the timestamp of the last known reading.",
+    "SignalRestored": "A recent valid reading restores communication; it does not prove thermal recovery."
+  }
 }

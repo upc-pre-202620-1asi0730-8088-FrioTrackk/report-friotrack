@@ -1,0 +1,233 @@
+{
+  "id": "18-erd-shipment",
+  "section": "4.8.1",
+  "title": "FríoTrack · ERD · Shipment Management · Core",
+  "subtitle": "Esquema objetivo PostgreSQL · columnas completas y claves de referencia; no se acredita despliegue de base de datos.",
+  "width": 2100,
+  "height": 1240,
+  "legend": "PK primaria · FK foránea · UK única · nullable opcional · flecha FK → PK · multiplicidades junto a cada extremo",
+  "notes": [
+    "Proyección relacional objetivo PostgreSQL: no constituye migración ejecutada ni el almacén JSON actual.",
+    "Las claves de otros contextos son referencias por ID. Una FK de persistencia no define propiedad de un agregado."
+  ],
+  "nodes": [
+    {
+      "id": "Shipment",
+      "kind": "table",
+      "label": "shipments",
+      "x": 60,
+      "y": 170,
+      "w": 650,
+      "h": 474,
+      "stereotype": "Shipment",
+      "attributes": [
+        "id: uuid [PK]",
+        "code: varchar(20) [UK]",
+        "organization_id: uuid [FK]",
+        "coordinator_id: uuid [FK]",
+        "client_id: uuid [FK]",
+        "cargo: varchar(160)",
+        "weight_tons: numeric(10,3)",
+        "origin: varchar(100)",
+        "destination: varchar(100)",
+        "min_temp_c: numeric(5,2)",
+        "max_temp_c: numeric(5,2)",
+        "min_humidity_pct: numeric(5,2)",
+        "max_humidity_pct: numeric(5,2)",
+        "tolerance_minutes: integer",
+        "planned_departure: timestamptz",
+        "estimated_arrival: timestamptz",
+        "status: varchar(16)",
+        "version: bigint"
+      ]
+    },
+    {
+      "id": "ShipmentHistoryEvent",
+      "kind": "table",
+      "label": "shipment_history",
+      "x": 900,
+      "y": 170,
+      "w": 570,
+      "h": 274,
+      "stereotype": "Shipment",
+      "attributes": [
+        "id: uuid [PK]",
+        "shipment_id: uuid [FK]",
+        "actor_id: uuid [FK]",
+        "action: varchar(40)",
+        "from_status: varchar(16) [nullable]",
+        "to_status: varchar(16) [nullable]",
+        "note: text",
+        "recorded_at: timestamptz"
+      ]
+    },
+    {
+      "id": "Organization",
+      "kind": "external",
+      "label": "organizations",
+      "x": 1630,
+      "y": 170,
+      "w": 400,
+      "h": 145,
+      "stereotype": "Tabla de otro contexto",
+      "body": [
+        "Referencia externa · IAM",
+        "PK id: uuid"
+      ]
+    },
+    {
+      "id": "UserAccount",
+      "kind": "external",
+      "label": "users",
+      "x": 1630,
+      "y": 630,
+      "w": 400,
+      "h": 145,
+      "stereotype": "Tabla de otro contexto",
+      "body": [
+        "Referencia externa · IAM",
+        "PK id: uuid"
+      ]
+    },
+    {
+      "id": "PanelNote",
+      "kind": "note",
+      "label": "Reglas y límites",
+      "x": 60,
+      "y": 1030,
+      "w": 1980,
+      "h": 138,
+      "body": [
+        "Rango: -50≤min_temp_c<max_temp_c≤50;0≤min_humidity_pct<max_humidity_pct≤100.",
+        "planned_departure<estimated_arrival;weight_tons>0. La reserva transaccional pertenece a Fleet."
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "Shipment",
+      "target": "Organization",
+      "label": "organization_id → id",
+      "sourcePort": "top",
+      "targetPort": "top",
+      "points": [
+        [
+          385,
+          125
+        ],
+        [
+          1830,
+          125
+        ]
+      ],
+      "endArrow": "open",
+      "sourceLabel": "0..*",
+      "targetLabel": "1"
+    },
+    {
+      "source": "Shipment",
+      "target": "UserAccount",
+      "label": "coordinator_id → id",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "points": [
+        [
+          1510,
+          572.9
+        ],
+        [
+          1510,
+          610
+        ],
+        [
+          1550,
+          610
+        ],
+        [
+          1550,
+          700
+        ],
+        [
+          1550,
+          702.5
+        ]
+      ],
+      "endArrow": "open",
+      "sourceLabel": "0..*",
+      "targetLabel": "1",
+      "sourceOffset": 0.85
+    },
+    {
+      "source": "Shipment",
+      "target": "UserAccount",
+      "label": "client_id → id",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "points": [
+        [
+          1510,
+          501.79999999999995
+        ],
+        [
+          1510,
+          570
+        ],
+        [
+          1550,
+          570
+        ],
+        [
+          1550,
+          700
+        ],
+        [
+          1550,
+          702.5
+        ]
+      ],
+      "endArrow": "open",
+      "sourceLabel": "0..*",
+      "targetLabel": "1",
+      "sourceOffset": 0.7
+    },
+    {
+      "source": "ShipmentHistoryEvent",
+      "target": "Shipment",
+      "label": "shipment_id → id",
+      "sourcePort": "left",
+      "targetPort": "right",
+      "points": [],
+      "endArrow": "open",
+      "sourceLabel": "0..*",
+      "targetLabel": "1"
+    },
+    {
+      "source": "ShipmentHistoryEvent",
+      "target": "UserAccount",
+      "label": "actor_id → id",
+      "sourcePort": "right",
+      "targetPort": "top",
+      "points": [
+        [
+          1540,
+          307.0
+        ],
+        [
+          1540,
+          335
+        ],
+        [
+          1540,
+          585
+        ],
+        [
+          1830,
+          585
+        ]
+      ],
+      "endArrow": "open",
+      "sourceLabel": "0..*",
+      "targetLabel": "1"
+    }
+  ]
+}

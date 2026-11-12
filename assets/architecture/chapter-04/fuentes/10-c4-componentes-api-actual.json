@@ -1,0 +1,293 @@
+{
+  "id": "10-c4-componentes-api-actual",
+  "section": "4.6.4",
+  "title": "FríoTrack · C4 nivel 3 · API disponible",
+  "subtitle": "Alcance: Supporting API · Componentes y contratos comprobados en el código fuente revisado",
+  "width": 1800,
+  "height": 1310,
+  "legend": "SPA y almacén: contenedores propios fuera del alcance API · Nota gris: composición · Flecha discontinua: inyección",
+  "notes": [
+    "WorkspaceCommands procesa objetos JSON; no representa todavía el modelo de agregados DDD tipados.",
+    "Esta vista describe el código revisado; no acredita un nuevo despliegue Azure."
+  ],
+  "nodes": [
+    {
+      "id": "api-boundary",
+      "kind": "boundary",
+      "label": "Supporting API · ASP.NET Core 10 / C#",
+      "body": [],
+      "x": 320,
+      "y": 125,
+      "w": 1440,
+      "h": 910
+    },
+    {
+      "id": "spa",
+      "kind": "container",
+      "label": "SPA",
+      "body": [
+        "[Contenedor fuera del alcance API]",
+        "Vue 3 / fetch",
+        "Utiliza el contrato REST."
+      ],
+      "x": 40,
+      "y": 225,
+      "w": 220,
+      "h": 180
+    },
+    {
+      "id": "http",
+      "kind": "component",
+      "label": "WorkspaceEndpoints",
+      "body": [
+        "[Componente · ASP.NET Core]",
+        "Mapea health, auth, workspace y commands.",
+        "Extrae autorización y JSON."
+      ],
+      "x": 375,
+      "y": 220,
+      "w": 350,
+      "h": 170
+    },
+    {
+      "id": "errors",
+      "kind": "component",
+      "label": "ApiErrorMiddleware",
+      "body": [
+        "[Componente · ASP.NET Core]",
+        "Convierte ApiError / JSON inválido en respuestas HTTP."
+      ],
+      "x": 375,
+      "y": 460,
+      "w": 350,
+      "h": 160
+    },
+    {
+      "id": "program",
+      "kind": "note",
+      "label": "Composición · Program.cs",
+      "body": [
+        "Inyecta servicios y adaptadores.",
+        "Configura CORS, pipeline y rate limit de autenticación."
+      ],
+      "x": 375,
+      "y": 735,
+      "w": 350,
+      "h": 160
+    },
+    {
+      "id": "service",
+      "kind": "component",
+      "label": "WorkspaceService",
+      "body": [
+        "[Componente · C#]",
+        "Sesión, visibilidad y casos de uso.",
+        "Serializa operaciones del workspace."
+      ],
+      "x": 825,
+      "y": 220,
+      "w": 380,
+      "h": 170
+    },
+    {
+      "id": "commands",
+      "kind": "component",
+      "label": "WorkspaceCommands",
+      "body": [
+        "[Componente · C# / JsonObject]",
+        "Valida comandos sobre estado copiado.",
+        "Permisos, rangos, recursos y ciclo."
+      ],
+      "x": 825,
+      "y": 500,
+      "w": 380,
+      "h": 170
+    },
+    {
+      "id": "persistence",
+      "kind": "component",
+      "label": "JsonWorkspacePersistence",
+      "body": [
+        "[Adaptador · C# / archivos JSON]",
+        "Implementa IWorkspacePersistence.",
+        "Carga seed y reemplaza archivo privado al guardar."
+      ],
+      "x": 1320,
+      "y": 220,
+      "w": 380,
+      "h": 190
+    },
+    {
+      "id": "hasher",
+      "kind": "component",
+      "label": "Pbkdf2PasswordHasher",
+      "body": [
+        "[Adaptador · C# / criptografía]",
+        "Implementa IPasswordHasher.",
+        "PBKDF2-SHA256 con salt individual."
+      ],
+      "x": 1320,
+      "y": 630,
+      "w": 380,
+      "h": 165
+    },
+    {
+      "id": "store",
+      "kind": "datastore",
+      "label": "Archivo JSON privado",
+      "body": [
+        "[Contenedor de datos]",
+        "Cuentas, sesiones y operaciones."
+      ],
+      "x": 1320,
+      "y": 1070,
+      "w": 380,
+      "h": 145
+    }
+  ],
+  "edges": [
+    {
+      "source": "spa",
+      "target": "http",
+      "label": "HTTPS/JSON · Bearer opaco",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "points": [],
+      "dashed": false,
+      "endArrow": "classic",
+      "labelX": 320,
+      "labelY": 205
+    },
+    {
+      "source": "errors",
+      "target": "http",
+      "label": "Envuelve ejecución HTTP",
+      "sourcePort": "top",
+      "targetPort": "bottom",
+      "points": [],
+      "dashed": false,
+      "endArrow": "classic",
+      "labelX": 555,
+      "labelY": 435
+    },
+    {
+      "source": "http",
+      "target": "service",
+      "label": "Invoca casos de uso",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "points": [],
+      "dashed": false,
+      "endArrow": "classic",
+      "labelX": 775,
+      "labelY": 200
+    },
+    {
+      "source": "service",
+      "target": "commands",
+      "label": "Apply(copia, actor, comando)",
+      "sourcePort": "bottom",
+      "targetPort": "top",
+      "points": [],
+      "dashed": false,
+      "endArrow": "classic",
+      "labelX": 1080,
+      "labelY": 450
+    },
+    {
+      "source": "service",
+      "target": "persistence",
+      "label": "Load / Save",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "points": [],
+      "dashed": false,
+      "endArrow": "classic",
+      "labelX": 1260,
+      "labelY": 280
+    },
+    {
+      "source": "service",
+      "target": "hasher",
+      "label": "Hash / Matches",
+      "sourcePort": "right",
+      "targetPort": "top",
+      "points": [
+        [
+          1240,
+          360
+        ],
+        [
+          1240,
+          595
+        ],
+        [
+          1510,
+          595
+        ]
+      ],
+      "dashed": false,
+      "endArrow": "classic",
+      "sourceOffset": 0.82,
+      "labelX": 1375,
+      "labelY": 575
+    },
+    {
+      "source": "persistence",
+      "target": "hasher",
+      "label": "Hash inicial de cuentas",
+      "sourcePort": "bottom",
+      "targetPort": "top",
+      "points": [],
+      "dashed": false,
+      "endArrow": "classic",
+      "sourceOffset": 0.8,
+      "targetOffset": 0.8,
+      "labelX": 1590,
+      "labelY": 525
+    },
+    {
+      "source": "persistence",
+      "target": "store",
+      "label": "E/S de archivo privado",
+      "sourcePort": "right",
+      "targetPort": "right",
+      "points": [
+        [
+          1730,
+          315
+        ],
+        [
+          1730,
+          1127
+        ]
+      ],
+      "dashed": false,
+      "endArrow": "classic",
+      "labelX": 1585,
+      "labelY": 1000
+    },
+    {
+      "source": "program",
+      "target": "service",
+      "label": "Inyecta puertos y adaptadores",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "points": [
+        [
+          775,
+          815
+        ],
+        [
+          775,
+          365
+        ]
+      ],
+      "dashed": true,
+      "endArrow": "classic",
+      "targetOffset": 0.85,
+      "labelX": 770,
+      "labelY": 710
+    }
+  ]
+}

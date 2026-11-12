@@ -1,0 +1,711 @@
+{
+  "id": "03-es-monitoring",
+  "section": "4.6.1",
+  "title": "FríoTrack · BC4 Monitoring and Telemetry",
+  "subtitle": "Diseño objetivo · Los eventos, la ingesta física y las políticas temporales no se presentan como implementados en TB1.",
+  "width": 2320,
+  "height": 1920,
+  "legend": "Actor amarillo claro · Comando azul · Agregado amarillo · Evento naranja · Política violeta · Vista verde · Contrato externo rosa",
+  "notes": [],
+  "nodes": [
+    {
+      "id": "context",
+      "kind": "boundary",
+      "label": "BC4 · Monitoring & Telemetry · Core",
+      "x": 35,
+      "y": 115,
+      "w": 2250,
+      "h": 1540
+    },
+    {
+      "id": "r0n0",
+      "kind": "contract",
+      "label": "TransitStarted",
+      "body": [
+        "Origen BC3 Shipment"
+      ],
+      "x": 65,
+      "y": 175,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r0n1",
+      "kind": "policy",
+      "label": "Al iniciar el envío",
+      "body": [
+        "Crear seguimiento con rango"
+      ],
+      "x": 385,
+      "y": 175,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r0n2",
+      "kind": "command",
+      "label": "StartMonitoring",
+      "body": [
+        "shipmentId y copia de rango"
+      ],
+      "x": 705,
+      "y": 175,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r0n3",
+      "kind": "aggregate",
+      "label": "ShipmentMonitoring",
+      "body": [
+        "Agregado raíz del contexto"
+      ],
+      "x": 1025,
+      "y": 175,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r0n4",
+      "kind": "event",
+      "label": "MonitoringStarted",
+      "body": [
+        "Copia inmutable de límites"
+      ],
+      "x": 1345,
+      "y": 175,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r0n5",
+      "kind": "readmodel",
+      "label": "Monitoreo del envío",
+      "body": [
+        "Rango e instante de inicio"
+      ],
+      "x": 1665,
+      "y": 175,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r1n0",
+      "kind": "external",
+      "label": "Mensaje del sensor",
+      "body": [
+        "Temperatura, humedad, posición",
+        "Dispositivo y fecha de lectura"
+      ],
+      "x": 65,
+      "y": 420,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r1n1",
+      "kind": "command",
+      "label": "RecordReading",
+      "body": [
+        "Tras traducción y validación",
+        "del adaptador de ingesta"
+      ],
+      "x": 385,
+      "y": 420,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r1n2",
+      "kind": "aggregate",
+      "label": "ShipmentMonitoring",
+      "body": [
+        "Agregado raíz del contexto"
+      ],
+      "x": 705,
+      "y": 420,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r1n3",
+      "kind": "event",
+      "label": "ReadingRecorded",
+      "body": [
+        "Valores y fecha conservados"
+      ],
+      "x": 1025,
+      "y": 420,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r1n4",
+      "kind": "policy",
+      "label": "Al registrar una lectura",
+      "body": [
+        "Evaluar contra rango de inicio"
+      ],
+      "x": 1345,
+      "y": 420,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r1n5",
+      "kind": "command",
+      "label": "EvaluateReading",
+      "body": [
+        "Temperatura y humedad"
+      ],
+      "x": 1665,
+      "y": 420,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r2n0",
+      "kind": "event",
+      "label": "ReadingOutOfRange",
+      "body": [
+        "Resultado de EvaluateReading"
+      ],
+      "x": 65,
+      "y": 665,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r2n1",
+      "kind": "policy",
+      "label": "Al detectar excursión",
+      "body": [
+        "Solicitar alerta con origen",
+        "y severidad prevista"
+      ],
+      "x": 385,
+      "y": 665,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r2n2",
+      "kind": "contract",
+      "label": "RaiseThermalAlert",
+      "body": [
+        "Destino BC5 Alert & Reporting"
+      ],
+      "x": 705,
+      "y": 665,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r2n3",
+      "kind": "readmodel",
+      "label": "Serie y estado térmico",
+      "body": [
+        "Lectura, fecha y condición"
+      ],
+      "x": 1025,
+      "y": 665,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r3n0",
+      "kind": "event",
+      "label": "ReadingWithinRange",
+      "body": [
+        "Ambos intervalos satisfechos"
+      ],
+      "x": 65,
+      "y": 910,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r3n1",
+      "kind": "policy",
+      "label": "Al observar recuperación",
+      "body": [
+        "Preparar evidencia posterior",
+        "a la desviación vigente"
+      ],
+      "x": 385,
+      "y": 910,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r3n2",
+      "kind": "contract",
+      "label": "ResolveThermalAlert",
+      "body": [
+        "Destino BC5; no es cierre",
+        "por registrar una acción"
+      ],
+      "x": 705,
+      "y": 910,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r3n3",
+      "kind": "readmodel",
+      "label": "Serie y recuperación",
+      "body": [
+        "Conserva mediciones previas"
+      ],
+      "x": 1025,
+      "y": 910,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r4n0",
+      "kind": "component",
+      "label": "Reloj del sistema",
+      "body": [
+        "Job interno de evaluación",
+        "temporal prevista"
+      ],
+      "x": 65,
+      "y": 1155,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r4n1",
+      "kind": "command",
+      "label": "CheckSignalSilence",
+      "body": [
+        "Compara última lectura",
+        "y máximo silencio"
+      ],
+      "x": 385,
+      "y": 1155,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r4n2",
+      "kind": "aggregate",
+      "label": "ShipmentMonitoring",
+      "body": [
+        "Agregado raíz del contexto"
+      ],
+      "x": 705,
+      "y": 1155,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r4n3",
+      "kind": "event",
+      "label": "SignalLost",
+      "body": [
+        "Sin lectura reciente"
+      ],
+      "x": 1025,
+      "y": 1155,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r4n4",
+      "kind": "policy",
+      "label": "Al perder señal",
+      "body": [
+        "Solicitar alerta de comunicación"
+      ],
+      "x": 1345,
+      "y": 1155,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r4n5",
+      "kind": "contract",
+      "label": "RaiseSignalLossAlert",
+      "body": [
+        "Destino BC5"
+      ],
+      "x": 1665,
+      "y": 1155,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r5n0",
+      "kind": "contract",
+      "label": "ShipmentDelivered",
+      "body": [
+        "Origen BC3 Shipment"
+      ],
+      "x": 65,
+      "y": 1400,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r5n1",
+      "kind": "policy",
+      "label": "Al concluir el traslado",
+      "body": [
+        "Detener seguimiento"
+      ],
+      "x": 385,
+      "y": 1400,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r5n2",
+      "kind": "command",
+      "label": "StopMonitoring",
+      "body": [
+        "Conservar historial"
+      ],
+      "x": 705,
+      "y": 1400,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r5n3",
+      "kind": "aggregate",
+      "label": "ShipmentMonitoring",
+      "body": [
+        "Agregado raíz del contexto"
+      ],
+      "x": 1025,
+      "y": 1400,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r5n4",
+      "kind": "event",
+      "label": "MonitoringStopped",
+      "body": [
+        "Instante de término"
+      ],
+      "x": 1345,
+      "y": 1400,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r5n5",
+      "kind": "readmodel",
+      "label": "Historial térmico",
+      "body": [
+        "Serie completa disponible"
+      ],
+      "x": 1665,
+      "y": 1400,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "rule0",
+      "kind": "note",
+      "label": "Regla de ingesta",
+      "body": [
+        "Valida dispositivo asociado, valores finitos, coordenadas e instante.",
+        "No sustituye datos ausentes por valores normales ni presenta la última lectura como actual."
+      ],
+      "x": 65,
+      "y": 1660,
+      "w": 700,
+      "h": 180
+    },
+    {
+      "id": "rule1",
+      "kind": "note",
+      "label": "Regla de evaluación",
+      "body": [
+        "Cada monitoreo conserva una copia propia de límites y tolerancia.",
+        "Una lectura antigua recibida tarde no demuestra recuperación de una desviación posterior."
+      ],
+      "x": 810,
+      "y": 1660,
+      "w": 700,
+      "h": 180
+    },
+    {
+      "id": "rule2",
+      "kind": "note",
+      "label": "Alcance de diseño",
+      "body": [
+        "Ingesta de sensores físicos, silencio automático y tolerancia temporal son diseño previsto.",
+        "El detalle térmico y la recuperación de señal se presentan en la siguiente imagen."
+      ],
+      "x": 1555,
+      "y": 1660,
+      "w": 700,
+      "h": 180
+    }
+  ],
+  "edges": [
+    {
+      "source": "r0n0",
+      "target": "r0n1",
+      "label": "activa",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": true,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r0n1",
+      "target": "r0n2",
+      "label": "ejecuta",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r0n2",
+      "target": "r0n3",
+      "label": "valida",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r0n3",
+      "target": "r0n4",
+      "label": "emite",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r0n4",
+      "target": "r0n5",
+      "label": "informa",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r1n0",
+      "target": "r1n1",
+      "label": "ejecuta",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": true,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r1n1",
+      "target": "r1n2",
+      "label": "valida",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r1n2",
+      "target": "r1n3",
+      "label": "emite",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r1n3",
+      "target": "r1n4",
+      "label": "activa",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r1n4",
+      "target": "r1n5",
+      "label": "ejecuta",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r2n0",
+      "target": "r2n1",
+      "label": "activa",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r2n1",
+      "target": "r2n2",
+      "label": "coordina",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": true,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r3n0",
+      "target": "r3n1",
+      "label": "activa",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r3n1",
+      "target": "r3n2",
+      "label": "coordina",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": true,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r4n0",
+      "target": "r4n1",
+      "label": "ejecuta",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r4n1",
+      "target": "r4n2",
+      "label": "valida",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r4n2",
+      "target": "r4n3",
+      "label": "emite",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r4n3",
+      "target": "r4n4",
+      "label": "activa",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r4n4",
+      "target": "r4n5",
+      "label": "coordina",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": true,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r5n0",
+      "target": "r5n1",
+      "label": "activa",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": true,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r5n1",
+      "target": "r5n2",
+      "label": "ejecuta",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r5n2",
+      "target": "r5n3",
+      "label": "valida",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r5n3",
+      "target": "r5n4",
+      "label": "emite",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r5n4",
+      "target": "r5n5",
+      "label": "informa",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r2n0",
+      "target": "r2n3",
+      "label": "proyecta",
+      "sourcePort": "bottom",
+      "targetPort": "bottom",
+      "points": [
+        [
+          190,
+          855
+        ],
+        [
+          1150,
+          855
+        ]
+      ],
+      "labelX": 670,
+      "labelY": 845,
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r3n0",
+      "target": "r3n3",
+      "label": "proyecta",
+      "sourcePort": "bottom",
+      "targetPort": "bottom",
+      "points": [
+        [
+          190,
+          1100
+        ],
+        [
+          1150,
+          1100
+        ]
+      ],
+      "labelX": 670,
+      "labelY": 1090,
+      "dashed": false,
+      "endArrow": "classic"
+    }
+  ]
+}

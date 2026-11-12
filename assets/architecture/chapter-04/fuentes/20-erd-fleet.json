@@ -1,0 +1,249 @@
+{
+  "id": "20-erd-fleet",
+  "section": "4.8.1",
+  "title": "FríoTrack · ERD · Fleet & Resource · Apoyo",
+  "subtitle": "Esquema objetivo PostgreSQL · columnas completas y claves de referencia; no se acredita despliegue de base de datos.",
+  "width": 2260,
+  "height": 1260,
+  "legend": "PK primaria · FK foránea · UK única · nullable opcional · flecha FK → PK · multiplicidades junto a cada extremo",
+  "notes": [
+    "Proyección relacional objetivo PostgreSQL: no constituye migración ejecutada ni el almacén JSON actual.",
+    "Las claves de otros contextos son referencias por ID. Una FK de persistencia no define propiedad de un agregado."
+  ],
+  "nodes": [
+    {
+      "id": "Vehicle",
+      "kind": "table",
+      "label": "vehicles",
+      "x": 60,
+      "y": 170,
+      "w": 450,
+      "h": 214,
+      "stereotype": "Fleet & Resource",
+      "attributes": [
+        "id: uuid [PK]",
+        "organization_id: uuid [FK]",
+        "plate: varchar(20) [UK]",
+        "capacity_tons: numeric(10,3)",
+        "enabled: boolean"
+      ]
+    },
+    {
+      "id": "Driver",
+      "kind": "table",
+      "label": "drivers",
+      "x": 620,
+      "y": 170,
+      "w": 450,
+      "h": 214,
+      "stereotype": "Fleet & Resource",
+      "attributes": [
+        "id: uuid [PK]",
+        "organization_id: uuid [FK]",
+        "full_name: varchar(160)",
+        "license_number: varchar(40) [UK]",
+        "enabled: boolean"
+      ]
+    },
+    {
+      "id": "Sensor",
+      "kind": "table",
+      "label": "sensors",
+      "x": 1180,
+      "y": 170,
+      "w": 450,
+      "h": 194,
+      "stereotype": "Fleet & Resource",
+      "attributes": [
+        "id: uuid [PK]",
+        "vehicle_id: uuid [FK UK nullable]",
+        "serial_code: varchar(40) [UK]",
+        "enabled: boolean"
+      ]
+    },
+    {
+      "id": "FleetAllocation",
+      "kind": "table",
+      "label": "fleet_allocations",
+      "x": 1740,
+      "y": 170,
+      "w": 450,
+      "h": 274,
+      "stereotype": "Fleet & Resource",
+      "attributes": [
+        "id: uuid [PK]",
+        "shipment_id: uuid [FK UK]",
+        "vehicle_id: uuid [FK]",
+        "driver_id: uuid [FK]",
+        "reserved_from: timestamptz",
+        "reserved_until: timestamptz",
+        "status: varchar(16)",
+        "released_at: timestamptz [nullable]"
+      ]
+    },
+    {
+      "id": "Organization",
+      "kind": "external",
+      "label": "organizations",
+      "x": 60,
+      "y": 800,
+      "w": 450,
+      "h": 145,
+      "stereotype": "Tabla de otro contexto",
+      "body": [
+        "Referencia externa · IAM",
+        "PK id: uuid"
+      ]
+    },
+    {
+      "id": "Shipment",
+      "kind": "external",
+      "label": "shipments",
+      "x": 1740,
+      "y": 800,
+      "w": 450,
+      "h": 145,
+      "stereotype": "Tabla de otro contexto",
+      "body": [
+        "Referencia externa · Shipment",
+        "PK id: uuid"
+      ]
+    },
+    {
+      "id": "PanelNote",
+      "kind": "note",
+      "label": "Reglas y límites",
+      "x": 60,
+      "y": 1050,
+      "w": 2140,
+      "h": 138,
+      "body": [
+        "UK vehicle_id en sensors permite como máximo un sensor asociado a la unidad; null permite inventario libre.",
+        "UK shipment_id en fleet_allocations conserva máximo una reserva por envío. Los solapamientos necesitan control transaccional."
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "Vehicle",
+      "target": "Organization",
+      "label": "organization_id → id",
+      "sourcePort": "bottom",
+      "targetPort": "top",
+      "points": [
+        [
+          172.5,
+          700
+        ],
+        [
+          195,
+          700
+        ]
+      ],
+      "endArrow": "open",
+      "sourceLabel": "0..*",
+      "targetLabel": "1",
+      "sourceOffset": 0.25,
+      "targetOffset": 0.3
+    },
+    {
+      "source": "Driver",
+      "target": "Organization",
+      "label": "organization_id → id",
+      "sourcePort": "bottom",
+      "targetPort": "top",
+      "points": [
+        [
+          755,
+          700
+        ],
+        [
+          375,
+          700
+        ]
+      ],
+      "endArrow": "open",
+      "sourceLabel": "0..*",
+      "targetLabel": "1",
+      "sourceOffset": 0.3,
+      "targetOffset": 0.7
+    },
+    {
+      "source": "Sensor",
+      "target": "Vehicle",
+      "label": "vehicle_id → id",
+      "sourcePort": "top",
+      "targetPort": "top",
+      "points": [
+        [
+          1405,
+          125
+        ],
+        [
+          285,
+          125
+        ]
+      ],
+      "endArrow": "open",
+      "sourceLabel": "0..1",
+      "targetLabel": "0..1"
+    },
+    {
+      "source": "FleetAllocation",
+      "target": "Shipment",
+      "label": "shipment_id → id",
+      "sourcePort": "bottom",
+      "targetPort": "top",
+      "points": [],
+      "endArrow": "open",
+      "sourceLabel": "0..1",
+      "targetLabel": "1",
+      "sourceOffset": 0.8,
+      "targetOffset": 0.8
+    },
+    {
+      "source": "FleetAllocation",
+      "target": "Vehicle",
+      "label": "vehicle_id → id",
+      "sourcePort": "bottom",
+      "targetPort": "bottom",
+      "points": [
+        [
+          1830,
+          570
+        ],
+        [
+          375,
+          570
+        ]
+      ],
+      "endArrow": "open",
+      "sourceLabel": "0..*",
+      "targetLabel": "1",
+      "sourceOffset": 0.2,
+      "targetOffset": 0.7
+    },
+    {
+      "source": "FleetAllocation",
+      "target": "Driver",
+      "label": "driver_id → id",
+      "sourcePort": "bottom",
+      "targetPort": "bottom",
+      "points": [
+        [
+          1965,
+          630
+        ],
+        [
+          935,
+          630
+        ]
+      ],
+      "endArrow": "open",
+      "sourceLabel": "0..*",
+      "targetLabel": "1",
+      "sourceOffset": 0.5,
+      "targetOffset": 0.7
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1635" viewBox="0 0 1800 1635">
+<defs><pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#dfdfdf" stroke-width=".7"/></pattern><filter id="paper-shadow" x="-10%" y="-10%" width="125%" height="130%"><feDropShadow dx="1" dy="3" stdDeviation="2" flood-color="#000000" flood-opacity=".12"/></filter>
+<marker id="arrow" viewBox="0 0 12 10" refX="11" refY="5" markerWidth="10" markerHeight="9" orient="auto-start-reverse"><path d="M0 0 L12 5 L0 10Z" fill="#444"/></marker><marker id="open" viewBox="0 0 12 10" refX="11" refY="5" markerWidth="10" markerHeight="9" orient="auto-start-reverse"><path d="M0 0 L12 5 L0 10" fill="none" stroke="#333"/></marker><marker id="diamond" viewBox="0 0 12 10" refX="1" refY="5" markerWidth="12" markerHeight="10" orient="auto-start-reverse"><path d="M0 5 L6 0 L12 5 L6 10Z" fill="#222"/></marker><marker id="triangle" viewBox="0 0 12 10" refX="11" refY="5" markerWidth="12" markerHeight="10" orient="auto-start-reverse"><path d="M0 0 L12 5 L0 10Z" fill="white" stroke="#333"/></marker></defs>
+<rect width="100%" height="100%" fill="white"/>
+<text x="35" y="48.78" font-family="Arial,sans-serif" font-size="28" font-weight="700" text-anchor="start" fill="#222">4.6.4 · FríoTrack · C4 nivel 3 · Backend DDD objetivo</text>
+<text x="35" y="84.775" font-family="Arial,sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#555">Diseño previsto · Dependencias hacia Domain; los contextos core preceden al IAM genérico</text>
+<rect x="35" y="115" width="1730" height="1390" rx="0" fill="none" stroke="#1766ae" stroke-width="1.5"/>
+<text x="48" y="143.2" font-family="Arial,sans-serif" font-size="20" font-weight="700" text-anchor="start" fill="#1766ae">Backend API objetivo · Monolito modular ASP.NET Core / C#</text>
+<rect x="60" y="160" width="1680" height="240" rx="0" fill="none" stroke="#1766ae" stroke-width="1.5"/>
+<text x="73" y="188.2" font-family="Arial,sans-serif" font-size="20" font-weight="700" text-anchor="start" fill="#1766ae">Shipment Management · Core</text>
+<rect x="60" y="420" width="1680" height="240" rx="0" fill="none" stroke="#1766ae" stroke-width="1.5"/>
+<text x="73" y="448.2" font-family="Arial,sans-serif" font-size="20" font-weight="700" text-anchor="start" fill="#1766ae">Monitoring &amp; Telemetry · Core</text>
+<rect x="60" y="680" width="1680" height="240" rx="0" fill="none" stroke="#1766ae" stroke-width="1.5"/>
+<text x="73" y="708.2" font-family="Arial,sans-serif" font-size="20" font-weight="700" text-anchor="start" fill="#1766ae">Fleet &amp; Resources · Apoyo</text>
+<rect x="60" y="940" width="1680" height="240" rx="0" fill="none" stroke="#1766ae" stroke-width="1.5"/>
+<text x="73" y="968.2" font-family="Arial,sans-serif" font-size="20" font-weight="700" text-anchor="start" fill="#1766ae">Alert &amp; Reporting · Apoyo</text>
+<rect x="60" y="1200" width="1680" height="240" rx="0" fill="none" stroke="#1766ae" stroke-width="1.5"/>
+<text x="73" y="1228.2" font-family="Arial,sans-serif" font-size="20" font-weight="700" text-anchor="start" fill="#1766ae">IAM · Genérico</text>
+<rect x="85" y="205" width="260" height="190" rx="0" fill="#5794dd" stroke="#5794dd" stroke-width="1"/>
+<text x="215.0" y="273.33" font-family="Arial,sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="white">Interfaces</text>
+<text x="215.0" y="296.95" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="white">[ASP.NET Core]</text>
+<text x="215.0" y="340.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">REST Shipments / DTO</text>
+<text x="215.0" y="362.28" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">Valida y convierte HTTP.</text>
+<rect x="405" y="205" width="290" height="190" rx="0" fill="#5794dd" stroke="#5794dd" stroke-width="1"/>
+<text x="550.0" y="251.18999999999997" font-family="Arial,sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="white">Application</text>
+<text x="550.0" y="274.80999999999995" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="white">[Handlers C#]</text>
+<text x="550.0" y="306.92999999999995" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">Schedule / Start / Deliver /</text>
+<text x="550.0" y="329.06999999999994" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">Cancel</text>
+<text x="550.0" y="351.2099999999999" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">Confirma reserva y unidad de</text>
+<text x="550.0" y="373.3499999999999" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">trabajo</text>
+<rect x="755" y="205" width="500" height="190" rx="0" fill="#5794dd" stroke="#5794dd" stroke-width="1"/>
+<text x="1005.0" y="262.26" font-family="Arial,sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="white">Domain</text>
+<text x="1005.0" y="285.88" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="white">[C# sin ASP.NET ni EF Core]</text>
+<text x="1005.0" y="323.535" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">Shipment · ThermalRange</text>
+<text x="1005.0" y="345.675" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">ShipmentHistoryEvent</text>
+<text x="1005.0" y="367.815" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">IShipmentRepository</text>
+<rect x="1315" y="205" width="390" height="190" rx="0" fill="#5794dd" stroke="#5794dd" stroke-width="1"/>
+<text x="1510.0" y="273.33" font-family="Arial,sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="white">Infrastructure</text>
+<text x="1510.0" y="296.95" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="white">[Adaptadores previstos]</text>
+<text x="1510.0" y="340.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">EF Core / PostgreSQL (previstos)</text>
+<text x="1510.0" y="362.28" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">Repositorio de Shipment + UoW</text>
+<rect x="85" y="465" width="260" height="190" rx="0" fill="#5794dd" stroke="#5794dd" stroke-width="1"/>
+<text x="215.0" y="533.3299999999999" font-family="Arial,sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="white">Interfaces</text>
+<text x="215.0" y="556.9499999999999" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="white">[ASP.NET Core]</text>
+<text x="215.0" y="600.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">REST Readings / DTO</text>
+<text x="215.0" y="622.28" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">Valida y convierte HTTP.</text>
+<rect x="405" y="465" width="290" height="190" rx="0" fill="#5794dd" stroke="#5794dd" stroke-width="1"/>
+<text x="550.0" y="533.3299999999999" font-family="Arial,sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="white">Application</text>
+<text x="550.0" y="556.9499999999999" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="white">[Handlers C#]</text>
+<text x="550.0" y="589.0699999999999" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">Start / RecordReading / Stop</text>
+<text x="550.0" y="611.2099999999999" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">Evalúa silencio y ambos</text>
+<text x="550.0" y="633.3499999999999" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">rangos</text>
+<rect x="755" y="465" width="500" height="190" rx="0" fill="#5794dd" stroke="#5794dd" stroke-width="1"/>
+<text x="1005.0" y="522.26" font-family="Arial,sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="white">Domain</text>
+<text x="1005.0" y="545.88" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="white">[C# sin ASP.NET ni EF Core]</text>
+<text x="1005.0" y="583.535" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">ShipmentMonitoring</text>
+<text x="1005.0" y="605.675" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">SensorReading · PositionReport</text>
+<text x="1005.0" y="627.8149999999999" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">MonitoredRange · IShipmentMonitoringRepository</text>
+<rect x="1315" y="465" width="390" height="190" rx="0" fill="#5794dd" stroke="#5794dd" stroke-width="1"/>
+<text x="1510.0" y="533.3299999999999" font-family="Arial,sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="white">Infrastructure</text>
+<text x="1510.0" y="556.9499999999999" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="white">[Adaptadores previstos]</text>
+<text x="1510.0" y="600.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">SensorGateway / ACL (previsto)</text>
+<text x="1510.0" y="622.28" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">Repositorio de Monitoring</text>
+<rect x="85" y="725" width="260" height="190" rx="0" fill="#5794dd" stroke="#5794dd" stroke-width="1"/>
+<text x="215.0" y="793.3299999999999" font-family="Arial,sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="white">Interfaces</text>
+<text x="215.0" y="816.9499999999999" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="white">[ASP.NET Core]</text>
+<text x="215.0" y="860.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">REST Resources / DTO</text>
+<text x="215.0" y="882.28" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">Valida y convierte HTTP.</text>
+<rect x="405" y="725" width="290" height="190" rx="0" fill="#5794dd" stroke="#5794dd" stroke-width="1"/>
+<text x="550.0" y="782.26" font-family="Arial,sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="white">Application</text>
+<text x="550.0" y="805.88" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="white">[Handlers C#]</text>
+<text x="550.0" y="843.535" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">Register / Reserve / Release</text>
+<text x="550.0" y="865.675" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">Coordina disponibilidad y</text>
+<text x="550.0" y="887.8149999999999" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">conflictos</text>
+<rect x="755" y="725" width="500" height="190" rx="0" fill="#5794dd" stroke="#5794dd" stroke-width="1"/>
+<text x="1005.0" y="782.26" font-family="Arial,sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="white">Domain</text>
+<text x="1005.0" y="805.88" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="white">[C# sin ASP.NET ni EF Core]</text>
+<text x="1005.0" y="843.535" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">Vehicle · Driver · FleetAllocation</text>
+<text x="1005.0" y="865.675" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">Sensor · raíz independiente; vehicleId opcional</text>
+<text x="1005.0" y="887.8149999999999" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">Repositorios de raíces de Fleet</text>
+<rect x="1315" y="725" width="390" height="190" rx="0" fill="#5794dd" stroke="#5794dd" stroke-width="1"/>
+<text x="1510.0" y="793.3299999999999" font-family="Arial,sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="white">Infrastructure</text>
+<text x="1510.0" y="816.9499999999999" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="white">[Adaptadores previstos]</text>
+<text x="1510.0" y="860.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">EF Core / PostgreSQL (previstos)</text>
+<text x="1510.0" y="882.28" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">Restricciones de reservas</text>
+<rect x="85" y="985" width="260" height="190" rx="0" fill="#5794dd" stroke="#5794dd" stroke-width="1"/>
+<text x="215.0" y="1053.3300000000002" font-family="Arial,sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="white">Interfaces</text>
+<text x="215.0" y="1076.9500000000003" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="white">[ASP.NET Core]</text>
+<text x="215.0" y="1120.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">REST Alerts / Reports DTO</text>
+<text x="215.0" y="1142.2800000000002" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">Valida y convierte HTTP.</text>
+<rect x="405" y="985" width="290" height="190" rx="0" fill="#5794dd" stroke="#5794dd" stroke-width="1"/>
+<text x="550.0" y="1042.26" font-family="Arial,sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="white">Application</text>
+<text x="550.0" y="1065.88" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="white">[Handlers C#]</text>
+<text x="550.0" y="1103.535" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">Raise / Acknowledge / Resolve</text>
+<text x="550.0" y="1125.6750000000002" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">Historial y generación de</text>
+<text x="550.0" y="1147.8150000000003" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">reportes</text>
+<rect x="755" y="985" width="500" height="190" rx="0" fill="#5794dd" stroke="#5794dd" stroke-width="1"/>
+<text x="1005.0" y="1042.26" font-family="Arial,sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="white">Domain</text>
+<text x="1005.0" y="1065.88" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="white">[C# sin ASP.NET ni EF Core]</text>
+<text x="1005.0" y="1103.535" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">Alert · CorrectiveAction · RecoveryEvidence</text>
+<text x="1005.0" y="1125.6750000000002" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">Notification · Incident · ThermalReport</text>
+<text x="1005.0" y="1147.8150000000003" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">Puertos de repositorio de cada raíz</text>
+<rect x="1315" y="985" width="390" height="190" rx="0" fill="#5794dd" stroke="#5794dd" stroke-width="1"/>
+<text x="1510.0" y="1053.3300000000002" font-family="Arial,sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="white">Infrastructure</text>
+<text x="1510.0" y="1076.9500000000003" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="white">[Adaptadores previstos]</text>
+<text x="1510.0" y="1120.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">ReportRenderer / MailGateway</text>
+<text x="1510.0" y="1142.2800000000002" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">Repositorios EF Core (previstos)</text>
+<rect x="85" y="1245" width="260" height="190" rx="0" fill="#5794dd" stroke="#5794dd" stroke-width="1"/>
+<text x="215.0" y="1313.3300000000002" font-family="Arial,sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="white">Interfaces</text>
+<text x="215.0" y="1336.9500000000003" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="white">[ASP.NET Core]</text>
+<text x="215.0" y="1380.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">REST Access / Profile DTO</text>
+<text x="215.0" y="1402.2800000000002" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">Valida y convierte HTTP.</text>
+<rect x="405" y="1245" width="290" height="190" rx="0" fill="#5794dd" stroke="#5794dd" stroke-width="1"/>
+<text x="550.0" y="1313.3300000000002" font-family="Arial,sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="white">Application</text>
+<text x="550.0" y="1336.9500000000003" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="white">[Handlers C#]</text>
+<text x="550.0" y="1380.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">Register / Login / Logout</text>
+<text x="550.0" y="1402.2800000000002" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">Perfil y recuperación prevista</text>
+<rect x="755" y="1245" width="500" height="190" rx="0" fill="#5794dd" stroke="#5794dd" stroke-width="1"/>
+<text x="1005.0" y="1302.26" font-family="Arial,sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="white">Domain</text>
+<text x="1005.0" y="1325.88" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="white">[C# sin ASP.NET ni EF Core]</text>
+<text x="1005.0" y="1363.535" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">UserAccount · Organization</text>
+<text x="1005.0" y="1385.6750000000002" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">PasswordResetToken (entidad interna)</text>
+<text x="1005.0" y="1407.8150000000003" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">IUserAccount / IOrganizationRepository</text>
+<rect x="1315" y="1245" width="390" height="190" rx="0" fill="#5794dd" stroke="#5794dd" stroke-width="1"/>
+<text x="1510.0" y="1313.3300000000002" font-family="Arial,sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="white">Infrastructure</text>
+<text x="1510.0" y="1336.9500000000003" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="white">[Adaptadores previstos]</text>
+<text x="1510.0" y="1380.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">PasswordHasher / MailGateway</text>
+<text x="1510.0" y="1402.2800000000002" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">Repositorios EF Core (previstos)</text>
+<polyline points="345,300.0 405,300.0" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="355.0" y="271" width="40.0" height="23.22" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="375.0" y="288.0" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="#222">DTO</text>
+<polyline points="695,300.0 755,300.0" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="707.5" y="271" width="35.0" height="23.22" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="725.0" y="288.0" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="#222">Usa</text>
+<polyline points="1315,300.0 1255,300.0" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" stroke-dasharray="7 4" marker-end="url(#open)"/>
+<rect x="1259.0" y="271" width="52.0" height="23.22" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="1285.0" y="288.0" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="#222">Puerto</text>
+<polyline points="345,560.0 405,560.0" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="355.0" y="531" width="40.0" height="23.22" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="375.0" y="548.0" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="#222">DTO</text>
+<polyline points="695,560.0 755,560.0" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="707.5" y="531" width="35.0" height="23.22" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="725.0" y="548.0" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="#222">Usa</text>
+<polyline points="1315,560.0 1255,560.0" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" stroke-dasharray="7 4" marker-end="url(#open)"/>
+<rect x="1259.0" y="531" width="52.0" height="23.22" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="1285.0" y="548.0" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="#222">Puerto</text>
+<polyline points="345,820.0 405,820.0" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="355.0" y="791" width="40.0" height="23.22" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="375.0" y="808.0" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="#222">DTO</text>
+<polyline points="695,820.0 755,820.0" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="707.5" y="791" width="35.0" height="23.22" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="725.0" y="808.0" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="#222">Usa</text>
+<polyline points="1315,820.0 1255,820.0" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" stroke-dasharray="7 4" marker-end="url(#open)"/>
+<rect x="1259.0" y="791" width="52.0" height="23.22" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="1285.0" y="808.0" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="#222">Puerto</text>
+<polyline points="345,1080.0 405,1080.0" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="355.0" y="1051" width="40.0" height="23.22" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="375.0" y="1068.0" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="#222">DTO</text>
+<polyline points="695,1080.0 755,1080.0" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="707.5" y="1051" width="35.0" height="23.22" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="725.0" y="1068.0" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="#222">Usa</text>
+<polyline points="1315,1080.0 1255,1080.0" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" stroke-dasharray="7 4" marker-end="url(#open)"/>
+<rect x="1259.0" y="1051" width="52.0" height="23.22" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="1285.0" y="1068.0" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="#222">Puerto</text>
+<polyline points="345,1340.0 405,1340.0" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="355.0" y="1311" width="40.0" height="23.22" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="375.0" y="1328.0" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="#222">DTO</text>
+<polyline points="695,1340.0 755,1340.0" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="707.5" y="1311" width="35.0" height="23.22" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="725.0" y="1328.0" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="#222">Usa</text>
+<polyline points="1315,1340.0 1255,1340.0" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" stroke-dasharray="7 4" marker-end="url(#open)"/>
+<rect x="1259.0" y="1311" width="52.0" height="23.22" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="1285.0" y="1328.0" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="#222">Puerto</text>
+<text x="35" y="1615.505" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="start" fill="#555">Interfaces → Application → Domain · Infrastructure → puertos Domain · Todos los módulos pertenecen a una API</text>
+</svg>

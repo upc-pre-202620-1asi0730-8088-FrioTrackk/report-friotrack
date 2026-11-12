@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1530" height="495" viewBox="0 0 1530 495">
+<defs><pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#dfdfdf" stroke-width=".7"/></pattern><filter id="paper-shadow" x="-10%" y="-10%" width="125%" height="130%"><feDropShadow dx="1" dy="3" stdDeviation="2" flood-color="#000000" flood-opacity=".12"/></filter>
+<marker id="arrow" viewBox="0 0 12 10" refX="11" refY="5" markerWidth="10" markerHeight="9" orient="auto-start-reverse"><path d="M0 0 L12 5 L0 10Z" fill="#444"/></marker><marker id="open" viewBox="0 0 12 10" refX="11" refY="5" markerWidth="10" markerHeight="9" orient="auto-start-reverse"><path d="M0 0 L12 5 L0 10" fill="none" stroke="#333"/></marker><marker id="diamond" viewBox="0 0 12 10" refX="1" refY="5" markerWidth="12" markerHeight="10" orient="auto-start-reverse"><path d="M0 5 L6 0 L12 5 L6 10Z" fill="#222"/></marker><marker id="triangle" viewBox="0 0 12 10" refX="11" refY="5" markerWidth="12" markerHeight="10" orient="auto-start-reverse"><path d="M0 0 L12 5 L0 10Z" fill="white" stroke="#333"/></marker></defs>
+<rect width="100%" height="100%" fill="#f3f3f3"/>
+<rect width="100%" height="100%" fill="url(#grid)"/>
+<rect x="30" y="83" width="1470" height="350" rx="90" fill="none" stroke="#4b4b4b" stroke-width="1.1"/>
+<text x="765.0" y="67.28" font-family="Arial,sans-serif" font-size="28" font-weight="400" text-anchor="middle" fill="#222">Monitoring &amp; Telemetry · Thermal and Signal Policies</text>
+<rect x="85.0" y="136" width="111.7" height="111.7" rx="0" fill="#ffb373" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="140.85" y="187.94" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Reading</text>
+<text x="140.85" y="208.85" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Recorded</text>
+<rect x="223.7" y="136" width="111.7" height="111.7" rx="0" fill="#9fe5f9" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="279.55" y="187.94" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Evaluate</text>
+<text x="279.55" y="208.85" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Reading</text>
+<rect x="362.4" y="136" width="111.7" height="111.7" rx="0" fill="#ffe86b" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="418.25" y="177.485" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Shipment</text>
+<text x="418.25" y="198.395" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Monitoring</text>
+<text x="418.25" y="219.305" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Aggregate</text>
+<rect x="501.09999999999997" y="136" width="111.7" height="111.7" rx="0" fill="#ffb373" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="556.9499999999999" y="187.94" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Reading Out</text>
+<text x="556.9499999999999" y="208.85" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Of Range</text>
+<rect x="639.8" y="136" width="111.7" height="111.7" rx="0" fill="#f29ce4" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="695.65" y="159.57" font-family="Arial,sans-serif" font-size="12" font-weight="400" text-anchor="middle" fill="#222">Al persistir la</text>
+<text x="695.65" y="174.32999999999998" font-family="Arial,sans-serif" font-size="12" font-weight="400" text-anchor="middle" fill="#222">excursión</text>
+<text x="695.65" y="189.08999999999997" font-family="Arial,sans-serif" font-size="12" font-weight="400" text-anchor="middle" fill="#222">Aplicar tolerancia</text>
+<text x="695.65" y="203.84999999999997" font-family="Arial,sans-serif" font-size="12" font-weight="400" text-anchor="middle" fill="#222">y duración para</text>
+<text x="695.65" y="218.60999999999996" font-family="Arial,sans-serif" font-size="12" font-weight="400" text-anchor="middle" fill="#222">la severidad</text>
+<text x="695.65" y="233.36999999999995" font-family="Arial,sans-serif" font-size="12" font-weight="400" text-anchor="middle" fill="#222">prevista</text>
+<rect x="778.5" y="136" width="111.7" height="111.7" rx="0" fill="#eda4df" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="834.35" y="177.485" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Raise</text>
+<text x="834.35" y="198.395" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Thermal</text>
+<text x="834.35" y="219.305" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Alert</text>
+<rect x="917.1999999999999" y="136" width="111.7" height="111.7" rx="0" fill="#ffb373" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="973.05" y="177.485" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Reading</text>
+<text x="973.05" y="198.395" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Within</text>
+<text x="973.05" y="219.305" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Range</text>
+<rect x="1055.8999999999999" y="136" width="111.7" height="111.7" rx="0" fill="#f29ce4" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1111.7499999999998" y="160.725" font-family="Arial,sans-serif" font-size="15" font-weight="400" text-anchor="middle" fill="#222">Al confirmar</text>
+<text x="1111.7499999999998" y="179.17499999999998" font-family="Arial,sans-serif" font-size="15" font-weight="400" text-anchor="middle" fill="#222">recuperación</text>
+<text x="1111.7499999999998" y="197.62499999999997" font-family="Arial,sans-serif" font-size="15" font-weight="400" text-anchor="middle" fill="#222">Emitir</text>
+<text x="1111.7499999999998" y="216.07499999999996" font-family="Arial,sans-serif" font-size="15" font-weight="400" text-anchor="middle" fill="#222">evidencia</text>
+<text x="1111.7499999999998" y="234.52499999999995" font-family="Arial,sans-serif" font-size="15" font-weight="400" text-anchor="middle" fill="#222">normalizada</text>
+<rect x="1194.6" y="136" width="111.7" height="111.7" rx="0" fill="#eda4df" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1250.4499999999998" y="177.485" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Resolve</text>
+<text x="1250.4499999999998" y="198.395" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Thermal</text>
+<text x="1250.4499999999998" y="219.305" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Alert</text>
+<rect x="1333.3" y="136" width="111.7" height="111.7" rx="0" fill="#dddfe2" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1389.1499999999999" y="187.94" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Reloj del</text>
+<text x="1389.1499999999999" y="208.85" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">sistema</text>
+<rect x="154.3499999999999" y="283.3" width="111.7" height="111.7" rx="0" fill="#9fe5f9" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="210.1999999999999" y="324.785" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Check</text>
+<text x="210.1999999999999" y="345.69500000000005" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Signal</text>
+<text x="210.1999999999999" y="366.6050000000001" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Silence</text>
+<rect x="293.0499999999999" y="283.3" width="111.7" height="111.7" rx="0" fill="#ffb373" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="348.8999999999999" y="345.695" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Signal Lost</text>
+<rect x="431.7499999999999" y="283.3" width="111.7" height="111.7" rx="0" fill="#f29ce4" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="487.5999999999999" y="317.25" font-family="Arial,sans-serif" font-size="15" font-weight="400" text-anchor="middle" fill="#222">Al exceder</text>
+<text x="487.5999999999999" y="335.7" font-family="Arial,sans-serif" font-size="15" font-weight="400" text-anchor="middle" fill="#222">silencio</text>
+<text x="487.5999999999999" y="354.15" font-family="Arial,sans-serif" font-size="15" font-weight="400" text-anchor="middle" fill="#222">Avisar pérdida</text>
+<text x="487.5999999999999" y="372.59999999999997" font-family="Arial,sans-serif" font-size="15" font-weight="400" text-anchor="middle" fill="#222">de enlace</text>
+<rect x="570.4499999999998" y="283.3" width="111.7" height="111.7" rx="0" fill="#eda4df" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="626.2999999999998" y="335.24" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Raise Signal</text>
+<text x="626.2999999999998" y="356.15000000000003" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Loss Alert</text>
+<rect x="709.1499999999999" y="283.3" width="111.7" height="111.7" rx="0" fill="#dddfe2" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="764.9999999999999" y="324.785" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Mensaje</text>
+<text x="764.9999999999999" y="345.69500000000005" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">reciente del</text>
+<text x="764.9999999999999" y="366.6050000000001" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">sensor</text>
+<rect x="847.8499999999999" y="283.3" width="111.7" height="111.7" rx="0" fill="#9fe5f9" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="903.6999999999999" y="335.24" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Record</text>
+<text x="903.6999999999999" y="356.15000000000003" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Reading</text>
+<rect x="986.5499999999998" y="283.3" width="111.7" height="111.7" rx="0" fill="#ffb373" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1042.3999999999999" y="335.24" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Signal</text>
+<text x="1042.3999999999999" y="356.15000000000003" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Restored</text>
+<rect x="1125.2499999999998" y="283.3" width="111.7" height="111.7" rx="0" fill="#f29ce4" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1181.0999999999997" y="308.02500000000003" font-family="Arial,sans-serif" font-size="15" font-weight="400" text-anchor="middle" fill="#222">Al recuperar</text>
+<text x="1181.0999999999997" y="326.475" font-family="Arial,sans-serif" font-size="15" font-weight="400" text-anchor="middle" fill="#222">señal</text>
+<text x="1181.0999999999997" y="344.925" font-family="Arial,sans-serif" font-size="15" font-weight="400" text-anchor="middle" fill="#222">Cerrar solo</text>
+<text x="1181.0999999999997" y="363.375" font-family="Arial,sans-serif" font-size="15" font-weight="400" text-anchor="middle" fill="#222">pérdida de</text>
+<text x="1181.0999999999997" y="381.825" font-family="Arial,sans-serif" font-size="15" font-weight="400" text-anchor="middle" fill="#222">enlace</text>
+<rect x="1263.9499999999998" y="283.3" width="111.7" height="111.7" rx="0" fill="#eda4df" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1319.7999999999997" y="324.785" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Resolve</text>
+<text x="1319.7999999999997" y="345.69500000000005" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Signal Loss</text>
+<text x="1319.7999999999997" y="366.6050000000001" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Alert</text>
+<text x="38" y="470.775" font-family="Arial,sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#555">FríoTrack · 4.6.1 · Core · Diseño objetivo</text>
+</svg>

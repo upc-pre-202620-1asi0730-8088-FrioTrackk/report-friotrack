@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2180" height="1360" viewBox="0 0 2180 1360">
+<defs><pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#dfdfdf" stroke-width=".7"/></pattern><filter id="paper-shadow" x="-10%" y="-10%" width="125%" height="130%"><feDropShadow dx="1" dy="3" stdDeviation="2" flood-color="#000000" flood-opacity=".12"/></filter>
+<marker id="arrow" viewBox="0 0 12 10" refX="11" refY="5" markerWidth="10" markerHeight="9" orient="auto-start-reverse"><path d="M0 0 L12 5 L0 10Z" fill="#444"/></marker><marker id="open" viewBox="0 0 12 10" refX="11" refY="5" markerWidth="10" markerHeight="9" orient="auto-start-reverse"><path d="M0 0 L12 5 L0 10" fill="none" stroke="#333"/></marker><marker id="diamond" viewBox="0 0 12 10" refX="1" refY="5" markerWidth="12" markerHeight="10" orient="auto-start-reverse"><path d="M0 5 L6 0 L12 5 L6 10Z" fill="#222"/></marker><marker id="triangle" viewBox="0 0 12 10" refX="11" refY="5" markerWidth="12" markerHeight="10" orient="auto-start-reverse"><path d="M0 0 L12 5 L0 10Z" fill="white" stroke="#333"/></marker></defs>
+<rect width="100%" height="100%" fill="white"/>
+<text x="35" y="48.78" font-family="Arial,sans-serif" font-size="28" font-weight="700" text-anchor="start" fill="#222">4.7.1 · FríoTrack · UML DDD · Monitoring &amp; Telemetry</text>
+<text x="35" y="84.775" font-family="Arial,sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#555">Core · Modelo objetivo; lecturas y posiciones físicas aún requieren integración.</text>
+<rect x="26" y="140" width="2128" height="1155" rx="2" fill="none" stroke="#333" stroke-width="1.2"/>
+<rect x="26" y="111" width="306.984375" height="29" rx="1" fill="white" stroke="#333" stroke-width="1.2"/>
+<text x="34" y="132.04500000000002" font-family="Arial,sans-serif" font-size="17" font-weight="700" text-anchor="start" fill="#222">Domain · Monitoring &amp; Telemetry</text>
+<rect x="60" y="180" width="570" height="394" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M60 244 L630 244" fill="none" stroke="#555" stroke-width="1"/>
+<ellipse cx="252.0" cy="201.0" rx="12.0" ry="12.0" fill="#b8dabf" stroke="#555"/>
+<text x="252.0" y="206.005" font-family="Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#222">C</text>
+<text x="274.0" y="209.815" font-family="Arial,sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#222">ShipmentMonitoring</text>
+<text x="345.0" y="234.505" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">«Aggregate Root»</text>
+<text x="73" y="268.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- id: UUID</text>
+<text x="73" y="290.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- shipmentId: UUID</text>
+<text x="73" y="312.28" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- range: MonitoredRange</text>
+<text x="73" y="334.41999999999996" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- maxSilenceMinutes: Integer</text>
+<text x="73" y="356.55999999999995" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- signalStatus: SignalStatus</text>
+<text x="73" y="378.69999999999993" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- lastReadingAt: DateTimeOffset?</text>
+<text x="73" y="400.8399999999999" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- startedAt: DateTimeOffset</text>
+<text x="73" y="422.9799999999999" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- stoppedAt: DateTimeOffset?</text>
+<path d="M60 430.1199999999999 L630 430.1199999999999" fill="none" stroke="#555" stroke-width="1"/>
+<text x="73" y="461.1199999999999" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">+ start(range: MonitoredRange): void</text>
+<text x="73" y="483.2599999999999" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">+ recordReading(reading: SensorReading): void</text>
+<text x="73" y="505.39999999999986" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">+ recordPosition(position: PositionReport): void</text>
+<text x="73" y="527.5399999999998" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">+ detectCommunicationGap(at): void</text>
+<text x="73" y="549.6799999999998" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">+ stop(at: DateTimeOffset): void</text>
+<rect x="850" y="180" width="500" height="254" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M850 244 L1350 244" fill="none" stroke="#555" stroke-width="1"/>
+<ellipse cx="1021.0" cy="201.0" rx="12.0" ry="12.0" fill="#b8dabf" stroke="#555"/>
+<text x="1021.0" y="206.005" font-family="Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#222">C</text>
+<text x="1043.0" y="209.815" font-family="Arial,sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#222">MonitoredRange</text>
+<text x="1100.0" y="234.505" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">«Value Object · snapshot inmutable»</text>
+<text x="863" y="268.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- minTempC: Decimal</text>
+<text x="863" y="290.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- maxTempC: Decimal</text>
+<text x="863" y="312.28" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- minHumidityPct: Decimal</text>
+<text x="863" y="334.41999999999996" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- maxHumidityPct: Decimal</text>
+<text x="863" y="356.55999999999995" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- toleranceMinutes: Integer</text>
+<path d="M850 363.69999999999993 L1350 363.69999999999993" fill="none" stroke="#555" stroke-width="1"/>
+<text x="863" y="394.69999999999993" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">+ contains(tempC, humidityPct): Boolean</text>
+<rect x="1530" y="180" width="580" height="274" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M1530 244 L2110 244" fill="none" stroke="#555" stroke-width="1"/>
+<ellipse cx="1745.5" cy="201.0" rx="12.0" ry="12.0" fill="#b8dabf" stroke="#555"/>
+<text x="1745.5" y="206.005" font-family="Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#222">C</text>
+<text x="1767.5" y="209.815" font-family="Arial,sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#222">SensorReading</text>
+<text x="1820.0" y="234.505" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">«Entity interna»</text>
+<text x="1543" y="268.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- id: Int64</text>
+<text x="1543" y="290.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- monitoringId: UUID</text>
+<text x="1543" y="312.28" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- temperatureC: Decimal</text>
+<text x="1543" y="334.41999999999996" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- humidityPct: Decimal</text>
+<text x="1543" y="356.55999999999995" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- withinBothRanges: Boolean</text>
+<text x="1543" y="378.69999999999993" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- recordedAt: DateTimeOffset</text>
+<path d="M1530 385.8399999999999 L2110 385.8399999999999" fill="none" stroke="#555" stroke-width="1"/>
+<text x="1543" y="416.8399999999999" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">+ evaluate(range: MonitoredRange): Boolean</text>
+<rect x="1530" y="650" width="580" height="214" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M1530 714 L2110 714" fill="none" stroke="#555" stroke-width="1"/>
+<ellipse cx="1749.5" cy="671.0" rx="12.0" ry="12.0" fill="#b8dabf" stroke="#555"/>
+<text x="1749.5" y="676.005" font-family="Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#222">C</text>
+<text x="1771.5" y="679.815" font-family="Arial,sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#222">PositionReport</text>
+<text x="1820.0" y="704.505" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">«Entity interna»</text>
+<text x="1543" y="738.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- id: Int64</text>
+<text x="1543" y="760.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- monitoringId: UUID</text>
+<text x="1543" y="782.28" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- latitude: Decimal</text>
+<text x="1543" y="804.42" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- longitude: Decimal</text>
+<text x="1543" y="826.56" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- recordedAt: DateTimeOffset</text>
+<rect x="850" y="640" width="500" height="154" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M850 704 L1350 704" fill="none" stroke="#555" stroke-width="1"/>
+<ellipse cx="1038.5" cy="661.0" rx="12.0" ry="12.0" fill="#e7d2a5" stroke="#555"/>
+<text x="1038.5" y="666.005" font-family="Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#222">E</text>
+<text x="1060.5" y="669.815" font-family="Arial,sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#222">SignalStatus</text>
+<text x="1100.0" y="694.505" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">«enumeration»</text>
+<text x="863" y="728.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">ONLINE</text>
+<text x="863" y="750.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">NO_SIGNAL</text>
+<rect x="60" y="830" width="660" height="174" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M60 894 L720 894" fill="none" stroke="#555" stroke-width="1"/>
+<ellipse cx="248.0" cy="851.0" rx="12.0" ry="12.0" fill="#b8dabf" stroke="#555"/>
+<text x="248.0" y="856.005" font-family="Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#222">I</text>
+<text x="270.0" y="859.815" font-family="Arial,sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#222">IShipmentMonitoringRepository</text>
+<text x="390.0" y="884.505" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">«interface · Domain Port»</text>
+<text x="73" y="918.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">+ find(id: UUID): ShipmentMonitoring?</text>
+<text x="73" y="940.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">+ save(root: ShipmentMonitoring): void</text>
+<rect x="60" y="1120" width="2050" height="162" rx="0" fill="#fffbea" stroke="#aaa" stroke-width="1"/>
+<text x="73" y="1147.43" font-family="Arial,sans-serif" font-size="18" font-weight="700" text-anchor="start" fill="#222">Reglas y límites</text>
+<text x="73" y="1202.48" font-family="Arial,sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#222">La copia MonitoredRange no cambia cuando se modifican límites de otro envío o contexto.</text>
+<text x="73" y="1222.16" font-family="Arial,sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#222">Las lecturas usan fecha de medición válida. Una muestra atrasada no demuestra recuperación actual de señal.</text>
+<text x="73" y="1241.8400000000001" font-family="Arial,sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#222">SignalLost / SignalRestored son eventos propuestos; las excursiones térmicas se evalúan de forma independiente.</text>
+<polyline points="390.0,830 390.0,702.0 345.0,702.0 345.0,574" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" stroke-dasharray="7 4" marker-end="url(#open)"/>
+<rect x="354.0" y="741.0" width="72.0" height="37.980000000000004" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="390.0" y="757.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Persiste la</text>
+<text x="390.0" y="772.99" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">raíz</text>
+<polyline points="630,266.68 850,266.68" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-start="url(#diamond)"/>
+<rect x="683.5" y="241.68" width="113.0" height="37.980000000000004" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="740.0" y="257.68" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Copia local de los</text>
+<text x="740.0" y="273.67" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">cuatro límites</text>
+<rect x="631.0" y="244.68" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="653.0" y="259.685" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">1</text>
+<rect x="805.0" y="244.68" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="827.0" y="259.685" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">1</text>
+<polyline points="345.0,180 345,135 1820,135 1820.0,180" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-start="url(#diamond)"/>
+<rect x="1029.0" y="112" width="142.0" height="21.990000000000002" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="1100.0" y="128.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Lecturas del monitoreo</text>
+<rect x="323.0" y="135.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="345.0" y="150.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">1</text>
+<rect x="1798.0" y="135.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="1820.0" y="150.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">0..*</text>
+<polyline points="630,487.32 750,487.32 750,550 1430,550 1430,757.0 1530,757.0" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-start="url(#diamond)"/>
+<rect x="1012.0" y="522" width="156.0" height="21.990000000000002" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="1090.0" y="538.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Posiciones del monitoreo</text>
+<rect x="631.0" y="465.32" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="653.0" y="480.325" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">1</text>
+<rect x="1485.0" y="735.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="1507.0" y="750.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">0..*</text>
+<polyline points="630,534.6 740.0,534.6 740.0,717.0 850,717.0" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#open)"/>
+<rect x="695.0" y="600.8" width="90.0" height="37.980000000000004" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="740.0" y="616.8" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Estado de</text>
+<text x="740.0" y="632.79" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">comunicación</text>
+<text x="35" y="1340.505" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="start" fill="#555">&lt;&lt;Aggregate Root&gt;&gt; raíz · &lt;&lt;Entity&gt;&gt; entidad · &lt;&lt;Value Object&gt;&gt; valor · ◆ composición · - - &gt; dependencia por ID</text>
+</svg>

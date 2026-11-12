@@ -1,0 +1,542 @@
+{
+  "id": "04-es-monitoring-detail",
+  "section": "4.6.1",
+  "title": "FríoTrack · Detalle de evaluación térmica y salud de señal",
+  "subtitle": "Diseño objetivo · Los eventos, la ingesta física y las políticas temporales no se presentan como implementados en TB1.",
+  "width": 2320,
+  "height": 1430,
+  "legend": "Actor amarillo claro · Comando azul · Agregado amarillo · Evento naranja · Política violeta · Vista verde · Contrato externo rosa",
+  "notes": [
+    "La regla SignalRestored es una mejora de diseño respecto al modelo anterior. Debe incorporarse también al texto y modelo de clases si el usuario adopta este detalle."
+  ],
+  "nodes": [
+    {
+      "id": "context",
+      "kind": "boundary",
+      "label": "BC4 · Políticas ambientales y temporales · Diseño objetivo",
+      "x": 35,
+      "y": 115,
+      "w": 2250,
+      "h": 1050
+    },
+    {
+      "id": "r0n0",
+      "kind": "event",
+      "label": "ReadingRecorded",
+      "body": [
+        "Lectura válida y fechada"
+      ],
+      "x": 65,
+      "y": 175,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r0n1",
+      "kind": "command",
+      "label": "EvaluateReading",
+      "body": [
+        "Evalúa ambos intervalos"
+      ],
+      "x": 385,
+      "y": 175,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r0n2",
+      "kind": "aggregate",
+      "label": "ShipmentMonitoring",
+      "body": [
+        "Agregado raíz del contexto"
+      ],
+      "x": 705,
+      "y": 175,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r0n3",
+      "kind": "event",
+      "label": "ReadingOutOfRange",
+      "body": [
+        "Temperatura o humedad",
+        "fuera de su intervalo"
+      ],
+      "x": 1025,
+      "y": 175,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r0n4",
+      "kind": "policy",
+      "label": "Al persistir la excursión",
+      "body": [
+        "Aplicar tolerancia y duración",
+        "para la severidad prevista"
+      ],
+      "x": 1345,
+      "y": 175,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r0n5",
+      "kind": "contract",
+      "label": "RaiseThermalAlert",
+      "body": [
+        "Incluye lectura y severidad",
+        "Destino BC5"
+      ],
+      "x": 1665,
+      "y": 175,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r1n0",
+      "kind": "event",
+      "label": "ReadingRecorded",
+      "body": [
+        "Nueva lectura válida"
+      ],
+      "x": 65,
+      "y": 420,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r1n1",
+      "kind": "command",
+      "label": "EvaluateReading",
+      "body": [
+        "Ambos valores en rango"
+      ],
+      "x": 385,
+      "y": 420,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r1n2",
+      "kind": "aggregate",
+      "label": "ShipmentMonitoring",
+      "body": [
+        "Agregado raíz del contexto"
+      ],
+      "x": 705,
+      "y": 420,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r1n3",
+      "kind": "event",
+      "label": "ReadingWithinRange",
+      "body": [
+        "Lectura posterior a la",
+        "desviación vigente"
+      ],
+      "x": 1025,
+      "y": 420,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r1n4",
+      "kind": "policy",
+      "label": "Al confirmar recuperación",
+      "body": [
+        "Emitir evidencia normalizada"
+      ],
+      "x": 1345,
+      "y": 420,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r1n5",
+      "kind": "contract",
+      "label": "ResolveThermalAlert",
+      "body": [
+        "Cierra solo la alerta térmica",
+        "que acredita esta evidencia"
+      ],
+      "x": 1665,
+      "y": 420,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r2n0",
+      "kind": "component",
+      "label": "Reloj del sistema",
+      "body": [
+        "Job interno periódico",
+        "de evaluación prevista"
+      ],
+      "x": 65,
+      "y": 665,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r2n1",
+      "kind": "command",
+      "label": "CheckSignalSilence",
+      "body": [
+        "now − lastReadingAt",
+        "> maxSilenceMinutes"
+      ],
+      "x": 385,
+      "y": 665,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r2n2",
+      "kind": "aggregate",
+      "label": "ShipmentMonitoring",
+      "body": [
+        "Agregado raíz del contexto"
+      ],
+      "x": 705,
+      "y": 665,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r2n3",
+      "kind": "event",
+      "label": "SignalLost",
+      "body": [
+        "Sin nuevas mediciones"
+      ],
+      "x": 1025,
+      "y": 665,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r2n4",
+      "kind": "policy",
+      "label": "Al exceder silencio",
+      "body": [
+        "Avisar pérdida de enlace"
+      ],
+      "x": 1345,
+      "y": 665,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r2n5",
+      "kind": "contract",
+      "label": "RaiseSignalLossAlert",
+      "body": [
+        "No inventa temperatura",
+        "Destino BC5"
+      ],
+      "x": 1665,
+      "y": 665,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r3n0",
+      "kind": "external",
+      "label": "Mensaje reciente del sensor",
+      "body": [
+        "Dispositivo autenticado",
+        "Tras un estado NO_SIGNAL"
+      ],
+      "x": 65,
+      "y": 910,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r3n1",
+      "kind": "command",
+      "label": "RecordReading",
+      "body": [
+        "Conserva la marca de tiempo"
+      ],
+      "x": 385,
+      "y": 910,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r3n2",
+      "kind": "aggregate",
+      "label": "ShipmentMonitoring",
+      "body": [
+        "Agregado raíz del contexto"
+      ],
+      "x": 705,
+      "y": 910,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r3n3",
+      "kind": "event",
+      "label": "SignalRestored",
+      "body": [
+        "Se recuperó comunicación"
+      ],
+      "x": 1025,
+      "y": 910,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r3n4",
+      "kind": "policy",
+      "label": "Al recuperar señal",
+      "body": [
+        "Cerrar solo pérdida de enlace"
+      ],
+      "x": 1345,
+      "y": 910,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r3n5",
+      "kind": "contract",
+      "label": "ResolveSignalLossAlert",
+      "body": [
+        "La evaluación térmica",
+        "continúa por su propia regla"
+      ],
+      "x": 1665,
+      "y": 910,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "rule0",
+      "kind": "note",
+      "label": "Estados diferentes",
+      "body": [
+        "Señal: ONLINE / NO_SIGNAL. Térmico: dentro / fuera de intervalo.",
+        "Restaurar señal no significa que la carga haya vuelto a su rango."
+      ],
+      "x": 65,
+      "y": 1170,
+      "w": 700,
+      "h": 180
+    },
+    {
+      "id": "rule1",
+      "kind": "note",
+      "label": "Regla de resolución térmica",
+      "body": [
+        "La acción correctiva no cierra la alerta.",
+        "Se exige lectura posterior y normal en temperatura Y humedad; no basta solo una variable."
+      ],
+      "x": 810,
+      "y": 1170,
+      "w": 700,
+      "h": 180
+    },
+    {
+      "id": "rule2",
+      "kind": "note",
+      "label": "Mejora propuesta explícita",
+      "body": [
+        "SignalRestored separa recuperación de comunicación y recuperación térmica.",
+        "Es una regla de diseño añadida; no se presenta como comportamiento ya desplegado en TB1."
+      ],
+      "x": 1555,
+      "y": 1170,
+      "w": 700,
+      "h": 180
+    }
+  ],
+  "edges": [
+    {
+      "source": "r0n0",
+      "target": "r0n1",
+      "label": "ejecuta",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r0n1",
+      "target": "r0n2",
+      "label": "valida",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r0n2",
+      "target": "r0n3",
+      "label": "emite",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r0n3",
+      "target": "r0n4",
+      "label": "activa",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r0n4",
+      "target": "r0n5",
+      "label": "coordina",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": true,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r1n0",
+      "target": "r1n1",
+      "label": "ejecuta",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r1n1",
+      "target": "r1n2",
+      "label": "valida",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r1n2",
+      "target": "r1n3",
+      "label": "emite",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r1n3",
+      "target": "r1n4",
+      "label": "activa",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r1n4",
+      "target": "r1n5",
+      "label": "coordina",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": true,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r2n0",
+      "target": "r2n1",
+      "label": "ejecuta",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r2n1",
+      "target": "r2n2",
+      "label": "valida",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r2n2",
+      "target": "r2n3",
+      "label": "emite",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r2n3",
+      "target": "r2n4",
+      "label": "activa",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r2n4",
+      "target": "r2n5",
+      "label": "coordina",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": true,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r3n0",
+      "target": "r3n1",
+      "label": "ejecuta",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": true,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r3n1",
+      "target": "r3n2",
+      "label": "valida",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r3n2",
+      "target": "r3n3",
+      "label": "emite",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r3n3",
+      "target": "r3n4",
+      "label": "activa",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r3n4",
+      "target": "r3n5",
+      "label": "coordina",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": true,
+      "endArrow": "classic"
+    }
+  ]
+}

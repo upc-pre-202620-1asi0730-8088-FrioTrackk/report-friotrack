@@ -1,0 +1,335 @@
+{
+  "id": "15-uml-alerts-reporting",
+  "section": "4.7.1",
+  "title": "FríoTrack · UML DDD · Alert & Reporting",
+  "subtitle": "Apoyo · Reconocer una alerta no demuestra que la condición de riesgo haya terminado.",
+  "width": 2300,
+  "height": 1807,
+  "legend": "<<Aggregate Root>> raíz · <<Entity>> entidad · <<Value Object>> valor · ◆ composición · - - > dependencia por ID",
+  "notes": [
+    "RecoveryEvidence es un objeto local; añade señal restaurada y fecha para distinguir recuperación de comunicación y recuperación térmica. No exige compartir SensorReading entre contextos.",
+    "Las cuatro raíces conservan repositorios independientes. CorrectiveAction solo se persiste a través de Alert.",
+    "NO_SIGNAL y dispatcher de eventos pertenecen al diseño objetivo; no se atribuyen al JSON API actual."
+  ],
+  "nodes": [
+    {
+      "id": "Alert",
+      "kind": "class",
+      "label": "Alert",
+      "x": 60,
+      "y": 210,
+      "w": 520,
+      "h": 354,
+      "stereotype": "Aggregate Root",
+      "attributes": [
+        "- id: UUID",
+        "- shipmentId: UUID",
+        "- triggerReadingId: Int64?",
+        "- type: AlertType",
+        "- severity: AlertSeverity",
+        "- status: AlertStatus",
+        "- openedAt: DateTimeOffset",
+        "- acknowledgedAt: DateTimeOffset?",
+        "- resolvedAt: DateTimeOffset?"
+      ],
+      "methods": [
+        "+ acknowledge(action: CorrectiveAction): void",
+        "+ resolve(evidence: RecoveryEvidence): void"
+      ]
+    },
+    {
+      "id": "CorrectiveAction",
+      "kind": "class",
+      "label": "CorrectiveAction",
+      "x": 790,
+      "y": 210,
+      "w": 500,
+      "h": 214,
+      "stereotype": "Entity interna de Alert",
+      "attributes": [
+        "- id: UUID",
+        "- registeredBy: UUID",
+        "- comment: String",
+        "- notifyClient: Boolean",
+        "- registeredAt: DateTimeOffset"
+      ]
+    },
+    {
+      "id": "RecoveryEvidence",
+      "kind": "class",
+      "label": "RecoveryEvidence",
+      "x": 1490,
+      "y": 210,
+      "w": 720,
+      "h": 254,
+      "stereotype": "Value Object · contrato local",
+      "attributes": [
+        "- readingId: Int64",
+        "- shipmentId: UUID",
+        "- recordedAt: DateTimeOffset",
+        "- signalRestored: Boolean",
+        "- withinBothRanges: Boolean"
+      ],
+      "methods": [
+        "+ resolves(type, openedAt): Boolean"
+      ]
+    },
+    {
+      "id": "Notification",
+      "kind": "class",
+      "label": "Notification",
+      "x": 60,
+      "y": 850,
+      "w": 520,
+      "h": 294,
+      "stereotype": "Aggregate Root",
+      "attributes": [
+        "- id: UUID",
+        "- userId: UUID",
+        "- shipmentId: UUID",
+        "- alertId: UUID?",
+        "- kind: String",
+        "- createdAt: DateTimeOffset",
+        "- readAt: DateTimeOffset?"
+      ],
+      "methods": [
+        "+ markRead(at: DateTimeOffset): void"
+      ]
+    },
+    {
+      "id": "Incident",
+      "kind": "class",
+      "label": "Incident",
+      "x": 790,
+      "y": 850,
+      "w": 500,
+      "h": 214,
+      "stereotype": "Aggregate Root",
+      "attributes": [
+        "- id: UUID",
+        "- shipmentId: UUID",
+        "- registeredBy: UUID",
+        "- description: String",
+        "- registeredAt: DateTimeOffset"
+      ]
+    },
+    {
+      "id": "ThermalReport",
+      "kind": "class",
+      "label": "ThermalReport",
+      "x": 1490,
+      "y": 850,
+      "w": 720,
+      "h": 274,
+      "stereotype": "Aggregate Root",
+      "attributes": [
+        "- id: UUID",
+        "- shipmentId: UUID",
+        "- generatedBy: UUID",
+        "- generatedAt: DateTimeOffset",
+        "- filePath: String",
+        "- summary: JsonSnapshot"
+      ],
+      "methods": [
+        "+ generateSnapshot(shipmentId: UUID): void"
+      ]
+    },
+    {
+      "id": "IAlertRepository",
+      "kind": "class",
+      "label": "IAlertRepository",
+      "x": 60,
+      "y": 1350,
+      "w": 520,
+      "h": 174,
+      "stereotype": "interface · Domain Port",
+      "methods": [
+        "+ find(id: UUID): Alert?",
+        "+ save(root: Alert): void"
+      ]
+    },
+    {
+      "id": "INotificationRepository",
+      "kind": "class",
+      "label": "INotificationRepository",
+      "x": 630,
+      "y": 1350,
+      "w": 500,
+      "h": 174,
+      "stereotype": "interface · Domain Port",
+      "methods": [
+        "+ find(id: UUID): Notification?",
+        "+ save(root: Notification): void"
+      ]
+    },
+    {
+      "id": "IIncidentRepository",
+      "kind": "class",
+      "label": "IIncidentRepository",
+      "x": 1190,
+      "y": 1350,
+      "w": 480,
+      "h": 174,
+      "stereotype": "interface · Domain Port",
+      "methods": [
+        "+ find(id: UUID): Incident?",
+        "+ save(root: Incident): void"
+      ]
+    },
+    {
+      "id": "IThermalReportRepository",
+      "kind": "class",
+      "label": "IThermalReportRepository",
+      "x": 1730,
+      "y": 1350,
+      "w": 480,
+      "h": 174,
+      "stereotype": "interface · Domain Port",
+      "methods": [
+        "+ find(id: UUID): ThermalReport?",
+        "+ save(root: ThermalReport): void"
+      ]
+    },
+    {
+      "id": "AlertTypes",
+      "kind": "enum",
+      "label": "Enumeraciones",
+      "x": 1490,
+      "y": 580,
+      "w": 720,
+      "h": 174,
+      "attributes": [
+        "AlertType = TEMPERATURE | HUMIDITY | NO_SIGNAL",
+        "AlertStatus = ACTIVE | ACKNOWLEDGED | RESOLVED",
+        "AlertSeverity = WARNING | CRITICAL"
+      ]
+    },
+    {
+      "id": "Rules",
+      "kind": "note",
+      "label": "Reglas y límites",
+      "x": 60,
+      "y": 1580,
+      "w": 2150,
+      "h": 162,
+      "body": [
+        "TEMPERATURE / HUMIDITY: una lectura posterior normal dentro de ambos rangos puede resolver la excursión.",
+        "NO_SIGNAL: lectura válida y reciente que restablece señal; puede coexistir con una excursión térmica que sigue abierta.",
+        "La notificación se dirige al cliente asignado. Marcar leída requiere acción del destinatario; no se ejecuta al enviarla."
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "Alert",
+      "target": "CorrectiveAction",
+      "label": "Acciones dentro del agregado",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "points": [],
+      "endArrow": "none",
+      "startArrow": "diamond",
+      "sourceLabel": "1",
+      "targetLabel": "0..*",
+      "sourceOffset": 0.28
+    },
+    {
+      "source": "Alert",
+      "target": "RecoveryEvidence",
+      "label": "Valida evidencia local, sin entidad de Monitoring",
+      "sourcePort": "top",
+      "targetPort": "top",
+      "points": [
+        [
+          320,
+          150
+        ],
+        [
+          1850,
+          150
+        ]
+      ],
+      "endArrow": "open",
+      "dashed": true,
+      "labelX": 1100,
+      "labelY": 135
+    },
+    {
+      "source": "IAlertRepository",
+      "target": "Alert",
+      "label": "Persiste raíz Alert",
+      "sourcePort": "left",
+      "targetPort": "left",
+      "points": [
+        [
+          25,
+          1437.0
+        ],
+        [
+          25,
+          1410
+        ],
+        [
+          25,
+          400
+        ],
+        [
+          25,
+          387.0
+        ]
+      ],
+      "endArrow": "open",
+      "dashed": true,
+      "labelX": 145,
+      "labelY": 790
+    },
+    {
+      "source": "INotificationRepository",
+      "target": "Notification",
+      "label": "Persiste raíz",
+      "sourcePort": "top",
+      "targetPort": "bottom",
+      "points": [
+        [
+          880,
+          1290
+        ],
+        [
+          320,
+          1290
+        ]
+      ],
+      "endArrow": "open",
+      "dashed": true
+    },
+    {
+      "source": "IIncidentRepository",
+      "target": "Incident",
+      "label": "Persiste raíz",
+      "sourcePort": "top",
+      "targetPort": "bottom",
+      "points": [
+        [
+          1430,
+          1290
+        ],
+        [
+          1040,
+          1290
+        ]
+      ],
+      "endArrow": "open",
+      "dashed": true
+    },
+    {
+      "source": "IThermalReportRepository",
+      "target": "ThermalReport",
+      "label": "Persiste raíz",
+      "sourcePort": "top",
+      "targetPort": "bottom",
+      "points": [],
+      "endArrow": "open",
+      "dashed": true
+    }
+  ]
+}

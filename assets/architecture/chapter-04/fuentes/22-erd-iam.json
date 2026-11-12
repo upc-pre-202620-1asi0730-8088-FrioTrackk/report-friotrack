@@ -1,0 +1,109 @@
+{
+  "id": "22-erd-iam",
+  "section": "4.8.1",
+  "title": "FríoTrack · ERD · IAM · Genérico",
+  "subtitle": "Esquema objetivo PostgreSQL · columnas completas y claves de referencia; no se acredita despliegue de base de datos.",
+  "width": 2100,
+  "height": 1130,
+  "legend": "PK primaria · FK foránea · UK única · nullable opcional · flecha FK → PK · multiplicidades junto a cada extremo",
+  "notes": [
+    "Proyección relacional objetivo PostgreSQL: no constituye migración ejecutada ni el almacén JSON actual.",
+    "Las claves de otros contextos son referencias por ID. Una FK de persistencia no define propiedad de un agregado."
+  ],
+  "nodes": [
+    {
+      "id": "Organization",
+      "kind": "table",
+      "label": "organizations",
+      "x": 60,
+      "y": 170,
+      "w": 460,
+      "h": 154,
+      "stereotype": "IAM",
+      "attributes": [
+        "id: uuid [PK]",
+        "name: varchar(160)"
+      ]
+    },
+    {
+      "id": "UserAccount",
+      "kind": "table",
+      "label": "users",
+      "x": 720,
+      "y": 170,
+      "w": 590,
+      "h": 314,
+      "stereotype": "IAM",
+      "attributes": [
+        "id: uuid [PK]",
+        "organization_id: uuid [FK]",
+        "email: varchar(254) [UK]",
+        "password_hash: varchar(255)",
+        "full_name: varchar(160)",
+        "role: varchar(24)",
+        "preferred_language: varchar(8)",
+        "enabled: boolean",
+        "failed_attempts: integer",
+        "locked_until: timestamptz [nullable]"
+      ]
+    },
+    {
+      "id": "PasswordResetToken",
+      "kind": "table",
+      "label": "password_reset_tokens",
+      "x": 1510,
+      "y": 170,
+      "w": 520,
+      "h": 214,
+      "stereotype": "IAM",
+      "attributes": [
+        "id: uuid [PK]",
+        "user_id: uuid [FK]",
+        "token_hash: varchar(64) [UK]",
+        "expires_at: timestamptz",
+        "used_at: timestamptz [nullable]"
+      ]
+    },
+    {
+      "id": "PanelNote",
+      "kind": "note",
+      "label": "Reglas y límites",
+      "x": 60,
+      "y": 920,
+      "w": 1980,
+      "h": 138,
+      "body": [
+        "Correo y token_hash son únicos. used_at/locked_until pueden ser null.",
+        "La recuperación y bloqueo por cuenta son objetivo. TB1 utiliza cuentas/sesiones en JSON privado."
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "UserAccount",
+      "target": "Organization",
+      "label": "organization_id → id",
+      "sourcePort": "left",
+      "targetPort": "right",
+      "points": [],
+      "endArrow": "open",
+      "sourceLabel": "0..*",
+      "targetLabel": "1",
+      "labelX": 610,
+      "labelY": 355
+    },
+    {
+      "source": "PasswordResetToken",
+      "target": "UserAccount",
+      "label": "user_id → id",
+      "sourcePort": "left",
+      "targetPort": "right",
+      "points": [],
+      "endArrow": "open",
+      "sourceLabel": "0..*",
+      "targetLabel": "1",
+      "labelX": 1410,
+      "labelY": 250
+    }
+  ]
+}

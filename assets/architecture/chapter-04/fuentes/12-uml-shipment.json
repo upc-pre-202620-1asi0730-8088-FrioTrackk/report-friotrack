@@ -1,0 +1,205 @@
+{
+  "id": "12-uml-shipment",
+  "section": "4.7.1",
+  "title": "FríoTrack · UML DDD · Shipment Management",
+  "subtitle": "Core · Diseño objetivo del backend; no equivale a las clases JSON de la API TB1.",
+  "width": 2100,
+  "height": 1340,
+  "legend": "<<Aggregate Root>> raíz · <<Entity>> entidad · <<Value Object>> valor · ◆ composición · - - > dependencia por ID",
+  "notes": [
+    "DRAFT es diseño futuro; la API TB1 no persiste borradores. La cancelación prevista solo se admite antes de IN_TRANSIT.",
+    "ThermalRange pertenece a Shipment; Monitoring utiliza su propia copia MonitoredRange."
+  ],
+  "nodes": [
+    {
+      "id": "Shipment",
+      "kind": "class",
+      "label": "Shipment",
+      "x": 70,
+      "y": 180,
+      "w": 620,
+      "h": 514,
+      "stereotype": "Aggregate Root",
+      "attributes": [
+        "- id: UUID",
+        "- code: String",
+        "- organizationId: UUID",
+        "- coordinatorId: UUID",
+        "- clientId: UUID",
+        "- cargo: String",
+        "- weightTons: Decimal",
+        "- origin: String",
+        "- destination: String",
+        "- range: ThermalRange",
+        "- plannedDeparture: DateTimeOffset",
+        "- estimatedArrival: DateTimeOffset",
+        "- status: ShipmentStatus",
+        "- version: Int64"
+      ],
+      "methods": [
+        "+ schedule(): void",
+        "+ startTransit(): void",
+        "+ markDelivered(): void",
+        "+ cancel(reason: String): void",
+        "+ updateRange(range: ThermalRange): void"
+      ]
+    },
+    {
+      "id": "ThermalRange",
+      "kind": "class",
+      "label": "ThermalRange",
+      "x": 900,
+      "y": 180,
+      "w": 480,
+      "h": 254,
+      "stereotype": "Value Object · inmutable",
+      "attributes": [
+        "- minTempC: Decimal",
+        "- maxTempC: Decimal",
+        "- minHumidityPct: Decimal",
+        "- maxHumidityPct: Decimal",
+        "- toleranceMinutes: Integer"
+      ],
+      "methods": [
+        "+ contains(tempC, humidityPct): Boolean"
+      ]
+    },
+    {
+      "id": "ShipmentHistoryEvent",
+      "kind": "class",
+      "label": "ShipmentHistoryEvent",
+      "x": 1540,
+      "y": 180,
+      "w": 490,
+      "h": 254,
+      "stereotype": "Entity interna",
+      "attributes": [
+        "- id: UUID",
+        "- actorId: UUID",
+        "- action: String",
+        "- fromStatus: ShipmentStatus?",
+        "- toStatus: ShipmentStatus?",
+        "- note: String",
+        "- recordedAt: DateTimeOffset"
+      ]
+    },
+    {
+      "id": "ShipmentStatus",
+      "kind": "enum",
+      "label": "ShipmentStatus",
+      "x": 1540,
+      "y": 630,
+      "w": 490,
+      "h": 214,
+      "attributes": [
+        "DRAFT",
+        "SCHEDULED",
+        "IN_TRANSIT",
+        "DELIVERED",
+        "CANCELLED"
+      ]
+    },
+    {
+      "id": "IShipmentRepository",
+      "kind": "class",
+      "label": "IShipmentRepository",
+      "x": 900,
+      "y": 880,
+      "w": 600,
+      "h": 174,
+      "stereotype": "interface · Domain Port",
+      "methods": [
+        "+ find(id: UUID): Shipment?",
+        "+ save(root: Shipment): void"
+      ]
+    },
+    {
+      "id": "Rules",
+      "kind": "note",
+      "label": "Reglas y límites",
+      "x": 70,
+      "y": 1110,
+      "w": 1960,
+      "h": 162,
+      "body": [
+        "La raíz protege rango, fechas, peso y transiciones; un borrador no reserva recursos.",
+        "La aplicación confirma capacidad y reserva de Fleet antes de aceptar programación, en una unidad de trabajo.",
+        "Referencias a organización, coordinador y cliente son IDs; no se navegan objetos de IAM ni de Fleet."
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "IShipmentRepository",
+      "target": "Shipment",
+      "label": "Persiste la raíz",
+      "sourcePort": "top",
+      "targetPort": "bottom",
+      "points": [],
+      "endArrow": "open",
+      "dashed": true
+    },
+    {
+      "source": "Shipment",
+      "target": "ThermalRange",
+      "label": "Rango propio del envío",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "points": [],
+      "endArrow": "none",
+      "startArrow": "diamond",
+      "sourceLabel": "1",
+      "targetLabel": "1",
+      "sourceOffset": 0.22
+    },
+    {
+      "source": "Shipment",
+      "target": "ShipmentHistoryEvent",
+      "label": "Historial dentro del agregado",
+      "sourcePort": "top",
+      "targetPort": "top",
+      "points": [
+        [
+          380,
+          135
+        ],
+        [
+          1785,
+          135
+        ]
+      ],
+      "endArrow": "none",
+      "startArrow": "diamond",
+      "sourceLabel": "1",
+      "targetLabel": "0..*",
+      "labelX": 1050,
+      "labelY": 125
+    },
+    {
+      "source": "Shipment",
+      "target": "ShipmentStatus",
+      "label": "Tipo de estado",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "points": [
+        [
+          780,
+          437.0
+        ],
+        [
+          780,
+          690
+        ],
+        [
+          1480,
+          690
+        ],
+        [
+          1480,
+          737.0
+        ]
+      ],
+      "endArrow": "open"
+    }
+  ]
+}

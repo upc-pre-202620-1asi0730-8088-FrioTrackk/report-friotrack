@@ -1,0 +1,824 @@
+{
+  "id": "06-es-alerts-reporting",
+  "section": "4.6.1",
+  "title": "FríoTrack · BC5 Alert and Reporting",
+  "subtitle": "Diseño objetivo · Los eventos, la ingesta física y las políticas temporales no se presentan como implementados en TB1.",
+  "width": 2320,
+  "height": 2165,
+  "legend": "Actor amarillo claro · Comando azul · Agregado amarillo · Evento naranja · Política violeta · Vista verde · Contrato externo rosa",
+  "notes": [],
+  "nodes": [
+    {
+      "id": "context",
+      "kind": "boundary",
+      "label": "BC5 · Alert & Reporting · Apoyo",
+      "x": 35,
+      "y": 115,
+      "w": 2250,
+      "h": 1785
+    },
+    {
+      "id": "r0n0",
+      "kind": "contract",
+      "label": "Evento de monitoreo",
+      "body": [
+        "ReadingOutOfRange o SignalLost",
+        "Origen BC4; tipo explícito"
+      ],
+      "x": 65,
+      "y": 175,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r0n1",
+      "kind": "policy",
+      "label": "Al informar una condición",
+      "body": [
+        "Identificar tipo, envío y",
+        "origen de la condición"
+      ],
+      "x": 385,
+      "y": 175,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r0n2",
+      "kind": "command",
+      "label": "RaiseAlert",
+      "body": [
+        "Térmica o pérdida de señal"
+      ],
+      "x": 705,
+      "y": 175,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r0n3",
+      "kind": "aggregate",
+      "label": "Alert",
+      "body": [
+        "Agregado raíz del contexto"
+      ],
+      "x": 1025,
+      "y": 175,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r0n4",
+      "kind": "event",
+      "label": "AlertRaised",
+      "body": [
+        "Estado ACTIVE"
+      ],
+      "x": 1345,
+      "y": 175,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r0n5",
+      "kind": "policy",
+      "label": "Al crear alerta",
+      "body": [
+        "Crear avisos a responsables"
+      ],
+      "x": 1665,
+      "y": 175,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r0n6",
+      "kind": "command",
+      "label": "CreateNotification",
+      "body": [
+        "Coordinador y cliente asignado"
+      ],
+      "x": 1985,
+      "y": 175,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r1n0",
+      "kind": "actor",
+      "label": "Coordinador logístico",
+      "body": [
+        "Actor autorizado por la API"
+      ],
+      "x": 65,
+      "y": 420,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r1n1",
+      "kind": "command",
+      "label": "RecordCorrectiveAction",
+      "body": [
+        "Comentario, responsable",
+        "y opción de aviso al cliente"
+      ],
+      "x": 385,
+      "y": 420,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r1n2",
+      "kind": "aggregate",
+      "label": "Alert",
+      "body": [
+        "Agregado raíz del contexto"
+      ],
+      "x": 705,
+      "y": 420,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r1n3",
+      "kind": "event",
+      "label": "AlertAcknowledged",
+      "body": [
+        "Estado ACKNOWLEDGED",
+        "Excursión aún abierta"
+      ],
+      "x": 1025,
+      "y": 420,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r1n4",
+      "kind": "policy",
+      "label": "Si solicitó avisar al cliente",
+      "body": [
+        "Crear aviso de atención"
+      ],
+      "x": 1345,
+      "y": 420,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r1n5",
+      "kind": "command",
+      "label": "CreateNotification",
+      "body": [
+        "Solo al cliente del envío"
+      ],
+      "x": 1665,
+      "y": 420,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r2n0",
+      "kind": "contract",
+      "label": "Evidencia de recuperación",
+      "body": [
+        "ReadingWithinRange posterior",
+        "o SignalRestored según tipo"
+      ],
+      "x": 65,
+      "y": 665,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r2n1",
+      "kind": "policy",
+      "label": "Al validar recuperación",
+      "body": [
+        "Térmica: ambos rangos",
+        "Señal: comunicación reciente"
+      ],
+      "x": 385,
+      "y": 665,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r2n2",
+      "kind": "command",
+      "label": "ResolveAlert",
+      "body": [
+        "Evidencia local normalizada"
+      ],
+      "x": 705,
+      "y": 665,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r2n3",
+      "kind": "aggregate",
+      "label": "Alert",
+      "body": [
+        "Agregado raíz del contexto"
+      ],
+      "x": 1025,
+      "y": 665,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r2n4",
+      "kind": "event",
+      "label": "AlertResolved",
+      "body": [
+        "Estado RESOLVED"
+      ],
+      "x": 1345,
+      "y": 665,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r2n5",
+      "kind": "readmodel",
+      "label": "Historial de alertas",
+      "body": [
+        "Conserva causa y atención"
+      ],
+      "x": 1665,
+      "y": 665,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r3n0",
+      "kind": "command",
+      "label": "CreateNotification",
+      "body": [
+        "Origen: alerta o atención"
+      ],
+      "x": 65,
+      "y": 910,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r3n1",
+      "kind": "aggregate",
+      "label": "Notification",
+      "body": [
+        "Agregado raíz del contexto"
+      ],
+      "x": 385,
+      "y": 910,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r3n2",
+      "kind": "event",
+      "label": "NotificationCreated",
+      "body": [
+        "Dirigida a destinatario"
+      ],
+      "x": 705,
+      "y": 910,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r3n3",
+      "kind": "readmodel",
+      "label": "Bandeja del usuario",
+      "body": [
+        "Avisos no leídos"
+      ],
+      "x": 1025,
+      "y": 910,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r4n0",
+      "kind": "actor",
+      "label": "Destinatario autenticado",
+      "body": [
+        "Consulta y decide leer un aviso"
+      ],
+      "x": 65,
+      "y": 1155,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r4n1",
+      "kind": "command",
+      "label": "MarkNotificationRead",
+      "body": [
+        "Acción explícita del usuario"
+      ],
+      "x": 385,
+      "y": 1155,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r4n2",
+      "kind": "aggregate",
+      "label": "Notification",
+      "body": [
+        "Agregado raíz del contexto"
+      ],
+      "x": 705,
+      "y": 1155,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r4n3",
+      "kind": "event",
+      "label": "NotificationRead",
+      "body": [
+        "Instante de lectura registrado"
+      ],
+      "x": 1025,
+      "y": 1155,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r4n4",
+      "kind": "readmodel",
+      "label": "Bandeja actualizada",
+      "body": [
+        "Aviso leído por su destinatario"
+      ],
+      "x": 1345,
+      "y": 1155,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r5n0",
+      "kind": "actor",
+      "label": "Coordinador o Cliente de Carga",
+      "body": [
+        "Usuario autorizado del envío"
+      ],
+      "x": 65,
+      "y": 1400,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r5n1",
+      "kind": "readmodel",
+      "label": "Historial del envío",
+      "body": [
+        "Envío entregado y evidencia"
+      ],
+      "x": 385,
+      "y": 1400,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r5n2",
+      "kind": "command",
+      "label": "GenerateThermalReport",
+      "body": [
+        "Solicitud expresa del usuario"
+      ],
+      "x": 705,
+      "y": 1400,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r5n3",
+      "kind": "aggregate",
+      "label": "ThermalReport",
+      "body": [
+        "Agregado raíz del contexto"
+      ],
+      "x": 1025,
+      "y": 1400,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r5n4",
+      "kind": "event",
+      "label": "ThermalReport\nGenerated",
+      "body": [
+        "Instantánea identificada"
+      ],
+      "x": 1345,
+      "y": 1400,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r5n5",
+      "kind": "readmodel",
+      "label": "Descarga del informe",
+      "body": [
+        "Lecturas, alertas y acciones"
+      ],
+      "x": 1665,
+      "y": 1400,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r6n0",
+      "kind": "actor",
+      "label": "Coordinador logístico",
+      "body": [
+        "Actor autorizado por la API"
+      ],
+      "x": 65,
+      "y": 1645,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r6n1",
+      "kind": "command",
+      "label": "RecordIncident",
+      "body": [
+        "Descripción y fecha"
+      ],
+      "x": 385,
+      "y": 1645,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r6n2",
+      "kind": "aggregate",
+      "label": "Incident",
+      "body": [
+        "Agregado raíz del contexto"
+      ],
+      "x": 705,
+      "y": 1645,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r6n3",
+      "kind": "event",
+      "label": "IncidentRecorded",
+      "body": [
+        "Hecho operativo registrado"
+      ],
+      "x": 1025,
+      "y": 1645,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r6n4",
+      "kind": "readmodel",
+      "label": "Bitácora del traslado",
+      "body": [
+        "Incidencias y responsables"
+      ],
+      "x": 1345,
+      "y": 1645,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "rule0",
+      "kind": "note",
+      "label": "Regla de recuperación",
+      "body": [
+        "ACTIVE → ACKNOWLEDGED al atender; no cambia a RESOLVED por esa acción.",
+        "La evidencia posterior se valida por el tipo de alerta; no se cierra una excursión por restaurar señal."
+      ],
+      "x": 65,
+      "y": 1905,
+      "w": 700,
+      "h": 180
+    },
+    {
+      "id": "rule1",
+      "kind": "note",
+      "label": "Regla de destinatarios y lectura",
+      "body": [
+        "Los avisos solo incluyen destinatarios autorizados del envío.",
+        "Crear o entregar un aviso no lo marca leído; MarkNotificationRead exige acción del usuario."
+      ],
+      "x": 810,
+      "y": 1905,
+      "w": 700,
+      "h": 180
+    },
+    {
+      "id": "rule2",
+      "kind": "note",
+      "label": "Alcance del informe",
+      "body": [
+        "ShipmentDelivered habilita la solicitud; no genera automáticamente un PDF.",
+        "El informe identifica datos de prueba y no certifica condiciones sin mediciones."
+      ],
+      "x": 1555,
+      "y": 1905,
+      "w": 700,
+      "h": 180
+    }
+  ],
+  "edges": [
+    {
+      "source": "r0n0",
+      "target": "r0n1",
+      "label": "activa",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": true,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r0n1",
+      "target": "r0n2",
+      "label": "ejecuta",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r0n2",
+      "target": "r0n3",
+      "label": "valida",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r0n3",
+      "target": "r0n4",
+      "label": "emite",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r0n4",
+      "target": "r0n5",
+      "label": "activa",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r0n5",
+      "target": "r0n6",
+      "label": "ejecuta",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r1n0",
+      "target": "r1n1",
+      "label": "ejecuta",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r1n1",
+      "target": "r1n2",
+      "label": "valida",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r1n2",
+      "target": "r1n3",
+      "label": "emite",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r1n3",
+      "target": "r1n4",
+      "label": "activa",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r1n4",
+      "target": "r1n5",
+      "label": "ejecuta",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r2n0",
+      "target": "r2n1",
+      "label": "activa",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": true,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r2n1",
+      "target": "r2n2",
+      "label": "ejecuta",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r2n2",
+      "target": "r2n3",
+      "label": "valida",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r2n3",
+      "target": "r2n4",
+      "label": "emite",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r2n4",
+      "target": "r2n5",
+      "label": "informa",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r3n0",
+      "target": "r3n1",
+      "label": "valida",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r3n1",
+      "target": "r3n2",
+      "label": "emite",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r3n2",
+      "target": "r3n3",
+      "label": "informa",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r4n0",
+      "target": "r4n1",
+      "label": "ejecuta",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r4n1",
+      "target": "r4n2",
+      "label": "valida",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r4n2",
+      "target": "r4n3",
+      "label": "emite",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r4n3",
+      "target": "r4n4",
+      "label": "informa",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r5n0",
+      "target": "r5n1",
+      "label": "informa",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r5n1",
+      "target": "r5n2",
+      "label": "ejecuta",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r5n2",
+      "target": "r5n3",
+      "label": "valida",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r5n3",
+      "target": "r5n4",
+      "label": "emite",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r5n4",
+      "target": "r5n5",
+      "label": "informa",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r6n0",
+      "target": "r6n1",
+      "label": "ejecuta",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r6n1",
+      "target": "r6n2",
+      "label": "valida",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r6n2",
+      "target": "r6n3",
+      "label": "emite",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r6n3",
+      "target": "r6n4",
+      "label": "informa",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    }
+  ]
+}

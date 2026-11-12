@@ -1,0 +1,1056 @@
+{
+  "id": "01-es-general",
+  "section": "4.6.1",
+  "title": "FríoTrack · EventStorming general e integración",
+  "subtitle": "Diseño objetivo · Core → apoyo → IAM genérico · Las flechas numeradas remiten a la matriz I01–I13",
+  "width": 2860,
+  "height": 2220,
+  "legend": "Actor amarillo claro · Comando azul · Agregado amarillo · Evento naranja · Política violeta · Vista verde · Contrato externo rosa",
+  "notes": [
+    "I01 e I02 corrigen la reserva previa a la aceptación de programación.",
+    "I09 distingue recuperación de comunicación y recuperación térmica.",
+    "I12 es habilitación de una solicitud de informe; no ejecución automática.",
+    "Se propone un monolito modular; no se afirma un broker o dispatcher implementado."
+  ],
+  "nodes": [
+    {
+      "id": "shipmentBoundary",
+      "kind": "boundary",
+      "label": "BC3 · Shipment Management · Core",
+      "x": 70,
+      "y": 120,
+      "w": 2700,
+      "h": 245
+    },
+    {
+      "id": "shipment0",
+      "kind": "command",
+      "label": "ScheduleShipment",
+      "body": [
+        "Caso de uso coordinado"
+      ],
+      "x": 150,
+      "y": 165,
+      "w": 340,
+      "h": 150
+    },
+    {
+      "id": "shipment1",
+      "kind": "aggregate",
+      "label": "Shipment",
+      "body": [
+        "Agregado raíz del contexto"
+      ],
+      "x": 590,
+      "y": 165,
+      "w": 340,
+      "h": 150
+    },
+    {
+      "id": "shipment2",
+      "kind": "event",
+      "label": "ShipmentScheduled",
+      "body": [
+        "Reserva confirmada"
+      ],
+      "x": 1030,
+      "y": 165,
+      "w": 340,
+      "h": 150
+    },
+    {
+      "id": "shipment3",
+      "kind": "event",
+      "label": "TransitStarted",
+      "body": [],
+      "x": 1470,
+      "y": 165,
+      "w": 340,
+      "h": 150
+    },
+    {
+      "id": "shipment4",
+      "kind": "event",
+      "label": "ShipmentDelivered",
+      "body": [],
+      "x": 1910,
+      "y": 165,
+      "w": 340,
+      "h": 150
+    },
+    {
+      "id": "shipment5",
+      "kind": "event",
+      "label": "ShipmentCancelled",
+      "body": [],
+      "x": 2350,
+      "y": 165,
+      "w": 340,
+      "h": 150
+    },
+    {
+      "id": "monitoringBoundary",
+      "kind": "boundary",
+      "label": "BC4 · Monitoring & Telemetry · Core",
+      "x": 70,
+      "y": 500,
+      "w": 2700,
+      "h": 245
+    },
+    {
+      "id": "monitoring0",
+      "kind": "command",
+      "label": "StartMonitoring",
+      "body": [],
+      "x": 150,
+      "y": 545,
+      "w": 340,
+      "h": 150
+    },
+    {
+      "id": "monitoring1",
+      "kind": "aggregate",
+      "label": "ShipmentMonitoring",
+      "body": [
+        "Agregado raíz del contexto"
+      ],
+      "x": 590,
+      "y": 545,
+      "w": 340,
+      "h": 150
+    },
+    {
+      "id": "monitoring2",
+      "kind": "event",
+      "label": "ReadingRecorded",
+      "body": [],
+      "x": 1030,
+      "y": 545,
+      "w": 340,
+      "h": 150
+    },
+    {
+      "id": "monitoring3",
+      "kind": "event",
+      "label": "ReadingOutOfRange",
+      "body": [],
+      "x": 1470,
+      "y": 545,
+      "w": 340,
+      "h": 150
+    },
+    {
+      "id": "monitoring4",
+      "kind": "event",
+      "label": "ReadingWithinRange",
+      "body": [],
+      "x": 1910,
+      "y": 545,
+      "w": 340,
+      "h": 150
+    },
+    {
+      "id": "monitoring5",
+      "kind": "event",
+      "label": "SignalLost / Restored",
+      "body": [],
+      "x": 2350,
+      "y": 545,
+      "w": 340,
+      "h": 150
+    },
+    {
+      "id": "fleetBoundary",
+      "kind": "boundary",
+      "label": "BC2 · Fleet & Resource Management · Apoyo",
+      "x": 70,
+      "y": 880,
+      "w": 2700,
+      "h": 245
+    },
+    {
+      "id": "fleet0",
+      "kind": "command",
+      "label": "ReserveResources",
+      "body": [],
+      "x": 150,
+      "y": 925,
+      "w": 340,
+      "h": 150
+    },
+    {
+      "id": "fleet1",
+      "kind": "aggregate",
+      "label": "FleetAllocation",
+      "body": [
+        "Agregado raíz del contexto"
+      ],
+      "x": 590,
+      "y": 925,
+      "w": 340,
+      "h": 150
+    },
+    {
+      "id": "fleet2",
+      "kind": "event",
+      "label": "ResourcesReserved",
+      "body": [],
+      "x": 1030,
+      "y": 925,
+      "w": 340,
+      "h": 150
+    },
+    {
+      "id": "fleet3",
+      "kind": "command",
+      "label": "ReleaseResources",
+      "body": [],
+      "x": 1470,
+      "y": 925,
+      "w": 340,
+      "h": 150
+    },
+    {
+      "id": "fleet4",
+      "kind": "event",
+      "label": "ResourcesReleased",
+      "body": [],
+      "x": 1910,
+      "y": 925,
+      "w": 340,
+      "h": 150
+    },
+    {
+      "id": "fleet5",
+      "kind": "readmodel",
+      "label": "Disponibilidad",
+      "body": [],
+      "x": 2350,
+      "y": 925,
+      "w": 340,
+      "h": 150
+    },
+    {
+      "id": "alertsBoundary",
+      "kind": "boundary",
+      "label": "BC5 · Alert & Reporting · Apoyo",
+      "x": 70,
+      "y": 1260,
+      "w": 2700,
+      "h": 245
+    },
+    {
+      "id": "alerts0",
+      "kind": "command",
+      "label": "RaiseAlert",
+      "body": [],
+      "x": 150,
+      "y": 1305,
+      "w": 340,
+      "h": 150
+    },
+    {
+      "id": "alerts1",
+      "kind": "aggregate",
+      "label": "Alert",
+      "body": [
+        "Agregado raíz del contexto"
+      ],
+      "x": 590,
+      "y": 1305,
+      "w": 340,
+      "h": 150
+    },
+    {
+      "id": "alerts2",
+      "kind": "event",
+      "label": "AlertRaised",
+      "body": [],
+      "x": 1030,
+      "y": 1305,
+      "w": 340,
+      "h": 150
+    },
+    {
+      "id": "alerts3",
+      "kind": "command",
+      "label": "ResolveAlert",
+      "body": [],
+      "x": 1470,
+      "y": 1305,
+      "w": 340,
+      "h": 150
+    },
+    {
+      "id": "alerts4",
+      "kind": "command",
+      "label": "GenerateThermalReport",
+      "body": [
+        "Solicitud del usuario"
+      ],
+      "x": 1910,
+      "y": 1305,
+      "w": 340,
+      "h": 150
+    },
+    {
+      "id": "alerts5",
+      "kind": "readmodel",
+      "label": "Avisos e historial",
+      "body": [],
+      "x": 2350,
+      "y": 1305,
+      "w": 340,
+      "h": 150
+    },
+    {
+      "id": "iamBoundary",
+      "kind": "boundary",
+      "label": "BC1 · IAM · Genérico",
+      "x": 70,
+      "y": 1640,
+      "w": 2700,
+      "h": 245
+    },
+    {
+      "id": "iam0",
+      "kind": "actor",
+      "label": "Usuario autorizado",
+      "body": [],
+      "x": 150,
+      "y": 1685,
+      "w": 340,
+      "h": 150
+    },
+    {
+      "id": "iam1",
+      "kind": "command",
+      "label": "Login / Register",
+      "body": [],
+      "x": 590,
+      "y": 1685,
+      "w": 340,
+      "h": 150
+    },
+    {
+      "id": "iam2",
+      "kind": "aggregate",
+      "label": "UserAccount",
+      "body": [
+        "Agregado raíz del contexto"
+      ],
+      "x": 1030,
+      "y": 1685,
+      "w": 340,
+      "h": 150
+    },
+    {
+      "id": "iam3",
+      "kind": "event",
+      "label": "UserAuthenticated",
+      "body": [],
+      "x": 1470,
+      "y": 1685,
+      "w": 340,
+      "h": 150
+    },
+    {
+      "id": "iam4",
+      "kind": "event",
+      "label": "SessionCreated",
+      "body": [],
+      "x": 1910,
+      "y": 1685,
+      "w": 340,
+      "h": 150
+    },
+    {
+      "id": "iam5",
+      "kind": "readmodel",
+      "label": "Identidad y permisos",
+      "body": [],
+      "x": 2350,
+      "y": 1685,
+      "w": 340,
+      "h": 150
+    },
+    {
+      "id": "rules",
+      "kind": "note",
+      "label": "Reglas globales de integración",
+      "body": [
+        "La reserva y la programación se confirman de forma consistente antes de ShipmentScheduled.",
+        "Atender una alerta no la resuelve; recuperación térmica exige una lectura posterior normal en ambos intervalos.",
+        "Entrega y cancelación previa al tránsito liberan recursos. IAM suministra identidad y permisos."
+      ],
+      "x": 120,
+      "y": 1960,
+      "w": 2630,
+      "h": 165
+    }
+  ],
+  "edges": [
+    {
+      "source": "shipment0",
+      "target": "shipment1",
+      "label": "valida",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "shipment1",
+      "target": "shipment2",
+      "label": "programar",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "shipment1",
+      "target": "shipment3",
+      "label": "iniciar",
+      "sourcePort": "bottom",
+      "targetPort": "bottom",
+      "dashed": false,
+      "endArrow": "classic",
+      "points": [
+        [
+          760,
+          352
+        ],
+        [
+          1640,
+          352
+        ]
+      ],
+      "labelX": 1200.0,
+      "labelY": 345
+    },
+    {
+      "source": "shipment1",
+      "target": "shipment4",
+      "label": "entregar",
+      "sourcePort": "bottom",
+      "targetPort": "bottom",
+      "dashed": false,
+      "endArrow": "classic",
+      "points": [
+        [
+          760,
+          364
+        ],
+        [
+          2080,
+          364
+        ]
+      ],
+      "labelX": 1420.0,
+      "labelY": 357
+    },
+    {
+      "source": "shipment1",
+      "target": "shipment5",
+      "label": "cancelar antes",
+      "sourcePort": "bottom",
+      "targetPort": "bottom",
+      "dashed": false,
+      "endArrow": "classic",
+      "points": [
+        [
+          760,
+          340
+        ],
+        [
+          2520,
+          340
+        ]
+      ],
+      "labelX": 1640.0,
+      "labelY": 333
+    },
+    {
+      "source": "monitoring0",
+      "target": "monitoring1",
+      "label": "inicia",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "monitoring1",
+      "target": "monitoring2",
+      "label": "registra",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "monitoring2",
+      "target": "monitoring3",
+      "label": "fuera",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "monitoring2",
+      "target": "monitoring4",
+      "label": "dentro",
+      "sourcePort": "bottom",
+      "targetPort": "bottom",
+      "dashed": false,
+      "endArrow": "classic",
+      "points": [
+        [
+          1200,
+          720
+        ],
+        [
+          2080,
+          720
+        ]
+      ],
+      "labelX": 1640.0,
+      "labelY": 713
+    },
+    {
+      "source": "monitoring1",
+      "target": "monitoring5",
+      "label": "silencio / señal",
+      "sourcePort": "bottom",
+      "targetPort": "bottom",
+      "dashed": false,
+      "endArrow": "classic",
+      "points": [
+        [
+          760,
+          720
+        ],
+        [
+          2520,
+          720
+        ]
+      ],
+      "labelX": 1640.0,
+      "labelY": 713
+    },
+    {
+      "source": "fleet0",
+      "target": "fleet1",
+      "label": "valida",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "fleet1",
+      "target": "fleet2",
+      "label": "confirma",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "fleet3",
+      "target": "fleet1",
+      "label": "libera",
+      "sourcePort": "bottom",
+      "targetPort": "bottom",
+      "dashed": false,
+      "endArrow": "classic",
+      "points": [
+        [
+          1640,
+          1112
+        ],
+        [
+          760,
+          1112
+        ]
+      ],
+      "labelX": 1200.0,
+      "labelY": 1105
+    },
+    {
+      "source": "fleet1",
+      "target": "fleet4",
+      "label": "liberada",
+      "sourcePort": "bottom",
+      "targetPort": "bottom",
+      "dashed": false,
+      "endArrow": "classic",
+      "points": [
+        [
+          760,
+          1124
+        ],
+        [
+          2080,
+          1124
+        ]
+      ],
+      "labelX": 1420.0,
+      "labelY": 1117
+    },
+    {
+      "source": "fleet4",
+      "target": "fleet5",
+      "label": "actualiza",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "alerts0",
+      "target": "alerts1",
+      "label": "valida",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "alerts1",
+      "target": "alerts2",
+      "label": "crea",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "alerts3",
+      "target": "alerts1",
+      "label": "evidencia",
+      "sourcePort": "bottom",
+      "targetPort": "bottom",
+      "dashed": false,
+      "endArrow": "classic",
+      "points": [
+        [
+          1640,
+          1492
+        ],
+        [
+          760,
+          1492
+        ]
+      ],
+      "labelX": 1200.0,
+      "labelY": 1485
+    },
+    {
+      "source": "alerts2",
+      "target": "alerts5",
+      "label": "proyecta",
+      "sourcePort": "bottom",
+      "targetPort": "bottom",
+      "dashed": false,
+      "endArrow": "classic",
+      "points": [
+        [
+          1200,
+          1492
+        ],
+        [
+          2520,
+          1492
+        ]
+      ],
+      "labelX": 1860.0,
+      "labelY": 1485
+    },
+    {
+      "source": "alerts4",
+      "target": "alerts5",
+      "label": "informe solicitado",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "iam0",
+      "target": "iam1",
+      "label": "solicita",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "iam1",
+      "target": "iam2",
+      "label": "valida",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "iam2",
+      "target": "iam3",
+      "label": "autentica",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "iam3",
+      "target": "iam4",
+      "label": "abre sesión",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "iam4",
+      "target": "iam5",
+      "label": "informa",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "shipment0",
+      "target": "fleet0",
+      "label": "I01 · reservar antes",
+      "sourcePort": "left",
+      "targetPort": "left",
+      "points": [
+        [
+          40,
+          240
+        ],
+        [
+          40,
+          1000
+        ]
+      ],
+      "dashed": true,
+      "endArrow": "classic",
+      "labelX": 185,
+      "labelY": 850
+    },
+    {
+      "source": "fleet2",
+      "target": "shipment1",
+      "label": "I02 · confirmar reserva",
+      "sourcePort": "bottom",
+      "targetPort": "bottom",
+      "points": [
+        [
+          1200,
+          1175
+        ],
+        [
+          55,
+          1175
+        ],
+        [
+          55,
+          345
+        ],
+        [
+          760,
+          345
+        ]
+      ],
+      "dashed": true,
+      "endArrow": "classic",
+      "labelX": 407.5,
+      "labelY": 333.0
+    },
+    {
+      "source": "shipment3",
+      "target": "monitoring0",
+      "label": "I03 · iniciar monitoreo",
+      "sourcePort": "bottom",
+      "targetPort": "top",
+      "points": [
+        [
+          1640,
+          445
+        ],
+        [
+          320,
+          445
+        ]
+      ],
+      "dashed": true,
+      "endArrow": "classic",
+      "labelX": 980.0,
+      "labelY": 433.0
+    },
+    {
+      "source": "monitoring2",
+      "target": "monitoring1",
+      "label": "I04 · evaluar lectura",
+      "sourcePort": "bottom",
+      "targetPort": "bottom",
+      "points": [
+        [
+          1200,
+          790
+        ],
+        [
+          760,
+          790
+        ]
+      ],
+      "dashed": true,
+      "endArrow": "classic",
+      "labelX": 980.0,
+      "labelY": 778.0
+    },
+    {
+      "source": "monitoring3",
+      "target": "alerts0",
+      "label": "I05 · alerta térmica",
+      "sourcePort": "bottom",
+      "targetPort": "top",
+      "points": [
+        [
+          1640,
+          825
+        ],
+        [
+          2700,
+          825
+        ],
+        [
+          2700,
+          1280
+        ],
+        [
+          320,
+          1280
+        ]
+      ],
+      "dashed": true,
+      "endArrow": "classic",
+      "labelX": 1510.0,
+      "labelY": 1268.0
+    },
+    {
+      "source": "monitoring5",
+      "target": "alerts0",
+      "label": "I06 · pérdida de señal",
+      "sourcePort": "right",
+      "targetPort": "top",
+      "points": [
+        [
+          2820,
+          620
+        ],
+        [
+          2820,
+          1240
+        ],
+        [
+          320,
+          1240
+        ]
+      ],
+      "dashed": true,
+      "endArrow": "classic",
+      "labelX": 1570.0,
+      "labelY": 1228.0
+    },
+    {
+      "source": "alerts2",
+      "target": "alerts5",
+      "label": "I07 · crear avisos",
+      "sourcePort": "bottom",
+      "targetPort": "bottom",
+      "points": [
+        [
+          1200,
+          1585
+        ],
+        [
+          2520,
+          1585
+        ]
+      ],
+      "dashed": true,
+      "endArrow": "classic",
+      "labelX": 1860.0,
+      "labelY": 1573.0
+    },
+    {
+      "source": "monitoring4",
+      "target": "alerts3",
+      "label": "I08 · recuperación térmica",
+      "sourcePort": "bottom",
+      "targetPort": "bottom",
+      "points": [
+        [
+          2080,
+          805
+        ],
+        [
+          2755,
+          805
+        ],
+        [
+          2755,
+          1565
+        ],
+        [
+          1640,
+          1565
+        ]
+      ],
+      "dashed": true,
+      "endArrow": "classic",
+      "labelX": 2197.5,
+      "labelY": 1553.0
+    },
+    {
+      "source": "monitoring5",
+      "target": "alerts3",
+      "label": "I09 · recuperar señal",
+      "sourcePort": "right",
+      "targetPort": "bottom",
+      "points": [
+        [
+          2800,
+          620
+        ],
+        [
+          2800,
+          1605
+        ],
+        [
+          1640,
+          1605
+        ]
+      ],
+      "dashed": true,
+      "endArrow": "classic",
+      "labelX": 2220.0,
+      "labelY": 1593.0
+    },
+    {
+      "source": "shipment4",
+      "target": "fleet3",
+      "label": "I10 · liberar al entregar",
+      "sourcePort": "bottom",
+      "targetPort": "bottom",
+      "points": [
+        [
+          2080,
+          465
+        ],
+        [
+          2735,
+          465
+        ],
+        [
+          2735,
+          1175
+        ],
+        [
+          1640,
+          1175
+        ]
+      ],
+      "dashed": true,
+      "endArrow": "classic",
+      "labelX": 2187.5,
+      "labelY": 1163.0
+    },
+    {
+      "source": "shipment4",
+      "target": "monitoring1",
+      "label": "I11 · detener al entregar",
+      "sourcePort": "bottom",
+      "targetPort": "top",
+      "points": [
+        [
+          2080,
+          425
+        ],
+        [
+          760,
+          425
+        ]
+      ],
+      "dashed": true,
+      "endArrow": "classic",
+      "labelX": 1420.0,
+      "labelY": 413.0
+    },
+    {
+      "source": "shipment4",
+      "target": "alerts4",
+      "label": "I12 · habilitar informe",
+      "sourcePort": "bottom",
+      "targetPort": "bottom",
+      "points": [
+        [
+          2080,
+          385
+        ],
+        [
+          2840,
+          385
+        ],
+        [
+          2840,
+          1535
+        ],
+        [
+          2080,
+          1535
+        ]
+      ],
+      "dashed": true,
+      "endArrow": "classic",
+      "labelX": 2460.0,
+      "labelY": 1523.0
+    },
+    {
+      "source": "shipment5",
+      "target": "fleet3",
+      "label": "I13 · liberar al cancelar",
+      "sourcePort": "bottom",
+      "targetPort": "bottom",
+      "points": [
+        [
+          2520,
+          485
+        ],
+        [
+          2760,
+          485
+        ],
+        [
+          2760,
+          1195
+        ],
+        [
+          1640,
+          1195
+        ]
+      ],
+      "dashed": true,
+      "endArrow": "classic",
+      "labelX": 2200.0,
+      "labelY": 1183.0
+    }
+  ]
+}

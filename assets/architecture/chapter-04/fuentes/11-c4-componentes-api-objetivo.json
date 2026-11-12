@@ -1,0 +1,542 @@
+{
+  "id": "11-c4-componentes-api-objetivo",
+  "section": "4.6.4",
+  "title": "FríoTrack · C4 nivel 3 · Backend DDD objetivo",
+  "subtitle": "Diseño previsto · Dependencias hacia Domain; los contextos core preceden al IAM genérico",
+  "width": 1800,
+  "height": 1635,
+  "legend": "Interfaces → Application → Domain · Infrastructure → puertos Domain · Todos los módulos pertenecen a una API",
+  "notes": [
+    "Agregados tipados, EF Core/PostgreSQL, adaptadores de sensores/correo y dispatcher son diseño previsto.",
+    "Application confirma la unidad de trabajo antes de publicar eventos internos; la reserva se confirma antes de aceptar programación."
+  ],
+  "nodes": [
+    {
+      "id": "api-boundary",
+      "kind": "boundary",
+      "label": "Backend API objetivo · Monolito modular ASP.NET Core / C#",
+      "body": [],
+      "x": 35,
+      "y": 115,
+      "w": 1730,
+      "h": 1390
+    },
+    {
+      "id": "shipment-boundary",
+      "kind": "boundary",
+      "label": "Shipment Management · Core",
+      "body": [],
+      "x": 60,
+      "y": 160,
+      "w": 1680,
+      "h": 240
+    },
+    {
+      "id": "shipment-http",
+      "kind": "component",
+      "label": "Interfaces",
+      "body": [
+        "[ASP.NET Core]",
+        "REST Shipments / DTO",
+        "Valida y convierte HTTP."
+      ],
+      "x": 85,
+      "y": 205,
+      "w": 260,
+      "h": 190
+    },
+    {
+      "id": "shipment-app",
+      "kind": "component",
+      "label": "Application",
+      "body": [
+        "[Handlers C#]",
+        "Schedule / Start / Deliver / Cancel",
+        "Confirma reserva y unidad de trabajo"
+      ],
+      "x": 405,
+      "y": 205,
+      "w": 290,
+      "h": 190
+    },
+    {
+      "id": "shipment-domain",
+      "kind": "component",
+      "label": "Domain",
+      "body": [
+        "[C# sin ASP.NET ni EF Core]",
+        "Shipment · ThermalRange",
+        "ShipmentHistoryEvent",
+        "IShipmentRepository"
+      ],
+      "x": 755,
+      "y": 205,
+      "w": 500,
+      "h": 190
+    },
+    {
+      "id": "shipment-infra",
+      "kind": "component",
+      "label": "Infrastructure",
+      "body": [
+        "[Adaptadores previstos]",
+        "EF Core / PostgreSQL (previstos)",
+        "Repositorio de Shipment + UoW"
+      ],
+      "x": 1315,
+      "y": 205,
+      "w": 390,
+      "h": 190
+    },
+    {
+      "id": "monitoring-boundary",
+      "kind": "boundary",
+      "label": "Monitoring & Telemetry · Core",
+      "body": [],
+      "x": 60,
+      "y": 420,
+      "w": 1680,
+      "h": 240
+    },
+    {
+      "id": "monitoring-http",
+      "kind": "component",
+      "label": "Interfaces",
+      "body": [
+        "[ASP.NET Core]",
+        "REST Readings / DTO",
+        "Valida y convierte HTTP."
+      ],
+      "x": 85,
+      "y": 465,
+      "w": 260,
+      "h": 190
+    },
+    {
+      "id": "monitoring-app",
+      "kind": "component",
+      "label": "Application",
+      "body": [
+        "[Handlers C#]",
+        "Start / RecordReading / Stop",
+        "Evalúa silencio y ambos rangos"
+      ],
+      "x": 405,
+      "y": 465,
+      "w": 290,
+      "h": 190
+    },
+    {
+      "id": "monitoring-domain",
+      "kind": "component",
+      "label": "Domain",
+      "body": [
+        "[C# sin ASP.NET ni EF Core]",
+        "ShipmentMonitoring",
+        "SensorReading · PositionReport",
+        "MonitoredRange · IShipmentMonitoringRepository"
+      ],
+      "x": 755,
+      "y": 465,
+      "w": 500,
+      "h": 190
+    },
+    {
+      "id": "monitoring-infra",
+      "kind": "component",
+      "label": "Infrastructure",
+      "body": [
+        "[Adaptadores previstos]",
+        "SensorGateway / ACL (previsto)",
+        "Repositorio de Monitoring"
+      ],
+      "x": 1315,
+      "y": 465,
+      "w": 390,
+      "h": 190
+    },
+    {
+      "id": "fleet-boundary",
+      "kind": "boundary",
+      "label": "Fleet & Resources · Apoyo",
+      "body": [],
+      "x": 60,
+      "y": 680,
+      "w": 1680,
+      "h": 240
+    },
+    {
+      "id": "fleet-http",
+      "kind": "component",
+      "label": "Interfaces",
+      "body": [
+        "[ASP.NET Core]",
+        "REST Resources / DTO",
+        "Valida y convierte HTTP."
+      ],
+      "x": 85,
+      "y": 725,
+      "w": 260,
+      "h": 190
+    },
+    {
+      "id": "fleet-app",
+      "kind": "component",
+      "label": "Application",
+      "body": [
+        "[Handlers C#]",
+        "Register / Reserve / Release",
+        "Coordina disponibilidad y conflictos"
+      ],
+      "x": 405,
+      "y": 725,
+      "w": 290,
+      "h": 190
+    },
+    {
+      "id": "fleet-domain",
+      "kind": "component",
+      "label": "Domain",
+      "body": [
+        "[C# sin ASP.NET ni EF Core]",
+        "Vehicle · Driver · FleetAllocation",
+        "Sensor · raíz independiente; vehicleId opcional",
+        "Repositorios de raíces de Fleet"
+      ],
+      "x": 755,
+      "y": 725,
+      "w": 500,
+      "h": 190
+    },
+    {
+      "id": "fleet-infra",
+      "kind": "component",
+      "label": "Infrastructure",
+      "body": [
+        "[Adaptadores previstos]",
+        "EF Core / PostgreSQL (previstos)",
+        "Restricciones de reservas"
+      ],
+      "x": 1315,
+      "y": 725,
+      "w": 390,
+      "h": 190
+    },
+    {
+      "id": "alerts-boundary",
+      "kind": "boundary",
+      "label": "Alert & Reporting · Apoyo",
+      "body": [],
+      "x": 60,
+      "y": 940,
+      "w": 1680,
+      "h": 240
+    },
+    {
+      "id": "alerts-http",
+      "kind": "component",
+      "label": "Interfaces",
+      "body": [
+        "[ASP.NET Core]",
+        "REST Alerts / Reports DTO",
+        "Valida y convierte HTTP."
+      ],
+      "x": 85,
+      "y": 985,
+      "w": 260,
+      "h": 190
+    },
+    {
+      "id": "alerts-app",
+      "kind": "component",
+      "label": "Application",
+      "body": [
+        "[Handlers C#]",
+        "Raise / Acknowledge / Resolve",
+        "Historial y generación de reportes"
+      ],
+      "x": 405,
+      "y": 985,
+      "w": 290,
+      "h": 190
+    },
+    {
+      "id": "alerts-domain",
+      "kind": "component",
+      "label": "Domain",
+      "body": [
+        "[C# sin ASP.NET ni EF Core]",
+        "Alert · CorrectiveAction · RecoveryEvidence",
+        "Notification · Incident · ThermalReport",
+        "Puertos de repositorio de cada raíz"
+      ],
+      "x": 755,
+      "y": 985,
+      "w": 500,
+      "h": 190
+    },
+    {
+      "id": "alerts-infra",
+      "kind": "component",
+      "label": "Infrastructure",
+      "body": [
+        "[Adaptadores previstos]",
+        "ReportRenderer / MailGateway",
+        "Repositorios EF Core (previstos)"
+      ],
+      "x": 1315,
+      "y": 985,
+      "w": 390,
+      "h": 190
+    },
+    {
+      "id": "iam-boundary",
+      "kind": "boundary",
+      "label": "IAM · Genérico",
+      "body": [],
+      "x": 60,
+      "y": 1200,
+      "w": 1680,
+      "h": 240
+    },
+    {
+      "id": "iam-http",
+      "kind": "component",
+      "label": "Interfaces",
+      "body": [
+        "[ASP.NET Core]",
+        "REST Access / Profile DTO",
+        "Valida y convierte HTTP."
+      ],
+      "x": 85,
+      "y": 1245,
+      "w": 260,
+      "h": 190
+    },
+    {
+      "id": "iam-app",
+      "kind": "component",
+      "label": "Application",
+      "body": [
+        "[Handlers C#]",
+        "Register / Login / Logout",
+        "Perfil y recuperación prevista"
+      ],
+      "x": 405,
+      "y": 1245,
+      "w": 290,
+      "h": 190
+    },
+    {
+      "id": "iam-domain",
+      "kind": "component",
+      "label": "Domain",
+      "body": [
+        "[C# sin ASP.NET ni EF Core]",
+        "UserAccount · Organization",
+        "PasswordResetToken (entidad interna)",
+        "IUserAccount / IOrganizationRepository"
+      ],
+      "x": 755,
+      "y": 1245,
+      "w": 500,
+      "h": 190
+    },
+    {
+      "id": "iam-infra",
+      "kind": "component",
+      "label": "Infrastructure",
+      "body": [
+        "[Adaptadores previstos]",
+        "PasswordHasher / MailGateway",
+        "Repositorios EF Core (previstos)"
+      ],
+      "x": 1315,
+      "y": 1245,
+      "w": 390,
+      "h": 190
+    }
+  ],
+  "edges": [
+    {
+      "source": "shipment-http",
+      "target": "shipment-app",
+      "label": "DTO",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "points": [],
+      "dashed": false,
+      "endArrow": "classic",
+      "labelX": 375,
+      "labelY": 285
+    },
+    {
+      "source": "shipment-app",
+      "target": "shipment-domain",
+      "label": "Usa",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "points": [],
+      "dashed": false,
+      "endArrow": "classic",
+      "labelX": 725,
+      "labelY": 285
+    },
+    {
+      "source": "shipment-infra",
+      "target": "shipment-domain",
+      "label": "Puerto",
+      "sourcePort": "left",
+      "targetPort": "right",
+      "points": [],
+      "dashed": true,
+      "endArrow": "open",
+      "labelX": 1285,
+      "labelY": 285
+    },
+    {
+      "source": "monitoring-http",
+      "target": "monitoring-app",
+      "label": "DTO",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "points": [],
+      "dashed": false,
+      "endArrow": "classic",
+      "labelX": 375,
+      "labelY": 545
+    },
+    {
+      "source": "monitoring-app",
+      "target": "monitoring-domain",
+      "label": "Usa",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "points": [],
+      "dashed": false,
+      "endArrow": "classic",
+      "labelX": 725,
+      "labelY": 545
+    },
+    {
+      "source": "monitoring-infra",
+      "target": "monitoring-domain",
+      "label": "Puerto",
+      "sourcePort": "left",
+      "targetPort": "right",
+      "points": [],
+      "dashed": true,
+      "endArrow": "open",
+      "labelX": 1285,
+      "labelY": 545
+    },
+    {
+      "source": "fleet-http",
+      "target": "fleet-app",
+      "label": "DTO",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "points": [],
+      "dashed": false,
+      "endArrow": "classic",
+      "labelX": 375,
+      "labelY": 805
+    },
+    {
+      "source": "fleet-app",
+      "target": "fleet-domain",
+      "label": "Usa",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "points": [],
+      "dashed": false,
+      "endArrow": "classic",
+      "labelX": 725,
+      "labelY": 805
+    },
+    {
+      "source": "fleet-infra",
+      "target": "fleet-domain",
+      "label": "Puerto",
+      "sourcePort": "left",
+      "targetPort": "right",
+      "points": [],
+      "dashed": true,
+      "endArrow": "open",
+      "labelX": 1285,
+      "labelY": 805
+    },
+    {
+      "source": "alerts-http",
+      "target": "alerts-app",
+      "label": "DTO",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "points": [],
+      "dashed": false,
+      "endArrow": "classic",
+      "labelX": 375,
+      "labelY": 1065
+    },
+    {
+      "source": "alerts-app",
+      "target": "alerts-domain",
+      "label": "Usa",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "points": [],
+      "dashed": false,
+      "endArrow": "classic",
+      "labelX": 725,
+      "labelY": 1065
+    },
+    {
+      "source": "alerts-infra",
+      "target": "alerts-domain",
+      "label": "Puerto",
+      "sourcePort": "left",
+      "targetPort": "right",
+      "points": [],
+      "dashed": true,
+      "endArrow": "open",
+      "labelX": 1285,
+      "labelY": 1065
+    },
+    {
+      "source": "iam-http",
+      "target": "iam-app",
+      "label": "DTO",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "points": [],
+      "dashed": false,
+      "endArrow": "classic",
+      "labelX": 375,
+      "labelY": 1325
+    },
+    {
+      "source": "iam-app",
+      "target": "iam-domain",
+      "label": "Usa",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "points": [],
+      "dashed": false,
+      "endArrow": "classic",
+      "labelX": 725,
+      "labelY": 1325
+    },
+    {
+      "source": "iam-infra",
+      "target": "iam-domain",
+      "label": "Puerto",
+      "sourcePort": "left",
+      "targetPort": "right",
+      "points": [],
+      "dashed": true,
+      "endArrow": "open",
+      "labelX": 1285,
+      "labelY": 1325
+    }
+  ]
+}

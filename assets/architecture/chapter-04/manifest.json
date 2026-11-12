@@ -1,0 +1,310 @@
+[
+  {
+    "id": "01-es-general",
+    "section": "4.6.1",
+    "title": "FríoTrack · EventStorming general e integración",
+    "width": 3500,
+    "height": 1920,
+    "svg": "../../images/chapter-04/revision-2026-11-11/01-es-general.svg",
+    "png": "../../images/chapter-04/revision-2026-11-11/01-es-general.png",
+    "drawio": "editables/01-es-general.drawio",
+    "sha256": {
+      "svg": "cf626845cd125f4f47d0a3eb70bddc800d7b43f326fc9c548fa7314b07a7c093",
+      "png": "4f84c847958ec096019f68c17d27fd9250ea9c505ea6fc688e3057b39100644b"
+    }
+  },
+  {
+    "id": "02-es-shipment",
+    "section": "4.6.1",
+    "title": "FríoTrack · BC3 Shipment Management",
+    "width": 1672,
+    "height": 495,
+    "svg": "../../images/chapter-04/revision-2026-11-11/02-es-shipment.svg",
+    "png": "../../images/chapter-04/revision-2026-11-11/02-es-shipment.png",
+    "drawio": "editables/02-es-shipment.drawio",
+    "sha256": {
+      "svg": "d122a2eb8ebf7fa7f5cf72b12430ab5c87c455574ebb36b84f7b3970a2ebdd4f",
+      "png": "072850bfffd99dd6dd40e02cc01542f9baa8764b44c24e13234c9804c65a2667"
+    }
+  },
+  {
+    "id": "03-es-monitoring",
+    "section": "4.6.1",
+    "title": "FríoTrack · BC4 Monitoring and Telemetry",
+    "width": 2240,
+    "height": 495,
+    "svg": "../../images/chapter-04/revision-2026-11-11/03-es-monitoring.svg",
+    "png": "../../images/chapter-04/revision-2026-11-11/03-es-monitoring.png",
+    "drawio": "editables/03-es-monitoring.drawio",
+    "sha256": {
+      "svg": "784de54583047d8ac8c91595da49ddde5e8c7237de7ced2d17096e847629eb48",
+      "png": "5fec39127abf53435e2533897352f49e2428bb71fe7e9cff7fa7ee56a506e5aa"
+    }
+  },
+  {
+    "id": "04-es-monitoring-detail",
+    "section": "4.6.1",
+    "title": "FríoTrack · Detalle de evaluación térmica y salud de señal",
+    "width": 1530,
+    "height": 495,
+    "svg": "../../images/chapter-04/revision-2026-11-11/04-es-monitoring-detail.svg",
+    "png": "../../images/chapter-04/revision-2026-11-11/04-es-monitoring-detail.png",
+    "drawio": "editables/04-es-monitoring-detail.drawio",
+    "sha256": {
+      "svg": "2b310f75f58b5ee52f94cea4a66322ef53f9d5be3eaf6bce03a6b0c95db25645",
+      "png": "dabf649e0691e3d0d85ddd1781b8a1e58db85af337fb4a4a9201a733b6e2ebeb"
+    }
+  },
+  {
+    "id": "05-es-fleet",
+    "section": "4.6.1",
+    "title": "FríoTrack · BC2 Fleet and Resource Management",
+    "width": 1814,
+    "height": 495,
+    "svg": "../../images/chapter-04/revision-2026-11-11/05-es-fleet.svg",
+    "png": "../../images/chapter-04/revision-2026-11-11/05-es-fleet.png",
+    "drawio": "editables/05-es-fleet.drawio",
+    "sha256": {
+      "svg": "fdc8cef6bb3c9fd22aa7862d834070a060f304b859b1e788642c585924c3ed28",
+      "png": "c47e72aedf4052f6386402dac0e086a294b1930e20adec0dcc7fccc5ffd75f02"
+    }
+  },
+  {
+    "id": "06-es-alerts-reporting",
+    "section": "4.6.1",
+    "title": "FríoTrack · BC5 Alert and Reporting",
+    "width": 2524,
+    "height": 495,
+    "svg": "../../images/chapter-04/revision-2026-11-11/06-es-alerts-reporting.svg",
+    "png": "../../images/chapter-04/revision-2026-11-11/06-es-alerts-reporting.png",
+    "drawio": "editables/06-es-alerts-reporting.drawio",
+    "sha256": {
+      "svg": "6a2f57ff865624180a7aa94ffdbca8720fd5473276db3e4cee2c96a7fe08c242",
+      "png": "864b6905d43c63d9b189f6abb18760e869b97624df36f5fc86c89fb761064f7b"
+    }
+  },
+  {
+    "id": "07-es-iam",
+    "section": "4.6.1",
+    "title": "FríoTrack · BC1 Identity and Access Management",
+    "width": 1814,
+    "height": 495,
+    "svg": "../../images/chapter-04/revision-2026-11-11/07-es-iam.svg",
+    "png": "../../images/chapter-04/revision-2026-11-11/07-es-iam.png",
+    "drawio": "editables/07-es-iam.drawio",
+    "sha256": {
+      "svg": "8f54be996d401d432cb7f2b02c954e2c4e076dadf3f02bc8f61901b2845e4160",
+      "png": "75003e54b3438737cdfda11c0b18e7135cc1b72d0917a3b9b1ca8ad35a96db3b"
+    }
+  },
+  {
+    "id": "08-c4-contexto",
+    "section": "4.6.2",
+    "title": "FríoTrack · C4 nivel 1 · Contexto",
+    "width": 1800,
+    "height": 1115,
+    "svg": "../../images/chapter-04/revision-2026-11-11/08-c4-contexto.svg",
+    "png": "../../images/chapter-04/revision-2026-11-11/08-c4-contexto.png",
+    "drawio": "editables/08-c4-contexto.drawio",
+    "sha256": {
+      "svg": "04f04109b34af356bc649b471b7ca1b8900aa594afd0256189b2ce7ffea939dd",
+      "png": "59d5d2b379fe03291fdaeba84436cb03cebfff5eacb5068e31ee57dc2e745350"
+    }
+  },
+  {
+    "id": "09-c4-contenedores",
+    "section": "4.6.3",
+    "title": "FríoTrack · C4 nivel 2 · Contenedores",
+    "width": 1800,
+    "height": 1330,
+    "svg": "../../images/chapter-04/revision-2026-11-11/09-c4-contenedores.svg",
+    "png": "../../images/chapter-04/revision-2026-11-11/09-c4-contenedores.png",
+    "drawio": "editables/09-c4-contenedores.drawio",
+    "sha256": {
+      "svg": "51e5c141661fb90070d59f10b31d8d7f2c4e381af2b3ae0ba89d55fe0d165eb2",
+      "png": "50d76b7235a153ee5aea590933413e00a1a84eed2005c31cac697fbfb2ba1e17"
+    }
+  },
+  {
+    "id": "10-c4-componentes-api-actual",
+    "section": "4.6.4",
+    "title": "FríoTrack · C4 nivel 3 · API disponible",
+    "width": 1800,
+    "height": 1310,
+    "svg": "../../images/chapter-04/revision-2026-11-11/10-c4-componentes-api-actual.svg",
+    "png": "../../images/chapter-04/revision-2026-11-11/10-c4-componentes-api-actual.png",
+    "drawio": "editables/10-c4-componentes-api-actual.drawio",
+    "sha256": {
+      "svg": "d5f3c4166cdfc1c0e5bad8286b2b279328c31ff1ad91679550065c0bf4f29391",
+      "png": "c71ce1dc44f3058ccb6820d1da559677deeae04e8cd52314dc9719126b9f080e"
+    }
+  },
+  {
+    "id": "11-c4-componentes-api-objetivo",
+    "section": "4.6.4",
+    "title": "FríoTrack · C4 nivel 3 · Backend DDD objetivo",
+    "width": 1800,
+    "height": 1635,
+    "svg": "../../images/chapter-04/revision-2026-11-11/11-c4-componentes-api-objetivo.svg",
+    "png": "../../images/chapter-04/revision-2026-11-11/11-c4-componentes-api-objetivo.png",
+    "drawio": "editables/11-c4-componentes-api-objetivo.drawio",
+    "sha256": {
+      "svg": "ed7bb0f166689082ac9dd5e56d7cefc80249416bf98e95d247e396576a5a3e40",
+      "png": "0b0332f0aeb4cee0cb08a636e4f46aca7211b82e84b6aba10c4d890c0f0ed8ed"
+    }
+  },
+  {
+    "id": "12-uml-shipment",
+    "section": "4.7.1",
+    "title": "FríoTrack · UML DDD · Shipment Management",
+    "width": 2100,
+    "height": 1340,
+    "svg": "../../images/chapter-04/revision-2026-11-11/12-uml-shipment.svg",
+    "png": "../../images/chapter-04/revision-2026-11-11/12-uml-shipment.png",
+    "drawio": "editables/12-uml-shipment.drawio",
+    "sha256": {
+      "svg": "1dbf6ad4e420f32e0e917a47e122335a7fb0b69bc3e0060e20bc9b0bea63c459",
+      "png": "d9610649f95c0da6a1ea990914603f28fdaaf10bd4f1a815bbe8dfa7ae13a027"
+    }
+  },
+  {
+    "id": "13-uml-monitoring",
+    "section": "4.7.1",
+    "title": "FríoTrack · UML DDD · Monitoring & Telemetry",
+    "width": 2180,
+    "height": 1360,
+    "svg": "../../images/chapter-04/revision-2026-11-11/13-uml-monitoring.svg",
+    "png": "../../images/chapter-04/revision-2026-11-11/13-uml-monitoring.png",
+    "drawio": "editables/13-uml-monitoring.drawio",
+    "sha256": {
+      "svg": "5ded831aba28dc36fc14eae2c7c3dd3b86985efdf03a349967a174b1fcdbd530",
+      "png": "9218434167755b03ac6133a8f00962f553f10ab8ac2cae3a6278a39af96fbc2e"
+    }
+  },
+  {
+    "id": "14-uml-fleet",
+    "section": "4.7.1",
+    "title": "FríoTrack · UML DDD · Fleet & Resource Management",
+    "width": 2260,
+    "height": 1320,
+    "svg": "../../images/chapter-04/revision-2026-11-11/14-uml-fleet.svg",
+    "png": "../../images/chapter-04/revision-2026-11-11/14-uml-fleet.png",
+    "drawio": "editables/14-uml-fleet.drawio",
+    "sha256": {
+      "svg": "265478772f45ffa48d7bf873d61da3ab0d1bb9a277f7f7400c138d8642f46ed6",
+      "png": "1de9befd293d1d787c4bd146655e55a6f37ae2d84ae8221c53ba7ce28f70d08e"
+    }
+  },
+  {
+    "id": "15-uml-alerts-reporting",
+    "section": "4.7.1",
+    "title": "FríoTrack · UML DDD · Alert & Reporting",
+    "width": 2300,
+    "height": 1807,
+    "svg": "../../images/chapter-04/revision-2026-11-11/15-uml-alerts-reporting.svg",
+    "png": "../../images/chapter-04/revision-2026-11-11/15-uml-alerts-reporting.png",
+    "drawio": "editables/15-uml-alerts-reporting.drawio",
+    "sha256": {
+      "svg": "447ec2e9a3be08055c6f576f26590dc9d12819d19a07d39605e8b0d33cde884e",
+      "png": "d972ba982c7001e46f486adce6069477d8b141e52545c7b57ac4656b75fe2d32"
+    }
+  },
+  {
+    "id": "16-uml-iam",
+    "section": "4.7.1",
+    "title": "FríoTrack · UML DDD · IAM",
+    "width": 2100,
+    "height": 1347,
+    "svg": "../../images/chapter-04/revision-2026-11-11/16-uml-iam.svg",
+    "png": "../../images/chapter-04/revision-2026-11-11/16-uml-iam.png",
+    "drawio": "editables/16-uml-iam.drawio",
+    "sha256": {
+      "svg": "a935dcc43c15747dc0acf81881f4312f13a26108fc2647af1bc8b07197b6715d",
+      "png": "640eba48ea2b24342798daf8eeea35bb9309f4dda7af04378881e8d9c6793ae7"
+    }
+  },
+  {
+    "id": "17-erd-general",
+    "section": "4.8.1",
+    "title": "FríoTrack · Proyección relacional general",
+    "width": 3000,
+    "height": 2750,
+    "svg": "../../images/chapter-04/revision-2026-11-11/17-erd-general.svg",
+    "png": "../../images/chapter-04/revision-2026-11-11/17-erd-general.png",
+    "drawio": "editables/17-erd-general.drawio",
+    "sha256": {
+      "svg": "c786f2b94334381293a766112cf58a51a4c051927be3d84f597d6f577c2df86b",
+      "png": "fdac4dba0e6ffecdb6fcb955556572f6cb3416b92fcbf02286ea42cae0898c7a"
+    }
+  },
+  {
+    "id": "18-erd-shipment",
+    "section": "4.8.1",
+    "title": "FríoTrack · ERD · Shipment Management · Core",
+    "width": 2100,
+    "height": 1240,
+    "svg": "../../images/chapter-04/revision-2026-11-11/18-erd-shipment.svg",
+    "png": "../../images/chapter-04/revision-2026-11-11/18-erd-shipment.png",
+    "drawio": "editables/18-erd-shipment.drawio",
+    "sha256": {
+      "svg": "710011f79eb34eb35e48e94c5767720acf27bfc050dd5d1d25151b851e30d4c0",
+      "png": "c0f1f91011cd7c396d91ded8ee632fbdc5fe23cd7e54658d91851fc4025839ac"
+    }
+  },
+  {
+    "id": "19-erd-monitoring",
+    "section": "4.8.1",
+    "title": "FríoTrack · ERD · Monitoring & Telemetry · Core",
+    "width": 2100,
+    "height": 1240,
+    "svg": "../../images/chapter-04/revision-2026-11-11/19-erd-monitoring.svg",
+    "png": "../../images/chapter-04/revision-2026-11-11/19-erd-monitoring.png",
+    "drawio": "editables/19-erd-monitoring.drawio",
+    "sha256": {
+      "svg": "96fbd4a4bc0fb8e8b2506bf48305a9bb1e7939589a7e9847873584785080e0d4",
+      "png": "e25e7a36d1c2249eb7f8cf1e2e5ab1180eea0ec78d7c7a576e74b3a8274d6031"
+    }
+  },
+  {
+    "id": "20-erd-fleet",
+    "section": "4.8.1",
+    "title": "FríoTrack · ERD · Fleet & Resource · Apoyo",
+    "width": 2260,
+    "height": 1260,
+    "svg": "../../images/chapter-04/revision-2026-11-11/20-erd-fleet.svg",
+    "png": "../../images/chapter-04/revision-2026-11-11/20-erd-fleet.png",
+    "drawio": "editables/20-erd-fleet.drawio",
+    "sha256": {
+      "svg": "32777c312b24f12d82280a8599ca7a0c69c097483d743ec907106369f7e95f57",
+      "png": "1de335f19ed3c323aa72482382e666173cd2ecf91774b63d75a43b08c16cec24"
+    }
+  },
+  {
+    "id": "21-erd-alerts-reporting",
+    "section": "4.8.1",
+    "title": "FríoTrack · ERD · Alert & Reporting · Apoyo",
+    "width": 2260,
+    "height": 1630,
+    "svg": "../../images/chapter-04/revision-2026-11-11/21-erd-alerts-reporting.svg",
+    "png": "../../images/chapter-04/revision-2026-11-11/21-erd-alerts-reporting.png",
+    "drawio": "editables/21-erd-alerts-reporting.drawio",
+    "sha256": {
+      "svg": "7396a4599492857d214280cbf2cc04616d2e7e3b219f77b98d5d7c6b71ad764a",
+      "png": "ab4b1391d1337b2cb9ba0a2ea5089a7f0a02b9f065d13c66c9cfd174b1d991c6"
+    }
+  },
+  {
+    "id": "22-erd-iam",
+    "section": "4.8.1",
+    "title": "FríoTrack · ERD · IAM · Genérico",
+    "width": 2100,
+    "height": 1130,
+    "svg": "../../images/chapter-04/revision-2026-11-11/22-erd-iam.svg",
+    "png": "../../images/chapter-04/revision-2026-11-11/22-erd-iam.png",
+    "drawio": "editables/22-erd-iam.drawio",
+    "sha256": {
+      "svg": "5dd9efffc394cabf96dd9b178280fe86d0bac34bd8ceb8561a4a9b9e09bb178b",
+      "png": "34f7c666dc093f5ca1e3700122e32b3c54b70ccc9201de8201f5ea28979d525c"
+    }
+  }
+]

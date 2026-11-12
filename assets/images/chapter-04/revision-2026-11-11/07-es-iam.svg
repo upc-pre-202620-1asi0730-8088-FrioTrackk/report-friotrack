@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1814" height="495" viewBox="0 0 1814 495">
+<defs><pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#dfdfdf" stroke-width=".7"/></pattern><filter id="paper-shadow" x="-10%" y="-10%" width="125%" height="130%"><feDropShadow dx="1" dy="3" stdDeviation="2" flood-color="#000000" flood-opacity=".12"/></filter>
+<marker id="arrow" viewBox="0 0 12 10" refX="11" refY="5" markerWidth="10" markerHeight="9" orient="auto-start-reverse"><path d="M0 0 L12 5 L0 10Z" fill="#444"/></marker><marker id="open" viewBox="0 0 12 10" refX="11" refY="5" markerWidth="10" markerHeight="9" orient="auto-start-reverse"><path d="M0 0 L12 5 L0 10" fill="none" stroke="#333"/></marker><marker id="diamond" viewBox="0 0 12 10" refX="1" refY="5" markerWidth="12" markerHeight="10" orient="auto-start-reverse"><path d="M0 5 L6 0 L12 5 L6 10Z" fill="#222"/></marker><marker id="triangle" viewBox="0 0 12 10" refX="11" refY="5" markerWidth="12" markerHeight="10" orient="auto-start-reverse"><path d="M0 0 L12 5 L0 10Z" fill="white" stroke="#333"/></marker></defs>
+<rect width="100%" height="100%" fill="#f3f3f3"/>
+<rect width="100%" height="100%" fill="url(#grid)"/>
+<rect x="30" y="83" width="1754" height="350" rx="90" fill="none" stroke="#4b4b4b" stroke-width="1.1"/>
+<text x="907.0" y="67.28" font-family="Arial,sans-serif" font-size="28" font-weight="400" text-anchor="middle" fill="#222">Identity &amp; Access Management</text>
+<rect x="85.0" y="136" width="112.25" height="112.25" rx="0" fill="#fff9a4" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="141.125" y="177.76" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Visitante /</text>
+<text x="141.125" y="198.67" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Cliente de</text>
+<text x="141.125" y="219.57999999999998" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Carga</text>
+<rect x="224.25" y="136" width="112.25" height="112.25" rx="0" fill="#68d990" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="280.375" y="188.215" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Acceso y</text>
+<text x="280.375" y="209.125" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">registro</text>
+<rect x="363.5" y="136" width="112.25" height="112.25" rx="0" fill="#9fe5f9" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="419.625" y="188.215" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Register</text>
+<text x="419.625" y="209.125" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Cargo Client</text>
+<rect x="502.75" y="136" width="112.25" height="112.25" rx="0" fill="#ffe86b" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="558.875" y="177.76" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">User</text>
+<text x="558.875" y="198.67" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Account</text>
+<text x="558.875" y="219.57999999999998" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Aggregate</text>
+<rect x="642.0" y="136" width="112.25" height="112.25" rx="0" fill="#ffb373" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="698.125" y="188.215" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">User</text>
+<text x="698.125" y="209.125" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Registered</text>
+<rect x="781.25" y="136" width="112.25" height="112.25" rx="0" fill="#68d990" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="837.375" y="188.215" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Perfil de</text>
+<text x="837.375" y="209.125" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">usuario</text>
+<rect x="920.5" y="136" width="112.25" height="112.25" rx="0" fill="#fff9a4" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="976.625" y="188.215" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Usuario</text>
+<text x="976.625" y="209.125" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">registrado</text>
+<rect x="1059.75" y="136" width="112.25" height="112.25" rx="0" fill="#9fe5f9" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1115.875" y="198.67000000000002" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Login</text>
+<rect x="1199.0" y="136" width="112.25" height="112.25" rx="0" fill="#ffb373" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1255.125" y="188.675" font-family="Arial,sans-serif" font-size="15" font-weight="400" text-anchor="middle" fill="#222">User</text>
+<text x="1255.125" y="207.125" font-family="Arial,sans-serif" font-size="15" font-weight="400" text-anchor="middle" fill="#222">Authenticated</text>
+<rect x="1338.25" y="136" width="112.25" height="112.25" rx="0" fill="#f29ce4" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1394.375" y="167.305" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Al autenticar</text>
+<text x="1394.375" y="188.215" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Crear sesión</text>
+<text x="1394.375" y="209.125" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">con</text>
+<text x="1394.375" y="230.035" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">expiración</text>
+<rect x="1477.5" y="136" width="112.25" height="112.25" rx="0" fill="#9fe5f9" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1533.625" y="188.215" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Create</text>
+<text x="1533.625" y="209.125" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Session</text>
+<rect x="1616.75" y="136" width="112.25" height="112.25" rx="0" fill="#ffb373" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1672.875" y="188.215" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Session</text>
+<text x="1672.875" y="209.125" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Created</text>
+<rect x="85.0" y="282.75" width="112.25" height="112.25" rx="0" fill="#fff9a4" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="141.125" y="334.965" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Usuario con</text>
+<text x="141.125" y="355.875" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">sesión</text>
+<rect x="224.25" y="282.75" width="112.25" height="112.25" rx="0" fill="#9fe5f9" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="280.375" y="334.965" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Update</text>
+<text x="280.375" y="355.875" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Profile</text>
+<rect x="363.5" y="282.75" width="112.25" height="112.25" rx="0" fill="#ffb373" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="419.625" y="334.965" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">User Profile</text>
+<text x="419.625" y="355.875" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Updated</text>
+<rect x="502.75" y="282.75" width="112.25" height="112.25" rx="0" fill="#68d990" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="558.875" y="334.965" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Perfil</text>
+<text x="558.875" y="355.875" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">actualizado</text>
+<rect x="642.0" y="282.75" width="112.25" height="112.25" rx="0" fill="#9fe5f9" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="698.125" y="345.42" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Logout</text>
+<rect x="781.25" y="282.75" width="112.25" height="112.25" rx="0" fill="#ffb373" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="837.375" y="334.965" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Session</text>
+<text x="837.375" y="355.875" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Revoked</text>
+<rect x="920.5" y="282.75" width="112.25" height="112.25" rx="0" fill="#68d990" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="976.625" y="334.965" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Pantalla de</text>
+<text x="976.625" y="355.875" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">acceso</text>
+<rect x="1059.75" y="282.75" width="112.25" height="112.25" rx="0" fill="#fff9a4" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1115.875" y="324.51" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Usuario que</text>
+<text x="1115.875" y="345.42" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">perdió</text>
+<text x="1115.875" y="366.33000000000004" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">acceso</text>
+<rect x="1199.0" y="282.75" width="112.25" height="112.25" rx="0" fill="#9fe5f9" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1255.125" y="324.51" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Request</text>
+<text x="1255.125" y="345.42" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Password</text>
+<text x="1255.125" y="366.33000000000004" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Reset</text>
+<rect x="1338.25" y="282.75" width="112.25" height="112.25" rx="0" fill="#ffb373" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1394.375" y="324.51" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Password</text>
+<text x="1394.375" y="345.42" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Reset</text>
+<text x="1394.375" y="366.33000000000004" font-family="Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#222">Requested</text>
+<rect x="1477.5" y="282.75" width="112.25" height="112.25" rx="0" fill="#f29ce4" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1533.625" y="316.975" font-family="Arial,sans-serif" font-size="15" font-weight="400" text-anchor="middle" fill="#222">Al solicitar</text>
+<text x="1533.625" y="335.425" font-family="Arial,sans-serif" font-size="15" font-weight="400" text-anchor="middle" fill="#222">recuperación</text>
+<text x="1533.625" y="353.875" font-family="Arial,sans-serif" font-size="15" font-weight="400" text-anchor="middle" fill="#222">Enviar enlace</text>
+<text x="1533.625" y="372.325" font-family="Arial,sans-serif" font-size="15" font-weight="400" text-anchor="middle" fill="#222">temporal</text>
+<rect x="1616.75" y="282.75" width="112.25" height="112.25" rx="0" fill="#dddfe2" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1672.875" y="335.195" font-family="Arial,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#222">Correo</text>
+<text x="1672.875" y="354.875" font-family="Arial,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#222">transaccional</text>
+<text x="38" y="470.775" font-family="Arial,sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#555">FríoTrack · 4.6.1 · Genérico · Diseño objetivo</text>
+</svg>

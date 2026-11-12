@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2300" height="1807" viewBox="0 0 2300 1807">
+<defs><pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#dfdfdf" stroke-width=".7"/></pattern><filter id="paper-shadow" x="-10%" y="-10%" width="125%" height="130%"><feDropShadow dx="1" dy="3" stdDeviation="2" flood-color="#000000" flood-opacity=".12"/></filter>
+<marker id="arrow" viewBox="0 0 12 10" refX="11" refY="5" markerWidth="10" markerHeight="9" orient="auto-start-reverse"><path d="M0 0 L12 5 L0 10Z" fill="#444"/></marker><marker id="open" viewBox="0 0 12 10" refX="11" refY="5" markerWidth="10" markerHeight="9" orient="auto-start-reverse"><path d="M0 0 L12 5 L0 10" fill="none" stroke="#333"/></marker><marker id="diamond" viewBox="0 0 12 10" refX="1" refY="5" markerWidth="12" markerHeight="10" orient="auto-start-reverse"><path d="M0 5 L6 0 L12 5 L6 10Z" fill="#222"/></marker><marker id="triangle" viewBox="0 0 12 10" refX="11" refY="5" markerWidth="12" markerHeight="10" orient="auto-start-reverse"><path d="M0 0 L12 5 L0 10Z" fill="white" stroke="#333"/></marker></defs>
+<rect width="100%" height="100%" fill="white"/>
+<text x="35" y="48.78" font-family="Arial,sans-serif" font-size="28" font-weight="700" text-anchor="start" fill="#222">4.7.1 · FríoTrack · UML DDD · Alert &amp; Reporting</text>
+<text x="35" y="84.775" font-family="Arial,sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#555">Apoyo · Reconocer una alerta no demuestra que la condición de riesgo haya terminado.</text>
+<rect x="26" y="140" width="2248" height="1602" rx="2" fill="none" stroke="#333" stroke-width="1.2"/>
+<rect x="26" y="111" width="255.0" height="29" rx="1" fill="white" stroke="#333" stroke-width="1.2"/>
+<text x="34" y="132.04500000000002" font-family="Arial,sans-serif" font-size="17" font-weight="700" text-anchor="start" fill="#222">Domain · Alert &amp; Reporting</text>
+<rect x="60" y="210" width="520" height="354" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M60 274 L580 274" fill="none" stroke="#555" stroke-width="1"/>
+<ellipse cx="293.5" cy="231.0" rx="12.0" ry="12.0" fill="#b8dabf" stroke="#555"/>
+<text x="293.5" y="236.005" font-family="Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#222">C</text>
+<text x="315.5" y="239.815" font-family="Arial,sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#222">Alert</text>
+<text x="320.0" y="264.505" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">«Aggregate Root»</text>
+<text x="73" y="298.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- id: UUID</text>
+<text x="73" y="320.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- shipmentId: UUID</text>
+<text x="73" y="342.28" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- triggerReadingId: Int64?</text>
+<text x="73" y="364.41999999999996" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- type: AlertType</text>
+<text x="73" y="386.55999999999995" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- severity: AlertSeverity</text>
+<text x="73" y="408.69999999999993" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- status: AlertStatus</text>
+<text x="73" y="430.8399999999999" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- openedAt: DateTimeOffset</text>
+<text x="73" y="452.9799999999999" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- acknowledgedAt: DateTimeOffset?</text>
+<text x="73" y="475.1199999999999" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- resolvedAt: DateTimeOffset?</text>
+<path d="M60 482.2599999999999 L580 482.2599999999999" fill="none" stroke="#555" stroke-width="1"/>
+<text x="73" y="513.2599999999999" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">+ acknowledge(action: CorrectiveAction): void</text>
+<text x="73" y="535.3999999999999" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">+ resolve(evidence: RecoveryEvidence): void</text>
+<rect x="790" y="210" width="500" height="214" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M790 274 L1290 274" fill="none" stroke="#555" stroke-width="1"/>
+<ellipse cx="962.0" cy="231.0" rx="12.0" ry="12.0" fill="#b8dabf" stroke="#555"/>
+<text x="962.0" y="236.005" font-family="Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#222">C</text>
+<text x="984.0" y="239.815" font-family="Arial,sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#222">CorrectiveAction</text>
+<text x="1040.0" y="264.505" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">«Entity interna de Alert»</text>
+<text x="803" y="298.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- id: UUID</text>
+<text x="803" y="320.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- registeredBy: UUID</text>
+<text x="803" y="342.28" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- comment: String</text>
+<text x="803" y="364.41999999999996" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- notifyClient: Boolean</text>
+<text x="803" y="386.55999999999995" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- registeredAt: DateTimeOffset</text>
+<rect x="1490" y="210" width="720" height="254" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M1490 274 L2210 274" fill="none" stroke="#555" stroke-width="1"/>
+<ellipse cx="1761.0" cy="231.0" rx="12.0" ry="12.0" fill="#b8dabf" stroke="#555"/>
+<text x="1761.0" y="236.005" font-family="Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#222">C</text>
+<text x="1783.0" y="239.815" font-family="Arial,sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#222">RecoveryEvidence</text>
+<text x="1850.0" y="264.505" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">«Value Object · contrato local»</text>
+<text x="1503" y="298.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- readingId: Int64</text>
+<text x="1503" y="320.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- shipmentId: UUID</text>
+<text x="1503" y="342.28" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- recordedAt: DateTimeOffset</text>
+<text x="1503" y="364.41999999999996" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- signalRestored: Boolean</text>
+<text x="1503" y="386.55999999999995" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- withinBothRanges: Boolean</text>
+<path d="M1490 393.69999999999993 L2210 393.69999999999993" fill="none" stroke="#555" stroke-width="1"/>
+<text x="1503" y="424.69999999999993" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">+ resolves(type, openedAt): Boolean</text>
+<rect x="60" y="850" width="520" height="294" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M60 914 L580 914" fill="none" stroke="#555" stroke-width="1"/>
+<ellipse cx="265.5" cy="871.0" rx="12.0" ry="12.0" fill="#b8dabf" stroke="#555"/>
+<text x="265.5" y="876.005" font-family="Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#222">C</text>
+<text x="287.5" y="879.815" font-family="Arial,sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#222">Notification</text>
+<text x="320.0" y="904.505" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">«Aggregate Root»</text>
+<text x="73" y="938.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- id: UUID</text>
+<text x="73" y="960.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- userId: UUID</text>
+<text x="73" y="982.28" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- shipmentId: UUID</text>
+<text x="73" y="1004.42" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- alertId: UUID?</text>
+<text x="73" y="1026.56" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- kind: String</text>
+<text x="73" y="1048.7" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- createdAt: DateTimeOffset</text>
+<text x="73" y="1070.8400000000001" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- readAt: DateTimeOffset?</text>
+<path d="M60 1077.9800000000002 L580 1077.9800000000002" fill="none" stroke="#555" stroke-width="1"/>
+<text x="73" y="1108.9800000000002" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">+ markRead(at: DateTimeOffset): void</text>
+<rect x="790" y="850" width="500" height="214" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M790 914 L1290 914" fill="none" stroke="#555" stroke-width="1"/>
+<ellipse cx="999.0" cy="871.0" rx="12.0" ry="12.0" fill="#b8dabf" stroke="#555"/>
+<text x="999.0" y="876.005" font-family="Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#222">C</text>
+<text x="1021.0" y="879.815" font-family="Arial,sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#222">Incident</text>
+<text x="1040.0" y="904.505" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">«Aggregate Root»</text>
+<text x="803" y="938.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- id: UUID</text>
+<text x="803" y="960.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- shipmentId: UUID</text>
+<text x="803" y="982.28" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- registeredBy: UUID</text>
+<text x="803" y="1004.42" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- description: String</text>
+<text x="803" y="1026.56" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- registeredAt: DateTimeOffset</text>
+<rect x="1490" y="850" width="720" height="274" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M1490 914 L2210 914" fill="none" stroke="#555" stroke-width="1"/>
+<ellipse cx="1778.5" cy="871.0" rx="12.0" ry="12.0" fill="#b8dabf" stroke="#555"/>
+<text x="1778.5" y="876.005" font-family="Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#222">C</text>
+<text x="1800.5" y="879.815" font-family="Arial,sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#222">ThermalReport</text>
+<text x="1850.0" y="904.505" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">«Aggregate Root»</text>
+<text x="1503" y="938.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- id: UUID</text>
+<text x="1503" y="960.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- shipmentId: UUID</text>
+<text x="1503" y="982.28" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- generatedBy: UUID</text>
+<text x="1503" y="1004.42" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- generatedAt: DateTimeOffset</text>
+<text x="1503" y="1026.56" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- filePath: String</text>
+<text x="1503" y="1048.7" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- summary: JsonSnapshot</text>
+<path d="M1490 1055.8400000000001 L2210 1055.8400000000001" fill="none" stroke="#555" stroke-width="1"/>
+<text x="1503" y="1086.8400000000001" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">+ generateSnapshot(shipmentId: UUID): void</text>
+<rect x="60" y="1350" width="520" height="174" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M60 1414 L580 1414" fill="none" stroke="#555" stroke-width="1"/>
+<ellipse cx="244.5" cy="1371.0" rx="12.0" ry="12.0" fill="#b8dabf" stroke="#555"/>
+<text x="244.5" y="1376.005" font-family="Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#222">I</text>
+<text x="266.5" y="1379.815" font-family="Arial,sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#222">IAlertRepository</text>
+<text x="320.0" y="1404.505" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">«interface · Domain Port»</text>
+<text x="73" y="1438.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">+ find(id: UUID): Alert?</text>
+<text x="73" y="1460.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">+ save(root: Alert): void</text>
+<rect x="630" y="1350" width="500" height="174" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M630 1414 L1130 1414" fill="none" stroke="#555" stroke-width="1"/>
+<ellipse cx="776.5" cy="1371.0" rx="12.0" ry="12.0" fill="#b8dabf" stroke="#555"/>
+<text x="776.5" y="1376.005" font-family="Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#222">I</text>
+<text x="798.5" y="1379.815" font-family="Arial,sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#222">INotificationRepository</text>
+<text x="880.0" y="1404.505" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">«interface · Domain Port»</text>
+<text x="643" y="1438.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">+ find(id: UUID): Notification?</text>
+<text x="643" y="1460.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">+ save(root: Notification): void</text>
+<rect x="1190" y="1350" width="480" height="174" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M1190 1414 L1670 1414" fill="none" stroke="#555" stroke-width="1"/>
+<ellipse cx="1340.0" cy="1371.0" rx="12.0" ry="12.0" fill="#b8dabf" stroke="#555"/>
+<text x="1340.0" y="1376.005" font-family="Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#222">I</text>
+<text x="1362.0" y="1379.815" font-family="Arial,sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#222">IIncidentRepository</text>
+<text x="1430.0" y="1404.505" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">«interface · Domain Port»</text>
+<text x="1203" y="1438.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">+ find(id: UUID): Incident?</text>
+<text x="1203" y="1460.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">+ save(root: Incident): void</text>
+<rect x="1730" y="1350" width="480" height="174" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M1730 1414 L2210 1414" fill="none" stroke="#555" stroke-width="1"/>
+<ellipse cx="1849.5" cy="1371.0" rx="12.0" ry="12.0" fill="#b8dabf" stroke="#555"/>
+<text x="1849.5" y="1376.005" font-family="Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#222">I</text>
+<text x="1871.5" y="1379.815" font-family="Arial,sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#222">IThermalReportRepository</text>
+<text x="1970.0" y="1404.505" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">«interface · Domain Port»</text>
+<text x="1743" y="1438.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">+ find(id: UUID): ThermalReport?</text>
+<text x="1743" y="1460.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">+ save(root: ThermalReport): void</text>
+<rect x="1490" y="580" width="720" height="174" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M1490 644 L2210 644" fill="none" stroke="#555" stroke-width="1"/>
+<ellipse cx="1775.0" cy="601.0" rx="12.0" ry="12.0" fill="#e7d2a5" stroke="#555"/>
+<text x="1775.0" y="606.005" font-family="Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#222">E</text>
+<text x="1797.0" y="609.815" font-family="Arial,sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#222">Enumeraciones</text>
+<text x="1850.0" y="634.505" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">«enumeration»</text>
+<text x="1503" y="668.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">AlertType = TEMPERATURE | HUMIDITY | NO_SIGNAL</text>
+<text x="1503" y="690.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">AlertStatus = ACTIVE | ACKNOWLEDGED | RESOLVED</text>
+<text x="1503" y="712.28" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">AlertSeverity = WARNING | CRITICAL</text>
+<rect x="60" y="1580" width="2150" height="162" rx="0" fill="#fffbea" stroke="#aaa" stroke-width="1"/>
+<text x="73" y="1607.43" font-family="Arial,sans-serif" font-size="18" font-weight="700" text-anchor="start" fill="#222">Reglas y límites</text>
+<text x="73" y="1662.48" font-family="Arial,sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#222">TEMPERATURE / HUMIDITY: una lectura posterior normal dentro de ambos rangos puede resolver la excursión.</text>
+<text x="73" y="1682.16" font-family="Arial,sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#222">NO_SIGNAL: lectura válida y reciente que restablece señal; puede coexistir con una excursión térmica que sigue abierta.</text>
+<text x="73" y="1701.8400000000001" font-family="Arial,sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#222">La notificación se dirige al cliente asignado. Marcar leída requiere acción del destinatario; no se ejecuta al enviarla.</text>
+<polyline points="580,309.12 790,309.12" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-start="url(#diamond)"/>
+<rect x="633.0" y="284.12" width="104.0" height="37.980000000000004" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="685.0" y="300.12" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Acciones dentro</text>
+<text x="685.0" y="316.11" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">del agregado</text>
+<rect x="581.0" y="287.12" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="603.0" y="302.125" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">1</text>
+<rect x="745.0" y="287.12" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="767.0" y="302.125" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">0..*</text>
+<polyline points="320.0,210 320,150 1850,150 1850.0,210" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" stroke-dasharray="7 4" marker-end="url(#open)"/>
+<rect x="987.5" y="122" width="225.0" height="37.980000000000004" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="1100.0" y="138.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Valida evidencia local, sin entidad de</text>
+<text x="1100.0" y="153.99" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Monitoring</text>
+<polyline points="60,1437.0 25,1437.0 25,387.0 60,387.0" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" stroke-dasharray="7 4" marker-end="url(#open)"/>
+<rect x="87.5" y="777" width="115.0" height="21.990000000000002" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="145.0" y="793.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Persiste raíz Alert</text>
+<polyline points="880.0,1350 880,1290 320,1290 320.0,1144" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" stroke-dasharray="7 4" marker-end="url(#open)"/>
+<rect x="558.0" y="1265.0" width="84.0" height="21.990000000000002" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="600.0" y="1281.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Persiste raíz</text>
+<polyline points="1430.0,1350 1430,1290 1040,1290 1040.0,1064" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" stroke-dasharray="7 4" marker-end="url(#open)"/>
+<rect x="1193.0" y="1265.0" width="84.0" height="21.990000000000002" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="1235.0" y="1281.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Persiste raíz</text>
+<polyline points="1970.0,1350 1970.0,1237.0 1850.0,1237.0 1850.0,1124" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" stroke-dasharray="7 4" marker-end="url(#open)"/>
+<rect x="1881.0" y="1212.0" width="58.0" height="37.980000000000004" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="1910.0" y="1228.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Persiste</text>
+<text x="1910.0" y="1243.99" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">raíz</text>
+<text x="35" y="1787.505" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="start" fill="#555">&lt;&lt;Aggregate Root&gt;&gt; raíz · &lt;&lt;Entity&gt;&gt; entidad · &lt;&lt;Value Object&gt;&gt; valor · ◆ composición · - - &gt; dependencia por ID</text>
+</svg>

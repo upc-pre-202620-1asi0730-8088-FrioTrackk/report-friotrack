@@ -1,0 +1,243 @@
+{
+  "id": "09-c4-contenedores",
+  "section": "4.6.3",
+  "title": "FríoTrack · C4 nivel 2 · Contenedores",
+  "subtitle": "Arquitectura disponible en TB1 · Web Application y SPA son unidades distintas",
+  "width": 1800,
+  "height": 1330,
+  "legend": "Contenedor = aplicación o almacén · La flecha indica uso, entrega o acceso a datos",
+  "notes": [
+    "La landing es contenido del servidor estático; no se duplica como contenedor.",
+    "La SPA adapta su interfaz a móvil; no existe una PWA independiente acreditada. JSON es el almacén implementado."
+  ],
+  "nodes": [
+    {
+      "id": "system-boundary",
+      "kind": "boundary",
+      "label": "FríoTrack · Sistema",
+      "body": [],
+      "x": 35,
+      "y": 475,
+      "w": 1720,
+      "h": 610
+    },
+    {
+      "id": "visitor",
+      "kind": "actor",
+      "label": "Visitante",
+      "body": [
+        "[Persona]",
+        "Lee la landing y abre el acceso."
+      ],
+      "x": 110.0,
+      "y": 140,
+      "w": 360,
+      "h": 250
+    },
+    {
+      "id": "user",
+      "kind": "actor",
+      "label": "Usuario autenticado",
+      "body": [
+        "[Persona · Coordinador o Cliente de Carga]",
+        "Utiliza las operaciones permitidas por su cuenta."
+      ],
+      "x": 790.0,
+      "y": 140,
+      "w": 360,
+      "h": 250
+    },
+    {
+      "id": "web",
+      "kind": "container",
+      "label": "Web Application",
+      "body": [
+        "[Contenedor · Azure Static Website]",
+        "Sirve /landing/, index.html y el bundle JavaScript/CSS.",
+        "Entrega archivos; no ejecuta Vue."
+      ],
+      "x": 110,
+      "y": 560,
+      "w": 360,
+      "h": 210
+    },
+    {
+      "id": "spa",
+      "kind": "container",
+      "label": "Single Page Application",
+      "body": [
+        "[Contenedor · Vue 3 / PrimeVue / Leaflet]",
+        "Se ejecuta en el navegador.",
+        "Vistas reactivas, rutas y consultas autorizadas."
+      ],
+      "x": 690,
+      "y": 560,
+      "w": 360,
+      "h": 210
+    },
+    {
+      "id": "api",
+      "kind": "container",
+      "label": "Supporting API",
+      "body": [
+        "[Contenedor · ASP.NET Core 10 / C#]",
+        "Autentica con sesiones opacas.",
+        "Autoriza y valida consultas y comandos."
+      ],
+      "x": 1280,
+      "y": 560,
+      "w": 360,
+      "h": 210
+    },
+    {
+      "id": "store",
+      "kind": "datastore",
+      "label": "Estado privado",
+      "body": [
+        "[JSON privado]",
+        "Cuentas, sesiones y workspace.",
+        "Archivo de una instancia."
+      ],
+      "x": 1280,
+      "y": 900,
+      "w": 360,
+      "h": 175
+    },
+    {
+      "id": "maps",
+      "kind": "external",
+      "label": "OpenStreetMap",
+      "body": [
+        "[Sistema externo]",
+        "Teselas para el navegador."
+      ],
+      "x": 110,
+      "y": 1140,
+      "w": 360,
+      "h": 135
+    }
+  ],
+  "edges": [
+    {
+      "source": "visitor",
+      "target": "web",
+      "label": "Consulta landing · HTTPS",
+      "sourcePort": "bottom",
+      "targetPort": "top",
+      "points": [
+        [
+          290,
+          500
+        ]
+      ],
+      "dashed": false,
+      "endArrow": "classic",
+      "labelX": 290,
+      "labelY": 460
+    },
+    {
+      "source": "user",
+      "target": "web",
+      "label": "Solicita página · HTTPS",
+      "sourcePort": "bottom",
+      "targetPort": "top",
+      "points": [
+        [
+          970,
+          460
+        ],
+        [
+          540,
+          460
+        ],
+        [
+          540,
+          530
+        ],
+        [
+          290,
+          530
+        ]
+      ],
+      "dashed": false,
+      "endArrow": "classic",
+      "labelX": 700,
+      "labelY": 445
+    },
+    {
+      "source": "user",
+      "target": "spa",
+      "label": "Interactúa con la aplicación",
+      "sourcePort": "bottom",
+      "targetPort": "top",
+      "points": [
+        [
+          970,
+          520
+        ],
+        [
+          870,
+          520
+        ]
+      ],
+      "dashed": false,
+      "endArrow": "classic",
+      "sourceOffset": 0.8,
+      "labelX": 1050,
+      "labelY": 500
+    },
+    {
+      "source": "web",
+      "target": "spa",
+      "label": "Entrega SPA · HTTPS",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "points": [],
+      "dashed": false,
+      "endArrow": "classic",
+      "labelX": 580,
+      "labelY": 645
+    },
+    {
+      "source": "spa",
+      "target": "api",
+      "label": "REST · HTTPS/JSON",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "points": [],
+      "dashed": false,
+      "endArrow": "classic",
+      "labelX": 1165,
+      "labelY": 645
+    },
+    {
+      "source": "api",
+      "target": "store",
+      "label": "Lee y escribe · E/S local",
+      "sourcePort": "bottom",
+      "targetPort": "top",
+      "points": [],
+      "dashed": false,
+      "endArrow": "classic",
+      "labelX": 1510,
+      "labelY": 840
+    },
+    {
+      "source": "spa",
+      "target": "maps",
+      "label": "Carga teselas · HTTPS",
+      "sourcePort": "bottom",
+      "targetPort": "right",
+      "points": [
+        [
+          870,
+          1210
+        ]
+      ],
+      "dashed": false,
+      "endArrow": "classic",
+      "labelX": 750,
+      "labelY": 1140
+    }
+  ]
+}

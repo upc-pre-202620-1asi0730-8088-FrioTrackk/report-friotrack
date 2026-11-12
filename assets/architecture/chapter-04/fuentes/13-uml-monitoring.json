@@ -1,0 +1,236 @@
+{
+  "id": "13-uml-monitoring",
+  "section": "4.7.1",
+  "title": "FríoTrack · UML DDD · Monitoring & Telemetry",
+  "subtitle": "Core · Modelo objetivo; lecturas y posiciones físicas aún requieren integración.",
+  "width": 2180,
+  "height": 1360,
+  "legend": "<<Aggregate Root>> raíz · <<Entity>> entidad · <<Value Object>> valor · ◆ composición · - - > dependencia por ID",
+  "notes": [
+    "SensorReading.evaluate recibe MonitoredRange, corrigiendo la referencia cruzada ThermalRange de la fuente anterior.",
+    "El modelo debe conservar la evidencia temporal y la procedencia de sensores al implementar la ingesta real."
+  ],
+  "nodes": [
+    {
+      "id": "ShipmentMonitoring",
+      "kind": "class",
+      "label": "ShipmentMonitoring",
+      "x": 60,
+      "y": 180,
+      "w": 570,
+      "h": 394,
+      "stereotype": "Aggregate Root",
+      "attributes": [
+        "- id: UUID",
+        "- shipmentId: UUID",
+        "- range: MonitoredRange",
+        "- maxSilenceMinutes: Integer",
+        "- signalStatus: SignalStatus",
+        "- lastReadingAt: DateTimeOffset?",
+        "- startedAt: DateTimeOffset",
+        "- stoppedAt: DateTimeOffset?"
+      ],
+      "methods": [
+        "+ start(range: MonitoredRange): void",
+        "+ recordReading(reading: SensorReading): void",
+        "+ recordPosition(position: PositionReport): void",
+        "+ detectCommunicationGap(at): void",
+        "+ stop(at: DateTimeOffset): void"
+      ]
+    },
+    {
+      "id": "MonitoredRange",
+      "kind": "class",
+      "label": "MonitoredRange",
+      "x": 850,
+      "y": 180,
+      "w": 500,
+      "h": 254,
+      "stereotype": "Value Object · snapshot inmutable",
+      "attributes": [
+        "- minTempC: Decimal",
+        "- maxTempC: Decimal",
+        "- minHumidityPct: Decimal",
+        "- maxHumidityPct: Decimal",
+        "- toleranceMinutes: Integer"
+      ],
+      "methods": [
+        "+ contains(tempC, humidityPct): Boolean"
+      ]
+    },
+    {
+      "id": "SensorReading",
+      "kind": "class",
+      "label": "SensorReading",
+      "x": 1530,
+      "y": 180,
+      "w": 580,
+      "h": 274,
+      "stereotype": "Entity interna",
+      "attributes": [
+        "- id: Int64",
+        "- monitoringId: UUID",
+        "- temperatureC: Decimal",
+        "- humidityPct: Decimal",
+        "- withinBothRanges: Boolean",
+        "- recordedAt: DateTimeOffset"
+      ],
+      "methods": [
+        "+ evaluate(range: MonitoredRange): Boolean"
+      ]
+    },
+    {
+      "id": "PositionReport",
+      "kind": "class",
+      "label": "PositionReport",
+      "x": 1530,
+      "y": 650,
+      "w": 580,
+      "h": 214,
+      "stereotype": "Entity interna",
+      "attributes": [
+        "- id: Int64",
+        "- monitoringId: UUID",
+        "- latitude: Decimal",
+        "- longitude: Decimal",
+        "- recordedAt: DateTimeOffset"
+      ]
+    },
+    {
+      "id": "SignalStatus",
+      "kind": "enum",
+      "label": "SignalStatus",
+      "x": 850,
+      "y": 640,
+      "w": 500,
+      "h": 154,
+      "attributes": [
+        "ONLINE",
+        "NO_SIGNAL"
+      ]
+    },
+    {
+      "id": "IShipmentMonitoringRepository",
+      "kind": "class",
+      "label": "IShipmentMonitoringRepository",
+      "x": 60,
+      "y": 830,
+      "w": 660,
+      "h": 174,
+      "stereotype": "interface · Domain Port",
+      "methods": [
+        "+ find(id: UUID): ShipmentMonitoring?",
+        "+ save(root: ShipmentMonitoring): void"
+      ]
+    },
+    {
+      "id": "Rules",
+      "kind": "note",
+      "label": "Reglas y límites",
+      "x": 60,
+      "y": 1120,
+      "w": 2050,
+      "h": 162,
+      "body": [
+        "La copia MonitoredRange no cambia cuando se modifican límites de otro envío o contexto.",
+        "Las lecturas usan fecha de medición válida. Una muestra atrasada no demuestra recuperación actual de señal.",
+        "SignalLost / SignalRestored son eventos propuestos; las excursiones térmicas se evalúan de forma independiente."
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "IShipmentMonitoringRepository",
+      "target": "ShipmentMonitoring",
+      "label": "Persiste la raíz",
+      "sourcePort": "top",
+      "targetPort": "bottom",
+      "points": [],
+      "endArrow": "open",
+      "dashed": true
+    },
+    {
+      "source": "ShipmentMonitoring",
+      "target": "MonitoredRange",
+      "label": "Copia local de los cuatro límites",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "points": [],
+      "endArrow": "none",
+      "startArrow": "diamond",
+      "sourceLabel": "1",
+      "targetLabel": "1",
+      "sourceOffset": 0.22
+    },
+    {
+      "source": "ShipmentMonitoring",
+      "target": "SensorReading",
+      "label": "Lecturas del monitoreo",
+      "sourcePort": "top",
+      "targetPort": "top",
+      "points": [
+        [
+          345,
+          135
+        ],
+        [
+          1820,
+          135
+        ]
+      ],
+      "endArrow": "none",
+      "startArrow": "diamond",
+      "sourceLabel": "1",
+      "targetLabel": "0..*",
+      "labelX": 1100,
+      "labelY": 125
+    },
+    {
+      "source": "ShipmentMonitoring",
+      "target": "PositionReport",
+      "label": "Posiciones del monitoreo",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "points": [
+        [
+          750,
+          487.32
+        ],
+        [
+          750,
+          550
+        ],
+        [
+          1430,
+          550
+        ],
+        [
+          1430,
+          775
+        ],
+        [
+          1430,
+          757.0
+        ]
+      ],
+      "endArrow": "none",
+      "startArrow": "diamond",
+      "sourceLabel": "1",
+      "targetLabel": "0..*",
+      "sourceOffset": 0.78,
+      "labelX": 1090,
+      "labelY": 535
+    },
+    {
+      "source": "ShipmentMonitoring",
+      "target": "SignalStatus",
+      "label": "Estado de comunicación",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "points": [],
+      "endArrow": "open",
+      "sourceOffset": 0.9,
+      "targetOffset": 0.5
+    }
+  ]
+}

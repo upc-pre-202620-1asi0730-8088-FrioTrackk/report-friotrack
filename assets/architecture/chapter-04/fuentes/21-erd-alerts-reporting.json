@@ -1,0 +1,424 @@
+{
+  "id": "21-erd-alerts-reporting",
+  "section": "4.8.1",
+  "title": "FríoTrack · ERD · Alert & Reporting · Apoyo",
+  "subtitle": "Esquema objetivo PostgreSQL · columnas completas y claves de referencia; no se acredita despliegue de base de datos.",
+  "width": 2260,
+  "height": 1630,
+  "legend": "PK primaria · FK foránea · UK única · nullable opcional · flecha FK → PK · multiplicidades junto a cada extremo",
+  "notes": [
+    "Proyección relacional objetivo PostgreSQL: no constituye migración ejecutada ni el almacén JSON actual.",
+    "Las claves de otros contextos son referencias por ID. Una FK de persistencia no define propiedad de un agregado."
+  ],
+  "nodes": [
+    {
+      "id": "Alert",
+      "kind": "table",
+      "label": "alerts",
+      "x": 60,
+      "y": 170,
+      "w": 520,
+      "h": 294,
+      "stereotype": "Alert & Reporting",
+      "attributes": [
+        "id: uuid [PK]",
+        "shipment_id: uuid [FK]",
+        "trigger_reading_id: bigint [FK nullable]",
+        "type: varchar(16)",
+        "severity: varchar(16)",
+        "status: varchar(16)",
+        "opened_at: timestamptz",
+        "acknowledged_at: timestamptz [nullable]",
+        "resolved_at: timestamptz [nullable]"
+      ]
+    },
+    {
+      "id": "CorrectiveAction",
+      "kind": "table",
+      "label": "corrective_actions",
+      "x": 790,
+      "y": 170,
+      "w": 500,
+      "h": 234,
+      "stereotype": "Alert & Reporting",
+      "attributes": [
+        "id: uuid [PK]",
+        "alert_id: uuid [FK]",
+        "registered_by: uuid [FK]",
+        "comment: text",
+        "notify_client: boolean",
+        "registered_at: timestamptz"
+      ]
+    },
+    {
+      "id": "Notification",
+      "kind": "table",
+      "label": "notifications",
+      "x": 1490,
+      "y": 170,
+      "w": 680,
+      "h": 254,
+      "stereotype": "Alert & Reporting",
+      "attributes": [
+        "id: uuid [PK]",
+        "user_id: uuid [FK]",
+        "shipment_id: uuid [FK]",
+        "alert_id: uuid [FK nullable]",
+        "kind: varchar(40)",
+        "created_at: timestamptz",
+        "read_at: timestamptz [nullable]"
+      ]
+    },
+    {
+      "id": "Incident",
+      "kind": "table",
+      "label": "incidents",
+      "x": 60,
+      "y": 720,
+      "w": 520,
+      "h": 214,
+      "stereotype": "Alert & Reporting",
+      "attributes": [
+        "id: uuid [PK]",
+        "shipment_id: uuid [FK]",
+        "registered_by: uuid [FK]",
+        "description: text",
+        "registered_at: timestamptz"
+      ]
+    },
+    {
+      "id": "ThermalReport",
+      "kind": "table",
+      "label": "thermal_reports",
+      "x": 790,
+      "y": 720,
+      "w": 500,
+      "h": 234,
+      "stereotype": "Alert & Reporting",
+      "attributes": [
+        "id: uuid [PK]",
+        "shipment_id: uuid [FK]",
+        "generated_by: uuid [FK]",
+        "generated_at: timestamptz",
+        "file_path: text",
+        "summary: jsonb"
+      ]
+    },
+    {
+      "id": "Shipment",
+      "kind": "external",
+      "label": "shipments",
+      "x": 1490,
+      "y": 720,
+      "w": 680,
+      "h": 145,
+      "stereotype": "Tabla de otro contexto",
+      "body": [
+        "Referencia externa · Shipment",
+        "PK id: uuid"
+      ]
+    },
+    {
+      "id": "UserAccount",
+      "kind": "external",
+      "label": "users",
+      "x": 60,
+      "y": 1200,
+      "w": 520,
+      "h": 145,
+      "stereotype": "Tabla de otro contexto",
+      "body": [
+        "Referencia externa · IAM",
+        "PK id: uuid"
+      ]
+    },
+    {
+      "id": "SensorReading",
+      "kind": "external",
+      "label": "sensor_readings",
+      "x": 790,
+      "y": 1200,
+      "w": 500,
+      "h": 145,
+      "stereotype": "Tabla de otro contexto",
+      "body": [
+        "Referencia externa · Monitoring & Telemetry",
+        "PK id: bigint"
+      ]
+    },
+    {
+      "id": "PanelNote",
+      "kind": "note",
+      "label": "Reglas y límites",
+      "x": 60,
+      "y": 1420,
+      "w": 2140,
+      "h": 138,
+      "body": [
+        "trigger_reading_id es opcional: pérdida de señal no requiere una lectura que origine el evento.",
+        "Registrar acción no equivale a resolver. Solo el destinatario autorizado confirma lectura de una notificación."
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "Alert",
+      "target": "Shipment",
+      "label": "shipment_id → id",
+      "sourcePort": "top",
+      "targetPort": "right",
+      "points": [
+        [
+          190,
+          150
+        ],
+        [
+          2220,
+          150
+        ],
+        [
+          2220,
+          765
+        ],
+        [
+          2220,
+          763.5
+        ]
+      ],
+      "endArrow": "open",
+      "sourceLabel": "0..*",
+      "targetLabel": "1",
+      "sourceOffset": 0.25,
+      "targetOffset": 0.3
+    },
+    {
+      "source": "Alert",
+      "target": "SensorReading",
+      "label": "trigger_reading_id → id",
+      "sourcePort": "left",
+      "targetPort": "top",
+      "points": [
+        [
+          25,
+          272.9
+        ],
+        [
+          25,
+          273
+        ],
+        [
+          25,
+          1060
+        ],
+        [
+          865,
+          1060
+        ]
+      ],
+      "endArrow": "open",
+      "sourceLabel": "0..*",
+      "targetLabel": "0..1",
+      "sourceOffset": 0.35,
+      "targetOffset": 0.15,
+      "labelX": 530,
+      "labelY": 1050
+    },
+    {
+      "source": "CorrectiveAction",
+      "target": "Alert",
+      "label": "alert_id → id",
+      "sourcePort": "left",
+      "targetPort": "right",
+      "points": [],
+      "endArrow": "open",
+      "sourceLabel": "0..*",
+      "targetLabel": "1",
+      "targetOffset": 0.4,
+      "labelX": 685,
+      "labelY": 270
+    },
+    {
+      "source": "CorrectiveAction",
+      "target": "UserAccount",
+      "label": "registered_by → id",
+      "sourcePort": "right",
+      "targetPort": "top",
+      "points": [
+        [
+          1360,
+          287
+        ],
+        [
+          1360,
+          1150
+        ],
+        [
+          476,
+          1150
+        ]
+      ],
+      "endArrow": "open",
+      "sourceLabel": "0..*",
+      "targetLabel": "1",
+      "targetOffset": 0.8,
+      "labelX": 1360,
+      "labelY": 1000
+    },
+    {
+      "source": "Notification",
+      "target": "UserAccount",
+      "label": "user_id → id",
+      "sourcePort": "right",
+      "targetPort": "top",
+      "points": [
+        [
+          2240,
+          347.79999999999995
+        ],
+        [
+          2240,
+          348
+        ],
+        [
+          2240,
+          1170
+        ],
+        [
+          569.6,
+          1170
+        ],
+        [
+          569.5999999999999,
+          1170
+        ]
+      ],
+      "endArrow": "open",
+      "sourceLabel": "0..*",
+      "targetLabel": "1",
+      "sourceOffset": 0.7,
+      "targetOffset": 0.98,
+      "labelX": 1750,
+      "labelY": 1160
+    },
+    {
+      "source": "Notification",
+      "target": "Shipment",
+      "label": "shipment_id → id",
+      "sourcePort": "bottom",
+      "targetPort": "top",
+      "points": [],
+      "endArrow": "open",
+      "sourceLabel": "0..*",
+      "targetLabel": "1",
+      "sourceOffset": 0.7,
+      "targetOffset": 0.7
+    },
+    {
+      "source": "Notification",
+      "target": "Alert",
+      "label": "alert_id → id",
+      "sourcePort": "top",
+      "targetPort": "top",
+      "points": [
+        [
+          1830,
+          110
+        ],
+        [
+          424,
+          110
+        ]
+      ],
+      "endArrow": "open",
+      "sourceLabel": "0..*",
+      "targetLabel": "0..1",
+      "targetOffset": 0.7
+    },
+    {
+      "source": "Incident",
+      "target": "Shipment",
+      "label": "shipment_id → id",
+      "sourcePort": "bottom",
+      "targetPort": "bottom",
+      "points": [
+        [
+          164,
+          1020
+        ],
+        [
+          1966,
+          1020
+        ]
+      ],
+      "endArrow": "open",
+      "sourceLabel": "0..*",
+      "targetLabel": "1",
+      "sourceOffset": 0.2,
+      "targetOffset": 0.7,
+      "labelX": 1120,
+      "labelY": 1010
+    },
+    {
+      "source": "Incident",
+      "target": "UserAccount",
+      "label": "registered_by → id",
+      "sourcePort": "bottom",
+      "targetPort": "top",
+      "points": [
+        [
+          450,
+          1130
+        ],
+        [
+          190,
+          1130
+        ]
+      ],
+      "endArrow": "open",
+      "sourceLabel": "0..*",
+      "targetLabel": "1",
+      "sourceOffset": 0.75,
+      "targetOffset": 0.25,
+      "labelX": 450,
+      "labelY": 995
+    },
+    {
+      "source": "ThermalReport",
+      "target": "Shipment",
+      "label": "shipment_id → id",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "points": [],
+      "endArrow": "open",
+      "sourceLabel": "0..*",
+      "targetLabel": "1",
+      "sourceOffset": 0.35,
+      "labelX": 1390,
+      "labelY": 775
+    },
+    {
+      "source": "ThermalReport",
+      "target": "UserAccount",
+      "label": "generated_by → id",
+      "sourcePort": "bottom",
+      "targetPort": "top",
+      "points": [
+        [
+          1140,
+          1090
+        ],
+        [
+          320,
+          1090
+        ]
+      ],
+      "endArrow": "open",
+      "sourceLabel": "0..*",
+      "targetLabel": "1",
+      "sourceOffset": 0.7,
+      "targetOffset": 0.5,
+      "labelX": 710,
+      "labelY": 1080
+    }
+  ]
+}

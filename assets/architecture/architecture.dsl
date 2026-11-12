@@ -5,14 +5,12 @@ workspace "FrioTrack" "TB1 implemented architecture" {
     visitor = person "Visitor" "Reads the product proposal"
     maps = softwareSystem "OpenStreetMap" "External map tile service"
     friotrack = softwareSystem "FrioTrack" {
-      landing = container "Landing Page" "Public product site at /landing/" "HTML CSS JavaScript"
-      web = container "Web Application" "Serves index.html and the SPA bundle" "Azure Storage Static Website"
+      web = container "Web Application" "Serves /landing/, index.html and the SPA bundle; does not execute Vue" "Azure Storage Static Website"
       spa = container "Single Page Application" "Runs in the user browser; authenticated views" "Vue 3 PrimeVue JavaScript"
       api = container "Supporting API" "Authenticates, authorizes and validates commands" "ASP.NET Core 10 C#"
       store = container "Private state store" "Single-instance accounts sessions and workspace" "JSON file"
     }
-    visitor -> landing "Reads proposal" "HTTPS"
-    landing -> web "Navigates through CTA" "HTTPS URL"
+    visitor -> web "Reads /landing/ and follows the application CTA" "HTTPS"
     coordinator -> web "Requests page" "HTTPS"
     client -> web "Requests page" "HTTPS"
     web -> spa "Delivers application" "HTML JavaScript CSS / HTTPS"

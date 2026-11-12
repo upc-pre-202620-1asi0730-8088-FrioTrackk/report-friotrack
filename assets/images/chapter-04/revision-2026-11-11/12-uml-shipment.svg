@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2100" height="1340" viewBox="0 0 2100 1340">
+<defs><pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#dfdfdf" stroke-width=".7"/></pattern><filter id="paper-shadow" x="-10%" y="-10%" width="125%" height="130%"><feDropShadow dx="1" dy="3" stdDeviation="2" flood-color="#000000" flood-opacity=".12"/></filter>
+<marker id="arrow" viewBox="0 0 12 10" refX="11" refY="5" markerWidth="10" markerHeight="9" orient="auto-start-reverse"><path d="M0 0 L12 5 L0 10Z" fill="#444"/></marker><marker id="open" viewBox="0 0 12 10" refX="11" refY="5" markerWidth="10" markerHeight="9" orient="auto-start-reverse"><path d="M0 0 L12 5 L0 10" fill="none" stroke="#333"/></marker><marker id="diamond" viewBox="0 0 12 10" refX="1" refY="5" markerWidth="12" markerHeight="10" orient="auto-start-reverse"><path d="M0 5 L6 0 L12 5 L6 10Z" fill="#222"/></marker><marker id="triangle" viewBox="0 0 12 10" refX="11" refY="5" markerWidth="12" markerHeight="10" orient="auto-start-reverse"><path d="M0 0 L12 5 L0 10Z" fill="white" stroke="#333"/></marker></defs>
+<rect width="100%" height="100%" fill="white"/>
+<text x="35" y="48.78" font-family="Arial,sans-serif" font-size="28" font-weight="700" text-anchor="start" fill="#222">4.7.1 · FríoTrack · UML DDD · Shipment Management</text>
+<text x="35" y="84.775" font-family="Arial,sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#555">Core · Diseño objetivo del backend; no equivale a las clases JSON de la API TB1.</text>
+<rect x="26" y="140" width="2048" height="1135" rx="2" fill="none" stroke="#333" stroke-width="1.2"/>
+<rect x="26" y="111" width="303.0" height="29" rx="1" fill="white" stroke="#333" stroke-width="1.2"/>
+<text x="34" y="132.04500000000002" font-family="Arial,sans-serif" font-size="17" font-weight="700" text-anchor="start" fill="#222">Domain · Shipment Management</text>
+<rect x="70" y="180" width="620" height="514" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M70 244 L690 244" fill="none" stroke="#555" stroke-width="1"/>
+<ellipse cx="332.0" cy="201.0" rx="12.0" ry="12.0" fill="#b8dabf" stroke="#555"/>
+<text x="332.0" y="206.005" font-family="Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#222">C</text>
+<text x="354.0" y="209.815" font-family="Arial,sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#222">Shipment</text>
+<text x="380.0" y="234.505" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">«Aggregate Root»</text>
+<text x="83" y="268.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- id: UUID</text>
+<text x="83" y="290.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- code: String</text>
+<text x="83" y="312.28" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- organizationId: UUID</text>
+<text x="83" y="334.41999999999996" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- coordinatorId: UUID</text>
+<text x="83" y="356.55999999999995" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- clientId: UUID</text>
+<text x="83" y="378.69999999999993" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- cargo: String</text>
+<text x="83" y="400.8399999999999" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- weightTons: Decimal</text>
+<text x="83" y="422.9799999999999" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- origin: String</text>
+<text x="83" y="445.1199999999999" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- destination: String</text>
+<text x="83" y="467.2599999999999" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- range: ThermalRange</text>
+<text x="83" y="489.39999999999986" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- plannedDeparture: DateTimeOffset</text>
+<text x="83" y="511.53999999999985" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- estimatedArrival: DateTimeOffset</text>
+<text x="83" y="533.6799999999998" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- status: ShipmentStatus</text>
+<text x="83" y="555.8199999999998" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- version: Int64</text>
+<path d="M70 562.9599999999998 L690 562.9599999999998" fill="none" stroke="#555" stroke-width="1"/>
+<text x="83" y="593.9599999999998" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">+ schedule(): void</text>
+<text x="83" y="616.0999999999998" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">+ startTransit(): void</text>
+<text x="83" y="638.2399999999998" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">+ markDelivered(): void</text>
+<text x="83" y="660.3799999999998" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">+ cancel(reason: String): void</text>
+<text x="83" y="682.5199999999998" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">+ updateRange(range: ThermalRange): void</text>
+<rect x="900" y="180" width="480" height="254" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M900 244 L1380 244" fill="none" stroke="#555" stroke-width="1"/>
+<ellipse cx="1068.5" cy="201.0" rx="12.0" ry="12.0" fill="#b8dabf" stroke="#555"/>
+<text x="1068.5" y="206.005" font-family="Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#222">C</text>
+<text x="1090.5" y="209.815" font-family="Arial,sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#222">ThermalRange</text>
+<text x="1140.0" y="234.505" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">«Value Object · inmutable»</text>
+<text x="913" y="268.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- minTempC: Decimal</text>
+<text x="913" y="290.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- maxTempC: Decimal</text>
+<text x="913" y="312.28" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- minHumidityPct: Decimal</text>
+<text x="913" y="334.41999999999996" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- maxHumidityPct: Decimal</text>
+<text x="913" y="356.55999999999995" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- toleranceMinutes: Integer</text>
+<path d="M900 363.69999999999993 L1380 363.69999999999993" fill="none" stroke="#555" stroke-width="1"/>
+<text x="913" y="394.69999999999993" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">+ contains(tempC, humidityPct): Boolean</text>
+<rect x="1540" y="180" width="490" height="254" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M1540 244 L2030 244" fill="none" stroke="#555" stroke-width="1"/>
+<ellipse cx="1682.0" cy="201.0" rx="12.0" ry="12.0" fill="#b8dabf" stroke="#555"/>
+<text x="1682.0" y="206.005" font-family="Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#222">C</text>
+<text x="1704.0" y="209.815" font-family="Arial,sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#222">ShipmentHistoryEvent</text>
+<text x="1785.0" y="234.505" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">«Entity interna»</text>
+<text x="1553" y="268.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- id: UUID</text>
+<text x="1553" y="290.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- actorId: UUID</text>
+<text x="1553" y="312.28" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- action: String</text>
+<text x="1553" y="334.41999999999996" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- fromStatus: ShipmentStatus?</text>
+<text x="1553" y="356.55999999999995" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- toStatus: ShipmentStatus?</text>
+<text x="1553" y="378.69999999999993" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- note: String</text>
+<text x="1553" y="400.8399999999999" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- recordedAt: DateTimeOffset</text>
+<rect x="1540" y="630" width="490" height="214" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M1540 694 L2030 694" fill="none" stroke="#555" stroke-width="1"/>
+<ellipse cx="1709.5" cy="651.0" rx="12.0" ry="12.0" fill="#e7d2a5" stroke="#555"/>
+<text x="1709.5" y="656.005" font-family="Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#222">E</text>
+<text x="1731.5" y="659.815" font-family="Arial,sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#222">ShipmentStatus</text>
+<text x="1785.0" y="684.505" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">«enumeration»</text>
+<text x="1553" y="718.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">DRAFT</text>
+<text x="1553" y="740.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">SCHEDULED</text>
+<text x="1553" y="762.28" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">IN_TRANSIT</text>
+<text x="1553" y="784.42" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">DELIVERED</text>
+<text x="1553" y="806.56" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">CANCELLED</text>
+<rect x="900" y="880" width="600" height="174" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M900 944 L1500 944" fill="none" stroke="#555" stroke-width="1"/>
+<ellipse cx="1103.0" cy="901.0" rx="12.0" ry="12.0" fill="#b8dabf" stroke="#555"/>
+<text x="1103.0" y="906.005" font-family="Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#222">I</text>
+<text x="1125.0" y="909.815" font-family="Arial,sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#222">IShipmentRepository</text>
+<text x="1200.0" y="934.505" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">«interface · Domain Port»</text>
+<text x="913" y="968.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">+ find(id: UUID): Shipment?</text>
+<text x="913" y="990.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">+ save(root: Shipment): void</text>
+<rect x="70" y="1110" width="1960" height="162" rx="0" fill="#fffbea" stroke="#aaa" stroke-width="1"/>
+<text x="83" y="1137.43" font-family="Arial,sans-serif" font-size="18" font-weight="700" text-anchor="start" fill="#222">Reglas y límites</text>
+<text x="83" y="1192.48" font-family="Arial,sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#222">La raíz protege rango, fechas, peso y transiciones; un borrador no reserva recursos.</text>
+<text x="83" y="1212.16" font-family="Arial,sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#222">La aplicación confirma capacidad y reserva de Fleet antes de aceptar programación, en una unidad de trabajo.</text>
+<text x="83" y="1231.8400000000001" font-family="Arial,sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#222">Referencias a organización, coordinador y cliente son IDs; no se navegan objetos de IAM ni de Fleet.</text>
+<polyline points="1200.0,880 1200.0,787.0 380.0,787.0 380.0,694" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" stroke-dasharray="7 4" marker-end="url(#open)"/>
+<rect x="741.0" y="762.0" width="98.0" height="21.990000000000002" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="790.0" y="778.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Persiste la raíz</text>
+<polyline points="690,293.08 900,293.08" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-start="url(#diamond)"/>
+<rect x="741.5" y="268.08" width="107.0" height="37.980000000000004" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="795.0" y="284.08" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Rango propio del</text>
+<text x="795.0" y="300.07" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">envío</text>
+<rect x="691.0" y="271.08" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="713.0" y="286.085" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">1</text>
+<rect x="855.0" y="271.08" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="877.0" y="286.085" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">1</text>
+<polyline points="380.0,180 380,135 1785,135 1785.0,180" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-start="url(#diamond)"/>
+<rect x="962.5" y="112" width="175.0" height="21.990000000000002" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="1050.0" y="128.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Historial dentro del agregado</text>
+<rect x="358.0" y="135.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="380.0" y="150.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">1</text>
+<rect x="1763.0" y="135.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="1785.0" y="150.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">0..*</text>
+<polyline points="690,437.0 780,437.0 780,690 1480,690 1480,737.0 1540,737.0" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#open)"/>
+<rect x="1082.0" y="665.0" width="96.0" height="21.990000000000002" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="1130.0" y="681.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Tipo de estado</text>
+<text x="35" y="1320.505" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="start" fill="#555">&lt;&lt;Aggregate Root&gt;&gt; raíz · &lt;&lt;Entity&gt;&gt; entidad · &lt;&lt;Value Object&gt;&gt; valor · ◆ composición · - - &gt; dependencia por ID</text>
+</svg>

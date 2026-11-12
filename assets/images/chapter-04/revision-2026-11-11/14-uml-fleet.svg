@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2260" height="1320" viewBox="0 0 2260 1320">
+<defs><pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#dfdfdf" stroke-width=".7"/></pattern><filter id="paper-shadow" x="-10%" y="-10%" width="125%" height="130%"><feDropShadow dx="1" dy="3" stdDeviation="2" flood-color="#000000" flood-opacity=".12"/></filter>
+<marker id="arrow" viewBox="0 0 12 10" refX="11" refY="5" markerWidth="10" markerHeight="9" orient="auto-start-reverse"><path d="M0 0 L12 5 L0 10Z" fill="#444"/></marker><marker id="open" viewBox="0 0 12 10" refX="11" refY="5" markerWidth="10" markerHeight="9" orient="auto-start-reverse"><path d="M0 0 L12 5 L0 10" fill="none" stroke="#333"/></marker><marker id="diamond" viewBox="0 0 12 10" refX="1" refY="5" markerWidth="12" markerHeight="10" orient="auto-start-reverse"><path d="M0 5 L6 0 L12 5 L6 10Z" fill="#222"/></marker><marker id="triangle" viewBox="0 0 12 10" refX="11" refY="5" markerWidth="12" markerHeight="10" orient="auto-start-reverse"><path d="M0 0 L12 5 L0 10Z" fill="white" stroke="#333"/></marker></defs>
+<rect width="100%" height="100%" fill="white"/>
+<text x="35" y="48.78" font-family="Arial,sans-serif" font-size="28" font-weight="700" text-anchor="start" fill="#222">4.7.1 · FríoTrack · UML DDD · Fleet &amp; Resource Management</text>
+<text x="35" y="84.775" font-family="Arial,sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#555">Apoyo · Sensor es raíz independiente: puede existir sin vehículo asignado.</text>
+<rect x="26" y="140" width="2208" height="1115" rx="2" fill="none" stroke="#333" stroke-width="1.2"/>
+<rect x="26" y="111" width="368.0" height="29" rx="1" fill="white" stroke="#333" stroke-width="1.2"/>
+<text x="34" y="132.04500000000002" font-family="Arial,sans-serif" font-size="17" font-weight="700" text-anchor="start" fill="#222">Domain · Fleet &amp; Resource Management</text>
+<rect x="60" y="210" width="430" height="294" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M60 274 L490 274" fill="none" stroke="#555" stroke-width="1"/>
+<ellipse cx="236.0078125" cy="231.0" rx="12.0" ry="12.0" fill="#b8dabf" stroke="#555"/>
+<text x="236.0078125" y="236.005" font-family="Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#222">C</text>
+<text x="258.0078125" y="239.815" font-family="Arial,sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#222">Vehicle</text>
+<text x="275.0" y="264.505" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">«Aggregate Root»</text>
+<text x="73" y="298.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- id: UUID</text>
+<text x="73" y="320.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- organizationId: UUID</text>
+<text x="73" y="342.28" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- plate: String</text>
+<text x="73" y="364.41999999999996" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- capacityTons: Decimal</text>
+<text x="73" y="386.55999999999995" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- enabled: Boolean</text>
+<path d="M60 393.69999999999993 L490 393.69999999999993" fill="none" stroke="#555" stroke-width="1"/>
+<text x="73" y="424.69999999999993" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">+ changeCapacity(tons: Decimal): void</text>
+<text x="73" y="446.8399999999999" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">+ ensureEnabled(): void</text>
+<text x="73" y="468.9799999999999" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">+ disable(): void</text>
+<rect x="60" y="760" width="430" height="174" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M60 824 L490 824" fill="none" stroke="#555" stroke-width="1"/>
+<ellipse cx="187.0078125" cy="781.0" rx="12.0" ry="12.0" fill="#b8dabf" stroke="#555"/>
+<text x="187.0078125" y="786.005" font-family="Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#222">I</text>
+<text x="209.0078125" y="789.815" font-family="Arial,sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#222">IVehicleRepository</text>
+<text x="275.0" y="814.505" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">«interface · Domain Port»</text>
+<text x="73" y="848.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">+ find(id: UUID): Vehicle?</text>
+<text x="73" y="870.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">+ save(root: Vehicle): void</text>
+<rect x="620" y="210" width="430" height="274" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M620 274 L1050 274" fill="none" stroke="#555" stroke-width="1"/>
+<ellipse cx="802.5" cy="231.0" rx="12.0" ry="12.0" fill="#b8dabf" stroke="#555"/>
+<text x="802.5" y="236.005" font-family="Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#222">C</text>
+<text x="824.5" y="239.815" font-family="Arial,sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#222">Driver</text>
+<text x="835.0" y="264.505" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">«Aggregate Root»</text>
+<text x="633" y="298.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- id: UUID</text>
+<text x="633" y="320.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- organizationId: UUID</text>
+<text x="633" y="342.28" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- fullName: String</text>
+<text x="633" y="364.41999999999996" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- licenseNumber: String</text>
+<text x="633" y="386.55999999999995" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- enabled: Boolean</text>
+<path d="M620 393.69999999999993 L1050 393.69999999999993" fill="none" stroke="#555" stroke-width="1"/>
+<text x="633" y="424.69999999999993" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">+ ensureEnabled(): void</text>
+<text x="633" y="446.8399999999999" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">+ disable(): void</text>
+<rect x="620" y="760" width="430" height="174" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M620 824 L1050 824" fill="none" stroke="#555" stroke-width="1"/>
+<ellipse cx="753.5" cy="781.0" rx="12.0" ry="12.0" fill="#b8dabf" stroke="#555"/>
+<text x="753.5" y="786.005" font-family="Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#222">I</text>
+<text x="775.5" y="789.815" font-family="Arial,sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#222">IDriverRepository</text>
+<text x="835.0" y="814.505" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">«interface · Domain Port»</text>
+<text x="633" y="848.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">+ find(id: UUID): Driver?</text>
+<text x="633" y="870.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">+ save(root: Driver): void</text>
+<rect x="1180" y="210" width="430" height="274" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M1180 274 L1610 274" fill="none" stroke="#555" stroke-width="1"/>
+<ellipse cx="1357.0" cy="231.0" rx="12.0" ry="12.0" fill="#b8dabf" stroke="#555"/>
+<text x="1357.0" y="236.005" font-family="Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#222">C</text>
+<text x="1379.0" y="239.815" font-family="Arial,sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#222">Sensor</text>
+<text x="1395.0" y="264.505" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">«Aggregate Root»</text>
+<text x="1193" y="298.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- id: UUID</text>
+<text x="1193" y="320.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- vehicleId: UUID?</text>
+<text x="1193" y="342.28" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- serialCode: String</text>
+<text x="1193" y="364.41999999999996" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- enabled: Boolean</text>
+<path d="M1180 371.55999999999995 L1610 371.55999999999995" fill="none" stroke="#555" stroke-width="1"/>
+<text x="1193" y="402.55999999999995" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">+ assignToVehicle(vehicleId: UUID): void</text>
+<text x="1193" y="424.69999999999993" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">+ unassign(): void</text>
+<text x="1193" y="446.8399999999999" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">+ disable(): void</text>
+<rect x="1180" y="760" width="430" height="174" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M1180 824 L1610 824" fill="none" stroke="#555" stroke-width="1"/>
+<ellipse cx="1308.0" cy="781.0" rx="12.0" ry="12.0" fill="#b8dabf" stroke="#555"/>
+<text x="1308.0" y="786.005" font-family="Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#222">I</text>
+<text x="1330.0" y="789.815" font-family="Arial,sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#222">ISensorRepository</text>
+<text x="1395.0" y="814.505" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">«interface · Domain Port»</text>
+<text x="1193" y="848.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">+ find(id: UUID): Sensor?</text>
+<text x="1193" y="870.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">+ save(root: Sensor): void</text>
+<rect x="1740" y="210" width="450" height="334" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M1740 274 L2190 274" fill="none" stroke="#555" stroke-width="1"/>
+<ellipse cx="1894.5" cy="231.0" rx="12.0" ry="12.0" fill="#b8dabf" stroke="#555"/>
+<text x="1894.5" y="236.005" font-family="Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#222">C</text>
+<text x="1916.5" y="239.815" font-family="Arial,sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#222">FleetAllocation</text>
+<text x="1965.0" y="264.505" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">«Aggregate Root»</text>
+<text x="1753" y="298.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- id: UUID</text>
+<text x="1753" y="320.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- shipmentId: UUID</text>
+<text x="1753" y="342.28" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- vehicleId: UUID</text>
+<text x="1753" y="364.41999999999996" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- driverId: UUID</text>
+<text x="1753" y="386.55999999999995" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- reservedFrom: DateTimeOffset</text>
+<text x="1753" y="408.69999999999993" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- reservedUntil: DateTimeOffset</text>
+<text x="1753" y="430.8399999999999" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- status: AllocationStatus</text>
+<text x="1753" y="452.9799999999999" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">- releasedAt: DateTimeOffset?</text>
+<path d="M1740 460.1199999999999 L2190 460.1199999999999" fill="none" stroke="#555" stroke-width="1"/>
+<text x="1753" y="491.1199999999999" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">+ reserve(): void</text>
+<text x="1753" y="513.2599999999999" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">+ release(at: DateTimeOffset): void</text>
+<rect x="1740" y="760" width="450" height="174" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M1740 824 L2190 824" fill="none" stroke="#555" stroke-width="1"/>
+<ellipse cx="1845.5" cy="781.0" rx="12.0" ry="12.0" fill="#b8dabf" stroke="#555"/>
+<text x="1845.5" y="786.005" font-family="Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#222">I</text>
+<text x="1867.5" y="789.815" font-family="Arial,sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#222">IFleetAllocationRepository</text>
+<text x="1965.0" y="814.505" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">«interface · Domain Port»</text>
+<text x="1753" y="848.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">+ find(id: UUID): FleetAllocation?</text>
+<text x="1753" y="870.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">+ save(root: FleetAllocation): void</text>
+<rect x="60" y="1050" width="430" height="154" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M60 1114 L490 1114" fill="none" stroke="#555" stroke-width="1"/>
+<ellipse cx="198.5" cy="1071.0" rx="12.0" ry="12.0" fill="#e7d2a5" stroke="#555"/>
+<text x="198.5" y="1076.005" font-family="Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#222">E</text>
+<text x="220.5" y="1079.815" font-family="Arial,sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#222">AllocationStatus</text>
+<text x="275.0" y="1104.505" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">«enumeration»</text>
+<text x="73" y="1138.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">RESERVED</text>
+<text x="73" y="1160.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">RELEASED</text>
+<rect x="620" y="1050" width="1570" height="170" rx="0" fill="#fffbea" stroke="#aaa" stroke-width="1"/>
+<text x="633" y="1077.43" font-family="Arial,sans-serif" font-size="18" font-weight="700" text-anchor="start" fill="#222">Reglas y límites</text>
+<text x="633" y="1136.48" font-family="Arial,sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#222">No existe composición Vehicle → Sensor: inventario, activación y asignación del sensor tienen ciclo de vida propio.</text>
+<text x="633" y="1156.16" font-family="Arial,sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#222">La asignación referencia shipmentId, vehicleId y driverId; el servicio de aplicación coordina repositorios y unidad de trabajo.</text>
+<text x="633" y="1175.8400000000001" font-family="Arial,sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#222">Unicidad de placa, licencia y serial; asignación única de sensor; reserva sin solapamiento bajo control transaccional.</text>
+<polyline points="275.0,760 275.0,504" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" stroke-dasharray="7 4" marker-end="url(#open)"/>
+<rect x="226.0" y="607.0" width="98.0" height="21.990000000000002" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="275.0" y="623.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Persiste la raíz</text>
+<polyline points="835.0,760 835.0,484" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" stroke-dasharray="7 4" marker-end="url(#open)"/>
+<rect x="786.0" y="597.0" width="98.0" height="21.990000000000002" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="835.0" y="613.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Persiste la raíz</text>
+<polyline points="1395.0,760 1395.0,484" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" stroke-dasharray="7 4" marker-end="url(#open)"/>
+<rect x="1346.0" y="597.0" width="98.0" height="21.990000000000002" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="1395.0" y="613.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Persiste la raíz</text>
+<polyline points="1965.0,760 1965.0,544" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" stroke-dasharray="7 4" marker-end="url(#open)"/>
+<rect x="1916.0" y="627.0" width="98.0" height="21.990000000000002" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="1965.0" y="643.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Persiste la raíz</text>
+<polyline points="1395.0,210 1395,155 275,155 275.0,210" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" stroke-dasharray="7 4" marker-end="url(#open)"/>
+<rect x="751.5" y="127" width="177.0" height="21.990000000000002" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="840.0" y="143.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">vehicleId? · referencia por ID</text>
+<text x="35" y="1300.505" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="start" fill="#555">&lt;&lt;Aggregate Root&gt;&gt; raíz · &lt;&lt;Entity&gt;&gt; entidad · &lt;&lt;Value Object&gt;&gt; valor · ◆ composición · - - &gt; dependencia por ID</text>
+</svg>

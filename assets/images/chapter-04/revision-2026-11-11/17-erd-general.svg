@@ -1,0 +1,446 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3000" height="2750" viewBox="0 0 3000 2750">
+<defs><pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#dfdfdf" stroke-width=".7"/></pattern><filter id="paper-shadow" x="-10%" y="-10%" width="125%" height="130%"><feDropShadow dx="1" dy="3" stdDeviation="2" flood-color="#000000" flood-opacity=".12"/></filter>
+<marker id="arrow" viewBox="0 0 12 10" refX="11" refY="5" markerWidth="10" markerHeight="9" orient="auto-start-reverse"><path d="M0 0 L12 5 L0 10Z" fill="#444"/></marker><marker id="open" viewBox="0 0 12 10" refX="11" refY="5" markerWidth="10" markerHeight="9" orient="auto-start-reverse"><path d="M0 0 L12 5 L0 10" fill="none" stroke="#333"/></marker><marker id="diamond" viewBox="0 0 12 10" refX="1" refY="5" markerWidth="12" markerHeight="10" orient="auto-start-reverse"><path d="M0 5 L6 0 L12 5 L6 10Z" fill="#222"/></marker><marker id="triangle" viewBox="0 0 12 10" refX="11" refY="5" markerWidth="12" markerHeight="10" orient="auto-start-reverse"><path d="M0 0 L12 5 L0 10Z" fill="white" stroke="#333"/></marker></defs>
+<rect width="100%" height="100%" fill="white"/>
+<text x="35" y="48.78" font-family="Arial,sans-serif" font-size="28" font-weight="700" text-anchor="start" fill="#222">4.8.1 · FríoTrack · Proyección relacional general</text>
+<text x="35" y="84.775" font-family="Arial,sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#555">PostgreSQL objetivo · 17 tablas y 27 FK · Ver paneles por contexto para todas las columnas.</text>
+<rect x="40" y="145" width="2480" height="430" rx="2" fill="none" stroke="#333" stroke-width="1.2"/>
+<rect x="40" y="116" width="278.0" height="29" rx="1" fill="white" stroke="#333" stroke-width="1.2"/>
+<text x="48" y="137.04500000000002" font-family="Arial,sans-serif" font-size="17" font-weight="700" text-anchor="start" fill="#222">Shipment Management · Core</text>
+<rect x="40" y="625" width="2480" height="390" rx="2" fill="none" stroke="#333" stroke-width="1.2"/>
+<rect x="40" y="596" width="281.984375" height="29" rx="1" fill="white" stroke="#333" stroke-width="1.2"/>
+<text x="48" y="617.045" font-family="Arial,sans-serif" font-size="17" font-weight="700" text-anchor="start" fill="#222">Monitoring &amp; Telemetry · Core</text>
+<rect x="40" y="1065" width="2480" height="420" rx="2" fill="none" stroke="#333" stroke-width="1.2"/>
+<rect x="40" y="1036" width="243.0" height="29" rx="1" fill="white" stroke="#333" stroke-width="1.2"/>
+<text x="48" y="1057.045" font-family="Arial,sans-serif" font-size="17" font-weight="700" text-anchor="start" fill="#222">Fleet &amp; Resource · Apoyo</text>
+<rect x="40" y="1535" width="2480" height="430" rx="2" fill="none" stroke="#333" stroke-width="1.2"/>
+<rect x="40" y="1506" width="245.0" height="29" rx="1" fill="white" stroke="#333" stroke-width="1.2"/>
+<text x="48" y="1527.045" font-family="Arial,sans-serif" font-size="17" font-weight="700" text-anchor="start" fill="#222">Alert &amp; Reporting · Apoyo</text>
+<rect x="40" y="2015" width="2480" height="420" rx="2" fill="none" stroke="#333" stroke-width="1.2"/>
+<rect x="40" y="1986" width="151.0" height="29" rx="1" fill="white" stroke="#333" stroke-width="1.2"/>
+<text x="48" y="2007.045" font-family="Arial,sans-serif" font-size="17" font-weight="700" text-anchor="start" fill="#222">IAM · Genérico</text>
+<rect x="80" y="213" width="440" height="214" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M80 256 L520 256" fill="none" stroke="#555" stroke-width="1"/>
+<text x="300.0" y="243.2" font-family="Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#222">shipments</text>
+<ellipse cx="92.0" cy="271.07" rx="4.0" ry="4.0" fill="none" stroke="#b28512"/>
+<path d="M95 271.07 L103 271.07" fill="none" stroke="#b28512" stroke-width="2"/>
+<path d="M100 271.07 L100 275.07" fill="none" stroke="#b28512" stroke-width="2"/>
+<text x="109" y="280.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">id: uuid [PK]</text>
+<ellipse cx="92.0" cy="293.21" rx="4.0" ry="4.0" fill="none" stroke="#999999"/>
+<path d="M95 293.21 L103 293.21" fill="none" stroke="#999999" stroke-width="2"/>
+<path d="M100 293.21 L100 297.21" fill="none" stroke="#999999" stroke-width="2"/>
+<text x="109" y="302.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">organization_id: uuid [FK]</text>
+<ellipse cx="92.0" cy="315.34999999999997" rx="4.0" ry="4.0" fill="none" stroke="#999999"/>
+<path d="M95 315.34999999999997 L103 315.34999999999997" fill="none" stroke="#999999" stroke-width="2"/>
+<path d="M100 315.34999999999997 L100 319.34999999999997" fill="none" stroke="#999999" stroke-width="2"/>
+<text x="109" y="324.28" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">coordinator_id: uuid [FK]</text>
+<ellipse cx="92.0" cy="337.48999999999995" rx="4.0" ry="4.0" fill="none" stroke="#999999"/>
+<path d="M95 337.48999999999995 L103 337.48999999999995" fill="none" stroke="#999999" stroke-width="2"/>
+<path d="M100 337.48999999999995 L100 341.48999999999995" fill="none" stroke="#999999" stroke-width="2"/>
+<text x="109" y="346.41999999999996" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">client_id: uuid [FK]</text>
+<text x="93" y="368.55999999999995" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">... 18 columnas en total</text>
+<rect x="570" y="213" width="440" height="194" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M570 256 L1010 256" fill="none" stroke="#555" stroke-width="1"/>
+<text x="790.0" y="243.2" font-family="Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#222">shipment_history</text>
+<ellipse cx="582.0" cy="271.07" rx="4.0" ry="4.0" fill="none" stroke="#b28512"/>
+<path d="M585 271.07 L593 271.07" fill="none" stroke="#b28512" stroke-width="2"/>
+<path d="M590 271.07 L590 275.07" fill="none" stroke="#b28512" stroke-width="2"/>
+<text x="599" y="280.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">id: uuid [PK]</text>
+<ellipse cx="582.0" cy="293.21" rx="4.0" ry="4.0" fill="none" stroke="#999999"/>
+<path d="M585 293.21 L593 293.21" fill="none" stroke="#999999" stroke-width="2"/>
+<path d="M590 293.21 L590 297.21" fill="none" stroke="#999999" stroke-width="2"/>
+<text x="599" y="302.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">shipment_id: uuid [FK]</text>
+<ellipse cx="582.0" cy="315.34999999999997" rx="4.0" ry="4.0" fill="none" stroke="#999999"/>
+<path d="M585 315.34999999999997 L593 315.34999999999997" fill="none" stroke="#999999" stroke-width="2"/>
+<path d="M590 315.34999999999997 L590 319.34999999999997" fill="none" stroke="#999999" stroke-width="2"/>
+<text x="599" y="324.28" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">actor_id: uuid [FK]</text>
+<text x="583" y="346.41999999999996" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">... 8 columnas en total</text>
+<rect x="80" y="693" width="440" height="174" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M80 736 L520 736" fill="none" stroke="#555" stroke-width="1"/>
+<text x="300.0" y="723.2" font-family="Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#222">shipment_monitorings</text>
+<ellipse cx="92.0" cy="751.07" rx="4.0" ry="4.0" fill="none" stroke="#b28512"/>
+<path d="M95 751.07 L103 751.07" fill="none" stroke="#b28512" stroke-width="2"/>
+<path d="M100 751.07 L100 755.07" fill="none" stroke="#b28512" stroke-width="2"/>
+<text x="109" y="760.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">id: uuid [PK]</text>
+<text x="93" y="782.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">shipment_id: uuid [FK UK]</text>
+<text x="93" y="804.28" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">... 12 columnas en total</text>
+<rect x="570" y="693" width="440" height="174" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M570 736 L1010 736" fill="none" stroke="#555" stroke-width="1"/>
+<text x="790.0" y="723.2" font-family="Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#222">sensor_readings</text>
+<ellipse cx="582.0" cy="751.07" rx="4.0" ry="4.0" fill="none" stroke="#b28512"/>
+<path d="M585 751.07 L593 751.07" fill="none" stroke="#b28512" stroke-width="2"/>
+<path d="M590 751.07 L590 755.07" fill="none" stroke="#b28512" stroke-width="2"/>
+<text x="599" y="760.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">id: bigint [PK]</text>
+<ellipse cx="582.0" cy="773.21" rx="4.0" ry="4.0" fill="none" stroke="#999999"/>
+<path d="M585 773.21 L593 773.21" fill="none" stroke="#999999" stroke-width="2"/>
+<path d="M590 773.21 L590 777.21" fill="none" stroke="#999999" stroke-width="2"/>
+<text x="599" y="782.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">monitoring_id: uuid [FK]</text>
+<text x="583" y="804.28" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">... 6 columnas en total</text>
+<rect x="1060" y="693" width="440" height="174" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M1060 736 L1500 736" fill="none" stroke="#555" stroke-width="1"/>
+<text x="1280.0" y="723.2" font-family="Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#222">position_reports</text>
+<ellipse cx="1072.0" cy="751.07" rx="4.0" ry="4.0" fill="none" stroke="#b28512"/>
+<path d="M1075 751.07 L1083 751.07" fill="none" stroke="#b28512" stroke-width="2"/>
+<path d="M1080 751.07 L1080 755.07" fill="none" stroke="#b28512" stroke-width="2"/>
+<text x="1089" y="760.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">id: bigint [PK]</text>
+<ellipse cx="1072.0" cy="773.21" rx="4.0" ry="4.0" fill="none" stroke="#999999"/>
+<path d="M1075 773.21 L1083 773.21" fill="none" stroke="#999999" stroke-width="2"/>
+<path d="M1080 773.21 L1080 777.21" fill="none" stroke="#999999" stroke-width="2"/>
+<text x="1089" y="782.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">monitoring_id: uuid [FK]</text>
+<text x="1073" y="804.28" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">... 5 columnas en total</text>
+<rect x="80" y="1133" width="440" height="174" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M80 1176 L520 1176" fill="none" stroke="#555" stroke-width="1"/>
+<text x="300.0" y="1163.2" font-family="Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#222">vehicles</text>
+<ellipse cx="92.0" cy="1191.07" rx="4.0" ry="4.0" fill="none" stroke="#b28512"/>
+<path d="M95 1191.07 L103 1191.07" fill="none" stroke="#b28512" stroke-width="2"/>
+<path d="M100 1191.07 L100 1195.07" fill="none" stroke="#b28512" stroke-width="2"/>
+<text x="109" y="1200.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">id: uuid [PK]</text>
+<ellipse cx="92.0" cy="1213.21" rx="4.0" ry="4.0" fill="none" stroke="#999999"/>
+<path d="M95 1213.21 L103 1213.21" fill="none" stroke="#999999" stroke-width="2"/>
+<path d="M100 1213.21 L100 1217.21" fill="none" stroke="#999999" stroke-width="2"/>
+<text x="109" y="1222.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">organization_id: uuid [FK]</text>
+<text x="93" y="1244.2800000000002" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">... 5 columnas en total</text>
+<rect x="570" y="1133" width="440" height="174" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M570 1176 L1010 1176" fill="none" stroke="#555" stroke-width="1"/>
+<text x="790.0" y="1163.2" font-family="Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#222">drivers</text>
+<ellipse cx="582.0" cy="1191.07" rx="4.0" ry="4.0" fill="none" stroke="#b28512"/>
+<path d="M585 1191.07 L593 1191.07" fill="none" stroke="#b28512" stroke-width="2"/>
+<path d="M590 1191.07 L590 1195.07" fill="none" stroke="#b28512" stroke-width="2"/>
+<text x="599" y="1200.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">id: uuid [PK]</text>
+<ellipse cx="582.0" cy="1213.21" rx="4.0" ry="4.0" fill="none" stroke="#999999"/>
+<path d="M585 1213.21 L593 1213.21" fill="none" stroke="#999999" stroke-width="2"/>
+<path d="M590 1213.21 L590 1217.21" fill="none" stroke="#999999" stroke-width="2"/>
+<text x="599" y="1222.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">organization_id: uuid [FK]</text>
+<text x="583" y="1244.2800000000002" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">... 5 columnas en total</text>
+<rect x="1060" y="1133" width="440" height="174" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M1060 1176 L1500 1176" fill="none" stroke="#555" stroke-width="1"/>
+<text x="1280.0" y="1163.2" font-family="Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#222">sensors</text>
+<ellipse cx="1072.0" cy="1191.07" rx="4.0" ry="4.0" fill="none" stroke="#b28512"/>
+<path d="M1075 1191.07 L1083 1191.07" fill="none" stroke="#b28512" stroke-width="2"/>
+<path d="M1080 1191.07 L1080 1195.07" fill="none" stroke="#b28512" stroke-width="2"/>
+<text x="1089" y="1200.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">id: uuid [PK]</text>
+<text x="1073" y="1222.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">vehicle_id: uuid [FK UK nullable]</text>
+<text x="1073" y="1244.2800000000002" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">... 4 columnas en total</text>
+<rect x="1550" y="1133" width="440" height="214" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M1550 1176 L1990 1176" fill="none" stroke="#555" stroke-width="1"/>
+<text x="1770.0" y="1163.2" font-family="Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#222">fleet_allocations</text>
+<ellipse cx="1562.0" cy="1191.07" rx="4.0" ry="4.0" fill="none" stroke="#b28512"/>
+<path d="M1565 1191.07 L1573 1191.07" fill="none" stroke="#b28512" stroke-width="2"/>
+<path d="M1570 1191.07 L1570 1195.07" fill="none" stroke="#b28512" stroke-width="2"/>
+<text x="1579" y="1200.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">id: uuid [PK]</text>
+<ellipse cx="1562.0" cy="1213.21" rx="4.0" ry="4.0" fill="none" stroke="#999999"/>
+<path d="M1565 1213.21 L1573 1213.21" fill="none" stroke="#999999" stroke-width="2"/>
+<path d="M1570 1213.21 L1570 1217.21" fill="none" stroke="#999999" stroke-width="2"/>
+<text x="1579" y="1222.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">vehicle_id: uuid [FK]</text>
+<ellipse cx="1562.0" cy="1235.3500000000001" rx="4.0" ry="4.0" fill="none" stroke="#999999"/>
+<path d="M1565 1235.3500000000001 L1573 1235.3500000000001" fill="none" stroke="#999999" stroke-width="2"/>
+<path d="M1570 1235.3500000000001 L1570 1239.3500000000001" fill="none" stroke="#999999" stroke-width="2"/>
+<text x="1579" y="1244.2800000000002" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">driver_id: uuid [FK]</text>
+<text x="1563" y="1266.4200000000003" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">shipment_id: uuid [FK UK]</text>
+<text x="1563" y="1288.5600000000004" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">... 8 columnas en total</text>
+<rect x="80" y="1603" width="440" height="194" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M80 1646 L520 1646" fill="none" stroke="#555" stroke-width="1"/>
+<text x="300.0" y="1633.2" font-family="Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#222">alerts</text>
+<ellipse cx="92.0" cy="1661.07" rx="4.0" ry="4.0" fill="none" stroke="#b28512"/>
+<path d="M95 1661.07 L103 1661.07" fill="none" stroke="#b28512" stroke-width="2"/>
+<path d="M100 1661.07 L100 1665.07" fill="none" stroke="#b28512" stroke-width="2"/>
+<text x="109" y="1670.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">id: uuid [PK]</text>
+<ellipse cx="92.0" cy="1683.21" rx="4.0" ry="4.0" fill="none" stroke="#999999"/>
+<path d="M95 1683.21 L103 1683.21" fill="none" stroke="#999999" stroke-width="2"/>
+<path d="M100 1683.21 L100 1687.21" fill="none" stroke="#999999" stroke-width="2"/>
+<text x="109" y="1692.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">shipment_id: uuid [FK]</text>
+<text x="93" y="1714.2800000000002" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">trigger_reading_id: bigint [FK nullable]</text>
+<text x="93" y="1736.4200000000003" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">... 9 columnas en total</text>
+<rect x="570" y="1603" width="440" height="194" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M570 1646 L1010 1646" fill="none" stroke="#555" stroke-width="1"/>
+<text x="790.0" y="1633.2" font-family="Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#222">corrective_actions</text>
+<ellipse cx="582.0" cy="1661.07" rx="4.0" ry="4.0" fill="none" stroke="#b28512"/>
+<path d="M585 1661.07 L593 1661.07" fill="none" stroke="#b28512" stroke-width="2"/>
+<path d="M590 1661.07 L590 1665.07" fill="none" stroke="#b28512" stroke-width="2"/>
+<text x="599" y="1670.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">id: uuid [PK]</text>
+<ellipse cx="582.0" cy="1683.21" rx="4.0" ry="4.0" fill="none" stroke="#999999"/>
+<path d="M585 1683.21 L593 1683.21" fill="none" stroke="#999999" stroke-width="2"/>
+<path d="M590 1683.21 L590 1687.21" fill="none" stroke="#999999" stroke-width="2"/>
+<text x="599" y="1692.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">alert_id: uuid [FK]</text>
+<ellipse cx="582.0" cy="1705.3500000000001" rx="4.0" ry="4.0" fill="none" stroke="#999999"/>
+<path d="M585 1705.3500000000001 L593 1705.3500000000001" fill="none" stroke="#999999" stroke-width="2"/>
+<path d="M590 1705.3500000000001 L590 1709.3500000000001" fill="none" stroke="#999999" stroke-width="2"/>
+<text x="599" y="1714.2800000000002" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">registered_by: uuid [FK]</text>
+<text x="583" y="1736.4200000000003" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">... 6 columnas en total</text>
+<rect x="1060" y="1603" width="440" height="214" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M1060 1646 L1500 1646" fill="none" stroke="#555" stroke-width="1"/>
+<text x="1280.0" y="1633.2" font-family="Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#222">notifications</text>
+<ellipse cx="1072.0" cy="1661.07" rx="4.0" ry="4.0" fill="none" stroke="#b28512"/>
+<path d="M1075 1661.07 L1083 1661.07" fill="none" stroke="#b28512" stroke-width="2"/>
+<path d="M1080 1661.07 L1080 1665.07" fill="none" stroke="#b28512" stroke-width="2"/>
+<text x="1089" y="1670.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">id: uuid [PK]</text>
+<ellipse cx="1072.0" cy="1683.21" rx="4.0" ry="4.0" fill="none" stroke="#999999"/>
+<path d="M1075 1683.21 L1083 1683.21" fill="none" stroke="#999999" stroke-width="2"/>
+<path d="M1080 1683.21 L1080 1687.21" fill="none" stroke="#999999" stroke-width="2"/>
+<text x="1089" y="1692.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">user_id: uuid [FK]</text>
+<ellipse cx="1072.0" cy="1705.3500000000001" rx="4.0" ry="4.0" fill="none" stroke="#999999"/>
+<path d="M1075 1705.3500000000001 L1083 1705.3500000000001" fill="none" stroke="#999999" stroke-width="2"/>
+<path d="M1080 1705.3500000000001 L1080 1709.3500000000001" fill="none" stroke="#999999" stroke-width="2"/>
+<text x="1089" y="1714.2800000000002" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">shipment_id: uuid [FK]</text>
+<text x="1073" y="1736.4200000000003" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">alert_id: uuid [FK nullable]</text>
+<text x="1073" y="1758.5600000000004" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">... 7 columnas en total</text>
+<rect x="1550" y="1603" width="440" height="194" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M1550 1646 L1990 1646" fill="none" stroke="#555" stroke-width="1"/>
+<text x="1770.0" y="1633.2" font-family="Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#222">incidents</text>
+<ellipse cx="1562.0" cy="1661.07" rx="4.0" ry="4.0" fill="none" stroke="#b28512"/>
+<path d="M1565 1661.07 L1573 1661.07" fill="none" stroke="#b28512" stroke-width="2"/>
+<path d="M1570 1661.07 L1570 1665.07" fill="none" stroke="#b28512" stroke-width="2"/>
+<text x="1579" y="1670.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">id: uuid [PK]</text>
+<ellipse cx="1562.0" cy="1683.21" rx="4.0" ry="4.0" fill="none" stroke="#999999"/>
+<path d="M1565 1683.21 L1573 1683.21" fill="none" stroke="#999999" stroke-width="2"/>
+<path d="M1570 1683.21 L1570 1687.21" fill="none" stroke="#999999" stroke-width="2"/>
+<text x="1579" y="1692.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">shipment_id: uuid [FK]</text>
+<ellipse cx="1562.0" cy="1705.3500000000001" rx="4.0" ry="4.0" fill="none" stroke="#999999"/>
+<path d="M1565 1705.3500000000001 L1573 1705.3500000000001" fill="none" stroke="#999999" stroke-width="2"/>
+<path d="M1570 1705.3500000000001 L1570 1709.3500000000001" fill="none" stroke="#999999" stroke-width="2"/>
+<text x="1579" y="1714.2800000000002" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">registered_by: uuid [FK]</text>
+<text x="1563" y="1736.4200000000003" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">... 5 columnas en total</text>
+<rect x="2040" y="1603" width="440" height="194" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M2040 1646 L2480 1646" fill="none" stroke="#555" stroke-width="1"/>
+<text x="2260.0" y="1633.2" font-family="Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#222">thermal_reports</text>
+<ellipse cx="2052.0" cy="1661.07" rx="4.0" ry="4.0" fill="none" stroke="#b28512"/>
+<path d="M2055 1661.07 L2063 1661.07" fill="none" stroke="#b28512" stroke-width="2"/>
+<path d="M2060 1661.07 L2060 1665.07" fill="none" stroke="#b28512" stroke-width="2"/>
+<text x="2069" y="1670.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">id: uuid [PK]</text>
+<ellipse cx="2052.0" cy="1683.21" rx="4.0" ry="4.0" fill="none" stroke="#999999"/>
+<path d="M2055 1683.21 L2063 1683.21" fill="none" stroke="#999999" stroke-width="2"/>
+<path d="M2060 1683.21 L2060 1687.21" fill="none" stroke="#999999" stroke-width="2"/>
+<text x="2069" y="1692.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">shipment_id: uuid [FK]</text>
+<ellipse cx="2052.0" cy="1705.3500000000001" rx="4.0" ry="4.0" fill="none" stroke="#999999"/>
+<path d="M2055 1705.3500000000001 L2063 1705.3500000000001" fill="none" stroke="#999999" stroke-width="2"/>
+<path d="M2060 1705.3500000000001 L2060 1709.3500000000001" fill="none" stroke="#999999" stroke-width="2"/>
+<text x="2069" y="1714.2800000000002" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">generated_by: uuid [FK]</text>
+<text x="2053" y="1736.4200000000003" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">... 6 columnas en total</text>
+<rect x="80" y="2083" width="440" height="154" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M80 2126 L520 2126" fill="none" stroke="#555" stroke-width="1"/>
+<text x="300.0" y="2113.2" font-family="Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#222">organizations</text>
+<ellipse cx="92.0" cy="2141.07" rx="4.0" ry="4.0" fill="none" stroke="#b28512"/>
+<path d="M95 2141.07 L103 2141.07" fill="none" stroke="#b28512" stroke-width="2"/>
+<path d="M100 2141.07 L100 2145.07" fill="none" stroke="#b28512" stroke-width="2"/>
+<text x="109" y="2150.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">id: uuid [PK]</text>
+<text x="93" y="2172.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">... 2 columnas en total</text>
+<rect x="570" y="2083" width="440" height="174" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M570 2126 L1010 2126" fill="none" stroke="#555" stroke-width="1"/>
+<text x="790.0" y="2113.2" font-family="Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#222">users</text>
+<ellipse cx="582.0" cy="2141.07" rx="4.0" ry="4.0" fill="none" stroke="#b28512"/>
+<path d="M585 2141.07 L593 2141.07" fill="none" stroke="#b28512" stroke-width="2"/>
+<path d="M590 2141.07 L590 2145.07" fill="none" stroke="#b28512" stroke-width="2"/>
+<text x="599" y="2150.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">id: uuid [PK]</text>
+<ellipse cx="582.0" cy="2163.21" rx="4.0" ry="4.0" fill="none" stroke="#999999"/>
+<path d="M585 2163.21 L593 2163.21" fill="none" stroke="#999999" stroke-width="2"/>
+<path d="M590 2163.21 L590 2167.21" fill="none" stroke="#999999" stroke-width="2"/>
+<text x="599" y="2172.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">organization_id: uuid [FK]</text>
+<text x="583" y="2194.2799999999997" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">... 10 columnas en total</text>
+<rect x="1060" y="2083" width="440" height="174" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M1060 2126 L1500 2126" fill="none" stroke="#555" stroke-width="1"/>
+<text x="1280.0" y="2113.2" font-family="Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#222">password_reset_tokens</text>
+<ellipse cx="1072.0" cy="2141.07" rx="4.0" ry="4.0" fill="none" stroke="#b28512"/>
+<path d="M1075 2141.07 L1083 2141.07" fill="none" stroke="#b28512" stroke-width="2"/>
+<path d="M1080 2141.07 L1080 2145.07" fill="none" stroke="#b28512" stroke-width="2"/>
+<text x="1089" y="2150.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">id: uuid [PK]</text>
+<ellipse cx="1072.0" cy="2163.21" rx="4.0" ry="4.0" fill="none" stroke="#999999"/>
+<path d="M1075 2163.21 L1083 2163.21" fill="none" stroke="#999999" stroke-width="2"/>
+<path d="M1080 2163.21 L1080 2167.21" fill="none" stroke="#999999" stroke-width="2"/>
+<text x="1089" y="2172.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">user_id: uuid [FK]</text>
+<text x="1073" y="2194.2799999999997" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">... 5 columnas en total</text>
+<rect x="60" y="2510" width="2780" height="162" rx="0" fill="#fffbea" stroke="#aaa" stroke-width="1"/>
+<text x="73" y="2537.43" font-family="Arial,sans-serif" font-size="18" font-weight="700" text-anchor="start" fill="#222">Reglas y límites</text>
+<text x="73" y="2592.48" font-family="Arial,sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#222">Cada flecha R01–R27 se desarrolla en la matriz de claves del paquete. Los paneles18–22 incluyen todas las columnas.</text>
+<text x="73" y="2612.16" font-family="Arial,sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#222">Los límites ambientales se proyectan en columnas numéricas; los objetos de valor no se convierten automáticamente en tablas.</text>
+<text x="73" y="2631.8399999999997" font-family="Arial,sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#222">IAM aparece al final. El inventario Sensor conserva vehicle_id opcional y serial_code único.</text>
+<polyline points="790.0,2257 790.0,2417 168.0,2417 168.0,2237" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#open)"/>
+<rect x="462.5" y="2395" width="33.0" height="21.990000000000002" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="479.0" y="2411.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">R01</text>
+<rect x="768.0" y="2258.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="790.0" y="2273.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">0..*</text>
+<rect x="146.0" y="2238.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="168.0" y="2253.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">1</text>
+<polyline points="300.0,1307 300.0,1467 2620,1467 2620,2405 256.0,2405 256.0,2237" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#open)"/>
+<rect x="2607.5" y="1923.0" width="33.0" height="21.990000000000002" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="2624.0" y="1939.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">R02</text>
+<rect x="278.0" y="1308.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="300.0" y="1323.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">0..*</text>
+<rect x="234.0" y="2238.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="256.0" y="2253.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">1</text>
+<polyline points="790.0,1307 790.0,1455 2630,1455 2630,2393 344.0,2393 344.0,2237" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#open)"/>
+<rect x="2617.5" y="1911.0" width="33.0" height="21.990000000000002" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="2634.0" y="1927.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">R03</text>
+<rect x="768.0" y="1308.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="790.0" y="1323.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">0..*</text>
+<rect x="322.0" y="2238.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="344.0" y="2253.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">1</text>
+<polyline points="190.0,427 190.0,557 2640,557 2640,2381 432.0,2381 432.0,2237" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#open)"/>
+<rect x="2627.5" y="1456.0" width="33.0" height="21.990000000000002" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="2644.0" y="1472.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">R04</text>
+<rect x="168.0" y="428.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="190.0" y="443.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">0..*</text>
+<rect x="410.0" y="2238.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="432.0" y="2253.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">1</text>
+<polyline points="1280.0,2257 1280.0,2405 618.8888888888889,2405 618.8888888888889,2257" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#open)"/>
+<rect x="932.9444444444445" y="2383" width="33.0" height="21.990000000000002" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="949.4444444444445" y="2399.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">R05</text>
+<rect x="1258.0" y="2258.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="1280.0" y="2273.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">0..*</text>
+<rect x="596.8888888888889" y="2258.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="618.8888888888889" y="2273.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">1</text>
+<polyline points="1280.0,1307 1280.0,1443 226.66666666666666,1443 226.66666666666666,1307" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#open)"/>
+<rect x="736.8333333333334" y="1421" width="33.0" height="21.990000000000002" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="753.3333333333334" y="1437.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">R06</text>
+<rect x="1258.0" y="1308.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="1280.0" y="1323.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">0..1</text>
+<rect x="204.66666666666666" y="1308.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="226.66666666666666" y="1323.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">0..1</text>
+<polyline points="1660.0,1347 1660.0,1431 2670,1431 2670,557 135.0,557 135.0,427" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#open)"/>
+<rect x="2657.5" y="981.0" width="33.0" height="21.990000000000002" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="2674.0" y="997.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">R07</text>
+<rect x="1638.0" y="1348.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="1660.0" y="1363.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">0..1</text>
+<rect x="113.0" y="428.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="135.0" y="443.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">1</text>
+<polyline points="1770.0,1347 1770.0,1419 373.3333333333333,1419 373.3333333333333,1307" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#open)"/>
+<rect x="1055.1666666666667" y="1397" width="33.0" height="21.990000000000002" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="1071.6666666666667" y="1413.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">R08</text>
+<rect x="1748.0" y="1348.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="1770.0" y="1363.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">0..*</text>
+<rect x="351.3333333333333" y="1308.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="373.3333333333333" y="1323.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">1</text>
+<polyline points="1880.0,1347 1880.0,1407 790.0,1407 790.0,1307" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#open)"/>
+<rect x="1318.5" y="1385" width="33.0" height="21.990000000000002" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="1335.0" y="1401.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">R09</text>
+<rect x="1858.0" y="1348.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="1880.0" y="1363.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">0..*</text>
+<rect x="768.0" y="1308.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="790.0" y="1323.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">1</text>
+<polyline points="300.0,427 300.0,545 2700,545 2700,2357 667.7777777777778,2357 667.7777777777778,2257" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#open)"/>
+<rect x="2687.5" y="1438.0" width="33.0" height="21.990000000000002" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="2704.0" y="1454.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">R10</text>
+<rect x="278.0" y="428.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="300.0" y="443.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">0..*</text>
+<rect x="645.7777777777778" y="2258.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="667.7777777777778" y="2273.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">1</text>
+<polyline points="410.0,427 410.0,533 2710,533 2710,2345 716.6666666666666,2345 716.6666666666666,2257" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#open)"/>
+<rect x="2697.5" y="1426.0" width="33.0" height="21.990000000000002" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="2714.0" y="1442.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">R11</text>
+<rect x="388.0" y="428.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="410.0" y="443.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">0..*</text>
+<rect x="694.6666666666666" y="2258.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="716.6666666666666" y="2273.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">1</text>
+<polyline points="716.6666666666666,407 716.6666666666666,521 190.0,521 190.0,427" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#open)"/>
+<rect x="436.8333333333333" y="499" width="33.0" height="21.990000000000002" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="453.3333333333333" y="515.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">R12</text>
+<rect x="694.6666666666666" y="408.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="716.6666666666666" y="423.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">0..*</text>
+<rect x="168.0" y="428.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="190.0" y="443.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">1</text>
+<polyline points="863.3333333333333,407 863.3333333333333,509 2730,509 2730,2333 765.5555555555555,2333 765.5555555555555,2257" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#open)"/>
+<rect x="2717.5" y="1408.0" width="33.0" height="21.990000000000002" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="2734.0" y="1424.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">R13</text>
+<rect x="841.3333333333333" y="408.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="863.3333333333333" y="423.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">0..*</text>
+<rect x="743.5555555555555" y="2258.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="765.5555555555555" y="2273.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">1</text>
+<polyline points="300.0,867 300.0,997 2740,997 2740,533 245.0,533 245.0,427" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#open)"/>
+<rect x="2727.5" y="752.0" width="33.0" height="21.990000000000002" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="2744.0" y="768.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">R14</text>
+<rect x="278.0" y="868.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="300.0" y="883.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">0..1</text>
+<rect x="223.0" y="428.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="245.0" y="443.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">1</text>
+<polyline points="790.0,867 790.0,985 226.66666666666666,985 226.66666666666666,867" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#open)"/>
+<rect x="491.8333333333333" y="963" width="33.0" height="21.990000000000002" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="508.3333333333333" y="979.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">R15</text>
+<rect x="768.0" y="868.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="790.0" y="883.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">0..*</text>
+<rect x="204.66666666666666" y="868.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="226.66666666666666" y="883.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">1</text>
+<polyline points="1280.0,867 1280.0,973 373.3333333333333,973 373.3333333333333,867" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#open)"/>
+<rect x="810.1666666666666" y="951" width="33.0" height="21.990000000000002" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="826.6666666666666" y="967.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">R16</text>
+<rect x="1258.0" y="868.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="1280.0" y="883.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">0..*</text>
+<rect x="351.3333333333333" y="868.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="373.3333333333333" y="883.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">1</text>
+<polyline points="226.66666666666666,1797 226.66666666666666,1947 2770,1947 2770,521 300.0,521 300.0,427" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#open)"/>
+<rect x="2757.5" y="1221.0" width="33.0" height="21.990000000000002" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="2774.0" y="1237.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">R17</text>
+<rect x="204.66666666666666" y="1798.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="226.66666666666666" y="1813.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">0..*</text>
+<rect x="278.0" y="428.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="300.0" y="443.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">1</text>
+<polyline points="373.3333333333333,1797 373.3333333333333,1935 2780,1935 2780,973 790.0,973 790.0,867" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#open)"/>
+<rect x="2767.5" y="1441.0" width="33.0" height="21.990000000000002" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="2784.0" y="1457.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">R18</text>
+<rect x="351.3333333333333" y="1798.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="373.3333333333333" y="1813.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">0..*</text>
+<rect x="768.0" y="868.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="790.0" y="883.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">0..1</text>
+<polyline points="716.6666666666666,1797 716.6666666666666,1923 226.66666666666666,1923 226.66666666666666,1797" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#open)"/>
+<rect x="455.16666666666663" y="1901" width="33.0" height="21.990000000000002" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="471.66666666666663" y="1917.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">R19</text>
+<rect x="694.6666666666666" y="1798.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="716.6666666666666" y="1813.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">0..*</text>
+<rect x="204.66666666666666" y="1798.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="226.66666666666666" y="1813.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">1</text>
+<polyline points="863.3333333333333,1797 863.3333333333333,1911 2800,1911 2800,2321 814.4444444444445,2321 814.4444444444445,2257" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#open)"/>
+<rect x="2787.5" y="2103.0" width="33.0" height="21.990000000000002" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="2804.0" y="2119.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">R20</text>
+<rect x="841.3333333333333" y="1798.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="863.3333333333333" y="1813.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">0..*</text>
+<rect x="792.4444444444445" y="2258.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="814.4444444444445" y="2273.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">1</text>
+<polyline points="1170.0,1817 1170.0,1899 2810,1899 2810,2309 863.3333333333333,2309 863.3333333333333,2257" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#open)"/>
+<rect x="2797.5" y="2091.0" width="33.0" height="21.990000000000002" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="2814.0" y="2107.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">R21</text>
+<rect x="1148.0" y="1818.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="1170.0" y="1833.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">0..*</text>
+<rect x="841.3333333333333" y="2258.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="863.3333333333333" y="2273.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">1</text>
+<polyline points="1280.0,1817 1280.0,1887 2820,1887 2820,509 355.0,509 355.0,427" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#open)"/>
+<rect x="2807.5" y="1185.0" width="33.0" height="21.990000000000002" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="2824.0" y="1201.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">R22</text>
+<rect x="1258.0" y="1818.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="1280.0" y="1833.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">0..*</text>
+<rect x="333.0" y="428.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="355.0" y="443.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">1</text>
+<polyline points="1390.0,1817 1390.0,1875 373.3333333333333,1875 373.3333333333333,1797" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#open)"/>
+<rect x="865.1666666666666" y="1853" width="33.0" height="21.990000000000002" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="881.6666666666666" y="1869.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">R23</text>
+<rect x="1368.0" y="1818.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="1390.0" y="1833.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">0..*</text>
+<rect x="351.3333333333333" y="1798.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="373.3333333333333" y="1813.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">0..1</text>
+<polyline points="1696.6666666666667,1797 1696.6666666666667,1863 2840,1863 2840,497 410.0,497 410.0,427" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#open)"/>
+<rect x="2827.5" y="1167.0" width="33.0" height="21.990000000000002" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="2844.0" y="1183.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">R24</text>
+<rect x="1674.6666666666667" y="1798.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="1696.6666666666667" y="1813.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">0..*</text>
+<rect x="388.0" y="428.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="410.0" y="443.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">1</text>
+<polyline points="1843.3333333333333,1797 1843.3333333333333,1851 2850,1851 2850,2297 912.2222222222222,2297 912.2222222222222,2257" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#open)"/>
+<rect x="2837.5" y="2061.0" width="33.0" height="21.990000000000002" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="2854.0" y="2077.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">R25</text>
+<rect x="1821.3333333333333" y="1798.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="1843.3333333333333" y="1813.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">0..*</text>
+<rect x="890.2222222222222" y="2258.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="912.2222222222222" y="2273.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">1</text>
+<polyline points="2186.6666666666665,1797 2186.6666666666665,1839 2860,1839 2860,485 465.0,485 465.0,427" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#open)"/>
+<rect x="2847.5" y="1149.0" width="33.0" height="21.990000000000002" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="2864.0" y="1165.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">R26</text>
+<rect x="2164.6666666666665" y="1798.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="2186.6666666666665" y="1813.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">0..*</text>
+<rect x="443.0" y="428.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="465.0" y="443.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">1</text>
+<polyline points="2333.3333333333335,1797 2333.3333333333335,1827 2870,1827 2870,2285 961.1111111111111,2285 961.1111111111111,2257" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#open)"/>
+<rect x="2857.5" y="2043.0" width="33.0" height="21.990000000000002" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="2874.0" y="2059.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">R27</text>
+<rect x="2311.3333333333335" y="1798.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="2333.3333333333335" y="1813.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">0..*</text>
+<rect x="939.1111111111111" y="2258.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="961.1111111111111" y="2273.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">1</text>
+<text x="35" y="2730.505" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="start" fill="#555">PK primaria · FK foránea · UK única · nullable opcional · flecha FK → PK · multiplicidades junto a cada extremo</text>
+</svg>

@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2100" height="1240" viewBox="0 0 2100 1240">
+<defs><pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#dfdfdf" stroke-width=".7"/></pattern><filter id="paper-shadow" x="-10%" y="-10%" width="125%" height="130%"><feDropShadow dx="1" dy="3" stdDeviation="2" flood-color="#000000" flood-opacity=".12"/></filter>
+<marker id="arrow" viewBox="0 0 12 10" refX="11" refY="5" markerWidth="10" markerHeight="9" orient="auto-start-reverse"><path d="M0 0 L12 5 L0 10Z" fill="#444"/></marker><marker id="open" viewBox="0 0 12 10" refX="11" refY="5" markerWidth="10" markerHeight="9" orient="auto-start-reverse"><path d="M0 0 L12 5 L0 10" fill="none" stroke="#333"/></marker><marker id="diamond" viewBox="0 0 12 10" refX="1" refY="5" markerWidth="12" markerHeight="10" orient="auto-start-reverse"><path d="M0 5 L6 0 L12 5 L6 10Z" fill="#222"/></marker><marker id="triangle" viewBox="0 0 12 10" refX="11" refY="5" markerWidth="12" markerHeight="10" orient="auto-start-reverse"><path d="M0 0 L12 5 L0 10Z" fill="white" stroke="#333"/></marker></defs>
+<rect width="100%" height="100%" fill="white"/>
+<text x="35" y="48.78" font-family="Arial,sans-serif" font-size="28" font-weight="700" text-anchor="start" fill="#222">4.8.1 · FríoTrack · ERD · Monitoring &amp; Telemetry · Core</text>
+<text x="35" y="84.775" font-family="Arial,sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#555">Esquema objetivo PostgreSQL · columnas completas y claves de referencia; no se acredita despliegue de base de datos.</text>
+<rect x="26" y="140" width="2048" height="1035" rx="2" fill="none" stroke="#333" stroke-width="1.2"/>
+<rect x="26" y="111" width="320.984375" height="29" rx="1" fill="white" stroke="#333" stroke-width="1.2"/>
+<text x="34" y="132.04500000000002" font-family="Arial,sans-serif" font-size="17" font-weight="700" text-anchor="start" fill="#222">Database · Monitoring &amp; Telemetry</text>
+<rect x="60" y="170" width="590" height="354" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M60 213 L650 213" fill="none" stroke="#555" stroke-width="1"/>
+<text x="355.0" y="200.2" font-family="Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#222">shipment_monitorings</text>
+<ellipse cx="72.0" cy="228.07" rx="4.0" ry="4.0" fill="none" stroke="#b28512"/>
+<path d="M75 228.07 L83 228.07" fill="none" stroke="#b28512" stroke-width="2"/>
+<path d="M80 228.07 L80 232.07" fill="none" stroke="#b28512" stroke-width="2"/>
+<text x="89" y="237.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">id: uuid [PK]</text>
+<text x="73" y="259.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">shipment_id: uuid [FK UK]</text>
+<text x="73" y="281.28" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">min_temp_c: numeric(5,2)</text>
+<text x="73" y="303.41999999999996" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">max_temp_c: numeric(5,2)</text>
+<text x="73" y="325.55999999999995" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">min_humidity_pct: numeric(5,2)</text>
+<text x="73" y="347.69999999999993" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">max_humidity_pct: numeric(5,2)</text>
+<text x="73" y="369.8399999999999" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">tolerance_minutes: integer</text>
+<text x="73" y="391.9799999999999" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">max_silence_minutes: integer</text>
+<text x="73" y="414.1199999999999" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">signal_status: varchar(16)</text>
+<text x="73" y="436.2599999999999" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">last_reading_at: timestamptz [nullable]</text>
+<text x="73" y="458.39999999999986" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">started_at: timestamptz</text>
+<text x="73" y="480.53999999999985" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">stopped_at: timestamptz [nullable]</text>
+<rect x="880" y="170" width="530" height="234" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M880 213 L1410 213" fill="none" stroke="#555" stroke-width="1"/>
+<text x="1145.0" y="200.2" font-family="Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#222">sensor_readings</text>
+<ellipse cx="892.0" cy="228.07" rx="4.0" ry="4.0" fill="none" stroke="#b28512"/>
+<path d="M895 228.07 L903 228.07" fill="none" stroke="#b28512" stroke-width="2"/>
+<path d="M900 228.07 L900 232.07" fill="none" stroke="#b28512" stroke-width="2"/>
+<text x="909" y="237.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">id: bigint [PK]</text>
+<ellipse cx="892.0" cy="250.20999999999998" rx="4.0" ry="4.0" fill="none" stroke="#999999"/>
+<path d="M895 250.20999999999998 L903 250.20999999999998" fill="none" stroke="#999999" stroke-width="2"/>
+<path d="M900 250.20999999999998 L900 254.20999999999998" fill="none" stroke="#999999" stroke-width="2"/>
+<text x="909" y="259.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">monitoring_id: uuid [FK]</text>
+<text x="893" y="281.28" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">temperature_c: numeric(5,2)</text>
+<text x="893" y="303.41999999999996" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">humidity_pct: numeric(5,2)</text>
+<text x="893" y="325.55999999999995" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">within_both_ranges: boolean</text>
+<text x="893" y="347.69999999999993" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">recorded_at: timestamptz</text>
+<rect x="880" y="660" width="530" height="214" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M880 703 L1410 703" fill="none" stroke="#555" stroke-width="1"/>
+<text x="1145.0" y="690.2" font-family="Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#222">position_reports</text>
+<ellipse cx="892.0" cy="718.07" rx="4.0" ry="4.0" fill="none" stroke="#b28512"/>
+<path d="M895 718.07 L903 718.07" fill="none" stroke="#b28512" stroke-width="2"/>
+<path d="M900 718.07 L900 722.07" fill="none" stroke="#b28512" stroke-width="2"/>
+<text x="909" y="727.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">id: bigint [PK]</text>
+<ellipse cx="892.0" cy="740.21" rx="4.0" ry="4.0" fill="none" stroke="#999999"/>
+<path d="M895 740.21 L903 740.21" fill="none" stroke="#999999" stroke-width="2"/>
+<path d="M900 740.21 L900 744.21" fill="none" stroke="#999999" stroke-width="2"/>
+<text x="909" y="749.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">monitoring_id: uuid [FK]</text>
+<text x="893" y="771.28" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">latitude: numeric(9,6)</text>
+<text x="893" y="793.42" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">longitude: numeric(9,6)</text>
+<text x="893" y="815.56" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">recorded_at: timestamptz</text>
+<rect x="1640" y="170" width="390" height="145" rx="2" fill="#f1f1f1" stroke="#555" stroke-width="0.9"/>
+<path d="M1640 212 L2030 212" fill="none" stroke="#555" stroke-width="1"/>
+<text x="1835.0" y="199.7" font-family="Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#222">shipments</text>
+<text x="1653" y="236.0" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">Referencia externa · Shipment</text>
+<text x="1653" y="258.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#222">PK id: uuid</text>
+<rect x="60" y="1030" width="1980" height="138" rx="0" fill="#fffbea" stroke="#aaa" stroke-width="1"/>
+<text x="73" y="1057.43" font-family="Arial,sans-serif" font-size="18" font-weight="700" text-anchor="start" fill="#222">Reglas y límites</text>
+<text x="73" y="1110.32" font-family="Arial,sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#222">Snapshot de los cuatro límites y tolerancia por monitoreo. Datos pasados conservan el rango original.</text>
+<text x="73" y="1130.0" font-family="Arial,sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#222">Una posición y una lectura pertenecen a un monitoreo. FK shipment_id es única: máximo un monitoreo por envío.</text>
+<polyline points="355.0,170 355,125 1835,125 1835.0,170" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#open)"/>
+<rect x="1039.5" y="100.0" width="111.0" height="21.990000000000002" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="1095.0" y="116.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">shipment_id → id</text>
+<rect x="333.0" y="125.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="355.0" y="140.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">0..1</text>
+<rect x="1813.0" y="125.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="1835.0" y="140.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">1</text>
+<polyline points="880,287.0 650,287.0" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#open)"/>
+<rect x="706.0" y="252" width="118.0" height="21.990000000000002" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="765.0" y="268.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">monitoring_id → id</text>
+<rect x="835.0" y="265.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="857.0" y="280.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">0..*</text>
+<rect x="651.0" y="265.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="673.0" y="280.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">1</text>
+<polyline points="880,767.0 780,767.0 780,760 355.0,760 355.0,524" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#open)"/>
+<rect x="508.5" y="735.0" width="118.0" height="21.990000000000002" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="567.5" y="751.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">monitoring_id → id</text>
+<rect x="835.0" y="745.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="857.0" y="760.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">0..*</text>
+<rect x="333.0" y="525.0" width="44" height="20" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="355.0" y="540.005" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">1</text>
+<text x="35" y="1220.505" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="start" fill="#555">PK primaria · FK foránea · UK única · nullable opcional · flecha FK → PK · multiplicidades junto a cada extremo</text>
+</svg>

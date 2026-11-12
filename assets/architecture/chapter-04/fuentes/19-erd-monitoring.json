@@ -1,0 +1,165 @@
+{
+  "id": "19-erd-monitoring",
+  "section": "4.8.1",
+  "title": "FríoTrack · ERD · Monitoring & Telemetry · Core",
+  "subtitle": "Esquema objetivo PostgreSQL · columnas completas y claves de referencia; no se acredita despliegue de base de datos.",
+  "width": 2100,
+  "height": 1240,
+  "legend": "PK primaria · FK foránea · UK única · nullable opcional · flecha FK → PK · multiplicidades junto a cada extremo",
+  "notes": [
+    "Proyección relacional objetivo PostgreSQL: no constituye migración ejecutada ni el almacén JSON actual.",
+    "Las claves de otros contextos son referencias por ID. Una FK de persistencia no define propiedad de un agregado."
+  ],
+  "nodes": [
+    {
+      "id": "ShipmentMonitoring",
+      "kind": "table",
+      "label": "shipment_monitorings",
+      "x": 60,
+      "y": 170,
+      "w": 590,
+      "h": 354,
+      "stereotype": "Monitoring & Telemetry",
+      "attributes": [
+        "id: uuid [PK]",
+        "shipment_id: uuid [FK UK]",
+        "min_temp_c: numeric(5,2)",
+        "max_temp_c: numeric(5,2)",
+        "min_humidity_pct: numeric(5,2)",
+        "max_humidity_pct: numeric(5,2)",
+        "tolerance_minutes: integer",
+        "max_silence_minutes: integer",
+        "signal_status: varchar(16)",
+        "last_reading_at: timestamptz [nullable]",
+        "started_at: timestamptz",
+        "stopped_at: timestamptz [nullable]"
+      ]
+    },
+    {
+      "id": "SensorReading",
+      "kind": "table",
+      "label": "sensor_readings",
+      "x": 880,
+      "y": 170,
+      "w": 530,
+      "h": 234,
+      "stereotype": "Monitoring & Telemetry",
+      "attributes": [
+        "id: bigint [PK]",
+        "monitoring_id: uuid [FK]",
+        "temperature_c: numeric(5,2)",
+        "humidity_pct: numeric(5,2)",
+        "within_both_ranges: boolean",
+        "recorded_at: timestamptz"
+      ]
+    },
+    {
+      "id": "PositionReport",
+      "kind": "table",
+      "label": "position_reports",
+      "x": 880,
+      "y": 660,
+      "w": 530,
+      "h": 214,
+      "stereotype": "Monitoring & Telemetry",
+      "attributes": [
+        "id: bigint [PK]",
+        "monitoring_id: uuid [FK]",
+        "latitude: numeric(9,6)",
+        "longitude: numeric(9,6)",
+        "recorded_at: timestamptz"
+      ]
+    },
+    {
+      "id": "Shipment",
+      "kind": "external",
+      "label": "shipments",
+      "x": 1640,
+      "y": 170,
+      "w": 390,
+      "h": 145,
+      "stereotype": "Tabla de otro contexto",
+      "body": [
+        "Referencia externa · Shipment",
+        "PK id: uuid"
+      ]
+    },
+    {
+      "id": "PanelNote",
+      "kind": "note",
+      "label": "Reglas y límites",
+      "x": 60,
+      "y": 1030,
+      "w": 1980,
+      "h": 138,
+      "body": [
+        "Snapshot de los cuatro límites y tolerancia por monitoreo. Datos pasados conservan el rango original.",
+        "Una posición y una lectura pertenecen a un monitoreo. FK shipment_id es única: máximo un monitoreo por envío."
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "ShipmentMonitoring",
+      "target": "Shipment",
+      "label": "shipment_id → id",
+      "sourcePort": "top",
+      "targetPort": "top",
+      "points": [
+        [
+          355,
+          125
+        ],
+        [
+          1835,
+          125
+        ]
+      ],
+      "endArrow": "open",
+      "sourceLabel": "0..1",
+      "targetLabel": "1"
+    },
+    {
+      "source": "SensorReading",
+      "target": "ShipmentMonitoring",
+      "label": "monitoring_id → id",
+      "sourcePort": "left",
+      "targetPort": "right",
+      "points": [],
+      "endArrow": "open",
+      "sourceLabel": "0..*",
+      "targetLabel": "1",
+      "targetOffset": 0.4,
+      "labelX": 765,
+      "labelY": 265
+    },
+    {
+      "source": "PositionReport",
+      "target": "ShipmentMonitoring",
+      "label": "monitoring_id → id",
+      "sourcePort": "left",
+      "targetPort": "bottom",
+      "points": [
+        [
+          780,
+          767.0
+        ],
+        [
+          780,
+          760
+        ],
+        [
+          360,
+          760
+        ],
+        [
+          355.0,
+          760
+        ]
+      ],
+      "endArrow": "open",
+      "sourceLabel": "0..*",
+      "targetLabel": "1"
+    }
+  ]
+}

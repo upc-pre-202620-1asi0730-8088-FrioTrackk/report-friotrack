@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1115" viewBox="0 0 1800 1115">
+<defs><pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#dfdfdf" stroke-width=".7"/></pattern><filter id="paper-shadow" x="-10%" y="-10%" width="125%" height="130%"><feDropShadow dx="1" dy="3" stdDeviation="2" flood-color="#000000" flood-opacity=".12"/></filter>
+<marker id="arrow" viewBox="0 0 12 10" refX="11" refY="5" markerWidth="10" markerHeight="9" orient="auto-start-reverse"><path d="M0 0 L12 5 L0 10Z" fill="#444"/></marker><marker id="open" viewBox="0 0 12 10" refX="11" refY="5" markerWidth="10" markerHeight="9" orient="auto-start-reverse"><path d="M0 0 L12 5 L0 10" fill="none" stroke="#333"/></marker><marker id="diamond" viewBox="0 0 12 10" refX="1" refY="5" markerWidth="12" markerHeight="10" orient="auto-start-reverse"><path d="M0 5 L6 0 L12 5 L6 10Z" fill="#222"/></marker><marker id="triangle" viewBox="0 0 12 10" refX="11" refY="5" markerWidth="12" markerHeight="10" orient="auto-start-reverse"><path d="M0 0 L12 5 L0 10Z" fill="white" stroke="#333"/></marker></defs>
+<rect width="100%" height="100%" fill="white"/>
+<text x="35" y="48.78" font-family="Arial,sans-serif" font-size="28" font-weight="700" text-anchor="start" fill="#222">4.6.2 · FríoTrack · C4 nivel 1 · Contexto</text>
+<text x="35" y="84.775" font-family="Arial,sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#555">Un sistema de software · Personas, servicios externos y relaciones previstas identificadas</text>
+<ellipse cx="220.0" cy="209.625" rx="59.625" ry="59.625" fill="#084b83" stroke="none"/>
+<rect x="50" y="267.25" width="340" height="147.75" rx="30" fill="#084b83" stroke="#084b83" stroke-width="1"/>
+<text x="220.0" y="314.455" font-family="Arial,sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="white">Visitante</text>
+<text x="220.0" y="338.07499999999993" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="white">[Persona]</text>
+<text x="220.0" y="374.2025" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">Conoce la propuesta y elige cómo</text>
+<text x="220.0" y="396.3425" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">acceder.</text>
+<ellipse cx="220.0" cy="495.25" rx="65.25" ry="65.25" fill="#084b83" stroke="none"/>
+<rect x="50" y="558.5" width="340" height="161.5" rx="30" fill="#084b83" stroke="#084b83" stroke-width="1"/>
+<text x="220.0" y="612.5799999999999" font-family="Arial,sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="white">Coordinador Logístico</text>
+<text x="220.0" y="636.1999999999999" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="white">[Persona]</text>
+<text x="220.0" y="675.765" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">Programa envíos, administra</text>
+<text x="220.0" y="697.905" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">recursos y atiende alertas.</text>
+<ellipse cx="220.0" cy="795.25" rx="65.25" ry="65.25" fill="#084b83" stroke="none"/>
+<rect x="50" y="858.5" width="340" height="161.5" rx="30" fill="#084b83" stroke="#084b83" stroke-width="1"/>
+<text x="220.0" y="912.5799999999999" font-family="Arial,sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="white">Cliente de Carga</text>
+<text x="220.0" y="936.1999999999999" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="white">[Persona]</text>
+<text x="220.0" y="975.765" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">Consulta únicamente sus envíos</text>
+<text x="220.0" y="997.905" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">asignados y evidencia térmica.</text>
+<rect x="650" y="380" width="450" height="300" rx="0" fill="#1168b9" stroke="#1168b9" stroke-width="1"/>
+<text x="875.0" y="492.26000000000005" font-family="Arial,sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="white">FríoTrack</text>
+<text x="875.0" y="515.88" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="white">[Sistema de software]</text>
+<text x="875.0" y="581.035" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">Gestión de transporte refrigerado, consulta térmica</text>
+<text x="875.0" y="603.175" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">y trazabilidad.</text>
+<text x="875.0" y="625.3149999999999" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">Control de identidad, permisos y operaciones.</text>
+<rect x="1330" y="150" width="400" height="170" rx="0" fill="#888888" stroke="#888888" stroke-width="1"/>
+<text x="1530.0" y="208.32999999999998" font-family="Arial,sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="white">OpenStreetMap</text>
+<text x="1530.0" y="231.95" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="white">[Sistema externo · actual]</text>
+<text x="1530.0" y="270.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">Proporciona teselas de los mapas a la</text>
+<text x="1530.0" y="292.28" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">aplicación.</text>
+<rect x="1330" y="450" width="400" height="170" rx="0" fill="#888888" stroke="#888888" stroke-width="1"/>
+<text x="1530.0" y="508.33" font-family="Arial,sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="white">Dispositivos de telemetría</text>
+<text x="1530.0" y="531.9499999999999" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="white">[Sistema externo · previsto]</text>
+<text x="1530.0" y="570.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">Lecturas de temperatura, humedad y</text>
+<text x="1530.0" y="592.28" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">posición con marca de tiempo.</text>
+<rect x="1330" y="760" width="400" height="170" rx="0" fill="#888888" stroke="#888888" stroke-width="1"/>
+<text x="1530.0" y="818.3299999999999" font-family="Arial,sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="white">Servicio de correo</text>
+<text x="1530.0" y="841.9499999999999" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="white">[Sistema externo · previsto]</text>
+<text x="1530.0" y="880.14" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">Confirmación, recuperación y avisos</text>
+<text x="1530.0" y="902.28" font-family="Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white">transaccionales. Sin proveedor fijado.</text>
+<polyline points="390,282.5 520,227 520,330 875,330 875.0,380" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="518.5" y="293" width="193.0" height="23.22" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="615.0" y="310.0" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="#222">Consulta propuesta · HTTPS</text>
+<polyline points="390,575.0 520,520 520,480 650,479.9" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="489.5" y="441" width="61.0" height="57.66" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="520.0" y="458.0" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="#222">Opera</text>
+<text x="520.0" y="475.22" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="#222">envíos ·</text>
+<text x="520.0" y="492.44000000000005" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="#222">HTTPS</text>
+<polyline points="390,875.0 520,820 520,620 650,620.0" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="456.0" y="711" width="138.0" height="40.44" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="525.0" y="728.0" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="#222">Consulta sus envíos</text>
+<text x="525.0" y="745.22" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="#222">· HTTPS</text>
+<polyline points="1100,455.0 1210,455 1210,235 1330,235.0" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="1153.5" y="306" width="113.0" height="40.44" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="1210.0" y="323.0" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="#222">Solicita teselas ·</text>
+<text x="1210.0" y="340.22" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="#222">HTTPS</text>
+<polyline points="1330,535.0 1100,535.0" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" stroke-dasharray="7 4" marker-end="url(#arrow)"/>
+<rect x="1133.0" y="496" width="164.0" height="40.44" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="1215.0" y="513.0" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="#222">Lecturas HTTPS / JSON</text>
+<text x="1215.0" y="530.22" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="#222">· previsto</text>
+<polyline points="1100,620.0 1210,620 1210,845 1330,845.0" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" stroke-dasharray="7 4" marker-end="url(#arrow)"/>
+<rect x="1157.0" y="714" width="116.0" height="40.44" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="1215.0" y="731.0" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="#222">Solicita correos ·</text>
+<text x="1215.0" y="748.22" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="#222">previsto</text>
+<text x="35" y="1095.505" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="start" fill="#555">Azul oscuro: persona · Azul: sistema propio · Gris: sistema externo · Línea discontinua: integración prevista</text>
+</svg>

@@ -1,0 +1,566 @@
+{
+  "id": "05-es-fleet",
+  "section": "4.6.1",
+  "title": "FríoTrack · BC2 Fleet and Resource Management",
+  "subtitle": "Diseño objetivo · Los eventos, la ingesta física y las políticas temporales no se presentan como implementados en TB1.",
+  "width": 2320,
+  "height": 1675,
+  "legend": "Actor amarillo claro · Comando azul · Agregado amarillo · Evento naranja · Política violeta · Vista verde · Contrato externo rosa",
+  "notes": [],
+  "nodes": [
+    {
+      "id": "context",
+      "kind": "boundary",
+      "label": "BC2 · Fleet & Resource Management · Apoyo",
+      "x": 35,
+      "y": 115,
+      "w": 2250,
+      "h": 1295
+    },
+    {
+      "id": "r0n0",
+      "kind": "actor",
+      "label": "Coordinador logístico",
+      "body": [
+        "Actor autorizado por la API"
+      ],
+      "x": 65,
+      "y": 175,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r0n1",
+      "kind": "command",
+      "label": "RegisterVehicle",
+      "body": [
+        "Placa, capacidad y condición"
+      ],
+      "x": 385,
+      "y": 175,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r0n2",
+      "kind": "aggregate",
+      "label": "Vehicle",
+      "body": [
+        "Agregado raíz del contexto"
+      ],
+      "x": 705,
+      "y": 175,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r0n3",
+      "kind": "event",
+      "label": "VehicleRegistered",
+      "body": [
+        "Unidad identificada"
+      ],
+      "x": 1025,
+      "y": 175,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r0n4",
+      "kind": "readmodel",
+      "label": "Catálogo de unidades",
+      "body": [
+        "Estado y capacidad"
+      ],
+      "x": 1345,
+      "y": 175,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r1n0",
+      "kind": "actor",
+      "label": "Coordinador logístico",
+      "body": [
+        "Actor autorizado por la API"
+      ],
+      "x": 65,
+      "y": 420,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r1n1",
+      "kind": "command",
+      "label": "RegisterDriver",
+      "body": [
+        "Identidad y licencia"
+      ],
+      "x": 385,
+      "y": 420,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r1n2",
+      "kind": "aggregate",
+      "label": "Driver",
+      "body": [
+        "Agregado raíz del contexto"
+      ],
+      "x": 705,
+      "y": 420,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r1n3",
+      "kind": "event",
+      "label": "DriverRegistered",
+      "body": [
+        "Conductor identificado"
+      ],
+      "x": 1025,
+      "y": 420,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r1n4",
+      "kind": "readmodel",
+      "label": "Directorio de conductores",
+      "body": [
+        "Datos y disponibilidad"
+      ],
+      "x": 1345,
+      "y": 420,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r2n0",
+      "kind": "contract",
+      "label": "ScheduleShipment",
+      "body": [
+        "Solicitud coordinada desde BC3",
+        "Antes de aceptar programación"
+      ],
+      "x": 65,
+      "y": 665,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r2n1",
+      "kind": "command",
+      "label": "ReserveResources",
+      "body": [
+        "Unidad, conductor e intervalo"
+      ],
+      "x": 385,
+      "y": 665,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r2n2",
+      "kind": "aggregate",
+      "label": "FleetAllocation",
+      "body": [
+        "Agregado raíz del contexto"
+      ],
+      "x": 705,
+      "y": 665,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r2n3",
+      "kind": "event",
+      "label": "ResourcesReserved",
+      "body": [
+        "Reserva conjunta confirmada"
+      ],
+      "x": 1025,
+      "y": 665,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r2n4",
+      "kind": "contract",
+      "label": "ConfirmSchedule",
+      "body": [
+        "Regresa al caso de uso BC3",
+        "Si falla: ResourcesUnavailable"
+      ],
+      "x": 1345,
+      "y": 665,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r3n0",
+      "kind": "actor",
+      "label": "Coordinador logístico",
+      "body": [
+        "Actor autorizado por la API"
+      ],
+      "x": 65,
+      "y": 910,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r3n1",
+      "kind": "command",
+      "label": "AssignSensor",
+      "body": [
+        "Unidad y dispositivo"
+      ],
+      "x": 385,
+      "y": 910,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r3n2",
+      "kind": "aggregate",
+      "label": "Sensor",
+      "body": [
+        "Raíz independiente; asigna vehicleId por referencia."
+      ],
+      "x": 705,
+      "y": 910,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r3n3",
+      "kind": "event",
+      "label": "SensorAssigned",
+      "body": [
+        "Asociación identificada"
+      ],
+      "x": 1025,
+      "y": 910,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r3n4",
+      "kind": "readmodel",
+      "label": "Inventario de dispositivos",
+      "body": [
+        "Asignación a unidad"
+      ],
+      "x": 1345,
+      "y": 910,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r4n0",
+      "kind": "contract",
+      "label": "Delivered / Cancelled",
+      "body": [
+        "ShipmentDelivered o",
+        "ShipmentCancelled de BC3"
+      ],
+      "x": 65,
+      "y": 1155,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r4n1",
+      "kind": "policy",
+      "label": "Al cerrar el envío",
+      "body": [
+        "Liberar reserva existente"
+      ],
+      "x": 385,
+      "y": 1155,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r4n2",
+      "kind": "command",
+      "label": "ReleaseResources",
+      "body": [
+        "Referencia de reserva"
+      ],
+      "x": 705,
+      "y": 1155,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r4n3",
+      "kind": "aggregate",
+      "label": "FleetAllocation",
+      "body": [
+        "Agregado raíz del contexto"
+      ],
+      "x": 1025,
+      "y": 1155,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r4n4",
+      "kind": "event",
+      "label": "ResourcesReleased",
+      "body": [
+        "Unidad y conductor libres"
+      ],
+      "x": 1345,
+      "y": 1155,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r4n5",
+      "kind": "readmodel",
+      "label": "Disponibilidad de recursos",
+      "body": [
+        "Intervalos sin reserva activa"
+      ],
+      "x": 1665,
+      "y": 1155,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "rule0",
+      "kind": "note",
+      "label": "Regla de reserva",
+      "body": [
+        "No hay solapamiento de vehículo ni conductor en el intervalo solicitado.",
+        "La reserva conjunta y la programación requieren una estrategia consistente de transacción."
+      ],
+      "x": 65,
+      "y": 1415,
+      "w": 700,
+      "h": 180
+    },
+    {
+      "id": "rule1",
+      "kind": "note",
+      "label": "Regla de catálogo",
+      "body": [
+        "Placa y licencia únicas; capacidad positiva; recursos habilitados.",
+        "Sensor no se asigna simultáneamente a varias unidades."
+      ],
+      "x": 810,
+      "y": 1415,
+      "w": 700,
+      "h": 180
+    },
+    {
+      "id": "rule2",
+      "kind": "note",
+      "label": "Límite de agregados",
+      "body": [
+        "Vehicle, Driver, Sensor y FleetAllocation son raíces independientes.",
+        "La asignación conserva vehicleId; Sensor puede existir sin vehículo."
+      ],
+      "x": 1555,
+      "y": 1415,
+      "w": 700,
+      "h": 180
+    }
+  ],
+  "edges": [
+    {
+      "source": "r0n0",
+      "target": "r0n1",
+      "label": "ejecuta",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r0n1",
+      "target": "r0n2",
+      "label": "valida",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r0n2",
+      "target": "r0n3",
+      "label": "emite",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r0n3",
+      "target": "r0n4",
+      "label": "informa",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r1n0",
+      "target": "r1n1",
+      "label": "ejecuta",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r1n1",
+      "target": "r1n2",
+      "label": "valida",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r1n2",
+      "target": "r1n3",
+      "label": "emite",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r1n3",
+      "target": "r1n4",
+      "label": "informa",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r2n0",
+      "target": "r2n1",
+      "label": "ejecuta",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": true,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r2n1",
+      "target": "r2n2",
+      "label": "valida",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r2n2",
+      "target": "r2n3",
+      "label": "emite",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r2n3",
+      "target": "r2n4",
+      "label": "coordina",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": true,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r3n0",
+      "target": "r3n1",
+      "label": "ejecuta",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r3n1",
+      "target": "r3n2",
+      "label": "valida",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r3n2",
+      "target": "r3n3",
+      "label": "emite",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r3n3",
+      "target": "r3n4",
+      "label": "informa",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r4n0",
+      "target": "r4n1",
+      "label": "activa",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": true,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r4n1",
+      "target": "r4n2",
+      "label": "ejecuta",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r4n2",
+      "target": "r4n3",
+      "label": "valida",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r4n3",
+      "target": "r4n4",
+      "label": "emite",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r4n4",
+      "target": "r4n5",
+      "label": "informa",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    }
+  ]
+}

@@ -1,0 +1,654 @@
+{
+  "id": "02-es-shipment",
+  "section": "4.6.1",
+  "title": "FríoTrack · BC3 Shipment Management",
+  "subtitle": "Diseño objetivo · Los eventos, la ingesta física y las políticas temporales no se presentan como implementados en TB1.",
+  "width": 2320,
+  "height": 1675,
+  "legend": "Actor amarillo claro · Comando azul · Agregado amarillo · Evento naranja · Política violeta · Vista verde · Contrato externo rosa",
+  "notes": [
+    "La secuencia de reserva precede a la aceptación de programación; no modela una reserva eventual después de ShipmentScheduled."
+  ],
+  "nodes": [
+    {
+      "id": "context",
+      "kind": "boundary",
+      "label": "BC3 · Shipment Management · Core",
+      "x": 35,
+      "y": 115,
+      "w": 2250,
+      "h": 1295
+    },
+    {
+      "id": "r0n0",
+      "kind": "actor",
+      "label": "Coordinador logístico",
+      "body": [
+        "Actor autorizado por la API"
+      ],
+      "x": 65,
+      "y": 175,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r0n1",
+      "kind": "command",
+      "label": "CreateShipmentDraft",
+      "body": [
+        "Carga, cliente, ruta, fechas",
+        "Cuatro límites y tolerancia"
+      ],
+      "x": 385,
+      "y": 175,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r0n2",
+      "kind": "aggregate",
+      "label": "Shipment",
+      "body": [
+        "Agregado raíz del contexto"
+      ],
+      "x": 705,
+      "y": 175,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r0n3",
+      "kind": "event",
+      "label": "ShipmentDrafted",
+      "body": [
+        "Estado DRAFT sin reserva"
+      ],
+      "x": 1025,
+      "y": 175,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r0n4",
+      "kind": "readmodel",
+      "label": "Planificación de envío",
+      "body": [
+        "Borrador y datos editables"
+      ],
+      "x": 1345,
+      "y": 175,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r1n0",
+      "kind": "actor",
+      "label": "Coordinador logístico",
+      "body": [
+        "Actor autorizado por la API"
+      ],
+      "x": 65,
+      "y": 420,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r1n1",
+      "kind": "command",
+      "label": "ScheduleShipment",
+      "body": [
+        "Solicita programar el envío"
+      ],
+      "x": 385,
+      "y": 420,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r1n2",
+      "kind": "contract",
+      "label": "Reserva en Fleet",
+      "body": [
+        "ReserveResources →",
+        "ResourcesReserved / Unavailable"
+      ],
+      "x": 705,
+      "y": 420,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r1n3",
+      "kind": "command",
+      "label": "ConfirmSchedule",
+      "body": [
+        "Solo con reserva confirmada"
+      ],
+      "x": 1025,
+      "y": 420,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r1n4",
+      "kind": "aggregate",
+      "label": "Shipment",
+      "body": [
+        "Agregado raíz del contexto"
+      ],
+      "x": 1345,
+      "y": 420,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r1n5",
+      "kind": "event",
+      "label": "ShipmentScheduled",
+      "body": [
+        "Estado SCHEDULED"
+      ],
+      "x": 1665,
+      "y": 420,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r1n6",
+      "kind": "readmodel",
+      "label": "Resumen del envío",
+      "body": [
+        "Unidad y conductor reservados"
+      ],
+      "x": 1985,
+      "y": 420,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r2n0",
+      "kind": "actor",
+      "label": "Coordinador logístico",
+      "body": [
+        "Actor autorizado por la API"
+      ],
+      "x": 65,
+      "y": 665,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r2n1",
+      "kind": "command",
+      "label": "StartTransit",
+      "body": [
+        "Solo SCHEDULED"
+      ],
+      "x": 385,
+      "y": 665,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r2n2",
+      "kind": "aggregate",
+      "label": "Shipment",
+      "body": [
+        "Agregado raíz del contexto"
+      ],
+      "x": 705,
+      "y": 665,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r2n3",
+      "kind": "event",
+      "label": "TransitStarted",
+      "body": [
+        "Estado IN_TRANSIT"
+      ],
+      "x": 1025,
+      "y": 665,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r2n4",
+      "kind": "policy",
+      "label": "Al iniciar tránsito",
+      "body": [
+        "Solicitar apertura de monitoreo"
+      ],
+      "x": 1345,
+      "y": 665,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r2n5",
+      "kind": "contract",
+      "label": "StartMonitoring",
+      "body": [
+        "Destino BC4 Monitoring"
+      ],
+      "x": 1665,
+      "y": 665,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r3n0",
+      "kind": "actor",
+      "label": "Coordinador logístico",
+      "body": [
+        "Actor autorizado por la API"
+      ],
+      "x": 65,
+      "y": 910,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r3n1",
+      "kind": "command",
+      "label": "DeliverShipment",
+      "body": [
+        "Solo IN_TRANSIT"
+      ],
+      "x": 385,
+      "y": 910,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r3n2",
+      "kind": "aggregate",
+      "label": "Shipment",
+      "body": [
+        "Agregado raíz del contexto"
+      ],
+      "x": 705,
+      "y": 910,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r3n3",
+      "kind": "event",
+      "label": "ShipmentDelivered",
+      "body": [
+        "Estado DELIVERED"
+      ],
+      "x": 1025,
+      "y": 910,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r3n4",
+      "kind": "policy",
+      "label": "Al confirmar entrega",
+      "body": [
+        "Liberar recursos y detener",
+        "monitoreo; habilitar informe"
+      ],
+      "x": 1345,
+      "y": 910,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r3n5",
+      "kind": "contract",
+      "label": "Release / Stop",
+      "body": [
+        "ReleaseResources en BC2",
+        "StopMonitoring en BC4"
+      ],
+      "x": 1665,
+      "y": 910,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r4n0",
+      "kind": "actor",
+      "label": "Coordinador logístico",
+      "body": [
+        "Actor autorizado por la API"
+      ],
+      "x": 65,
+      "y": 1155,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r4n1",
+      "kind": "command",
+      "label": "CancelShipment",
+      "body": [
+        "DRAFT o SCHEDULED",
+        "Motivo obligatorio"
+      ],
+      "x": 385,
+      "y": 1155,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r4n2",
+      "kind": "aggregate",
+      "label": "Shipment",
+      "body": [
+        "Agregado raíz del contexto"
+      ],
+      "x": 705,
+      "y": 1155,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r4n3",
+      "kind": "event",
+      "label": "ShipmentCancelled",
+      "body": [
+        "Estado CANCELLED"
+      ],
+      "x": 1025,
+      "y": 1155,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r4n4",
+      "kind": "policy",
+      "label": "Al cancelar antes de salir",
+      "body": [
+        "Liberar la reserva existente"
+      ],
+      "x": 1345,
+      "y": 1155,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "r4n5",
+      "kind": "contract",
+      "label": "ReleaseResources",
+      "body": [
+        "Destino BC2 Fleet"
+      ],
+      "x": 1665,
+      "y": 1155,
+      "w": 250,
+      "h": 155
+    },
+    {
+      "id": "rule0",
+      "kind": "note",
+      "label": "Regla de programación",
+      "body": [
+        "La reserva se valida antes de emitir ShipmentScheduled.",
+        "El caso de uso evita programación o reserva parcial; rechazo conserva el estado previo."
+      ],
+      "x": 65,
+      "y": 1415,
+      "w": 700,
+      "h": 180
+    },
+    {
+      "id": "rule1",
+      "kind": "note",
+      "label": "Regla ambiental y de estados",
+      "body": [
+        "Mínimo < máximo en temperatura y humedad; capacidad y fechas válidas.",
+        "No se cancela IN_TRANSIT ni DELIVERED; entregar registra responsable e instante."
+      ],
+      "x": 810,
+      "y": 1415,
+      "w": 700,
+      "h": 180
+    },
+    {
+      "id": "rule2",
+      "kind": "note",
+      "label": "Alcance de diseño",
+      "body": [
+        "DRAFT persistido y coordinación tipada pertenecen al diseño objetivo.",
+        "La entrega habilita el informe; generarlo exige una solicitud posterior del usuario."
+      ],
+      "x": 1555,
+      "y": 1415,
+      "w": 700,
+      "h": 180
+    }
+  ],
+  "edges": [
+    {
+      "source": "r0n0",
+      "target": "r0n1",
+      "label": "ejecuta",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r0n1",
+      "target": "r0n2",
+      "label": "valida",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r0n2",
+      "target": "r0n3",
+      "label": "emite",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r0n3",
+      "target": "r0n4",
+      "label": "informa",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r1n0",
+      "target": "r1n1",
+      "label": "ejecuta",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r1n1",
+      "target": "r1n2",
+      "label": "coordina",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": true,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r1n2",
+      "target": "r1n3",
+      "label": "ejecuta",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": true,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r1n3",
+      "target": "r1n4",
+      "label": "valida",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r1n4",
+      "target": "r1n5",
+      "label": "emite",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r1n5",
+      "target": "r1n6",
+      "label": "informa",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r2n0",
+      "target": "r2n1",
+      "label": "ejecuta",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r2n1",
+      "target": "r2n2",
+      "label": "valida",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r2n2",
+      "target": "r2n3",
+      "label": "emite",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r2n3",
+      "target": "r2n4",
+      "label": "activa",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r2n4",
+      "target": "r2n5",
+      "label": "coordina",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": true,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r3n0",
+      "target": "r3n1",
+      "label": "ejecuta",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r3n1",
+      "target": "r3n2",
+      "label": "valida",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r3n2",
+      "target": "r3n3",
+      "label": "emite",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r3n3",
+      "target": "r3n4",
+      "label": "activa",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r3n4",
+      "target": "r3n5",
+      "label": "coordina",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": true,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r4n0",
+      "target": "r4n1",
+      "label": "ejecuta",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r4n1",
+      "target": "r4n2",
+      "label": "valida",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r4n2",
+      "target": "r4n3",
+      "label": "emite",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r4n3",
+      "target": "r4n4",
+      "label": "activa",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": false,
+      "endArrow": "classic"
+    },
+    {
+      "source": "r4n4",
+      "target": "r4n5",
+      "label": "coordina",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "dashed": true,
+      "endArrow": "classic"
+    }
+  ]
+}

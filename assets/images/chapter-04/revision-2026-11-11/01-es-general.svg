@@ -1,0 +1,450 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3500" height="1920" viewBox="0 0 3500 1920">
+<defs><pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#dfdfdf" stroke-width=".7"/></pattern><filter id="paper-shadow" x="-10%" y="-10%" width="125%" height="130%"><feDropShadow dx="1" dy="3" stdDeviation="2" flood-color="#000000" flood-opacity=".12"/></filter>
+<marker id="arrow" viewBox="0 0 12 10" refX="11" refY="5" markerWidth="10" markerHeight="9" orient="auto-start-reverse"><path d="M0 0 L12 5 L0 10Z" fill="#444"/></marker><marker id="open" viewBox="0 0 12 10" refX="11" refY="5" markerWidth="10" markerHeight="9" orient="auto-start-reverse"><path d="M0 0 L12 5 L0 10" fill="none" stroke="#333"/></marker><marker id="diamond" viewBox="0 0 12 10" refX="1" refY="5" markerWidth="12" markerHeight="10" orient="auto-start-reverse"><path d="M0 5 L6 0 L12 5 L6 10Z" fill="#222"/></marker><marker id="triangle" viewBox="0 0 12 10" refX="11" refY="5" markerWidth="12" markerHeight="10" orient="auto-start-reverse"><path d="M0 0 L12 5 L0 10Z" fill="white" stroke="#333"/></marker></defs>
+<rect width="100%" height="100%" fill="#f3f3f3"/>
+<rect width="100%" height="100%" fill="url(#grid)"/>
+<text x="1750.0" y="51.32" font-family="Arial,sans-serif" font-size="32" font-weight="400" text-anchor="middle" fill="#222">FríoTrack · Design-Level EventStorming</text>
+<polyline points="447.5,525 447.5,785" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" stroke-dasharray="7 4" marker-end="url(#arrow)"/>
+<rect x="403.5" y="630.0" width="88.0" height="21.990000000000002" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="447.5" y="646.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">I01 / I10 / I13</text>
+<polyline points="602.5,785 602.5,525" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" stroke-dasharray="7 4" marker-end="url(#arrow)"/>
+<rect x="588.5" y="630.0" width="28.0" height="21.990000000000002" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="602.5" y="646.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">I02</text>
+<polyline points="1610,350.0 1890,350.0" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" stroke-dasharray="7 4" marker-end="url(#arrow)"/>
+<rect x="1721.0" y="325.0" width="58.0" height="21.990000000000002" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="1750.0" y="341.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">I03 / I11</text>
+<polyline points="2742.5,525 2742.5,785" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" stroke-dasharray="7 4" marker-end="url(#arrow)"/>
+<rect x="2683.5" y="630.0" width="118.0" height="21.990000000000002" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="2742.5" y="646.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">I05 / I06 / I08 / I09</text>
+<polyline points="1610,350.0 1760,350.0 1760,960.0 1890,960.0" fill="none" stroke="#444" stroke-width="1.5" stroke-linejoin="round" stroke-dasharray="7 4" marker-end="url(#arrow)"/>
+<rect x="1746.0" y="630.0" width="28.0" height="21.990000000000002" rx="0" fill="white" stroke="none" stroke-width="1"/>
+<text x="1760.0" y="646.0" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">I12</text>
+<rect x="60" y="175" width="1550" height="350" rx="90" fill="none" stroke="#4b4b4b" stroke-width="1.1"/>
+<text x="835.0" y="159.28" font-family="Arial,sans-serif" font-size="28" font-weight="400" text-anchor="middle" fill="#222">Shipment Management</text>
+<rect x="115.0" y="228" width="106.36363636363636" height="106.36363636363636" rx="0" fill="#fff9a4" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="168.1818181818182" y="278.1918181818182" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Coordinador</text>
+<text x="168.1818181818182" y="294.1818181818182" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">logístico</text>
+<rect x="248.36363636363637" y="228" width="106.36363636363636" height="106.36363636363636" rx="0" fill="#9fe5f9" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="301.54545454545456" y="278.1918181818182" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Create</text>
+<text x="301.54545454545456" y="294.1818181818182" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Shipment Draft</text>
+<rect x="381.72727272727275" y="228" width="106.36363636363636" height="106.36363636363636" rx="0" fill="#ffe86b" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="434.90909090909093" y="278.1918181818182" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Shipment</text>
+<text x="434.90909090909093" y="294.1818181818182" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Aggregate</text>
+<rect x="515.0909090909091" y="228" width="106.36363636363636" height="106.36363636363636" rx="0" fill="#ffb373" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="568.2727272727273" y="278.1918181818182" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Shipment</text>
+<text x="568.2727272727273" y="294.1818181818182" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Drafted</text>
+<rect x="648.4545454545455" y="228" width="106.36363636363636" height="106.36363636363636" rx="0" fill="#68d990" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="701.6363636363636" y="278.1918181818182" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Planificación</text>
+<text x="701.6363636363636" y="294.1818181818182" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">de envío</text>
+<rect x="781.8181818181819" y="228" width="106.36363636363636" height="106.36363636363636" rx="0" fill="#9fe5f9" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="835.0" y="278.1918181818182" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Schedule</text>
+<text x="835.0" y="294.1818181818182" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Shipment</text>
+<rect x="915.1818181818182" y="228" width="106.36363636363636" height="106.36363636363636" rx="0" fill="#eda4df" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="968.3636363636364" y="278.1918181818182" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Reserva en</text>
+<text x="968.3636363636364" y="294.1818181818182" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Fleet</text>
+<rect x="1048.5454545454545" y="228" width="106.36363636363636" height="106.36363636363636" rx="0" fill="#9fe5f9" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1101.7272727272727" y="278.1918181818182" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Confirm</text>
+<text x="1101.7272727272727" y="294.1818181818182" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Schedule</text>
+<rect x="1181.909090909091" y="228" width="106.36363636363636" height="106.36363636363636" rx="0" fill="#ffb373" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1235.0909090909092" y="278.1918181818182" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Shipment</text>
+<text x="1235.0909090909092" y="294.1818181818182" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Scheduled</text>
+<rect x="1315.2727272727275" y="228" width="106.36363636363636" height="106.36363636363636" rx="0" fill="#68d990" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1368.4545454545457" y="278.1918181818182" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Resumen del</text>
+<text x="1368.4545454545457" y="294.1818181818182" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">envío</text>
+<rect x="1448.6363636363637" y="228" width="106.36363636363636" height="106.36363636363636" rx="0" fill="#9fe5f9" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1501.818181818182" y="286.1868181818182" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Start Transit</text>
+<rect x="115.0" y="380.6363636363636" width="106.36363636363636" height="106.36363636363636" rx="0" fill="#ffb373" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="168.1818181818182" y="438.8231818181818" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Transit Started</text>
+<rect x="248.36363636363637" y="380.6363636363636" width="106.36363636363636" height="106.36363636363636" rx="0" fill="#f29ce4" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="301.54545454545456" y="430.8281818181818" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Al iniciar</text>
+<text x="301.54545454545456" y="446.8181818181818" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">tránsito</text>
+<rect x="381.72727272727275" y="380.6363636363636" width="106.36363636363636" height="106.36363636363636" rx="0" fill="#eda4df" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="434.90909090909093" y="430.8281818181818" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Start</text>
+<text x="434.90909090909093" y="446.8181818181818" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Monitoring</text>
+<rect x="515.0909090909091" y="380.6363636363636" width="106.36363636363636" height="106.36363636363636" rx="0" fill="#9fe5f9" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="568.2727272727273" y="430.8281818181818" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Deliver</text>
+<text x="568.2727272727273" y="446.8181818181818" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Shipment</text>
+<rect x="648.4545454545455" y="380.6363636363636" width="106.36363636363636" height="106.36363636363636" rx="0" fill="#ffb373" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="701.6363636363636" y="430.8281818181818" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Shipment</text>
+<text x="701.6363636363636" y="446.8181818181818" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Delivered</text>
+<rect x="781.8181818181819" y="380.6363636363636" width="106.36363636363636" height="106.36363636363636" rx="0" fill="#f29ce4" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="835.0" y="430.8281818181818" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Al confirmar</text>
+<text x="835.0" y="446.8181818181818" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">entrega</text>
+<rect x="915.1818181818182" y="380.6363636363636" width="106.36363636363636" height="106.36363636363636" rx="0" fill="#eda4df" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="968.3636363636364" y="438.8231818181818" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Release / Stop</text>
+<rect x="1048.5454545454545" y="380.6363636363636" width="106.36363636363636" height="106.36363636363636" rx="0" fill="#9fe5f9" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1101.7272727272727" y="430.8281818181818" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Cancel</text>
+<text x="1101.7272727272727" y="446.8181818181818" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Shipment</text>
+<rect x="1181.909090909091" y="380.6363636363636" width="106.36363636363636" height="106.36363636363636" rx="0" fill="#ffb373" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1235.0909090909092" y="430.8281818181818" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Shipment</text>
+<text x="1235.0909090909092" y="446.8181818181818" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Cancelled</text>
+<rect x="1315.2727272727275" y="380.6363636363636" width="106.36363636363636" height="106.36363636363636" rx="0" fill="#f29ce4" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1368.4545454545457" y="430.8281818181818" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Al cancelar</text>
+<text x="1368.4545454545457" y="446.8181818181818" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">antes de salir</text>
+<rect x="1448.6363636363637" y="380.6363636363636" width="106.36363636363636" height="106.36363636363636" rx="0" fill="#eda4df" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1501.818181818182" y="430.8281818181818" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Release</text>
+<text x="1501.818181818182" y="446.8181818181818" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Resources</text>
+<rect x="1890" y="175" width="1550" height="350" rx="90" fill="none" stroke="#4b4b4b" stroke-width="1.1"/>
+<text x="2665.0" y="159.28" font-family="Arial,sans-serif" font-size="28" font-weight="400" text-anchor="middle" fill="#222">Monitoring &amp; Telemetry</text>
+<rect x="1945.0" y="228" width="70.8" height="70.8" rx="0" fill="#eda4df" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1980.4" y="260.40999999999997" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Transit</text>
+<text x="1980.4" y="276.4" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Started</text>
+<rect x="2042.8" y="228" width="70.8" height="70.8" rx="0" fill="#f29ce4" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="2078.2" y="260.40999999999997" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Al iniciar</text>
+<text x="2078.2" y="276.4" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">el envío</text>
+<rect x="2140.6" y="228" width="70.8" height="70.8" rx="0" fill="#9fe5f9" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="2176.0" y="260.87" font-family="Arial,sans-serif" font-size="11" font-weight="400" text-anchor="middle" fill="#222">Start</text>
+<text x="2176.0" y="274.4" font-family="Arial,sans-serif" font-size="11" font-weight="400" text-anchor="middle" fill="#222">Monitoring</text>
+<rect x="2238.4" y="228" width="70.8" height="70.8" rx="0" fill="#ffe86b" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="2273.8" y="254.105" font-family="Arial,sans-serif" font-size="11" font-weight="400" text-anchor="middle" fill="#222">Shipment</text>
+<text x="2273.8" y="267.635" font-family="Arial,sans-serif" font-size="11" font-weight="400" text-anchor="middle" fill="#222">Monitoring</text>
+<text x="2273.8" y="281.16499999999996" font-family="Arial,sans-serif" font-size="11" font-weight="400" text-anchor="middle" fill="#222">Aggregate</text>
+<rect x="2336.2" y="228" width="70.8" height="70.8" rx="0" fill="#ffb373" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="2371.6" y="260.87" font-family="Arial,sans-serif" font-size="11" font-weight="400" text-anchor="middle" fill="#222">Monitoring</text>
+<text x="2371.6" y="274.4" font-family="Arial,sans-serif" font-size="11" font-weight="400" text-anchor="middle" fill="#222">Started</text>
+<rect x="2434.0" y="228" width="70.8" height="70.8" rx="0" fill="#68d990" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="2469.4" y="260.87" font-family="Arial,sans-serif" font-size="11" font-weight="400" text-anchor="middle" fill="#222">Monitoreo</text>
+<text x="2469.4" y="274.4" font-family="Arial,sans-serif" font-size="11" font-weight="400" text-anchor="middle" fill="#222">del envío</text>
+<rect x="2531.8" y="228" width="70.8" height="70.8" rx="0" fill="#dddfe2" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="2567.2000000000003" y="252.415" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Mensaje</text>
+<text x="2567.2000000000003" y="268.405" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">del</text>
+<text x="2567.2000000000003" y="284.395" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">sensor</text>
+<rect x="2629.6" y="228" width="70.8" height="70.8" rx="0" fill="#9fe5f9" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="2665.0" y="260.40999999999997" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Record</text>
+<text x="2665.0" y="276.4" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Reading</text>
+<rect x="2727.4" y="228" width="70.8" height="70.8" rx="0" fill="#ffb373" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="2762.8" y="260.64" font-family="Arial,sans-serif" font-size="12" font-weight="400" text-anchor="middle" fill="#222">Reading</text>
+<text x="2762.8" y="275.4" font-family="Arial,sans-serif" font-size="12" font-weight="400" text-anchor="middle" fill="#222">Recorded</text>
+<rect x="2825.2" y="228" width="70.8" height="70.8" rx="0" fill="#f29ce4" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="2860.6" y="260.87" font-family="Arial,sans-serif" font-size="11" font-weight="400" text-anchor="middle" fill="#222">Al registrar</text>
+<text x="2860.6" y="274.4" font-family="Arial,sans-serif" font-size="11" font-weight="400" text-anchor="middle" fill="#222">una lectura</text>
+<rect x="2923.0" y="228" width="70.8" height="70.8" rx="0" fill="#9fe5f9" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="2958.4" y="260.40999999999997" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Evaluate</text>
+<text x="2958.4" y="276.4" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Reading</text>
+<rect x="3020.8" y="228" width="70.8" height="70.8" rx="0" fill="#ffb373" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="3056.2000000000003" y="252.415" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Reading</text>
+<text x="3056.2000000000003" y="268.405" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Out Of</text>
+<text x="3056.2000000000003" y="284.395" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Range</text>
+<rect x="3118.6" y="228" width="70.8" height="70.8" rx="0" fill="#f29ce4" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="3154.0" y="253.26" font-family="Arial,sans-serif" font-size="12" font-weight="400" text-anchor="middle" fill="#222">Al</text>
+<text x="3154.0" y="268.02" font-family="Arial,sans-serif" font-size="12" font-weight="400" text-anchor="middle" fill="#222">detectar</text>
+<text x="3154.0" y="282.78" font-family="Arial,sans-serif" font-size="12" font-weight="400" text-anchor="middle" fill="#222">excursión</text>
+<rect x="3216.3999999999996" y="228" width="70.8" height="70.8" rx="0" fill="#eda4df" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="3251.7999999999997" y="252.415" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Raise</text>
+<text x="3251.7999999999997" y="268.405" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Thermal</text>
+<text x="3251.7999999999997" y="284.395" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Alert</text>
+<rect x="3314.2" y="228" width="70.8" height="70.8" rx="0" fill="#68d990" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="3349.6" y="252.415" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Serie y</text>
+<text x="3349.6" y="268.405" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">estado</text>
+<text x="3349.6" y="284.395" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">térmico</text>
+<rect x="1993.9" y="416.2" width="70.8" height="70.8" rx="0" fill="#ffb373" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="2029.3000000000002" y="440.615" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Reading</text>
+<text x="2029.3000000000002" y="456.605" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Within</text>
+<text x="2029.3000000000002" y="472.595" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Range</text>
+<rect x="2091.7000000000003" y="416.2" width="70.8" height="70.8" rx="0" fill="#f29ce4" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="2127.1000000000004" y="449.53" font-family="Arial,sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">Al observar</text>
+<text x="2127.1000000000004" y="460.59999999999997" font-family="Arial,sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">recuperación</text>
+<rect x="2189.5" y="416.2" width="70.8" height="70.8" rx="0" fill="#eda4df" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="2224.9" y="440.615" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Resolve</text>
+<text x="2224.9" y="456.605" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Thermal</text>
+<text x="2224.9" y="472.595" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Alert</text>
+<rect x="2287.3" y="416.2" width="70.8" height="70.8" rx="0" fill="#68d990" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="2322.7000000000003" y="449.53" font-family="Arial,sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">Serie y</text>
+<text x="2322.7000000000003" y="460.59999999999997" font-family="Arial,sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">recuperación</text>
+<rect x="2385.1" y="416.2" width="70.8" height="70.8" rx="0" fill="#dddfe2" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="2420.5" y="448.61" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Reloj del</text>
+<text x="2420.5" y="464.6" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">sistema</text>
+<rect x="2482.9" y="416.2" width="70.8" height="70.8" rx="0" fill="#9fe5f9" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="2518.3" y="440.615" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Check</text>
+<text x="2518.3" y="456.605" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Signal</text>
+<text x="2518.3" y="472.595" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Silence</text>
+<rect x="2580.7" y="416.2" width="70.8" height="70.8" rx="0" fill="#ffb373" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="2616.1" y="448.61" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Signal</text>
+<text x="2616.1" y="464.6" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Lost</text>
+<rect x="2678.5" y="416.2" width="70.8" height="70.8" rx="0" fill="#f29ce4" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="2713.9" y="448.61" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Al perder</text>
+<text x="2713.9" y="464.6" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">señal</text>
+<rect x="2776.3" y="416.2" width="70.8" height="70.8" rx="0" fill="#eda4df" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="2811.7000000000003" y="441.46" font-family="Arial,sans-serif" font-size="12" font-weight="400" text-anchor="middle" fill="#222">Raise</text>
+<text x="2811.7000000000003" y="456.21999999999997" font-family="Arial,sans-serif" font-size="12" font-weight="400" text-anchor="middle" fill="#222">Signal</text>
+<text x="2811.7000000000003" y="470.97999999999996" font-family="Arial,sans-serif" font-size="12" font-weight="400" text-anchor="middle" fill="#222">Loss Alert</text>
+<rect x="2874.1" y="416.2" width="70.8" height="70.8" rx="0" fill="#eda4df" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="2909.5" y="448.84" font-family="Arial,sans-serif" font-size="12" font-weight="400" text-anchor="middle" fill="#222">Shipment</text>
+<text x="2909.5" y="463.59999999999997" font-family="Arial,sans-serif" font-size="12" font-weight="400" text-anchor="middle" fill="#222">Delivered</text>
+<rect x="2971.9" y="416.2" width="70.8" height="70.8" rx="0" fill="#f29ce4" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="3007.3" y="449.07" font-family="Arial,sans-serif" font-size="11" font-weight="400" text-anchor="middle" fill="#222">Al concluir</text>
+<text x="3007.3" y="462.59999999999997" font-family="Arial,sans-serif" font-size="11" font-weight="400" text-anchor="middle" fill="#222">el traslado</text>
+<rect x="3069.7" y="416.2" width="70.8" height="70.8" rx="0" fill="#9fe5f9" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="3105.1" y="449.07" font-family="Arial,sans-serif" font-size="11" font-weight="400" text-anchor="middle" fill="#222">Stop</text>
+<text x="3105.1" y="462.59999999999997" font-family="Arial,sans-serif" font-size="11" font-weight="400" text-anchor="middle" fill="#222">Monitoring</text>
+<rect x="3167.5" y="416.2" width="70.8" height="70.8" rx="0" fill="#ffb373" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="3202.9" y="449.07" font-family="Arial,sans-serif" font-size="11" font-weight="400" text-anchor="middle" fill="#222">Monitoring</text>
+<text x="3202.9" y="462.59999999999997" font-family="Arial,sans-serif" font-size="11" font-weight="400" text-anchor="middle" fill="#222">Stopped</text>
+<rect x="3265.3" y="416.2" width="70.8" height="70.8" rx="0" fill="#68d990" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="3300.7000000000003" y="448.61" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Historial</text>
+<text x="3300.7000000000003" y="464.6" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">térmico</text>
+<rect x="60" y="785" width="1550" height="350" rx="90" fill="none" stroke="#4b4b4b" stroke-width="1.1"/>
+<text x="835.0" y="769.28" font-family="Arial,sans-serif" font-size="28" font-weight="400" text-anchor="middle" fill="#222">Fleet &amp; Resource Management</text>
+<rect x="115.0" y="838" width="95.25" height="95.25" rx="0" fill="#fff9a4" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="162.625" y="882.635" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Coordinador</text>
+<text x="162.625" y="898.625" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">logístico</text>
+<rect x="237.25" y="838" width="95.25" height="95.25" rx="0" fill="#9fe5f9" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="284.875" y="882.635" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Register</text>
+<text x="284.875" y="898.625" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Vehicle</text>
+<rect x="359.5" y="838" width="95.25" height="95.25" rx="0" fill="#ffe86b" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="407.125" y="882.635" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Vehicle</text>
+<text x="407.125" y="898.625" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Aggregate</text>
+<rect x="481.75" y="838" width="95.25" height="95.25" rx="0" fill="#ffb373" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="529.375" y="882.635" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Vehicle</text>
+<text x="529.375" y="898.625" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Registered</text>
+<rect x="604.0" y="838" width="95.25" height="95.25" rx="0" fill="#68d990" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="651.625" y="882.635" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Catálogo de</text>
+<text x="651.625" y="898.625" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">unidades</text>
+<rect x="726.25" y="838" width="95.25" height="95.25" rx="0" fill="#9fe5f9" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="773.875" y="882.635" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Register</text>
+<text x="773.875" y="898.625" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Driver</text>
+<rect x="848.5" y="838" width="95.25" height="95.25" rx="0" fill="#ffe86b" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="896.125" y="882.635" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Driver</text>
+<text x="896.125" y="898.625" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Aggregate</text>
+<rect x="970.75" y="838" width="95.25" height="95.25" rx="0" fill="#ffb373" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1018.375" y="882.635" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Driver</text>
+<text x="1018.375" y="898.625" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Registered</text>
+<rect x="1093.0" y="838" width="95.25" height="95.25" rx="0" fill="#68d990" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1140.625" y="882.635" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Directorio de</text>
+<text x="1140.625" y="898.625" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">conductores</text>
+<rect x="1215.25" y="838" width="95.25" height="95.25" rx="0" fill="#eda4df" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1262.875" y="882.635" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Schedule</text>
+<text x="1262.875" y="898.625" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Shipment</text>
+<rect x="1337.5" y="838" width="95.25" height="95.25" rx="0" fill="#9fe5f9" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1385.125" y="882.635" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Reserve</text>
+<text x="1385.125" y="898.625" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Resources</text>
+<rect x="1459.75" y="838" width="95.25" height="95.25" rx="0" fill="#ffe86b" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1507.375" y="874.64" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Fleet</text>
+<text x="1507.375" y="890.63" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Allocation</text>
+<text x="1507.375" y="906.62" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Aggregate</text>
+<rect x="176.125" y="1001.75" width="95.25" height="95.25" rx="0" fill="#ffb373" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="223.75" y="1046.385" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Resources</text>
+<text x="223.75" y="1062.375" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Reserved</text>
+<rect x="298.375" y="1001.75" width="95.25" height="95.25" rx="0" fill="#eda4df" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="346.0" y="1046.385" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Confirm</text>
+<text x="346.0" y="1062.375" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Schedule</text>
+<rect x="420.625" y="1001.75" width="95.25" height="95.25" rx="0" fill="#9fe5f9" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="468.25" y="1046.385" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Assign</text>
+<text x="468.25" y="1062.375" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Sensor</text>
+<rect x="542.875" y="1001.75" width="95.25" height="95.25" rx="0" fill="#ffe86b" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="590.5" y="1046.385" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Sensor</text>
+<text x="590.5" y="1062.375" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Aggregate</text>
+<rect x="665.125" y="1001.75" width="95.25" height="95.25" rx="0" fill="#ffb373" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="712.75" y="1046.385" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Sensor</text>
+<text x="712.75" y="1062.375" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Assigned</text>
+<rect x="787.375" y="1001.75" width="95.25" height="95.25" rx="0" fill="#68d990" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="835.0" y="1046.385" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Inventario de</text>
+<text x="835.0" y="1062.375" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">dispositivos</text>
+<rect x="909.625" y="1001.75" width="95.25" height="95.25" rx="0" fill="#eda4df" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="957.25" y="1046.385" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Delivered /</text>
+<text x="957.25" y="1062.375" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Cancelled</text>
+<rect x="1031.875" y="1001.75" width="95.25" height="95.25" rx="0" fill="#f29ce4" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1079.5" y="1046.385" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Al cerrar el</text>
+<text x="1079.5" y="1062.375" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">envío</text>
+<rect x="1154.125" y="1001.75" width="95.25" height="95.25" rx="0" fill="#9fe5f9" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1201.75" y="1046.385" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Release</text>
+<text x="1201.75" y="1062.375" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Resources</text>
+<rect x="1276.375" y="1001.75" width="95.25" height="95.25" rx="0" fill="#ffb373" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1324.0" y="1046.385" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Resources</text>
+<text x="1324.0" y="1062.375" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Released</text>
+<rect x="1398.625" y="1001.75" width="95.25" height="95.25" rx="0" fill="#68d990" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1446.25" y="1046.615" font-family="Arial,sans-serif" font-size="12" font-weight="400" text-anchor="middle" fill="#222">Disponibilidad</text>
+<text x="1446.25" y="1061.375" font-family="Arial,sans-serif" font-size="12" font-weight="400" text-anchor="middle" fill="#222">de recursos</text>
+<rect x="1890" y="785" width="1550" height="350" rx="90" fill="none" stroke="#4b4b4b" stroke-width="1.1"/>
+<text x="2665.0" y="769.28" font-family="Arial,sans-serif" font-size="28" font-weight="400" text-anchor="middle" fill="#222">Alert &amp; Reporting Management</text>
+<rect x="1945.0" y="838" width="59.294117647058826" height="59.294117647058826" rx="0" fill="#eda4df" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1974.6470588235295" y="865.5770588235295" font-family="Arial,sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">Evento de</text>
+<text x="1974.6470588235295" y="876.6470588235295" font-family="Arial,sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">monitoreo</text>
+<rect x="2031.2941176470588" y="838" width="59.294117647058826" height="59.294117647058826" rx="0" fill="#f29ce4" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="2060.9411764705883" y="854.5070588235294" font-family="Arial,sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">Al</text>
+<text x="2060.9411764705883" y="865.5770588235295" font-family="Arial,sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">informar</text>
+<text x="2060.9411764705883" y="876.6470588235295" font-family="Arial,sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">una</text>
+<text x="2060.9411764705883" y="887.7170588235296" font-family="Arial,sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">condición</text>
+<rect x="2117.5882352941176" y="838" width="59.294117647058826" height="59.294117647058826" rx="0" fill="#9fe5f9" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="2147.235294117647" y="864.6570588235294" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Raise</text>
+<text x="2147.235294117647" y="880.6470588235294" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Alert</text>
+<rect x="2203.8823529411766" y="838" width="59.294117647058826" height="59.294117647058826" rx="0" fill="#ffe86b" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="2233.529411764706" y="865.5770588235295" font-family="Arial,sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">Alert</text>
+<text x="2233.529411764706" y="876.6470588235295" font-family="Arial,sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">Aggregate</text>
+<rect x="2290.176470588235" y="838" width="59.294117647058826" height="59.294117647058826" rx="0" fill="#ffb373" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="2319.8235294117644" y="864.6570588235294" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Alert</text>
+<text x="2319.8235294117644" y="880.6470588235294" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Raised</text>
+<rect x="2376.470588235294" y="838" width="59.294117647058826" height="59.294117647058826" rx="0" fill="#f29ce4" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="2406.1176470588234" y="864.8870588235294" font-family="Arial,sans-serif" font-size="12" font-weight="400" text-anchor="middle" fill="#222">Al crear</text>
+<text x="2406.1176470588234" y="879.6470588235294" font-family="Arial,sans-serif" font-size="12" font-weight="400" text-anchor="middle" fill="#222">alerta</text>
+<rect x="2462.764705882353" y="838" width="59.294117647058826" height="59.294117647058826" rx="0" fill="#9fe5f9" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="2492.4117647058824" y="865.8070588235294" font-family="Arial,sans-serif" font-size="8" font-weight="400" text-anchor="middle" fill="#222">Create</text>
+<text x="2492.4117647058824" y="875.6470588235294" font-family="Arial,sans-serif" font-size="8" font-weight="400" text-anchor="middle" fill="#222">Notification</text>
+<rect x="2549.0588235294117" y="838" width="59.294117647058826" height="59.294117647058826" rx="0" fill="#fff9a4" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="2578.705882352941" y="865.8070588235294" font-family="Arial,sans-serif" font-size="8" font-weight="400" text-anchor="middle" fill="#222">Coordinador</text>
+<text x="2578.705882352941" y="875.6470588235294" font-family="Arial,sans-serif" font-size="8" font-weight="400" text-anchor="middle" fill="#222">logístico</text>
+<rect x="2635.3529411764707" y="838" width="59.294117647058826" height="59.294117647058826" rx="0" fill="#9fe5f9" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="2665.0" y="860.0420588235294" font-family="Arial,sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">Record</text>
+<text x="2665.0" y="871.1120588235294" font-family="Arial,sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">Corrective</text>
+<text x="2665.0" y="882.1820588235295" font-family="Arial,sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">Action</text>
+<rect x="2721.6470588235293" y="838" width="59.294117647058826" height="59.294117647058826" rx="0" fill="#ffb373" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="2751.2941176470586" y="861.7320588235294" font-family="Arial,sans-serif" font-size="7" font-weight="400" text-anchor="middle" fill="#222">Alert</text>
+<text x="2751.2941176470586" y="870.3420588235294" font-family="Arial,sans-serif" font-size="7" font-weight="400" text-anchor="middle" fill="#222">Acknowledg</text>
+<text x="2751.2941176470586" y="878.9520588235295" font-family="Arial,sans-serif" font-size="7" font-weight="400" text-anchor="middle" fill="#222">ed</text>
+<rect x="2807.9411764705883" y="838" width="59.294117647058826" height="59.294117647058826" rx="0" fill="#f29ce4" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="2837.5882352941176" y="859.1970588235295" font-family="Arial,sans-serif" font-size="10" font-weight="400" text-anchor="middle" fill="#222">Si solicitó</text>
+<text x="2837.5882352941176" y="871.4970588235294" font-family="Arial,sans-serif" font-size="10" font-weight="400" text-anchor="middle" fill="#222">avisar al</text>
+<text x="2837.5882352941176" y="883.7970588235294" font-family="Arial,sans-serif" font-size="10" font-weight="400" text-anchor="middle" fill="#222">cliente</text>
+<rect x="2894.235294117647" y="838" width="59.294117647058826" height="59.294117647058826" rx="0" fill="#eda4df" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="2923.882352941176" y="866.0370588235294" font-family="Arial,sans-serif" font-size="7" font-weight="400" text-anchor="middle" fill="#222">Evidencia de</text>
+<text x="2923.882352941176" y="874.6470588235294" font-family="Arial,sans-serif" font-size="7" font-weight="400" text-anchor="middle" fill="#222">recuperación</text>
+<rect x="2980.529411764706" y="838" width="59.294117647058826" height="59.294117647058826" rx="0" fill="#f29ce4" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="3010.176470588235" y="866.0370588235294" font-family="Arial,sans-serif" font-size="7" font-weight="400" text-anchor="middle" fill="#222">Al validar</text>
+<text x="3010.176470588235" y="874.6470588235294" font-family="Arial,sans-serif" font-size="7" font-weight="400" text-anchor="middle" fill="#222">recuperación</text>
+<rect x="3066.823529411765" y="838" width="59.294117647058826" height="59.294117647058826" rx="0" fill="#9fe5f9" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="3096.470588235294" y="865.1170588235294" font-family="Arial,sans-serif" font-size="11" font-weight="400" text-anchor="middle" fill="#222">Resolve</text>
+<text x="3096.470588235294" y="878.6470588235294" font-family="Arial,sans-serif" font-size="11" font-weight="400" text-anchor="middle" fill="#222">Alert</text>
+<rect x="3153.1176470588234" y="838" width="59.294117647058826" height="59.294117647058826" rx="0" fill="#ffb373" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="3182.7647058823527" y="865.3470588235294" font-family="Arial,sans-serif" font-size="10" font-weight="400" text-anchor="middle" fill="#222">Alert</text>
+<text x="3182.7647058823527" y="877.6470588235294" font-family="Arial,sans-serif" font-size="10" font-weight="400" text-anchor="middle" fill="#222">Resolved</text>
+<rect x="3239.4117647058824" y="838" width="59.294117647058826" height="59.294117647058826" rx="0" fill="#68d990" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="3269.0588235294117" y="858.3520588235294" font-family="Arial,sans-serif" font-size="11" font-weight="400" text-anchor="middle" fill="#222">Historial</text>
+<text x="3269.0588235294117" y="871.8820588235294" font-family="Arial,sans-serif" font-size="11" font-weight="400" text-anchor="middle" fill="#222">de</text>
+<text x="3269.0588235294117" y="885.4120588235294" font-family="Arial,sans-serif" font-size="11" font-weight="400" text-anchor="middle" fill="#222">alertas</text>
+<rect x="3325.7058823529414" y="838" width="59.294117647058826" height="59.294117647058826" rx="0" fill="#ffe86b" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="3355.3529411764707" y="865.8070588235294" font-family="Arial,sans-serif" font-size="8" font-weight="400" text-anchor="middle" fill="#222">Notification</text>
+<text x="3355.3529411764707" y="875.6470588235294" font-family="Arial,sans-serif" font-size="8" font-weight="400" text-anchor="middle" fill="#222">Aggregate</text>
+<rect x="1988.1470588235293" y="1037.7058823529412" width="59.294117647058826" height="59.294117647058826" rx="0" fill="#ffb373" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="2017.7941176470588" y="1065.5129411764706" font-family="Arial,sans-serif" font-size="8" font-weight="400" text-anchor="middle" fill="#222">Notification</text>
+<text x="2017.7941176470588" y="1075.3529411764705" font-family="Arial,sans-serif" font-size="8" font-weight="400" text-anchor="middle" fill="#222">Created</text>
+<rect x="2074.4411764705883" y="1037.7058823529412" width="59.294117647058826" height="59.294117647058826" rx="0" fill="#68d990" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="2104.0882352941176" y="1058.0579411764706" font-family="Arial,sans-serif" font-size="11" font-weight="400" text-anchor="middle" fill="#222">Bandeja</text>
+<text x="2104.0882352941176" y="1071.5879411764706" font-family="Arial,sans-serif" font-size="11" font-weight="400" text-anchor="middle" fill="#222">del</text>
+<text x="2104.0882352941176" y="1085.1179411764706" font-family="Arial,sans-serif" font-size="11" font-weight="400" text-anchor="middle" fill="#222">usuario</text>
+<rect x="2160.735294117647" y="1037.7058823529412" width="59.294117647058826" height="59.294117647058826" rx="0" fill="#fff9a4" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="2190.382352941176" y="1065.5129411764706" font-family="Arial,sans-serif" font-size="8" font-weight="400" text-anchor="middle" fill="#222">Destinatario</text>
+<text x="2190.382352941176" y="1075.3529411764705" font-family="Arial,sans-serif" font-size="8" font-weight="400" text-anchor="middle" fill="#222">autenticado</text>
+<rect x="2247.029411764706" y="1037.7058823529412" width="59.294117647058826" height="59.294117647058826" rx="0" fill="#9fe5f9" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="2276.676470588235" y="1060.5929411764707" font-family="Arial,sans-serif" font-size="8" font-weight="400" text-anchor="middle" fill="#222">Mark</text>
+<text x="2276.676470588235" y="1070.4329411764706" font-family="Arial,sans-serif" font-size="8" font-weight="400" text-anchor="middle" fill="#222">Notification</text>
+<text x="2276.676470588235" y="1080.2729411764706" font-family="Arial,sans-serif" font-size="8" font-weight="400" text-anchor="middle" fill="#222">Read</text>
+<rect x="2333.3235294117644" y="1037.7058823529412" width="59.294117647058826" height="59.294117647058826" rx="0" fill="#ffb373" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="2362.9705882352937" y="1065.5129411764706" font-family="Arial,sans-serif" font-size="8" font-weight="400" text-anchor="middle" fill="#222">Notification</text>
+<text x="2362.9705882352937" y="1075.3529411764705" font-family="Arial,sans-serif" font-size="8" font-weight="400" text-anchor="middle" fill="#222">Read</text>
+<rect x="2419.6176470588234" y="1037.7058823529412" width="59.294117647058826" height="59.294117647058826" rx="0" fill="#68d990" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="2449.2647058823527" y="1065.5129411764706" font-family="Arial,sans-serif" font-size="8" font-weight="400" text-anchor="middle" fill="#222">Bandeja</text>
+<text x="2449.2647058823527" y="1075.3529411764705" font-family="Arial,sans-serif" font-size="8" font-weight="400" text-anchor="middle" fill="#222">actualizada</text>
+<rect x="2505.911764705882" y="1037.7058823529412" width="59.294117647058826" height="59.294117647058826" rx="0" fill="#fff9a4" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="2535.5588235294113" y="1060.5929411764707" font-family="Arial,sans-serif" font-size="8" font-weight="400" text-anchor="middle" fill="#222">Coordinador</text>
+<text x="2535.5588235294113" y="1070.4329411764706" font-family="Arial,sans-serif" font-size="8" font-weight="400" text-anchor="middle" fill="#222">o Cliente de</text>
+<text x="2535.5588235294113" y="1080.2729411764706" font-family="Arial,sans-serif" font-size="8" font-weight="400" text-anchor="middle" fill="#222">Carga</text>
+<rect x="2592.205882352941" y="1037.7058823529412" width="59.294117647058826" height="59.294117647058826" rx="0" fill="#68d990" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="2621.8529411764703" y="1058.0579411764706" font-family="Arial,sans-serif" font-size="11" font-weight="400" text-anchor="middle" fill="#222">Historial</text>
+<text x="2621.8529411764703" y="1071.5879411764706" font-family="Arial,sans-serif" font-size="11" font-weight="400" text-anchor="middle" fill="#222">del</text>
+<text x="2621.8529411764703" y="1085.1179411764706" font-family="Arial,sans-serif" font-size="11" font-weight="400" text-anchor="middle" fill="#222">envío</text>
+<rect x="2678.5" y="1037.7058823529412" width="59.294117647058826" height="59.294117647058826" rx="0" fill="#9fe5f9" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="2708.1470588235293" y="1059.7479411764707" font-family="Arial,sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">Generate</text>
+<text x="2708.1470588235293" y="1070.8179411764706" font-family="Arial,sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">Thermal</text>
+<text x="2708.1470588235293" y="1081.8879411764706" font-family="Arial,sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">Report</text>
+<rect x="2764.7941176470586" y="1037.7058823529412" width="59.294117647058826" height="59.294117647058826" rx="0" fill="#ffe86b" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="2794.441176470588" y="1059.7479411764707" font-family="Arial,sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">Thermal</text>
+<text x="2794.441176470588" y="1070.8179411764706" font-family="Arial,sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">Report</text>
+<text x="2794.441176470588" y="1081.8879411764706" font-family="Arial,sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">Aggregate</text>
+<rect x="2851.0882352941176" y="1037.7058823529412" width="59.294117647058826" height="59.294117647058826" rx="0" fill="#ffb373" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="2880.735294117647" y="1059.7479411764707" font-family="Arial,sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">Thermal</text>
+<text x="2880.735294117647" y="1070.8179411764706" font-family="Arial,sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">Report</text>
+<text x="2880.735294117647" y="1081.8879411764706" font-family="Arial,sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">Generated</text>
+<rect x="2937.3823529411766" y="1037.7058823529412" width="59.294117647058826" height="59.294117647058826" rx="0" fill="#68d990" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="2967.029411764706" y="1059.7479411764707" font-family="Arial,sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">Descarga</text>
+<text x="2967.029411764706" y="1070.8179411764706" font-family="Arial,sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">del</text>
+<text x="2967.029411764706" y="1081.8879411764706" font-family="Arial,sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">informe</text>
+<rect x="3023.676470588235" y="1037.7058823529412" width="59.294117647058826" height="59.294117647058826" rx="0" fill="#9fe5f9" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="3053.3235294117644" y="1064.5929411764707" font-family="Arial,sans-serif" font-size="12" font-weight="400" text-anchor="middle" fill="#222">Record</text>
+<text x="3053.3235294117644" y="1079.3529411764707" font-family="Arial,sans-serif" font-size="12" font-weight="400" text-anchor="middle" fill="#222">Incident</text>
+<rect x="3109.9705882352937" y="1037.7058823529412" width="59.294117647058826" height="59.294117647058826" rx="0" fill="#ffe86b" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="3139.617647058823" y="1065.2829411764706" font-family="Arial,sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">Incident</text>
+<text x="3139.617647058823" y="1076.3529411764705" font-family="Arial,sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">Aggregate</text>
+<rect x="3196.264705882353" y="1037.7058823529412" width="59.294117647058826" height="59.294117647058826" rx="0" fill="#ffb373" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="3225.9117647058824" y="1065.2829411764706" font-family="Arial,sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">Incident</text>
+<text x="3225.9117647058824" y="1076.3529411764705" font-family="Arial,sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">Recorded</text>
+<rect x="3282.5588235294117" y="1037.7058823529412" width="59.294117647058826" height="59.294117647058826" rx="0" fill="#68d990" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="3312.205882352941" y="1058.0579411764706" font-family="Arial,sans-serif" font-size="11" font-weight="400" text-anchor="middle" fill="#222">Bitácora</text>
+<text x="3312.205882352941" y="1071.5879411764706" font-family="Arial,sans-serif" font-size="11" font-weight="400" text-anchor="middle" fill="#222">del</text>
+<text x="3312.205882352941" y="1085.1179411764706" font-family="Arial,sans-serif" font-size="11" font-weight="400" text-anchor="middle" fill="#222">traslado</text>
+<rect x="60" y="1395" width="1550" height="350" rx="90" fill="none" stroke="#4b4b4b" stroke-width="1.1"/>
+<text x="835.0" y="1379.28" font-family="Arial,sans-serif" font-size="28" font-weight="400" text-anchor="middle" fill="#222">Identity &amp; Access Management</text>
+<rect x="115.0" y="1448" width="95.25" height="95.25" rx="0" fill="#fff9a4" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="162.625" y="1484.64" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Visitante /</text>
+<text x="162.625" y="1500.63" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Cliente de</text>
+<text x="162.625" y="1516.6200000000001" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Carga</text>
+<rect x="237.25" y="1448" width="95.25" height="95.25" rx="0" fill="#68d990" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="284.875" y="1492.635" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Acceso y</text>
+<text x="284.875" y="1508.625" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">registro</text>
+<rect x="359.5" y="1448" width="95.25" height="95.25" rx="0" fill="#9fe5f9" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="407.125" y="1492.635" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Register</text>
+<text x="407.125" y="1508.625" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Cargo Client</text>
+<rect x="481.75" y="1448" width="95.25" height="95.25" rx="0" fill="#ffe86b" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="529.375" y="1492.635" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">User Account</text>
+<text x="529.375" y="1508.625" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Aggregate</text>
+<rect x="604.0" y="1448" width="95.25" height="95.25" rx="0" fill="#ffb373" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="651.625" y="1492.635" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">User</text>
+<text x="651.625" y="1508.625" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Registered</text>
+<rect x="726.25" y="1448" width="95.25" height="95.25" rx="0" fill="#68d990" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="773.875" y="1492.635" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Perfil de</text>
+<text x="773.875" y="1508.625" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">usuario</text>
+<rect x="848.5" y="1448" width="95.25" height="95.25" rx="0" fill="#fff9a4" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="896.125" y="1492.635" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Usuario</text>
+<text x="896.125" y="1508.625" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">registrado</text>
+<rect x="970.75" y="1448" width="95.25" height="95.25" rx="0" fill="#9fe5f9" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1018.375" y="1500.63" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Login</text>
+<rect x="1093.0" y="1448" width="95.25" height="95.25" rx="0" fill="#ffb373" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1140.625" y="1492.865" font-family="Arial,sans-serif" font-size="12" font-weight="400" text-anchor="middle" fill="#222">User</text>
+<text x="1140.625" y="1507.625" font-family="Arial,sans-serif" font-size="12" font-weight="400" text-anchor="middle" fill="#222">Authenticated</text>
+<rect x="1215.25" y="1448" width="95.25" height="95.25" rx="0" fill="#f29ce4" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1262.875" y="1500.63" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Al autenticar</text>
+<rect x="1337.5" y="1448" width="95.25" height="95.25" rx="0" fill="#9fe5f9" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1385.125" y="1492.635" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Create</text>
+<text x="1385.125" y="1508.625" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Session</text>
+<rect x="1459.75" y="1448" width="95.25" height="95.25" rx="0" fill="#ffb373" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1507.375" y="1492.635" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Session</text>
+<text x="1507.375" y="1508.625" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Created</text>
+<rect x="115.0" y="1611.75" width="95.25" height="95.25" rx="0" fill="#fff9a4" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="162.625" y="1656.385" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Usuario con</text>
+<text x="162.625" y="1672.375" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">sesión</text>
+<rect x="237.25" y="1611.75" width="95.25" height="95.25" rx="0" fill="#9fe5f9" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="284.875" y="1656.385" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Update</text>
+<text x="284.875" y="1672.375" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Profile</text>
+<rect x="359.5" y="1611.75" width="95.25" height="95.25" rx="0" fill="#ffb373" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="407.125" y="1656.385" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">User Profile</text>
+<text x="407.125" y="1672.375" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Updated</text>
+<rect x="481.75" y="1611.75" width="95.25" height="95.25" rx="0" fill="#68d990" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="529.375" y="1656.385" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Perfil</text>
+<text x="529.375" y="1672.375" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">actualizado</text>
+<rect x="604.0" y="1611.75" width="95.25" height="95.25" rx="0" fill="#9fe5f9" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="651.625" y="1664.38" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Logout</text>
+<rect x="726.25" y="1611.75" width="95.25" height="95.25" rx="0" fill="#ffb373" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="773.875" y="1656.385" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Session</text>
+<text x="773.875" y="1672.375" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Revoked</text>
+<rect x="848.5" y="1611.75" width="95.25" height="95.25" rx="0" fill="#68d990" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="896.125" y="1656.385" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Pantalla de</text>
+<text x="896.125" y="1672.375" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">acceso</text>
+<rect x="970.75" y="1611.75" width="95.25" height="95.25" rx="0" fill="#fff9a4" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1018.375" y="1648.39" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Usuario que</text>
+<text x="1018.375" y="1664.38" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">perdió</text>
+<text x="1018.375" y="1680.3700000000001" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">acceso</text>
+<rect x="1093.0" y="1611.75" width="95.25" height="95.25" rx="0" fill="#9fe5f9" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1140.625" y="1648.39" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Request</text>
+<text x="1140.625" y="1664.38" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Password</text>
+<text x="1140.625" y="1680.3700000000001" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Reset</text>
+<rect x="1215.25" y="1611.75" width="95.25" height="95.25" rx="0" fill="#ffb373" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1262.875" y="1648.39" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Password</text>
+<text x="1262.875" y="1664.38" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Reset</text>
+<text x="1262.875" y="1680.3700000000001" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Requested</text>
+<rect x="1337.5" y="1611.75" width="95.25" height="95.25" rx="0" fill="#f29ce4" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1385.125" y="1656.385" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Al solicitar</text>
+<text x="1385.125" y="1672.375" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">recuperación</text>
+<rect x="1459.75" y="1611.75" width="95.25" height="95.25" rx="0" fill="#dddfe2" stroke="none" stroke-width="1" filter="url(#paper-shadow)"/>
+<text x="1507.375" y="1656.385" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">Correo</text>
+<text x="1507.375" y="1672.375" font-family="Arial,sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#222">transaccional</text>
+<text x="68" y="1848.47" font-family="Arial,sans-serif" font-size="22" font-weight="400" text-anchor="start" fill="#222">Core: Shipment + Monitoring · Apoyo: Fleet + Alerts · IAM genérico al final · Relaciones: matriz de integración I01–I13.</text>
+</svg>

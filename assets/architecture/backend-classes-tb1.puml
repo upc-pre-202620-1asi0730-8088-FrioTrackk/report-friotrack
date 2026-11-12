@@ -4,13 +4,12 @@ skinparam classAttributeIconSize 0
 skinparam packageStyle rectangle
 left to right direction
 note as Scope
-Target design. TB1 uses an implemented supporting API with a JSON store.
-Typed DDD aggregates, EF Core and relational transactions remain planned.
+Target design. TB1 uses a supporting API with a private JSON store.
+Typed DDD aggregates, EF Core, PostgreSQL and event dispatch remain planned.
 Core and supporting contexts precede generic IAM.
 end note
 package "Shipment Management [Core]" {
 class Shipment <<AggregateRoot>> {
-  - range: ThermalRange
   - id: UUID
   - code: String
   - organizationId: UUID
@@ -20,30 +19,16 @@ class Shipment <<AggregateRoot>> {
   - weightTons: Decimal
   - origin: String
   - destination: String
+  - range: ThermalRange
   - plannedDeparture: DateTimeOffset
   - estimatedArrival: DateTimeOffset
   - status: ShipmentStatus
   - version: Int64
-  + schedule(resources, client): void
+  + schedule(): void
   + startTransit(): void
   + markDelivered(): void
   + cancel(reason: String): void
   + updateRange(range: ThermalRange): void
-}
-interface IShipmentRepository <<DomainPort>> {
-  + find(id): Shipment
-  + save(aggregate: Shipment): void
-}
-IShipmentRepository ..> Shipment : persists root
-class ShipmentHistoryEvent <<Entity>> {
-  - id: UUID
-  - shipmentId: UUID
-  - actorId: UUID
-  - action: String
-  - fromStatus: String?
-  - toStatus: String?
-  - note: String
-  - recordedAt: DateTimeOffset
 }
 class ThermalRange <<ValueObject>> {
   - minTempC: Decimal
@@ -51,29 +36,62 @@ class ThermalRange <<ValueObject>> {
   - minHumidityPct: Decimal
   - maxHumidityPct: Decimal
   - toleranceMinutes: Integer
-  + contains(temperatureC, humidityPct): Boolean
+  + contains(tempC, humidityPct): Boolean
 }
+class ShipmentHistoryEvent <<Entity>> {
+  - id: UUID
+  - actorId: UUID
+  - action: String
+  - fromStatus: ShipmentStatus?
+  - toStatus: ShipmentStatus?
+  - note: String
+  - recordedAt: DateTimeOffset
+}
+enum ShipmentStatus {
+  DRAFT
+  SCHEDULED
+  IN_TRANSIT
+  DELIVERED
+  CANCELLED
+}
+interface IShipmentRepository <<DomainPort>> {
+  + find(id: UUID): Shipment?
+  + save(root: Shipment): void
+}
+note as Rules1
+La raíz protege rango, fechas, peso y transiciones; un borrador no reserva recursos.
+La aplicación confirma capacidad y reserva de Fleet antes de aceptar programación, en una unidad de trabajo.
+Referencias a organización, coordinador y cliente son IDs; no se navegan objetos de IAM ni de Fleet.
+end note
+IShipmentRepository ..> Shipment : Persiste la raíz
+Shipment "1" *-- "1" ThermalRange : Rango propio del envío
+Shipment "1" *-- "0..*" ShipmentHistoryEvent : Historial dentro del agregado
+Shipment --> ShipmentStatus : Tipo de estado
 }
 package "Monitoring and Telemetry [Core]" {
 class ShipmentMonitoring <<AggregateRoot>> {
-  - range: MonitoredRange
   - id: UUID
   - shipmentId: UUID
+  - range: MonitoredRange
   - maxSilenceMinutes: Integer
   - signalStatus: SignalStatus
   - lastReadingAt: DateTimeOffset?
   - startedAt: DateTimeOffset
   - stoppedAt: DateTimeOffset?
   + start(range: MonitoredRange): void
-  + recordReading(reading): void
+  + recordReading(reading: SensorReading): void
+  + recordPosition(position: PositionReport): void
   + detectCommunicationGap(at): void
   + stop(at: DateTimeOffset): void
 }
-interface IShipmentMonitoringRepository <<DomainPort>> {
-  + find(id): ShipmentMonitoring
-  + save(aggregate: ShipmentMonitoring): void
+class MonitoredRange <<ValueObject>> {
+  - minTempC: Decimal
+  - maxTempC: Decimal
+  - minHumidityPct: Decimal
+  - maxHumidityPct: Decimal
+  - toleranceMinutes: Integer
+  + contains(tempC, humidityPct): Boolean
 }
-IShipmentMonitoringRepository ..> ShipmentMonitoring : persists root
 class SensorReading <<Entity>> {
   - id: Int64
   - monitoringId: UUID
@@ -81,7 +99,7 @@ class SensorReading <<Entity>> {
   - humidityPct: Decimal
   - withinBothRanges: Boolean
   - recordedAt: DateTimeOffset
-  + evaluate(range: ThermalRange): Boolean
+  + evaluate(range: MonitoredRange): Boolean
 }
 class PositionReport <<Entity>> {
   - id: Int64
@@ -90,14 +108,24 @@ class PositionReport <<Entity>> {
   - longitude: Decimal
   - recordedAt: DateTimeOffset
 }
-class MonitoredRange <<ValueObject>> {
-  - minTempC: Decimal
-  - maxTempC: Decimal
-  - minHumidityPct: Decimal
-  - maxHumidityPct: Decimal
-  - toleranceMinutes: Integer
-  + contains(temperatureC, humidityPct): Boolean
+enum SignalStatus {
+  ONLINE
+  NO_SIGNAL
 }
+interface IShipmentMonitoringRepository <<DomainPort>> {
+  + find(id: UUID): ShipmentMonitoring?
+  + save(root: ShipmentMonitoring): void
+}
+note as Rules2
+La copia MonitoredRange no cambia cuando se modifican límites de otro envío o contexto.
+Las lecturas usan fecha de medición válida. Una muestra atrasada no demuestra recuperación actual de señal.
+SignalLost / SignalRestored son eventos propuestos; las excursiones térmicas se evalúan de forma independiente.
+end note
+IShipmentMonitoringRepository ..> ShipmentMonitoring : Persiste la raíz
+ShipmentMonitoring "1" *-- "1" MonitoredRange : Copia local de los cuatro límites
+ShipmentMonitoring "1" *-- "0..*" SensorReading : Lecturas del monitoreo
+ShipmentMonitoring "1" *-- "0..*" PositionReport : Posiciones del monitoreo
+ShipmentMonitoring --> SignalStatus : Estado de comunicación
 }
 package "Fleet and Resources [Supporting]" {
 class Vehicle <<AggregateRoot>> {
@@ -106,22 +134,13 @@ class Vehicle <<AggregateRoot>> {
   - plate: String
   - capacityTons: Decimal
   - enabled: Boolean
-  + isAvailable(from, until): Boolean
   + changeCapacity(tons: Decimal): void
+  + ensureEnabled(): void
   + disable(): void
 }
 interface IVehicleRepository <<DomainPort>> {
-  + find(id): Vehicle
-  + save(aggregate: Vehicle): void
-}
-IVehicleRepository ..> Vehicle : persists root
-class Sensor <<Entity>> {
-  - id: UUID
-  - vehicleId: UUID?
-  - serialCode: String
-  - enabled: Boolean
-  + assign(vehicleId: UUID): void
-  + disable(): void
+  + find(id: UUID): Vehicle?
+  + save(root: Vehicle): void
 }
 class Driver <<AggregateRoot>> {
   - id: UUID
@@ -129,14 +148,26 @@ class Driver <<AggregateRoot>> {
   - fullName: String
   - licenseNumber: String
   - enabled: Boolean
-  + isAvailable(from, until): Boolean
+  + ensureEnabled(): void
   + disable(): void
 }
 interface IDriverRepository <<DomainPort>> {
-  + find(id): Driver
-  + save(aggregate: Driver): void
+  + find(id: UUID): Driver?
+  + save(root: Driver): void
 }
-IDriverRepository ..> Driver : persists root
+class Sensor <<AggregateRoot>> {
+  - id: UUID
+  - vehicleId: UUID?
+  - serialCode: String
+  - enabled: Boolean
+  + assignToVehicle(vehicleId: UUID): void
+  + unassign(): void
+  + disable(): void
+}
+interface ISensorRepository <<DomainPort>> {
+  + find(id: UUID): Sensor?
+  + save(root: Sensor): void
+}
 class FleetAllocation <<AggregateRoot>> {
   - id: UUID
   - shipmentId: UUID
@@ -144,16 +175,29 @@ class FleetAllocation <<AggregateRoot>> {
   - driverId: UUID
   - reservedFrom: DateTimeOffset
   - reservedUntil: DateTimeOffset
-  - status: String
+  - status: AllocationStatus
   - releasedAt: DateTimeOffset?
   + reserve(): void
   + release(at: DateTimeOffset): void
 }
 interface IFleetAllocationRepository <<DomainPort>> {
-  + find(id): FleetAllocation
-  + save(aggregate: FleetAllocation): void
+  + find(id: UUID): FleetAllocation?
+  + save(root: FleetAllocation): void
 }
-IFleetAllocationRepository ..> FleetAllocation : persists root
+enum AllocationStatus {
+  RESERVED
+  RELEASED
+}
+note as Rules3
+No existe composición Vehicle → Sensor: inventario, activación y asignación del sensor tienen ciclo de vida propio.
+La asignación referencia shipmentId, vehicleId y driverId; el servicio de aplicación coordina repositorios y unidad de trabajo.
+Unicidad de placa, licencia y serial; asignación única de sensor; reserva sin solapamiento bajo control transaccional.
+end note
+IVehicleRepository ..> Vehicle : Persiste la raíz
+IDriverRepository ..> Driver : Persiste la raíz
+ISensorRepository ..> Sensor : Persiste la raíz
+IFleetAllocationRepository ..> FleetAllocation : Persiste la raíz
+Sensor ..> Vehicle : vehicleId? · referencia por ID
 }
 package "Alert and Reporting [Supporting]" {
 class Alert <<AggregateRoot>> {
@@ -167,20 +211,22 @@ class Alert <<AggregateRoot>> {
   - acknowledgedAt: DateTimeOffset?
   - resolvedAt: DateTimeOffset?
   + acknowledge(action: CorrectiveAction): void
-  + resolveWithEvidence(evidence: RecoveryEvidence): void
+  + resolve(evidence: RecoveryEvidence): void
 }
-interface IAlertRepository <<DomainPort>> {
-  + find(id): Alert
-  + save(aggregate: Alert): void
-}
-IAlertRepository ..> Alert : persists root
 class CorrectiveAction <<Entity>> {
   - id: UUID
-  - alertId: UUID
   - registeredBy: UUID
   - comment: String
   - notifyClient: Boolean
   - registeredAt: DateTimeOffset
+}
+class RecoveryEvidence <<ValueObject>> {
+  - readingId: Int64
+  - shipmentId: UUID
+  - recordedAt: DateTimeOffset
+  - signalRestored: Boolean
+  - withinBothRanges: Boolean
+  + resolves(type, openedAt): Boolean
 }
 class Notification <<AggregateRoot>> {
   - id: UUID
@@ -192,11 +238,6 @@ class Notification <<AggregateRoot>> {
   - readAt: DateTimeOffset?
   + markRead(at: DateTimeOffset): void
 }
-interface INotificationRepository <<DomainPort>> {
-  + find(id): Notification
-  + save(aggregate: Notification): void
-}
-INotificationRepository ..> Notification : persists root
 class Incident <<AggregateRoot>> {
   - id: UUID
   - shipmentId: UUID
@@ -204,11 +245,6 @@ class Incident <<AggregateRoot>> {
   - description: String
   - registeredAt: DateTimeOffset
 }
-interface IIncidentRepository <<DomainPort>> {
-  + find(id): Incident
-  + save(aggregate: Incident): void
-}
-IIncidentRepository ..> Incident : persists root
 class ThermalReport <<AggregateRoot>> {
   - id: UUID
   - shipmentId: UUID
@@ -216,19 +252,40 @@ class ThermalReport <<AggregateRoot>> {
   - generatedAt: DateTimeOffset
   - filePath: String
   - summary: JsonSnapshot
-  + generateSnapshot(shipment): void
+  + generateSnapshot(shipmentId: UUID): void
+}
+interface IAlertRepository <<DomainPort>> {
+  + find(id: UUID): Alert?
+  + save(root: Alert): void
+}
+interface INotificationRepository <<DomainPort>> {
+  + find(id: UUID): Notification?
+  + save(root: Notification): void
+}
+interface IIncidentRepository <<DomainPort>> {
+  + find(id: UUID): Incident?
+  + save(root: Incident): void
 }
 interface IThermalReportRepository <<DomainPort>> {
-  + find(id): ThermalReport
-  + save(aggregate: ThermalReport): void
+  + find(id: UUID): ThermalReport?
+  + save(root: ThermalReport): void
 }
-IThermalReportRepository ..> ThermalReport : persists root
-class RecoveryEvidence <<ValueObject>> {
-  - readingId: Int64
-  - recordedAt: DateTimeOffset
-  - withinBothRanges: Boolean
-  + isValidAfter(openedAt): Boolean
+enum AlertTypes {
+  AlertType = TEMPERATURE | HUMIDITY | NO_SIGNAL
+  AlertStatus = ACTIVE | ACKNOWLEDGED | RESOLVED
+  AlertSeverity = WARNING | CRITICAL
 }
+note as Rules4
+TEMPERATURE / HUMIDITY: una lectura posterior normal dentro de ambos rangos puede resolver la excursión.
+NO_SIGNAL: lectura válida y reciente que restablece señal; puede coexistir con una excursión térmica que sigue abierta.
+La notificación se dirige al cliente asignado. Marcar leída requiere acción del destinatario; no se ejecuta al enviarla.
+end note
+Alert "1" *-- "0..*" CorrectiveAction : Acciones dentro del agregado
+Alert ..> RecoveryEvidence : Valida evidencia local, sin entidad de Monitoring
+IAlertRepository ..> Alert : Persiste raíz Alert
+INotificationRepository ..> Notification : Persiste raíz
+IIncidentRepository ..> Incident : Persiste raíz
+IThermalReportRepository ..> ThermalReport : Persiste raíz
 }
 package "IAM [Generic]" {
 class Organization <<AggregateRoot>> {
@@ -236,11 +293,6 @@ class Organization <<AggregateRoot>> {
   - name: String
   + rename(name: String): void
 }
-interface IOrganizationRepository <<DomainPort>> {
-  + find(id): Organization
-  + save(aggregate: Organization): void
-}
-IOrganizationRepository ..> Organization : persists root
 class UserAccount <<AggregateRoot>> {
   - id: UUID
   - organizationId: UUID
@@ -252,56 +304,52 @@ class UserAccount <<AggregateRoot>> {
   - enabled: Boolean
   - failedAttempts: Integer
   - lockedUntil: DateTimeOffset?
-  + authenticate(password: String): Boolean
-  + changePassword(password: String): void
+  + ensureActive(at): void
+  + changePassword(newHash: String): void
   + updateProfile(name, language): void
+  + registerFailedAttempt(at): void
 }
-interface IUserAccountRepository <<DomainPort>> {
-  + find(id): UserAccount
-  + save(aggregate: UserAccount): void
-}
-IUserAccountRepository ..> UserAccount : persists root
 class PasswordResetToken <<Entity>> {
   - id: UUID
-  - userId: UUID
   - tokenHash: String
   - expiresAt: DateTimeOffset
   - usedAt: DateTimeOffset?
   + isValid(at: DateTimeOffset): Boolean
   + markUsed(at: DateTimeOffset): void
 }
+enum UserRole {
+  LOGISTICS_COORDINATOR
+  CARGO_CLIENT
 }
-Shipment "1" *-- "1" ThermalRange
-Shipment "1" *-- "0..*" ShipmentHistoryEvent
-ShipmentMonitoring "1" *-- "1" MonitoredRange
-ShipmentMonitoring "1" *-- "0..*" SensorReading
-ShipmentMonitoring "1" *-- "0..*" PositionReport
-Vehicle "1" *-- "0..1" Sensor
-Alert "1" *-- "0..*" CorrectiveAction
-Alert ..> RecoveryEvidence : validates local evidence
-UserAccount "1" *-- "0..*" PasswordResetToken
-Shipment ..> Vehicle : identity reference vehicleId
-Shipment ..> Driver : identity reference driverId
-Shipment ..> UserAccount : identity reference clientId / coordinatorId
-FleetAllocation ..> Shipment : identity reference shipmentId
-FleetAllocation ..> Vehicle : identity reference vehicleId
-FleetAllocation ..> Driver : identity reference driverId
-ShipmentMonitoring ..> Shipment : identity reference shipmentId
-Alert ..> Shipment : identity reference shipmentId
-Notification ..> UserAccount : identity reference userId
-ThermalReport ..> Shipment : identity reference shipmentId
-Incident ..> Shipment : identity reference shipmentId
-UserAccount ..> Organization : identity reference organizationId
-note bottom of Shipment
-Valid thermal range and lifecycle transitions.
-Application confirms fleet reservation before scheduling.
+interface IOrganizationRepository <<DomainPort>> {
+  + find(id: UUID): Organization?
+  + save(root: Organization): void
+}
+interface IUserAccountRepository <<DomainPort>> {
+  + find(id: UUID): UserAccount?
+  + save(root: UserAccount): void
+}
+note as Rules5
+El registro público requiere consentimiento, correo único y contraseña de al menos 12 caracteres; asigna CARGO_CLIENT.
+La aplicación verifica credenciales mediante un adaptador de hash; el dominio recibe y conserva el hash, nunca texto plano.
+La recuperación por correo y el bloqueo por cuenta son diseño futuro; TB1 utiliza sesiones opacas y limitación por IP.
 end note
-note bottom of FleetAllocation
-Reservation interval cannot overlap an active assignment.
-Concurrency must be enforced by the transaction strategy.
-end note
-note bottom of Alert
-Acknowledgement does not prove recovery.
-Resolution requires later valid RecoveryEvidence.
-end note
+IOrganizationRepository ..> Organization : Persiste la raíz
+IUserAccountRepository ..> UserAccount : Persiste la raíz
+UserAccount "1" *-- "0..*" PasswordResetToken : Tokens de recuperación propios
+UserAccount ..> Organization : organizationId · referencia por ID
+UserAccount --> UserRole : Rol de cuenta
+}
+Shipment ..> UserAccount : clientId / coordinatorId
+Shipment ..> Organization : organizationId
+FleetAllocation ..> Shipment : shipmentId
+FleetAllocation ..> Vehicle : vehicleId
+FleetAllocation ..> Driver : driverId
+ShipmentMonitoring ..> Shipment : shipmentId
+Alert ..> Shipment : shipmentId
+Notification ..> UserAccount : userId
+Notification ..> Shipment : shipmentId
+ThermalReport ..> Shipment : shipmentId
+Incident ..> Shipment : shipmentId
+UserAccount ..> Organization : organizationId
 @enduml

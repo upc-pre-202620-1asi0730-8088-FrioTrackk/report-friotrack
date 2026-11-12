@@ -1,0 +1,250 @@
+{
+  "id": "14-uml-fleet",
+  "section": "4.7.1",
+  "title": "FríoTrack · UML DDD · Fleet & Resource Management",
+  "subtitle": "Apoyo · Sensor es raíz independiente: puede existir sin vehículo asignado.",
+  "width": 2260,
+  "height": 1320,
+  "legend": "<<Aggregate Root>> raíz · <<Entity>> entidad · <<Value Object>> valor · ◆ composición · - - > dependencia por ID",
+  "notes": [
+    "Corrección frente al modelo previo: Sensor pasa de entidad interna a Aggregate Root; coincide con vehicle_id nullable y serial_code único del esquema.",
+    "Vehicle/Driver no deciden disponibilidad de reservas ajenas por sí solos; el caso de uso consulta asignaciones y confirma la operación atómica.",
+    "No se añade ninguna tabla: se conservan17tablas y27FK."
+  ],
+  "nodes": [
+    {
+      "id": "Vehicle",
+      "kind": "class",
+      "label": "Vehicle",
+      "x": 60,
+      "y": 210,
+      "w": 430,
+      "h": 294,
+      "stereotype": "Aggregate Root",
+      "attributes": [
+        "- id: UUID",
+        "- organizationId: UUID",
+        "- plate: String",
+        "- capacityTons: Decimal",
+        "- enabled: Boolean"
+      ],
+      "methods": [
+        "+ changeCapacity(tons: Decimal): void",
+        "+ ensureEnabled(): void",
+        "+ disable(): void"
+      ]
+    },
+    {
+      "id": "IVehicleRepository",
+      "kind": "class",
+      "label": "IVehicleRepository",
+      "x": 60,
+      "y": 760,
+      "w": 430,
+      "h": 174,
+      "stereotype": "interface · Domain Port",
+      "methods": [
+        "+ find(id: UUID): Vehicle?",
+        "+ save(root: Vehicle): void"
+      ]
+    },
+    {
+      "id": "Driver",
+      "kind": "class",
+      "label": "Driver",
+      "x": 620,
+      "y": 210,
+      "w": 430,
+      "h": 274,
+      "stereotype": "Aggregate Root",
+      "attributes": [
+        "- id: UUID",
+        "- organizationId: UUID",
+        "- fullName: String",
+        "- licenseNumber: String",
+        "- enabled: Boolean"
+      ],
+      "methods": [
+        "+ ensureEnabled(): void",
+        "+ disable(): void"
+      ]
+    },
+    {
+      "id": "IDriverRepository",
+      "kind": "class",
+      "label": "IDriverRepository",
+      "x": 620,
+      "y": 760,
+      "w": 430,
+      "h": 174,
+      "stereotype": "interface · Domain Port",
+      "methods": [
+        "+ find(id: UUID): Driver?",
+        "+ save(root: Driver): void"
+      ]
+    },
+    {
+      "id": "Sensor",
+      "kind": "class",
+      "label": "Sensor",
+      "x": 1180,
+      "y": 210,
+      "w": 430,
+      "h": 274,
+      "stereotype": "Aggregate Root",
+      "attributes": [
+        "- id: UUID",
+        "- vehicleId: UUID?",
+        "- serialCode: String",
+        "- enabled: Boolean"
+      ],
+      "methods": [
+        "+ assignToVehicle(vehicleId: UUID): void",
+        "+ unassign(): void",
+        "+ disable(): void"
+      ]
+    },
+    {
+      "id": "ISensorRepository",
+      "kind": "class",
+      "label": "ISensorRepository",
+      "x": 1180,
+      "y": 760,
+      "w": 430,
+      "h": 174,
+      "stereotype": "interface · Domain Port",
+      "methods": [
+        "+ find(id: UUID): Sensor?",
+        "+ save(root: Sensor): void"
+      ]
+    },
+    {
+      "id": "FleetAllocation",
+      "kind": "class",
+      "label": "FleetAllocation",
+      "x": 1740,
+      "y": 210,
+      "w": 450,
+      "h": 334,
+      "stereotype": "Aggregate Root",
+      "attributes": [
+        "- id: UUID",
+        "- shipmentId: UUID",
+        "- vehicleId: UUID",
+        "- driverId: UUID",
+        "- reservedFrom: DateTimeOffset",
+        "- reservedUntil: DateTimeOffset",
+        "- status: AllocationStatus",
+        "- releasedAt: DateTimeOffset?"
+      ],
+      "methods": [
+        "+ reserve(): void",
+        "+ release(at: DateTimeOffset): void"
+      ]
+    },
+    {
+      "id": "IFleetAllocationRepository",
+      "kind": "class",
+      "label": "IFleetAllocationRepository",
+      "x": 1740,
+      "y": 760,
+      "w": 450,
+      "h": 174,
+      "stereotype": "interface · Domain Port",
+      "methods": [
+        "+ find(id: UUID): FleetAllocation?",
+        "+ save(root: FleetAllocation): void"
+      ]
+    },
+    {
+      "id": "AllocationStatus",
+      "kind": "enum",
+      "label": "AllocationStatus",
+      "x": 60,
+      "y": 1050,
+      "w": 430,
+      "h": 154,
+      "attributes": [
+        "RESERVED",
+        "RELEASED"
+      ]
+    },
+    {
+      "id": "Rules",
+      "kind": "note",
+      "label": "Reglas y límites",
+      "x": 620,
+      "y": 1050,
+      "w": 1570,
+      "h": 170,
+      "body": [
+        "No existe composición Vehicle → Sensor: inventario, activación y asignación del sensor tienen ciclo de vida propio.",
+        "La asignación referencia shipmentId, vehicleId y driverId; el servicio de aplicación coordina repositorios y unidad de trabajo.",
+        "Unicidad de placa, licencia y serial; asignación única de sensor; reserva sin solapamiento bajo control transaccional."
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "IVehicleRepository",
+      "target": "Vehicle",
+      "label": "Persiste la raíz",
+      "sourcePort": "top",
+      "targetPort": "bottom",
+      "points": [],
+      "endArrow": "open",
+      "dashed": true
+    },
+    {
+      "source": "IDriverRepository",
+      "target": "Driver",
+      "label": "Persiste la raíz",
+      "sourcePort": "top",
+      "targetPort": "bottom",
+      "points": [],
+      "endArrow": "open",
+      "dashed": true
+    },
+    {
+      "source": "ISensorRepository",
+      "target": "Sensor",
+      "label": "Persiste la raíz",
+      "sourcePort": "top",
+      "targetPort": "bottom",
+      "points": [],
+      "endArrow": "open",
+      "dashed": true
+    },
+    {
+      "source": "IFleetAllocationRepository",
+      "target": "FleetAllocation",
+      "label": "Persiste la raíz",
+      "sourcePort": "top",
+      "targetPort": "bottom",
+      "points": [],
+      "endArrow": "open",
+      "dashed": true
+    },
+    {
+      "source": "Sensor",
+      "target": "Vehicle",
+      "label": "vehicleId? · referencia por ID",
+      "sourcePort": "top",
+      "targetPort": "top",
+      "points": [
+        [
+          1395,
+          155
+        ],
+        [
+          275,
+          155
+        ]
+      ],
+      "endArrow": "open",
+      "dashed": true,
+      "labelX": 840,
+      "labelY": 140
+    }
+  ]
+}

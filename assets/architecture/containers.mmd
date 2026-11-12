@@ -1,12 +1,10 @@
 flowchart TB
-  visitor[Visitante] -->|HTTPS| landing[Landing Page HTML CSS JS]
-  users[Coordinador y Cliente] -->|Solicita página HTTPS| web[Web Application servidor estático Azure]
-  landing -->|CTA URL| web
+  visitor[Visitante] -->|Consulta landing HTTPS| web
+  users[Coordinador y Cliente] -->|Solicita página HTTPS| web
   subgraph system[FríoTrack TB1]
-    landing
-    web -->|Entrega HTML JS CSS| spa[SPA Vue ejecutada en navegador]
+    web[Web Application Azure: landing y bundle SPA] -->|Entrega HTML JS CSS| spa[SPA Vue ejecutada en navegador]
     spa -->|HTTPS JSON Bearer opaco| api[API ASP.NET Core 10]
-    api -->|Lectura y escritura| store[(Archivo JSON privado)]
+    api -->|Lectura y escritura local| store[(Archivo JSON privado)]
   end
   users -->|Interactúa| spa
   spa -->|Teselas HTTPS| maps[OpenStreetMap externo]

@@ -1,0 +1,233 @@
+{
+  "id": "08-c4-contexto",
+  "section": "4.6.2",
+  "title": "FríoTrack · C4 nivel 1 · Contexto",
+  "subtitle": "Un sistema de software · Personas, servicios externos y relaciones previstas identificadas",
+  "width": 1800,
+  "height": 1115,
+  "legend": "Azul oscuro: persona · Azul: sistema propio · Gris: sistema externo · Línea discontinua: integración prevista",
+  "notes": [
+    "Las lecturas actuales son de demostración. Sensores físicos y correo transaccional no se presentan como integraciones implementadas."
+  ],
+  "nodes": [
+    {
+      "id": "visitor",
+      "kind": "actor",
+      "label": "Visitante",
+      "body": [
+        "[Persona]",
+        "Conoce la propuesta y elige cómo acceder."
+      ],
+      "x": 50,
+      "y": 150,
+      "w": 340,
+      "h": 265
+    },
+    {
+      "id": "coordinator",
+      "kind": "actor",
+      "label": "Coordinador Logístico",
+      "body": [
+        "[Persona]",
+        "Programa envíos, administra recursos y atiende alertas."
+      ],
+      "x": 50,
+      "y": 430,
+      "w": 340,
+      "h": 290
+    },
+    {
+      "id": "client",
+      "kind": "actor",
+      "label": "Cliente de Carga",
+      "body": [
+        "[Persona]",
+        "Consulta únicamente sus envíos asignados y evidencia térmica."
+      ],
+      "x": 50,
+      "y": 730,
+      "w": 340,
+      "h": 290
+    },
+    {
+      "id": "system",
+      "kind": "system",
+      "label": "FríoTrack",
+      "body": [
+        "[Sistema de software]",
+        "Gestión de transporte refrigerado, consulta térmica y trazabilidad.",
+        "Control de identidad, permisos y operaciones."
+      ],
+      "x": 650,
+      "y": 380,
+      "w": 450,
+      "h": 300
+    },
+    {
+      "id": "maps",
+      "kind": "external",
+      "label": "OpenStreetMap",
+      "body": [
+        "[Sistema externo · actual]",
+        "Proporciona teselas de los mapas a la aplicación."
+      ],
+      "x": 1330,
+      "y": 150,
+      "w": 400,
+      "h": 170
+    },
+    {
+      "id": "sensors",
+      "kind": "external",
+      "label": "Dispositivos de telemetría",
+      "body": [
+        "[Sistema externo · previsto]",
+        "Lecturas de temperatura, humedad y posición con marca de tiempo."
+      ],
+      "x": 1330,
+      "y": 450,
+      "w": 400,
+      "h": 170
+    },
+    {
+      "id": "mail",
+      "kind": "external",
+      "label": "Servicio de correo",
+      "body": [
+        "[Sistema externo · previsto]",
+        "Confirmación, recuperación y avisos transaccionales. Sin proveedor fijado."
+      ],
+      "x": 1330,
+      "y": 760,
+      "w": 400,
+      "h": 170
+    }
+  ],
+  "edges": [
+    {
+      "source": "visitor",
+      "target": "system",
+      "label": "Consulta propuesta · HTTPS",
+      "sourcePort": "right",
+      "targetPort": "top",
+      "points": [
+        [
+          520,
+          227
+        ],
+        [
+          520,
+          330
+        ],
+        [
+          875,
+          330
+        ]
+      ],
+      "dashed": false,
+      "endArrow": "classic",
+      "labelX": 615,
+      "labelY": 307
+    },
+    {
+      "source": "coordinator",
+      "target": "system",
+      "label": "Opera envíos · HTTPS",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "points": [
+        [
+          520,
+          520
+        ],
+        [
+          520,
+          480
+        ]
+      ],
+      "dashed": false,
+      "endArrow": "classic",
+      "targetOffset": 0.333,
+      "labelX": 520,
+      "labelY": 455
+    },
+    {
+      "source": "client",
+      "target": "system",
+      "label": "Consulta sus envíos · HTTPS",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "points": [
+        [
+          520,
+          820
+        ],
+        [
+          520,
+          620
+        ]
+      ],
+      "dashed": false,
+      "endArrow": "classic",
+      "targetOffset": 0.8,
+      "labelX": 525,
+      "labelY": 725
+    },
+    {
+      "source": "system",
+      "target": "maps",
+      "label": "Solicita teselas · HTTPS",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "points": [
+        [
+          1210,
+          455
+        ],
+        [
+          1210,
+          235
+        ]
+      ],
+      "dashed": false,
+      "endArrow": "classic",
+      "sourceOffset": 0.25,
+      "labelX": 1210,
+      "labelY": 320
+    },
+    {
+      "source": "sensors",
+      "target": "system",
+      "label": "Lecturas HTTPS/JSON · previsto",
+      "sourcePort": "left",
+      "targetPort": "right",
+      "points": [],
+      "dashed": true,
+      "endArrow": "classic",
+      "labelX": 1215,
+      "labelY": 510
+    },
+    {
+      "source": "system",
+      "target": "mail",
+      "label": "Solicita correos · previsto",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "points": [
+        [
+          1210,
+          620
+        ],
+        [
+          1210,
+          845
+        ]
+      ],
+      "dashed": true,
+      "endArrow": "classic",
+      "sourceOffset": 0.8,
+      "labelX": 1215,
+      "labelY": 728
+    }
+  ]
+}
