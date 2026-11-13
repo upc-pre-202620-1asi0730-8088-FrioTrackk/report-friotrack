@@ -1,0 +1,280 @@
+{
+  "id": "10-c4-componentes-api-av2",
+  "section": "4.6.4",
+  "title": "FríoTrack · C4 nivel 3 · Componentes REST API AV2",
+  "subtitle": "Implementación AV2 verificada localmente · El despliegue público de esta versión está pendiente",
+  "width": 1800,
+  "height": 1310,
+  "legend": "SPA y almacén: contenedores propios fuera del alcance API · Nota gris: composición · Flecha discontinua: inyección",
+  "notes": [
+    "No acredita despliegue Azure, ingesta de sensores físicos ni validación con usuarios.",
+    "El modo JSON permanece como reproducción explícita del servicio TB1."
+  ],
+  "nodes": [
+    {
+      "id": "api-boundary",
+      "kind": "boundary",
+      "label": "REST API · ASP.NET Core 10 / C# · Monolito modular",
+      "body": [],
+      "x": 320,
+      "y": 125,
+      "w": 1440,
+      "h": 910
+    },
+    {
+      "id": "spa",
+      "kind": "container",
+      "label": "SPA",
+      "body": [
+        "[Contenedor fuera del alcance API]",
+        "Vue 3 / fetch",
+        "Utiliza el contrato REST."
+      ],
+      "x": 40,
+      "y": 225,
+      "w": 220,
+      "h": 180
+    },
+    {
+      "id": "http",
+      "kind": "component",
+      "label": "Av2Endpoints / contratos HTTP",
+      "body": [
+        "[Componente · ASP.NET Core]",
+        "Rutas REST de recursos, auth y workspace.",
+        "Contratos documentados con OpenAPI."
+      ],
+      "x": 375,
+      "y": 220,
+      "w": 350,
+      "h": 170
+    },
+    {
+      "id": "errors",
+      "kind": "component",
+      "label": "ApiErrorMiddleware",
+      "body": [
+        "[Componente · ASP.NET Core]",
+        "Errores de dominio y concurrencia → HTTP.",
+        "Mensajes en español e inglés."
+      ],
+      "x": 375,
+      "y": 460,
+      "w": 350,
+      "h": 160
+    },
+    {
+      "id": "program",
+      "kind": "note",
+      "label": "Composición · Program.cs",
+      "body": [
+        "Inyección, CORS y rate limit.",
+        "DatabaseInitializer: migración y seed sólo por configuración explícita."
+      ],
+      "x": 375,
+      "y": 735,
+      "w": 350,
+      "h": 160
+    },
+    {
+      "id": "service",
+      "kind": "component",
+      "label": "RelationalWorkspaceService",
+      "body": [
+        "[Servicio de aplicación · C#]",
+        "Autorización por cuenta y organización.",
+        "Orquesta agregados y transacciones."
+      ],
+      "x": 825,
+      "y": 220,
+      "w": 380,
+      "h": 170
+    },
+    {
+      "id": "commands",
+      "kind": "component",
+      "label": "Modelo de dominio tipado",
+      "body": [
+        "[Componentes · C# / DDD]",
+        "Shipment, ShipmentMonitoring, Alert;",
+        "Vehicle, Driver, Sensor y FleetAllocation."
+      ],
+      "x": 825,
+      "y": 500,
+      "w": 380,
+      "h": 170
+    },
+    {
+      "id": "persistence",
+      "kind": "component",
+      "label": "FrioTrackDbContext",
+      "body": [
+        "[Adaptadores · EF Core / Npgsql]",
+        "Mapeo de entidades, consultas y guardado.",
+        "Migración inicial con 18 tablas."
+      ],
+      "x": 1320,
+      "y": 220,
+      "w": 380,
+      "h": 190
+    },
+    {
+      "id": "hasher",
+      "kind": "component",
+      "label": "Pbkdf2PasswordHasher",
+      "body": [
+        "[Adaptador · C# / criptografía]",
+        "Implementa IPasswordHasher.",
+        "PBKDF2-SHA256 con salt individual."
+      ],
+      "x": 1320,
+      "y": 630,
+      "w": 380,
+      "h": 165
+    },
+    {
+      "id": "store",
+      "kind": "datastore",
+      "label": "PostgreSQL 17",
+      "body": [
+        "[Contenedor de datos externo a la API]",
+        "Datos de negocio y sesiones persistidas."
+      ],
+      "x": 1320,
+      "y": 1070,
+      "w": 380,
+      "h": 145
+    }
+  ],
+  "edges": [
+    {
+      "source": "spa",
+      "target": "http",
+      "label": "HTTPS/JSON · Bearer opaco",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "points": [],
+      "dashed": false,
+      "endArrow": "classic",
+      "labelX": 320,
+      "labelY": 205
+    },
+    {
+      "source": "errors",
+      "target": "http",
+      "label": "Envuelve ejecución HTTP",
+      "sourcePort": "top",
+      "targetPort": "bottom",
+      "points": [],
+      "dashed": false,
+      "endArrow": "classic",
+      "labelX": 555,
+      "labelY": 435
+    },
+    {
+      "source": "http",
+      "target": "service",
+      "label": "Invoca casos de uso",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "points": [],
+      "dashed": false,
+      "endArrow": "classic",
+      "labelX": 775,
+      "labelY": 200
+    },
+    {
+      "source": "service",
+      "target": "commands",
+      "label": "Invoca reglas e invariantes",
+      "sourcePort": "bottom",
+      "targetPort": "top",
+      "points": [],
+      "dashed": false,
+      "endArrow": "classic",
+      "labelX": 1080,
+      "labelY": 450
+    },
+    {
+      "source": "service",
+      "target": "persistence",
+      "label": "EF Core",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "points": [],
+      "dashed": false,
+      "endArrow": "classic",
+      "labelX": 1260,
+      "labelY": 280
+    },
+    {
+      "source": "service",
+      "target": "hasher",
+      "label": "Hash / Matches",
+      "sourcePort": "right",
+      "targetPort": "top",
+      "points": [
+        [
+          1240,
+          360
+        ],
+        [
+          1240,
+          595
+        ],
+        [
+          1510,
+          595
+        ]
+      ],
+      "dashed": false,
+      "endArrow": "classic",
+      "sourceOffset": 0.82,
+      "labelX": 1375,
+      "labelY": 575
+    },
+    {
+      "source": "persistence",
+      "target": "store",
+      "label": "SQL · conexión Npgsql",
+      "sourcePort": "right",
+      "targetPort": "right",
+      "points": [
+        [
+          1730,
+          315
+        ],
+        [
+          1730,
+          1127
+        ]
+      ],
+      "dashed": false,
+      "endArrow": "classic",
+      "labelX": 1585,
+      "labelY": 1000
+    },
+    {
+      "source": "program",
+      "target": "service",
+      "label": "Inyecta puertos y adaptadores",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "points": [
+        [
+          775,
+          815
+        ],
+        [
+          775,
+          365
+        ]
+      ],
+      "dashed": true,
+      "endArrow": "classic",
+      "targetOffset": 0.85,
+      "labelX": 770,
+      "labelY": 710
+    }
+  ]
+}

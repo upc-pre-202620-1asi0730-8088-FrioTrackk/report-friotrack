@@ -1,0 +1,68 @@
+[
+  {
+    "repository": "friotrack-api",
+    "sha": "e9aca8e735edde7699e9447863c7f56b12e062e8",
+    "checks": [
+      {
+        "name": "verify",
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-api/actions/runs/43497269119/job/132133543125"
+      },
+      {
+        "name": "verify",
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-api/actions/runs/43497268721/job/132133541890"
+      }
+    ]
+  },
+  {
+    "repository": "friotrack-frontend",
+    "sha": "9ef083eba26bd16ea648ce8dd2f2fd2bfa694baa",
+    "checks": [
+      {
+        "name": "verify",
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/actions/runs/43497706625/job/132135045486"
+      },
+      {
+        "name": "verify",
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/actions/runs/43497706522/job/132135044684"
+      }
+    ]
+  },
+  {
+    "repository": "friotrack-landing",
+    "sha": "36f206712d0952b41ad6b3e6893645d9a0fcc682",
+    "checks": [
+      {
+        "name": "deploy",
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-landing/actions/runs/43497712247/job/132135300843"
+      },
+      {
+        "name": "report-build-status",
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-landing/actions/runs/43497712247/job/132135300511"
+      },
+      {
+        "name": "verify",
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-landing/actions/runs/43497715797/job/132135077027"
+      },
+      {
+        "name": "build",
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-landing/actions/runs/43497712247/job/132135073528"
+      }
+    ]
+  }
+]

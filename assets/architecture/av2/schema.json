@@ -1,0 +1,1387 @@
+{
+  "status": "av2_ef_core_migration_source_not_cloud_deployment",
+  "migration": "20261113144845_InitialAv2Relational.cs",
+  "migrationSha256": "5f29bb5030cbe8c0212b0be70fd70913d6cfaad98f8e1d98293d5fa16fe7c793",
+  "tables": [
+    {
+      "table": "shipments",
+      "primaryKey": "id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "character varying(100)",
+          "nullable": false
+        },
+        {
+          "name": "organization_id",
+          "type": "character varying(100)",
+          "nullable": false
+        },
+        {
+          "name": "coordinator_id",
+          "type": "character varying(100)",
+          "nullable": false
+        },
+        {
+          "name": "customer_id",
+          "type": "character varying(100)",
+          "nullable": false
+        },
+        {
+          "name": "vehicle_id",
+          "type": "character varying(100)",
+          "nullable": false
+        },
+        {
+          "name": "driver_id",
+          "type": "character varying(100)",
+          "nullable": false
+        },
+        {
+          "name": "cargo",
+          "type": "character varying(2000)",
+          "nullable": false
+        },
+        {
+          "name": "weight",
+          "type": "numeric(12,5)",
+          "nullable": false
+        },
+        {
+          "name": "origin",
+          "type": "character varying(2000)",
+          "nullable": false
+        },
+        {
+          "name": "destination",
+          "type": "character varying(2000)",
+          "nullable": false
+        },
+        {
+          "name": "departure",
+          "type": "timestamp with time zone",
+          "nullable": false
+        },
+        {
+          "name": "arrival",
+          "type": "timestamp with time zone",
+          "nullable": false
+        },
+        {
+          "name": "status",
+          "type": "character varying(2000)",
+          "nullable": false
+        },
+        {
+          "name": "version",
+          "type": "bigint",
+          "nullable": false
+        },
+        {
+          "name": "min_temp",
+          "type": "numeric(12,5)",
+          "nullable": false
+        },
+        {
+          "name": "max_temp",
+          "type": "numeric(12,5)",
+          "nullable": false
+        },
+        {
+          "name": "min_humidity",
+          "type": "numeric(12,5)",
+          "nullable": false
+        },
+        {
+          "name": "max_humidity",
+          "type": "numeric(12,5)",
+          "nullable": false
+        },
+        {
+          "name": "tolerance_minutes",
+          "type": "integer",
+          "nullable": false
+        }
+      ],
+      "foreignKeys": [
+        {
+          "name": "FK_shipments_drivers_driver_id",
+          "column": "driver_id",
+          "parentTable": "drivers",
+          "parentColumn": "id",
+          "onDelete": "Restrict"
+        },
+        {
+          "name": "FK_shipments_organizations_organization_id",
+          "column": "organization_id",
+          "parentTable": "organizations",
+          "parentColumn": "id",
+          "onDelete": "Restrict"
+        },
+        {
+          "name": "FK_shipments_users_coordinator_id",
+          "column": "coordinator_id",
+          "parentTable": "users",
+          "parentColumn": "id",
+          "onDelete": "Restrict"
+        },
+        {
+          "name": "FK_shipments_users_customer_id",
+          "column": "customer_id",
+          "parentTable": "users",
+          "parentColumn": "id",
+          "onDelete": "Restrict"
+        },
+        {
+          "name": "FK_shipments_vehicles_vehicle_id",
+          "column": "vehicle_id",
+          "parentTable": "vehicles",
+          "parentColumn": "id",
+          "onDelete": "Restrict"
+        }
+      ],
+      "checks": [
+        {
+          "name": "ck_shipment_dates",
+          "expression": "arrival > departure"
+        },
+        {
+          "name": "ck_shipment_range",
+          "expression": "min_temp < max_temp AND min_humidity < max_humidity AND min_humidity >= 0 AND max_humidity <= 100 AND tolerance_minutes >= 0"
+        },
+        {
+          "name": "ck_shipment_status",
+          "expression": "status IN ('scheduled','in-transit','delivered','cancelled')"
+        },
+        {
+          "name": "ck_shipment_weight",
+          "expression": "weight > 0"
+        }
+      ],
+      "indexes": [
+        {
+          "name": "IX_shipments_coordinator_id",
+          "columns": [
+            "coordinator_id"
+          ],
+          "unique": false
+        },
+        {
+          "name": "IX_shipments_customer_id",
+          "columns": [
+            "customer_id"
+          ],
+          "unique": false
+        },
+        {
+          "name": "IX_shipments_driver_id",
+          "columns": [
+            "driver_id"
+          ],
+          "unique": false
+        },
+        {
+          "name": "IX_shipments_organization_id_status",
+          "columns": [
+            "organization_id",
+            "status"
+          ],
+          "unique": false
+        },
+        {
+          "name": "IX_shipments_vehicle_id",
+          "columns": [
+            "vehicle_id"
+          ],
+          "unique": false
+        }
+      ],
+      "context": "Shipment Management"
+    },
+    {
+      "table": "shipment_history",
+      "primaryKey": "id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "character varying(100)",
+          "nullable": false
+        },
+        {
+          "name": "shipment_id",
+          "type": "character varying(100)",
+          "nullable": false
+        },
+        {
+          "name": "actor_id",
+          "type": "character varying(100)",
+          "nullable": false
+        },
+        {
+          "name": "action",
+          "type": "character varying(2000)",
+          "nullable": false
+        },
+        {
+          "name": "note",
+          "type": "character varying(2000)",
+          "nullable": false
+        },
+        {
+          "name": "at",
+          "type": "timestamp with time zone",
+          "nullable": false
+        }
+      ],
+      "foreignKeys": [
+        {
+          "name": "FK_shipment_history_shipments_shipment_id",
+          "column": "shipment_id",
+          "parentTable": "shipments",
+          "parentColumn": "id",
+          "onDelete": "Cascade"
+        },
+        {
+          "name": "FK_shipment_history_users_actor_id",
+          "column": "actor_id",
+          "parentTable": "users",
+          "parentColumn": "id",
+          "onDelete": "Restrict"
+        }
+      ],
+      "checks": [],
+      "indexes": [
+        {
+          "name": "IX_shipment_history_actor_id",
+          "columns": [
+            "actor_id"
+          ],
+          "unique": false
+        },
+        {
+          "name": "IX_shipment_history_shipment_id",
+          "columns": [
+            "shipment_id"
+          ],
+          "unique": false
+        }
+      ],
+      "context": "Shipment Management"
+    },
+    {
+      "table": "shipment_monitorings",
+      "primaryKey": "id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "character varying(100)",
+          "nullable": false
+        },
+        {
+          "name": "shipment_id",
+          "type": "character varying(100)",
+          "nullable": false
+        },
+        {
+          "name": "min_temp",
+          "type": "numeric(12,5)",
+          "nullable": false
+        },
+        {
+          "name": "max_temp",
+          "type": "numeric(12,5)",
+          "nullable": false
+        },
+        {
+          "name": "min_humidity",
+          "type": "numeric(12,5)",
+          "nullable": false
+        },
+        {
+          "name": "max_humidity",
+          "type": "numeric(12,5)",
+          "nullable": false
+        },
+        {
+          "name": "tolerance_minutes",
+          "type": "integer",
+          "nullable": false
+        },
+        {
+          "name": "max_silence_minutes",
+          "type": "integer",
+          "nullable": false
+        },
+        {
+          "name": "signal_status",
+          "type": "character varying(2000)",
+          "nullable": false
+        },
+        {
+          "name": "started_at",
+          "type": "timestamp with time zone",
+          "nullable": false
+        },
+        {
+          "name": "stopped_at",
+          "type": "timestamp with time zone",
+          "nullable": true
+        },
+        {
+          "name": "last_reading_at",
+          "type": "timestamp with time zone",
+          "nullable": true
+        }
+      ],
+      "foreignKeys": [
+        {
+          "name": "FK_shipment_monitorings_shipments_shipment_id",
+          "column": "shipment_id",
+          "parentTable": "shipments",
+          "parentColumn": "id",
+          "onDelete": "Cascade"
+        }
+      ],
+      "checks": [
+        {
+          "name": "ck_monitoring_range",
+          "expression": "min_temp < max_temp AND min_humidity < max_humidity AND min_humidity >= 0 AND max_humidity <= 100"
+        }
+      ],
+      "indexes": [
+        {
+          "name": "IX_shipment_monitorings_shipment_id",
+          "columns": [
+            "shipment_id"
+          ],
+          "unique": true
+        }
+      ],
+      "context": "Monitoring and Telemetry"
+    },
+    {
+      "table": "sensor_readings",
+      "primaryKey": "id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "character varying(100)",
+          "nullable": false
+        },
+        {
+          "name": "monitoring_id",
+          "type": "character varying(100)",
+          "nullable": false
+        },
+        {
+          "name": "temperature",
+          "type": "numeric(12,5)",
+          "nullable": false
+        },
+        {
+          "name": "humidity",
+          "type": "numeric(12,5)",
+          "nullable": false
+        },
+        {
+          "name": "at",
+          "type": "timestamp with time zone",
+          "nullable": false
+        },
+        {
+          "name": "within_range",
+          "type": "boolean",
+          "nullable": false
+        },
+        {
+          "name": "is_demonstration",
+          "type": "boolean",
+          "nullable": false
+        }
+      ],
+      "foreignKeys": [
+        {
+          "name": "FK_sensor_readings_shipment_monitorings_monitoring_id",
+          "column": "monitoring_id",
+          "parentTable": "shipment_monitorings",
+          "parentColumn": "id",
+          "onDelete": "Cascade"
+        }
+      ],
+      "checks": [
+        {
+          "name": "ck_reading_values",
+          "expression": "humidity >= 0 AND humidity <= 100 AND temperature >= -50 AND temperature <= 50"
+        }
+      ],
+      "indexes": [
+        {
+          "name": "IX_sensor_readings_monitoring_id_at",
+          "columns": [
+            "monitoring_id",
+            "at"
+          ],
+          "unique": false
+        }
+      ],
+      "context": "Monitoring and Telemetry"
+    },
+    {
+      "table": "position_reports",
+      "primaryKey": "id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "character varying(100)",
+          "nullable": false
+        },
+        {
+          "name": "monitoring_id",
+          "type": "character varying(100)",
+          "nullable": false
+        },
+        {
+          "name": "reading_id",
+          "type": "character varying(100)",
+          "nullable": false
+        },
+        {
+          "name": "latitude",
+          "type": "numeric(12,5)",
+          "nullable": false
+        },
+        {
+          "name": "longitude",
+          "type": "numeric(12,5)",
+          "nullable": false
+        },
+        {
+          "name": "at",
+          "type": "timestamp with time zone",
+          "nullable": false
+        }
+      ],
+      "foreignKeys": [
+        {
+          "name": "FK_position_reports_sensor_readings_reading_id",
+          "column": "reading_id",
+          "parentTable": "sensor_readings",
+          "parentColumn": "id",
+          "onDelete": "Cascade"
+        },
+        {
+          "name": "FK_position_reports_shipment_monitorings_monitoring_id",
+          "column": "monitoring_id",
+          "parentTable": "shipment_monitorings",
+          "parentColumn": "id",
+          "onDelete": "Cascade"
+        }
+      ],
+      "checks": [
+        {
+          "name": "ck_position_coordinates",
+          "expression": "latitude >= -90 AND latitude <= 90 AND longitude >= -180 AND longitude <= 180"
+        }
+      ],
+      "indexes": [
+        {
+          "name": "IX_position_reports_monitoring_id",
+          "columns": [
+            "monitoring_id"
+          ],
+          "unique": false
+        },
+        {
+          "name": "IX_position_reports_reading_id",
+          "columns": [
+            "reading_id"
+          ],
+          "unique": true
+        }
+      ],
+      "context": "Monitoring and Telemetry"
+    },
+    {
+      "table": "vehicles",
+      "primaryKey": "id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "character varying(100)",
+          "nullable": false
+        },
+        {
+          "name": "organization_id",
+          "type": "character varying(100)",
+          "nullable": false
+        },
+        {
+          "name": "plate",
+          "type": "character varying(2000)",
+          "nullable": false
+        },
+        {
+          "name": "capacity",
+          "type": "numeric(12,5)",
+          "nullable": false
+        },
+        {
+          "name": "enabled",
+          "type": "boolean",
+          "nullable": false
+        }
+      ],
+      "foreignKeys": [
+        {
+          "name": "FK_vehicles_organizations_organization_id",
+          "column": "organization_id",
+          "parentTable": "organizations",
+          "parentColumn": "id",
+          "onDelete": "Restrict"
+        }
+      ],
+      "checks": [
+        {
+          "name": "ck_vehicle_capacity",
+          "expression": "capacity > 0 AND capacity <= 100"
+        }
+      ],
+      "indexes": [
+        {
+          "name": "IX_vehicles_organization_id",
+          "columns": [
+            "organization_id"
+          ],
+          "unique": false
+        },
+        {
+          "name": "IX_vehicles_plate",
+          "columns": [
+            "plate"
+          ],
+          "unique": true
+        }
+      ],
+      "context": "Fleet and Resources"
+    },
+    {
+      "table": "drivers",
+      "primaryKey": "id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "character varying(100)",
+          "nullable": false
+        },
+        {
+          "name": "organization_id",
+          "type": "character varying(100)",
+          "nullable": false
+        },
+        {
+          "name": "name",
+          "type": "character varying(2000)",
+          "nullable": false
+        },
+        {
+          "name": "license",
+          "type": "character varying(2000)",
+          "nullable": false
+        },
+        {
+          "name": "enabled",
+          "type": "boolean",
+          "nullable": false
+        }
+      ],
+      "foreignKeys": [
+        {
+          "name": "FK_drivers_organizations_organization_id",
+          "column": "organization_id",
+          "parentTable": "organizations",
+          "parentColumn": "id",
+          "onDelete": "Restrict"
+        }
+      ],
+      "checks": [],
+      "indexes": [
+        {
+          "name": "IX_drivers_license",
+          "columns": [
+            "license"
+          ],
+          "unique": true
+        },
+        {
+          "name": "IX_drivers_organization_id",
+          "columns": [
+            "organization_id"
+          ],
+          "unique": false
+        }
+      ],
+      "context": "Fleet and Resources"
+    },
+    {
+      "table": "sensors",
+      "primaryKey": "id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "character varying(100)",
+          "nullable": false
+        },
+        {
+          "name": "organization_id",
+          "type": "character varying(100)",
+          "nullable": false
+        },
+        {
+          "name": "serial_code",
+          "type": "character varying(2000)",
+          "nullable": false
+        },
+        {
+          "name": "vehicle_id",
+          "type": "character varying(100)",
+          "nullable": true
+        },
+        {
+          "name": "enabled",
+          "type": "boolean",
+          "nullable": false
+        }
+      ],
+      "foreignKeys": [
+        {
+          "name": "FK_sensors_organizations_organization_id",
+          "column": "organization_id",
+          "parentTable": "organizations",
+          "parentColumn": "id",
+          "onDelete": "Restrict"
+        },
+        {
+          "name": "FK_sensors_vehicles_vehicle_id",
+          "column": "vehicle_id",
+          "parentTable": "vehicles",
+          "parentColumn": "id",
+          "onDelete": "Restrict"
+        }
+      ],
+      "checks": [],
+      "indexes": [
+        {
+          "name": "IX_sensors_organization_id",
+          "columns": [
+            "organization_id"
+          ],
+          "unique": false
+        },
+        {
+          "name": "IX_sensors_serial_code",
+          "columns": [
+            "serial_code"
+          ],
+          "unique": true
+        },
+        {
+          "name": "IX_sensors_vehicle_id",
+          "columns": [
+            "vehicle_id"
+          ],
+          "unique": true
+        }
+      ],
+      "context": "Fleet and Resources"
+    },
+    {
+      "table": "fleet_allocations",
+      "primaryKey": "id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "character varying(100)",
+          "nullable": false
+        },
+        {
+          "name": "shipment_id",
+          "type": "character varying(100)",
+          "nullable": false
+        },
+        {
+          "name": "vehicle_id",
+          "type": "character varying(100)",
+          "nullable": false
+        },
+        {
+          "name": "driver_id",
+          "type": "character varying(100)",
+          "nullable": false
+        },
+        {
+          "name": "from",
+          "type": "timestamp with time zone",
+          "nullable": false
+        },
+        {
+          "name": "until",
+          "type": "timestamp with time zone",
+          "nullable": false
+        },
+        {
+          "name": "status",
+          "type": "character varying(2000)",
+          "nullable": false
+        },
+        {
+          "name": "released_at",
+          "type": "timestamp with time zone",
+          "nullable": true
+        }
+      ],
+      "foreignKeys": [
+        {
+          "name": "FK_fleet_allocations_drivers_driver_id",
+          "column": "driver_id",
+          "parentTable": "drivers",
+          "parentColumn": "id",
+          "onDelete": "Restrict"
+        },
+        {
+          "name": "FK_fleet_allocations_shipments_shipment_id",
+          "column": "shipment_id",
+          "parentTable": "shipments",
+          "parentColumn": "id",
+          "onDelete": "Cascade"
+        },
+        {
+          "name": "FK_fleet_allocations_vehicles_vehicle_id",
+          "column": "vehicle_id",
+          "parentTable": "vehicles",
+          "parentColumn": "id",
+          "onDelete": "Restrict"
+        }
+      ],
+      "checks": [
+        {
+          "name": "ck_allocation_interval",
+          "expression": "until > \"from\""
+        }
+      ],
+      "indexes": [
+        {
+          "name": "IX_fleet_allocations_driver_id_from_until",
+          "columns": [
+            "driver_id",
+            "from",
+            "until"
+          ],
+          "unique": false
+        },
+        {
+          "name": "IX_fleet_allocations_shipment_id",
+          "columns": [
+            "shipment_id"
+          ],
+          "unique": true
+        },
+        {
+          "name": "IX_fleet_allocations_vehicle_id_from_until",
+          "columns": [
+            "vehicle_id",
+            "from",
+            "until"
+          ],
+          "unique": false
+        }
+      ],
+      "context": "Fleet and Resources"
+    },
+    {
+      "table": "alerts",
+      "primaryKey": "id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "character varying(100)",
+          "nullable": false
+        },
+        {
+          "name": "shipment_id",
+          "type": "character varying(100)",
+          "nullable": false
+        },
+        {
+          "name": "type",
+          "type": "character varying(2000)",
+          "nullable": false
+        },
+        {
+          "name": "reading",
+          "type": "numeric(12,5)",
+          "nullable": true
+        },
+        {
+          "name": "trigger_reading_id",
+          "type": "character varying(100)",
+          "nullable": true
+        },
+        {
+          "name": "at",
+          "type": "timestamp with time zone",
+          "nullable": false
+        },
+        {
+          "name": "last_deviation_at",
+          "type": "timestamp with time zone",
+          "nullable": false
+        },
+        {
+          "name": "severity",
+          "type": "character varying(2000)",
+          "nullable": false
+        },
+        {
+          "name": "status",
+          "type": "character varying(2000)",
+          "nullable": false
+        },
+        {
+          "name": "resolved_at",
+          "type": "timestamp with time zone",
+          "nullable": true
+        },
+        {
+          "name": "recovery_reading_id",
+          "type": "character varying(100)",
+          "nullable": true
+        }
+      ],
+      "foreignKeys": [
+        {
+          "name": "FK_alerts_sensor_readings_trigger_reading_id",
+          "column": "trigger_reading_id",
+          "parentTable": "sensor_readings",
+          "parentColumn": "id",
+          "onDelete": "Restrict"
+        },
+        {
+          "name": "FK_alerts_shipments_shipment_id",
+          "column": "shipment_id",
+          "parentTable": "shipments",
+          "parentColumn": "id",
+          "onDelete": "Cascade"
+        }
+      ],
+      "checks": [
+        {
+          "name": "ck_alert_status",
+          "expression": "status IN ('active','acknowledged','resolved')"
+        }
+      ],
+      "indexes": [
+        {
+          "name": "IX_alerts_shipment_id_status",
+          "columns": [
+            "shipment_id",
+            "status"
+          ],
+          "unique": false
+        },
+        {
+          "name": "IX_alerts_trigger_reading_id",
+          "columns": [
+            "trigger_reading_id"
+          ],
+          "unique": false
+        }
+      ],
+      "context": "Alert and Reporting"
+    },
+    {
+      "table": "corrective_actions",
+      "primaryKey": "id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "character varying(100)",
+          "nullable": false
+        },
+        {
+          "name": "alert_id",
+          "type": "character varying(100)",
+          "nullable": false
+        },
+        {
+          "name": "actor_id",
+          "type": "character varying(100)",
+          "nullable": false
+        },
+        {
+          "name": "note",
+          "type": "character varying(2000)",
+          "nullable": false
+        },
+        {
+          "name": "notify_client",
+          "type": "boolean",
+          "nullable": false
+        },
+        {
+          "name": "at",
+          "type": "timestamp with time zone",
+          "nullable": false
+        }
+      ],
+      "foreignKeys": [
+        {
+          "name": "FK_corrective_actions_alerts_alert_id",
+          "column": "alert_id",
+          "parentTable": "alerts",
+          "parentColumn": "id",
+          "onDelete": "Cascade"
+        },
+        {
+          "name": "FK_corrective_actions_users_actor_id",
+          "column": "actor_id",
+          "parentTable": "users",
+          "parentColumn": "id",
+          "onDelete": "Restrict"
+        }
+      ],
+      "checks": [],
+      "indexes": [
+        {
+          "name": "IX_corrective_actions_actor_id",
+          "columns": [
+            "actor_id"
+          ],
+          "unique": false
+        },
+        {
+          "name": "IX_corrective_actions_alert_id",
+          "columns": [
+            "alert_id"
+          ],
+          "unique": false
+        }
+      ],
+      "context": "Alert and Reporting"
+    },
+    {
+      "table": "notifications",
+      "primaryKey": "id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "character varying(100)",
+          "nullable": false
+        },
+        {
+          "name": "shipment_id",
+          "type": "character varying(100)",
+          "nullable": false
+        },
+        {
+          "name": "recipient_id",
+          "type": "character varying(100)",
+          "nullable": false
+        },
+        {
+          "name": "type",
+          "type": "character varying(2000)",
+          "nullable": false
+        },
+        {
+          "name": "at",
+          "type": "timestamp with time zone",
+          "nullable": false
+        },
+        {
+          "name": "read_at",
+          "type": "timestamp with time zone",
+          "nullable": true
+        }
+      ],
+      "foreignKeys": [
+        {
+          "name": "FK_notifications_shipments_shipment_id",
+          "column": "shipment_id",
+          "parentTable": "shipments",
+          "parentColumn": "id",
+          "onDelete": "Cascade"
+        },
+        {
+          "name": "FK_notifications_users_recipient_id",
+          "column": "recipient_id",
+          "parentTable": "users",
+          "parentColumn": "id",
+          "onDelete": "Restrict"
+        }
+      ],
+      "checks": [],
+      "indexes": [
+        {
+          "name": "IX_notifications_recipient_id_read_at",
+          "columns": [
+            "recipient_id",
+            "read_at"
+          ],
+          "unique": false
+        },
+        {
+          "name": "IX_notifications_shipment_id",
+          "columns": [
+            "shipment_id"
+          ],
+          "unique": false
+        }
+      ],
+      "context": "Alert and Reporting"
+    },
+    {
+      "table": "incidents",
+      "primaryKey": "id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "character varying(100)",
+          "nullable": false
+        },
+        {
+          "name": "shipment_id",
+          "type": "character varying(100)",
+          "nullable": false
+        },
+        {
+          "name": "actor_id",
+          "type": "character varying(100)",
+          "nullable": false
+        },
+        {
+          "name": "note",
+          "type": "character varying(2000)",
+          "nullable": false
+        },
+        {
+          "name": "at",
+          "type": "timestamp with time zone",
+          "nullable": false
+        }
+      ],
+      "foreignKeys": [
+        {
+          "name": "FK_incidents_shipments_shipment_id",
+          "column": "shipment_id",
+          "parentTable": "shipments",
+          "parentColumn": "id",
+          "onDelete": "Cascade"
+        },
+        {
+          "name": "FK_incidents_users_actor_id",
+          "column": "actor_id",
+          "parentTable": "users",
+          "parentColumn": "id",
+          "onDelete": "Restrict"
+        }
+      ],
+      "checks": [],
+      "indexes": [
+        {
+          "name": "IX_incidents_actor_id",
+          "columns": [
+            "actor_id"
+          ],
+          "unique": false
+        },
+        {
+          "name": "IX_incidents_shipment_id",
+          "columns": [
+            "shipment_id"
+          ],
+          "unique": false
+        }
+      ],
+      "context": "Alert and Reporting"
+    },
+    {
+      "table": "thermal_reports",
+      "primaryKey": "id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "character varying(100)",
+          "nullable": false
+        },
+        {
+          "name": "shipment_id",
+          "type": "character varying(100)",
+          "nullable": false
+        },
+        {
+          "name": "generated_by",
+          "type": "character varying(2000)",
+          "nullable": false
+        },
+        {
+          "name": "at",
+          "type": "timestamp with time zone",
+          "nullable": false
+        },
+        {
+          "name": "snapshot",
+          "type": "jsonb",
+          "nullable": false
+        }
+      ],
+      "foreignKeys": [
+        {
+          "name": "FK_thermal_reports_shipments_shipment_id",
+          "column": "shipment_id",
+          "parentTable": "shipments",
+          "parentColumn": "id",
+          "onDelete": "Cascade"
+        },
+        {
+          "name": "FK_thermal_reports_users_generated_by",
+          "column": "generated_by",
+          "parentTable": "users",
+          "parentColumn": "id",
+          "onDelete": "Restrict"
+        }
+      ],
+      "checks": [],
+      "indexes": [
+        {
+          "name": "IX_thermal_reports_generated_by",
+          "columns": [
+            "generated_by"
+          ],
+          "unique": false
+        },
+        {
+          "name": "IX_thermal_reports_shipment_id",
+          "columns": [
+            "shipment_id"
+          ],
+          "unique": false
+        }
+      ],
+      "context": "Alert and Reporting"
+    },
+    {
+      "table": "organizations",
+      "primaryKey": "id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "character varying(100)",
+          "nullable": false
+        },
+        {
+          "name": "name",
+          "type": "character varying(2000)",
+          "nullable": false
+        }
+      ],
+      "foreignKeys": [],
+      "checks": [],
+      "indexes": [],
+      "context": "IAM"
+    },
+    {
+      "table": "users",
+      "primaryKey": "id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "character varying(100)",
+          "nullable": false
+        },
+        {
+          "name": "organization_id",
+          "type": "character varying(100)",
+          "nullable": false
+        },
+        {
+          "name": "name",
+          "type": "character varying(2000)",
+          "nullable": false
+        },
+        {
+          "name": "email",
+          "type": "character varying(2000)",
+          "nullable": false
+        },
+        {
+          "name": "company_name",
+          "type": "character varying(2000)",
+          "nullable": false
+        },
+        {
+          "name": "role",
+          "type": "character varying(2000)",
+          "nullable": false
+        },
+        {
+          "name": "language",
+          "type": "character varying(2000)",
+          "nullable": false
+        },
+        {
+          "name": "password_hash",
+          "type": "character varying(2000)",
+          "nullable": false
+        },
+        {
+          "name": "password_salt",
+          "type": "character varying(2000)",
+          "nullable": false
+        },
+        {
+          "name": "enabled",
+          "type": "boolean",
+          "nullable": false
+        }
+      ],
+      "foreignKeys": [
+        {
+          "name": "FK_users_organizations_organization_id",
+          "column": "organization_id",
+          "parentTable": "organizations",
+          "parentColumn": "id",
+          "onDelete": "Restrict"
+        }
+      ],
+      "checks": [
+        {
+          "name": "ck_user_role",
+          "expression": "role IN ('coordinator','cargo-client')"
+        }
+      ],
+      "indexes": [
+        {
+          "name": "IX_users_email",
+          "columns": [
+            "email"
+          ],
+          "unique": true
+        },
+        {
+          "name": "IX_users_organization_id",
+          "columns": [
+            "organization_id"
+          ],
+          "unique": false
+        }
+      ],
+      "context": "IAM"
+    },
+    {
+      "table": "auth_sessions",
+      "primaryKey": "token_hash",
+      "fields": [
+        {
+          "name": "token_hash",
+          "type": "character varying(100)",
+          "nullable": false
+        },
+        {
+          "name": "user_id",
+          "type": "character varying(100)",
+          "nullable": false
+        },
+        {
+          "name": "expires_at",
+          "type": "timestamp with time zone",
+          "nullable": false
+        }
+      ],
+      "foreignKeys": [
+        {
+          "name": "FK_auth_sessions_users_user_id",
+          "column": "user_id",
+          "parentTable": "users",
+          "parentColumn": "id",
+          "onDelete": "Cascade"
+        }
+      ],
+      "checks": [],
+      "indexes": [
+        {
+          "name": "IX_auth_sessions_expires_at",
+          "columns": [
+            "expires_at"
+          ],
+          "unique": false
+        },
+        {
+          "name": "IX_auth_sessions_user_id",
+          "columns": [
+            "user_id"
+          ],
+          "unique": false
+        }
+      ],
+      "context": "IAM"
+    },
+    {
+      "table": "password_reset_tokens",
+      "primaryKey": "id",
+      "fields": [
+        {
+          "name": "id",
+          "type": "character varying(100)",
+          "nullable": false
+        },
+        {
+          "name": "user_id",
+          "type": "character varying(100)",
+          "nullable": false
+        },
+        {
+          "name": "token_hash",
+          "type": "character varying(100)",
+          "nullable": false
+        },
+        {
+          "name": "expires_at",
+          "type": "timestamp with time zone",
+          "nullable": false
+        },
+        {
+          "name": "used_at",
+          "type": "timestamp with time zone",
+          "nullable": true
+        }
+      ],
+      "foreignKeys": [
+        {
+          "name": "FK_password_reset_tokens_users_user_id",
+          "column": "user_id",
+          "parentTable": "users",
+          "parentColumn": "id",
+          "onDelete": "Cascade"
+        }
+      ],
+      "checks": [],
+      "indexes": [
+        {
+          "name": "IX_password_reset_tokens_token_hash",
+          "columns": [
+            "token_hash"
+          ],
+          "unique": true
+        },
+        {
+          "name": "IX_password_reset_tokens_user_id",
+          "columns": [
+            "user_id"
+          ],
+          "unique": false
+        }
+      ],
+      "context": "IAM"
+    }
+  ]
+}

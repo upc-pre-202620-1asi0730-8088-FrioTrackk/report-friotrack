@@ -1,0 +1,243 @@
+{
+  "id": "09-c4-contenedores-av2",
+  "section": "4.6.3",
+  "title": "FríoTrack · C4 nivel 2 · Contenedores AV2",
+  "subtitle": "Implementación AV2 verificada localmente · El despliegue público de esta versión está pendiente",
+  "width": 1800,
+  "height": 1330,
+  "legend": "Contenedor = aplicación o almacén · La flecha indica uso, entrega o acceso a datos",
+  "notes": [
+    "No acredita despliegue Azure, ingesta de sensores físicos ni validación con usuarios.",
+    "El modo JSON permanece como reproducción explícita del servicio TB1."
+  ],
+  "nodes": [
+    {
+      "id": "system-boundary",
+      "kind": "boundary",
+      "label": "FríoTrack · Sistema",
+      "body": [],
+      "x": 35,
+      "y": 475,
+      "w": 1720,
+      "h": 610
+    },
+    {
+      "id": "visitor",
+      "kind": "actor",
+      "label": "Visitante",
+      "body": [
+        "[Persona]",
+        "Lee la landing y abre el acceso."
+      ],
+      "x": 110.0,
+      "y": 140,
+      "w": 360,
+      "h": 250
+    },
+    {
+      "id": "user",
+      "kind": "actor",
+      "label": "Usuario autenticado",
+      "body": [
+        "[Persona · Coordinador o Cliente de Carga]",
+        "Utiliza las operaciones permitidas por su cuenta."
+      ],
+      "x": 790.0,
+      "y": 140,
+      "w": 360,
+      "h": 250
+    },
+    {
+      "id": "web",
+      "kind": "container",
+      "label": "Web Application",
+      "body": [
+        "[Contenedor · Servidor estático]",
+        "Entrega landing, index.html y bundle JS/CSS.",
+        "El navegador ejecuta la SPA."
+      ],
+      "x": 110,
+      "y": 560,
+      "w": 360,
+      "h": 210
+    },
+    {
+      "id": "spa",
+      "kind": "container",
+      "label": "Single Page Application",
+      "body": [
+        "[Contenedor · Vue 3 / PrimeVue / Leaflet]",
+        "Se ejecuta en el navegador.",
+        "Vistas reactivas, rutas y consultas autorizadas."
+      ],
+      "x": 690,
+      "y": 560,
+      "w": 360,
+      "h": 210
+    },
+    {
+      "id": "api",
+      "kind": "container",
+      "label": "REST API",
+      "body": [
+        "[Contenedor · ASP.NET Core 10 / C#]",
+        "Sesiones, autorización y operaciones de dominio.",
+        "Swagger / OpenAPI; EF Core / Npgsql."
+      ],
+      "x": 1280,
+      "y": 560,
+      "w": 360,
+      "h": 210
+    },
+    {
+      "id": "store",
+      "kind": "datastore",
+      "label": "Base de datos operativa",
+      "body": [
+        "[Contenedor · PostgreSQL 17]",
+        "18 tablas normalizadas.",
+        "Cuentas, sesiones y operaciones persistentes."
+      ],
+      "x": 1280,
+      "y": 900,
+      "w": 360,
+      "h": 175
+    },
+    {
+      "id": "maps",
+      "kind": "external",
+      "label": "OpenStreetMap",
+      "body": [
+        "[Sistema externo]",
+        "Teselas para el navegador."
+      ],
+      "x": 110,
+      "y": 1140,
+      "w": 360,
+      "h": 135
+    }
+  ],
+  "edges": [
+    {
+      "source": "visitor",
+      "target": "web",
+      "label": "Consulta landing · HTTPS",
+      "sourcePort": "bottom",
+      "targetPort": "top",
+      "points": [
+        [
+          290,
+          500
+        ]
+      ],
+      "dashed": false,
+      "endArrow": "classic",
+      "labelX": 290,
+      "labelY": 460
+    },
+    {
+      "source": "user",
+      "target": "web",
+      "label": "Solicita página · HTTPS",
+      "sourcePort": "bottom",
+      "targetPort": "top",
+      "points": [
+        [
+          970,
+          460
+        ],
+        [
+          540,
+          460
+        ],
+        [
+          540,
+          530
+        ],
+        [
+          290,
+          530
+        ]
+      ],
+      "dashed": false,
+      "endArrow": "classic",
+      "labelX": 700,
+      "labelY": 445
+    },
+    {
+      "source": "user",
+      "target": "spa",
+      "label": "Interactúa con la aplicación",
+      "sourcePort": "bottom",
+      "targetPort": "top",
+      "points": [
+        [
+          970,
+          520
+        ],
+        [
+          870,
+          520
+        ]
+      ],
+      "dashed": false,
+      "endArrow": "classic",
+      "sourceOffset": 0.8,
+      "labelX": 1050,
+      "labelY": 500
+    },
+    {
+      "source": "web",
+      "target": "spa",
+      "label": "Entrega SPA · HTTPS",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "points": [],
+      "dashed": false,
+      "endArrow": "classic",
+      "labelX": 580,
+      "labelY": 645
+    },
+    {
+      "source": "spa",
+      "target": "api",
+      "label": "REST · HTTPS/JSON",
+      "sourcePort": "right",
+      "targetPort": "left",
+      "points": [],
+      "dashed": false,
+      "endArrow": "classic",
+      "labelX": 1165,
+      "labelY": 645
+    },
+    {
+      "source": "api",
+      "target": "store",
+      "label": "SQL / TCP",
+      "sourcePort": "bottom",
+      "targetPort": "top",
+      "points": [],
+      "dashed": false,
+      "endArrow": "classic",
+      "labelX": 1510,
+      "labelY": 840
+    },
+    {
+      "source": "spa",
+      "target": "maps",
+      "label": "Carga teselas · HTTPS",
+      "sourcePort": "bottom",
+      "targetPort": "right",
+      "points": [
+        [
+          870,
+          1210
+        ]
+      ],
+      "dashed": false,
+      "endArrow": "classic",
+      "labelX": 750,
+      "labelY": 1140
+    }
+  ]
+}

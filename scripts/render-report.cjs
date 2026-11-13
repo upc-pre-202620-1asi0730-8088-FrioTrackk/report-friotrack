@@ -10,7 +10,7 @@ const fs=require('fs'),path=require('path'),{pathToFileURL}=require('url');
   await Promise.all([...document.images].map(i=>i.decode().catch(()=>null)));
   // Keep the published Markdown PNGs, and use vector originals for PDF zoom.
   for(const img of [...document.images]) {
-   if(!img.getAttribute('src').includes('/revision-2026-11-11/'))continue;
+   if(!['/revision-2026-11-11/','/architecture/av2/'].some(folder=>img.getAttribute('src').includes(folder)))continue;
    img.src=img.getAttribute('src').replace(/\.png$/,'.svg');
    await img.decode();
    const figure=document.createElement('figure');figure.className='architecture-figure';
@@ -33,6 +33,13 @@ const fs=require('fs'),path=require('path'),{pathToFileURL}=require('url');
    if(!parent.textContent.trim()&&!parent.children.length)parent.remove();
   }
   const broken=[...document.images].filter(i=>!i.naturalWidth).map(i=>i.getAttribute('src'));
+  for(const img of [...document.images].filter(i=>i.getAttribute('src').includes('/chapter-05/av2/'))) {
+   const parent=img.parentElement;
+   const figure=document.createElement('figure');figure.className='execution-figure';
+   parent.before(figure);figure.append(img);
+   const caption=document.createElement('figcaption');caption.textContent=img.alt;figure.append(caption);
+   if(!parent.textContent.trim()&&!parent.children.length)parent.remove();
+  }
   for(const t of document.querySelectorAll('table')){
    const title=t.querySelector('thead')?.innerText||'';
    if(title.includes('Evidence / Review Notes')) t.classList.add('backlog');

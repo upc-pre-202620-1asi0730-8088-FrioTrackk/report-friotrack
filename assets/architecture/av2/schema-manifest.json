@@ -1,0 +1,44 @@
+[
+  {
+    "id": "00-erd-overview",
+    "title": "Relational schema overview",
+    "svg": "00-erd-overview.svg",
+    "drawio": "00-erd-overview.drawio",
+    "sha256": "e1aed94a7fa77c16a1249b5e11cbed1259aa088d1f908c225d93ddb25c7b0660"
+  },
+  {
+    "id": "01-erd-shipment",
+    "title": "Shipment Management",
+    "svg": "01-erd-shipment.svg",
+    "drawio": "01-erd-shipment.drawio",
+    "sha256": "06bd35db66a3d28e1537b63cc7dbaf364dcfade685a28da779a2406afdfe82b5"
+  },
+  {
+    "id": "02-erd-monitoring",
+    "title": "Monitoring and Telemetry",
+    "svg": "02-erd-monitoring.svg",
+    "drawio": "02-erd-monitoring.drawio",
+    "sha256": "91b918ead7b3a34f7c519edb27095194344bfbfba95bc446e48e30c7955eca28"
+  },
+  {
+    "id": "03-erd-fleet",
+    "title": "Fleet and Resources",
+    "svg": "03-erd-fleet.svg",
+    "drawio": "03-erd-fleet.drawio",
+    "sha256": "0b7e0477f557307a333223e6f147971aaa04eab13f3e4b4da5fddc4485f9764f"
+  },
+  {
+    "id": "04-erd-alerts-reporting",
+    "title": "Alert and Reporting",
+    "svg": "04-erd-alerts-reporting.svg",
+    "drawio": "04-erd-alerts-reporting.drawio",
+    "sha256": "c0af7b7f30fb30f779d282548792d9315219070b8ac7aeb1b2b25c5aaa189830"
+  },
+  {
+    "id": "05-erd-iam",
+    "title": "IAM",
+    "svg": "05-erd-iam.svg",
+    "drawio": "05-erd-iam.drawio",
+    "sha256": "eaab9d45a93efbd1d1f5219373c30197e8b8d54d7a7f80330d6d9320e659ff52"
+  }
+]

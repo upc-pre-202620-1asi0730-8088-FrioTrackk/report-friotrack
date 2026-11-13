@@ -1,0 +1,10 @@
+[
+  {
+    "component": "api",
+    "sourceSha": "e9aca8e735edde7699e9447863c7f56b12e062e8",
+    "checked": true,
+    "authenticationStarted": false,
+    "packageSha256": "e46b65f42c41b2acbf5fb5eb1acce1879291ae2b58e5a53bf9d1ecd8b529bed3",
+    "bytes": 3550954
+  }
+]

@@ -1,0 +1,58 @@
+{
+  "scope": "GitHub Pages landing public files only; not Azure deployment, SPA/API AV2 hosting or video publication",
+  "sourceSha": "36f206712d0952b41ad6b3e6893645d9a0fcc682",
+  "verifiedAt": "2026-11-13T20:04:15.554742+00:00",
+  "url": "https://upc-pre-202620-1asi0730-8088-friotrackk.github.io/friotrack-landing/",
+  "status": "built",
+  "checks": [
+    {
+      "path": "index.html",
+      "httpStatus": 200,
+      "sha256": "8f5f00a6bfab2050539a9fae1571364c4c2e16c2593e38ad420f4cd726e10aeb",
+      "matchesSource": true
+    },
+    {
+      "path": "Terms-and-Condition.html",
+      "httpStatus": 200,
+      "sha256": "f3696cdd03e57b0725d201244e6b9feab3905ed490865bfeaf63554ff5d09a88",
+      "matchesSource": true
+    },
+    {
+      "path": "assets/js/config.js",
+      "httpStatus": 200,
+      "sha256": "7e687c5e890c0fce5d8bebe30b461246d7fb4697ad07b5689feeca091b07dd15",
+      "matchesSource": true
+    },
+    {
+      "path": "assets/js/i18n.js",
+      "httpStatus": 200,
+      "sha256": "f70cc6de743acf1ce7cfb4cc5c4a34f6ed24bf8af8b81d8606312cec55c597b2",
+      "matchesSource": true
+    },
+    {
+      "path": "assets/js/videos.js",
+      "httpStatus": 200,
+      "sha256": "68f2086e515d26887bccb5d6857da6c689ef16719d42c5b33fd4991075661d2c",
+      "matchesSource": true
+    },
+    {
+      "path": "assets/css/styles.css",
+      "httpStatus": 200,
+      "sha256": "a0532f0c2f8abd7b19d7667a09dd3feb4d90fe16cb241e254871edc24d64ecbb",
+      "matchesSource": true
+    },
+    {
+      "path": "i18n/en.js",
+      "httpStatus": 200,
+      "sha256": "999f962520a34da65773a29b19d7fb85de5431a3e3a904f5fa937027d3e3778c",
+      "matchesSource": true
+    },
+    {
+      "path": "i18n/es.js",
+      "httpStatus": 200,
+      "sha256": "4b56e7e7048eb5d6436df8f5c05defa2e15fb71c7788b4b2e641f20a1e95e150",
+      "matchesSource": true
+    }
+  ],
+  "passed": true
+}

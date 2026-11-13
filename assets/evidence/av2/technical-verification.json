@@ -1,0 +1,49 @@
+{
+  "scope": "Technical source verification for AV2; excludes team acceptance, participant interviews and new Azure API/SPA deployment",
+  "verifiedAt": "2026-11-13T20:05:28.128085+00:00",
+  "sources": {
+    "friotrack-api": "e9aca8e735edde7699e9447863c7f56b12e062e8",
+    "friotrack-frontend": "9ef083eba26bd16ea648ce8dd2f2fd2bfa694baa",
+    "friotrack-landing": "36f206712d0952b41ad6b3e6893645d9a0fcc682"
+  },
+  "domainTests": {
+    "passed": 21,
+    "failed": 0
+  },
+  "postgresIntegration": {
+    "passed": 37,
+    "failed": 0
+  },
+  "legacyJsonRegression": {
+    "passed": 26,
+    "failed": 0
+  },
+  "frontendTests": {
+    "passed": 32,
+    "failed": 0
+  },
+  "deploymentPolicyTests": {
+    "passed": 9,
+    "failed": 0
+  },
+  "landingTests": {
+    "passed": 6,
+    "failed": 0
+  },
+  "integratedBrowserChecks": {
+    "passed": 173,
+    "failed": 0
+  },
+  "landingBrowserChecks": {
+    "passed": 22,
+    "failed": 0
+  },
+  "migrationSnapshot": "No pending model changes",
+  "frontendBuildModules": 229,
+  "limitations": [
+    "Docker Compose configuration was not executed because Docker is unavailable.",
+    "Map tiles and external fonts blocked in headless local tests; live map provider not validated.",
+    "Manually recorded telemetry and all seed accounts are demonstration data.",
+    "Cloud PostgreSQL destination, migration and API/SPA AV2 publication remain pending."
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "localLinksChecked": 370,
+  "brokenLinks": [],
+  "stories": 43,
+  "scenarioMarkers": 86,
+  "incompleteGherkin": [],
+  "storyIds": [
+    "US33",
+    "US34",
+    "US01",
+    "US02",
+    "US03",
+    "US04",
+    "US05",
+    "TS01",
+    "TS04",
+    "US06",
+    "US07",
+    "US08",
+    "US09",
+    "US35",
+    "TS02",
+    "US10",
+    "US11",
+    "US12",
+    "US13",
+    "US28",
+    "US29",
+    "US36",
+    "TS06",
+    "US14",
+    "US15",
+    "US16",
+    "US17",
+    "US18",
+    "TS03",
+    "US23",
+    "US24",
+    "US25",
+    "US26",
+    "US27",
+    "US31",
+    "US30",
+    "TS07",
+    "US19",
+    "US20",
+    "US21",
+    "US22",
+    "US32",
+    "TS05"
+  ],
+  "sprints": {
+    "1": {
+      "tasks": 8,
+      "hours": 38,
+      "invalidHours": [],
+      "invalidStatus": [],
+      "status": {
+        "To Review": 5,
+        "To Do": 3
+      }
+    },
+    "2": {
+      "tasks": 50,
+      "hours": 256,
+      "invalidHours": [],
+      "invalidStatus": [],
+      "status": {
+        "To Review": 30,
+        "To Do": 20
+      }
+    }
+  },
+  "boundedContextHeadings": [
+    "#### BC3 \u00b7 Shipment Management",
+    "#### BC4 \u00b7 Monitoring and Telemetry",
+    "#### BC2 \u00b7 Fleet and Resources",
+    "#### BC5 \u00b7 Alert and Reporting",
+    "#### BC1 \u00b7 IAM"
+  ],
+  "architectureViews": 22,
+  "av2": {
+    "tables": 18,
+    "foreignKeys": 31,
+    "schemaViews": 6,
+    "documentLinksChecked": 42,
+    "proposedTasks": 30,
+    "proposedHours": 204
+  }
+}

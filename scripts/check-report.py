@@ -64,4 +64,53 @@ results['architectureViews']=len(manifest)
 for n in (1,2):
     planning=text.split(f'#### 5.2.{n}.{1}. Sprint Planning {n}',1)[1].split(f'#### 5.2.{n}.2.',1)[0]
     assert all(f'| {field} |' in planning for field in ('Date','Time','Location')), 'Separate planning date/time/location required'
+
+av2=repo/'assets/architecture/av2'
+c4_manifest=json.loads((av2/'c4-manifest.json').read_text(encoding='utf-8'))
+for entry in c4_manifest:
+    for extension,digest in entry['sha256'].items():
+        asset=av2/(entry['id']+'.'+extension)
+        assert hashlib.sha256(asset.read_bytes()).hexdigest()==digest, 'AV2 C4 source differs from manifest: '+entry['id']
+    assert ET.parse(av2/(entry['id']+'.drawio')).getroot().tag=='mxfile', 'Invalid AV2 C4 editable'
+    assert 'assets/architecture/av2/'+entry['id']+'.svg' in text, 'AV2 C4 view missing from report'
+schema=json.loads((av2/'schema.json').read_text(encoding='utf-8'))
+tables={t['table']:t for t in schema['tables']}
+assert len(tables)==len(schema['tables']), 'Duplicate AV2 table'
+for name,table in tables.items():
+    fields={f['name']:f for f in table['fields']}
+    assert table['primaryKey'] in fields and not fields[table['primaryKey']]['nullable'], 'Invalid AV2 primary key: '+name
+    for fk in table['foreignKeys']:
+        assert fk['column'] in fields, 'Unknown AV2 FK column: '+name
+        assert fk['parentTable'] in tables, 'Unknown AV2 parent: '+fk['parentTable']
+        assert fk['parentColumn'] in {f['name'] for f in tables[fk['parentTable']]['fields']}, 'Unknown AV2 referenced column'
+    for index in table['indexes']:
+        assert set(index['columns'])<=set(fields), 'Unknown AV2 indexed column'
+schema_manifest=json.loads((av2/'schema-manifest.json').read_text(encoding='utf-8'))
+for entry in schema_manifest:
+    asset=av2/entry['svg']
+    assert hashlib.sha256(asset.read_bytes()).hexdigest()==entry['sha256'], 'AV2 schema image differs from manifest'
+    assert ET.parse(asset).getroot().tag.endswith('svg'), 'Invalid AV2 SVG'
+    editable=ET.parse(av2/entry['drawio']).getroot()
+    assert editable.tag=='mxfile' and len(editable.findall('diagram'))==1, 'Invalid AV2 editable'
+    assert 'assets/architecture/av2/'+entry['svg'] in text, 'AV2 schema view missing from report'
+
+av2_docs=list((repo/'docs/av2').glob('*.md'))+[av2/'README.md']
+av2_links=0
+for doc in av2_docs:
+    content=doc.read_text(encoding='utf-8-sig')
+    for raw in re.findall(r'!?\[[^\]]*\]\(([^\s]+?)(?:\s+"[^"]*")?\)',content):
+        link=html.unescape(raw.strip('<>'))
+        if re.match(r'^[a-zA-Z]+:',link):continue
+        av2_links+=1
+        target,_,anchor=link.partition('#')
+        resolved=(doc.parent/unquote(target)).resolve() if target else doc.resolve()
+        assert resolved.is_relative_to(repo.resolve()) and resolved.is_file(), 'Missing AV2 document link: '+raw
+        if anchor and resolved.suffix.lower()=='.md':
+            headings={slug(h) for h in re.findall(r'^#{1,6} (.+)$',resolved.read_text(encoding='utf-8-sig'),re.M)}
+            assert unquote(anchor) in headings, 'Missing AV2 document anchor: '+raw
+proposal=list(csv.DictReader((repo/'docs/av2/sprint3-backlog-proposal.csv').open(encoding='utf-8-sig',newline='')))
+assert len({row['Task Id'] for row in proposal})==len(proposal), 'Duplicate Sprint 3 proposal task'
+assert all(4<=int(row['Proposed Estimation Hours'])<=8 for row in proposal), 'Invalid proposed task hours'
+assert all(row['Proposed Status'] in ('To Do','In Process','To Review','Done') for row in proposal), 'Invalid proposed status'
+results['av2']={'tables':len(tables),'foreignKeys':sum(len(t['foreignKeys']) for t in tables.values()),'schemaViews':len(schema_manifest),'documentLinksChecked':av2_links,'proposedTasks':len(proposal),'proposedHours':sum(int(row['Proposed Estimation Hours']) for row in proposal)}
 print(json.dumps(results,ensure_ascii=True,indent=2))

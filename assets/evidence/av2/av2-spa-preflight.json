@@ -1,0 +1,10 @@
+[
+  {
+    "component": "frontend",
+    "sourceSha": "9ef083eba26bd16ea648ce8dd2f2fd2bfa694baa",
+    "checked": true,
+    "authenticationStarted": false,
+    "files": 20,
+    "manifestSha256": "6fa27837d565ca116f6bcf4d871da984c1bee475163d0acd2e2173ac4c0e7234"
+  }
+]

@@ -89,6 +89,7 @@ El siguiente registro conserva las actividades documentadas para AV1 en el repos
 | Revisión TB1 · v2.0.4 | 11/11/2026 | Atauje Barreto, Alexander Sebastián | Incorporación de los 22 diagramas aprobados, fuentes editables, contratos I01–I13, alineación DDD y ERD, actualización de gráficos y consistencia de planificación y evidencias. Carátula sin cambios. |
 
 | Revisión TB1 · v2.0.5 | 11/11/2026 | Atauje Barreto, Alexander Sebastián | Registro de integración local de landing, SPA y API; preparación trazable del tablero y procedimiento de publicación verificada, con accesos y aceptación pendientes explícitos. |
+| Preparación AV2 · v3.0.0-av2.1 | 13/11/2026 | Atauje Barreto, Alexander Sebastián | Integración del esquema EF Core/PostgreSQL de 18 tablas, documentación de recursos REST, preparación de Sprint 3, validación, videos y entrega. El despliegue AV2 y las sesiones con participantes aún requieren evidencia propia. |
 
 <div style="page-break-after: always;"></div>
 
@@ -224,6 +225,13 @@ La carátula y el informe completo se mantienen en Markdown dentro de este `READ
   - [5.2. Landing Page, Services & Applications Implementation](#52-landing-page-services--applications-implementation)
     - [5.2.1. Sprint 1](#521-sprint-1)
     - [5.2.2. Sprint 2](#522-sprint-2)
+    - [5.2.3. Sprint 3 — Preparación AV2](#523-sprint-3--preparación-av2)
+  - [5.3. Validation Interviews](#53-validation-interviews)
+    - [5.3.1. Diseño de entrevistas](#531-diseño-de-entrevistas)
+    - [5.3.2. Registro de entrevistas](#532-registro-de-entrevistas)
+    - [5.3.3. Evaluación según heurísticas](#533-evaluación-según-heurísticas)
+  - [5.4. Video About-the-Product](#54-video-about-the-product)
+  - [5.5. Video About-the-Team](#55-video-about-the-team)
 - [Conclusiones y Recomendaciones](#conclusiones-y-recomendaciones)
   - [Conclusiones](#conclusiones)
   - [Recomendaciones](#recomendaciones)
@@ -2818,7 +2826,7 @@ La atención cambia `ACTIVE → ACKNOWLEDGED`. Resolver exige evidencia apropiad
 
 #### BC1 · IAM
 
-El contexto genérico cierra la sección. El registro público crea cuentas de Cliente de Carga; el servidor determina los permisos y no confía en un rol solicitado por URL. La API actual usa token opaco y contraseña de al menos doce caracteres. Recuperación por correo y bloqueo por cuenta se mantienen como diseño previsto cuando no hay evidencia ejecutada.
+El contexto genérico cierra la sección. El registro público crea cuentas de Cliente de Carga; el servidor determina los permisos y no confía en un rol solicitado por URL. Tanto el servicio TB1 como las fuentes AV2 utilizan token opaco y contraseña de al menos doce caracteres. AV2 añade persistencia relacional de organizaciones, cuentas y sesiones. La recuperación por correo y el bloqueo por cuenta se mantienen como diseño previsto cuando no hay evidencia ejecutada.
 
 ![Figura 4.93. EventStorming del contexto genérico IAM](assets/images/chapter-04/revision-2026-11-11/07-es-iam.png)
 
@@ -2830,38 +2838,44 @@ El nivel 1 delimita FríoTrack y sus relaciones con Coordinador Logístico, Clie
 
 ### 4.6.3. Software Architecture Container Diagrams
 
-La **Web Application** entrega los archivos estáticos; la **Single Page Application** ejecuta el programa Vue dentro del navegador. Son contenedores distintos y se conectan mediante la entrega del bundle. La landing comparte el contenedor estático: no constituye aquí un quinto contenedor de ejecución.
+La **Web Application** entrega los archivos estáticos; la **Single Page Application** ejecuta Vue en el navegador. Son contenedores distintos, conectados por la entrega del bundle. La landing comparte el servidor estático. El incremento AV2 conecta la SPA con una API REST y PostgreSQL; esta versión se verificó localmente y su despliegue público está pendiente.
 
-![Figura 4.95. C4 nivel 2: cuatro contenedores con Web Application y SPA separadas](assets/images/chapter-04/revision-2026-11-11/09-c4-contenedores.png)
+![Figura 4.95. C4 nivel 2: contenedores de la implementación AV2](assets/architecture/av2/09-c4-contenedores-av2.svg)
 
 | Contenedor | Tecnología | Responsabilidad |
 | --- | --- | --- |
-| Web Application | Azure Storage Static Website, HTML/CSS/JavaScript | Sirve la landing en `/landing/` y el documento y bundle de la SPA. |
-| Single Page Application | Vue 3, PrimeVue, Leaflet y Vite | Ejecuta vistas en el navegador; consume API y mapas por HTTPS. |
-| API de apoyo | ASP.NET Core 10 y C# | Autentica con token opaco, autoriza, filtra el workspace y valida comandos. |
-| Almacén privado | Archivo JSON de una instancia | Persiste cuentas, sesiones y operaciones; únicamente el servidor accede al archivo. |
+| Web Application | Servidor estático, HTML/CSS/JavaScript | Entrega la landing, el documento y el bundle de la SPA. El recurso Azure anterior se documenta en TB1. |
+| Single Page Application | Vue 3, PrimeVue, Leaflet y Vite | Ejecuta las vistas en el navegador y consume recursos REST autorizados y mapas por HTTPS. |
+| REST API | ASP.NET Core 10, C#, EF Core y Npgsql | Autentica con token opaco, aísla organizaciones, coordina reglas de dominio y persiste operaciones. Expone Swagger / OpenAPI. |
+| Base de datos operativa | PostgreSQL 17 | Conserva 18 tablas de negocio, identidad y sesiones; la API controla el acceso. |
 
-El servicio de mapas es externo. PostgreSQL, EF Core, ingesta IoT y correo pertenecen al diseño objetivo. Los repositorios y recursos de hosting no determinan el número de contenedores. Las evidencias Azure de octubre y la revisión de fuentes de noviembre tienen cortes distintos, detallados en el Capítulo V.
+OpenStreetMap permanece externo. La ingesta física y el envío de correo no están acreditados. Los repositorios y recursos de hosting no determinan el número de contenedores. El [diagrama histórico TB1 con almacén JSON](assets/images/chapter-04/revision-2026-11-11/09-c4-contenedores.png) corresponde a las evidencias Azure anteriores, no al nuevo incremento.
 
 ### 4.6.4. Software Architecture Component Diagrams
 
 #### 4.6.4.1. Componentes de la API actual
 
-El nivel 3 abre únicamente la API de apoyo. Distingue composición, endpoints HTTP, autenticación/autorización, coordinación de comandos y acceso al almacén JSON. Los endpoints validan la sesión y las reglas del servidor; ocultar un control en la SPA no sustituye la autorización.
+La API AV2 es un monolito modular. `Av2Endpoints` y `ApiContracts` traducen HTTP; `RelationalWorkspaceService` autoriza por organización y cuenta, orquesta los agregados y coordina las transacciones; el dominio C# protege las invariantes. `FrioTrackDbContext` mapea el modelo y realiza consultas y guardado con EF Core / Npgsql. La composición registra el repositorio EF; el servicio de aplicación accede también al contexto para las proyecciones y las transacciones de reserva.
 
-![Figura 4.96. C4 nivel 3: componentes de la API JSON implementada](assets/images/chapter-04/revision-2026-11-11/10-c4-componentes-api-actual.png)
+![Figura 4.96. C4 nivel 3: componentes REST y persistencia PostgreSQL de AV2](assets/architecture/av2/10-c4-componentes-api-av2.svg)
 
-La SPA se organiza en `shipment-management`, `monitoring`, `fleet`, `alerts-reporting`, `iam` y `shared`. Sus políticas JavaScript puras no dependen de Vue ni de HTTP. `shared/application/workspace.js` coordina el cliente mediante el puerto `WorkspaceGateway`, implementado por `RestWorkspaceGateway`; `main.js` compone la aplicación. Los fixtures y simuladores están fuera del bundle de producción.
+Los cambios de envíos utilizan versiones optimistas. La reserva bloquea las operaciones de la misma organización dentro de la transacción PostgreSQL para evitar asignaciones solapadas. Los reportes térmicos guardan un snapshot JSON autorizado e inmutable; no se presentan como un PDF ni como certificación de condiciones no medidas. `ApiErrorMiddleware` traduce errores y localiza los mensajes. La ingesta usada en las pruebas es manual y de demostración.
+
+La SPA mantiene los contextos `shipment-management`, `monitoring`, `fleet`, `alerts-reporting`, `iam` y `shared`. `workspace.js` coordina el puerto `WorkspaceGateway`, implementado por `RestWorkspaceGateway`, que utiliza rutas REST de recursos. `main.js` compone la aplicación. Los fixtures de pruebas permanecen fuera del bundle de producción.
+
+El [diagrama de componentes TB1](assets/images/chapter-04/revision-2026-11-11/10-c4-componentes-api-actual.png) describe el servicio JSON anterior. Ese modo se conserva sólo para reproducción explícita; no sustituye la implementación relacional AV2.
 
 #### 4.6.4.2. Componentes de la API objetivo
 
-![Figura 4.97. C4 nivel 3: arquitectura modular DDD propuesta](assets/images/chapter-04/revision-2026-11-11/11-c4-componentes-api-objetivo.png)
+![Figura 4.97. C4 nivel 3: separación modular DDD del diseño objetivo](assets/images/chapter-04/revision-2026-11-11/11-c4-componentes-api-objetivo.png)
 
-La evolución prevista organiza cada contexto en Interfaces, Application, Domain e Infrastructure. Interfaces convierte solicitudes y respuestas; Application coordina casos de uso; Domain protege invariantes y declara puertos; Infrastructure implementa persistencia y adaptadores. El dominio no depende de ASP.NET, EF Core ni DTO. La API actual no acredita agregados tipados, transacciones relacionales ni un dispatcher implementado.
+El diseño objetivo separa Interfaces, Application, Domain e Infrastructure por contexto. AV2 ya contiene agregados tipados, mapeo EF y transacciones relacionales. La coordinación continúa centralizada en un servicio de aplicación compartido; la separación completa de sus casos de uso por contexto y un dispatcher de eventos permanecen como evolución. El dominio no depende de ASP.NET, EF Core ni DTO de transporte.
 
 #### 4.6.4.3. Fuentes y trazabilidad
 
-El [catálogo de 22 diagramas editables](assets/architecture/chapter-04/README.md) reúne enlaces de diagrams.net, archivos nativos `.drawio` y fuentes JSON. Las mismas vistas se conservan como PNG y SVG. El [manifiesto de imágenes](assets/architecture/chapter-04/manifest.json) identifica sección, dimensiones y SHA-256. El diagrama de API actual y el de API objetivo tienen alcance explícito; las vistas de clases y datos siguientes corresponden al diseño objetivo.
+Los nuevos diagramas AV2 conservan fuentes nativas editables: [contenedores](assets/architecture/av2/09-c4-contenedores-av2.drawio) y [componentes](assets/architecture/av2/10-c4-componentes-api-av2.drawio), además de sus [metadatos y hashes](assets/architecture/av2/c4-manifest.json). Pueden abrirse desde Archivo → Abrir en diagrams.net.
+
+El [catálogo histórico de 22 diagramas](assets/architecture/chapter-04/README.md) conserva los diseños y las evidencias TB1 como PNG, SVG, JSON y `.drawio`. Su [manifiesto](assets/architecture/chapter-04/manifest.json) identifica el corte anterior. La sección 4.8.1 diferencia ese esquema objetivo de las 18 tablas implementadas por la migración AV2.
 
 ## 4.7. Software Object-Oriented Design
 
@@ -2903,18 +2917,20 @@ El modelo táctico **objetivo del backend** distingue raíces de agregado, entid
 
 | Elemento | Implementado en las fuentes corregidas | Diseño objetivo |
 | --- | --- | --- |
-| SPA | Módulos por contexto, políticas puras y adaptador HTTP. | Mantener límites y contratos al integrar el backend final. |
-| API | C# con estado JSON, sesión, autorización y comandos. | Agregados tipados y casos de uso coordinados por contexto. |
-| Persistencia | Archivo JSON privado de una instancia. | Repositorios de raíces, EF Core, PostgreSQL y transacciones. |
-| Telemetría y eventos | Datos de demostración. | Ingesta autenticada, evaluación temporal y eventos internos. |
+| SPA AV2 | Módulos por contexto, políticas puras y adaptador HTTP a recursos REST. Inventario independiente de sensores y consulta/descarga del reporte persistido. | Ampliar recorridos después de la validación real y comprobar la versión publicada. |
+| API AV2 | Raíces tipadas `Shipment`, `ShipmentMonitoring`, `Vehicle`, `Driver`, `Sensor` y `Alert`, junto con entidades de historial, lectura, posición y acción. Casos de uso con autorización en el servicio de aplicación. | Ampliar separación de casos de uso y publicación de eventos cuando lo requiera un incremento validado. |
+| Persistencia AV2 | `FrioTrackDbContext`, migración inicial, repositorio EF de agregados, transacciones, token de versión y bloqueo asesor por organización para reservas. | Destino cloud, política de migración de datos históricos y verificación operativa del despliegue. |
+| Valor de dominio | `ThermalRange` conserva conjuntamente límites de temperatura, humedad y tolerancia. Historial pertenece al envío; lecturas y posiciones al monitoreo; acciones a la alerta. | Mantener las invariantes al añadir nuevos casos de uso. |
+| Telemetría y eventos | Lecturas de demostración mediante un recurso autorizado; evaluación de silencio solicitada expresamente. | Ingesta autenticada de dispositivos físicos, procesamiento temporal continuo y dispatcher de eventos. |
+| Antecedente TB1 | Servicio compatible con almacén JSON y endpoint genérico de comandos, conservado como modo legado explícito. | No es la persistencia por defecto del incremento AV2. |
 
-Las [fuentes nativas de clases](assets/architecture/chapter-04/README.md), el [modelo PlantUML](assets/architecture/backend-classes-tb1.puml) y el [catálogo relacional](assets/architecture/backend-model-tb1.json) mantienen esta separación. Una tabla no define por sí sola un agregado. La revisión de fuentes requiere un nuevo despliegue antes de atribuir su comportamiento a las URLs históricas de TB1.
+Las [fuentes nativas de clases](assets/architecture/chapter-04/README.md), el [modelo PlantUML TB1](assets/architecture/backend-classes-tb1.puml) y el [catálogo objetivo TB1](assets/architecture/backend-model-tb1.json) conservan el diseño anterior. El [catálogo AV2 derivado de la migración](assets/architecture/av2/README.md) documenta el esquema implementado en las nuevas fuentes. Una tabla no define por sí sola un agregado. La revisión de fuentes requiere un nuevo despliegue antes de atribuir su comportamiento a las URLs históricas de TB1.
 
 ## 4.8. Database Design
 
 ### 4.8.1. Database Diagrams
 
-El diseño relacional objetivo contiene **17 tablas y 27 claves foráneas** para PostgreSQL. Las vistas muestran columnas, tipos, PK, FK y cardinalidades. La API actual continúa con JSON: no se acreditan migraciones ni datos reales en PostgreSQL. `Organization` establece un aislamiento por empresa todavía no implementado.
+El diseño objetivo de TB1 contiene **17 tablas y 27 claves foráneas** para PostgreSQL. Las vistas siguientes conservan ese corte de diseño, con columnas, tipos, PK, FK y cardinalidades. El servicio TB1 publicado utiliza JSON. La [subsección del esquema AV2](#4811-esquema-implementado-en-las-fuentes-av2) documenta por separado las **18 tablas y 31 claves foráneas** de la migración EF Core, sus tipos reales y la autorización por organización incorporada en el código. Los diagramas de TB1 no se utilizan como prueba de una base cloud AV2.
 
 **Esquema relacional general y vistas por contexto**
 
@@ -3017,7 +3033,39 @@ Las siguientes relaciones documentan el esquema completo. Las cardinalidades se 
 
 *Nota.* Multiplicidades del diseño, no restricciones verificadas en una base de datos ejecutada.
 
-El diseño prevé consultas de envíos autorizados por empresa y cliente, última lectura con su fecha, periodos de mediciones sin interpolar vacíos, alertas abiertas y reconocidas, avisos no leídos e historial con evidencia. Su ejecución y seguridad deben demostrarse en la implementación posterior; este capítulo acredita la especificación local del modelo.
+El diseño TB1 prevé consultas de envíos autorizados por empresa y cliente, última lectura con su fecha, periodos de mediciones sin interpolar vacíos, alertas abiertas y reconocidas, avisos no leídos e historial con evidencia. Las siguientes vistas AV2 registran la evolución implementada; las evidencias de ejecución y publicación se consignan por separado en el Sprint 3.
+
+#### 4.8.1.1. Esquema implementado en las fuentes AV2
+
+La migración `20261113144845_InitialAv2Relational` de `friotrack-api` define **18 tablas de negocio y 31 FK**. EF Core conserva además su tabla técnica `__EFMigrationsHistory`. El [catálogo completo de columnas, índices, CHECK y FK](assets/architecture/av2/README.md), su [fuente JSON](assets/architecture/av2/schema.json) y el [documento nativo de seis páginas](assets/architecture/av2/FrioTrack-AV2-Database.drawio) se obtienen de la migración con `scripts/build-av2-schema.py`.
+
+Los identificadores de entidad utilizan `varchar(100)`; las referencias conservan los tipos del catálogo, compatibles con los IDs históricos del contrato; las fechas se almacenan como `timestamptz` y los decimales como `numeric(12,5)`. La tabla adicional `auth_sessions` persiste el hash de sesión, usuario y vencimiento. El esquema implementado no se presenta como una conversión a los UUID del diseño TB1.
+
+![Figura 4.109. AV2: catálogo visual general de las 18 tablas y sus referencias](assets/architecture/av2/00-erd-overview.svg)
+
+**Shipment Management — Core**
+
+![Figura 4.110. AV2: columnas y claves de Shipment Management](assets/architecture/av2/01-erd-shipment.svg)
+
+**Monitoring and Telemetry — Core**
+
+![Figura 4.111. AV2: columnas y claves de Monitoring and Telemetry](assets/architecture/av2/02-erd-monitoring.svg)
+
+**Fleet and Resources — Apoyo**
+
+![Figura 4.112. AV2: columnas y claves de Fleet and Resources](assets/architecture/av2/03-erd-fleet.svg)
+
+**Alert and Reporting — Apoyo**
+
+![Figura 4.113. AV2: columnas y claves de Alert and Reporting](assets/architecture/av2/04-erd-alerts-reporting.svg)
+
+**IAM — Genérico, al final**
+
+![Figura 4.114. AV2: columnas y claves de IAM, incluidas las sesiones persistentes](assets/architecture/av2/05-erd-iam.svg)
+
+La unicidad de `sensors.vehicle_id` permite como máximo un sensor por unidad y admite sensores sin asignar. Las FK vinculan las entidades, mientras que la pertenencia a la organización y los permisos se comprueban en los casos de uso. La programación toma un bloqueo asesor transaccional por organización, verifica ambos recursos y guarda envío y reserva en la misma transacción; una versión obsoleta produce conflicto en vez de sobrescribir cambios.
+
+`thermal_reports.snapshot` conserva una copia JSON autorizada al generar expresamente el reporte de un envío entregado. La descarga implementada es **JSON**; el CSV de la SPA es una exportación distinta. La tabla de tokens de recuperación no acredita envío de correo y las tablas de lectura no acreditan conexión con sensores físicos. El despliegue PostgreSQL y los recorridos sobre la URL pública deben verificarse antes de la entrega AV2.
 
 # Capítulo V: Product Implementation, Validation & Deployment
 
@@ -3025,7 +3073,7 @@ El diseño prevé consultas de envíos autorizados por empresa y cliente, últim
 
 ### 5.1.1. Software Development Environment Configuration
 
-FríoTrack integra una Landing Page, una aplicación Vue para el Coordinador Logístico y el Cliente de Carga, y una API de apoyo en ASP.NET Core. La entrega TB1 publica la landing actualizada y la primera aplicación frontend en Azure. El acceso utiliza cuentas con correo y contraseña; las lecturas y los registros iniciales de transporte son datos de prueba.
+FríoTrack integra una Landing Page, una aplicación Vue para el Coordinador Logístico y el Cliente de Carga, y Web Services ASP.NET Core. TB1 conserva su publicación histórica Azure. Las fuentes AV2 añaden EF Core/PostgreSQL, recursos REST y Swagger, integrados desde el adaptador HTTP de la SPA. El acceso utiliza cuentas con correo y contraseña; las lecturas y los registros iniciales son datos de demostración. Las versiones de fuente, pruebas locales y despliegues se registran como evidencias distintas.
 
 | Discipline | Tools / technologies | Application in FríoTrack | Evidence |
 | --- | --- | --- | --- |
@@ -3034,12 +3082,12 @@ FríoTrack integra una Landing Page, una aplicación Vue para el Coordinador Log
 | Product UX/UI Design | Figma y prototipo HTML | Guía visual, wireframes, mock-ups y flujos por perfil. | Artefactos y enlace de diseño de 4.5. |
 | Landing Development | HTML5, CSS3 y JavaScript | Presentación de la propuesta, corredores, planes y acceso a la aplicación. | Landing publicada en Azure Storage. |
 | Frontend Development | Vue 3, JavaScript, PrimeVue 4, Vite y Leaflet | Programación, recursos, monitoreo, alertas, historial y consulta del cliente. | Código integrado en `friotrack-frontend/main`. |
-| Backend Development | C# y ASP.NET Core, .NET 10 | Autenticación, autorización, consulta y comandos de la aplicación. | Servicio Azure histórico; fuentes independientes en `friotrack-api`, con copia temporal en `friotrack-frontend/api`. |
-| Software Testing | Node test runner y pruebas HTTP | Reglas de dominio, autenticación, aislamiento por cliente y validaciones. | Revisión de fuentes del 10/11: 18 pruebas frontend y 26 comprobaciones API locales; el recibo HTTPS histórico de octubre contiene 12 comprobaciones distintas. |
+| Backend Development | C#, ASP.NET Core 10, EF Core 10, Npgsql y PostgreSQL 17 | Recursos REST, sesiones persistentes, aislamiento por organización/cliente, transacciones y reglas de dominio. | Fuentes canónicas en `friotrack-api`, migración inicial y catálogo AV2 de 4.8.1.1. La API se compila y publica desde su propio repositorio. |
+| Software Testing | xUnit, Node test runner, pruebas HTTP y PostgreSQL aislado | Invariantes del dominio, contratos REST, permisos, persistencia y concurrencia. | El corte TB1 del 10/11 contiene 18 pruebas frontend y 26 comprobaciones API; los resultados nuevos se incorporan en 5.2.3.5 con su versión. |
 | Software Documentation | Markdown, Mermaid y PlantUML | Informe, configuración, contratos y diseños editables. | Informe y fuentes en este repositorio; contratos del servicio en 5.2.2.6. |
 | Software Deployment | Azure Storage y Azure App Service | Hosting estático y ejecución del servicio de apoyo. | Configuración y verificaciones en 5.2.2.7. |
 
-El backend objetivo del producto contempla EF Core, PostgreSQL y OpenAPI. La API de apoyo de esta iteración persiste en un archivo JSON privado de una sola instancia; esas tecnologías del diseño final no se presentan como implementadas.
+Las fuentes AV2 utilizan EF Core, PostgreSQL y OpenAPI/Swagger. El modo JSON se conserva exclusivamente como compatibilidad explícita con TB1. La existencia de migraciones y builds no acredita publicación del incremento relacional; los requisitos de despliegue y sus pendientes se detallan en 5.2.3.7.
 
 ### 5.1.2. Source Code Management
 
@@ -3058,7 +3106,7 @@ La integración del frontend está registrada en los [PR #4](https://github.com/
 
 #### Revisión de repositorios y releases
 
-La [consulta pública previa a la corrección del 10 de noviembre de 2026](assets/evidence/github-audit-2026-11-10.json) registra el estado histórico de repositorios y releases. La revisión añade [friotrack-api](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-api) como repositorio público independiente de Web Services. La carpeta `api/` del frontend se mantiene temporalmente para reproducir sus scripts de despliegue anteriores; el servicio se documenta y versiona además en su repositorio propio.
+La [consulta pública previa a la corrección del 10 de noviembre de 2026](assets/evidence/github-audit-2026-11-10.json) registra el estado histórico de repositorios y releases. La revisión añade [friotrack-api](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-api) como repositorio público independiente y fuente canónica de Web Services. El incremento AV2 compila, verifica y empaqueta el servicio desde ese repositorio, separado del bundle Vue. Las versiones de la tabla siguiente son antecedentes de TB1; el corte AV2 se documenta en el Sprint 3.
 
 | Producto | Versión de corrección | Alcance |
 | --- | --- | --- |
@@ -3075,7 +3123,7 @@ GitFlow utiliza `feature/* → develop` y publicación de `develop → main`, co
 
 El frontend utiliza Vue 3 con Composition API, JavaScript y componentes `PascalCase.vue`; las funciones y propiedades siguen `camelCase` y los módulos JavaScript `kebab-case.js`. La organización prioriza bounded contexts: `shipment-management`, `monitoring`, `fleet`, `alerts-reporting`, `iam` y `shared`. `presentation` contiene páginas y componentes; `domain` conserva políticas puras; `shared/application` coordina casos de uso a través de puertos y `shared/infrastructure` implementa HTTP. Los fixtures y simuladores están bajo `tests/`, fuera del bundle de producción.
 
-La API sigue las convenciones C# `PascalCase` para tipos y miembros públicos, `camelCase` para variables y namespaces que expresan responsabilidad. La copia local separa composición, interfaces HTTP, aplicación e infraestructura del almacén JSON. Esta separación técnica no equivale a tener implementado todo el modelo DDD objetivo. El directorio independiente de Web Services permite publicar el producto sin depender del bundle Vue.
+La API sigue las convenciones C# `PascalCase` para tipos y miembros públicos, `camelCase` para variables y namespaces que expresan responsabilidad. Las carpetas `ShipmentManagement`, `Monitoring`, `Fleet`, `AlertsReporting` e `Iam` contienen los elementos de dominio de sus contextos; `Shared/Application` coordina los casos de uso y `Shared/Infrastructure` implementa persistencia EF Core. `Interfaces` mapea contratos HTTP y errores. Las raíces protegen transiciones y rangos, y las referencias entre contextos utilizan IDs. EF Core traduce el modelo a tablas, sin convertir cada FK en composición de agregados. La modalidad JSON heredada mantiene una implementación explícita separada.
 
 Las interfaces deben mostrar español e inglés desde los diccionarios, sin mensajes de negocio duplicados en vistas. Los commits describen cambios concretos con Conventional Commits; las ramas `feature/*`, `release/*` y `hotfix/*` se integran según GitFlow, con pull requests cuando la revisión o la protección de rama lo requieren. Cada integrante debe aportar cambios propios y revisiones verificables en los productos que le correspondan.
 
@@ -3083,7 +3131,7 @@ Las interfaces deben mostrar español e inglés desde los diccionarios, sin mens
 
 La aplicación se compila con `npm ci` y `npm run build`. Los archivos de `dist/` se publican en el contenedor `$web` de Azure Storage. La landing ocupa `/landing/` y la aplicación la raíz del sitio. La navegación Vue utiliza rutas hash, por lo que el refresco de una vista conserva el punto de entrada sin reescrituras de rutas del servidor.
 
-La configuración de producción define `VITE_API_URL` y `VITE_LANDING_URL`. La API se compila mediante `dotnet publish`, se empaqueta en ZIP y se publica en Azure App Service. CORS permite el origen del frontend; las credenciales iniciales se configuran en el servidor. Los datos persistidos se guardan en `HOME/data`, fuera de los archivos públicos del sitio.
+La configuración de la SPA define `VITE_API_URL` y `VITE_LANDING_URL`. La API se compila en su repositorio con `dotnet publish` y puede empaquetarse en ZIP para Azure App Service. CORS debe permitir el origen concreto del frontend. La tabla siguiente describe **el entorno histórico TB1**: su archivo JSON reside en `HOME/data`, fuera de los archivos públicos. No identifica una base PostgreSQL AV2 ya desplegada.
 
 | Setting | Value |
 | --- | --- |
@@ -3096,6 +3144,8 @@ La configuración de producción define `VITE_API_URL` y `VITE_LANDING_URL`. La 
 | Persistence | Archivo JSON privado; una sola instancia |
 
 El plan F1 puede requerir un arranque después de periodos de inactividad. La landing mantiene el formulario de contacto sin receptor comercial configurado; su validación no se presenta como una solicitud recibida.
+
+AV2 requiere una conexión privada PostgreSQL mediante `FRIOTRACK_DB` o `ConnectionStrings__FrioTrack`, con persistencia `postgres`, migraciones explícitas y CORS. Las semillas ficticias se habilitan de forma expresa en una base nueva y sus contraseñas se suministran como variables privadas. No publicar la nueva API en un destino configurado únicamente para JSON ni reemplazar datos existentes sin acordar migración o conservación. La base no debe exponerse desde la SPA. El destino, credenciales y comprobación pública siguen pendientes en 5.2.3.7.
 
 ## 5.2. Landing Page, Services & Applications Implementation
 
@@ -3425,6 +3475,175 @@ La siguiente captura corresponde a **35 commits sin merges en `main`**, al corte
 
 Benjamin no participó en TB1 por su retiro; el Participant Performance Report registra 00. Los cuatro integrantes activos mantienen la evaluación de 20 consignada en el documento compartido por el equipo. El número de commits sirve como evidencia de colaboración y no determina la calificación.
 
+### 5.2.3. Sprint 3 — Preparación AV2
+
+[Plan de trabajo por integrante](docs/av2/team-action-plan.md) · [PDF del corte técnico AV2](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/releases/download/v3.0.0-av2.1/upc-pre-202620-1asi0730-8088-blackstartup-report-av2.pdf). El corte conserva los pendientes de validación y publicación indicados en esta sección.
+
+Este corte registra el incremento técnico en preparación para AV2. Las celdas pendientes requieren información de la reunión, aceptación y despliegue reales. La presencia de código o de esta estructura no acredita que el sprint haya sido planificado, aceptado o publicado. Los [documentos de trabajo AV2](docs/av2/README.md) conservan los instrumentos editables y la propuesta de tareas.
+
+#### 5.2.3.1. Sprint Planning 3
+
+El incremento propuesto integra los recorridos operativos de FríoTrack con el backend relacional y prepara una versión estable para validación con los segmentos objetivo. El alcance y la capacidad deben ser acordados por el equipo.
+
+| Field | Detail |
+| --- | --- |
+| Sprint # | Sprint 3 — AV2 |
+| Date | Pendiente de registrar la reunión real, `YYYY-MM-DD`. |
+| Time | Pendiente de registrar, `HH:MM AM/PM`, America/Lima. |
+| Location | Pendiente: ubicación o plataforma de la reunión. |
+| Prepared By | Pendiente de confirmar el responsable del registro. |
+| Attendees | Pendiente de registrar asistentes reales. |
+| Sprint 2 Review Summary | Incorporar resultados aceptados, observaciones y pendientes reales de TB1. Los recibos locales de revisión no equivalen a aceptación del equipo. |
+| Sprint 2 Retrospective Summary | Registrar las conclusiones efectivas del equipo sobre su forma de trabajo; no reconstruir una reunión sin acta. |
+| Sprint 3 Goal — propuesta no aprobada | **Our focus is on** enabling logistics coordinators to manage refrigerated shipments and cargo clients to consult their assigned shipments through one persistent, integrated web experience.<br>**We believe it delivers** reliable operational traceability and controlled access **to** refrigerated transport companies and their cargo clients.<br>**This will be confirmed when** the review demonstrates one valid shipment booked without overlapping resources, its lifecycle and alert attention preserved after restarting the service, and a cargo client consulting only assigned shipments while unauthorized management requests are rejected. |
+| Sprint 3 Velocity | Pendiente de la capacidad acordada por el equipo en Story Points. |
+| Sum of Story Points | Pendiente de seleccionar historias y estimarlas. Las horas de tareas no se convierten automáticamente en SP. |
+
+Las métricas son una propuesta de revisión y no resultados ya obtenidos. El equipo debe ajustar el goal y sus historias antes de considerarlo compromiso del Sprint 3.
+
+#### 5.2.3.2. Aspect Leaders and Collaborators
+
+Completar una matriz LACX con **L** para el líder y **C** para colaboradores de cada aspecto. La asignación debe corresponder a las tareas y aportes reales; no se traslada automáticamente la atribución histórica de otros sprints.
+
+| Team Member | GitHub Username | Backend y persistencia | SPA e integración | Landing y UX | Validación y documentación |
+| --- | --- | :---: | :---: | :---: | :---: |
+| Pendiente de confirmar integrantes activos | Pendiente | — | — | — | — |
+
+**—** significa asignación no registrada, no ausencia acreditada de participación. El equipo debe confirmar sus miembros activos y responsables antes de completar esta matriz.
+
+#### 5.2.3.3. Sprint Backlog 3
+
+El [backlog propuesto](docs/av2/sprint3-backlog-proposal.csv) descompone trabajo técnico y preparación de validación en tareas de revisión/implementación de 4–8 horas. Las estimaciones son propuestas posteriores, no horas efectivamente trabajadas ni capacidad aceptada. Los responsables están sin asignar y los estados iniciales no sustituyen el tablero real.
+
+Antes de entregar: incorporar el URL público del tablero y una captura actual del Sprint 3, confirmar historias y SP, responsables, estimaciones y estados **To Do / In Process / To Review / Done**, y escribir la tabla completa de tareas en el reporte. No duplicar tareas existentes al sincronizar Trello.
+
+La primera planificación debe distinguir historias del catálogo, tareas técnicas y artefactos de investigación. La incorporación de EF Core u OpenAPI debe tener una comprobación verificable; no se suman SP adicionales por cada tarea de una misma historia.
+
+#### 5.2.3.4. Development Evidence for Sprint Review
+
+Los commits siguientes están publicados en la organización, con la identidad Git de Alexander1Alexander2. La SPA 0.2.0 consume el contrato REST de la API 0.2.0. Se retiró la API duplicada del frontend; cada producto conserva su repositorio, verificación y release. Estos commits describen aportes de desarrollo; no sustituyen el acta ni la aceptación del equipo.
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on Date |
+| --- | --- | --- | --- | --- | --- |
+| friotrack-api | `main` / `develop` | [e9aca8e](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-api/commit/e9aca8e735edde7699e9447863c7f56b12e062e8) | ci(api): verify PostgreSQL persistence and package local services | — | 2026-11-13T14:58:22-05:00 |
+| friotrack-api | `main` / `develop` | [8c31d62](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-api/commit/8c31d6284ef94c4b857b97392cf25eb744b0e4bf) | feat(api): implement relational shipment workflows for AV2 | — | 2026-11-13T14:58:22-05:00 |
+| friotrack-frontend | `main` / `develop` | [9ef083e](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/commit/9ef083eba26bd16ea648ce8dd2f2fd2bfa694baa) | refactor(web): retire embedded API and guard PostgreSQL deployments | — | 2026-11-13T15:00:09-05:00 |
+| friotrack-frontend | `main` / `develop` | [c844513](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/commit/c844513977e1acb47948c2cb76f14035b3bdc26b) | feat(web): integrate REST workflows and isolate session transitions | — | 2026-11-13T15:00:09-05:00 |
+| friotrack-landing | `main` / `develop` | [36f2067](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-landing/commit/36f206712d0952b41ad6b3e6893645d9a0fcc682) | feat(landing): prepare bilingual product videos for AV2 | — | 2026-11-13T15:01:41-05:00 |
+
+Las [verificaciones de GitHub de los productos](assets/evidence/av2/product-github-checks.json) registran resultados satisfactorios para los tres commits del corte. Las releases de código fuente se consultan en [API 0.2.0](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-api/releases/tag/0.2.0), [SPA 0.2.0](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/releases/tag/0.2.0) y [landing 0.2.0](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-landing/releases/tag/0.2.0).
+
+#### 5.2.3.5. Execution Evidence for Sprint Review
+
+El [registro técnico](assets/evidence/av2/technical-verification.json) identifica versiones, resultados y límites. La integración se ejecutó contra una base PostgreSQL 17 temporal real y una compilación de producción de la SPA. Se utilizaron perfiles de navegador aislados para que cada recorrido partiera de una sesión nueva. Los resultados son comprobaciones técnicas locales, con datos de demostración; la revisión y aceptación del equipo siguen pendientes.
+
+| Comprobación ejecutada | Resultado | Registro |
+| --- | --- | --- |
+| Dominio C# | 21 pruebas aprobadas; intervalos, ciclo, versiones, atención y recuperación, fechas de lectura y restricciones del modelo. | [Resumen técnico](assets/evidence/av2/technical-verification.json) |
+| API REST + PostgreSQL | 37 comprobaciones aprobadas; incluye reservas simultáneas, rechazo sin cambios parciales, roles, aislamiento organizacional, snapshots y reinicio. | [Integración PostgreSQL](assets/evidence/av2/postgres-api-verification.json) |
+| SPA y despliegue | 32 pruebas de frontend y 9 de condiciones de publicación aprobadas; build de 229 módulos. Se protegieron respuestas tardías de otra sesión. | [Resumen técnico](assets/evidence/av2/technical-verification.json) |
+| SPA + API real | 173 comprobaciones aprobadas en 390/1440 px y ES/EN, ambos roles, inventario independiente de sensores y descarga del reporte JSON persistido. | [Recorrido integrado](assets/evidence/av2/local-integrated-acceptance.json) |
+| Landing | 6 pruebas y 22 comprobaciones de navegador aprobadas: idioma, móvil, enlaces y reproductor sólo bajo configuración válida. | [Landing local](assets/evidence/av2/landing-browser-verification.json) |
+| Regresión histórica | 26 comprobaciones del adaptador JSON TB1 aprobadas en un almacén temporal separado. | [Resumen técnico](assets/evidence/av2/technical-verification.json) |
+
+![Figura 5.10. Inventario de sensores independientes en la SPA AV2; ejecución local móvil con datos de demostración](assets/images/chapter-05/av2/sensors-390-es.png)
+
+![Figura 5.11. Cliente de Carga en inglés; ejecución local AV2 con información asignada de demostración](assets/images/chapter-05/av2/dashboard-cargo-client-1440-en.png)
+
+![Figura 5.12. Landing AV2 en inglés por defecto; vista local móvil sin videos configurados](assets/images/chapter-05/av2/landing-default-en-390.png)
+
+Las teselas y fuentes externas se bloquearon en estas pruebas locales; no se certifica el proveedor de mapas. Docker Compose no se ejecutó porque Docker no está instalado, aunque el backend fue probado directamente contra PostgreSQL. El video de navegación Sprint 3 y la aceptación con participantes requieren una grabación real posterior.
+
+#### 5.2.3.6. Services Documentation Evidence for Sprint Review
+
+Documentar los endpoints realmente implementados con OpenAPI y Swagger UI, incluyendo autenticación, parámetros, payloads, respuestas de éxito y error y ejemplos. Incorporar el URL desplegado y capturas de interacción.
+
+| Action | HTTP method and path | Parameters / body | Success / error responses | OpenAPI / evidence |
+| --- | --- | --- | --- | --- |
+| Iniciar y revocar sesión | `POST /api/auth/login`, `POST /api/auth/logout` | Correo/contraseña en login; Bearer en logout | `200` / `204`; `401`, `429` según operación | Contrato generado; URL pública pendiente. |
+| Registrar Cliente de Carga | `POST /api/auth/register` | Nombre, correo, organización y contraseña; no admite alta pública de coordinador | `200`; `400`, `403`, `409` | Rol impuesto por el servidor. |
+| Consultar workspace y recursos | `GET /api/workspace`, `GET /api/shipments`, `GET /api/shipments/{id}` | Bearer; ID en detalle | `200`; `401`, `404` | Consultas filtradas por empresa y asignación. |
+| Programar o actualizar envío | `POST /api/shipments`, `PUT /api/shipments/{id}` | Ruta, carga, cliente, recursos, fechas, rango y versión al editar | `200`; `400`, `401`, `403`, `404`, `409` | Reserva transaccional y control de versión. |
+| Eliminar envío programado | `DELETE /api/shipments/{id}?version=N` | ID y versión esperada | `200`; errores según permisos/reglas y conflicto | No permite borrar un envío con lecturas. |
+| Ejecutar transición | `POST /api/shipments/{id}/transitions` | `version`, `status`, `note` | `200`; `400`, `401`, `403`, `404`, `409` | Inicio, entrega o cancelación antes del tránsito. |
+| Registrar lectura de demostración | `POST /api/shipments/{id}/readings` | Temperatura, humedad, coordenadas y fecha opcional | `200`; errores de rango, estado y permisos | No es ingesta autenticada de hardware. |
+| Evaluar silencio | `POST /api/shipments/{id}/signal-evaluations` | ID autorizado | `200`; errores de estado/permisos | Evaluación a solicitud, sin proceso automático declarado. |
+| Registrar atención | `POST /api/alerts/{id}/corrective-actions` | Nota y decisión de notificar al cliente | `200`; errores de permisos/reglas | Reconoce la alerta; no acredita recuperación térmica. |
+| Administrar recursos independientes | `POST /api/vehicles`, `/api/drivers`, `/api/sensors`; `PUT` con ID | Payload propio de cada recurso | `200`; validación, permisos y conflicto | Sensor con asignación opcional a unidad. |
+| Registrar incidencia y leer avisos | `POST /api/shipments/{id}/incidents`, `POST /api/notifications/read` | Nota para incidencia; destinatario de sesión para avisos | `200`; errores de permisos/reglas | Lectura explícita del destinatario, no lectura automática. |
+| Generar y consultar reporte | `POST /api/shipments/{id}/reports`, `GET /api/reports/{id}` | Envío entregado; reporte autorizado | `200`; `400`, `401`, `403`, `404` según operación | Copia JSON persistida; no se presenta como PDF. |
+
+La especificación se sirve en `/swagger/v1/swagger.json` y la interfaz en `/swagger/index.html` del servicio ejecutado. Estos paths pertenecen al host de la API, sin prefijo `/api`. Las mutaciones devuelven la proyección actualizada junto con el resultado; los errores incluyen código y mensaje. La tabla manual de TB1 no sustituye la especificación desplegada de AV2. El repositorio canónico es [friotrack-api](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-api); incorporar sus commits de documentación del sprint. Las operaciones ejecutadas desde Swagger deben respetar los mismos permisos que la SPA.
+
+#### 5.2.3.7. Software Deployment Evidence for Sprint Review
+
+Registrar la configuración y publicación efectivas de landing, SPA, API y base de datos. No afirmar publicación por tener únicamente un build local o una release de GitHub.
+
+| Producto | Versión / commit | URL | Verificación real |
+| --- | --- | --- | --- |
+| Landing AV2 | `0.2.0` / `36f2067` | [GitHub Pages](https://upc-pre-202620-1asi0730-8088-friotrackk.github.io/friotrack-landing/) | Publicación automática del repositorio; ocho archivos HTTP 200 coinciden con los bytes del commit. Videos aún sin configurar. |
+| SPA AV2 | Pendiente del corte publicado | Pendiente de comprobar | Bundle, conexión API y recorridos por perfil. |
+| Web Services AV2 | Pendiente del corte publicado | Pendiente de comprobar | Health, recursos, permisos y Swagger. |
+| PostgreSQL | Pendiente del destino autorizado | Acceso privado; no publicar credenciales | Migraciones, integridad y persistencia. |
+
+El [recibo público de GitHub Pages](assets/evidence/av2/github-pages-verification.json) acredita únicamente la landing. El entorno Azure previo continúa siendo el corte histórico; la SPA y la API AV2 no se declaran desplegadas. Preparar PostgreSQL, revisar la migración y publicar la API antes que la SPA. La herramienta de publicación bloquea una SPA nueva contra el backend JSON anterior.
+
+Guardar recibos con SHA de fuentes/artefactos, fecha, destino y resultado. Documentar variables por nombre, sin sus secretos. La autenticación y la autorización para recursos con coste deben completarse antes de publicar. Preservar o migrar los datos existentes según la decisión del equipo.
+
+#### 5.2.3.8. Team Collaboration Insights during Sprint
+
+Incluir gráficos y capturas del corte AV2 por repositorio, enlaces a commits y revisiones reales, y explicación de colaboración entre landing, SPA y API. Todos los integrantes deben aportar a los productos según corresponda al sprint.
+
+Conservar el tablero actualizado, actas auténticas de planning/review/retrospectiva y aceptación individual de tareas. Equilibrar el número de commits no sustituye integración, revisión y comprensión de los cambios. Los datos de corte TB1 permanecen como antecedentes históricos y no se renombrarán AV2.
+
+## 5.3. Validation Interviews
+
+La validación AV2 debe ejecutarse sobre una versión identificada de landing, SPA y API con participantes de los dos segmentos. Las entrevistas de descubrimiento del Capítulo II son antecedentes y no se contabilizan como sesiones de validación del nuevo incremento.
+
+### 5.3.1. Diseño de entrevistas
+
+El [protocolo de validación](docs/av2/validation-protocol.md) prepara **3–5 entrevistas por segmento: 6–10 en total**. Antes de cada sesión se registra versión, dispositivo, perfil de experiencia y consentimiento. Se emplean cuentas y cargas de demostración. El facilitador observa la ejecución sin indicar los pasos de solución; registra resultado, dudas y apreciaciones auténticas.
+
+| Segmento | Tareas preparadas | Evidencia que se recoge |
+| --- | --- | --- |
+| Empresa de transporte refrigerado / Coordinador Logístico | Comprender propuesta en landing, programar un envío, interpretar un conflicto de reserva, revisar monitoreo y atender una alerta. | Finalización o bloqueo, interpretación de estados/fechas/rangos, pasos, dificultad observada y opinión. |
+| Cliente de Carga | Comprender propuesta, acceder con su cuenta, localizar envío asignado, interpretar lecturas e historial y consultar/descargar un reporte disponible. | Comprensión de permisos, datos y procedencia de la lectura, resultado de tarea y opinión. |
+
+El guion conserva las preguntas completas, criterios de observación y ficha de sesión. Si una función todavía no está disponible en la versión evaluada, se registra como excluida y no se simula un resultado satisfactorio.
+
+### 5.3.2. Registro de entrevistas
+
+Las nuevas grabaciones de validación no se han incorporado a este corte. El [registro editable](docs/av2/validation-records.csv) se mantiene sin participantes ni resultados inventados. Cada sesión deberá añadir segmento, fecha, versión, enlace autorizado, inicio/duración del fragmento, captura representativa, resumen, resultados por tarea y dificultades.
+
+El video consolidado se publicará en Microsoft Stream privado con acceso comprobado para el docente. La [pauta de montaje](docs/av2/video-scripts.md#entrevistas-de-validación-consolidadas) prepara rótulos e índice sin sustituir las sesiones. Los enlaces antiguos de TB1 se conservan en sus secciones históricas.
+
+### 5.3.3. Evaluación según heurísticas
+
+La [plantilla de evaluación](docs/av2/heuristics-template.md) corresponde al **Anexo D del enunciado**: datos de evaluación, tareas incluidas/excluidas, resumen de problemas y fichas con severidad, principio, evidencia y recomendación. El Anexo D de este informe conserva sus enlaces de tablero/diseño; no debe confundirse con el anexo del statement.
+
+| Severidad | Interpretación |
+| :---: | --- |
+| 1 | Superficial: impacto reducido y corrección si existe tiempo. |
+| 2 | Menor: dificultad moderada y prioridad baja. |
+| 3 | Mayor: obstáculo frecuente o difícil de superar; prioridad alta. |
+| 4 | Muy grave: impide continuar y requiere corrección antes del lanzamiento. |
+
+Los hallazgos se completan tras observar la versión real. Una inspección técnica puede complementarlos si se identifica como tal; las pruebas automáticas no sustituyen participantes ni permiten atribuirles opiniones. Cada mejora debe relacionarse con su tarjeta, cambio concreto y nueva comprobación.
+
+## 5.4. Video About-the-Product
+
+La [pauta de About-the-Product](docs/av2/video-scripts.md#about-the-product--1-a-3-minutos) prepara un video de **1–3 minutos** con problema, propuesta, demostración de la versión, opiniones auténticas de ambos segmentos y CTA. El material debe incluir al menos un testimonio positivo real obtenido de la validación.
+
+El equipo debe proporcionar grabaciones y enlaces finales en Stream y YouTube. En este corte están pendientes el video AV2, su duración, captura, introducción y resumen sustentados en el material final. La landing admite un reproductor opcional con URL YouTube configurada; lo mantiene oculto si no existe un enlace válido. La preparación del componente no acredita una publicación de video.
+
+## 5.5. Video About-the-Team
+
+La [pauta de About-the-Team](docs/av2/video-scripts.md#about-the-team--retrospectiva-y-testimonios) prepara **5 minutos de retrospectiva grupal y 1 minuto por integrante**, con escenas reales de planificación, diseño, desarrollo, ejecución y revisión. Los testimonios explican contribución propia, colaboración, aprendizaje y relación con Student Outcome 5.
+
+El video, la pauta con timestamps `hh:mm:ss`, la captura y los enlaces Stream/YouTube deben proceder de sesiones reales y de todos los integrantes activos. La landing dispone de un espacio opcional configurable para el video final. No se presenta el material histórico de TB1 como retrospectiva de Sprint 3.
+
+La [lista de entradas y entrega](docs/av2/inputs-and-delivery.md) reúne dependencias y nombres de reporte, presentación, performance y videos. El [esquema de presentación](docs/av2/keynote-outline.md) prepara la exposición AV2 de hasta 30 minutos; el equipo debe añadir fotos, testimonios, resultados y datos reales de responsabilidades.
+
 # Conclusiones y Recomendaciones
 
 ## Conclusiones
@@ -3435,7 +3654,7 @@ La entrega incorpora la primera aplicación Vue/PrimeVue publicada en Azure y un
 
 La revisión de fuentes del 10/11 registra 18 pruebas frontend y 26 comprobaciones locales de la API. Los recibos de octubre conservan sus 15 pruebas frontend, build de 222 módulos y 12 comprobaciones HTTPS, además de la comparación de archivos mediante SHA-256. Las capturas muestran el acceso y las vistas autenticadas de aquella publicación; no certifican el despliegue de las correcciones de noviembre. Estas comprobaciones permiten reproducir la revisión técnica; no miden adopción comercial, satisfacción ni reducción real de pérdidas.
 
-La arquitectura diferencia los contenedores actualmente desplegados del diseño posterior con EF Core y PostgreSQL. El servicio de apoyo utiliza un archivo JSON privado de una sola instancia. Las lecturas y coordenadas iniciales son datos de prueba; la recepción de sensores físicos, recuperación de contraseña, correo externo y Swagger del backend final continúan en el roadmap.
+La arquitectura conserva los contenedores y evidencia del servicio JSON TB1 y documenta la evolución AV2 hacia EF Core/PostgreSQL, recursos REST, sesiones persistentes y Swagger. Las fuentes y migraciones se distinguen de su publicación cloud aún pendiente. Las lecturas y coordenadas iniciales son datos de demostración; sensores físicos, recuperación por correo y procesamiento temporal automático continúan fuera del incremento acreditado.
 
 El nuevo repositorio consolida el trabajo por capítulo y registra los commits de las cuentas participantes. Los anexos reúnen los enlaces del producto, evidencias técnicas y materiales de apoyo, y especifican los documentos académicos que todavía requieren adjuntarse por el equipo.
 
@@ -3443,7 +3662,7 @@ El nuevo repositorio consolida el trabajo por capítulo y registra los commits d
 
 Completar la validación con usuarios de transporte refrigerado y clientes de carga, distinguiendo sus necesidades de las entrevistas orientadas a almacenes y bodegas. Actualizar las personas, mapas e instrumentos según esos hallazgos y conservar los registros originales de las entrevistas.
 
-Para la siguiente iteración, evolucionar la API hacia persistencia relacional con EF Core, transacciones para reservas, aislamiento por empresa y contratos OpenAPI. Integrar dispositivos solo después de validar su identidad, sus marcas de tiempo y la recepción de lecturas. Mantener visible la procedencia de datos de prueba mientras no exista telemetría real.
+Para cerrar AV2, verificar y publicar el incremento relacional con su base configurada, migraciones y recibos de fuente/artefacto; repetir recorridos autorizados, conflictos de reserva y persistencia sobre la URL pública. Integrar dispositivos solo después de validar su identidad, marcas de tiempo y recepción de lecturas. Mantener visible la procedencia de datos de demostración mientras no exista telemetría real.
 
 Cerrar el receptor del formulario comercial, desplegar las fuentes corregidas que ya están sincronizadas en los repositorios y repetir los recorridos de aceptación en ambos idiomas. Ampliar la revisión de accesibilidad y tamaños de pantalla a los controles y estados que aún no tienen evidencia completa.
 
@@ -3537,7 +3756,7 @@ La evaluación conserva las calificaciones del [documento compartido por el equi
 | Frontend Web Application | [friotrack-frontend](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend) | Vue/PrimeVue, pruebas y configuración Azure. |
 | Web Services | [friotrack-api](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-api) | Autenticación, autorización, persistencia JSON y comandos; producto versionado independientemente. |
 
-La API dispone de [repositorio público independiente](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-api). La copia `api/` del frontend conserva compatibilidad con sus scripts anteriores; su separación técnica no implica una migración del almacén JSON a PostgreSQL.
+La API dispone de [repositorio público independiente](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-api). La copia `api/` del frontend y sus scripts anteriores fueron retirados del corte AV2. La API canónica implementa EF Core/PostgreSQL en su repositorio independiente. El almacén JSON y los recibos TB1 se conservan como antecedentes; no se migran automáticamente al nuevo destino.
 
 ## Anexo C. Acceso a los productos publicados
 

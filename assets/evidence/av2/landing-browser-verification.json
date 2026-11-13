@@ -1,0 +1,103 @@
+{
+  "verifiedAt": "2026-11-13T19:47:31.732Z",
+  "scope": "Local headless landing AV2 checks; no personal browser profile, desktop capture, real videos or cloud deployment",
+  "checks": [
+    {
+      "name": "English default despite Spanish browser locale",
+      "width": 390
+    },
+    {
+      "name": "Unconfigured videos absent and no iframe created",
+      "width": 390
+    },
+    {
+      "name": "Default landing fits viewport",
+      "width": 390
+    },
+    {
+      "name": "Profile CTA uses default English and modal closes",
+      "width": 390
+    },
+    {
+      "name": "Spanish choice persists to terms with Latin American locale",
+      "width": 390
+    },
+    {
+      "name": "URL overrides saved language",
+      "width": 390
+    },
+    {
+      "name": "Blocked storage retains functional English default",
+      "width": 390
+    },
+    {
+      "name": "Valid configured product URL shows only its card without preloading",
+      "width": 390
+    },
+    {
+      "name": "Keyboard loads localized privacy-domain player on request",
+      "width": 390
+    },
+    {
+      "name": "Player language updates without duplication or horizontal overflow",
+      "width": 390
+    },
+    {
+      "name": "Lookalike host never creates a player",
+      "width": 390
+    },
+    {
+      "name": "English default despite Spanish browser locale",
+      "width": 1440
+    },
+    {
+      "name": "Unconfigured videos absent and no iframe created",
+      "width": 1440
+    },
+    {
+      "name": "Default landing fits viewport",
+      "width": 1440
+    },
+    {
+      "name": "Profile CTA uses default English and modal closes",
+      "width": 1440
+    },
+    {
+      "name": "Spanish choice persists to terms with Latin American locale",
+      "width": 1440
+    },
+    {
+      "name": "URL overrides saved language",
+      "width": 1440
+    },
+    {
+      "name": "Blocked storage retains functional English default",
+      "width": 1440
+    },
+    {
+      "name": "Valid configured product URL shows only its card without preloading",
+      "width": 1440
+    },
+    {
+      "name": "Keyboard loads localized privacy-domain player on request",
+      "width": 1440
+    },
+    {
+      "name": "Player language updates without duplication or horizontal overflow",
+      "width": 1440
+    },
+    {
+      "name": "Lookalike host never creates a player",
+      "width": 1440
+    }
+  ],
+  "failures": [],
+  "externalVideoRequests": [
+    "https://www.youtube-nocookie.com",
+    "https://www.youtube-nocookie.com"
+  ],
+  "pageErrors": [],
+  "status": "passed",
+  "completedAt": "2026-11-13T19:47:39.109Z",
+  "checksPassed": 22
+}
