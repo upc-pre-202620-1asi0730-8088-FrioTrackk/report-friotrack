@@ -19,7 +19,7 @@ COLORS = ['#fff2cc', '#e1f0ff', '#e4f1df', '#fce4d6', '#ede3f4']
 
 
 def parse_migration(path):
-    raw = path.read_bytes()
+    raw = path.read_bytes().replace(b'\r\n', b'\n')
     text = raw.decode('utf-8-sig').split('protected override void Down', 1)[0]
     tables = []
     for block in text.split('migrationBuilder.CreateTable(')[1:]:
@@ -210,7 +210,7 @@ def main():
     model = parse_migration(args.migration)
     out = REPO/'assets/architecture/av2'
     out.mkdir(parents=True, exist_ok=True)
-    (out/'schema.json').write_text(json.dumps(model, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
+    (out/'schema.json').write_text(json.dumps(model, ensure_ascii=False, indent=2)+'\n', encoding='utf-8', newline='\n')
     lookup = {t['table']: t for t in model['tables']}
     pages = ET.Element('mxfile', host='app.diagrams.net', version='24.7.17')
     views = [('00-erd-overview', 'Relational schema overview', model['tables'], '#ffffff', True)]
@@ -219,7 +219,7 @@ def main():
     manifest = []
     for ident, title, tables, color, overview in views:
         svg, graph = diagram(title, tables, lookup, color, overview)
-        (out/(ident+'.svg')).write_text(svg, encoding='utf-8')
+        (out/(ident+'.svg')).write_text(svg, encoding='utf-8', newline='\n')
         page = ET.SubElement(pages, 'diagram', id=ident, name=title)
         page.append(graph)
         single = ET.Element('mxfile', host='app.diagrams.net')
@@ -228,7 +228,7 @@ def main():
         ET.ElementTree(single).write(out/(ident+'.drawio'), encoding='utf-8', xml_declaration=True)
         manifest.append({'id':ident, 'title':title, 'svg':ident+'.svg', 'drawio':ident+'.drawio', 'sha256':hashlib.sha256(svg.encode('utf-8')).hexdigest()})
     ET.ElementTree(pages).write(out/'FrioTrack-AV2-Database.drawio', encoding='utf-8', xml_declaration=True)
-    (out/'schema-manifest.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
+    (out/'schema-manifest.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2)+'\n', encoding='utf-8', newline='\n')
     doc = ['# Esquema relacional AV2', '', 'Este catálogo se deriva de la migración EF Core del repositorio canónico `friotrack-api`; identifica las fuentes y no acredita por sí solo despliegue cloud ni aceptación del sprint.', '', f"Migración: `{model['migration']}`. SHA-256: `{model['migrationSha256']}`.", '', f"**{len(model['tables'])} tablas y {sum(len(t['foreignKeys']) for t in model['tables'])} claves foráneas.** La tabla interna `__EFMigrationsHistory` registra EF Core y no es una entidad de negocio.", '', '[Documento editable de seis páginas](FrioTrack-AV2-Database.drawio). Descargar y abrir en Archivo → Abrir de [diagrams.net](https://app.diagrams.net/). Las tablas y conectores son formas nativas; las relaciones se muestran como catálogo FK → PK para facilitar la lectura impresa.', '', '| Vista | Imagen | Editable |', '| --- | --- | --- |']
     doc.extend(f"| {v['title']} | [SVG]({v['svg']}) | [drawio]({v['drawio']}) |" for v in manifest)
     doc += ['', '## Diferencias respecto al diseño TB1', '', '- `auth_sessions` añade sesiones revocables persistentes. La clave primaria es el hash del token, no el token emitido.', '- Los identificadores de entidad usan `varchar(100)`, compatibles con el contrato histórico. Los tipos de cada referencia constan en el catálogo; `thermal_reports.generated_by` usa `varchar(2000)`. No se convierten los identificadores históricos a UUID.', '- El campo `version` del envío es un token de concurrencia. La reserva opera en una transacción y utiliza un bloqueo asesor por organización; las FK no impiden por sí solas el solapamiento.', '- `thermal_reports.snapshot` utiliza `jsonb`: es la copia autorizada e inmutable del reporte al solicitarlo, no el almacén general de operaciones. La descarga implementada es JSON, además del CSV del frontend.', '- Los roles y estados tienen restricciones CHECK. El aislamiento por empresa y por cliente se aplica también en el servicio de aplicación; una FK no sustituye autorización.', '- La presencia de `password_reset_tokens` permite conservar el modelo previsto. No demuestra envío de correo ni un flujo de recuperación operativo.', '- Las lecturas son de demostración y las evaluaciones de pérdida de señal se solicitan expresamente. No se afirma ingesta física ni evaluación automática en segundo plano.', '', '## Catálogo de columnas', '']
@@ -247,7 +247,7 @@ def main():
     doc += ['## Referencias de integridad', '', '| Hija | FK | Padre | PK | Eliminación |', '| --- | --- | --- | --- | --- |']
     doc.extend(f"| `{t['table']}` | `{f['column']}` | `{f['parentTable']}` | `{f['parentColumn']}` | {f['onDelete']} |" for t in model['tables'] for f in t['foreignKeys'])
     doc += ['', '## Reproducción', '', 'Con ambos repositorios en directorios hermanos, ejecutar `python scripts/build-av2-schema.py`. Puede indicarse otra ruta con `--migration`. El script solo lee la migración y escribe documentación; no inicia servicios, crea bases de datos ni accede a credenciales.', '']
-    (out/'README.md').write_text('\n'.join(doc), encoding='utf-8')
+    (out/'README.md').write_text('\n'.join(doc), encoding='utf-8', newline='\n')
     print(json.dumps({'tables':len(model['tables']), 'foreignKeys':sum(len(t['foreignKeys']) for t in model['tables']), 'views':len(views), 'migrationSha256':model['migrationSha256']}))
 
 

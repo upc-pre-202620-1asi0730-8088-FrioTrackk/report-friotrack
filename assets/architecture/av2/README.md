@@ -2,7 +2,7 @@
 
 Este catálogo se deriva de la migración EF Core del repositorio canónico `friotrack-api`; identifica las fuentes y no acredita por sí solo despliegue cloud ni aceptación del sprint.
 
-Migración: `20261113144845_InitialAv2Relational.cs`. SHA-256: `5f29bb5030cbe8c0212b0be70fd70913d6cfaad98f8e1d98293d5fa16fe7c793`.
+Migración: `20261113144845_InitialAv2Relational.cs`. SHA-256: `2872a561f81786cfdb92f68c1f6f15a63849d2869081e433319b2dff053a2a53`.
 
 **18 tablas y 31 claves foráneas.** La tabla interna `__EFMigrationsHistory` registra EF Core y no es una entidad de negocio.
 

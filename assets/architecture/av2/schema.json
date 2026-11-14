@@ -1,7 +1,7 @@
 {
   "status": "av2_ef_core_migration_source_not_cloud_deployment",
   "migration": "20261113144845_InitialAv2Relational.cs",
-  "migrationSha256": "5f29bb5030cbe8c0212b0be70fd70913d6cfaad98f8e1d98293d5fa16fe7c793",
+  "migrationSha256": "2872a561f81786cfdb92f68c1f6f15a63849d2869081e433319b2dff053a2a53",
   "tables": [
     {
       "table": "shipments",
