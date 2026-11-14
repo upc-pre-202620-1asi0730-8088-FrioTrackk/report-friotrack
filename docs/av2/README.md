@@ -2,7 +2,7 @@
 
 Estos documentos preparan el Sprint 3 y las secciones nuevas de AV2. No certifican entrevistas, reuniones, videos, publicación en cloud ni aceptación que todavía no se hayan realizado. La carátula y las entregas anteriores se conservan en el informe principal.
 
-Referencia: enunciado UPC 1ASI0730, periodo 202620, AV2 semana 12, páginas 32–33; validación página 27; videos Anexo C página 39; heurísticas Anexo D páginas 40–41. El PDF adjuntado nuevamente por el equipo tiene el mismo contenido que la copia anterior.
+Referencia: enunciado UPC 1ASI0730, periodo 202620, AV2 semana 12, páginas 32–33; validación página 27; videos Anexo C página 39; heurísticas Anexo D páginas 40–41.
 
 | Documento | Uso |
 | --- | --- |
@@ -13,8 +13,7 @@ Referencia: enunciado UPC 1ASI0730, periodo 202620, AV2 semana 12, páginas 32�
 | [Evaluación heurística](heuristics-template.md) | Estructura de Anexo D, severidad 1–4 y detalle de hallazgos observados. |
 | [Guiones de videos](video-scripts.md) | Product, Team, navegación y exposición; grabaciones auténticas aún necesarias. |
 | [Esquema de presentación](keynote-outline.md) | Estructura para preparar la presentación AV2 con evidencias verificadas. |
-| [Entradas y entrega](inputs-and-delivery.md) | Lo que debe proporcionar el equipo, dependencias y nombres de archivos. |
-| [Plan por integrante](team-action-plan.md) | Reparto propuesto, videos/entrevistas, cuentas y orden de trabajo para completar AV2. |
+| [Entradas y entrega](inputs-and-delivery.md) | Requisitos de entrega, dependencias y nombres de archivos. |
 
 El repositorio Markdown continúa siendo la fuente editable. Los documentos de preparación deben integrarse al informe con sus resultados reales y exportarse a PDF antes de entregar. No reemplazar las tablas de historias o backlog por screenshots de Trello.
 

@@ -12,10 +12,10 @@
 | Participantes de ambos segmentos y autorización de grabación | Ejecutar validación real | Guion, tareas, fichas y agenda propuesta. |
 | Grabaciones y opiniones auténticas | Registros, análisis, About-the-Product y entrevistas consolidadas | Pautas de montaje y diseño de títulos. |
 | Sesiones de trabajo y testimonios de cada integrante | About-the-Team y Student Outcome | Guion y lista de escenas necesarias. |
-| Cuentas Stream/YouTube y enlaces finales | Publicar videos y habilitar reproductores en landing | Código de integración con URLs opcionales. Si no existe conexión directa, el equipo sube los MP4 y entrega los enlaces. |
+| Cuentas Stream/YouTube y enlaces finales | Publicar videos y habilitar reproductores en landing | Publicación de los MP4 y registro de sus enlaces para el reporte y la landing. |
 | Responsabilidades y calificaciones del Team Leader | Performance Report AV2 | Formato Word/PDF; no inventar evaluación individual. |
 
-No enviar contraseñas ni tokens por el chat o Git. Usar conexiones autorizadas y variables privadas cuando corresponda. La autenticación Microsoft mediante código tiene vigencia limitada: iniciar un flujo nuevo al momento de publicar, sin reutilizar códigos antiguos.
+Las credenciales se administran mediante variables de entorno privadas y mecanismos de autenticación del proveedor. Los repositorios y los documentos públicos contienen únicamente nombres de variables y datos de configuración no sensibles.
 
 ## Secuencia de trabajo
 

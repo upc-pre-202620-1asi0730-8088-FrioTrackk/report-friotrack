@@ -3477,7 +3477,7 @@ Benjamin no participó en TB1 por su retiro; el Participant Performance Report r
 
 ### 5.2.3. Sprint 3 — Preparación AV2
 
-[Plan de trabajo por integrante](docs/av2/team-action-plan.md) · [PDF del corte técnico AV2](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/releases/download/v3.0.0-av2.1/upc-pre-202620-1asi0730-8088-blackstartup-report-av2.pdf). El corte conserva los pendientes de validación y publicación indicados en esta sección.
+[PDF del corte técnico AV2](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/releases/download/v3.0.0-av2.2/upc-pre-202620-1asi0730-8088-blackstartup-report-av2.pdf). El corte conserva los pendientes de validación y publicación indicados en esta sección.
 
 Material de preparación: [presentación editable](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-keynote-av2-base.pptx), [vista PDF de 14 diapositivas](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-keynote-av2-base.pdf), [plantilla editable de participación](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-performance-av2-template.md) y [formato PDF de participación](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-performance-av2-template.pdf). Son bases de trabajo; resultados de entrevistas, fotos autorizadas, grabaciones y evaluación del Team Leader deben completarse con información propia.
 
