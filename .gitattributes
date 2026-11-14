@@ -1,3 +1,12 @@
+# Preserve the diagram bytes used by the architecture manifests.
+assets/images/chapter-04/revision-2026-11-11/*.svg text eol=lf
+assets/images/chapter-04/revision-2026-11-11/*.png binary
+assets/architecture/chapter-04/manifest.json text eol=lf
+assets/architecture/av2/*.svg text eol=lf
+assets/architecture/av2/*.json text eol=lf
+assets/architecture/av2/*.drawio text eol=lf
+assets/images/chapter-05/av2/*.svg text eol=lf
+
 *.pdf binary
 *.pptx binary
 *.docx binary
