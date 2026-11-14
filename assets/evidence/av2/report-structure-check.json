@@ -1,5 +1,5 @@
 {
-  "localLinksChecked": 370,
+  "localLinksChecked": 376,
   "brokenLinks": [],
   "stories": 43,
   "scenarioMarkers": 86,
@@ -83,7 +83,7 @@
     "tables": 18,
     "foreignKeys": 31,
     "schemaViews": 6,
-    "documentLinksChecked": 42,
+    "documentLinksChecked": 44,
     "proposedTasks": 30,
     "proposedHours": 204
   }

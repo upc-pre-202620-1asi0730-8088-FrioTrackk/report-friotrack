@@ -1,4 +1,7 @@
-# Architecture image hashes must be identical on Windows and Linux.
-assets/images/chapter-04/revision-2026-11-11/*.svg text eol=lf
-assets/images/chapter-04/revision-2026-11-11/*.png binary
-assets/architecture/chapter-04/manifest.json text eol=lf
+*.pdf binary
+*.pptx binary
+*.docx binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.mp4 binary

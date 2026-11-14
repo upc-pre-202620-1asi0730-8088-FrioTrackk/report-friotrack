@@ -3479,6 +3479,8 @@ Benjamin no participó en TB1 por su retiro; el Participant Performance Report r
 
 [Plan de trabajo por integrante](docs/av2/team-action-plan.md) · [PDF del corte técnico AV2](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/releases/download/v3.0.0-av2.1/upc-pre-202620-1asi0730-8088-blackstartup-report-av2.pdf). El corte conserva los pendientes de validación y publicación indicados en esta sección.
 
+Material de preparación: [presentación editable](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-keynote-av2-base.pptx), [vista PDF de 14 diapositivas](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-keynote-av2-base.pdf), [plantilla editable de participación](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-performance-av2-template.md) y [formato PDF de participación](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-performance-av2-template.pdf). Son bases de trabajo; resultados de entrevistas, fotos autorizadas, grabaciones y evaluación del Team Leader deben completarse con información propia.
+
 Este corte registra el incremento técnico en preparación para AV2. Las celdas pendientes requieren información de la reunión, aceptación y despliegue reales. La presencia de código o de esta estructura no acredita que el sprint haya sido planificado, aceptado o publicado. Los [documentos de trabajo AV2](docs/av2/README.md) conservan los instrumentos editables y la propuesta de tareas.
 
 #### 5.2.3.1. Sprint Planning 3
@@ -3591,6 +3593,10 @@ El [recibo público de GitHub Pages](assets/evidence/av2/github-pages-verificati
 Guardar recibos con SHA de fuentes/artefactos, fecha, destino y resultado. Documentar variables por nombre, sin sus secretos. La autenticación y la autorización para recursos con coste deben completarse antes de publicar. Preservar o migrar los datos existentes según la decisión del equipo.
 
 #### 5.2.3.8. Team Collaboration Insights during Sprint
+
+El siguiente gráfico documenta el corte técnico de seis commits de fuentes del 13/11/2026: API 2, frontend 2, landing 1 y reporte 1, todos con autor registrado Alexander1Alexander2. El [registro de contribuciones](assets/evidence/av2/contributions-technical-cut.json) conserva los SHA de inicio/fin y cada commit. Los commits posteriores de archivos de apoyo quedan fuera de este corte. El gráfico permite comprobar la integración entre productos; los aportes finales de los demás miembros y la aceptación del sprint se incorporarán desde su actividad real.
+
+![Figura 5.13. Commits del corte técnico AV2 por producto; registro parcial del 13/11/2026](assets/images/chapter-05/av2/contributions-technical-cut.png)
 
 Incluir gráficos y capturas del corte AV2 por repositorio, enlaces a commits y revisiones reales, y explicación de colaboración entre landing, SPA y API. Todos los integrantes deben aportar a los productos según corresponda al sprint.
 

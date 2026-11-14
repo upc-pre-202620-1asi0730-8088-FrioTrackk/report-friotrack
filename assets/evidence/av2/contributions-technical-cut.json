@@ -1,0 +1,76 @@
+{
+  "scope": "Technical AV2 source cut on 13 November 2026; excludes later support-artifact commits, team acceptance and the rest of Sprint 3",
+  "generatedAt": "2026-11-14T00:42:25.323212+00:00",
+  "products": [
+    {
+      "repository": "friotrack-api",
+      "base": "083e97d12246c6114b8c34be2888864f688b17be",
+      "head": "e9aca8e735edde7699e9447863c7f56b12e062e8",
+      "commits": [
+        {
+          "sha": "e9aca8e735edde7699e9447863c7f56b12e062e8",
+          "author": "Alexander1Alexander2",
+          "date": "2026-11-13T14:58:22-05:00"
+        },
+        {
+          "sha": "8c31d6284ef94c4b857b97392cf25eb744b0e4bf",
+          "author": "Alexander1Alexander2",
+          "date": "2026-11-13T14:58:22-05:00"
+        }
+      ],
+      "byAuthor": {
+        "Alexander1Alexander2": 2
+      }
+    },
+    {
+      "repository": "friotrack-frontend",
+      "base": "7527cf23b0468ea06fc137fa72b8220ee9c21b6a",
+      "head": "9ef083eba26bd16ea648ce8dd2f2fd2bfa694baa",
+      "commits": [
+        {
+          "sha": "9ef083eba26bd16ea648ce8dd2f2fd2bfa694baa",
+          "author": "Alexander1Alexander2",
+          "date": "2026-11-13T15:00:09-05:00"
+        },
+        {
+          "sha": "c844513977e1acb47948c2cb76f14035b3bdc26b",
+          "author": "Alexander1Alexander2",
+          "date": "2026-11-13T15:00:09-05:00"
+        }
+      ],
+      "byAuthor": {
+        "Alexander1Alexander2": 2
+      }
+    },
+    {
+      "repository": "friotrack-landing",
+      "base": "1de2988d4f2f7b829d99f0d3a3649ca36bac8adb",
+      "head": "36f206712d0952b41ad6b3e6893645d9a0fcc682",
+      "commits": [
+        {
+          "sha": "36f206712d0952b41ad6b3e6893645d9a0fcc682",
+          "author": "Alexander1Alexander2",
+          "date": "2026-11-13T15:01:41-05:00"
+        }
+      ],
+      "byAuthor": {
+        "Alexander1Alexander2": 1
+      }
+    },
+    {
+      "repository": "report-friotrack",
+      "base": "b5b4672735e69efdc1b74c41faa02d4e4521702d",
+      "head": "f155aba22acdcac35619b71eec3a5c4c4b3c6349",
+      "commits": [
+        {
+          "sha": "f155aba22acdcac35619b71eec3a5c4c4b3c6349",
+          "author": "Alexander1Alexander2",
+          "date": "2026-11-13T15:26:36-05:00"
+        }
+      ],
+      "byAuthor": {
+        "Alexander1Alexander2": 1
+      }
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # Esquema de presentación AV2
 
-Este es un esquema de contenido para construir la presentación, no un archivo PPTX terminado ni evidencia de exposición. Completar capturas, versiones y resultados solo después de verificarlos.
+Este esquema orienta la presentación final. Ya existe una [base editable de 14 diapositivas](../../deliverables/upc-pre-202620-1asi0730-8088-blackstartup-keynote-av2-base.pptx) y su [vista PDF](../../deliverables/upc-pre-202620-1asi0730-8088-blackstartup-keynote-av2-base.pdf), con evidencias técnicas y espacios explícitos para validación, fotos y retrospectiva. Completar esos contenidos con resultados reales antes de exponer; la base no acredita una exposición realizada.
 
 | Diapositiva | Contenido | Material pendiente o evidencia |
 | --- | --- | --- |

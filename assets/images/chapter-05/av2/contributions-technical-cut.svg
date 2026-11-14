@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="820" height="370" preserveAspectRatio="xMinYMin meet" viewBox="0 0 820 370" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="820" height="370"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-370)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="820" height="370" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="32" y="335" style="font-family: Helvetica-Bold; font-size: 20px;fill: rgb(9%,16%,30%); stroke:none;" transform="translate(0,670) scale(1,-1)">Aportes técnicos AV2 por producto · 13/11/2026</text>
+			<text x="32" y="309" style="font-family: Helvetica; font-size: 12px;fill: rgb(29%,33%,38%); stroke:none;" transform="translate(0,618) scale(1,-1)">Autor: Alexander1Alexander2 · seis commits de fuentes</text>
+			<g transform="">
+				<path d="M 105,65 L 105,275 Z" style="stroke: rgb(90%,92%,94%); stroke-linecap: butt; stroke-width: 0.25;"/>
+				<path d="M 311.666667,65 L 311.666667,275 Z" style="stroke: rgb(90%,92%,94%); stroke-linecap: butt; stroke-width: 0.25;"/>
+				<path d="M 518.333333,65 L 518.333333,275 Z" style="stroke: rgb(90%,92%,94%); stroke-linecap: butt; stroke-width: 0.25;"/>
+				<path d="M 725,65 L 725,275 Z" style="stroke: rgb(90%,92%,94%); stroke-linecap: butt; stroke-width: 0.25;"/>
+				<g transform="">
+					<rect x="105.0" y="73.75" width="413.33333333333326" height="35.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,40%,68%); fill-rule: evenodd;"/>
+					<rect x="105.0" y="126.25" width="413.33333333333326" height="35.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,40%,68%); fill-rule: evenodd;"/>
+					<rect x="105.0" y="178.75" width="206.66666666666663" height="35.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,40%,68%); fill-rule: evenodd;"/>
+					<rect x="105.0" y="231.25" width="206.66666666666663" height="35.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,40%,68%); fill-rule: evenodd;"/>
+					<g transform="">
+						<g transform=" matrix(1,0,0,1,527.333333,91.25)">
+							<text x="-3.25" y="-5.2" style="font-family: Times-Roman; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-10) scale(1,-1)">2</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,527.333333,143.75)">
+							<text x="-3.25" y="-5.2" style="font-family: Times-Roman; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-10) scale(1,-1)">2</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,320.666667,196.25)">
+							<text x="-3.25" y="-5.2" style="font-family: Times-Roman; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-10) scale(1,-1)">1</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,320.666667,248.75)">
+							<text x="-3.25" y="-5.2" style="font-family: Times-Roman; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-10) scale(1,-1)">1</text>
+						</g>
+					</g>
+				</g>
+				<g transform="">
+					<g transform=""/>
+					<g transform=""/>
+					<g transform="">
+						<g transform=" matrix(1,0,0,1,97,91.25)">
+							<text x="-19.332" y="-4.800000000000001" style="font-family: Times-Roman; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-9) scale(1,-1)">API</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,97,143.75)">
+							<text x="-43.332" y="-4.800000000000001" style="font-family: Times-Roman; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-9) scale(1,-1)">Frontend</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,97,196.25)">
+							<text x="-39.996" y="-4.800000000000001" style="font-family: Times-Roman; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-9) scale(1,-1)">Landing</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,97,248.75)">
+							<text x="-37.992" y="-4.800000000000001" style="font-family: Times-Roman; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-9) scale(1,-1)">Reporte</text>
+						</g>
+					</g>
+				</g>
+				<g transform="">
+					<g transform="">
+						<path d="M 105,65 L 725,65 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+					</g>
+					<g transform="">
+						<path d="M 105,65 L 105,60 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 311.666667,65 L 311.666667,60 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 518.333333,65 L 518.333333,60 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 725,65 L 725,60 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+					</g>
+					<g transform="">
+						<g transform=" matrix(1,0,0,1,105,60)">
+							<text x="-2.75" y="-11.0" style="font-family: Times-Roman; font-size: 11px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-22) scale(1,-1)">0</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,311.666667,60)">
+							<text x="-2.75" y="-11.0" style="font-family: Times-Roman; font-size: 11px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-22) scale(1,-1)">1</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,518.333333,60)">
+							<text x="-2.75" y="-11.0" style="font-family: Times-Roman; font-size: 11px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-22) scale(1,-1)">2</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,725,60)">
+							<text x="-2.75" y="-11.0" style="font-family: Times-Roman; font-size: 11px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-22) scale(1,-1)">3</text>
+						</g>
+					</g>
+				</g>
+			</g>
+			<text x="105" y="25" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,50) scale(1,-1)">Commits sin merges del corte documentado; no representa todo el Sprint 3.</text>
+		</g>
+	</g>
+</svg>
