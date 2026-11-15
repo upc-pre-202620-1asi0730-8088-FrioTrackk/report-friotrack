@@ -3539,6 +3539,11 @@ El Sprint 3 busca que el Coordinador Logístico pueda programar y supervisar env
 
 **Aprendizajes para Sprint 3.** El registro de TB1 con almacenamiento JSON orientó el paso a persistencia relacional. La comprobación de autorizaciones del Sprint 2 se mantiene y se amplía a operaciones concurrentes y a la recuperación de datos después de reiniciar el servicio. Los recibos del nuevo incremento distinguen las pruebas técnicas de las observaciones con usuarios.
 
+**Alcance por perfil.**
+
+- **Coordinador Logístico:** gestionar los recursos disponibles, programar un envío con reservas de vehículo y conductor, actualizar su estado y revisar condiciones, historial y atención de alertas.
+- **Cliente de Carga:** consultar el estado, las lecturas, el historial y las alertas de sus envíos asignados. Los permisos de programación y gestión de recursos corresponden al Coordinador Logístico.
+
 | Field | Detail |
 | --- | --- |
 | Sprint # | Sprint 3 — AV2 |
