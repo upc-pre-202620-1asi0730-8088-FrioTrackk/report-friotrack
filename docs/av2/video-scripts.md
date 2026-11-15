@@ -1,6 +1,12 @@
 # Especificaciones de videos AV2
 
-Estructura y duraciones de referencia conforme al Anexo C del enunciado. Estas pautas describen formatos; la publicación de cada video se acredita mediante su enlace y ficha en el informe.
+Catálogo audiovisual de la entrega. Las duraciones de referencia corresponden al Anexo C del enunciado; la duración efectiva figura en cada reproductor.
+
+| Material | Publicación | Ficha |
+| --- | --- | --- |
+| About-the-Product | [Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231h171_upc_edu_pe/IQARw8S5KAaMT4ehigZYnNDSAcF3Q_VvbYp2J2RhKlbvCBk?e=pMcJko) · [YouTube](https://youtu.be/t8ZrSPgQvr0) | [Sección 5.4](../../README.md#54-video-about-the-product) |
+| About-the-Team | [Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241d811_upc_edu_pe/IQA_6YgiuZLgRIvnZdb-6t56ASwzKeemh8AdD7un1OfiGk8?e=MY9kY5) | [Sección 5.5](../../README.md#55-video-about-the-team) |
+| Navegación del producto | [Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202219829_upc_edu_pe/IQB-D9wFBi1_S4lj6TjjtB3WAfg30uXT7S8NEhphn_q2DxE?e=5I1Yiy) | [Sección 5.2.3.5](../../README.md#5235-execution-evidence-for-sprint-review) |
 
 Prefijo de archivos: `upc-pre-202620-1asi0730-8088-blackstartup-`. Formato: MP4.
 

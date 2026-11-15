@@ -3698,7 +3698,16 @@ El [registro técnico](assets/evidence/av2/technical-verification.json) identifi
 
 Las teselas y fuentes externas se bloquearon en estas pruebas locales; no se certifica el proveedor de mapas. Docker Compose no se ejecutó porque Docker no está instalado, aunque el backend fue probado directamente contra PostgreSQL. Los resultados de la tabla corresponden a pruebas técnicas automatizadas.
 
-[Recorrido del producto FríoTrack AV2 en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202219829_upc_edu_pe/IQB-D9wFBi1_S4lj6TjjtB3WAfg30uXT7S8NEhphn_q2DxE?e=5I1Yiy). El video acompaña la revisión del incremento de Sprint 3.
+**Navegación del producto — Sprint 3**
+
+| Campo | Detalle |
+| --- | --- |
+| Video | [Recorrido del producto FríoTrack AV2 en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202219829_upc_edu_pe/IQB-D9wFBi1_S4lj6TjjtB3WAfg30uXT7S8NEhphn_q2DxE?e=5I1Yiy) |
+| Producto | Landing y aplicación web FríoTrack. |
+| Entrega | AV2 · Sprint 3; complemento audiovisual de la revisión del incremento. |
+| Alcance funcional de referencia | Acceso por perfil, envíos, monitoreo, historial y alertas de la versión documentada. |
+| Acceso | Microsoft Stream institucional, según los permisos del enlace compartido. |
+| Duración de referencia | 3–5 minutos por aplicación; la duración del archivo se consulta en el reproductor. |
 
 #### 5.2.3.6. Services Documentation Evidence for Sprint Review
 
@@ -4094,6 +4103,7 @@ Los enlaces de Microsoft Stream utilizan el acceso institucional compartido por 
 | --- | --- |
 | Exposición AV2 | [Exposición del equipo BlackStartup en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241d811_upc_edu_pe/IQC7RGHeH-X1SpVd2USNiTfJAfUao6jxlSJN3yvyEmz6q6A?e=BfGqps) |
 | Recorrido del producto AV2 | [Evidencia de ejecución del Sprint 3](#5235-execution-evidence-for-sprint-review) |
+| About-the-Product | [Video del producto](#54-video-about-the-product) |
 | About-the-Team | [Video del equipo](#55-video-about-the-team) |
 
 ### Videos de TB1
