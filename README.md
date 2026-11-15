@@ -3537,9 +3537,9 @@ Benjamin no participó en TB1 por su retiro; el Participant Performance Report r
 
 ### 5.2.3. Sprint 3 — AV2
 
-[PDF del corte técnico AV2](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/releases/download/v3.0.0-av2.4/upc-pre-202620-1asi0730-8088-blackstartup-report-av2.pdf). El archivo corresponde al corte técnico identificado por su release.
+[Informe AV2 en PDF](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/releases/download/v3.0.0-av2.5/upc-pre-202620-1asi0730-8088-blackstartup-report-av2.pdf). La versión reúne la documentación, las entrevistas individuales y las evidencias publicadas del avance.
 
-Documentos complementarios: [presentación editable](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-keynote-av2-base.pptx), [vista PDF de 14 diapositivas](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-keynote-av2-base.pdf), [informe de participación en Word](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-performance-av2.docx) e [informe de participación en PDF](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-performance-av2.pdf). La evaluación de AV2 fue emitida por Alexander Sebastián Atauje Barreto, Team Leader de BlackStartup.
+Documentos complementarios: [presentación editable](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-keynote-av2.pptx), [presentación en PDF](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-keynote-av2.pdf), [informe de participación en Word](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-performance-av2.docx) e [informe de participación en PDF](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-performance-av2.pdf). La evaluación de AV2 fue emitida por Alexander Sebastián Atauje Barreto, Team Leader de BlackStartup.
 
 Este corte documenta el incremento técnico de AV2: arquitectura, integración, pruebas y publicación. Los [documentos AV2](docs/av2/README.md) reúnen el protocolo de validación, los formatos de registro y las especificaciones de entrega.
 
