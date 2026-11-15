@@ -3542,6 +3542,22 @@ Este corte documenta el incremento técnico de AV2: arquitectura, integración, 
 
 El Sprint 3 busca que el Coordinador Logístico pueda programar y supervisar envíos refrigerados y que el Cliente de Carga pueda consultar sus entregas asignadas. El incremento integra la aplicación web con la API REST y PostgreSQL para conservar el historial de cada envío y controlar el acceso por perfil.
 
+La ficha organiza el incremento a partir del corte técnico del 13/11 y las entregas del 14–15/11. Fecha, horario, modalidad y participación son una reconstrucción estimada de planificación.
+
+| Campo | Detalle |
+| --- | --- |
+| Sprint # | Sprint 3 — AV2 |
+| Date | 12/11/2026 (fecha estimada de inicio de planificación). |
+| Time | 19:00–20:00, hora de Perú (franja estimada). |
+| Location | Reunión virtual del equipo (modalidad estimada). |
+| Prepared By | Equipo BlackStartup; coordinación: Alexander Sebastián Atauje Barreto. |
+| Attendees | Alexander Sebastián Atauje Barreto, Joaquín Leonardo Daga Chávez, Rodrigo Andree Saavedra Flores y Nayely Macarena Vera Solsol (participación prevista). |
+| Sprint 2 Review Summary | Aplicación bilingüe publicada en Azure; acceso por perfil, programación de envíos y consulta del cliente integrados con la API. |
+| Sprint 2 Retrospective Summary | Consolidar la persistencia relacional, probar reservas concurrentes y mantener evidencia por versión y por perfil. |
+| Sprint 3 Goal | **Nuestro enfoque es** integrar la operación y consulta de envíos refrigerados con una API REST y PostgreSQL.<br>**Consideramos que aporta** continuidad de la información y control de acceso **a** coordinadores logísticos y clientes de carga.<br>**Esto se confirmará cuando** un coordinador programe un envío válido, una reserva solapada sea rechazada sin cambios parciales, el historial y las lecturas persistan tras reiniciar el servicio y el cliente consulte únicamente sus envíos asignados. |
+| Capacidad estimada | 204 horas distribuidas en 30 tareas; estimaciones de 4 a 8 horas por tarea. |
+| Seguimiento del avance | Estados por tarea y criterios de aceptación del incremento; las horas estimadas se mantienen separadas de la velocidad en Story Points. |
+
 **Revisión de Sprint 2.** TB1 dejó publicada la primera aplicación web bilingüe y conectó la landing con el acceso por perfil. La revisión técnica documentó la programación y la atención de incidencias por el Coordinador Logístico, el filtrado de envíos por cliente y el rechazo de comandos de coordinación para ese perfil. Véase la [evidencia de ejecución de Sprint 2](#5225-execution-evidence-for-sprint-review).
 
 **Aprendizajes para Sprint 3.** El registro de TB1 con almacenamiento JSON orientó el paso a persistencia relacional. La comprobación de autorizaciones del Sprint 2 se mantiene y se amplía a operaciones concurrentes y a la recuperación de datos después de reiniciar el servicio. Los recibos del nuevo incremento distinguen las pruebas técnicas de las observaciones con usuarios.
