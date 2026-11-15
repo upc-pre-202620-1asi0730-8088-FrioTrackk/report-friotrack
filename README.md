@@ -3708,7 +3708,7 @@ Considera que el reporte JSON es técnico y prefiere un resumen fácil de leer y
 | Autorización | Consentimiento verbal para participar y grabar con fines de evaluación académica, expresado al inicio de la entrevista. |
 | Acceso | Microsoft Stream institucional; requiere autenticación. |
 
-![Entrevista de validación de Carol Solsol durante la revisión de alertas con el perfil Coordinador Logistico]()
+![Entrevista de validación de Carol Solsol durante la revisión de alertas con el perfil Coordinador Logistico](assets/images/chapter-05/imagen_entrevista.png)
 
 *Captura de la entrevista durante la revisión de la app web.*
 
