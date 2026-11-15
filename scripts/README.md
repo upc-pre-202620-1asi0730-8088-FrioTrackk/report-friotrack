@@ -1,6 +1,6 @@
 # Validación y exportación del informe
 
-El informe editable y la carátula se mantienen en `README.md`. El PDF es una exportación; no se reconstruye la carátula desde Word ni desde una imagen de página completa.
+El informe editable y la carátula se mantienen en `README.md`. En el PDF, el renderizador convierte exclusivamente la tabla de integrantes de la portada en líneas de texto sin bordes; el Markdown conserva su tabla.
 
 ## Comprobación estructural
 
@@ -27,12 +27,12 @@ Requiere Pandoc, Node.js con Playwright y Chromium, y Python con `pypdf` y `repo
 Desde la raíz del repositorio:
 
 ```shell
-pandoc README.md -f gfm -t html5 --standalone --metadata title="FríoTrack Informe TB1" --css scripts/report.css -o report.html
+pandoc README.md -f gfm -t html5 --standalone --metadata title="FríoTrack - Informe de Trabajo Final" --css scripts/report.css -o report.html
 node scripts/render-report.cjs
 python scripts/assemble-report.py
 ```
 
-Para el corte de preparación AV2, utilizar el mismo proceso y ejecutar `python scripts/assemble-report.py --stage av2`. El resultado usa el sufijo `report-av2.pdf` y conserva el PDF histórico TB1. La carátula procede del Markdown original; los recibos de publicación y los registros de validación conservan sus fechas y alcance.
+Para la entrega final AV2, utilizar el mismo proceso y ejecutar `python scripts/assemble-report.py --stage av2`. La opción `--output` permite elegir una ruta de salida. El resultado usa el sufijo `report-av2.pdf` y conserva el PDF histórico TB1. La carátula procede del Markdown original; los recibos de publicación y los registros de validación conservan sus fechas y alcance.
 
 El renderizador verifica que todas las imágenes carguen. Para las vistas de arquitectura utiliza sus originales SVG y hojas horizontales. Los enlaces a archivos locales se convierten en enlaces públicos al repositorio para que funcionen al descargar el PDF. La composición conserva la carátula Markdown y añade numeración desde la segunda página. El resultado se guarda en `deliverables/upc-pre-202620-1asi0730-8088-blackstartup-report-tb1.pdf`.
 

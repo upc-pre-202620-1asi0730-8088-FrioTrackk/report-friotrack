@@ -1,0 +1,85 @@
+name: Publish final AV2 report
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - README.md
+      - docs/av2/**
+      - scripts/**
+      - .github/workflows/publish-report.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: final-av2-report
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      RELEASE_TAG: v3.0.0
+    steps:
+      - uses: actions/checkout@v4
+      - name: Preserve an existing final release
+        id: release
+        run: |
+          if gh release view "$RELEASE_TAG" >/dev/null 2>&1; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+            echo "The final release already exists; its tag and assets remain unchanged."
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/setup-python@v5
+        if: steps.release.outputs.exists == 'false'
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        if: steps.release.outputs.exists == 'false'
+        with:
+          node-version: '22'
+      - name: Install PDF dependencies
+        if: steps.release.outputs.exists == 'false'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc fonts-liberation
+          python -m pip install pypdf==6.21.4 reportlab==4.4.9
+          npm install --no-save --package-lock=false playwright@1.62.1
+          npx playwright install --with-deps chromium
+      - name: Validate and export the report
+        if: steps.release.outputs.exists == 'false'
+        run: |
+          python scripts/check-report.py
+          pandoc README.md -f gfm -t html5 --standalone --metadata title="FríoTrack - Informe de Trabajo Final" --css scripts/report.css -o report.html
+          node scripts/render-report.cjs
+          python scripts/assemble-report.py --stage av2
+          python scripts/verify-final-pdf.py
+      - name: Prepare the complete delivery archive
+        if: steps.release.outputs.exists == 'false'
+        run: |
+          mkdir -p tmp/previous
+          gh release download v3.0.0-av2.5 --pattern '*-artifacts-av2.zip' --dir tmp/previous
+          python scripts/package-av2.py
+      - name: Publish the stable release
+        if: steps.release.outputs.exists == 'false'
+        run: |
+          gh release create "$RELEASE_TAG" \
+            --target "$GITHUB_SHA" \
+            --title "FríoTrack AV2 - Informe de Trabajo Final" \
+            --notes-file docs/av2/release-notes-v3.0.0.md \
+            --latest \
+            deliverables/*-report-av2.pdf \
+            deliverables/*-keynote-av2.pdf \
+            deliverables/*-keynote-av2.pptx \
+            deliverables/*-performance-av2.docx \
+            deliverables/*-performance-av2.pdf \
+            tmp/*-artifacts-av2.zip \
+            tmp/release-manifest-v3.0.0.json

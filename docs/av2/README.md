@@ -8,7 +8,7 @@ Referencia: enunciado UPC 1ASI0730, periodo 202620, AV2 semana 12, páginas 32�
 | [Backlog propuesto](sprint3-backlog-proposal.csv) | Descomposición de tareas y estimaciones de revisión de 4–8 horas. |
 | [Protocolo de validación](validation-protocol.md) | Método, tareas y preguntas por segmento. |
 | [Registro de entrevistas](validation-records.csv) | Sesiones AV2-C01, AV2-C02, AV2-L01, AV2-L02 y AV2-L03, con enlaces y capturas. |
-| [Evaluación heurística](heuristics-template.md) | Formato de Anexo D y escala de severidad 1–4. |
+| [Evaluación heurística](heuristics-template.md) | Evaluación completa: alcance, tres hallazgos, severidad, evidencias y criterios de corrección. |
 | [Especificaciones de videos](video-scripts.md) | Estructura y duración de Product, Team, navegación y exposición. |
 | [Estructura de presentación](keynote-outline.md) | Organización temática de la presentación AV2. |
 | [Entrega AV2](inputs-and-delivery.md) | Formatos y nomenclatura de los entregables. |
