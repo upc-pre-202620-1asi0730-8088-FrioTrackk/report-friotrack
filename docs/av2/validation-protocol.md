@@ -2,17 +2,15 @@
 
 ## Propósito y participantes
 
-Validar si las personas de los segmentos objetivo comprenden la propuesta de FríoTrack y completan los recorridos disponibles de la versión AV2. El enunciado pide **3–5 entrevistas por segmento**; con Coordinador Logístico y Cliente de Carga se preparan **6–10 entrevistas**. Se recomienda reclutar participantes distintos por segmento y comprobar que su experiencia corresponde a transporte refrigerado o gestión/contratación de carga.
+Validar si las personas de los segmentos objetivo comprenden la propuesta de FríoTrack y completan los recorridos disponibles de la versión AV2. El enunciado pide **3–5 entrevistas por segmento**; con Coordinador Logístico y Cliente de Carga se preparan **6–10 entrevistas**. El perfil de participación corresponde a transporte refrigerado o gestión y contratación de carga.
 
-Estas sesiones requieren interacción con landing y aplicación. Las entrevistas anteriores de investigación sobre problemas no se presentan como validación del producto. Si una persona participó antes, su nueva sesión debe registrar las nuevas tareas y la versión evaluada.
+Estas sesiones requieren interacción con landing y aplicación. Las entrevistas anteriores de investigación sobre problemas no se presentan como validación del producto. Una nueva sesión de una persona entrevistada anteriormente se identifica por sus tareas y versión evaluada.
 
 ## Antes de la sesión
 
-1. Identificar commit/versiones de landing, SPA y API y el entorno que se evaluará. Usar una versión estable y cuentas de prueba con datos ficticios.
-2. Obtener autorización para grabar y para utilizar fragmentos identificados en el reporte y videos del proyecto. Acordar qué información podrá publicarse y evitar contraseñas, datos de clientes reales o información comercial privada en pantalla.
-3. Registrar nombres, apellidos, edad, distrito, segmento y fecha. Usar un ID de sesión en los archivos de trabajo y respetar las condiciones de publicación acordadas.
-4. Comprobar audio, cámara y captura de la aplicación. No grabar un escritorio personal con información ajena a la sesión.
-5. Explicar que se evalúa el producto, no la capacidad de la persona. No dirigirla hacia respuestas positivas ni completar las tareas por ella.
+La ficha de sesión identifica versiones de landing, SPA y API, entorno, cuenta de prueba, nombre, apellidos, edad, distrito, segmento y fecha. La grabación y la publicación de fragmentos requieren autorización de la persona participante. Los datos utilizados son ficticios y la captura excluye contraseñas e información de terceros.
+
+La moderación evalúa la comprensión y el uso del producto mediante preguntas abiertas y observación de tareas. La ayuda del facilitador y las dificultades se registran como parte del resultado.
 
 ## Introducción sugerida del moderador
 
@@ -39,7 +37,7 @@ Estas sesiones requieren interacción con landing y aplicación. Las entrevistas
 | L4 | Localiza una notificación, explica qué significa y márcala como leída si esa función está implementada. | Contenido, visibilidad y cambio de estado. | El destinatario comprende el aviso y registra lectura explícita. |
 | L5 | Consulta o descarga el historial/reporte habilitado y cierra sesión. | Utilidad percibida, comprensión y permisos. | Obtiene evidencia permitida y termina su sesión. |
 
-Confirmar las tareas contra la versión final del incremento antes de entrevistar. No pedir funciones no implementadas como si estuvieran disponibles; una limitación se registra y se decide si queda fuera del alcance o constituye un defecto del compromiso AV2.
+El alcance de cada sesión corresponde a las funciones disponibles en la versión identificada. Las funciones excluidas se distinguen de las tareas observadas.
 
 ## Preguntas de cierre
 
@@ -49,10 +47,10 @@ Confirmar las tareas contra la versión final del incremento antes de entrevista
 - ¿Qué haría falta para utilizarlo en tu trabajo? ¿Por qué?
 - ¿Qué beneficio observaste, si alguno? ¿Autorizarías utilizar un fragmento de esta opinión en el video del producto?
 
-Las opiniones deben conservar su sentido, incluidas las críticas. About-the-Product necesita una opinión de cada segmento y al menos un testimonio positivo auténtico de validación; no se solicita a una persona que invente una valoración.
+Las opiniones conservan su sentido original. La selección de testimonios para About-the-Product se basa en las respuestas registradas y autorizadas.
 
 ## Registro y análisis
 
-Completar [validation-records.csv](validation-records.csv) con datos reales. Por tarea registrar resultado observado, errores, ayuda necesaria y comentarios; tiempo y cantidad de intentos son métricas recomendadas, no resultados presupuestos. Relacionar los hallazgos con [heuristics-template.md](heuristics-template.md), priorizar y comprobar las correcciones.
+El [registro de sesiones](validation-records.csv) relaciona participantes, entorno, tareas, resultados, ayuda y comentarios con sus evidencias. Los problemas observados se clasifican mediante el [formato de evaluación heurística](heuristics-template.md).
 
-Consolidar las entrevistas en un MP4 con títulos de participante, segmento y fecha; el Anexo C orienta edición de 3–5 minutos por entrevista. Publicar en Stream privado con permiso para el docente. Incorporar por entrevista un cuadro representativo, enlace, inicio y duración y resumen descriptivo. No confundir duración editada con tiempo total de la sesión.
+El formato de video consolidado identifica participante, segmento y fecha; cada ficha de 5.3.2 contiene captura, enlace, inicio, duración y resumen descriptivo. La edición de referencia del Anexo C es de 3–5 minutos por entrevista. Microsoft Stream utiliza permisos institucionales para la revisión del docente.

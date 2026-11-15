@@ -1,28 +1,22 @@
-# Preparación de AV2 — FríoTrack
+# Documentación AV2 — FríoTrack
 
-Estos documentos preparan el Sprint 3 y las secciones nuevas de AV2. No certifican entrevistas, reuniones, videos, publicación en cloud ni aceptación que todavía no se hayan realizado. La carátula y las entregas anteriores se conservan en el informe principal.
+Referencia: enunciado UPC 1ASI0730, periodo 202620, AV2 semana 12, páginas 32–33; validación página 27; videos Anexo C página 39; evaluación heurística Anexo D páginas 40–41.
 
-Referencia: enunciado UPC 1ASI0730, periodo 202620, AV2 semana 12, páginas 32–33; validación página 27; videos Anexo C página 39; heurísticas Anexo D páginas 40–41.
-
-| Documento | Uso |
+| Documento | Contenido |
 | --- | --- |
-| [Sprint 3](sprint-3.md) | Ocho secciones requeridas y propuesta de planificación, con datos reales pendientes identificados. |
-| [Backlog propuesto](sprint3-backlog-proposal.csv) | Tareas de 4–8 horas para discutir con el equipo; no constituyen capacidad ni compromiso aceptados. |
-| [Protocolo de validación](validation-protocol.md) | Tareas y preguntas por segmento para ejecutar sobre una versión estable. |
-| [Registro de entrevistas](validation-records.csv) | Sesión AV2-C01 de Farit Santoyo, con enlace, captura y alcance parcial; incorporar las siguientes sesiones reales. |
-| [Evaluación heurística](heuristics-template.md) | Estructura de Anexo D, severidad 1–4 y detalle de hallazgos observados. |
-| [Guiones de videos](video-scripts.md) | Product, Team, navegación y exposición; grabaciones auténticas aún necesarias. |
-| [Esquema de presentación](keynote-outline.md) | Estructura para preparar la presentación AV2 con evidencias verificadas. |
-| [Entradas y entrega](inputs-and-delivery.md) | Requisitos de entrega, dependencias y nombres de archivos. |
+| [Sprint 3](sprint-3.md) | Planificación, contratos y evidencias del incremento. |
+| [Backlog propuesto](sprint3-backlog-proposal.csv) | Descomposición de tareas y estimaciones de revisión de 4–8 horas. |
+| [Protocolo de validación](validation-protocol.md) | Método, tareas y preguntas por segmento. |
+| [Registro de entrevistas](validation-records.csv) | Sesión AV2-C01 de Farit Santoyo, con enlace, captura y alcance de la demostración guiada. |
+| [Evaluación heurística](heuristics-template.md) | Formato de Anexo D y escala de severidad 1–4. |
+| [Especificaciones de videos](video-scripts.md) | Estructura y duración de Product, Team, navegación y exposición. |
+| [Estructura de presentación](keynote-outline.md) | Organización temática de la presentación AV2. |
+| [Entrega AV2](inputs-and-delivery.md) | Formatos y nomenclatura de los entregables. |
 
-El repositorio Markdown continúa siendo la fuente editable. Los documentos de preparación deben integrarse al informe con sus resultados reales y exportarse a PDF antes de entregar. No reemplazar las tablas de historias o backlog por screenshots de Trello.
+## Incremento técnico
 
-## Incremento técnico en preparación
+El [informe principal](../../README.md#523-sprint-3--preparación-av2) registra la implementación y sus comprobaciones. El [esquema AV2](../../assets/architecture/av2/README.md) deriva de la migración inicial: 18 tablas, 31 FK e identificadores compatibles con el contrato histórico.
 
-Las fuentes del incremento incorporan PostgreSQL con EF Core, recursos REST y OpenAPI/Swagger, integrados con la SPA. El [informe principal](../../README.md#523-sprint-3--preparación-av2) registra el corte de implementación y separa sus pruebas de la aceptación pendiente. El [esquema AV2](../../assets/architecture/av2/README.md) se deriva de la migración inicial: 18 tablas, 31 FK e identificadores compatibles con el contrato histórico.
+La landing está publicada en GitHub Pages y Azure. La SPA y la API ASP.NET Core están publicadas en Azure con PostgreSQL 17 en Neon desde el 14/11/2026. Los [registros técnicos](../../assets/evidence/av2/technical-verification.json), [recibos de publicación](../../assets/evidence/av2/redeployment-api.json) y [recorridos públicos](../../assets/evidence/av2/public-interview-verification.json) identifican fuentes, entornos y resultados. La sesión de validación AV2-C01 se documenta en 5.3.2.
 
-Los [registros técnicos](../../assets/evidence/av2/technical-verification.json) identifican los commits y pruebas ejecutadas. La landing está publicada en GitHub Pages y Azure; la SPA y la API AV2 están publicadas en Azure con PostgreSQL 17 en Neon. Los [recibos de publicación](../../assets/evidence/av2/redeployment-api.json) y la [verificación del entorno público](../../assets/evidence/av2/public-interview-verification.json) registran el corte. La primera sesión grabada se registra en 5.3.2 con alcance parcial; completar las demás entrevistas, la validación operativa del coordinador y la aceptación del equipo.
-
-Se priorizan acceso y permisos, recursos independientes, programación/reserva consistente, lecturas autorizadas, alertas, atención e historial. La descarga del reporte persistido es JSON y el CSV de la SPA es una exportación distinta. Los datos son de demostración; no se afirma recepción física de sensores, correo verificado, pagos o funcionalidades fuera del incremento implementado.
-
-El equipo debe acordar alcance, líderes, colaboradores, capacidad y criterios de aceptación en una planificación real. La estructura DDD y una base de datos vacía no acreditan por sí solas el cumplimiento de las historias.
+La versión incluye acceso y permisos, recursos independientes, programación y reservas, lecturas autorizadas, alertas, atención e historial. El reporte persistido es JSON; la exportación CSV de la SPA es una función distinta. La telemetría corresponde a datos de demostración. Sensores físicos, envío externo de correo y pagos están fuera del alcance acreditado de esta versión.

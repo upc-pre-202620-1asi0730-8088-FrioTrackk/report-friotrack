@@ -1,6 +1,6 @@
-# Sprint 3 — Preparación AV2
+# Sprint 3 — AV2
 
-La sección acumulativa se mantiene en el [informe principal](../../README.md#523-sprint-3--preparación-av2). Se utiliza una sola tabla de planificación, contratos y evidencias para evitar cortes contradictorios.
+El [informe principal](../../README.md#523-sprint-3--preparación-av2) reúne planificación, contratos y evidencias del incremento.
 
 | Sección | Contenido del informe |
 | --- | --- |
@@ -13,6 +13,6 @@ La sección acumulativa se mantiene en el [informe principal](../../README.md#52
 | 5.2.3.7 | [Software Deployment Evidence for Sprint Review](../../README.md#5237-software-deployment-evidence-for-sprint-review) |
 | 5.2.3.8 | [Team Collaboration Insights during Sprint](../../README.md#5238-team-collaboration-insights-during-sprint) |
 
-El [backlog propuesto](sprint3-backlog-proposal.csv) conserva estimaciones de 4–8 horas y responsables por confirmar; sus estados propuestos no son el estado del tablero real. El equipo debe acordar capacidad, historias/SP y aceptación antes de convertirlo en un compromiso.
+El [backlog propuesto](sprint3-backlog-proposal.csv) conserva estimaciones de revisión de 4–8 horas. Sus valores son una propuesta documental y no un export del tablero. Los resultados técnicos cuentan con versiones y recibos; la aceptación del producto se registra separadamente.
 
-Los resultados técnicos se incorporan con versión y recibo verificable. Actas, colaboraciones, entrevistas, videos y publicación cloud requieren sus evidencias auténticas. Una prueba local no acredita aceptación del equipo ni despliegue.
+El incremento está publicado en Azure con PostgreSQL 17 en Neon desde el 14/11/2026. La sesión de Farit Santoyo se documenta en 5.3.2 con el alcance de la demostración guiada.

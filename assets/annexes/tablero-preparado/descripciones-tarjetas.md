@@ -1,6 +1,6 @@
 # Descripciones de las 58 tarjetas
 
-Preparación para regularizar el tablero; no prueba que se haya actualizado Trello.
+Catálogo de revisión del 11/11/2026. Los estados corresponden al informe de ese corte; no constituyen un export del tablero.
 
 # [S1-T01A] [US23] Componer propuesta y segmentos (6 h de revisión)
 
@@ -12,22 +12,15 @@ Mantener contenido, estructura semántica y estilos de la propuesta de valor en 
 
 **Estado propuesto según el reporte:** To Review. No certifica el estado actual del tablero.
 **Estimación:** 6 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Benjamin / Alexander. Tarea original S1-T01: Publicado.
 
-**Evidencia y límite:** Contenido publicado; falta aceptación registrada del equipo.
+**Evidencia y límite:** Contenido publicado; aceptación del equipo no registrada.
 
 **Producto vinculado:** friotrack-landing.
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint1-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -42,22 +35,15 @@ Comprobar lectura y acceso a enlaces en escritorio y móvil, registrar resultado
 
 **Estado propuesto según el reporte:** To Review. No certifica el estado actual del tablero.
 **Estimación:** 4 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Benjamin / Alexander. Tarea original S1-T01: Publicado.
 
-**Evidencia y límite:** Revisión técnica local del 11/11: landing ES/EN a 390 y 1440 px sin desbordamiento y CTA por perfil/idioma comprobados. Falta aceptación del equipo y revisión de la versión desplegada.
+**Evidencia y límite:** Revisión técnica local del 11/11: landing ES/EN a 390 y 1440 px sin desbordamiento y CTA por perfil/idioma comprobados. Aceptación del equipo y revisión de publicación no registradas en este corte.
 
 **Producto vinculado:** friotrack-landing.
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint1-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -72,7 +58,7 @@ Mantener corredores y distinguir cobertura propuesta de cobertura contratada o v
 
 **Estado propuesto según el reporte:** To Review. No certifica el estado actual del tablero.
 **Estimación:** 4 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Benjamin. Tarea original S1-T02: Publicado.
 
 **Evidencia y límite:** Sección publicada; revisar exactitud y alcance de las afirmaciones.
@@ -81,13 +67,6 @@ Mantener corredores y distinguir cobertura propuesta de cobertura contratada o v
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint1-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -102,7 +81,7 @@ Revisar los cuatro corredores y el canal de consulta en inglés y español con e
 
 **Estado propuesto según el reporte:** To Do. No certifica el estado actual del tablero.
 **Estimación:** 4 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Benjamin. Tarea original S1-T02: Publicado.
 
 **Evidencia y límite:** Revisión de aceptación por idioma no registrada para esta tarea.
@@ -111,13 +90,6 @@ Revisar los cuatro corredores y el canal de consulta en inglés y español con e
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint1-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -132,22 +104,15 @@ Validar campos, formato de correo y consentimiento sin mostrar éxito antes de u
 
 **Estado propuesto según el reporte:** To Review. No certifica el estado actual del tablero.
 **Estimación:** 4 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Benjamin. Tarea original S1-T03: Parcial: falta receptor.
 
-**Evidencia y límite:** Validación local implementada; el receptor permanece pendiente.
+**Evidencia y límite:** Validación local implementada; el receptor permanece sin registro.
 
 **Producto vinculado:** friotrack-landing.
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint1-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -162,7 +127,7 @@ Conectar un receptor real, verificar recepción y comprobar fallos de transporte
 
 **Estado propuesto según el reporte:** To Do. No certifica el estado actual del tablero.
 **Estimación:** 8 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Benjamin. Tarea original S1-T03: Parcial: falta receptor.
 
 **Evidencia y límite:** No consta receptor comercial operativo; depende de configurar el destino real.
@@ -171,13 +136,6 @@ Conectar un receptor real, verificar recepción y comprobar fallos de transporte
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint1-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -192,7 +150,7 @@ Mantener preguntas y respuestas estáticas coherentes en español e inglés sin 
 
 **Estado propuesto según el reporte:** To Review. No certifica el estado actual del tablero.
 **Estimación:** 4 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Benjamin. Tarea original S1-T04: Publicado.
 
 **Evidencia y límite:** FAQ publicada; revisar equivalencia y condiciones comerciales.
@@ -201,13 +159,6 @@ Mantener preguntas y respuestas estáticas coherentes en español e inglés sin 
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint1-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -222,7 +173,7 @@ Revisar consulta por teclado, foco, expansión y cambio de idioma; adjuntar resu
 
 **Estado propuesto según el reporte:** To Do. No certifica el estado actual del tablero.
 **Estimación:** 4 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Benjamin. Tarea original S1-T04: Publicado.
 
 **Evidencia y límite:** No existe evidencia específica de aceptación accesible del FAQ.
@@ -231,13 +182,6 @@ Revisar consulta por teclado, foco, expansión y cambio de idioma; adjuntar resu
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint1-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -252,7 +196,7 @@ Validar carga, fechas, cliente, capacidad y rangos; guardar envío y reservas si
 
 **Estado propuesto según el reporte:** To Review. No certifica el estado actual del tablero.
 **Estimación:** 8 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Rodrigo — integración API. Tarea original S2-T04: Parcial: sin borrador persistido.
 
 **Evidencia y límite:** Implementación de programación descrita en evidencias; aceptación del equipo abierta.
@@ -261,13 +205,6 @@ Validar carga, fechas, cliente, capacidad y rangos; guardar envío y reservas si
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint2-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -282,22 +219,15 @@ Ejecutar casos de capacidad insuficiente, solapamiento y datos inválidos; contr
 
 **Estado propuesto según el reporte:** To Do. No certifica el estado actual del tablero.
 **Estimación:** 6 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Rodrigo — integración API. Tarea original S2-T04: Parcial: sin borrador persistido.
 
-**Evidencia y límite:** Revisión integral no registrada; el borrador persistido del diseño continúa pendiente fuera de los criterios actuales de US33.
+**Evidencia y límite:** Revisión integral no registrada; el borrador persistido del diseño continúa sin registro fuera de los criterios actuales de US33.
 
 **Producto vinculado:** friotrack-frontend.
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint2-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -312,7 +242,7 @@ Permitir iniciar y entregar; impedir cancelación en tránsito o entregado y con
 
 **Estado propuesto según el reporte:** To Review. No certifica el estado actual del tablero.
 **Estimación:** 6 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Rodrigo — integración API. Tarea original S2-T07: Parcial: sin estado DRAFT persistido.
 
 **Evidencia y límite:** Ciclo implementado según registro; no hay aceptación del equipo adjunta.
@@ -321,13 +251,6 @@ Permitir iniciar y entregar; impedir cancelación en tránsito o entregado y con
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint2-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -342,22 +265,15 @@ Comprobar transiciones rechazadas y liberación de recursos al entregar o cancel
 
 **Estado propuesto según el reporte:** To Do. No certifica el estado actual del tablero.
 **Estimación:** 4 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Rodrigo — integración API. Tarea original S2-T07: Parcial: sin estado DRAFT persistido.
 
-**Evidencia y límite:** Falta registrar revisión integral; DRAFT persistido pertenece al diseño objetivo pendiente.
+**Evidencia y límite:** Falta registrar revisión integral; DRAFT persistido pertenece al diseño objetivo sin registro.
 
 **Producto vinculado:** friotrack-frontend.
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint2-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -372,7 +288,7 @@ Presentar lectura y fecha del envío autorizado; distinguir datos de prueba y an
 
 **Estado propuesto según el reporte:** To Review. No certifica el estado actual del tablero.
 **Estimación:** 6 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Rodrigo — integración API. Tarea original S2-T08: Parcial: datos de prueba; sin sensores ni vibración.
 
 **Evidencia y límite:** Se muestran datos de prueba; no acredita sensores físicos ni ingesta en vivo.
@@ -381,13 +297,6 @@ Presentar lectura y fecha del envío autorizado; distinguir datos de prueba y an
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint2-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -402,7 +311,7 @@ Integrar nuevas lecturas y verificar ausencia de actualización sin presentarlas
 
 **Estado propuesto según el reporte:** To Do. No certifica el estado actual del tablero.
 **Estimación:** 8 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Rodrigo — integración API. Tarea original S2-T08: Parcial: datos de prueba; sin sensores ni vibración.
 
 **Evidencia y límite:** No consta integración de sensores físicos o flujo de nuevas mediciones.
@@ -411,13 +320,6 @@ Integrar nuevas lecturas y verificar ausencia de actualización sin presentarlas
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint2-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -432,22 +334,15 @@ Relacionar recorrido y posición con el envío y marcar la ubicación ilustrativ
 
 **Estado propuesto según el reporte:** To Review. No certifica el estado actual del tablero.
 **Estimación:** 6 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Rodrigo — integración API. Tarea original S2-T08: Parcial: datos de prueba; sin sensores ni vibración.
 
-**Evidencia y límite:** Mapa ilustrativo implementado; ubicación real pendiente de integración.
+**Evidencia y límite:** Mapa ilustrativo implementado; ubicación real sin registro de integración.
 
 **Producto vinculado:** friotrack-frontend.
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint2-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -462,7 +357,7 @@ Comprobar posición válida, ausencia de coordenadas y fallo de teselas; registr
 
 **Estado propuesto según el reporte:** To Do. No certifica el estado actual del tablero.
 **Estimación:** 4 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Rodrigo — integración API. Tarea original S2-T08: Parcial: datos de prueba; sin sensores ni vibración.
 
 **Evidencia y límite:** Faltan resultados de aceptación completos para la consulta geográfica.
@@ -471,13 +366,6 @@ Comprobar posición válida, ausencia de coordenadas y fallo de teselas; registr
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint2-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -492,7 +380,7 @@ Filtrar los envíos autorizados por código y unidad y resolver consultas sin co
 
 **Estado propuesto según el reporte:** To Review. No certifica el estado actual del tablero.
 **Estimación:** 4 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Rodrigo — integración API. Tarea original S2-T09: Implementado; filtros completos por revisar.
 
 **Evidencia y límite:** Implementado; filtros completos por revisar según registro original.
@@ -501,13 +389,6 @@ Filtrar los envíos autorizados por código y unidad y resolver consultas sin co
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint2-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -522,7 +403,7 @@ Comprobar coincidencias, resultados vacíos y ausencia de datos no autorizados c
 
 **Estado propuesto según el reporte:** To Do. No certifica el estado actual del tablero.
 **Estimación:** 4 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Rodrigo — integración API. Tarea original S2-T09: Implementado; filtros completos por revisar.
 
 **Evidencia y límite:** No consta cierre de la revisión funcional completa de filtros.
@@ -531,13 +412,6 @@ Comprobar coincidencias, resultados vacíos y ausencia de datos no autorizados c
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint2-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -552,7 +426,7 @@ Exponer las series y unidades disponibles del envío sin convertir datos de ejem
 
 **Estado propuesto según el reporte:** To Review. No certifica el estado actual del tablero.
 **Estimación:** 6 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Rodrigo — integración API. Tarea original S2-T08: Parcial: datos de prueba; sin sensores ni vibración.
 
 **Evidencia y límite:** Gráfica y tabla de prueba disponibles; no hay mediciones de vibración verificadas.
@@ -561,13 +435,6 @@ Exponer las series y unidades disponibles del envío sin convertir datos de ejem
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint2-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -582,7 +449,7 @@ Integrar variables comprometidas y probar periodos sin mediciones y sus unidades
 
 **Estado propuesto según el reporte:** To Do. No certifica el estado actual del tablero.
 **Estimación:** 8 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Rodrigo — integración API. Tarea original S2-T08: Parcial: datos de prueba; sin sensores ni vibración.
 
 **Evidencia y límite:** Sensores y vibración no están implementados según registro original.
@@ -591,13 +458,6 @@ Integrar variables comprometidas y probar periodos sin mediciones y sus unidades
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint2-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -612,22 +472,15 @@ Aplicar mínimo menor que máximo y humedad entre 0 y 100 al programar el envío
 
 **Estado propuesto según el reporte:** To Review. No certifica el estado actual del tablero.
 **Estimación:** 4 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Rodrigo — integración API. Tarea original S2-T10: Verificado para rangos del envío.
 
-**Evidencia y límite:** Reglas verificadas para rangos del envío; aceptación de producto pendiente.
+**Evidencia y límite:** Reglas verificadas para rangos del envío; aceptación de producto sin registro.
 
 **Producto vinculado:** friotrack-frontend.
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint2-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -642,7 +495,7 @@ Ejecutar valores frontera e inválidos y comprobar que el último rango válido 
 
 **Estado propuesto según el reporte:** To Do. No certifica el estado actual del tablero.
 **Estimación:** 4 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Rodrigo — integración API. Tarea original S2-T10: Verificado para rangos del envío.
 
 **Evidencia y límite:** La revisión de aceptación de todos los valores frontera no está adjunta.
@@ -651,13 +504,6 @@ Ejecutar valores frontera e inválidos y comprobar que el último rango válido 
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint2-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -672,7 +518,7 @@ Consultar alertas del envío y conservar su fecha, condición y relación con la
 
 **Estado propuesto según el reporte:** To Review. No certifica el estado actual del tablero.
 **Estimación:** 4 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Rodrigo — integración API. Tarea original S2-T11: Parcial: filtros del catálogo por revisar.
 
 **Evidencia y límite:** Historial disponible; el registro original deja filtros del catálogo por revisar.
@@ -681,13 +527,6 @@ Consultar alertas del envío y conservar su fecha, condición y relación con la
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint2-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -702,7 +541,7 @@ Verificar fechas invertidas, periodos sin resultados y resultados cronológicos 
 
 **Estado propuesto según el reporte:** To Do. No certifica el estado actual del tablero.
 **Estimación:** 6 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Rodrigo — integración API. Tarea original S2-T11: Parcial: filtros del catálogo por revisar.
 
 **Evidencia y límite:** Filtros completos y su aceptación permanecen abiertos.
@@ -711,13 +550,6 @@ Verificar fechas invertidas, periodos sin resultados y resultados cronológicos 
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint2-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -732,7 +564,7 @@ Persistir comentario válido con autor y fecha y reconocer la alerta sin cerrarl
 
 **Estado propuesto según el reporte:** To Review. No certifica el estado actual del tablero.
 **Estimación:** 6 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Rodrigo — integración API. Tarea original S2-T11: Parcial: filtros del catálogo por revisar.
 
 **Evidencia y límite:** Acción implementada según evidencia; aceptación del equipo no adjunta.
@@ -741,13 +573,6 @@ Persistir comentario válido con autor y fecha y reconocer la alerta sin cerrarl
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint2-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -762,7 +587,7 @@ Ejecutar comentario vacío y perfiles sin permiso y verificar que no se crean ac
 
 **Estado propuesto según el reporte:** To Do. No certifica el estado actual del tablero.
 **Estimación:** 4 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Rodrigo — integración API. Tarea original S2-T11: Parcial: filtros del catálogo por revisar.
 
 **Evidencia y límite:** Falta revisión funcional completa de ambos escenarios y perfiles.
@@ -771,13 +596,6 @@ Ejecutar comentario vacío y perfiles sin permiso y verificar que no se crean ac
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint2-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -792,7 +610,7 @@ Exponer registros autorizados de un envío con fecha, unidad de medida y rango d
 
 **Estado propuesto según el reporte:** To Review. No certifica el estado actual del tablero.
 **Estimación:** 6 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Rodrigo — integración API. Tarea original S2-T12: Parcial: exportación en cliente.
 
 **Evidencia y límite:** Historial de prueba implementado; no acredita registros de sensores físicos.
@@ -801,13 +619,6 @@ Exponer registros autorizados de un envío con fecha, unidad de medida y rango d
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint2-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -822,7 +633,7 @@ Comprobar periodos vacíos o incompletos e impedir que se interpreten como cumpl
 
 **Estado propuesto según el reporte:** To Do. No certifica el estado actual del tablero.
 **Estimación:** 4 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Rodrigo — integración API. Tarea original S2-T12: Parcial: exportación en cliente.
 
 **Evidencia y límite:** No se adjunta revisión integral de periodos sin datos.
@@ -831,13 +642,6 @@ Comprobar periodos vacíos o incompletos e impedir que se interpreten como cumpl
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint2-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -852,7 +656,7 @@ Generar CSV del historial e identificar envío, periodo y datos de prueba en la 
 
 **Estado propuesto según el reporte:** To Review. No certifica el estado actual del tablero.
 **Estimación:** 6 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Rodrigo — integración API. Tarea original S2-T12: Parcial: exportación en cliente.
 
 **Evidencia y límite:** Exportación en cliente; no constituye endpoint de exportación TS06.
@@ -861,13 +665,6 @@ Generar CSV del historial e identificar envío, periodo y datos de prueba en la 
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint2-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -882,7 +679,7 @@ Comprobar contenido, caracteres, falta de datos y errores antes de aceptar el ar
 
 **Estado propuesto según el reporte:** To Do. No certifica el estado actual del tablero.
 **Estimación:** 4 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Rodrigo — integración API. Tarea original S2-T12: Parcial: exportación en cliente.
 
 **Evidencia y límite:** Falta registrar aceptación funcional de los archivos y errores.
@@ -891,13 +688,6 @@ Comprobar contenido, caracteres, falta de datos y errores antes de aceptar el ar
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint2-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -912,7 +702,7 @@ Aplicar autorización del servidor a envíos, alertas y recursos y rechazar coma
 
 **Estado propuesto según el reporte:** To Review. No certifica el estado actual del tablero.
 **Estimación:** 6 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Rodrigo. Tarea original S2-T13: Verificado.
 
 **Evidencia y límite:** Aislamiento verificado en pruebas API; falta aceptación del equipo.
@@ -921,13 +711,6 @@ Aplicar autorización del servidor a envíos, alertas y recursos y rechazar coma
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint2-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -942,7 +725,7 @@ Ejecutar accesos cruzados y comandos no autorizados y vincular resultados a ambo
 
 **Estado propuesto según el reporte:** To Review. No certifica el estado actual del tablero.
 **Estimación:** 4 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Rodrigo. Tarea original S2-T13: Verificado.
 
 **Evidencia y límite:** Hay verificaciones de autorización; corresponde revisar su cobertura y aceptar el resultado.
@@ -951,13 +734,6 @@ Ejecutar accesos cruzados y comandos no autorizados y vincular resultados a ambo
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint2-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -972,7 +748,7 @@ Validar capacidad positiva, placa y sensor únicos antes de guardar una unidad.
 
 **Estado propuesto según el reporte:** To Review. No certifica el estado actual del tablero.
 **Estimación:** 6 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Rodrigo — integración API. Tarea original S2-T05: Implementado; revisión funcional del equipo abierta.
 
 **Evidencia y límite:** Implementado; revisión funcional del equipo abierta en registro original.
@@ -981,13 +757,6 @@ Validar capacidad positiva, placa y sensor únicos antes de guardar una unidad.
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint2-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -1002,7 +771,7 @@ Comprobar alta correcta, placa duplicada y capacidad inválida con persistencia 
 
 **Estado propuesto según el reporte:** To Do. No certifica el estado actual del tablero.
 **Estimación:** 4 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Rodrigo — integración API. Tarea original S2-T05: Implementado; revisión funcional del equipo abierta.
 
 **Evidencia y límite:** No consta aceptación funcional completa de US14.
@@ -1011,13 +780,6 @@ Comprobar alta correcta, placa duplicada y capacidad inválida con persistencia 
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint2-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -1032,7 +794,7 @@ Actualizar datos válidos y proteger los recursos que mantienen una asignación 
 
 **Estado propuesto según el reporte:** To Review. No certifica el estado actual del tablero.
 **Estimación:** 6 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Rodrigo — integración API. Tarea original S2-T05: Implementado; revisión funcional del equipo abierta.
 
 **Evidencia y límite:** Implementado; se mantiene la revisión funcional abierta.
@@ -1041,13 +803,6 @@ Actualizar datos válidos y proteger los recursos que mantienen una asignación 
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint2-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -1062,7 +817,7 @@ Comprobar datos obligatorios, duplicados y edición de unidades asignadas sin al
 
 **Estado propuesto según el reporte:** To Do. No certifica el estado actual del tablero.
 **Estimación:** 4 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Rodrigo — integración API. Tarea original S2-T05: Implementado; revisión funcional del equipo abierta.
 
 **Evidencia y límite:** Falta aceptación funcional integral de US15.
@@ -1071,13 +826,6 @@ Comprobar datos obligatorios, duplicados y edición de unidades asignadas sin al
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint2-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -1092,7 +840,7 @@ Registrar datos y licencia única y validar los campos disponibles antes de habi
 
 **Estado propuesto según el reporte:** To Review. No certifica el estado actual del tablero.
 **Estimación:** 6 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Rodrigo — integración API. Tarea original S2-T06: Parcial: vigencia de licencia no verificada.
 
 **Evidencia y límite:** Registro implementado; vigencia de licencia no verificada.
@@ -1101,13 +849,6 @@ Registrar datos y licencia única y validar los campos disponibles antes de habi
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint2-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -1122,7 +863,7 @@ Aplicar la vigencia de la licencia y probar licencia vencida, inválida y duplic
 
 **Estado propuesto según el reporte:** To Do. No certifica el estado actual del tablero.
 **Estimación:** 8 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Rodrigo — integración API. Tarea original S2-T06: Parcial: vigencia de licencia no verificada.
 
 **Evidencia y límite:** Criterio de vigencia comprometido no verificado en el registro original.
@@ -1131,13 +872,6 @@ Aplicar la vigencia de la licencia y probar licencia vencida, inválida y duplic
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint2-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -1152,7 +886,7 @@ Validar disponibilidad y solapamiento para la reserva conjunta durante el interv
 
 **Estado propuesto según el reporte:** To Review. No certifica el estado actual del tablero.
 **Estimación:** 6 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Rodrigo — integración API. Tarea original S2-T06: Parcial: vigencia de licencia no verificada.
 
 **Evidencia y límite:** Validación descrita en API; aceptación del equipo abierta.
@@ -1161,13 +895,6 @@ Validar disponibilidad y solapamiento para la reserva conjunta durante el interv
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint2-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -1182,7 +909,7 @@ Comprobar solapamiento de conductor y vehículo y ausencia de reservas parciales
 
 **Estado propuesto según el reporte:** To Do. No certifica el estado actual del tablero.
 **Estimación:** 4 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Rodrigo — integración API. Tarea original S2-T06: Parcial: vigencia de licencia no verificada.
 
 **Evidencia y límite:** Falta evidencia de aceptación integral de conflictos y simultaneidad.
@@ -1191,13 +918,6 @@ Comprobar solapamiento de conductor y vehículo y ausencia de reservas parciales
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint2-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -1212,22 +932,15 @@ Mantener enlaces de entrada al login con perfil e idioma sin asignar privilegios
 
 **Estado propuesto según el reporte:** To Review. No certifica el estado actual del tablero.
 **Estimación:** 4 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Rodrigo. Tarea original S2-T15: Verificado.
 
-**Evidencia y límite:** Entrada por perfil e idioma documentada en octubre; repositorio landing actualizado en release 0.1.0 del 10/11. Aceptación del equipo pendiente.
+**Evidencia y límite:** Entrada por perfil e idioma documentada en octubre; repositorio landing actualizado en release 0.1.0 del 10/11. Aceptación del equipo sin registro.
 
 **Producto vinculado:** friotrack-landing.
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint2-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -1242,7 +955,7 @@ Comprobar ambos segmentos e idiomas y documentar comportamiento cuando el acceso
 
 **Estado propuesto según el reporte:** To Do. No certifica el estado actual del tablero.
 **Estimación:** 4 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Rodrigo. Tarea original S2-T15: Verificado.
 
 **Evidencia y límite:** No consta revisión integral del escenario de indisponibilidad.
@@ -1251,13 +964,6 @@ Comprobar ambos segmentos e idiomas y documentar comportamiento cuando el acceso
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint2-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -1272,8 +978,8 @@ Definir destino autorizado y conectar el transporte de la solicitud con recepci�
 
 **Estado propuesto según el reporte:** To Do. No certifica el estado actual del tablero.
 **Estimación:** 6 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
-**Atribución histórica conservada:** Sin asignación registrada. Tarea original S2-T18: Pendiente.
+**Responsable de la revisión actual:** —.
+**Atribución histórica conservada:** Sin asignación registrada. Tarea original S2-T18: To Do.
 
 **Evidencia y límite:** No hay receptor operativo acreditado ni asignación histórica registrada.
 
@@ -1281,13 +987,6 @@ Definir destino autorizado y conectar el transporte de la solicitud con recepci�
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint2-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -1302,8 +1001,8 @@ Ejecutar recepción válida, correo inválido y fallo de transporte y conservar 
 
 **Estado propuesto según el reporte:** To Do. No certifica el estado actual del tablero.
 **Estimación:** 4 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
-**Atribución histórica conservada:** Sin asignación registrada. Tarea original S2-T18: Pendiente.
+**Responsable de la revisión actual:** —.
+**Atribución histórica conservada:** Sin asignación registrada. Tarea original S2-T18: To Do.
 
 **Evidencia y límite:** Depende del receptor; no se acepta una confirmación solo local como recepción.
 
@@ -1311,13 +1010,6 @@ Ejecutar recepción válida, correo inválido y fallo de transporte y conservar 
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint2-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -1332,7 +1024,7 @@ Aplicar inglés por defecto y conservar el idioma explícito durante los flujos 
 
 **Estado propuesto según el reporte:** To Review. No certifica el estado actual del tablero.
 **Estimación:** 6 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Rodrigo — integración publicada. Tarea original S2-T14: Verificado en recorridos registrados.
 
 **Evidencia y límite:** Recorridos registrados en ambos idiomas; revisar cobertura completa.
@@ -1341,13 +1033,6 @@ Aplicar inglés por defecto y conservar el idioma explícito durante los flujos 
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint2-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -1362,7 +1047,7 @@ Comprobar textos y errores, cambios de idioma y ausencia de claves de traducció
 
 **Estado propuesto según el reporte:** To Do. No certifica el estado actual del tablero.
 **Estimación:** 4 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Rodrigo — integración publicada. Tarea original S2-T14: Verificado en recorridos registrados.
 
 **Evidencia y límite:** No consta aceptación completa de traducciones y fallback.
@@ -1371,13 +1056,6 @@ Comprobar textos y errores, cambios de idioma y ausencia de claves de traducció
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint2-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -1392,22 +1070,15 @@ Validar credenciales en servidor y utilizar únicamente los permisos devueltos p
 
 **Estado propuesto según el reporte:** To Review. No certifica el estado actual del tablero.
 **Estimación:** 6 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Rodrigo. Tarea original S2-T01: Verificado.
 
-**Evidencia y límite:** Verificado en pruebas API y recorridos; aceptación de producto pendiente.
+**Evidencia y límite:** Verificado en pruebas API y recorridos; aceptación de producto sin registro.
 
 **Producto vinculado:** friotrack-frontend.
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint2-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -1422,7 +1093,7 @@ Comprobar credenciales correctas, incorrectas y restauración de sesión sin fil
 
 **Estado propuesto según el reporte:** To Review. No certifica el estado actual del tablero.
 **Estimación:** 4 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Rodrigo. Tarea original S2-T01: Verificado.
 
 **Evidencia y límite:** Existe evidencia técnica; revisar cobertura con criterios vigentes.
@@ -1431,13 +1102,6 @@ Comprobar credenciales correctas, incorrectas y restauración de sesión sin fil
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint2-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -1452,7 +1116,7 @@ Invalidar token en servidor y eliminar la referencia de sesión del cliente.
 
 **Estado propuesto según el reporte:** To Review. No certifica el estado actual del tablero.
 **Estimación:** 4 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Rodrigo. Tarea original S2-T02: Verificado.
 
 **Evidencia y límite:** Revocación verificada según registro; falta aceptación del equipo.
@@ -1461,13 +1125,6 @@ Invalidar token en servidor y eliminar la referencia de sesión del cliente.
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint2-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -1482,7 +1139,7 @@ Comprobar token revocado y sesión previamente expirada sin restaurar acceso.
 
 **Estado propuesto según el reporte:** To Review. No certifica el estado actual del tablero.
 **Estimación:** 4 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Rodrigo. Tarea original S2-T02: Verificado.
 
 **Evidencia y límite:** Pruebas de sesión registradas; confirmar escenarios y aceptación.
@@ -1491,13 +1148,6 @@ Comprobar token revocado y sesión previamente expirada sin restaurar acceso.
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint2-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -1512,22 +1162,15 @@ Validar datos, correo único y términos y asignar exclusivamente el rol públic
 
 **Estado propuesto según el reporte:** To Review. No certifica el estado actual del tablero.
 **Estimación:** 6 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Rodrigo. Tarea original S2-T03: Verificado por pruebas API.
 
-**Evidencia y límite:** Verificado por pruebas API; aceptación funcional del registro pendiente.
+**Evidencia y límite:** Verificado por pruebas API; aceptación funcional del registro sin registro.
 
 **Producto vinculado:** friotrack-frontend.
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint2-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -1542,7 +1185,7 @@ Comprobar intento de coordinador, duplicados y consentimiento ausente sin crear 
 
 **Estado propuesto según el reporte:** To Review. No certifica el estado actual del tablero.
 **Estimación:** 4 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Rodrigo. Tarea original S2-T03: Verificado por pruebas API.
 
 **Evidencia y límite:** Hay comprobaciones API de seguridad; revisar cobertura funcional completa.
@@ -1551,13 +1194,6 @@ Comprobar intento de coordinador, duplicados y consentimiento ausente sin crear 
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint2-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -1572,7 +1208,7 @@ Generar build reproducible y paquetes separados de frontend y API con configurac
 
 **Estado propuesto según el reporte:** To Review. No certifica el estado actual del tablero.
 **Estimación:** 6 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Rodrigo. Tarea original S2-T16: Verificado.
 
 **Evidencia y límite:** Build y publicación registrados en recibos técnicos; no implica release GitHub aceptada.
@@ -1581,13 +1217,6 @@ Generar build reproducible y paquetes separados de frontend y API con configurac
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint2-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -1602,7 +1231,7 @@ Contrastar HTTPS, hashes de archivos, permisos y rutas inexistentes contra la ve
 
 **Estado propuesto según el reporte:** To Review. No certifica el estado actual del tablero.
 **Estimación:** 4 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Rodrigo. Tarea original S2-T16: Verificado.
 
 **Evidencia y límite:** Recibos de verificación disponibles; confirmar artefactos del corte revisado.
@@ -1611,13 +1240,6 @@ Contrastar HTTPS, hashes de archivos, permisos y rutas inexistentes contra la ve
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint2-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -1632,22 +1254,15 @@ Actualizar capítulos, enlaces, índice y anexos preservando atribuciones y los 
 
 **Estado propuesto según el reporte:** To Review. No certifica el estado actual del tablero.
 **Estimación:** 6 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Alexander / Joaquín / Nayely / Rodrigo. Tarea original S2-T17: Integrado en informe.
 
-**Evidencia y límite:** Contenido integrado en el informe; nueva revisión académica pendiente.
+**Evidencia y límite:** Contenido integrado en el informe; nueva revisión académica sin registro.
 
 **Producto vinculado:** report-friotrack.
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint2-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -1662,7 +1277,7 @@ Comprobar tablas, referencias, diagramas y formato de los entregables antes de a
 
 **Estado propuesto según el reporte:** To Review. No certifica el estado actual del tablero.
 **Estimación:** 4 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Alexander / Joaquín / Nayely / Rodrigo. Tarea original S2-T17: Integrado en informe.
 
 **Evidencia y límite:** Revisión técnica del 11/11: 22 diagramas, referencias y exportación comprobados. Falta aceptación del equipo; no acredita ejecución conjunta por los asignados históricos.
@@ -1671,13 +1286,6 @@ Comprobar tablas, referencias, diagramas y formato de los entregables antes de a
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint2-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -1692,22 +1300,15 @@ Contrastar exposición y evaluación individual con integrantes y entrega y regi
 
 **Estado propuesto según el reporte:** To Review. No certifica el estado actual del tablero.
 **Estimación:** 4 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Equipo / Team Leader. Tarea original S2-T19: Exposición y performance adjuntos; actas no adjuntas.
 
-**Evidencia y límite:** Exposición y performance adjuntos; revisión del contenido por equipo pendiente.
+**Evidencia y límite:** Exposición y performance adjuntos; revisión del contenido por equipo sin registro.
 
 **Producto vinculado:** report-friotrack.
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint2-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---
@@ -1722,7 +1323,7 @@ Incorporar registros reales de planning, review y retrospectiva y actualizar la 
 
 **Estado propuesto según el reporte:** To Do. No certifica el estado actual del tablero.
 **Estimación:** 4 h de revisión posterior, fechada 2026-11-10; no representa horas históricas invertidas.
-**Responsable de la revisión actual:** pendiente de confirmar con el equipo. No se asigna automáticamente a la persona histórica.
+**Responsable de la revisión actual:** —.
 **Atribución histórica conservada:** Equipo / Team Leader. Tarea original S2-T19: Exposición y performance adjuntos; actas no adjuntas.
 
 **Evidencia y límite:** Actas y captura actual de estados no adjuntas; no reconstruir reuniones inexistentes.
@@ -1731,13 +1332,6 @@ Incorporar registros reales de planning, review y retrospectiva y actualizar la 
 **Fuente del backlog:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/assets/annexes/sprint2-backlog.csv
 **Criterios de las historias:** https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack#31-user-stories
 
-## Revisión pendiente
-
-- Confirmar responsable actual y revisor.
-- Ejecutar escenarios de aceptación aplicables; adjuntar entrada, resultado esperado y observado.
-- Enlazar commit/PR, CI o ejecución desplegada que corresponda.
-- Registrar decisión y fecha reales del revisor.
-- Mover a Done únicamente después de aceptación; si falla, mantener To Do o In Process según evidencia.
 
 
 ---

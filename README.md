@@ -88,9 +88,10 @@ El siguiente registro conserva las actividades documentadas para AV1 en el repos
 | Revisión TB1 | 10/11/2026 | Atauje Barreto, Alexander Sebastián | Corrección de carátula, gráficos, escenarios, sprint goals, estados, C4, modelo DDD y configuración de repositorios a partir de las observaciones de evaluación. |
 | Revisión TB1 · v2.0.4 | 11/11/2026 | Atauje Barreto, Alexander Sebastián | Incorporación de los 22 diagramas aprobados, fuentes editables, contratos I01–I13, alineación DDD y ERD, actualización de gráficos y consistencia de planificación y evidencias. Carátula sin cambios. |
 
-| Revisión TB1 · v2.0.5 | 11/11/2026 | Atauje Barreto, Alexander Sebastián | Registro de integración local de landing, SPA y API; preparación trazable del tablero y procedimiento de publicación verificada, con accesos y aceptación pendientes explícitos. |
-| Preparación AV2 · v3.0.0-av2.1 | 13/11/2026 | Atauje Barreto, Alexander Sebastián | Integración del esquema EF Core/PostgreSQL de 18 tablas, documentación de recursos REST, preparación de Sprint 3, validación, videos y entrega. El despliegue AV2 y las sesiones con participantes aún requieren evidencia propia. |
+| Revisión TB1 · v2.0.5 | 11/11/2026 | Atauje Barreto, Alexander Sebastián | Registro de integración local de landing, SPA y API; preparación trazable del tablero y procedimiento de publicación verificada, con configuración de accesos y trazabilidad de publicación. |
+| Preparación AV2 · v3.0.0-av2.1 | 13/11/2026 | Atauje Barreto, Alexander Sebastián | Integración del esquema EF Core/PostgreSQL de 18 tablas, documentación de recursos REST, preparación de Sprint 3, validación, videos y entrega. El corte técnico identifica las fuentes, migraciones y pruebas de integración. |
 | AV2 | 14/11/2026 | Atauje Barreto, Alexander Sebastián | Incorporación de la entrevista AV2-C01 de Farit Santoyo: video, captura original, resumen de respuestas y alcance parcial de la validación. |
+| AV2 | 14/11/2026 | Atauje Barreto, Alexander Sebastián | Corrección de redacción y presentación del informe y sus anexos. |
 
 <div style="page-break-after: always;"></div>
 
@@ -140,7 +141,7 @@ El gráfico resume los **35 commits sin merges** del snapshot de `main` con cort
 
 El corte reproducible anterior a esta revisión es `02022660eb5954dd0ead0ef5f33d39c1db45b02e`: **43 commits sin merges**, con Alexander 16, Rodrigo 15, Joaquín 8 y Nayely 4. El [registro por autor y fecha](assets/evidence/report-collaboration-2026-11-11.json) permite contrastar el gráfico. Este corte incluye correcciones posteriores a TB1; no se mezcla con el snapshot histórico de 35 commits ni acredita aportes equivalentes entre productos. Los commits de la presente revisión se consultan en el historial posterior a ese corte.
 
-El [seguimiento de observaciones del docente](assets/annexes/correcciones-docente-2026-11-11.md) relaciona cada corrección con su sección y distingue los pendientes que requieren evidencia real del equipo.
+El [seguimiento de observaciones del docente](assets/annexes/correcciones-docente-2026-11-11.md) relaciona cada corrección con su sección y presenta las evidencias y el alcance de cada revisión.
 
 ### Organización del informe
 
@@ -807,7 +808,7 @@ Estas funcionalidades ayudarían a prevenir pérdidas, mejorar la distribución 
 |:------|:--------|
 | **Título** | Entrevista 2: Farit |
 | **Segmento** | Empresas distribuidoras de productos perecibles |
-| **Nombres y Apellidos** | Farit (apellidos pendientes) |
+| **Nombres y Apellidos** | Farit Alejandro Santoyo Espejo |
 | **Edad** | 28 años |
 | **Distrito** | San Luis |
 | **Enlace al video (Microsoft Stream)** |[Entrevistas-Consolidado](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202219829_upc_edu_pe/IQAIrCLq6pSFSJvrtihV4MBEAclabwb3TRiATBksgwlaG60?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=ZMsYWh)|
@@ -1114,7 +1115,7 @@ Las épicas y sus historias se presentan primero por el valor específico del ne
 
 ## 3.1. User Stories
 
-Cada historia incluye dos escenarios verificables con la secuencia Dado, cuando y entonces. Los criterios describen el comportamiento comprometido del producto; su presencia en este catálogo no acredita que estén implementados o aceptados. El alcance realmente ejecutado y sus pendientes se contrastan en los backlogs y las evidencias del Capítulo V. Las historias técnicas conservan sus IDs y se asocian al contexto funcional que sirven; US19–US22, US32 y TS05 de IAM se ubican al final.
+Cada historia incluye dos escenarios verificables con la secuencia Dado, cuando y entonces. Los criterios describen el comportamiento comprometido del producto; su presencia en este catálogo no acredita que estén implementados o aceptados. El alcance realmente ejecutado se contrasta en los backlogs y las evidencias del Capítulo V. Las historias técnicas conservan sus IDs y se asocian al contexto funcional que sirven; US19–US22, US32 y TS05 de IAM se ubican al final.
 
 | Epic/ Story ID | Título | Descripción | Criterios de Aceptación | Epic ID |
 | :--- | :--- | :--- | :--- | :--- |
@@ -2839,7 +2840,7 @@ El nivel 1 delimita FríoTrack y sus relaciones con Coordinador Logístico, Clie
 
 ### 4.6.3. Software Architecture Container Diagrams
 
-La **Web Application** entrega los archivos estáticos; la **Single Page Application** ejecuta Vue en el navegador. Son contenedores distintos, conectados por la entrega del bundle. La landing comparte el servidor estático. El incremento AV2 conecta la SPA con una API REST y PostgreSQL; esta versión se verificó localmente y su despliegue público está pendiente.
+La **Web Application** entrega los archivos estáticos; la **Single Page Application** ejecuta Vue en el navegador. Son contenedores distintos, conectados por la entrega del bundle. La landing comparte el servidor estático. El incremento AV2 conecta la SPA con una API REST y PostgreSQL; la versión está publicada en Azure y utiliza PostgreSQL 17 en Neon, según los recibos de publicación del 14/11/2026.
 
 ![Figura 4.95. C4 nivel 2: contenedores de la implementación AV2](assets/architecture/av2/09-c4-contenedores-av2.svg)
 
@@ -2894,7 +2895,7 @@ El modelo táctico **objetivo del backend** distingue raíces de agregado, entid
 
 ![Figura 4.99. Modelo DDD de monitoreo con MonitoredRange y eventos de señal](assets/images/chapter-04/revision-2026-11-11/13-uml-monitoring.png)
 
-`ShipmentMonitoring` administra `SensorReading` y `PositionReport`. `MonitoredRange` es una copia local inmutable, sin compartir el objeto mutable de Shipment. El modelo contempla `ReadingOutOfRange`, `ReadingWithinRange`, `SignalLost` y `SignalRestored`. Una lectura fuera de orden no demuestra recuperación posterior; recuperar comunicación no resuelve una excursión térmica. La ingesta física y la evaluación temporal automática siguen pendientes de implementación.
+`ShipmentMonitoring` administra `SensorReading` y `PositionReport`. `MonitoredRange` es una copia local inmutable, sin compartir el objeto mutable de Shipment. El modelo contempla `ReadingOutOfRange`, `ReadingWithinRange`, `SignalLost` y `SignalRestored`. Una lectura fuera de orden no demuestra recuperación posterior; recuperar comunicación no resuelve una excursión térmica. La ingesta física y la evaluación temporal automática están fuera del alcance de esta versión.
 
 #### 4.7.1.3. Fleet and Resource Management
 
@@ -3088,7 +3089,7 @@ FríoTrack integra una Landing Page, una aplicación Vue para el Coordinador Log
 | Software Documentation | Markdown, Mermaid y PlantUML | Informe, configuración, contratos y diseños editables. | Informe y fuentes en este repositorio; contratos del servicio en 5.2.2.6. |
 | Software Deployment | Azure Storage y Azure App Service | Hosting estático y ejecución del servicio de apoyo. | Configuración y verificaciones en 5.2.2.7. |
 
-Las fuentes AV2 utilizan EF Core, PostgreSQL y OpenAPI/Swagger. El modo JSON se conserva exclusivamente como compatibilidad explícita con TB1. La existencia de migraciones y builds no acredita publicación del incremento relacional; los requisitos de despliegue y sus pendientes se detallan en 5.2.3.7.
+Las fuentes AV2 utilizan EF Core, PostgreSQL y OpenAPI/Swagger. El modo JSON se conserva exclusivamente como compatibilidad explícita con TB1. La publicación del incremento relacional se documenta mediante los recibos y verificaciones públicas de 5.2.3.7.
 
 ### 5.1.2. Source Code Management
 
@@ -3146,7 +3147,7 @@ La configuración de la SPA define `VITE_API_URL` y `VITE_LANDING_URL`. La API s
 
 El plan F1 puede requerir un arranque después de periodos de inactividad. La landing mantiene el formulario de contacto sin receptor comercial configurado; su validación no se presenta como una solicitud recibida.
 
-AV2 requiere una conexión privada PostgreSQL mediante `FRIOTRACK_DB` o `ConnectionStrings__FrioTrack`, con persistencia `postgres`, migraciones explícitas y CORS. Las semillas ficticias se habilitan de forma expresa en una base nueva y sus contraseñas se suministran como variables privadas. No publicar la nueva API en un destino configurado únicamente para JSON ni reemplazar datos existentes sin acordar migración o conservación. La base no debe exponerse desde la SPA. El destino, credenciales y comprobación pública siguen pendientes en 5.2.3.7.
+AV2 requiere una conexión privada PostgreSQL mediante `FRIOTRACK_DB` o `ConnectionStrings__FrioTrack`, con persistencia `postgres`, migraciones explícitas y CORS. Las semillas ficticias se habilitan de forma expresa en una base nueva y sus contraseñas se suministran como variables privadas. La base es privada y la SPA accede a los datos a través de la API. La publicación de 5.2.3.7 conserva los registros anteriores y separa los datos de demostración.
 
 ## 5.2. Landing Page, Services & Applications Implementation
 
@@ -3172,7 +3173,7 @@ El Sprint 1 desarrolló la Landing Page de AV1. Su objetivo fue presentar el pro
 
 #### 5.2.1.2. Aspect Leaders and Collaborators
 
-La matriz conserva los aportes registrados en AV1. **C** identifica una contribución documentada; **L** requiere una designación de liderazgo que no consta en el registro disponible. **—** indica que no se documenta aporte en ese aspecto. El equipo debe confirmar las designaciones pendientes, sin reconstruir actas históricas.
+La matriz conserva los aportes registrados en AV1. **C** identifica una contribución documentada; **L** requiere una designación de liderazgo que no consta en el registro disponible. **—** indica que no se documenta aporte en ese aspecto.
 
 | Team Member | GitHub Username | Producto e informe | Requisitos y backlog | Arquitectura y diseño | Landing y despliegue |
 | --- | --- | :---: | :---: | :---: | :---: |
@@ -3186,21 +3187,21 @@ Alexander aportó la propuesta y la estructura del informe; Benjamin, arquitectu
 
 #### 5.2.1.3. Sprint Backlog 1
 
-El Sprint 1 se concentra en la propuesta, los corredores propuestos, el contacto y las preguntas frecuentes de la landing. Su goal se expresa con la plantilla del statement y una métrica de revisión; el receptor pendiente impide declarar su cumplimiento integral. La captura del tablero disponible es el antecedente del [Product Backlog en Trello](https://trello.com/b/6qrvOukt/blackstartup-fr%C3%ADotrack), no una validación actual de los estados regularizados.
+El Sprint 1 se concentra en la propuesta, los corredores propuestos, el contacto y las preguntas frecuentes de la landing. Su goal se expresa con la plantilla del statement y una métrica de revisión; el receptor comercial no está configurado en este corte. La captura del tablero disponible es el antecedente del [Product Backlog en Trello](https://trello.com/b/6qrvOukt/blackstartup-fr%C3%ADotrack), no una validación actual de los estados regularizados.
 
 ![Tablero disponible como antecedente del Sprint 1](assets/images/chapter-03/cap_trello.png)
 
-La tabla regulariza la descomposición de las tareas el **10/11/2026**. La columna **Estimación de revisión (h)** contiene una propuesta posterior de 4 a 8 horas por tarea para revisar, completar o aceptar el trabajo; no reconstruye una planificación ni tiempos efectivamente invertidos. **Horas históricas** conserva «No registrada». Los nombres de **Assigned To histórico** mantienen la atribución del registro recibido y requieren confirmación para asignar el trabajo pendiente; no acreditan que esas personas hayan ejecutado estas nuevas tareas. Los sufijos A, B y siguientes conservan el vínculo con la tarea original, cuyo ID y estado figuran en el CSV.
+La tabla regulariza la descomposición de las tareas el **10/11/2026**. La columna **Estimación de revisión (h)** contiene una propuesta posterior de 4 a 8 horas por tarea para revisar, completar o aceptar el trabajo; no reconstruye una planificación ni tiempos efectivamente invertidos. **Horas históricas** conserva «No registrada». Los nombres de **Assigned To histórico** mantienen la atribución del registro recibido y no constituyen asignaciones nuevas; no acreditan que esas personas hayan ejecutado estas nuevas tareas. Los sufijos A, B y siguientes conservan el vínculo con la tarea original, cuyo ID y estado figuran en el CSV.
 
-Los estados permitidos son **To Do** (actividad pendiente), **In Process** (actividad iniciada con evidencia actual), **To Review** (existe un resultado que requiere revisión) y **Done** (revisión y aceptación registradas). La clasificación siguiente es una regularización del corte disponible; no sustituye el tablero actualizado. No se asigna Done porque no consta aceptación individual de estas tareas. Los pendientes de implementación o de pruebas sin evidencia quedan To Do; los resultados implementados o comprobados quedan To Review. Se preserva el [registro histórico](assets/annexes/sprint1-backlog-historical.csv) y se publica el [CSV regularizado](assets/annexes/sprint1-backlog.csv).
+Los estados permitidos son **To Do** (actividad por iniciar), **In Process** (actividad iniciada con evidencia actual), **To Review** (existe un resultado que requiere revisión) y **Done** (revisión y aceptación registradas). La clasificación siguiente es una regularización del corte disponible; no sustituye el tablero actualizado. No se asigna Done porque no consta aceptación individual de estas tareas. El trabajo sin implementación o sin pruebas registradas se clasifica como To Do; los resultados implementados o comprobados quedan To Review. Se preserva el [registro histórico](assets/annexes/sprint1-backlog-historical.csv) y se publica el [CSV regularizado](assets/annexes/sprint1-backlog.csv).
 
 | Story Id | Story Title | Task Id | Task Title | Task Description | Estimation de revisión (h) | Horas históricas | Assigned To histórico | Status | Evidence / Review Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| US23 | Propuesta de valor en Landing | S1-T01A | Componer propuesta y segmentos | Mantener contenido, estructura semántica y estilos de la propuesta de valor en ambos idiomas. | 6 | No registrada | Benjamin / Alexander | To Review | Contenido publicado; falta aceptación registrada del equipo. |
-| US23 | Propuesta de valor en Landing | S1-T01B | Revisar experiencia responsive | Comprobar lectura y acceso a enlaces en escritorio y móvil, registrar resultados y corregir desbordamientos. | 4 | No registrada | Benjamin / Alexander | To Review | Revisión técnica local del 11/11: landing ES/EN a 390 y 1440 px sin desbordamiento y CTA por perfil/idioma comprobados. Falta aceptación del equipo y revisión de la versión desplegada. |
+| US23 | Propuesta de valor en Landing | S1-T01A | Componer propuesta y segmentos | Mantener contenido, estructura semántica y estilos de la propuesta de valor en ambos idiomas. | 6 | No registrada | Benjamin / Alexander | To Review | Contenido publicado; aceptación del equipo no registrada. |
+| US23 | Propuesta de valor en Landing | S1-T01B | Revisar experiencia responsive | Comprobar lectura y acceso a enlaces en escritorio y móvil, registrar resultados y corregir desbordamientos. | 4 | No registrada | Benjamin / Alexander | To Review | Revisión técnica local del 11/11: landing ES/EN a 390 y 1440 px sin desbordamiento y CTA por perfil/idioma comprobados. Aceptación del equipo y revisión de esa versión no registradas en este corte. |
 | US24 | Corredores logísticos en Landing | S1-T02A | Documentar corredores propuestos | Mantener corredores y distinguir cobertura propuesta de cobertura contratada o verificada. | 4 | No registrada | Benjamin | To Review | Sección publicada; revisar exactitud y alcance de las afirmaciones. |
 | US24 | Corredores logísticos en Landing | S1-T02B | Validar contenido y acceso por idioma | Revisar los cuatro corredores y el canal de consulta en inglés y español con evidencia reproducible. | 4 | No registrada | Benjamin | To Do | Revisión de aceptación por idioma no registrada para esta tarea. |
-| US25 | Formulario de contacto comercial | S1-T03A | Implementar validación comercial | Validar campos, formato de correo y consentimiento sin mostrar éxito antes de una recepción confirmada. | 4 | No registrada | Benjamin | To Review | Validación local implementada; el receptor permanece pendiente. |
+| US25 | Formulario de contacto comercial | S1-T03A | Implementar validación comercial | Validar campos, formato de correo y consentimiento sin mostrar éxito antes de una recepción confirmada. | 4 | No registrada | Benjamin | To Review | Validación local implementada; el receptor comercial no está configurado. |
 | US25 | Formulario de contacto comercial | S1-T03B | Integrar receptor y errores de envío | Conectar un receptor real, verificar recepción y comprobar fallos de transporte sin confirmaciones falsas. | 8 | No registrada | Benjamin | To Do | No consta receptor comercial operativo; depende de configurar el destino real. |
 | US27 | Preguntas frecuentes (FAQ) | S1-T04A | Publicar preguntas equivalentes | Mantener preguntas y respuestas estáticas coherentes en español e inglés sin dependencia de CMS. | 4 | No registrada | Benjamin | To Review | FAQ publicada; revisar equivalencia y condiciones comerciales. |
 | US27 | Preguntas frecuentes (FAQ) | S1-T04B | Verificar interacción accesible | Revisar consulta por teclado, foco, expansión y cambio de idioma; adjuntar resultados de aceptación. | 4 | No registrada | Benjamin | To Do | No existe evidencia específica de aceptación accesible del FAQ. |
@@ -3283,67 +3284,67 @@ Alexander coordina la integración del informe; Joaquín mantiene la investigaci
 
 #### 5.2.2.3. Sprint Backlog 2
 
-El Sprint 2 vincula las historias del catálogo con tareas de implementación y revisión separadas. Los 75 SP de las 20 historias de la aplicación se contabilizan una sola vez; US31 aporta 2 SP de la actualización de landing y US25 mantiene un pendiente de 3 SP sin convertirlo en aceptado. Las tareas de soporte no agregan SP. La descomposición en tareas no aumenta los puntos de una historia.
+El Sprint 2 vincula las historias del catálogo con tareas de implementación y revisión separadas. Los 75 SP de las 20 historias de la aplicación se contabilizan una sola vez; US31 aporta 2 SP de la actualización de landing y US25 conserva 3 SP sin aceptación registrada. Las tareas de soporte no agregan SP. La descomposición en tareas no aumenta los puntos de una historia.
 
 El [tablero público en Trello](https://trello.com/b/6qrvOukt/blackstartup-fr%C3%ADotrack) y la captura siguiente son la evidencia disponible. Se requiere una captura específica y actual del Sprint 2 para confirmar los estados de esta regularización.
 
 ![Tablero disponible como antecedente; no certifica los estados regularizados de Sprint 2](assets/images/chapter-03/cap_trello.png)
 
-La tabla regulariza la descomposición de las tareas el **10/11/2026**. La columna **Estimación de revisión (h)** contiene una propuesta posterior de 4 a 8 horas por tarea para revisar, completar o aceptar el trabajo; no reconstruye una planificación ni tiempos efectivamente invertidos. **Horas históricas** conserva «No registrada». Los nombres de **Assigned To histórico** mantienen la atribución del registro recibido y requieren confirmación para asignar el trabajo pendiente; no acreditan que esas personas hayan ejecutado estas nuevas tareas. Los sufijos A, B y siguientes conservan el vínculo con la tarea original, cuyo ID y estado figuran en el CSV.
+La tabla regulariza la descomposición de las tareas el **10/11/2026**. La columna **Estimación de revisión (h)** contiene una propuesta posterior de 4 a 8 horas por tarea para revisar, completar o aceptar el trabajo; no reconstruye una planificación ni tiempos efectivamente invertidos. **Horas históricas** conserva «No registrada». Los nombres de **Assigned To histórico** mantienen la atribución del registro recibido y no constituyen asignaciones nuevas; no acreditan que esas personas hayan ejecutado estas nuevas tareas. Los sufijos A, B y siguientes conservan el vínculo con la tarea original, cuyo ID y estado figuran en el CSV.
 
-Los estados permitidos son **To Do** (actividad pendiente), **In Process** (actividad iniciada con evidencia actual), **To Review** (existe un resultado que requiere revisión) y **Done** (revisión y aceptación registradas). La clasificación siguiente es una regularización del corte disponible; no sustituye el tablero actualizado. No se asigna Done porque no consta aceptación individual de estas tareas. Los pendientes de implementación o de pruebas sin evidencia quedan To Do; los resultados implementados o comprobados quedan To Review. Se preserva el [registro histórico](assets/annexes/sprint2-backlog-historical.csv) y se publica el [CSV regularizado](assets/annexes/sprint2-backlog.csv).
+Los estados permitidos son **To Do** (actividad por iniciar), **In Process** (actividad iniciada con evidencia actual), **To Review** (existe un resultado que requiere revisión) y **Done** (revisión y aceptación registradas). La clasificación siguiente es una regularización del corte disponible; no sustituye el tablero actualizado. No se asigna Done porque no consta aceptación individual de estas tareas. El trabajo sin implementación o sin pruebas registradas se clasifica como To Do; los resultados implementados o comprobados quedan To Review. Se preserva el [registro histórico](assets/annexes/sprint2-backlog-historical.csv) y se publica el [CSV regularizado](assets/annexes/sprint2-backlog.csv).
 
 | Story Id | Story Title | Task Id | Task Title | Task Description | Estimation de revisión (h) | Horas históricas | Assigned To histórico | Status | Evidence / Review Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | US33 | Programación de envío refrigerado | S2-T04A | Programar envío y reservar recursos | Validar carga, fechas, cliente, capacidad y rangos; guardar envío y reservas sin operaciones parciales. | 8 | No registrada | Rodrigo — integración API | To Review | Implementación de programación descrita en evidencias; aceptación del equipo abierta. |
-| US33 | Programación de envío refrigerado | S2-T04B | Revisar conflictos y persistencia | Ejecutar casos de capacidad insuficiente, solapamiento y datos inválidos; contrastar el resultado con los criterios. | 6 | No registrada | Rodrigo — integración API | To Do | Revisión integral no registrada; el borrador persistido del diseño continúa pendiente fuera de los criterios actuales de US33. |
+| US33 | Programación de envío refrigerado | S2-T04B | Revisar conflictos y persistencia | Ejecutar casos de capacidad insuficiente, solapamiento y datos inválidos; contrastar el resultado con los criterios. | 6 | No registrada | Rodrigo — integración API | To Do | Revisión integral no registrada; el borrador persistido pertenece al diseño objetivo, fuera de los criterios actuales de US33. |
 | US34 | Gestión de estados del envío | S2-T07A | Aplicar transiciones de envío | Permitir iniciar y entregar; impedir cancelación en tránsito o entregado y conservar autor y fecha. | 6 | No registrada | Rodrigo — integración API | To Review | Ciclo implementado según registro; no hay aceptación del equipo adjunta. |
-| US34 | Gestión de estados del envío | S2-T07B | Validar historial y liberación | Comprobar transiciones rechazadas y liberación de recursos al entregar o cancelar un envío programado. | 4 | No registrada | Rodrigo — integración API | To Do | Falta registrar revisión integral; DRAFT persistido pertenece al diseño objetivo pendiente. |
+| US34 | Gestión de estados del envío | S2-T07B | Validar historial y liberación | Comprobar transiciones rechazadas y liberación de recursos al entregar o cancelar un envío programado. | 4 | No registrada | Rodrigo — integración API | To Do | Revisión integral no registrada; DRAFT persistido pertenece al diseño objetivo. |
 | US01 | Telemetría en vivo en el panel | S2-T08A | Consultar últimas lecturas | Presentar lectura y fecha del envío autorizado; distinguir datos de prueba y antigüedad de medición. | 6 | No registrada | Rodrigo — integración API | To Review | Se muestran datos de prueba; no acredita sensores físicos ni ingesta en vivo. |
 | US01 | Telemetría en vivo en el panel | S2-T08B | Integrar recepción y pérdida de señal | Integrar nuevas lecturas y verificar ausencia de actualización sin presentarlas como valores actuales. | 8 | No registrada | Rodrigo — integración API | To Do | No consta integración de sensores físicos o flujo de nuevas mediciones. |
-| US02 | Mapa interactivo de rutas | S2-T08C | Consultar posiciones autorizadas | Relacionar recorrido y posición con el envío y marcar la ubicación ilustrativa cuando corresponda. | 6 | No registrada | Rodrigo — integración API | To Review | Mapa ilustrativo implementado; ubicación real pendiente de integración. |
-| US02 | Mapa interactivo de rutas | S2-T08D | Verificar posiciones y proveedor | Comprobar posición válida, ausencia de coordenadas y fallo de teselas; registrar el comportamiento. | 4 | No registrada | Rodrigo — integración API | To Do | Faltan resultados de aceptación completos para la consulta geográfica. |
+| US02 | Mapa interactivo de rutas | S2-T08C | Consultar posiciones autorizadas | Relacionar recorrido y posición con el envío y marcar la ubicación ilustrativa cuando corresponda. | 6 | No registrada | Rodrigo — integración API | To Review | Mapa ilustrativo implementado; ubicación real fuera del alcance de este corte. |
+| US02 | Mapa interactivo de rutas | S2-T08D | Verificar posiciones y proveedor | Comprobar posición válida, ausencia de coordenadas y fallo de teselas; registrar el comportamiento. | 4 | No registrada | Rodrigo — integración API | To Do | Resultados completos de aceptación de consulta geográfica no registrados. |
 | US03 | Búsqueda y filtros de envíos | S2-T09A | Aplicar búsqueda y filtros | Filtrar los envíos autorizados por código y unidad y resolver consultas sin coincidencias. | 4 | No registrada | Rodrigo — integración API | To Review | Implementado; filtros completos por revisar según registro original. |
 | US03 | Búsqueda y filtros de envíos | S2-T09B | Revisar filtros y aislamiento | Comprobar coincidencias, resultados vacíos y ausencia de datos no autorizados con casos identificados. | 4 | No registrada | Rodrigo — integración API | To Do | No consta cierre de la revisión funcional completa de filtros. |
 | US05 | Detalle de telemetría por unidad | S2-T08E | Consultar detalle de mediciones | Exponer las series y unidades disponibles del envío sin convertir datos de ejemplo en lecturas reales. | 6 | No registrada | Rodrigo — integración API | To Review | Gráfica y tabla de prueba disponibles; no hay mediciones de vibración verificadas. |
 | US05 | Detalle de telemetría por unidad | S2-T08F | Completar variables y ausencia de datos | Integrar variables comprometidas y probar periodos sin mediciones y sus unidades de medida. | 8 | No registrada | Rodrigo — integración API | To Do | Sensores y vibración no están implementados según registro original. |
-| US08 | Configuración de umbrales térmicos | S2-T10A | Validar rangos ambientales | Aplicar mínimo menor que máximo y humedad entre 0 y 100 al programar el envío. | 4 | No registrada | Rodrigo — integración API | To Review | Reglas verificadas para rangos del envío; aceptación de producto pendiente. |
+| US08 | Configuración de umbrales térmicos | S2-T10A | Validar rangos ambientales | Aplicar mínimo menor que máximo y humedad entre 0 y 100 al programar el envío. | 4 | No registrada | Rodrigo — integración API | To Review | Reglas verificadas para rangos del envío; aceptación de producto no registrada en este corte. |
 | US08 | Configuración de umbrales térmicos | S2-T10B | Revisar límites y conservación | Ejecutar valores frontera e inválidos y comprobar que el último rango válido se conserva ante rechazo. | 4 | No registrada | Rodrigo — integración API | To Do | La revisión de aceptación de todos los valores frontera no está adjunta. |
 | US09 | Historial de alertas emitidas | S2-T11A | Consultar historial autorizado de alertas | Consultar alertas del envío y conservar su fecha, condición y relación con la medición. | 4 | No registrada | Rodrigo — integración API | To Review | Historial disponible; el registro original deja filtros del catálogo por revisar. |
 | US09 | Historial de alertas emitidas | S2-T11B | Completar filtros del periodo | Verificar fechas invertidas, periodos sin resultados y resultados cronológicos autorizados. | 6 | No registrada | Rodrigo — integración API | To Do | Filtros completos y su aceptación permanecen abiertos. |
 | US35 | Registro de acción correctiva | S2-T11C | Registrar acción correctiva | Persistir comentario válido con autor y fecha y reconocer la alerta sin cerrarla automáticamente. | 6 | No registrada | Rodrigo — integración API | To Review | Acción implementada según evidencia; aceptación del equipo no adjunta. |
-| US35 | Registro de acción correctiva | S2-T11D | Revisar acción y autorización | Ejecutar comentario vacío y perfiles sin permiso y verificar que no se crean acciones inválidas. | 4 | No registrada | Rodrigo — integración API | To Do | Falta revisión funcional completa de ambos escenarios y perfiles. |
+| US35 | Registro de acción correctiva | S2-T11D | Revisar acción y autorización | Ejecutar comentario vacío y perfiles sin permiso y verificar que no se crean acciones inválidas. | 4 | No registrada | Rodrigo — integración API | To Do | Revisión funcional de ambos escenarios y perfiles no registrada. |
 | US10 | Consulta de historial térmico | S2-T12A | Consultar historial térmico | Exponer registros autorizados de un envío con fecha, unidad de medida y rango de referencia. | 6 | No registrada | Rodrigo — integración API | To Review | Historial de prueba implementado; no acredita registros de sensores físicos. |
 | US10 | Consulta de historial térmico | S2-T12B | Verificar intervalos sin lecturas | Comprobar periodos vacíos o incompletos e impedir que se interpreten como cumplimiento térmico verificado. | 4 | No registrada | Rodrigo — integración API | To Do | No se adjunta revisión integral de periodos sin datos. |
 | US11 | Exportación de informes de trazabilidad | S2-T12C | Exportar trazabilidad identificada | Generar CSV del historial e identificar envío, periodo y datos de prueba en la salida. | 6 | No registrada | Rodrigo — integración API | To Review | Exportación en cliente; no constituye endpoint de exportación TS06. |
-| US11 | Exportación de informes de trazabilidad | S2-T12D | Revisar archivo y fallos de exportación | Comprobar contenido, caracteres, falta de datos y errores antes de aceptar el archivo como resultado. | 4 | No registrada | Rodrigo — integración API | To Do | Falta registrar aceptación funcional de los archivos y errores. |
-| US36 | Consulta de envíos del Cliente de Carga | S2-T13A | Filtrar información por cliente | Aplicar autorización del servidor a envíos, alertas y recursos y rechazar comandos de coordinación. | 6 | No registrada | Rodrigo | To Review | Aislamiento verificado en pruebas API; falta aceptación del equipo. |
+| US11 | Exportación de informes de trazabilidad | S2-T12D | Revisar archivo y fallos de exportación | Comprobar contenido, caracteres, falta de datos y errores antes de aceptar el archivo como resultado. | 4 | No registrada | Rodrigo — integración API | To Do | Aceptación funcional de archivos y errores no registrada. |
+| US36 | Consulta de envíos del Cliente de Carga | S2-T13A | Filtrar información por cliente | Aplicar autorización del servidor a envíos, alertas y recursos y rechazar comandos de coordinación. | 6 | No registrada | Rodrigo | To Review | Aislamiento verificado en pruebas API; aceptación del equipo no registrada. |
 | US36 | Consulta de envíos del Cliente de Carga | S2-T13B | Revisar consulta de ambos clientes | Ejecutar accesos cruzados y comandos no autorizados y vincular resultados a ambos escenarios. | 4 | No registrada | Rodrigo | To Review | Hay verificaciones de autorización; corresponde revisar su cobertura y aceptar el resultado. |
 | US14 | Registro de nueva unidad refrigerada | S2-T05A | Registrar unidad y unicidad | Validar capacidad positiva, placa y sensor únicos antes de guardar una unidad. | 6 | No registrada | Rodrigo — integración API | To Review | Implementado; revisión funcional del equipo abierta en registro original. |
 | US14 | Registro de nueva unidad refrigerada | S2-T05B | Revisar altas válidas y duplicadas | Comprobar alta correcta, placa duplicada y capacidad inválida con persistencia consistente. | 4 | No registrada | Rodrigo — integración API | To Do | No consta aceptación funcional completa de US14. |
 | US15 | Edición de datos de unidad | S2-T05C | Actualizar unidad protegida | Actualizar datos válidos y proteger los recursos que mantienen una asignación vigente. | 6 | No registrada | Rodrigo — integración API | To Review | Implementado; se mantiene la revisión funcional abierta. |
-| US15 | Edición de datos de unidad | S2-T05D | Revisar actualización y conflictos | Comprobar datos obligatorios, duplicados y edición de unidades asignadas sin alterar reservas. | 4 | No registrada | Rodrigo — integración API | To Do | Falta aceptación funcional integral de US15. |
+| US15 | Edición de datos de unidad | S2-T05D | Revisar actualización y conflictos | Comprobar datos obligatorios, duplicados y edición de unidades asignadas sin alterar reservas. | 4 | No registrada | Rodrigo — integración API | To Do | Aceptación funcional integral de US15 no registrada. |
 | US16 | Registro de conductores | S2-T06A | Registrar identidad del conductor | Registrar datos y licencia única y validar los campos disponibles antes de habilitar un conductor. | 6 | No registrada | Rodrigo — integración API | To Review | Registro implementado; vigencia de licencia no verificada. |
 | US16 | Registro de conductores | S2-T06B | Completar vigencia y validación | Aplicar la vigencia de la licencia y probar licencia vencida, inválida y duplicada. | 8 | No registrada | Rodrigo — integración API | To Do | Criterio de vigencia comprometido no verificado en el registro original. |
 | US17 | Asignación de conductor a vehículo | S2-T06C | Reservar conductor y unidad | Validar disponibilidad y solapamiento para la reserva conjunta durante el intervalo del envío. | 6 | No registrada | Rodrigo — integración API | To Review | Validación descrita en API; aceptación del equipo abierta. |
-| US17 | Asignación de conductor a vehículo | S2-T06D | Revisar reservas simultáneas | Comprobar solapamiento de conductor y vehículo y ausencia de reservas parciales ante rechazo. | 4 | No registrada | Rodrigo — integración API | To Do | Falta evidencia de aceptación integral de conflictos y simultaneidad. |
-| US31 | Planes y acceso desde la Landing | S2-T15A | Conectar entradas por segmento | Mantener enlaces de entrada al login con perfil e idioma sin asignar privilegios desde la URL. | 4 | No registrada | Rodrigo | To Review | Entrada por perfil e idioma documentada en octubre; repositorio landing actualizado en release 0.1.0 del 10/11. Aceptación del equipo pendiente. |
+| US17 | Asignación de conductor a vehículo | S2-T06D | Revisar reservas simultáneas | Comprobar solapamiento de conductor y vehículo y ausencia de reservas parciales ante rechazo. | 4 | No registrada | Rodrigo — integración API | To Do | Aceptación integral de conflictos y simultaneidad no registrada. |
+| US31 | Planes y acceso desde la Landing | S2-T15A | Conectar entradas por segmento | Mantener enlaces de entrada al login con perfil e idioma sin asignar privilegios desde la URL. | 4 | No registrada | Rodrigo | To Review | Entrada por perfil e idioma documentada en octubre; repositorio landing actualizado en release 0.1.0 del 10/11. Aceptación del equipo no registrada en este corte. |
 | US31 | Planes y acceso desde la Landing | S2-T15B | Revisar enlaces de entrada y fallo | Comprobar ambos segmentos e idiomas y documentar comportamiento cuando el acceso no responde. | 4 | No registrada | Rodrigo | To Do | No consta revisión integral del escenario de indisponibilidad. |
 | US25 | Formulario de contacto comercial | S2-T18A | Configurar receptor comercial | Definir destino autorizado y conectar el transporte de la solicitud con recepción confirmada. | 6 | No registrada | Sin asignación registrada | To Do | No hay receptor operativo acreditado ni asignación histórica registrada. |
 | US25 | Formulario de contacto comercial | S2-T18B | Verificar recepción y fallos | Ejecutar recepción válida, correo inválido y fallo de transporte y conservar evidencia del resultado real. | 4 | No registrada | Sin asignación registrada | To Do | Depende del receptor; no se acepta una confirmación solo local como recepción. |
 | US30 | Gestión de multi-idioma (i18n) | S2-T14A | Mantener traducciones y preferencia | Aplicar inglés por defecto y conservar el idioma explícito durante los flujos disponibles. | 6 | No registrada | Rodrigo — integración publicada | To Review | Recorridos registrados en ambos idiomas; revisar cobertura completa. |
 | US30 | Gestión de multi-idioma (i18n) | S2-T14B | Revisar equivalencia y respaldo | Comprobar textos y errores, cambios de idioma y ausencia de claves de traducción expuestas. | 4 | No registrada | Rodrigo — integración publicada | To Do | No consta aceptación completa de traducciones y fallback. |
-| US19 | Inicio de sesión en el sistema | S2-T01A | Autenticar y establecer sesión | Validar credenciales en servidor y utilizar únicamente los permisos devueltos por la API. | 6 | No registrada | Rodrigo | To Review | Verificado en pruebas API y recorridos; aceptación de producto pendiente. |
+| US19 | Inicio de sesión en el sistema | S2-T01A | Autenticar y establecer sesión | Validar credenciales en servidor y utilizar únicamente los permisos devueltos por la API. | 6 | No registrada | Rodrigo | To Review | Verificado en pruebas API y recorridos; aceptación de producto no registrada en este corte. |
 | US19 | Inicio de sesión en el sistema | S2-T01B | Revisar acceso válido e inválido | Comprobar credenciales correctas, incorrectas y restauración de sesión sin filtrar información de cuentas. | 4 | No registrada | Rodrigo | To Review | Existe evidencia técnica; revisar cobertura con criterios vigentes. |
-| US20 | Cierre de sesión seguro | S2-T02A | Revocar y limpiar sesión | Invalidar token en servidor y eliminar la referencia de sesión del cliente. | 4 | No registrada | Rodrigo | To Review | Revocación verificada según registro; falta aceptación del equipo. |
+| US20 | Cierre de sesión seguro | S2-T02A | Revocar y limpiar sesión | Invalidar token en servidor y eliminar la referencia de sesión del cliente. | 4 | No registrada | Rodrigo | To Review | Revocación verificada según registro; aceptación del equipo no registrada. |
 | US20 | Cierre de sesión seguro | S2-T02B | Revisar token después del cierre | Comprobar token revocado y sesión previamente expirada sin restaurar acceso. | 4 | No registrada | Rodrigo | To Review | Pruebas de sesión registradas; confirmar escenarios y aceptación. |
-| US32 | Registro de Cliente de Carga | S2-T03A | Crear cuenta Cliente de Carga | Validar datos, correo único y términos y asignar exclusivamente el rol público permitido. | 6 | No registrada | Rodrigo | To Review | Verificado por pruebas API; aceptación funcional del registro pendiente. |
+| US32 | Registro de Cliente de Carga | S2-T03A | Crear cuenta Cliente de Carga | Validar datos, correo único y términos y asignar exclusivamente el rol público permitido. | 6 | No registrada | Rodrigo | To Review | Verificado por pruebas API; aceptación funcional del registro no registrada en este corte. |
 | US32 | Registro de Cliente de Carga | S2-T03B | Revisar rol y datos inválidos | Comprobar intento de coordinador, duplicados y consentimiento ausente sin crear cuentas privilegiadas. | 4 | No registrada | Rodrigo | To Review | Hay comprobaciones API de seguridad; revisar cobertura funcional completa. |
 | Soporte | Despliegue y pruebas | S2-T16A | Preparar compilación y publicación | Generar build reproducible y paquetes separados de frontend y API con configuración documentada. | 6 | No registrada | Rodrigo | To Review | Build y publicación registrados en recibos técnicos; no implica release GitHub aceptada. |
 | Soporte | Despliegue y pruebas | S2-T16B | Verificar publicación y restricciones | Contrastar HTTPS, hashes de archivos, permisos y rutas inexistentes contra la versión entregada. | 4 | No registrada | Rodrigo | To Review | Recibos de verificación disponibles; confirmar artefactos del corte revisado. |
-| Soporte | Actualización del informe | S2-T17A | Integrar documentación trazable | Actualizar capítulos, enlaces, índice y anexos preservando atribuciones y los cortes de evidencia. | 6 | No registrada | Alexander / Joaquín / Nayely / Rodrigo | To Review | Contenido integrado en el informe; nueva revisión académica pendiente. |
-| Soporte | Actualización del informe | S2-T17B | Revisar consistencia y exportación | Comprobar tablas, referencias, diagramas y formato de los entregables antes de aceptar la documentación. | 4 | No registrada | Alexander / Joaquín / Nayely / Rodrigo | To Review | Revisión técnica del 11/11: 22 diagramas, referencias y exportación comprobados. Falta aceptación del equipo; no acredita ejecución conjunta por los asignados históricos. |
-| Soporte | Evidencias de equipo | S2-T19A | Revisar evidencias de exposición | Contrastar exposición y evaluación individual con integrantes y entrega y registrar documentos faltantes. | 4 | No registrada | Equipo / Team Leader | To Review | Exposición y performance adjuntos; revisión del contenido por equipo pendiente. |
+| Soporte | Actualización del informe | S2-T17A | Integrar documentación trazable | Actualizar capítulos, enlaces, índice y anexos preservando atribuciones y los cortes de evidencia. | 6 | No registrada | Alexander / Joaquín / Nayely / Rodrigo | To Review | Contenido integrado en el informe; revisión académica no registrada en este corte. |
+| Soporte | Actualización del informe | S2-T17B | Revisar consistencia y exportación | Comprobar tablas, referencias, diagramas y formato de los entregables antes de aceptar la documentación. | 4 | No registrada | Alexander / Joaquín / Nayely / Rodrigo | To Review | Revisión técnica del 11/11: 22 diagramas, referencias y exportación comprobados. Aceptación del equipo no registrada; el corte identifica una revisión técnica. |
+| Soporte | Evidencias de equipo | S2-T19A | Revisar evidencias de exposición | Contrastar exposición y evaluación individual con integrantes y entrega y registrar documentos faltantes. | 4 | No registrada | Equipo / Team Leader | To Review | Exposición y performance adjuntos; revisión del contenido por el equipo no registrada en este corte. |
 | Soporte | Evidencias de equipo | S2-T19B | Adjuntar actas auténticas del sprint | Incorporar registros reales de planning, review y retrospectiva y actualizar la captura del tablero. | 4 | No registrada | Equipo / Team Leader | To Do | Actas y captura actual de estados no adjuntas; no reconstruir reuniones inexistentes. |
 
 #### 5.2.2.4. Development Evidence for Sprint Review
@@ -3478,11 +3479,11 @@ Benjamin no participó en TB1 por su retiro; el Participant Performance Report r
 
 ### 5.2.3. Sprint 3 — Preparación AV2
 
-[PDF del corte técnico AV2](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/releases/download/v3.0.0-av2.2/upc-pre-202620-1asi0730-8088-blackstartup-report-av2.pdf). El corte conserva los pendientes de validación y publicación indicados en esta sección.
+[PDF del corte técnico AV2](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/releases/download/v3.0.0-av2.3/upc-pre-202620-1asi0730-8088-blackstartup-report-av2.pdf). El archivo corresponde al corte técnico identificado por su release.
 
-Material de preparación: [presentación editable](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-keynote-av2-base.pptx), [vista PDF de 14 diapositivas](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-keynote-av2-base.pdf), [plantilla editable de participación](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-performance-av2-template.md) y [formato PDF de participación](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-performance-av2-template.pdf). Son bases de trabajo; resultados de entrevistas, fotos autorizadas, grabaciones y evaluación del Team Leader deben completarse con información propia.
+Documentos complementarios: [presentación editable](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-keynote-av2-base.pptx), [vista PDF de 14 diapositivas](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-keynote-av2-base.pdf), [plantilla editable de participación](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-performance-av2-template.md) y [formato PDF de participación](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-performance-av2-template.pdf). Los archivos están identificados como formatos base de presentación y participación.
 
-Este corte registra el incremento técnico en preparación para AV2. Las celdas pendientes requieren información de la reunión, aceptación y despliegue reales. La presencia de código o de esta estructura no acredita que el sprint haya sido planificado, aceptado o publicado. Los [documentos de trabajo AV2](docs/av2/README.md) conservan los instrumentos editables y la propuesta de tareas.
+Este corte documenta el incremento técnico de AV2: arquitectura, integración, pruebas y publicación. Los [documentos AV2](docs/av2/README.md) reúnen el protocolo de validación, los formatos de registro y las especificaciones de entrega.
 
 #### 5.2.3.1. Sprint Planning 3
 
@@ -3491,36 +3492,39 @@ El incremento propuesto integra los recorridos operativos de FríoTrack con el b
 | Field | Detail |
 | --- | --- |
 | Sprint # | Sprint 3 — AV2 |
-| Date | Pendiente de registrar la reunión real, `YYYY-MM-DD`. |
-| Time | Pendiente de registrar, `HH:MM AM/PM`, America/Lima. |
-| Location | Pendiente: ubicación o plataforma de la reunión. |
-| Prepared By | Pendiente de confirmar el responsable del registro. |
-| Attendees | Pendiente de registrar asistentes reales. |
-| Sprint 2 Review Summary | Incorporar resultados aceptados, observaciones y pendientes reales de TB1. Los recibos locales de revisión no equivalen a aceptación del equipo. |
-| Sprint 2 Retrospective Summary | Registrar las conclusiones efectivas del equipo sobre su forma de trabajo; no reconstruir una reunión sin acta. |
-| Sprint 3 Goal — propuesta no aprobada | **Our focus is on** enabling logistics coordinators to manage refrigerated shipments and cargo clients to consult their assigned shipments through one persistent, integrated web experience.<br>**We believe it delivers** reliable operational traceability and controlled access **to** refrigerated transport companies and their cargo clients.<br>**This will be confirmed when** the review demonstrates one valid shipment booked without overlapping resources, its lifecycle and alert attention preserved after restarting the service, and a cargo client consulting only assigned shipments while unauthorized management requests are rejected. |
-| Sprint 3 Velocity | Pendiente de la capacidad acordada por el equipo en Story Points. |
-| Sum of Story Points | Pendiente de seleccionar historias y estimarlas. Las horas de tareas no se convierten automáticamente en SP. |
+| Date | — |
+| Time | — |
+| Location | — |
+| Prepared By | — |
+| Attendees | — |
+| Sprint 2 Review Summary | — |
+| Sprint 2 Retrospective Summary | — |
+| Sprint 3 Goal — propuesta | **Our focus is on** enabling logistics coordinators to manage refrigerated shipments and cargo clients to consult their assigned shipments through one persistent, integrated web experience.<br>**We believe it delivers** reliable operational traceability and controlled access **to** refrigerated transport companies and their cargo clients.<br>**This will be confirmed when** the review demonstrates one valid shipment booked without overlapping resources, its lifecycle and alert attention preserved after restarting the service, and a cargo client consulting only assigned shipments while unauthorized management requests are rejected. |
+| Sprint 3 Velocity | — |
+| Sum of Story Points | — |
 
-Las métricas son una propuesta de revisión y no resultados ya obtenidos. El equipo debe ajustar el goal y sus historias antes de considerarlo compromiso del Sprint 3.
+El objetivo se presenta como propuesta de alcance; la tabla diferencia ese objetivo de las métricas registradas.
 
 #### 5.2.3.2. Aspect Leaders and Collaborators
 
-Completar una matriz LACX con **L** para el líder y **C** para colaboradores de cada aspecto. La asignación debe corresponder a las tareas y aportes reales; no se traslada automáticamente la atribución histórica de otros sprints.
+La matriz LACX utiliza **L** para liderazgo y **C** para colaboración. El signo **—** representa una asignación no registrada.
 
 | Team Member | GitHub Username | Backend y persistencia | SPA e integración | Landing y UX | Validación y documentación |
 | --- | --- | :---: | :---: | :---: | :---: |
-| Pendiente de confirmar integrantes activos | Pendiente | — | — | — | — |
+| Atauje Barreto, Alexander Sebastián | Alexander1Alexander2 | — | — | — | — |
+| Daga Chávez, Joaquín Leonardo | Eshnikeee | — | — | — | — |
+| Saavedra Flores, Rodrigo Andree | rodrigoxd67 | — | — | — | — |
+| Vera Solsol, Nayely Macarena | Macaxprogram29 | — | — | — | — |
 
-**—** significa asignación no registrada, no ausencia acreditada de participación. El equipo debe confirmar sus miembros activos y responsables antes de completar esta matriz.
+
 
 #### 5.2.3.3. Sprint Backlog 3
 
 El [backlog propuesto](docs/av2/sprint3-backlog-proposal.csv) descompone trabajo técnico y preparación de validación en tareas de revisión/implementación de 4–8 horas. Las estimaciones son propuestas posteriores, no horas efectivamente trabajadas ni capacidad aceptada. Los responsables están sin asignar y los estados iniciales no sustituyen el tablero real.
 
-Antes de entregar: incorporar el URL público del tablero y una captura actual del Sprint 3, confirmar historias y SP, responsables, estimaciones y estados **To Do / In Process / To Review / Done**, y escribir la tabla completa de tareas en el reporte. No duplicar tareas existentes al sincronizar Trello.
+Los estados del flujo de tareas son **To Do / In Process / To Review / Done**. El CSV corresponde a una propuesta de estimación y no a un historial de ejecución del tablero.
 
-La primera planificación debe distinguir historias del catálogo, tareas técnicas y artefactos de investigación. La incorporación de EF Core u OpenAPI debe tener una comprobación verificable; no se suman SP adicionales por cada tarea de una misma historia.
+Las historias del catálogo, las tareas técnicas y los artefactos de investigación se distinguen por sus identificadores. Los Story Points corresponden a historias, mientras que las tareas se estiman en horas.
 
 #### 5.2.3.4. Development Evidence for Sprint Review
 
@@ -3538,7 +3542,7 @@ Las [verificaciones de GitHub de los productos](assets/evidence/av2/product-gith
 
 #### 5.2.3.5. Execution Evidence for Sprint Review
 
-El [registro técnico](assets/evidence/av2/technical-verification.json) identifica versiones, resultados y límites. La integración se ejecutó contra una base PostgreSQL 17 temporal real y una compilación de producción de la SPA. Se utilizaron perfiles de navegador aislados para que cada recorrido partiera de una sesión nueva. Los resultados son comprobaciones técnicas locales, con datos de demostración; la revisión y aceptación del equipo siguen pendientes.
+El [registro técnico](assets/evidence/av2/technical-verification.json) identifica versiones, resultados y límites. La integración se ejecutó contra una base PostgreSQL 17 temporal real y una compilación de producción de la SPA. Se utilizaron perfiles de navegador aislados para que cada recorrido partiera de una sesión nueva. Los resultados corresponden a comprobaciones técnicas locales con datos de demostración.
 
 | Comprobación ejecutada | Resultado | Registro |
 | --- | --- | --- |
@@ -3555,11 +3559,11 @@ El [registro técnico](assets/evidence/av2/technical-verification.json) identifi
 
 ![Figura 5.12. Landing AV2 en inglés por defecto; vista local móvil sin videos configurados](assets/images/chapter-05/av2/landing-default-en-390.png)
 
-Las teselas y fuentes externas se bloquearon en estas pruebas locales; no se certifica el proveedor de mapas. Docker Compose no se ejecutó porque Docker no está instalado, aunque el backend fue probado directamente contra PostgreSQL. El video de navegación Sprint 3 y la aceptación con participantes requieren una grabación real posterior.
+Las teselas y fuentes externas se bloquearon en estas pruebas locales; no se certifica el proveedor de mapas. Docker Compose no se ejecutó porque Docker no está instalado, aunque el backend fue probado directamente contra PostgreSQL. La evidencia de esta sección corresponde a pruebas técnicas automatizadas.
 
 #### 5.2.3.6. Services Documentation Evidence for Sprint Review
 
-Documentar los endpoints realmente implementados con OpenAPI y Swagger UI, incluyendo autenticación, parámetros, payloads, respuestas de éxito y error y ejemplos. Incorporar el URL desplegado y capturas de interacción.
+OpenAPI y Swagger UI documentan los endpoints implementados: autenticación, parámetros, payloads y respuestas de éxito y error.
 
 | Action | HTTP method and path | Parameters / body | Success / error responses | OpenAPI / evidence |
 | --- | --- | --- | --- | --- |
@@ -3576,7 +3580,7 @@ Documentar los endpoints realmente implementados con OpenAPI y Swagger UI, inclu
 | Registrar incidencia y leer avisos | `POST /api/shipments/{id}/incidents`, `POST /api/notifications/read` | Nota para incidencia; destinatario de sesión para avisos | `200`; errores de permisos/reglas | Lectura explícita del destinatario, no lectura automática. |
 | Generar y consultar reporte | `POST /api/shipments/{id}/reports`, `GET /api/reports/{id}` | Envío entregado; reporte autorizado | `200`; `400`, `401`, `403`, `404` según operación | Copia JSON persistida; no se presenta como PDF. |
 
-La especificación publicada se sirve en [/swagger/v1/swagger.json](https://friotrack-api-bce6db1b.azurewebsites.net/swagger/v1/swagger.json) y la interfaz en [/swagger/index.html](https://friotrack-api-bce6db1b.azurewebsites.net/swagger/index.html); ambos devolvieron HTTP 200 en la [comprobación pública](assets/evidence/av2/public-swagger-verification.json). Estos paths pertenecen al host de la API, sin prefijo `/api`. Las mutaciones devuelven la proyección actualizada junto con el resultado; los errores incluyen código y mensaje. La tabla manual de TB1 no sustituye la especificación desplegada de AV2. El repositorio canónico es [friotrack-api](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-api); incorporar sus commits de documentación del sprint. Las operaciones ejecutadas desde Swagger deben respetar los mismos permisos que la SPA.
+La especificación publicada se sirve en [/swagger/v1/swagger.json](https://friotrack-api-bce6db1b.azurewebsites.net/swagger/v1/swagger.json) y la interfaz en [/swagger/index.html](https://friotrack-api-bce6db1b.azurewebsites.net/swagger/index.html); ambos devolvieron HTTP 200 en la [comprobación pública](assets/evidence/av2/public-swagger-verification.json). Estos paths pertenecen al host de la API, sin prefijo `/api`. Las mutaciones devuelven la proyección actualizada junto con el resultado; los errores incluyen código y mensaje. La tabla manual de TB1 no sustituye la especificación desplegada de AV2. El repositorio canónico es [friotrack-api](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-api). Las operaciones ejecutadas desde Swagger deben respetar los mismos permisos que la SPA.
 
 #### 5.2.3.7. Software Deployment Evidence for Sprint Review
 
@@ -3591,7 +3595,7 @@ El 14/11/2026 se publicó el incremento AV2 en los recursos existentes de Azure,
 
 El [recibo de GitHub Pages](assets/evidence/av2/github-pages-verification.json) conserva la evidencia de la landing. La actualización de Azure se acredita mediante los recibos de [API](assets/evidence/av2/redeployment-api.json), [SPA](assets/evidence/av2/redeployment-frontend.json) y [landing](assets/evidence/av2/redeployment-landing.json). Se verificaron 15 archivos de la landing en Azure. La [verificación de PostgreSQL](assets/evidence/av2/cloud-database-verification.json) registra integridad y conservación sin publicar información privada. Las fechas y coordenadas históricas que necesitaron adaptación quedan identificadas como derivaciones de migración; no se inventan eventos de entrega.
 
-Las [14 comprobaciones del entorno público](assets/evidence/av2/public-interview-verification.json) incluyen navegación desde la landing, inicio y cierre de sesión por perfil, programación completa de un envío, rechazo de reserva solapada, condiciones e historial, notificaciones y descarga del reporte JSON persistido. El envío de comprobación se canceló y liberó sus recursos. Son pruebas técnicas con información ficticia; las entrevistas y la aceptación del equipo siguen pendientes.
+Las [14 comprobaciones del entorno público](assets/evidence/av2/public-interview-verification.json) incluyen navegación desde la landing, inicio y cierre de sesión por perfil, programación completa de un envío, rechazo de reserva solapada, condiciones e historial, notificaciones y descarga del reporte JSON persistido. El envío de comprobación se canceló y liberó sus recursos. Son pruebas técnicas con información ficticia. Las entrevistas se registran por separado en 5.3.2.
 
 ![Figura 5.13. Coordinador en el entorno publicado, con datos de demostración](assets/images/chapter-05/av2/public-coordinator.png)
 
@@ -3601,13 +3605,13 @@ La configuración utiliza `FRIOTRACK_DB`, `FRIOTRACK_PERSISTENCE`, `FRIOTRACK_OR
 
 #### 5.2.3.8. Team Collaboration Insights during Sprint
 
-El siguiente gráfico documenta el corte técnico de seis commits de fuentes del 13/11/2026: API 2, frontend 2, landing 1 y reporte 1, todos con autor registrado Alexander1Alexander2. El [registro de contribuciones](assets/evidence/av2/contributions-technical-cut.json) conserva los SHA de inicio/fin y cada commit. Los commits posteriores de archivos de apoyo quedan fuera de este corte. El gráfico permite comprobar la integración entre productos; los aportes finales de los demás miembros y la aceptación del sprint se incorporarán desde su actividad real.
+El siguiente gráfico documenta el corte técnico de seis commits de fuentes del 13/11/2026: API 2, frontend 2, landing 1 y reporte 1, todos con autor registrado Alexander1Alexander2. El [registro de contribuciones](assets/evidence/av2/contributions-technical-cut.json) conserva los SHA de inicio/fin y cada commit. Los commits posteriores de archivos de apoyo quedan fuera de este corte. El gráfico documenta la integración entre productos en la fecha indicada.
 
 ![Figura 5.13. Commits del corte técnico AV2 por producto; registro parcial del 13/11/2026](assets/images/chapter-05/av2/contributions-technical-cut.png)
 
-Incluir gráficos y capturas del corte AV2 por repositorio, enlaces a commits y revisiones reales, y explicación de colaboración entre landing, SPA y API. Todos los integrantes deben aportar a los productos según corresponda al sprint.
+El registro enlaza los commits de landing, SPA, API e informe para identificar el aporte por producto.
 
-Conservar el tablero actualizado, actas auténticas de planning/review/retrospectiva y aceptación individual de tareas. Equilibrar el número de commits no sustituye integración, revisión y comprensión de los cambios. Los datos de corte TB1 permanecen como antecedentes históricos y no se renombrarán AV2.
+Los datos del corte TB1 se conservan como antecedentes históricos, separados del corte AV2.
 
 ## 5.3. Validation Interviews
 
@@ -3626,7 +3630,7 @@ El guion conserva las preguntas completas, criterios de observación y ficha de 
 
 ### 5.3.2. Registro de entrevistas
 
-El [registro editable de sesiones](docs/av2/validation-records.csv) incorpora la entrevista AV2-C01 de Farit Alejandro Santoyo Espejo. La ficha distingue las respuestas de comprensión del producto de las tareas operativas que no se ejecutaron durante la grabación. Las siguientes entrevistas se incorporarán con sus evidencias y resultados propios.
+El [registro editable de sesiones](docs/av2/validation-records.csv) incorpora la entrevista AV2-C01 de Farit Alejandro Santoyo Espejo. La ficha presenta el perfil del participante, el entorno observado y sus apreciaciones sobre el producto.
 
 #### Entrevista AV2-C01: Farit Alejandro Santoyo Espejo
 
@@ -3645,7 +3649,7 @@ El [registro editable de sesiones](docs/av2/validation-records.csv) incorpora la
 | Cuenta mostrada | Cliente de Carga, perfil de demostración Andrea Salas. |
 | Modalidad y alcance | Demostración guiada y preguntas de comprensión. Validación parcial para el segmento de coordinadores; no acredita ejecución de programación, reserva ni atención de alertas con permisos de coordinador. |
 | Autorización | Consentimiento para participar y grabar con fines de evaluación académica, expresado entre **00:00:10 y 00:00:15**. |
-| Acceso del docente | Enlace institucional de Microsoft Stream; la consulta sin autenticar solicita inicio de sesión. Comprobar el permiso de acceso del docente antes de entregar. |
+| Acceso | Microsoft Stream institucional; requiere autenticación. |
 
 ![Entrevista de validación de Farit Santoyo durante la consulta guiada de alertas, con la cuenta cliente visible](assets/images/chapter-05/av2/validation-farit-santoyo.png)
 
@@ -3666,21 +3670,31 @@ La [plantilla de evaluación](docs/av2/heuristics-template.md) corresponde al **
 | 3 | Mayor: obstáculo frecuente o difícil de superar; prioridad alta. |
 | 4 | Muy grave: impide continuar y requiere corrección antes del lanzamiento. |
 
-Los hallazgos se completan tras observar la versión real. Una inspección técnica puede complementarlos si se identifica como tal; las pruebas automáticas no sustituyen participantes ni permiten atribuirles opiniones. Cada mejora debe relacionarse con su tarjeta, cambio concreto y nueva comprobación.
+El formato relaciona cada hallazgo con la tarea evaluada, la evidencia, el principio afectado, la severidad y su recomendación. Las inspecciones técnicas y las entrevistas se identifican como fuentes distintas.
 
 ## 5.4. Video About-the-Product
 
 La [pauta de About-the-Product](docs/av2/video-scripts.md#about-the-product--1-a-3-minutos) prepara un video de **1–3 minutos** con problema, propuesta, demostración de la versión, opiniones auténticas de ambos segmentos y CTA. El material debe incluir al menos un testimonio positivo real obtenido de la validación.
 
-El equipo debe proporcionar grabaciones y enlaces finales en Stream y YouTube. En este corte están pendientes el video AV2, su duración, captura, introducción y resumen sustentados en el material final. La landing admite un reproductor opcional con URL YouTube configurada; lo mantiene oculto si no existe un enlace válido. La preparación del componente no acredita una publicación de video.
+El formato de publicación contempla Microsoft Stream y YouTube. La landing utiliza un reproductor opcional que se muestra únicamente con una URL de YouTube válida.
+
+| Recurso AV2 | Registro |
+| --- | --- |
+| Video About-the-Product | — |
+| Duración | — |
 
 ## 5.5. Video About-the-Team
 
 La [pauta de About-the-Team](docs/av2/video-scripts.md#about-the-team--retrospectiva-y-testimonios) prepara **5 minutos de retrospectiva grupal y 1 minuto por integrante**, con escenas reales de planificación, diseño, desarrollo, ejecución y revisión. Los testimonios explican contribución propia, colaboración, aprendizaje y relación con Student Outcome 5.
 
-El video, la pauta con timestamps `hh:mm:ss`, la captura y los enlaces Stream/YouTube deben proceder de sesiones reales y de todos los integrantes activos. La landing dispone de un espacio opcional configurable para el video final. No se presenta el material histórico de TB1 como retrospectiva de Sprint 3.
+El formato comprende retrospectiva grupal, testimonios individuales, timestamps y publicación en Stream y YouTube. La landing dispone de un espacio configurable para el video.
 
-La [lista de entradas y entrega](docs/av2/inputs-and-delivery.md) reúne dependencias y nombres de reporte, presentación, performance y videos. El [esquema de presentación](docs/av2/keynote-outline.md) prepara la exposición AV2 de hasta 30 minutos; el equipo debe añadir fotos, testimonios, resultados y datos reales de responsabilidades.
+| Recurso AV2 | Registro |
+| --- | --- |
+| Video About-the-Team | — |
+| Duración | — |
+
+Las [especificaciones de entrega](docs/av2/inputs-and-delivery.md) identifican los formatos y nombres de archivos. El [esquema de presentación](docs/av2/keynote-outline.md) organiza los contenidos de la exposición AV2.
 
 # Conclusiones y Recomendaciones
 
@@ -3692,13 +3706,13 @@ La entrega incorpora la primera aplicación Vue/PrimeVue publicada en Azure y un
 
 La revisión de fuentes del 10/11 registra 18 pruebas frontend y 26 comprobaciones locales de la API. Los recibos de octubre conservan sus 15 pruebas frontend, build de 222 módulos y 12 comprobaciones HTTPS, además de la comparación de archivos mediante SHA-256. Las capturas muestran el acceso y las vistas autenticadas de aquella publicación; no certifican el despliegue de las correcciones de noviembre. Estas comprobaciones permiten reproducir la revisión técnica; no miden adopción comercial, satisfacción ni reducción real de pérdidas.
 
-La arquitectura conserva los contenedores y evidencia del servicio JSON TB1 y documenta la evolución AV2 hacia EF Core/PostgreSQL, recursos REST, sesiones persistentes y Swagger. Las fuentes y migraciones se distinguen de su publicación cloud aún pendiente. Las lecturas y coordenadas iniciales son datos de demostración; sensores físicos, recuperación por correo y procesamiento temporal automático continúan fuera del incremento acreditado.
+La arquitectura conserva los contenedores y evidencia del servicio JSON TB1 y documenta la evolución AV2 hacia EF Core/PostgreSQL, recursos REST, sesiones persistentes y Swagger. La API y la SPA están publicadas en Azure y utilizan PostgreSQL 17 en Neon; los recibos del 14/11/2026 documentan la publicación y la conservación de los datos anteriores. Las lecturas y coordenadas iniciales son datos de demostración; sensores físicos, recuperación por correo y procesamiento temporal automático continúan fuera del incremento acreditado.
 
 El nuevo repositorio consolida el trabajo por capítulo y registra los commits de las cuentas participantes. Los anexos reúnen los enlaces del producto, evidencias técnicas y materiales de apoyo, y especifican los documentos académicos que todavía requieren adjuntarse por el equipo.
 
 ## Recomendaciones
 
-Completar la validación con usuarios de transporte refrigerado y clientes de carga, distinguiendo sus necesidades de las entrevistas orientadas a almacenes y bodegas. Actualizar las personas, mapas e instrumentos según esos hallazgos y conservar los registros originales de las entrevistas.
+La validación distingue las necesidades de transporte refrigerado y consulta de carga de los antecedentes de investigación sobre almacenes y bodegas.
 
 Para cerrar AV2, verificar y publicar el incremento relacional con su base configurada, migraciones y recibos de fuente/artefacto; repetir recorridos autorizados, conflictos de reserva y persistencia sobre la URL pública. Integrar dispositivos solo después de validar su identidad, marcas de tiempo y recepción de lecturas. Mantener visible la procedencia de datos de demostración mientras no exista telemetría real.
 
@@ -3860,7 +3874,7 @@ La entrega se organiza según el enunciado de TB1, páginas 31–32. Los archivo
 | Record | Purpose |
 | --- | --- |
 | [Revisión de diagramas y reporte](assets/evidence/report-review-2026-11-11.json) | Integración de 22 diagramas, fuentes, comprobaciones y límites de la revisión del 11/11. |
-| [Observaciones del docente](assets/annexes/correcciones-docente-2026-11-11.md) | Trazabilidad de correcciones documentales y pendientes del equipo. |
+| [Observaciones del docente](assets/annexes/correcciones-docente-2026-11-11.md) | Trazabilidad de correcciones documentales y alcance de la revisión. |
 | [Colaboración al corte del 11/11](assets/evidence/report-collaboration-2026-11-11.json) | Historial real previo a esta revisión, por autor y fecha. |
 | [Revisión de fuentes del 10/11](assets/evidence/review-corrections-2026-11-10.json) | Comprobaciones locales y límites de la revisión anterior. |
 | [Current commits](assets/evidence/current-commits.json) | Metadatos del nuevo informe y del frontend integrado. |

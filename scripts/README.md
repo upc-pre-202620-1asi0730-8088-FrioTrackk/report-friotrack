@@ -32,7 +32,7 @@ node scripts/render-report.cjs
 python scripts/assemble-report.py
 ```
 
-Para el corte de preparación AV2, utilizar el mismo proceso y ejecutar `python scripts/assemble-report.py --stage av2`. El resultado usa el sufijo `report-av2.pdf` y conserva el PDF histórico TB1. La carátula procede del Markdown original; las entrevistas, grabaciones, planificación y nueva publicación de SPA/API conservan su estado real pendiente.
+Para el corte de preparación AV2, utilizar el mismo proceso y ejecutar `python scripts/assemble-report.py --stage av2`. El resultado usa el sufijo `report-av2.pdf` y conserva el PDF histórico TB1. La carátula procede del Markdown original; los recibos de publicación y los registros de validación conservan sus fechas y alcance.
 
 El renderizador verifica que todas las imágenes carguen. Para las vistas de arquitectura utiliza sus originales SVG y hojas horizontales. Los enlaces a archivos locales se convierten en enlaces públicos al repositorio para que funcionen al descargar el PDF. La composición conserva la carátula Markdown y añade numeración desde la segunda página. El resultado se guarda en `deliverables/upc-pre-202620-1asi0730-8088-blackstartup-report-tb1.pdf`.
 
