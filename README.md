@@ -3920,14 +3920,18 @@ El formato relaciona cada hallazgo con la tarea evaluada, la evidencia, el princ
 
 ## 5.4. Video About-the-Product
 
-El video About-the-Product de FríoTrack para AV2 se encuentra disponible en YouTube y Microsoft Stream.
+El video About-the-Product es el recurso de presentación de FríoTrack para AV2. Complementa la propuesta de valor y ofrece un punto de acceso audiovisual al producto. Nayely Vera Solsol realizó el video y publicó su configuración en la landing.
 
-| Recurso AV2 | Enlace |
+| Recurso | Detalle |
 | --- | --- |
+| Producto | FríoTrack — seguimiento del transporte refrigerado. |
+| Entrega | AV2 · Sprint 3. |
 | YouTube | [Ver About-the-Product — FríoTrack](https://youtu.be/t8ZrSPgQvr0) |
-| Microsoft Stream | [Ver About-the-Product — FríoTrack](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231h171_upc_edu_pe/IQARw8S5KAaMT4ehigZYnNDSAcF3Q_VvbYp2J2RhKlbvCBk?e=pMcJko&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D) |
+| Microsoft Stream | [Ver About-the-Product — FríoTrack](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231h171_upc_edu_pe/IQARw8S5KAaMT4ehigZYnNDSAcF3Q_VvbYp2J2RhKlbvCBk?e=pMcJko) |
+| Integración | Reproductor de YouTube en la landing. |
+| Duración de referencia | 1–3 minutos según el formato de entrega; el reproductor indica la duración del archivo publicado. |
 
-La landing utiliza el enlace de YouTube para mostrar el reproductor de producto. La [pauta de About-the-Product](docs/av2/video-scripts.md#about-the-product--1-a-3-minutos) conserva los criterios de la entrega.
+Los enlaces identifican el mismo material de presentación en las plataformas compartidas por el equipo. La navegación detallada del incremento se consulta en [5.2.3.5](#5235-execution-evidence-for-sprint-review).
 
 ## 5.5. Video About-the-Team
 
