@@ -3567,6 +3567,10 @@ La matriz LACX registra los aportes documentados del Sprint 3. **L** indica lide
 | Saavedra Flores, Rodrigo Andree | rodrigoxd67 | — | — | — | C | C |
 | Vera Solsol, Nayely Macarena | Macaxprogram29 | — | — | L | C | C |
 
+La [evidencia de desarrollo](#5234-development-evidence-for-sprint-review) y la [verificación del despliegue](#5237-software-deployment-evidence-for-sprint-review) respaldan la integración técnica liderada por Alexander. Nayely realizó [About-the-Product](#54-video-about-the-product) y publicó sus enlaces en el informe y la landing. La [sección de entrevistas](#532-registro-de-entrevistas) y el [registro de colaboración AV2](#liderazgo-compartido-en-av2) documentan las entrevistas de Alexander, el registro AV2-L02 de Joaquín, la estandarización de fichas y la entrevista AV2-L03 de Rodrigo, y la entrevista a Carol registrada por Nayely.
+
+La lámina 13 de la presentación AV2 atribuye a Rodrigo un aporte al tablero de Sprint 3. La [actualización documentada del backlog](#5233-sprint-backlog-3), con la captura y los estados de Trello, corresponde a Nayely. La matriz reconoce ambas contribuciones. Los materiales de las lecciones 7 y 8 preparados por Joaquín se registran en la sección de colaboración AV2 como aporte complementario.
+
 #### 5.2.3.3. Sprint Backlog 3
 
 El objetivo del Sprint 3 fue permitir que el Coordinador Logístico programe y supervise envíos refrigerados y que el Cliente de Carga consulte los envíos que tiene asignados. El backlog reúne las tareas de integración entre la aplicación web, la API REST y PostgreSQL, así como las de despliegue, validación con usuarios y preparación de la entrega AV2.
