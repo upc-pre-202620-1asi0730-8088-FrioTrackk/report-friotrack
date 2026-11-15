@@ -3700,7 +3700,7 @@ Considera que el reporte JSON es técnico y prefiere un resumen fácil de leer y
 | Estado | Registro de una reacción inicial a la propuesta. |
 | Modalidad y alcance | Entrevista remota en dos partes sobre el trabajo en la bodega y la reacción verbal tras ver la landing. Sin tareas autónomas, sesión autenticada ni demostración navegada. |
 | Duración del montaje | **00:08:12**. |
-| Video en Microsoft Stream | [Entrevista de validación AV2-L02](<https://upcedupe-my.sharepoint.com/:v:/g/personal/u202219829_upc_edu_pe/IQBdT5NO3as3Roz6-6ye7p1PAQ23iTPmPhDRtE4fXgXn6nU?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Bs0cvt>). |
+| Video en Microsoft Stream | [Entrevista de validación — Gustavo Honorio](<https://upcedupe-my.sharepoint.com/:v:/g/personal/u202219829_upc_edu_pe/IQBdT5NO3as3Roz6-6ye7p1PAQ23iTPmPhDRtE4fXgXn6nU?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Bs0cvt>). |
 | Autorización | Autorización para publicar el nombre, la captura y el enlace al video en el informe público, confirmada por quien realizó la entrevista. |
 
 ![Captura de la sesión remota de la entrevista AV2-L02](assets/images/chapter-05/av2/validation-av2-l02.png)
