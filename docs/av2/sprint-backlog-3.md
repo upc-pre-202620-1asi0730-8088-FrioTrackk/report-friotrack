@@ -41,4 +41,4 @@ La tabla vincula las historias con sus tareas y mantiene las estimaciones del [b
 | — | — | S3-T27 | Grabar navegación del incremento | Grabar un recorrido del Sprint 3 desde la landing hasta las funciones centrales de ambos perfiles; enlazarlo en el informe. | 4 | Rodrigo Andree Saavedra Flores (propuesto) | To-do |
 | — | — | S3-T28 | Consolidar exposición AV2 | Preparar la exposición AV2 con todos los integrantes ante cámara, en un MP4 de máximo 30 minutos. | 8 | Rodrigo Andree Saavedra Flores (propuesto) | To-do |
 | — | — | S3-T29 | Integrar reporte y presentación AV2 | Actualizar el informe acumulativo y consolidar el Keynote con las evidencias del Sprint 3. Existe una versión base. | 8 | Alexander Sebastián Atauje Barreto (propuesto) | In-Process |
-| — | — | S3-T30 | Revisar y empaquetar la entrega | Comprobar accesos enlaces nombres formatos y versiones y registrar aceptación. | 6 | — | To Do |
+| — | — | S3-T30 | Revisar y empaquetar la entrega | Verificar formatos, nombres y permisos de acceso; preparar el ZIP complementario una vez reunidos los entregables. | 6 | Rodrigo Andree Saavedra Flores (propuesto) | To-do |
