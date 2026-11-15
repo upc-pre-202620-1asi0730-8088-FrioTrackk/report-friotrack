@@ -3633,58 +3633,77 @@ El guion conserva las preguntas completas, criterios de observación y ficha de 
 
 El [registro editable de sesiones](docs/av2/validation-records.csv) incluye AV2-C01 de Farit Alejandro Santoyo Espejo y AV2-L01 de Irma Barreto. Las fichas presentan los perfiles de los participantes, el entorno observado y sus apreciaciones sobre el producto.
 
-El registro también incluye la ficha AV2-L02, correspondiente a una bodega receptora de perecibles.
+Esta sección también presenta las fichas AV2-L02 y AV2-L03, correspondientes a negocios receptores de productos perecibles.
 
 #### Entrevista AV2-C01: Farit Alejandro Santoyo Espejo
 
 | Campo | Detalle |
-| --- | --- |
-| Segmento | Empresas distribuidoras de productos perecibles / Coordinador Logístico. |
-| Nombres y apellidos | Farit Alejandro Santoyo Espejo, según su presentación en el video. |
-| Edad | 28 años. |
-| Distrito | San Luis. |
-| Actividad | Operaciones y logística de una empresa alimenticia; utiliza ERP y Excel. |
-| Entrevistador | Alexander Sebastián Atauje Barreto. |
-| Fecha de la grabación | 14/11/2026, según los metadatos del archivo, en America/Lima. |
-| Video en Microsoft Stream | [Entrevista de validación — Farit Santoyo](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241f246_upc_edu_pe/IQArjur2ZtRBSqwIc2ym8oKWAQTSrafIeKnth4eaBjo1C54?e=JRcADt). |
-| Inicio y duración | Inicio: **00:00:00**. Duración: **00:03:40**. |
-| Entorno observado | Landing en GitHub Pages y aplicación pública en Azure. La versión no se identifica dentro de la grabación. |
-| Cuenta mostrada | Cliente de Carga, perfil de demostración Andrea Salas. |
-| Modalidad y alcance | Demostración guiada y preguntas de comprensión. Validación parcial para el segmento de coordinadores; no acredita ejecución de programación, reserva ni atención de alertas con permisos de coordinador. |
-| Autorización | Consentimiento para participar y grabar con fines de evaluación académica, expresado entre **00:00:10 y 00:00:15**. |
-| Acceso | Microsoft Stream institucional; requiere autenticación. |
+| :--- | :--- |
+| **Nombres y Apellidos** | Farit Alejandro Santoyo Espejo |
+| **Edad** | 28 años. |
+| **Distrito** | San Luis. |
+| **Fecha de entrevista** | 14/11/2026 |
+| **Enlace al video (Microsoft Stream)** | [Entrevista de validación — Farit Santoyo](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241f246_upc_edu_pe/IQArjur2ZtRBSqwIc2ym8oKWAQTSrafIeKnth4eaBjo1C54?e=JRcADt). |
+| **Timing de inicio a fin** | 00:00–03:40 |
+| **User flows evaluados** | • Comprensión de la Landing Page<br>• Identificación y consulta de envíos<br>• Interpretación de temperatura, rango y actualización<br>• Revisión guiada de alertas e historial con perfil Cliente de Carga. |
+| **Evidencia fotográfica** | <img src="assets/images/chapter-05/av2/validation-farit-santoyo.png" width="600" alt="Entrevista de validación de Farit Santoyo durante la consulta guiada de alertas, con la cuenta cliente visible"> |
 
-![Entrevista de validación de Farit Santoyo durante la consulta guiada de alertas, con la cuenta cliente visible](assets/images/chapter-05/av2/validation-farit-santoyo.png)
+**Segmento:** Empresas distribuidoras de productos perecibles / Coordinador Logístico.
+
+**Actividad:** Operaciones y logística de una empresa alimenticia; utiliza ERP y Excel.
+
+**Entrevistador:** Alexander Sebastián Atauje Barreto.
+
+**Entorno observado:** Landing en GitHub Pages y aplicación pública en Azure. La versión no se identifica dentro de la grabación.
+
+**Cuenta mostrada:** Cliente de Carga, perfil de demostración Andrea Salas.
+
+**Modalidad y alcance:** Demostración guiada y preguntas de comprensión. Validación parcial para el segmento de coordinadores; no acredita ejecución de programación, reserva ni atención de alertas con permisos de coordinador.
+
+**Autorización:** Consentimiento para participar y grabar con fines de evaluación académica, expresado entre **00:00:10 y 00:00:15**.
+
+**Acceso:** Microsoft Stream institucional; requiere autenticación.
 
 *Captura del archivo original en 00:02:20. La actividad profesional del participante corresponde al segmento de coordinadores; la cuenta utilizada en la demostración corresponde a Cliente de Carga.*
 
-**Resumen de la entrevista.** Farit distingue el propósito de seguimiento térmico de FríoTrack y diferencia la organización y supervisión de despachos de la consulta de entregas del cliente. Explica que identificaría un envío mediante código, carga, origen, destino y estado. Al comentar una programación, señala que comprobaría las unidades, el rango térmico y la disponibilidad del vehículo y del conductor; estas respuestas describen lo que haría y no una programación ejecutada.
+**Resumen de la entrevista:**
+
+Farit distingue el propósito de seguimiento térmico de FríoTrack y diferencia la organización y supervisión de despachos de la consulta de entregas del cliente. Explica que identificaría un envío mediante código, carga, origen, destino y estado. Al comentar una programación, señala que comprobaría las unidades, el rango térmico y la disponibilidad del vehículo y del conductor; estas respuestas describen lo que haría y no una programación ejecutada.
 
 En la interpretación de las lecturas, considera necesario comparar temperatura, rango y fecha de actualización; reconoce que una lectura antigua no confirma la condición actual de una carga. También diferencia el registro de atención de una alerta de la recuperación térmica, que comprobaría mediante lecturas posteriores. Valora el historial como antecedente para revisar incidencias y solicita un resumen fácil de compartir. Para una operación real comprobaría el origen y la actualización de las mediciones y la relación con el ERP. Como mejoras propone explicaciones breves en la programación y mensajes claros de estados y alertas.
 
 #### Entrevista AV2-L01: Irma Barreto
 
 | Campo | Detalle |
-| --- | --- |
-| Segmento | Cliente de Carga / negocio receptor de productos perecibles. |
-| Nombres y apellidos | Irma Barreto. |
-| Edad | 40 años. |
-| Distrito | San Juan de Lurigancho. |
-| Actividad | Administración de un restaurante familiar; compra frutas, verduras y carnes, revisa los productos recibidos y registra algunas compras en un cuaderno. |
-| Entrevistador | Alexander Sebastián Atauje Barreto. |
-| Fecha de la grabación | 14/11/2026. |
-| Video en Microsoft Stream | [Entrevista de validación — Irma Barreto](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241f246_upc_edu_pe/IQA73WP5IEN6QqfScDCafccJAbpmZV_QahXVmB4AaHYA7vQ?e=1eaXmu). |
-| Inicio y duración | Inicio: **00:00:00**. Duración: **00:05:05**. |
-| Entorno observado | Landing en GitHub Pages y aplicación pública en Azure, con el perfil Cliente de Carga. |
-| Modalidad | Demostración guiada y preguntas sobre propuesta de valor, envíos, estados, lecturas, alertas, notificaciones e historial. |
-| Autorización | Consentimiento verbal para participar y grabar con fines de evaluación académica, expresado al inicio de la entrevista. |
-| Acceso | Microsoft Stream institucional; requiere autenticación. |
+| :--- | :--- |
+| **Nombres y Apellidos** | Irma Barreto |
+| **Edad** | 40 años. |
+| **Distrito** | San Juan de Lurigancho. |
+| **Fecha de entrevista** | 14/11/2026 |
+| **Enlace al video (Microsoft Stream)** | [Entrevista de validación — Irma Barreto](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241f246_upc_edu_pe/IQA73WP5IEN6QqfScDCafccJAbpmZV_QahXVmB4AaHYA7vQ?e=1eaXmu). |
+| **Timing de inicio a fin** | 00:00–05:05 |
+| **User flows evaluados** | • Comprensión de la Landing Page<br>• Consulta de pedidos y estados<br>• Interpretación de lecturas, alertas y notificaciones<br>• Revisión guiada del historial y reportes con perfil Cliente de Carga. |
+| **Evidencia fotográfica** | <img src="assets/images/chapter-05/av2/validation-irma-barreto.png" width="600" alt="Entrevista de validación de Irma Barreto durante la revisión de alertas con el perfil Cliente de Carga"> |
 
-![Entrevista de validación de Irma Barreto durante la revisión de alertas con el perfil Cliente de Carga](assets/images/chapter-05/av2/validation-irma-barreto.png)
+**Segmento:** Cliente de Carga / negocio receptor de productos perecibles.
+
+**Actividad:** Administración de un restaurante familiar; compra frutas, verduras y carnes, revisa los productos recibidos y registra algunas compras en un cuaderno.
+
+**Entrevistador:** Alexander Sebastián Atauje Barreto.
+
+**Entorno observado:** Landing en GitHub Pages y aplicación pública en Azure, con el perfil Cliente de Carga.
+
+**Modalidad:** Demostración guiada y preguntas sobre propuesta de valor, envíos, estados, lecturas, alertas, notificaciones e historial.
+
+**Autorización:** Consentimiento verbal para participar y grabar con fines de evaluación académica, expresado al inicio de la entrevista.
+
+**Acceso:** Microsoft Stream institucional; requiere autenticación.
 
 *Captura de la entrevista durante la revisión de una alerta del envío.*
 
-**Resumen de la entrevista.** Irma comprende FríoTrack como una herramienta para seguir envíos y consultar información térmica que aporte antecedentes al comunicarse con sus proveedores. Explica que identificaría sus pedidos mediante código, destino, descripción de la carga y fecha. Distingue los estados En tránsito y Entregado y los relaciona con los pedidos que espera y los productos que ya recibió en su restaurante.
+**Resumen de la entrevista:**
+
+Irma comprende FríoTrack como una herramienta para seguir envíos y consultar información térmica que aporte antecedentes al comunicarse con sus proveedores. Explica que identificaría sus pedidos mediante código, destino, descripción de la carga y fecha. Distingue los estados En tránsito y Entregado y los relaciona con los pedidos que espera y los productos que ya recibió en su restaurante.
 
 Al interpretar las lecturas, revisaría su fecha de actualización y complementaría la información de la aplicación con la comprobación física de las cantidades y la condición de los productos. Ante una alerta consultaría con el responsable lo ocurrido y las medidas tomadas. También diferencia marcar una notificación como leída de la resolución de la incidencia.
 
@@ -3693,23 +3712,60 @@ Considera que el reporte JSON es técnico y prefiere un resumen fácil de leer y
 #### Entrevista AV2-L02 — Bodega receptora de perecibles
 
 | Campo | Detalle |
-| --- | --- |
-| Segmento | Cliente de Carga / bodega receptora de productos perecibles. |
-| Nombres y apellidos | Luis Gustavo Honorio Astudillo. |
-| Fecha de la entrevista | 15/11/2026. |
-| Estado | Registro de una reacción inicial a la propuesta. |
-| Modalidad y alcance | Entrevista remota en dos partes sobre el trabajo en la bodega y la reacción verbal tras ver la landing. Sin tareas autónomas, sesión autenticada ni demostración navegada. |
-| Duración del montaje | **00:08:12**. |
-| Video en Microsoft Stream | [Entrevista de validación — Gustavo Honorio](<https://upcedupe-my.sharepoint.com/:v:/g/personal/u202219829_upc_edu_pe/IQBdT5NO3as3Roz6-6ye7p1PAQ23iTPmPhDRtE4fXgXn6nU?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Bs0cvt>). |
-| Autorización | Autorización para publicar el nombre, la captura y el enlace al video en el informe público, confirmada por quien realizó la entrevista. |
+| :--- | :--- |
+| **Nombres y Apellidos** | Luis Gustavo Honorio Astudillo |
+| **Edad** | No registrada. |
+| **Distrito** | No registrado. |
+| **Fecha de entrevista** | 15/11/2026 |
+| **Enlace al video (Microsoft Stream)** | [Entrevista de validación — Gustavo Honorio](<https://upcedupe-my.sharepoint.com/:v:/g/personal/u202219829_upc_edu_pe/IQBdT5NO3as3Roz6-6ye7p1PAQ23iTPmPhDRtE4fXgXn6nU?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Bs0cvt>). |
+| **Timing de inicio a fin** | 00:00–08:12 |
+| **User flows evaluados** | • Comprensión de la propuesta en la Landing Page<br>• Reacción verbal sobre seguimiento de envíos y alertas<br>• Sin tareas ejecutadas en la aplicación. |
+| **Evidencia fotográfica** | <img src="assets/images/chapter-05/av2/validation-av2-l02.png" width="600" alt="Captura de la sesión remota de la entrevista AV2-L02"> |
 
-![Captura de la sesión remota de la entrevista AV2-L02](assets/images/chapter-05/av2/validation-av2-l02.png)
+**Segmento:** Cliente de Carga / bodega receptora de productos perecibles.
+
+**Estado:** Registro de una reacción inicial a la propuesta.
+
+**Modalidad y alcance:** Entrevista remota en dos partes sobre el trabajo en la bodega y la reacción verbal tras ver la landing. Sin tareas autónomas, sesión autenticada ni demostración navegada.
+
+**Autorización:** Autorización para publicar el nombre, la captura y el enlace al video en el informe público, confirmada por quien realizó la entrevista.
 
 *Captura de la sesión remota sobre el trabajo en la bodega. La reacción a la landing se recogió verbalmente, sin ejecución de tareas en la aplicación.*
 
-**Resumen de la entrevista.** En la bodega se comprueba que los pedidos lleguen completos y que los productos refrigerados se almacenen adecuadamente. Los pedidos, las cantidades y los vencimientos se anotan en un cuaderno. El participante probaría primero el seguimiento de envíos y las alertas. Al recibir el pedido, contrastaría la información de la aplicación con el estado físico y la temperatura de los productos. También pidió una forma de contactar a la persona encargada de la entrega.
+**Resumen de la entrevista:**
+
+En la bodega se comprueba que los pedidos lleguen completos y que los productos refrigerados se almacenen adecuadamente. Los pedidos, las cantidades y los vencimientos se anotan en un cuaderno. El participante probaría primero el seguimiento de envíos y las alertas. Al recibir el pedido, contrastaría la información de la aplicación con el estado físico y la temperatura de los productos. También pidió una forma de contactar a la persona encargada de la entrega.
 
 El participante asoció las alertas con los vencimientos del inventario. Conviene explicar en la landing que las alertas térmicas se refieren a la temperatura durante el transporte y distinguirlas de los avisos de vencimiento que gestiona la bodega.
+
+#### Entrevista AV2-L03: Jari Hassan Syeda
+
+| Campo | Detalle |
+| :--- | :--- |
+| **Nombres y Apellidos** | Jari Hassan Syeda |
+| **Edad** | 25 años |
+| **Distrito** | Santiago de Surco, Lima |
+| **Fecha de entrevista** | 14/11/2026 |
+| **Enlace al video (Microsoft Stream)** | [Ver entrevista de validación — Jari Hassan Syeda](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241d811_upc_edu_pe/IQBZd7aTK79XTJxMa803EK5iAU_CfNuobggGJf2VWbPrFWo?e=hI8opR) |
+| **Timing de inicio a fin** | 00:00–08:50 |
+| **User flows evaluados** | • Presentación de la Landing Page<br>• Recorrido mostrado con perfil Coordinador Logístico<br>• Consulta del resumen y detalle de envíos<br>• Visualización de temperatura, humedad, ruta e historial de acciones<br>• Revisión de alertas, flota, sensores e historial de envíos. |
+| **Evidencia fotográfica** | <img src="assets/images/chapter-05/EntrevistaValidacion_JariHassanSyeda.png" width="600" alt="Jari Hassan Syeda durante la entrevista"> |
+
+**Segmento:** Cliente de Carga / negocio receptor de productos perecibles.
+
+**Entrevistador:** Rodrigo Andree Saavedra Flores.
+
+**Modalidad y alcance:** Entrevista remota en dos partes, con un recorrido narrado de FríoTrack incorporado en el montaje. La cuenta mostrada corresponde al Coordinador Logístico. No se acredita la ejecución autónoma de tareas por el entrevistado.
+
+**Resumen de la entrevista:**
+
+Jari Hassan Syeda tiene 25 años y administra un negocio de productos perecibles en Santiago de Surco. Cuenta con aproximadamente cinco años de experiencia y se encarga de las compras a proveedores, la organización de los productos y la supervisión de la atención al cliente. Administra dos locales y tres personas participan en el control de stock. Utiliza una computadora, el celular y registros en Excel; una de sus dificultades es mantener actualizadas y sincronizadas las cantidades entre los locales.
+
+El montaje presenta la propuesta de FríoTrack para supervisar el transporte de carga perecible, seguida de un recorrido por el resumen operativo, los envíos, las lecturas de temperatura y humedad, las alertas, la flota, los sensores y el historial. Esta demostración permite contextualizar la información disponible sobre las condiciones de traslado y los recursos asociados a cada viaje.
+
+En sus respuestas grabadas, Jari destaca la utilidad de organizar la información de los productos y consultar sus cantidades y vencimientos. Señala que priorizaría el lote que vence primero, siempre que esté en condiciones adecuadas, y que ante un aviso revisaría la cantidad, la fecha y el estado del producto. Recomienda nombres de botones más sencillos o explicaciones breves. Para confiar en una herramienta, comprobaría que los datos coincidan con sus productos y se actualicen al registrar movimientos.
+
+Estas apreciaciones corresponden al control de mercadería del negocio y no acreditan la validación específica de las funciones de transporte de FríoTrack. Es necesario distinguir las alertas térmicas durante el viaje de los avisos de vencimiento de inventario y comprobar esa comprensión en una sesión centrada en los flujos de transporte.
 
 ### 5.3.3. Evaluación según heurísticas
 
