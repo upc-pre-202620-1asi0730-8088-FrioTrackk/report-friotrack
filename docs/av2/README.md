@@ -7,7 +7,7 @@ Referencia: enunciado UPC 1ASI0730, periodo 202620, AV2 semana 12, páginas 32�
 | [Sprint 3](sprint-3.md) | Planificación, contratos y evidencias del incremento. |
 | [Backlog propuesto](sprint3-backlog-proposal.csv) | Descomposición de tareas y estimaciones de revisión de 4–8 horas. |
 | [Protocolo de validación](validation-protocol.md) | Método, tareas y preguntas por segmento. |
-| [Registro de entrevistas](validation-records.csv) | Sesiones AV2-C01 y AV2-L01, con enlaces, capturas y resúmenes. Ficha anónima AV2-L02, con evidencia en la entrega restringida. |
+| [Registro de entrevistas](validation-records.csv) | Sesiones AV2-C01 y AV2-L01, con enlaces, capturas y resúmenes. Ficha AV2-L02, con captura y enlace al video en Microsoft Stream. |
 | [Evaluación heurística](heuristics-template.md) | Formato de Anexo D y escala de severidad 1–4. |
 | [Especificaciones de videos](video-scripts.md) | Estructura y duración de Product, Team, navegación y exposición. |
 | [Estructura de presentación](keynote-outline.md) | Organización temática de la presentación AV2. |

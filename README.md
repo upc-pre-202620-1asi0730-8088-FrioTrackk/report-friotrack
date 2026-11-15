@@ -3633,7 +3633,7 @@ El guion conserva las preguntas completas, criterios de observación y ficha de 
 
 El [registro editable de sesiones](docs/av2/validation-records.csv) incluye AV2-C01 de Farit Alejandro Santoyo Espejo y AV2-L01 de Irma Barreto. Las fichas presentan los perfiles de los participantes, el entorno observado y sus apreciaciones sobre el producto.
 
-El registro también incluye la ficha anónima AV2-L02, correspondiente a una bodega receptora de perecibles.
+El registro también incluye la ficha AV2-L02, correspondiente a una bodega receptora de perecibles.
 
 #### Entrevista AV2-C01: Farit Alejandro Santoyo Espejo
 
@@ -3695,11 +3695,17 @@ Considera que el reporte JSON es técnico y prefiere un resumen fácil de leer y
 | Campo | Detalle |
 | --- | --- |
 | Segmento | Cliente de Carga / bodega receptora de productos perecibles. |
+| Nombres y apellidos | Luis Gustavo Honorio Astudillo. |
 | Fecha de la entrevista | 15/11/2026. |
-| Estado | Registro anónimo de una reacción inicial a la propuesta. |
+| Estado | Registro de una reacción inicial a la propuesta. |
 | Modalidad y alcance | Entrevista remota en dos partes sobre el trabajo en la bodega y la reacción verbal tras ver la landing. Sin tareas autónomas, sesión autenticada ni demostración navegada. |
 | Duración del montaje | **00:08:12**. |
-| Evidencia | Disponible en la entrega restringida al equipo y al profesor. |
+| Video en Microsoft Stream | [Entrevista de validación AV2-L02](<https://upcedupe-my.sharepoint.com/:v:/g/personal/u202219829_upc_edu_pe/IQBdT5NO3as3Roz6-6ye7p1PAQ23iTPmPhDRtE4fXgXn6nU?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Bs0cvt>). |
+| Autorización | Autorización para publicar el nombre, la captura y el enlace al video en el informe público, confirmada por quien realizó la entrevista. |
+
+![Captura de la sesión remota de la entrevista AV2-L02](assets/images/chapter-05/av2/validation-av2-l02.png)
+
+*Captura de la sesión remota sobre el trabajo en la bodega. La reacción a la landing se recogió verbalmente, sin ejecución de tareas en la aplicación.*
 
 **Resumen de la entrevista.** En la bodega se comprueba que los pedidos lleguen completos y que los productos refrigerados se almacenen adecuadamente. Los pedidos, las cantidades y los vencimientos se anotan en un cuaderno. El participante probaría primero el seguimiento de envíos y las alertas. Al recibir el pedido, contrastaría la información de la aplicación con el estado físico y la temperatura de los productos. También pidió una forma de contactar a la persona encargada de la entrega.
 
