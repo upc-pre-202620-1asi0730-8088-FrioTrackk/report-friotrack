@@ -1,0 +1,16 @@
+{
+  "checks": [
+    {
+      "path": "/swagger/index.html",
+      "status": 200,
+      "bytes": 753
+    },
+    {
+      "path": "/swagger/v1/swagger.json",
+      "status": 200,
+      "bytes": 63491,
+      "paths": 26
+    }
+  ],
+  "passed": true
+}

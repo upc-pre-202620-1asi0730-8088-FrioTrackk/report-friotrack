@@ -1,0 +1,19 @@
+{
+  "verified": true,
+  "domainTables": 18,
+  "foreignKeys": 31,
+  "legacyCredentialPairsPreserved": 3,
+  "legacySessionsImported": 0,
+  "legacyAccountsWithoutCredentialsDisabled": 1,
+  "demonstrationTenantSeparated": true,
+  "derivations": {
+    "uniqueDisplayNameActorMappings": 8,
+    "CoordinatorFromHistoricalCreatorOrUniqueCoordinator": 4,
+    "MonitoringStartedAtUsesEarliestRecordedReadingOrDeparture": 4,
+    "ReleasedAtUsesPlannedArrivalNoLifecycleTimestamp": 1,
+    "DeliveryStopBoundUsesLatestExistingReadingBecauseActualDeliveryTimeUnknown": 1,
+    "ImplicitNotificationRecipientExpansion": 2,
+    "NumericValuesRoundedToSchemaFiveDecimals": 7
+  },
+  "scope": "Migration verification; private backups, account credentials and connection strings are excluded."
+}

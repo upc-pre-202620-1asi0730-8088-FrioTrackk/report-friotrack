@@ -3562,7 +3562,7 @@ Documentar los endpoints realmente implementados con OpenAPI y Swagger UI, inclu
 
 | Action | HTTP method and path | Parameters / body | Success / error responses | OpenAPI / evidence |
 | --- | --- | --- | --- | --- |
-| Iniciar y revocar sesión | `POST /api/auth/login`, `POST /api/auth/logout` | Correo/contraseña en login; Bearer en logout | `200` / `204`; `401`, `429` según operación | Contrato generado; URL pública pendiente. |
+| Iniciar y revocar sesión | `POST /api/auth/login`, `POST /api/auth/logout` | Correo/contraseña en login; Bearer en logout | `200` / `204`; `401`, `429` según operación | [Swagger UI publicado](https://friotrack-api-bce6db1b.azurewebsites.net/swagger/index.html). |
 | Registrar Cliente de Carga | `POST /api/auth/register` | Nombre, correo, organización y contraseña; no admite alta pública de coordinador | `200`; `400`, `403`, `409` | Rol impuesto por el servidor. |
 | Consultar workspace y recursos | `GET /api/workspace`, `GET /api/shipments`, `GET /api/shipments/{id}` | Bearer; ID en detalle | `200`; `401`, `404` | Consultas filtradas por empresa y asignación. |
 | Programar o actualizar envío | `POST /api/shipments`, `PUT /api/shipments/{id}` | Ruta, carga, cliente, recursos, fechas, rango y versión al editar | `200`; `400`, `401`, `403`, `404`, `409` | Reserva transaccional y control de versión. |
@@ -3575,22 +3575,28 @@ Documentar los endpoints realmente implementados con OpenAPI y Swagger UI, inclu
 | Registrar incidencia y leer avisos | `POST /api/shipments/{id}/incidents`, `POST /api/notifications/read` | Nota para incidencia; destinatario de sesión para avisos | `200`; errores de permisos/reglas | Lectura explícita del destinatario, no lectura automática. |
 | Generar y consultar reporte | `POST /api/shipments/{id}/reports`, `GET /api/reports/{id}` | Envío entregado; reporte autorizado | `200`; `400`, `401`, `403`, `404` según operación | Copia JSON persistida; no se presenta como PDF. |
 
-La especificación se sirve en `/swagger/v1/swagger.json` y la interfaz en `/swagger/index.html` del servicio ejecutado. Estos paths pertenecen al host de la API, sin prefijo `/api`. Las mutaciones devuelven la proyección actualizada junto con el resultado; los errores incluyen código y mensaje. La tabla manual de TB1 no sustituye la especificación desplegada de AV2. El repositorio canónico es [friotrack-api](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-api); incorporar sus commits de documentación del sprint. Las operaciones ejecutadas desde Swagger deben respetar los mismos permisos que la SPA.
+La especificación publicada se sirve en [/swagger/v1/swagger.json](https://friotrack-api-bce6db1b.azurewebsites.net/swagger/v1/swagger.json) y la interfaz en [/swagger/index.html](https://friotrack-api-bce6db1b.azurewebsites.net/swagger/index.html); ambos devolvieron HTTP 200 en la [comprobación pública](assets/evidence/av2/public-swagger-verification.json). Estos paths pertenecen al host de la API, sin prefijo `/api`. Las mutaciones devuelven la proyección actualizada junto con el resultado; los errores incluyen código y mensaje. La tabla manual de TB1 no sustituye la especificación desplegada de AV2. El repositorio canónico es [friotrack-api](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-api); incorporar sus commits de documentación del sprint. Las operaciones ejecutadas desde Swagger deben respetar los mismos permisos que la SPA.
 
 #### 5.2.3.7. Software Deployment Evidence for Sprint Review
 
-Registrar la configuración y publicación efectivas de landing, SPA, API y base de datos. No afirmar publicación por tener únicamente un build local o una release de GitHub.
+El 14/11/2026 se publicó el incremento AV2 en los recursos existentes de Azure, conectado a PostgreSQL 17 en Neon. La migración conserva los registros anteriores y sus tres credenciales disponibles; la cuenta que ya carecía de credenciales se conserva deshabilitada. Las cuentas y envíos de demostración pertenecen a una organización separada. Los respaldos y secretos no forman parte del repositorio público.
 
 | Producto | Versión / commit | URL | Verificación real |
 | --- | --- | --- | --- |
 | Landing AV2 | `0.2.0` / `36f2067` | [GitHub Pages](https://upc-pre-202620-1asi0730-8088-friotrackk.github.io/friotrack-landing/) | Publicación automática del repositorio; ocho archivos HTTP 200 coinciden con los bytes del commit. Videos aún sin configurar. |
-| SPA AV2 | Pendiente del corte publicado | Pendiente de comprobar | Bundle, conexión API y recorridos por perfil. |
-| Web Services AV2 | Pendiente del corte publicado | Pendiente de comprobar | Health, recursos, permisos y Swagger. |
-| PostgreSQL | Pendiente del destino autorizado | Acceso privado; no publicar credenciales | Migraciones, integridad y persistencia. |
+| SPA AV2 | `0.2.1` / `574f3c1` | [Aplicación publicada](https://friotracktb1bce6db1b.z22.web.core.windows.net/) | 20 archivos publicados y verificados por SHA-256; recorridos autenticados de ambos perfiles. |
+| Web Services AV2 | `0.2.0` / `e9aca8e` | [API](https://friotrack-api-bce6db1b.azurewebsites.net/api/health) · [Swagger](https://friotrack-api-bce6db1b.azurewebsites.net/swagger/index.html) | Kudu completado; PostgreSQL activo; acceso anónimo 401 y registro público de coordinador 403; login y logout por perfil. |
+| PostgreSQL | 17 / migración inicial EF Core | Acceso privado en Neon | 18 tablas de dominio y 31 FK verificadas; datos históricos conservados y demostración aislada. |
 
-El [recibo público de GitHub Pages](assets/evidence/av2/github-pages-verification.json) acredita únicamente la landing. El entorno Azure previo continúa siendo el corte histórico; la SPA y la API AV2 no se declaran desplegadas. Preparar PostgreSQL, revisar la migración y publicar la API antes que la SPA. La herramienta de publicación bloquea una SPA nueva contra el backend JSON anterior.
+El [recibo de GitHub Pages](assets/evidence/av2/github-pages-verification.json) conserva la evidencia de la landing. La actualización de Azure se acredita mediante los recibos de [API](assets/evidence/av2/redeployment-api.json), [SPA](assets/evidence/av2/redeployment-frontend.json) y [landing](assets/evidence/av2/redeployment-landing.json). Se verificaron 15 archivos de la landing en Azure. La [verificación de PostgreSQL](assets/evidence/av2/cloud-database-verification.json) registra integridad y conservación sin publicar información privada. Las fechas y coordenadas históricas que necesitaron adaptación quedan identificadas como derivaciones de migración; no se inventan eventos de entrega.
 
-Guardar recibos con SHA de fuentes/artefactos, fecha, destino y resultado. Documentar variables por nombre, sin sus secretos. La autenticación y la autorización para recursos con coste deben completarse antes de publicar. Preservar o migrar los datos existentes según la decisión del equipo.
+Las [14 comprobaciones del entorno público](assets/evidence/av2/public-interview-verification.json) incluyen navegación desde la landing, inicio y cierre de sesión por perfil, programación completa de un envío, rechazo de reserva solapada, condiciones e historial, notificaciones y descarga del reporte JSON persistido. El envío de comprobación se canceló y liberó sus recursos. Son pruebas técnicas con información ficticia; las entrevistas y la aceptación del equipo siguen pendientes.
+
+![Figura 5.13. Coordinador en el entorno publicado, con datos de demostración](assets/images/chapter-05/av2/public-coordinator.png)
+
+![Figura 5.14. Cliente de Carga en el entorno publicado, con datos de demostración](assets/images/chapter-05/av2/public-client.png)
+
+La configuración utiliza `FRIOTRACK_DB`, `FRIOTRACK_PERSISTENCE`, `FRIOTRACK_ORIGINS` y `FRIOTRACK_PUBLIC_ORGANIZATION_ID`. Las migraciones y el seeding automático permanecen desactivados en el servicio publicado. Las credenciales se distribuyen por canales privados.
 
 #### 5.2.3.8. Team Collaboration Insights during Sprint
 
