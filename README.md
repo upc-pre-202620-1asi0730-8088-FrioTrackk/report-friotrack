@@ -3558,16 +3558,14 @@ La [evidencia de ejecución](#5235-execution-evidence-for-sprint-review) reúne 
 
 #### 5.2.3.2. Aspect Leaders and Collaborators
 
-La matriz LACX utiliza **L** para liderazgo y **C** para colaboración. El signo **—** representa una asignación no registrada.
+La matriz LACX registra los aportes documentados del Sprint 3. **L** indica liderazgo respaldado por las evidencias, **C** indica colaboración y **—** indica que no hay un aporte registrado para ese aspecto.
 
-| Team Member | GitHub Username | Backend y persistencia | SPA e integración | Landing y UX | Validación y documentación |
-| --- | --- | :---: | :---: | :---: | :---: |
-| Atauje Barreto, Alexander Sebastián | Alexander1Alexander2 | — | — | — | — |
-| Daga Chávez, Joaquín Leonardo | Eshnikeee | — | — | — | — |
-| Saavedra Flores, Rodrigo Andree | rodrigoxd67 | — | — | — | — |
-| Vera Solsol, Nayely Macarena | Macaxprogram29 | — | — | — | — |
-
-
+| Team Member | GitHub Username | Backend y persistencia | SPA e integración | Landing y comunicación del producto | Validación y documentación | Tablero y backlog |
+| --- | --- | :---: | :---: | :---: | :---: | :---: |
+| Atauje Barreto, Alexander Sebastián | Alexander1Alexander2 | L | L | C | C | — |
+| Daga Chávez, Joaquín Leonardo | Eshnikeee | — | — | — | C | — |
+| Saavedra Flores, Rodrigo Andree | rodrigoxd67 | — | — | — | C | C |
+| Vera Solsol, Nayely Macarena | Macaxprogram29 | — | — | L | C | C |
 
 #### 5.2.3.3. Sprint Backlog 3
 
