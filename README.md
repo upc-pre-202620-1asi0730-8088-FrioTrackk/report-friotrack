@@ -3537,6 +3537,8 @@ El Sprint 3 busca que el Coordinador Logístico pueda programar y supervisar env
 
 **Revisión de Sprint 2.** TB1 dejó publicada la primera aplicación web bilingüe y conectó la landing con el acceso por perfil. La revisión técnica documentó la programación y la atención de incidencias por el Coordinador Logístico, el filtrado de envíos por cliente y el rechazo de comandos de coordinación para ese perfil. Véase la [evidencia de ejecución de Sprint 2](#5225-execution-evidence-for-sprint-review).
 
+**Aprendizajes para Sprint 3.** El registro de TB1 con almacenamiento JSON orientó el paso a persistencia relacional. La comprobación de autorizaciones del Sprint 2 se mantiene y se amplía a operaciones concurrentes y a la recuperación de datos después de reiniciar el servicio. Los recibos del nuevo incremento distinguen las pruebas técnicas de las observaciones con usuarios.
+
 | Field | Detail |
 | --- | --- |
 | Sprint # | Sprint 3 — AV2 |
@@ -3545,7 +3547,6 @@ El Sprint 3 busca que el Coordinador Logístico pueda programar y supervisar env
 | Location | — |
 | Prepared By | — |
 | Attendees | — |
-| Sprint 2 Retrospective Summary | — |
 | Sprint 3 Velocity | — |
 | Sum of Story Points | — |
 
