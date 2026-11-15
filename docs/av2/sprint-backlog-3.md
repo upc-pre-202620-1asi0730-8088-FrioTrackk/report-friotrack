@@ -30,8 +30,8 @@ La tabla vincula las historias con sus tareas y mantiene las estimaciones del [b
 | US30 / Soporte | US30: Gestión de multi-idioma (i18n) | S3-T16 | Revisar experiencia integrada ES y EN | Comprobar perfiles idiomas tamaños y errores de los recorridos seleccionados. | 6 | Alexander Sebastián Atauje Barreto | To-Review |
 | US26 / US30 | US26: Casos de éxito y testimonios; US30: Gestión de multi-idioma (i18n) | S3-T17 | Preparar landing y videos publicados | Ajustar el idioma inicial y preparar los reproductores opcionales. La publicación de cada video se registra por separado. | 6 | Alexander Sebastián Atauje Barreto | To-Review |
 | — | — | S3-T18 | Publicar API y base relacional | Aplicar migraciones y publicar servicio en recursos autorizados preservando datos. | 8 | Alexander Sebastián Atauje Barreto | To-Review |
-| US31 / Soporte | US31: Planes y acceso desde la Landing | S3-T19 | Publicar frontend y landing | Actualizar archivos públicos y verificar hashes y recorridos de entrada. | 4 | — | To Do |
-| — | — | S3-T20 | Organizar tablero y trazabilidad | Relacionar historias tareas responsables revisores y versiones entre productos. | 4 | — | To Do |
+| US31 / Soporte | US31: Planes y acceso desde la Landing | S3-T19 | Publicar frontend y landing | Actualizar archivos públicos y verificar hashes y recorridos de entrada. | 4 | Alexander Sebastián Atauje Barreto | To-Review |
+| — | — | S3-T20 | Organizar tablero y trazabilidad | Confirmar asignaciones y estados en Trello; vincular tarjetas con evidencias e incorporar la captura del Sprint 3. | 4 | Rodrigo Andree Saavedra Flores (propuesto) | To-do |
 | — | — | S3-T21 | Preparar sesiones de validación | Confirmar participantes tareas cuentas de prueba autorización y versión estable. | 4 | — | To Do |
 | — | — | S3-T22 | Registrar validación del coordinador | Realizar las sesiones acordadas del segmento y conservar grabaciones y resultados. | 8 | — | To Do |
 | — | — | S3-T23 | Registrar validación del cliente | Realizar las sesiones acordadas del segmento y conservar grabaciones y resultados. | 8 | — | To Do |
