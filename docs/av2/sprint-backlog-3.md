@@ -39,6 +39,6 @@ La tabla vincula las historias con sus tareas y mantiene las estimaciones del [b
 | — | — | S3-T25 | Publicar e integrar About-the-Product | Publicar el video en Stream y YouTube e incorporarlo a la landing. El informe recoge ambos enlaces y GitHub Pages registra el despliegue. | 6 | Nayely Macarena Vera Solsol | Done |
 | — | — | S3-T26 | Editar About-the-Team | Editar con escenas de trabajo y testimonios de cada integrante; publicar en Stream y YouTube e incorporar a la landing. | 6 | Nayely Macarena Vera Solsol (propuesto) | To-do |
 | — | — | S3-T27 | Grabar navegación del incremento | Grabar un recorrido del Sprint 3 desde la landing hasta las funciones centrales de ambos perfiles; enlazarlo en el informe. | 4 | Rodrigo Andree Saavedra Flores (propuesto) | To-do |
-| — | — | S3-T28 | Consolidar exposición AV2 | Editar intervenciones de todos los integrantes con presentación y demostraciones. | 8 | — | To Do |
+| — | — | S3-T28 | Consolidar exposición AV2 | Preparar la exposición AV2 con todos los integrantes ante cámara, en un MP4 de máximo 30 minutos. | 8 | Rodrigo Andree Saavedra Flores (propuesto) | To-do |
 | — | — | S3-T29 | Integrar reporte y presentación AV2 | Actualizar secciones tablas diagramas capturas conclusiones y archivos de entrega. | 8 | — | To Do |
 | — | — | S3-T30 | Revisar y empaquetar la entrega | Comprobar accesos enlaces nombres formatos y versiones y registrar aceptación. | 6 | — | To Do |
