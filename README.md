@@ -3544,6 +3544,14 @@ El Sprint 3 busca que el Coordinador Logístico pueda programar y supervisar env
 - **Coordinador Logístico:** gestionar los recursos disponibles, programar un envío con reservas de vehículo y conductor, actualizar su estado y revisar condiciones, historial y atención de alertas.
 - **Cliente de Carga:** consultar el estado, las lecturas, el historial y las alertas de sus envíos asignados. Los permisos de programación y gestión de recursos corresponden al Coordinador Logístico.
 
+**Criterios de aceptación del incremento.**
+
+1. Un coordinador puede programar un envío válido. Si una reserva de vehículo o conductor se solapa, el sistema la rechaza sin guardar cambios parciales.
+2. El estado del envío, sus lecturas, su historial y la atención de alertas se conservan después de reiniciar el servicio. El reporte JSON se puede recuperar de los datos persistidos.
+3. El cliente solo puede consultar envíos asociados a su cuenta. El servidor rechaza los comandos de coordinación con ese perfil.
+
+La [evidencia de ejecución](#5235-execution-evidence-for-sprint-review) reúne las comprobaciones de integración y persistencia. La [verificación del despliegue](#5237-software-deployment-evidence-for-sprint-review) registra 14 comprobaciones públicas, entre ellas el acceso por perfil, la programación, el rechazo de una reserva solapada y la consulta de lecturas.
+
 | Field | Detail |
 | --- | --- |
 | Sprint # | Sprint 3 — AV2 |
