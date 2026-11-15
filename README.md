@@ -126,6 +126,26 @@ La captura de GitHub Contributors y los metadatos del mismo corte se presentan e
 
 Los registros completos y sus fechas están en [current-commits.json](assets/evidence/current-commits.json). La integración de autenticación, API y configuración Azure se registra además en el [frontend](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend). La evaluación individual corresponde al Team Leader y no se deduce de la cantidad de commits.
 
+### Entrega AV2
+
+El equipo activo mantiene a Alexander, Joaquín, Rodrigo y Nayely. La tabla registra **43 commits sin merges** del informe en `develop`, desde el **12/11/2026 a las 00:00 (hora de Perú)** hasta el corte `9e369345088776af1d3583a57aa398d83925cd84`, del **15/11/2026**. Este corte corresponde a la preparación y actualización de AV2; las correcciones anteriores y las entregas AV1 y TB1 conservan sus registros.
+
+| Team Member | GitHub Username | Report commits (excluding merges) | Evidence |
+| --- | --- | --- | --- |
+| Atauje Barreto, Alexander Sebastián | Alexander1Alexander2 | 10 | Documentación de arquitectura relacional e integración del Sprint 3, evidencias de pruebas y despliegue, presentación base y entrevistas de Farit Santoyo e Irma Barreto. [f155aba](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/f155aba22acdcac35619b71eec3a5c4c4b3c6349), [1302fe8](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/1302fe84b55c663c7141ff0f4b1b44c6f52aeb82), [d94d6b2](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/d94d6b2d40ad222c7ed2b48b3a4824e341de629e) y [5e1b01f](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/5e1b01f02486babe7bf0f6157841252e63208f4b). |
+| Bardales Rodriguez, Benjamin Elias | Benja72312 | 0 | Retirado del equipo; sin participación registrada en AV2. Se conservan sus aportes históricos de AV1. |
+| Daga Chávez, Joaquín Leonardo | Eshnikeee | 3 | Incorporación de la entrevista de validación de Gustavo Honorio, captura, autorización y revisión del enlace del video. [bdcdb8d](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/bdcdb8daf430f537f88c197cf22a71b0a2edd306), [0ce82e4](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/0ce82e43f328d011ebf5b91472341037fada465b) y [cbe1271](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/cbe1271dfe4f18a97e7e08d28a704ef17a4598e2). |
+| Saavedra Flores, Rodrigo Andree | rodrigoxd67 | 1 | Estandarización de fichas de validación e incorporación de la entrevista de Jari Hassan Syeda y su captura. [75b182b](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/75b182b2ce15bc9724b895666f9ad3f82f032cb9). |
+| Vera Solsol, Nayely Macarena | Macaxprogram29 | 29 | Incorporación de enlaces de About-the-Product, captura de Trello y actualización de tareas, estados, responsables y evidencias del Sprint Backlog 3; integración del backlog en el informe. [52a38f4](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/52a38f43104b66ee7ffa36a8f7f599d888d406e8), [1e299b3](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/1e299b35314c6e1bd233ae23028b6e61493814da) y [6060878](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/60608781ab84deaf60fa7aca22abf596a221b270). |
+
+El [historial del informe al corte AV2](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commits/9e369345088776af1d3583a57aa398d83925cd84/) permite consultar autores, fechas y cambios. Se excluye el commit de merge de la entrevista de Joaquín. Las actualizaciones documentales del backlog forman parte del conteo de Nayely; las tareas descritas mantienen la atribución indicada en sus evidencias.
+
+La implementación relacional y sus pruebas se registran en la [API](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-api/commit/8c31d6284ef94c4b857b97392cf25eb744b0e4bf), la integración REST en el [frontend](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/commit/c844513977e1acb47948c2cb76f14035b3bdc26b) y la preparación de reproductores en la [landing](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-landing/commit/36f206712d0952b41ad6b3e6893645d9a0fcc682), con autor registrado Alexander1Alexander2. Nayely realizó el video About-the-Product y su [configuración publicada en la landing](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-landing/commit/6f8e6a090ba20c3b4195d6acb598d2b46bb837fe). El conteo de la tabla comprende únicamente el repositorio del informe.
+
+Los materiales complementarios del curso registran las lecciones [1 y 2 de Rodrigo](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/html-css-course-blackstartup/commit/f16dd22e352c00c63a59d233447ec485d67266a1), [3 y 4 de Alexander](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/html-css-course-blackstartup/commit/3f444b8412cb9a85cdc65a8aa5bc40c27b0ee90b), [5 y 6 de Nayely](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/html-css-course-blackstartup/commit/45eca287f0a20839300a11967c5d4372612aea1a) y [7 y 8 de Joaquín](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/html-css-course-blackstartup/commit/c2617b4f22c07bb8c098de7dae5489296bf9d1ef). Sus commits pertenecen al repositorio del curso y se consultan por separado.
+
+El avance de las 30 tareas se presenta en [Sprint Backlog 3](#5233-sprint-backlog-3), las entrevistas en [5.3.2](#532-registro-de-entrevistas) y el video de producto en [5.4](#54-video-about-the-product). La evaluación individual corresponde al Team Leader y considera las responsabilidades y resultados de cada integrante.
+
 ### Gráficos de colaboración del informe
 
 ![Distribución de commits del informe FríoTrack al corte de TB1](assets/images/chapter-05/report-collaboration-corrected.png)
@@ -277,6 +297,31 @@ La distribución por capítulos mantiene el liderazgo por especialidad. La integ
 | Vera Solsol, Nayely Macarena | Relacionar necesidades, historias y prioridades. | Capítulo III con Impact Mapping y Product Backlog. |
 
 La entrega técnica ofrece una aplicación accesible desde Azure, el informe consolidado y la exposición del equipo. El Participant Performance Report del Anexo A registra las responsabilidades y calificaciones individuales. Las reuniones del sprint se describen en 5.2.2.1; sus actas formales no están adjuntas.
+
+#### Liderazgo compartido en AV2
+
+| Integrante | AV2: responsabilidades registradas | AV2: acciones y evidencia |
+| --- | --- | --- |
+| Atauje Barreto, Alexander Sebastián | Integración técnica de API, persistencia relacional, SPA y documentación del incremento. | Implementó los flujos relacionales, integró el contrato REST y documentó pruebas, despliegue y entrevistas. [API](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-api/commit/8c31d6284ef94c4b857b97392cf25eb744b0e4bf), [frontend](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/commit/c844513977e1acb47948c2cb76f14035b3bdc26b) e [informe](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/f155aba22acdcac35619b71eec3a5c4c4b3c6349). |
+| Bardales Rodriguez, Benjamin Elias | Sin asignación en AV2 por retiro del integrante. | Sus aportes de AV1 permanecen en el registro histórico; no se le atribuyen actividades del Sprint 3. |
+| Daga Chávez, Joaquín Leonardo | Validación con un participante del segmento Cliente de Carga y preparación de las lecciones 7 y 8. | Documentó la entrevista de Gustavo Honorio, la captura, la autorización y el enlace de la grabación. [0ce82e4](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/0ce82e43f328d011ebf5b91472341037fada465b). |
+| Saavedra Flores, Rodrigo Andree | Organización de registros de validación, documentación de una entrevista y preparación de las lecciones 1 y 2. | Estandarizó las fichas e incorporó la entrevista de Jari Hassan Syeda con su evidencia fotográfica. [75b182b](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/75b182b2ce15bc9724b895666f9ad3f82f032cb9). |
+| Vera Solsol, Nayely Macarena | Revisión de historias y backlog, organización de Trello, validación, lecciones 5 y 6 y comunicación del producto. | Actualizó el Sprint Backlog 3, incorporó su captura y evidencias, registró la entrevista de Carol Solsol, realizó About-the-Product y publicó sus enlaces en el informe y la landing. [Backlog](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/60608781ab84deaf60fa7aca22abf596a221b270), [video](#54-video-about-the-product) y [landing](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-landing/commit/6f8e6a090ba20c3b4195d6acb598d2b46bb837fe). |
+
+El equipo distribuyó la integración técnica, la investigación con usuarios, la documentación y la presentación del producto. Las fichas de validación conservan los comentarios de los participantes y su alcance. Las asignaciones pendientes del Sprint 3 se distinguen de los aportes ya documentados.
+
+#### Colaboración, metas y cumplimiento de objetivos en AV2
+
+| Integrante | Aporte al objetivo de AV2 | Resultado documentado |
+| --- | --- | --- |
+| Atauje Barreto, Alexander Sebastián | Integrar los recorridos de envíos con persistencia y acceso por perfil, y preparar una versión para validación. | API con EF Core/PostgreSQL, SPA integrada, evidencias de pruebas y publicación, y entrevistas de Farit Santoyo e Irma Barreto. Secciones 5.2.3.4–5.2.3.7 y 5.3.2. |
+| Bardales Rodriguez, Benjamin Elias | Sin actividades asignadas en AV2 por retiro del integrante. | Sin resultados de AV2 atribuidos; se mantiene su participación histórica de AV1. |
+| Daga Chávez, Joaquín Leonardo | Recoger la perspectiva de una bodega receptora sobre la propuesta de FríoTrack. | Entrevista AV2-L02 con opiniones sobre seguimiento, alertas y recepción de productos. El registro distingue la reacción verbal a la landing de una prueba de tareas en la aplicación. |
+| Saavedra Flores, Rodrigo Andree | Facilitar la revisión conjunta de las entrevistas y recoger oportunidades de mejora. | Fichas de validación uniformes y entrevista AV2-L03 de Jari Hassan Syeda, con comentarios sobre claridad de botones y consulta de información. |
+| Vera Solsol, Nayely Macarena | Relacionar historias, tareas y estados del sprint, y comunicar el funcionamiento del producto. | Tabla de 30 tareas y captura de Trello en 5.2.3.3; [entrevista de Carol Solsol](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/0f7c77ecaa913d249fba7e01fa78cda9c792d024); [materiales y prácticas de las lecciones 5 y 6](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/html-css-course-blackstartup/commit/45eca287f0a20839300a11967c5d4372612aea1a); About-the-Product en 5.4 e integración en la landing. |
+
+El Sprint Backlog 3 registra **6 tareas en To-do, 4 en In-Process, 19 en To-Review y 1 en Done** al 15/11/2026. About-the-Product figura en Done; la validación, la evaluación de hallazgos y la preparación final de la entrega conservan sus estados pendientes. La publicación técnica, las entrevistas y el seguimiento del tablero permiten revisar el avance respecto del objetivo del sprint y acordar las siguientes tareas del equipo.
+
 
 # Capítulo I: Introducción
 
