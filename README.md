@@ -3554,16 +3554,7 @@ La [evidencia de ejecución](#5235-execution-evidence-for-sprint-review) reúne 
 
 **Alcance de la validación.** El [diseño de entrevistas](#531-diseño-de-entrevistas) prevé cuentas y cargas de demostración para las tareas de ambos segmentos. El [registro de entrevistas](#532-registro-de-entrevistas) distingue ejecución, demostración guiada y reacciones a la propuesta según lo observado en cada sesión. El incremento emplea telemetría de demostración. Sensores físicos, correo externo y pagos quedan fuera del alcance de AV2.
 
-| Field | Detail |
-| --- | --- |
-| Sprint # | Sprint 3 — AV2 |
-| Date | — |
-| Time | — |
-| Location | — |
-| Prepared By | — |
-| Attendees | — |
-| Sprint 3 Velocity | — |
-| Sum of Story Points | — |
+**Corte de seguimiento.** La [captura y el resumen de Trello en 5.2.3.3](#5233-sprint-backlog-3) registran 30 tareas al 15/11/2026, hora de Perú. Había 6 en To-do, 4 en In-Process, 19 en To-Review y 1 en Done. Los estados representan la situación del tablero en esa fecha. El informe registra el avance mediante esos estados, con independencia de la capacidad, la velocidad y los Story Points aceptados.
 
 #### 5.2.3.2. Aspect Leaders and Collaborators
 
