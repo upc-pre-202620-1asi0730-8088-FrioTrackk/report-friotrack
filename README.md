@@ -3224,15 +3224,15 @@ La ficha reconstruye la organización inicial a partir de AV1. La fecha y la hor
 
 #### 5.2.1.2. Aspect Leaders and Collaborators
 
-La matriz conserva los aportes registrados en AV1. **C** identifica una contribución documentada; **L** requiere una designación de liderazgo que no consta en el registro disponible. **—** indica que no se documenta aporte en ese aspecto.
+La matriz conserva los aportes registrados en AV1. **C** identifica una contribución documentada; La distribución de AV1 se expresa mediante contribuciones por aspecto. **Sin participación** identifica los aspectos ajenos a los aportes de cada integrante.
 
-| Team Member | GitHub Username | Producto e informe | Requisitos y backlog | Arquitectura y diseño | Landing y despliegue |
+| Integrante | Usuario de GitHub | Producto e informe | Requisitos y backlog | Arquitectura y diseño | Landing y despliegue |
 | --- | --- | :---: | :---: | :---: | :---: |
-| Atauje Barreto, Alexander Sebastián | Alexander1Alexander2 | C | — | — | C |
-| Bardales Rodriguez, Benjamin Elias | Benja72312 | — | — | C | C |
-| Daga Chávez, Joaquín Leonardo | Eshnikeee | — | C | — | — |
-| Saavedra Flores, Rodrigo Andree | rodrigoxd67 | C | — | — | C |
-| Vera Solsol, Nayely Macarena | Macaxprogram29 | — | C | — | — |
+| Atauje Barreto, Alexander Sebastián | Alexander1Alexander2 | C | Sin participación | Sin participación | C |
+| Bardales Rodriguez, Benjamin Elias | Benja72312 | Sin participación | Sin participación | C | C |
+| Daga Chávez, Joaquín Leonardo | Eshnikeee | Sin participación | C | Sin participación | Sin participación |
+| Saavedra Flores, Rodrigo Andree | rodrigoxd67 | C | Sin participación | Sin participación | C |
+| Vera Solsol, Nayely Macarena | Macaxprogram29 | Sin participación | C | Sin participación | Sin participación |
 
 Alexander aportó la propuesta y la estructura del informe; Benjamin, arquitectura y mayor parte de la landing; Joaquín, historias y criterios; Rodrigo, Capítulo V y apoyo al despliegue; Nayely, Impact Mapping, backlog y Trello. Esta matriz no atribuye a AV1 el trabajo de corrección de noviembre.
 
@@ -3323,15 +3323,15 @@ La revisión del objetivo utiliza cuatro comprobaciones: acceso válido en ambos
 
 #### 5.2.2.2. Aspect Leaders and Collaborators
 
-La matriz identifica al líder (**L**) y a los colaboradores (**C**) de cada aspecto del Sprint 2. **—** indica que no se asignó participación en ese aspecto.
+La matriz identifica al líder (**L**) y a los colaboradores (**C**) de cada aspecto del Sprint 2. **Sin participación** identifica los aspectos sin asignación para ese integrante.
 
-| Team Member | GitHub Username | Requisitos e investigación | Diseño de producto | Documentación e integración | Acceso, API y despliegue |
+| Integrante | Usuario de GitHub | Requisitos e investigación | Diseño de producto | Documentación e integración | Acceso, API y despliegue |
 | --- | --- | :---: | :---: | :---: | :---: |
-| Atauje Barreto, Alexander Sebastián | Alexander1Alexander2 | C | — | L | — |
-| Bardales Rodriguez, Benjamin Elias | Benja72312 | — | — | — | — |
-| Daga Chávez, Joaquín Leonardo | Eshnikeee | L | — | C | — |
-| Saavedra Flores, Rodrigo Andree | rodrigoxd67 | — | L | C | L |
-| Vera Solsol, Nayely Macarena | Macaxprogram29 | L | — | C | — |
+| Atauje Barreto, Alexander Sebastián | Alexander1Alexander2 | C | Sin participación | L | Sin participación |
+| Bardales Rodriguez, Benjamin Elias | Benja72312 | Sin participación | Sin participación | Sin participación | Sin participación |
+| Daga Chávez, Joaquín Leonardo | Eshnikeee | L | Sin participación | C | Sin participación |
+| Saavedra Flores, Rodrigo Andree | rodrigoxd67 | Sin participación | L | C | L |
+| Vera Solsol, Nayely Macarena | Macaxprogram29 | L | Sin participación | C | Sin participación |
 
 Alexander coordina la integración del informe; Joaquín mantiene la investigación y Nayely los requisitos y el backlog. Rodrigo integra el diseño documentado, la autenticación, la API y la publicación en Azure. Benjamin se retiró del equipo y no tiene asignación en este sprint. Sus aportes de AV1 se conservan en el registro de versiones.
 
@@ -3581,14 +3581,14 @@ La [evidencia de ejecución](#5235-execution-evidence-for-sprint-review) reúne 
 
 #### 5.2.3.2. Aspect Leaders and Collaborators
 
-La matriz LACX registra los aportes documentados del Sprint 3. **L** indica liderazgo respaldado por las evidencias, **C** indica colaboración y **—** indica que no hay un aporte registrado para ese aspecto.
+La matriz LACX registra los aportes documentados del Sprint 3. **L** indica liderazgo respaldado por las evidencias, **C** indica colaboración y **Sin participación** identifica los aspectos ajenos a los aportes de cada integrante.
 
-| Team Member | GitHub Username | Backend y persistencia | SPA e integración | Landing y comunicación del producto | Validación y documentación | Tablero y backlog |
+| Integrante | Usuario de GitHub | Backend y persistencia | SPA e integración | Landing y comunicación del producto | Validación y documentación | Tablero y backlog |
 | --- | --- | :---: | :---: | :---: | :---: | :---: |
-| Atauje Barreto, Alexander Sebastián | Alexander1Alexander2 | L | L | C | C | — |
-| Daga Chávez, Joaquín Leonardo | Eshnikeee | — | — | — | C | — |
-| Saavedra Flores, Rodrigo Andree | rodrigoxd67 | — | — | — | C | C |
-| Vera Solsol, Nayely Macarena | Macaxprogram29 | — | — | L | C | C |
+| Atauje Barreto, Alexander Sebastián | Alexander1Alexander2 | L | L | C | C | Sin participación |
+| Daga Chávez, Joaquín Leonardo | Eshnikeee | Sin participación | Sin participación | Sin participación | C | Sin participación |
+| Saavedra Flores, Rodrigo Andree | rodrigoxd67 | Sin participación | Sin participación | Sin participación | C | C |
+| Vera Solsol, Nayely Macarena | Macaxprogram29 | Sin participación | Sin participación | L | C | C |
 
 La [evidencia de desarrollo](#5234-development-evidence-for-sprint-review) y la [verificación del despliegue](#5237-software-deployment-evidence-for-sprint-review) respaldan la integración técnica liderada por Alexander. Nayely realizó [About-the-Product](#54-video-about-the-product) y publicó sus enlaces en el informe y la landing. La [sección de entrevistas](#532-registro-de-entrevistas) y el [registro de colaboración AV2](#liderazgo-compartido-en-av2) documentan las entrevistas de Alexander, el registro AV2-L02 de Joaquín, la estandarización de fichas y la entrevista AV2-L03 de Rodrigo, y la entrevista a Carol registrada por Nayely.
 
