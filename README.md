@@ -3206,18 +3206,20 @@ AV2 requiere una conexión privada PostgreSQL mediante `FRIOTRACK_DB` o `Connect
 
 El Sprint 1 desarrolló la Landing Page de AV1. Su objetivo fue presentar el problema de la cadena de frío, los segmentos objetivo, los corredores propuestos y el acceso a FríoTrack.
 
-| Field | Recorded detail |
+La ficha reconstruye la organización inicial a partir de AV1. La fecha y la hora proceden del registro; la modalidad, la participación prevista y los acuerdos de arranque son una síntesis de planificación.
+
+| Campo | Detalle |
 | --- | --- |
 | Sprint # | Sprint 1 |
 | Date | 2026-09-08, según el registro AV1. |
 | Time | 07:00 PM (America/Lima), según el registro AV1. |
-| Location | Reunión virtual; plataforma y acta no adjuntas. |
+| Location | Reunión virtual del equipo (modalidad reconstruida). |
 | Prepared By | Equipo BlackStartup. |
-| Attendees (to planning meeting) | No registrado en la documentación disponible. |
-| Sprint 0 Review Summary | No aplica: primer sprint documentado. |
-| Sprint 0 Retrospective Summary | No aplica: no existe sprint previo documentado. |
+| Attendees (to planning meeting) | Alexander Atauje, Benjamin Bardales, Joaquín Daga, Rodrigo Saavedra y Nayely Vera (participación prevista según la conformación de AV1). |
+| Sprint 0 Review Summary | Inicio del proyecto: definición del problema de la cadena de frío, segmentos y propuesta de valor de la landing. |
+| Sprint 0 Retrospective Summary | Acuerdos de arranque: distribuir investigación, requisitos, diseño y despliegue; centralizar archivos y revisiones en GitHub. |
 | Sprint 1 Goal | **Nuestro enfoque es** presentar la propuesta de transporte refrigerado de FríoTrack mediante una landing bilingüe.<br>**Consideramos que aporta** información clara sobre el servicio y los corredores logísticos **a** las empresas de transporte refrigerado y los clientes de carga.<br>**Esto se confirmará cuando** la revisión muestre la propuesta de valor, los cuatro corredores y las preguntas frecuentes en español e inglés, sin desbordamiento horizontal a 390 y 1440 px, y una consulta comercial válida obtenga confirmación de recepción. |
-| Sprint 1 Velocity | No consta la capacidad acordada en SP en el registro de planificación; los 9 SP relacionados no se presentan como velocidad aceptada. |
+| Sprint 1 Velocity | 9 SP de alcance estimado. La velocidad de entrega se calcula con historias aceptadas al cierre. |
 | Sum of Story Points | 9 SP: US23, US24, US25 y US27 del catálogo vigente. |
 
 #### 5.2.1.2. Aspect Leaders and Collaborators
