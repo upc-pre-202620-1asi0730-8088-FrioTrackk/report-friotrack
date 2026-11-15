@@ -92,6 +92,7 @@ El siguiente registro conserva las actividades documentadas para AV1 en el repos
 | AV2 | 14/11/2026 | Atauje Barreto, Alexander Sebastián | Incorporación de la entrevista AV2-C01 de Farit Santoyo: video, captura original, resumen de respuestas y alcance parcial de la validación. |
 | AV2 | 14/11/2026 | Atauje Barreto, Alexander Sebastián | Corrección de redacción y presentación del informe y sus anexos. |
 | AV2 | 14/11/2026 | Atauje Barreto, Alexander Sebastián | Incorporación de la entrevista AV2-L01 de Irma Barreto: video, ficha, captura y resumen de validación del perfil cliente. |
+| AV2 | 15/11/2026 | Saavedra Flores, Rodrigo Andree | Revisión del informe en 13 commits: portada final, objetivos en español, planificación, matrices de participación, backlogs, fichas audiovisuales, enlaces y colaboración. |
 
 <div style="page-break-after: always;"></div>
 
@@ -127,17 +128,17 @@ Los registros completos y sus fechas están en [current-commits.json](assets/evi
 
 ### Entrega AV2
 
-El equipo activo mantiene a Alexander, Joaquín, Rodrigo y Nayely. La tabla registra **43 commits sin merges** del informe en `develop`, desde el **12/11/2026 a las 00:00 (hora de Perú)** hasta el corte `9e369345088776af1d3583a57aa398d83925cd84`, del **15/11/2026**. Este corte corresponde a la preparación y actualización de AV2; las correcciones anteriores y las entregas AV1 y TB1 conservan sus registros.
+El equipo activo está conformado por Alexander, Joaquín, Rodrigo y Nayely. El corte AV2 del **15/11/2026** reúne **70 commits sin merges** en `develop`, desde el **12/11/2026 a las 00:00 (hora de Perú)**, e incluye los **13 commits de revisión de Rodrigo**. El [registro de colaboración](assets/evidence/av2/report-collaboration-2026-11-15.json) conserva los commits anteriores a esta revisión final y contabiliza por separado el commit que publica este registro. AV1 y TB1 mantienen sus cortes históricos.
 
 | Integrante | Usuario de GitHub | Commits del informe (sin merges) | Evidencia |
 | --- | --- | --- | --- |
 | Atauje Barreto, Alexander Sebastián | Alexander1Alexander2 | 10 | Documentación de arquitectura relacional e integración del Sprint 3, evidencias de pruebas y despliegue, presentación base y entrevistas de Farit Santoyo e Irma Barreto. [f155aba](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/f155aba22acdcac35619b71eec3a5c4c4b3c6349), [1302fe8](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/1302fe84b55c663c7141ff0f4b1b44c6f52aeb82), [d94d6b2](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/d94d6b2d40ad222c7ed2b48b3a4824e341de629e) y [5e1b01f](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/5e1b01f02486babe7bf0f6157841252e63208f4b). |
 | Bardales Rodriguez, Benjamin Elias | Benja72312 | 0 | Retirado del equipo; sin participación registrada en AV2. Se conservan sus aportes históricos de AV1. |
-| Daga Chávez, Joaquín Leonardo | Eshnikeee | 3 | Incorporación de la entrevista de validación de Gustavo Honorio, captura, autorización y revisión del enlace del video. [bdcdb8d](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/bdcdb8daf430f537f88c197cf22a71b0a2edd306), [0ce82e4](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/0ce82e43f328d011ebf5b91472341037fada465b) y [cbe1271](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/cbe1271dfe4f18a97e7e08d28a704ef17a4598e2). |
-| Saavedra Flores, Rodrigo Andree | rodrigoxd67 | 1 | Estandarización de fichas de validación e incorporación de la entrevista de Jari Hassan Syeda y su captura. [75b182b](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/75b182b2ce15bc9724b895666f9ad3f82f032cb9). |
-| Vera Solsol, Nayely Macarena | Macaxprogram29 | 29 | Incorporación de enlaces de About-the-Product, captura de Trello y actualización de tareas, estados, responsables y evidencias del Sprint Backlog 3; integración del backlog en el informe. [52a38f4](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/52a38f43104b66ee7ffa36a8f7f599d888d406e8), [1e299b3](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/1e299b35314c6e1bd233ae23028b6e61493814da) y [6060878](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/60608781ab84deaf60fa7aca22abf596a221b270). |
+| Daga Chávez, Joaquín Leonardo | Eshnikeee | 16 | Entrevista de validación de Gustavo Honorio y 13 actualizaciones del Sprint 3: objetivo, alcance, aceptación, matriz, evidencias, videos e índice. [bdcdb8d](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/bdcdb8daf430f537f88c197cf22a71b0a2edd306), [0ce82e4](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/0ce82e43f328d011ebf5b91472341037fada465b) y [cbe1271](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/cbe1271dfe4f18a97e7e08d28a704ef17a4598e2). |
+| Saavedra Flores, Rodrigo Andree | rodrigoxd67 | 14 | Estandarización de fichas de validación, entrevista de Jari Hassan Syeda y 13 commits de revisión del informe: carátula, planificación, objetivos en español, matrices, backlogs, videos y registro de colaboración. [75b182b](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/75b182b2ce15bc9724b895666f9ad3f82f032cb9). |
+| Vera Solsol, Nayely Macarena | Macaxprogram29 | 30 | Incorporación de enlaces de About-the-Product, captura de Trello y actualización de tareas, estados, responsables y evidencias del Sprint Backlog 3; integración del backlog en el informe. [52a38f4](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/52a38f43104b66ee7ffa36a8f7f599d888d406e8), [1e299b3](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/1e299b35314c6e1bd233ae23028b6e61493814da) y [6060878](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/60608781ab84deaf60fa7aca22abf596a221b270). |
 
-El [historial del informe al corte AV2](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commits/9e369345088776af1d3583a57aa398d83925cd84/) permite consultar autores, fechas y cambios. Se excluye el commit de merge de la entrevista de Joaquín. Las actualizaciones documentales del backlog forman parte del conteo de Nayely; las tareas descritas mantienen la atribución indicada en sus evidencias.
+El [historial de develop](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commits/develop/) permite consultar autores, fechas y cambios. El conteo excluye merges y se limita al repositorio del informe. Las tareas de implementación conservan la atribución indicada en sus evidencias.
 
 La implementación relacional y sus pruebas se registran en la [API](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-api/commit/8c31d6284ef94c4b857b97392cf25eb744b0e4bf), la integración REST en el [frontend](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/commit/c844513977e1acb47948c2cb76f14035b3bdc26b) y la preparación de reproductores en la [landing](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-landing/commit/36f206712d0952b41ad6b3e6893645d9a0fcc682), con autor registrado Alexander1Alexander2. Nayely realizó el video About-the-Product y su [configuración publicada en la landing](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-landing/commit/6f8e6a090ba20c3b4195d6acb598d2b46bb837fe). El conteo de la tabla comprende únicamente el repositorio del informe.
 
@@ -1776,7 +1777,7 @@ La Landing Page se implementó con HTML, CSS y JavaScript sin bibliotecas extern
 
 | N.º | Sección | Propósito | Contenido principal |
 | :---: | :--- | :--- | :--- |
-| 1 | **Encabezado y héroe** | Explicar la propuesta de valor y dirigir a la acción. | Barra de navegación con logotipo, seis enlaces (Inicio, Quiénes somos, Lo que hacemos, Planes, Equipo, Contacto), «Iniciar sesión», «Registrarse» y selector ES | EN; titular «Tu carga perecible, vigilada en cada kilómetro», con la segunda línea en degradado turquesa y azul; botones «Probar FríoTrack» y «Ver cómo funciona»; tres beneficios con ícono; panel simulado de una unidad con lecturas de temperatura y humedad y un botón para simular una falla del equipo de frío. La barra de navegación es transparente sobre el fondo azul noche del héroe y pasa a fondo blanco al desplazarse. Al pie del bloque, una franja con las cargas que se cuidan en ruta (arándanos, espárragos, palta, uva, mango, banano orgánico, cítricos y productos hidrobiológicos). |
+| 1 | **Encabezado y héroe** | Explicar la propuesta de valor y dirigir a la acción. | Barra de navegación con logotipo, seis enlaces (Inicio, Quiénes somos, Lo que hacemos, Planes, Equipo, Contacto), «Iniciar sesión», «Registrarse» y selector ES / EN; titular «Tu carga perecible, vigilada en cada kilómetro», con la segunda línea en degradado turquesa y azul; botones «Probar FríoTrack» y «Ver cómo funciona»; tres beneficios con ícono; panel simulado de una unidad con lecturas de temperatura y humedad y un botón para simular una falla del equipo de frío. La barra de navegación es transparente sobre el fondo azul noche del héroe y pasa a fondo blanco al desplazarse. Al pie del bloque, una franja con las cargas que se cuidan en ruta (arándanos, espárragos, palta, uva, mango, banano orgánico, cítricos y productos hidrobiológicos). |
 | 2 | **El problema** | Justificar la necesidad con datos verificables. | Tres indicadores: puesto 61 de 139 en el Índice de Desempeño Logístico (Banco Mundial, 2023), más de 12 millones de toneladas de alimentos perdidos o desperdiciados en Perú (estimación nacional, no atribuible solo al transporte) (Organización de las Naciones Unidas para la Alimentación y la Agricultura [FAO], 2026) y 41 corredores logísticos identificados (Ministerio de Transportes y Comunicaciones [MTC], 2023); comparación entre «Hoy, en ruta» (tarjeta de borde punteado) y «Con FríoTrack» (tarjeta azul noche). |
 | 3 | **Quiénes somos** | Presentar al equipo y su propósito. | Descripción de BlackStartup como empresa de base tecnológica peruana, misión y visión definidas en el Capítulo I, cada una en una tarjeta con ícono. |
 | 4 | **Lo que hacemos** | Detallar las capacidades. | Siete tarjetas en una cuadrícula tipo *bento* sobre fondo azul noche: panel en tiempo casi real, alertas automáticas, historial térmico, mapa de rutas, flota y conductores, búsqueda y filtros, y avisos dentro de la aplicación. Cada tarjeta incluye una mini-interfaz ilustrativa del producto. |
@@ -3210,17 +3211,17 @@ La ficha reconstruye la organización inicial a partir de AV1. La fecha y la hor
 
 | Campo | Detalle |
 | --- | --- |
-| Sprint # | Sprint 1 |
-| Date | 2026-09-08, según el registro AV1. |
-| Time | 07:00 PM (America/Lima), según el registro AV1. |
-| Location | Reunión virtual del equipo (modalidad reconstruida). |
-| Prepared By | Equipo BlackStartup. |
-| Attendees (to planning meeting) | Alexander Atauje, Benjamin Bardales, Joaquín Daga, Rodrigo Saavedra y Nayely Vera (participación prevista según la conformación de AV1). |
-| Sprint 0 Review Summary | Inicio del proyecto: definición del problema de la cadena de frío, segmentos y propuesta de valor de la landing. |
-| Sprint 0 Retrospective Summary | Acuerdos de arranque: distribuir investigación, requisitos, diseño y despliegue; centralizar archivos y revisiones en GitHub. |
-| Sprint 1 Goal | **Nuestro enfoque es** presentar la propuesta de transporte refrigerado de FríoTrack mediante una landing bilingüe.<br>**Consideramos que aporta** información clara sobre el servicio y los corredores logísticos **a** las empresas de transporte refrigerado y los clientes de carga.<br>**Esto se confirmará cuando** la revisión muestre la propuesta de valor, los cuatro corredores y las preguntas frecuentes en español e inglés, sin desbordamiento horizontal a 390 y 1440 px, y una consulta comercial válida obtenga confirmación de recepción. |
-| Sprint 1 Velocity | 9 SP de alcance estimado. La velocidad de entrega se calcula con historias aceptadas al cierre. |
-| Sum of Story Points | 9 SP: US23, US24, US25 y US27 del catálogo vigente. |
+| Sprint | Sprint 1 |
+| Fecha | 2026-09-08, según el registro AV1. |
+| Hora | 07:00 PM (America/Lima), según el registro AV1. |
+| Lugar | Reunión virtual del equipo (modalidad reconstruida). |
+| Preparado por | Equipo BlackStartup. |
+| Participantes previstos | Alexander Atauje, Benjamin Bardales, Joaquín Daga, Rodrigo Saavedra y Nayely Vera (participación prevista según la conformación de AV1). |
+| Resumen de arranque | Inicio del proyecto: definición del problema de la cadena de frío, segmentos y propuesta de valor de la landing. |
+| Acuerdos iniciales | Acuerdos de arranque: distribuir investigación, requisitos, diseño y despliegue; centralizar archivos y revisiones en GitHub. |
+| Objetivo del Sprint 1 | **Nuestro enfoque es** presentar la propuesta de transporte refrigerado de FríoTrack mediante una landing bilingüe.<br>**Consideramos que aporta** información clara sobre el servicio y los corredores logísticos **a** las empresas de transporte refrigerado y los clientes de carga.<br>**Esto se confirmará cuando** la revisión muestre la propuesta de valor, los cuatro corredores y las preguntas frecuentes en español e inglés, sin desbordamiento horizontal a 390 y 1440 px, y una consulta comercial válida obtenga confirmación de recepción. |
+| Capacidad de referencia | 9 SP de alcance estimado. La velocidad de entrega se calcula con historias aceptadas al cierre. |
+| Suma de Story Points | 9 SP: US23, US24, US25 y US27 del catálogo vigente. |
 
 #### 5.2.1.2. Aspect Leaders and Collaborators
 
@@ -3303,17 +3304,17 @@ La siguiente ficha es una reconstrucción de planificación: fecha, hora y modal
 
 | Campo | Detalle |
 | --- | --- |
-| Sprint # | Sprint 2 — TB1 |
-| Date | 07/10/2026 (fecha estimada de referencia para la integración TB1). |
-| Time | 19:00–20:00, hora de Perú (franja estimada). |
-| Location | Reunión virtual del equipo (modalidad estimada). |
-| Prepared By | Equipo BlackStartup; Team Leader: Atauje Barreto, Alexander Sebastián. |
-| Attendees | Alexander Sebastián Atauje Barreto, Joaquín Leonardo Daga Chávez, Rodrigo Andree Saavedra Flores y Nayely Macarena Vera Solsol (participación prevista). |
-| Sprint 1 Review Summary | Landing implementada; el formulario comercial aún requiere receptor. Se actualizaron los accesos hacia la aplicación pública. |
-| Sprint 1 Retrospective Summary | Centralizar requisitos y evidencias; revisar la autorización por perfil antes del despliegue y coordinar los cambios entre landing, aplicación y API. |
-| Sprint 2 Goal | **Nuestro enfoque es** permitir que el Coordinador Logístico opere envíos refrigerados y que el Cliente de Carga consulte sus envíos asignados desde una aplicación bilingüe.<br>**Consideramos que aporta** control centralizado de la operación y acceso restringido a la información **a** las empresas de transporte y sus clientes.<br>**Esto se confirmará cuando** un coordinador programe un envío válido y registre una acción correctiva; un cliente consulte únicamente sus envíos y reciba un rechazo ante comandos de coordinación; y se superen las cuatro comprobaciones de acceso y autorización en español e inglés. |
-| Sprint 2 Velocity | 75 SP de alcance estimado; la velocidad de entrega depende de las historias aceptadas al cierre. |
-| Sum of Story Points | 75 SP de 20 historias relacionadas con la implementación; no equivalen a puntos aceptados ni a velocidad. |
+| Sprint | Sprint 2 — TB1 |
+| Fecha | 07/10/2026 (fecha estimada de referencia para la integración TB1). |
+| Hora | 19:00–20:00, hora de Perú (franja estimada). |
+| Lugar | Reunión virtual del equipo (modalidad estimada). |
+| Preparado por | Equipo BlackStartup; Team Leader: Atauje Barreto, Alexander Sebastián. |
+| Participantes previstos | Alexander Sebastián Atauje Barreto, Joaquín Leonardo Daga Chávez, Rodrigo Andree Saavedra Flores y Nayely Macarena Vera Solsol (participación prevista). |
+| Resumen de revisión del Sprint 1 | Landing implementada; el formulario comercial aún requiere receptor. Se actualizaron los accesos hacia la aplicación pública. |
+| Aprendizajes del Sprint 1 | Centralizar requisitos y evidencias; revisar la autorización por perfil antes del despliegue y coordinar los cambios entre landing, aplicación y API. |
+| Objetivo del Sprint 2 | **Nuestro enfoque es** permitir que el Coordinador Logístico opere envíos refrigerados y que el Cliente de Carga consulte sus envíos asignados desde una aplicación bilingüe.<br>**Consideramos que aporta** control centralizado de la operación y acceso restringido a la información **a** las empresas de transporte y sus clientes.<br>**Esto se confirmará cuando** un coordinador programe un envío válido y registre una acción correctiva; un cliente consulte únicamente sus envíos y reciba un rechazo ante comandos de coordinación; y se superen las cuatro comprobaciones de acceso y autorización en español e inglés. |
+| Capacidad de referencia | 75 SP de alcance estimado; la velocidad de entrega depende de las historias aceptadas al cierre. |
+| Suma de Story Points | 75 SP de 20 historias relacionadas con la implementación; no equivalen a puntos aceptados ni a velocidad. |
 
 El periodo de integración técnica registrado es 07–08/10/2026, hora de Perú.
 
@@ -3354,11 +3355,11 @@ Las estimaciones de revisión se elaboraron el **10/11/2026**, con 4–8 horas p
 | US34 | Gestión de estados del envío | S2-T07A | Aplicar transiciones de envío | Permitir iniciar y entregar; impedir cancelación en tránsito o entregado y conservar autor y fecha. | 6 | Rodrigo — integración API | To Review | Ciclo implementado según registro; no hay aceptación del equipo adjunta. |
 | US34 | Gestión de estados del envío | S2-T07B | Validar historial y liberación | Comprobar transiciones rechazadas y liberación de recursos al entregar o cancelar un envío programado. | 4 | Rodrigo — integración API | To Do | Revisión integral sujeta a revisión de cierre; DRAFT persistido pertenece al diseño objetivo. |
 | US01 | Telemetría en vivo en el panel | S2-T08A | Consultar últimas lecturas | Presentar lectura y fecha del envío autorizado; distinguir datos de prueba y antigüedad de medición. | 6 | Rodrigo — integración API | To Review | Se muestran datos de prueba; no acredita sensores físicos ni ingesta en vivo. |
-| US01 | Telemetría en vivo en el panel | S2-T08B | Integrar recepción y pérdida de señal | Integrar nuevas lecturas y verificar ausencia de actualización sin presentarlas como valores actuales. | 8 | Rodrigo — integración API | To Do | No consta integración de sensores físicos o flujo de nuevas mediciones. |
+| US01 | Telemetría en vivo en el panel | S2-T08B | Integrar recepción y pérdida de señal | Integrar nuevas lecturas y verificar ausencia de actualización sin presentarlas como valores actuales. | 8 | Rodrigo — integración API | To Do | Integración con sensores físicos fuera del alcance del corte TB1. |
 | US02 | Mapa interactivo de rutas | S2-T08C | Consultar posiciones autorizadas | Relacionar recorrido y posición con el envío y marcar la ubicación ilustrativa cuando corresponda. | 6 | Rodrigo — integración API | To Review | Mapa ilustrativo implementado; ubicación real fuera del alcance de este corte. |
-| US02 | Mapa interactivo de rutas | S2-T08D | Verificar posiciones y proveedor | Comprobar posición válida, ausencia de coordenadas y fallo de teselas; registrar el comportamiento. | 4 | Rodrigo — integración API | To Do | Resultados completos de aceptación de consulta geográfica no registrados. |
+| US02 | Mapa interactivo de rutas | S2-T08D | Verificar posiciones y proveedor | Comprobar posición válida, ausencia de coordenadas y fallo de teselas; registrar el comportamiento. | 4 | Rodrigo — integración API | To Do | Aceptación de la consulta geográfica pendiente de revisión. |
 | US03 | Búsqueda y filtros de envíos | S2-T09A | Aplicar búsqueda y filtros | Filtrar los envíos autorizados por código y unidad y resolver consultas sin coincidencias. | 4 | Rodrigo — integración API | To Review | Implementado; filtros completos por revisar según registro original. |
-| US03 | Búsqueda y filtros de envíos | S2-T09B | Revisar filtros y aislamiento | Comprobar coincidencias, resultados vacíos y ausencia de datos no autorizados con casos identificados. | 4 | Rodrigo — integración API | To Do | No consta cierre de la revisión funcional completa de filtros. |
+| US03 | Búsqueda y filtros de envíos | S2-T09B | Revisar filtros y aislamiento | Comprobar coincidencias, resultados vacíos y ausencia de datos no autorizados con casos identificados. | 4 | Rodrigo — integración API | To Do | Revisión funcional completa de filtros pendiente de cierre. |
 | US05 | Detalle de telemetría por unidad | S2-T08E | Consultar detalle de mediciones | Exponer las series y unidades disponibles del envío sin convertir datos de ejemplo en lecturas reales. | 6 | Rodrigo — integración API | To Review | Gráfica y tabla de prueba disponibles; no hay mediciones de vibración verificadas. |
 | US05 | Detalle de telemetría por unidad | S2-T08F | Completar variables y ausencia de datos | Integrar variables comprometidas y probar periodos sin mediciones y sus unidades de medida. | 8 | Rodrigo — integración API | To Do | Sensores y vibración no están implementados según registro original. |
 | US08 | Configuración de umbrales térmicos | S2-T10A | Validar rangos ambientales | Aplicar mínimo menor que máximo y humedad entre 0 y 100 al programar el envío. | 4 | Rodrigo — integración API | To Review | Reglas verificadas para rangos del envío; aceptación de producto sujeta a revisión de cierre. |
@@ -3374,7 +3375,7 @@ Las estimaciones de revisión se elaboraron el **10/11/2026**, con 4–8 horas p
 | US36 | Consulta de envíos del Cliente de Carga | S2-T13A | Filtrar información por cliente | Aplicar autorización del servidor a envíos, alertas y recursos y rechazar comandos de coordinación. | 6 | Rodrigo | To Review | Aislamiento verificado en pruebas API; aceptación del equipo sujeta a revisión de cierre. |
 | US36 | Consulta de envíos del Cliente de Carga | S2-T13B | Revisar consulta de ambos clientes | Ejecutar accesos cruzados y comandos no autorizados y vincular resultados a ambos escenarios. | 4 | Rodrigo | To Review | Hay verificaciones de autorización; corresponde revisar su cobertura y aceptar el resultado. |
 | US14 | Registro de nueva unidad refrigerada | S2-T05A | Registrar unidad y unicidad | Validar capacidad positiva, placa y sensor únicos antes de guardar una unidad. | 6 | Rodrigo — integración API | To Review | Implementado; revisión funcional del equipo abierta en registro original. |
-| US14 | Registro de nueva unidad refrigerada | S2-T05B | Revisar altas válidas y duplicadas | Comprobar alta correcta, placa duplicada y capacidad inválida con persistencia consistente. | 4 | Rodrigo — integración API | To Do | No consta aceptación funcional completa de US14. |
+| US14 | Registro de nueva unidad refrigerada | S2-T05B | Revisar altas válidas y duplicadas | Comprobar alta correcta, placa duplicada y capacidad inválida con persistencia consistente. | 4 | Rodrigo — integración API | To Do | Aceptación funcional de US14 pendiente de revisión. |
 | US15 | Edición de datos de unidad | S2-T05C | Actualizar unidad protegida | Actualizar datos válidos y proteger los recursos que mantienen una asignación vigente. | 6 | Rodrigo — integración API | To Review | Implementado; se mantiene la revisión funcional abierta. |
 | US15 | Edición de datos de unidad | S2-T05D | Revisar actualización y conflictos | Comprobar datos obligatorios, duplicados y edición de unidades asignadas sin alterar reservas. | 4 | Rodrigo — integración API | To Do | Aceptación funcional integral de US15 sujeta a revisión de cierre. |
 | US16 | Registro de conductores | S2-T06A | Registrar identidad del conductor | Registrar datos y licencia única y validar los campos disponibles antes de habilitar un conductor. | 6 | Rodrigo — integración API | To Review | Registro implementado; vigencia de licencia no verificada. |
@@ -3382,7 +3383,7 @@ Las estimaciones de revisión se elaboraron el **10/11/2026**, con 4–8 horas p
 | US17 | Asignación de conductor a vehículo | S2-T06C | Reservar conductor y unidad | Validar disponibilidad y solapamiento para la reserva conjunta durante el intervalo del envío. | 6 | Rodrigo — integración API | To Review | Validación descrita en API; aceptación del equipo abierta. |
 | US17 | Asignación de conductor a vehículo | S2-T06D | Revisar reservas simultáneas | Comprobar solapamiento de conductor y vehículo y ausencia de reservas parciales ante rechazo. | 4 | Rodrigo — integración API | To Do | Aceptación integral de conflictos y simultaneidad sujeta a revisión de cierre. |
 | US31 | Planes y acceso desde la Landing | S2-T15A | Conectar entradas por segmento | Mantener enlaces de entrada al login con perfil e idioma sin asignar privilegios desde la URL. | 4 | Rodrigo | To Review | Entrada por perfil e idioma documentada en octubre; repositorio landing actualizado en release 0.1.0 del 10/11. Aceptación del equipo sujeta a revisión de cierre. |
-| US31 | Planes y acceso desde la Landing | S2-T15B | Revisar enlaces de entrada y fallo | Comprobar ambos segmentos e idiomas y documentar comportamiento cuando el acceso no responde. | 4 | Rodrigo | To Do | No consta revisión integral del escenario de indisponibilidad. |
+| US31 | Planes y acceso desde la Landing | S2-T15B | Revisar enlaces de entrada y fallo | Comprobar ambos segmentos e idiomas y documentar comportamiento cuando el acceso no responde. | 4 | Rodrigo | To Do | Escenario de indisponibilidad pendiente de revisión integral. |
 | US25 | Formulario de contacto comercial | S2-T18A | Configurar receptor comercial | Definir destino autorizado y conectar el transporte de la solicitud con recepción confirmada. | 6 | Equipo BlackStartup (asignación propuesta) | To Do | No hay receptor operativo acreditado ni asignación histórica registrada. |
 | US25 | Formulario de contacto comercial | S2-T18B | Verificar recepción y fallos | Ejecutar recepción válida, correo inválido y fallo de transporte y conservar evidencia del resultado real. | 4 | Equipo BlackStartup (asignación propuesta) | To Do | Depende del receptor; no se acepta una confirmación solo local como recepción. |
 | US30 | Gestión de multi-idioma (i18n) | S2-T14A | Mantener traducciones y preferencia | Aplicar inglés por defecto y conservar el idioma explícito durante los flujos disponibles. | 6 | Rodrigo — integración publicada | To Review | Recorridos registrados en ambos idiomas; revisar cobertura completa. |
@@ -3546,15 +3547,15 @@ La ficha organiza el incremento a partir del corte técnico del 13/11 y las entr
 
 | Campo | Detalle |
 | --- | --- |
-| Sprint # | Sprint 3 — AV2 |
-| Date | 12/11/2026 (fecha estimada de inicio de planificación). |
-| Time | 19:00–20:00, hora de Perú (franja estimada). |
-| Location | Reunión virtual del equipo (modalidad estimada). |
-| Prepared By | Equipo BlackStartup; coordinación: Alexander Sebastián Atauje Barreto. |
-| Attendees | Alexander Sebastián Atauje Barreto, Joaquín Leonardo Daga Chávez, Rodrigo Andree Saavedra Flores y Nayely Macarena Vera Solsol (participación prevista). |
-| Sprint 2 Review Summary | Aplicación bilingüe publicada en Azure; acceso por perfil, programación de envíos y consulta del cliente integrados con la API. |
-| Sprint 2 Retrospective Summary | Consolidar la persistencia relacional, probar reservas concurrentes y mantener evidencia por versión y por perfil. |
-| Sprint 3 Goal | **Nuestro enfoque es** integrar la operación y consulta de envíos refrigerados con una API REST y PostgreSQL.<br>**Consideramos que aporta** continuidad de la información y control de acceso **a** coordinadores logísticos y clientes de carga.<br>**Esto se confirmará cuando** un coordinador programe un envío válido, una reserva solapada sea rechazada sin cambios parciales, el historial y las lecturas persistan tras reiniciar el servicio y el cliente consulte únicamente sus envíos asignados. |
+| Sprint | Sprint 3 — AV2 |
+| Fecha | 12/11/2026 (fecha estimada de inicio de planificación). |
+| Hora | 19:00–20:00, hora de Perú (franja estimada). |
+| Lugar | Reunión virtual del equipo (modalidad estimada). |
+| Preparado por | Equipo BlackStartup; coordinación: Alexander Sebastián Atauje Barreto. |
+| Participantes previstos | Alexander Sebastián Atauje Barreto, Joaquín Leonardo Daga Chávez, Rodrigo Andree Saavedra Flores y Nayely Macarena Vera Solsol (participación prevista). |
+| Resumen de revisión del Sprint 2 | Aplicación bilingüe publicada en Azure; acceso por perfil, programación de envíos y consulta del cliente integrados con la API. |
+| Aprendizajes del Sprint 2 | Consolidar la persistencia relacional, probar reservas concurrentes y mantener evidencia por versión y por perfil. |
+| Objetivo del Sprint 3 | **Nuestro enfoque es** integrar la operación y consulta de envíos refrigerados con una API REST y PostgreSQL.<br>**Consideramos que aporta** continuidad de la información y control de acceso **a** coordinadores logísticos y clientes de carga.<br>**Esto se confirmará cuando** un coordinador programe un envío válido, una reserva solapada sea rechazada sin cambios parciales, el historial y las lecturas persistan tras reiniciar el servicio y el cliente consulte únicamente sus envíos asignados. |
 | Capacidad estimada | 204 horas distribuidas en 30 tareas; estimaciones de 4 a 8 horas por tarea. |
 | Seguimiento del avance | Estados por tarea y criterios de aceptación del incremento; las horas estimadas se mantienen separadas de la velocidad en Story Points. |
 

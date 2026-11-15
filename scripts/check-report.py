@@ -47,7 +47,7 @@ assert len(storyrows)==43 and results['scenarioMarkers']==86 and not gherkin, 'I
 assert all(not s['invalidHours'] and not s['invalidStatus'] for s in sprints.values()), 'Invalid backlog values'
 assert 'IAM' in results['boundedContextHeadings'][-1], 'Generic context must follow operational contexts'
 for phrase in ['Nuestro enfoque es','Consideramos que aporta','Esto se confirmará cuando']:
-    assert text.count(phrase)>=2, 'Missing Sprint Goal template clause: '+phrase
+    assert text.count(phrase)==3, 'Missing Sprint Goal template clause: '+phrase
 architecture=repo/'assets/architecture/chapter-04'
 manifest=json.loads((architecture/'manifest.json').read_text(encoding='utf-8-sig'))
 assert len(manifest)==22 and len({d['id'] for d in manifest})==22, 'Expected22distinctarchitectureviews'
@@ -61,9 +61,21 @@ for entry in manifest:
     assert (architecture/'fuentes'/f"{entry['id']}.json").is_file(), 'Missing model source: '+entry['id']
     assert '/revision-2026-11-11/'+entry['id']+'.png' in text, 'Architecture view missing from report: '+entry['id']
 results['architectureViews']=len(manifest)
-for n in (1,2):
+for n in (1,2,3):
     planning=text.split(f'#### 5.2.{n}.{1}. Sprint Planning {n}',1)[1].split(f'#### 5.2.{n}.2.',1)[0]
-    assert all(f'| {field} |' in planning for field in ('Date','Time','Location')), 'Separate planning date/time/location required'
+    assert all(f'| {field} |' in planning for field in ('Fecha','Hora','Lugar','Preparado por','Participantes previstos')), 'Complete Spanish planning fields required'
+    assert not re.search(r'\|\s*(?:—|No registrad[^|]*)\s*\|',planning), 'Incomplete sprint planning field'
+
+# Markdown tables must retain the same number of cells after editorial changes.
+table_width=None
+for number,row in enumerate(text.splitlines(),1):
+    if row.startswith('|') and row.endswith('|'):
+        width=len(re.split(r'(?<!\\)\|',row))-2
+        if table_width is None: table_width=width
+        assert width==table_width, f'Inconsistent table width at line {number}'
+    else: table_width=None
+assert '## Informe de Trabajo Final\n' in text, 'Unexpected report cover title'
+assert 'Our focus is on' not in text, 'Sprint goal must be in Spanish'
 
 av2=repo/'assets/architecture/av2'
 c4_manifest=json.loads((av2/'c4-manifest.json').read_text(encoding='utf-8'))
