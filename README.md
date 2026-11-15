@@ -3533,7 +3533,7 @@ Este corte documenta el incremento técnico de AV2: arquitectura, integración, 
 
 #### 5.2.3.1. Sprint Planning 3
 
-El incremento propuesto integra los recorridos operativos de FríoTrack con el backend relacional y prepara una versión estable para validación con los segmentos objetivo. El alcance y la capacidad deben ser acordados por el equipo.
+El Sprint 3 busca que el Coordinador Logístico pueda programar y supervisar envíos refrigerados y que el Cliente de Carga pueda consultar sus entregas asignadas. El incremento integra la aplicación web con la API REST y PostgreSQL para conservar el historial de cada envío y controlar el acceso por perfil.
 
 | Field | Detail |
 | --- | --- |
@@ -3545,11 +3545,8 @@ El incremento propuesto integra los recorridos operativos de FríoTrack con el b
 | Attendees | — |
 | Sprint 2 Review Summary | — |
 | Sprint 2 Retrospective Summary | — |
-| Sprint 3 Goal — propuesta | **Our focus is on** enabling logistics coordinators to manage refrigerated shipments and cargo clients to consult their assigned shipments through one persistent, integrated web experience.<br>**We believe it delivers** reliable operational traceability and controlled access **to** refrigerated transport companies and their cargo clients.<br>**This will be confirmed when** the review demonstrates one valid shipment booked without overlapping resources, its lifecycle and alert attention preserved after restarting the service, and a cargo client consulting only assigned shipments while unauthorized management requests are rejected. |
 | Sprint 3 Velocity | — |
 | Sum of Story Points | — |
-
-El objetivo se presenta como propuesta de alcance; la tabla diferencia ese objetivo de las métricas registradas.
 
 #### 5.2.3.2. Aspect Leaders and Collaborators
 
