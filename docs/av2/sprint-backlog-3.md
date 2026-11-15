@@ -12,8 +12,8 @@ La tabla vincula las historias con sus tareas y mantiene las estimaciones del [b
 
 | Story Id | Story Title | Task Id | Task Title | Task Description | Estimation (Hours) | Assigned To | Status |
 |---|---|---|---|---|---:|---|---|
-| US33 / US08 | US33: Programación de envío refrigerado; US08: Configuración de umbrales térmicos | S3-T01 | Implementar modelo de envío y rango | Proteger invariantes ambientales y de programación con clases tipadas. | 8 | — | To Do |
-| US19 / US20 / US32 / TS05 | US19: Inicio de sesión en el sistema; US20: Cierre de sesión seguro; US32: Registro de Cliente de Carga; TS05: Endpoint de autenticación y sesión | S3-T02 | Integrar identidad y sesión persistente | Conservar autenticación segura y permisos de coordinador y cliente con persistencia. | 8 | — | To Do |
+| US33 / US08 | US33: Programación de envío refrigerado; US08: Configuración de umbrales térmicos | S3-T01 | Implementar modelo de envío y rango | Proteger invariantes ambientales y de programación con clases tipadas. | 8 | Alexander Sebastián Atauje Barreto | To-Review |
+| US19 / US20 / US32 / TS05 | US19: Inicio de sesión en el sistema; US20: Cierre de sesión seguro; US32: Registro de Cliente de Carga; TS05: Endpoint de autenticación y sesión | S3-T02 | Integrar identidad y sesión persistente | Conservar autenticación segura y permisos de coordinador y cliente con persistencia. | 8 | Alexander Sebastián Atauje Barreto | To-Review |
 | TS01 / TS03 | TS01: Endpoint de consulta de envíos activos; TS03: Endpoint de gestión de flotas | S3-T03 | Mapear el modelo con EF Core | Configurar entidades relaciones claves y tipos para PostgreSQL. | 8 | — | To Do |
 | TS01 / TS03 | TS01: Endpoint de consulta de envíos activos; TS03: Endpoint de gestión de flotas | S3-T04 | Crear migración y datos de demostración | Preparar migración inicial y semillas ficticias sin sobrescribir datos existentes. | 6 | — | To Do |
 | US33 / US17 | US33: Programación de envío refrigerado; US17: Asignación de conductor a vehículo | S3-T05 | Confirmar reservas de forma consistente | Evitar solapamiento de vehículo y conductor y cambios parciales al programar. | 8 | — | To Do |
