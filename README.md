@@ -3782,14 +3782,14 @@ El formato relaciona cada hallazgo con la tarea evaluada, la evidencia, el princ
 
 ## 5.4. Video About-the-Product
 
-La [pauta de About-the-Product](docs/av2/video-scripts.md#about-the-product--1-a-3-minutos) prepara un video de **1–3 minutos** con problema, propuesta, demostración de la versión, opiniones auténticas de ambos segmentos y CTA. El material debe incluir al menos un testimonio positivo real obtenido de la validación.
+El video About-the-Product de FríoTrack para AV2 se encuentra disponible en YouTube y Microsoft Stream.
 
-El formato de publicación contempla Microsoft Stream y YouTube. La landing utiliza un reproductor opcional que se muestra únicamente con una URL de YouTube válida.
-
-| Recurso AV2 | Registro |
+| Recurso AV2 | Enlace |
 | --- | --- |
-| Video About-the-Product | — |
-| Duración | — |
+| YouTube | [Ver About-the-Product — FríoTrack](https://youtu.be/t8ZrSPgQvr0) |
+| Microsoft Stream | [Ver About-the-Product — FríoTrack](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231h171_upc_edu_pe/IQARw8S5KAaMT4ehigZYnNDSAcF3Q_VvbYp2J2RhKlbvCBk?e=pMcJko&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D) |
+
+La landing utiliza el enlace de YouTube para mostrar el reproductor de producto. La [pauta de About-the-Product](docs/av2/video-scripts.md#about-the-product--1-a-3-minutos) conserva los criterios de la entrega.
 
 ## 5.5. Video About-the-Team
 
