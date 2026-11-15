@@ -1,6 +1,6 @@
 # Sprint 3 — AV2
 
-El [informe principal](../../README.md#523-sprint-3--preparación-av2) reúne planificación, contratos y evidencias del incremento.
+El [informe principal](../../README.md#523-sprint-3--av2) reúne planificación, contratos y evidencias del incremento.
 
 | Sección | Contenido del informe |
 | --- | --- |

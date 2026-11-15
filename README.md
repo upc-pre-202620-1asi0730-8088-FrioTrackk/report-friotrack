@@ -113,7 +113,7 @@ El equipo distribuyó las actividades de investigación, requisitos, diseño e i
 
 El equipo activo está conformado por Alexander, Joaquín, Rodrigo y Nayely. Benjamin se retiró antes de esta entrega. La tabla refleja el corte de `main` de la captura de Contributors: **35 commits sin merges**, hasta la integración de `v2.0.0` (`fdd34cb`). Las correcciones posteriores de esta entrega se consultan en el historial de `develop` y `main`.
 
-| Team Member | GitHub Username | Report commits (excluding merges) | Evidence |
+| Integrante | Usuario de GitHub | Commits del informe (sin merges) | Evidencia |
 | --- | --- | --- | --- |
 | Atauje Barreto, Alexander Sebastián | Alexander1Alexander2 | 10 | Capítulo I, navegación e integración del Capítulo V. [5875269](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/58752691c08a90ce27e2d2cf3c8ca0cb5b10565c). |
 | Bardales Rodriguez, Benjamin Elias | Benja72312 | 0 | Retirado del equipo en TB1; sin participación en esta entrega. Se conservan sus aportes históricos de AV1. |
@@ -129,7 +129,7 @@ Los registros completos y sus fechas están en [current-commits.json](assets/evi
 
 El equipo activo mantiene a Alexander, Joaquín, Rodrigo y Nayely. La tabla registra **43 commits sin merges** del informe en `develop`, desde el **12/11/2026 a las 00:00 (hora de Perú)** hasta el corte `9e369345088776af1d3583a57aa398d83925cd84`, del **15/11/2026**. Este corte corresponde a la preparación y actualización de AV2; las correcciones anteriores y las entregas AV1 y TB1 conservan sus registros.
 
-| Team Member | GitHub Username | Report commits (excluding merges) | Evidence |
+| Integrante | Usuario de GitHub | Commits del informe (sin merges) | Evidencia |
 | --- | --- | --- | --- |
 | Atauje Barreto, Alexander Sebastián | Alexander1Alexander2 | 10 | Documentación de arquitectura relacional e integración del Sprint 3, evidencias de pruebas y despliegue, presentación base y entrevistas de Farit Santoyo e Irma Barreto. [f155aba](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/f155aba22acdcac35619b71eec3a5c4c4b3c6349), [1302fe8](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/1302fe84b55c663c7141ff0f4b1b44c6f52aeb82), [d94d6b2](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/d94d6b2d40ad222c7ed2b48b3a4824e341de629e) y [5e1b01f](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/5e1b01f02486babe7bf0f6157841252e63208f4b). |
 | Bardales Rodriguez, Benjamin Elias | Benja72312 | 0 | Retirado del equipo; sin participación registrada en AV2. Se conservan sus aportes históricos de AV1. |
@@ -247,7 +247,7 @@ La carátula y el informe completo se mantienen en Markdown dentro de este `READ
   - [5.2. Landing Page, Services & Applications Implementation](#52-landing-page-services--applications-implementation)
     - [5.2.1. Sprint 1](#521-sprint-1)
     - [5.2.2. Sprint 2](#522-sprint-2)
-    - [5.2.3. Sprint 3 — Preparación AV2](#523-sprint-3--preparación-av2)
+    - [5.2.3. Sprint 3 — AV2](#523-sprint-3--av2)
       - [5.2.3.1. Sprint Planning 3](#5231-sprint-planning-3)
       - [5.2.3.2. Aspect Leaders and Collaborators](#5232-aspect-leaders-and-collaborators)
       - [5.2.3.5. Execution Evidence for Sprint Review](#5235-execution-evidence-for-sprint-review)
@@ -3519,7 +3519,7 @@ La siguiente captura corresponde a **35 commits sin merges en `main`**, al corte
 
 *Figura. GitHub Contributors del repositorio report-friotrack: Rodrigo 13, Alexander 10, Joaquín 8 y Nayely 4. Captura proporcionada por el equipo para la entrega TB1.*
 
-| Team Member | GitHub Username | Report commits (excluding merges) | Evidence |
+| Integrante | Usuario de GitHub | Commits del informe (sin merges) | Evidencia |
 | --- | --- | --- | --- |
 | Atauje Barreto, Alexander Sebastián | Alexander1Alexander2 | 10 | Capítulo I, navegación e integración del Capítulo V. [5875269](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/58752691c08a90ce27e2d2cf3c8ca0cb5b10565c). |
 | Bardales Rodriguez, Benjamin Elias | Benja72312 | 0 | Retirado del equipo en TB1; sin participación en esta entrega. Se conservan sus aportes históricos de AV1. |
@@ -3530,7 +3530,7 @@ La siguiente captura corresponde a **35 commits sin merges en `main`**, al corte
 
 Benjamin no participó en TB1 por su retiro; el Participant Performance Report registra 00. Los cuatro integrantes activos mantienen la evaluación de 20 consignada en el documento compartido por el equipo. El número de commits sirve como evidencia de colaboración y no determina la calificación.
 
-### 5.2.3. Sprint 3 — Preparación AV2
+### 5.2.3. Sprint 3 — AV2
 
 [PDF del corte técnico AV2](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/releases/download/v3.0.0-av2.4/upc-pre-202620-1asi0730-8088-blackstartup-report-av2.pdf). El archivo corresponde al corte técnico identificado por su release.
 
@@ -3659,7 +3659,7 @@ La tabla vincula las historias con sus tareas y mantiene las estimaciones del [b
 
 **Evidencias de trabajo**
 
-- **Alexander Atauje Barreto:** [implementación relacional de la API](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-api/commit/8c31d62), [pruebas PostgreSQL](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-api/commit/e9aca8e), [integración REST de la SPA](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/commit/c844513), [preparación de la landing](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-landing/commit/36f2067) y [evidencia de despliegue](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/1302fe8). Documentó entrevistas de ambos segmentos en [5.3.2](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/main/README.md#532-registro-de-entrevistas).
+- **Alexander Atauje Barreto:** [implementación relacional de la API](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-api/commit/8c31d62), [pruebas PostgreSQL](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-api/commit/e9aca8e), [integración REST de la SPA](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/commit/c844513), [preparación de la landing](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-landing/commit/36f2067) y [evidencia de despliegue](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/1302fe8). Documentó entrevistas de ambos segmentos en [5.3.2](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/develop/README.md#532-registro-de-entrevistas).
 - **Joaquín Daga Chávez:** [PR de documentación de la entrevista de Cliente de Carga](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/pull/4).
 - **Nayely Vera Solsol:** [registro de una entrevista de Coordinador Logístico](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/0f7c77e), [enlaces de About-the-Product en el informe](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/pull/7), [configuración en la landing](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-landing/pull/8) y [despliegue de GitHub Pages](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-landing/actions/runs/43691667295).
 
@@ -3755,7 +3755,7 @@ La configuración utiliza `FRIOTRACK_DB`, `FRIOTRACK_PERSISTENCE`, `FRIOTRACK_OR
 
 El siguiente gráfico documenta el corte técnico de seis commits de fuentes del 13/11/2026: API 2, frontend 2, landing 1 y reporte 1, todos con autor registrado Alexander1Alexander2. El [registro de contribuciones](assets/evidence/av2/contributions-technical-cut.json) conserva los SHA de inicio/fin y cada commit. Los commits posteriores de archivos de apoyo quedan fuera de este corte. El gráfico documenta la integración entre productos en la fecha indicada.
 
-![Figura 5.13. Commits del corte técnico AV2 por producto; registro parcial del 13/11/2026](assets/images/chapter-05/av2/contributions-technical-cut.png)
+![Figura 5.15. Commits del corte técnico AV2 por producto; registro parcial del 13/11/2026](assets/images/chapter-05/av2/contributions-technical-cut.png)
 
 El registro enlaza los commits de landing, SPA, API e informe para identificar el aporte por producto.
 
@@ -3763,7 +3763,7 @@ Los datos del corte TB1 se conservan como antecedentes históricos, separados de
 
 ## 5.3. Validation Interviews
 
-La validación AV2 debe ejecutarse sobre una versión identificada de landing, SPA y API con participantes de los dos segmentos. Las entrevistas de descubrimiento del Capítulo II son antecedentes y no se contabilizan como sesiones de validación del nuevo incremento.
+La validación AV2 reúne sesiones de presentación y revisión de FríoTrack con participantes vinculados a los dos segmentos. Cada ficha especifica el entorno y el alcance observado. Las entrevistas de descubrimiento del Capítulo II son antecedentes y no se contabilizan como sesiones de validación del nuevo incremento.
 
 ### 5.3.1. Diseño de entrevistas
 
@@ -3861,8 +3861,6 @@ Considera que el reporte JSON es técnico y prefiere un resumen fácil de leer y
 | Campo | Detalle |
 | :--- | :--- |
 | **Nombres y Apellidos** | Luis Gustavo Honorio Astudillo |
-| **Edad** | No registrada. |
-| **Distrito** | No registrado. |
 | **Fecha de entrevista** | 15/11/2026 |
 | **Enlace al video (Microsoft Stream)** | [Entrevista de validación — Gustavo Honorio](<https://upcedupe-my.sharepoint.com/:v:/g/personal/u202219829_upc_edu_pe/IQBdT5NO3as3Roz6-6ye7p1PAQ23iTPmPhDRtE4fXgXn6nU?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Bs0cvt>). |
 | **Timing de inicio a fin** | 00:00–08:12 |
@@ -3916,7 +3914,7 @@ Estas apreciaciones corresponden al control de mercadería del negocio y no acre
 
 ### 5.3.3. Evaluación según heurísticas
 
-La [plantilla de evaluación](docs/av2/heuristics-template.md) corresponde al **Anexo D del enunciado**: datos de evaluación, tareas incluidas/excluidas, resumen de problemas y fichas con severidad, principio, evidencia y recomendación. El Anexo D de este informe conserva sus enlaces de tablero/diseño; no debe confundirse con el anexo del statement.
+La [guía de evaluación](docs/av2/heuristics-template.md) organiza los hallazgos por tarea, evidencia, principio, severidad y recomendación, conforme al Anexo D del enunciado del curso. El Anexo D de este informe reúne los recursos de tablero y diseño.
 
 | Severidad | Interpretación |
 | :---: | --- |
