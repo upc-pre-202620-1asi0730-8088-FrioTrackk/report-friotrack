@@ -3535,6 +3535,8 @@ Este corte documenta el incremento técnico de AV2: arquitectura, integración, 
 
 El Sprint 3 busca que el Coordinador Logístico pueda programar y supervisar envíos refrigerados y que el Cliente de Carga pueda consultar sus entregas asignadas. El incremento integra la aplicación web con la API REST y PostgreSQL para conservar el historial de cada envío y controlar el acceso por perfil.
 
+**Revisión de Sprint 2.** TB1 dejó publicada la primera aplicación web bilingüe y conectó la landing con el acceso por perfil. La revisión técnica documentó la programación y la atención de incidencias por el Coordinador Logístico, el filtrado de envíos por cliente y el rechazo de comandos de coordinación para ese perfil. Véase la [evidencia de ejecución de Sprint 2](#5225-execution-evidence-for-sprint-review).
+
 | Field | Detail |
 | --- | --- |
 | Sprint # | Sprint 3 — AV2 |
@@ -3543,7 +3545,6 @@ El Sprint 3 busca que el Coordinador Logístico pueda programar y supervisar env
 | Location | — |
 | Prepared By | — |
 | Attendees | — |
-| Sprint 2 Review Summary | — |
 | Sprint 2 Retrospective Summary | — |
 | Sprint 3 Velocity | — |
 | Sum of Story Points | — |
