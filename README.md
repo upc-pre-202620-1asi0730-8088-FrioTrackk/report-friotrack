@@ -3604,9 +3604,9 @@ El objetivo del Sprint 3 fue permitir que el Coordinador Logístico programe y s
 
 *Tablero del Sprint 3 al 15 de noviembre de 2026. Fuente: Trello del equipo BlackStartup.*
 
-La tabla vincula las historias con sus tareas y mantiene las estimaciones del [backlog base](docs/av2/sprint3-backlog-proposal.csv). Los estados corresponden a las listas de Trello al momento de la captura. La columna **Assigned To** identifica al integrante asociado con la evidencia disponible; la indicación **(propuesto)** distingue las asignaciones que no se registraron en Trello.
+La tabla vincula las historias con sus tareas y mantiene las estimaciones del [backlog base](docs/av2/sprint3-backlog-proposal.csv). Los estados conservan el corte de Trello mostrado en la captura; las publicaciones posteriores se relacionan al pie para distinguir el tablero de la evidencia documental. La columna **Assigned To** identifica al integrante asociado con la evidencia disponible; la indicación **(propuesto)** distingue las asignaciones que no se registraron en Trello.
 
-**Resumen del tablero**
+**Resumen histórico del tablero**
 
 | Estado | Tareas |
 | --- | ---: |
@@ -3631,23 +3631,31 @@ La tabla vincula las historias con sus tareas y mantiene las estimaciones del [b
 | US10 / US11 / TS06 | US10: Consulta de historial térmico; US11: Exportación de informes de trazabilidad; TS06: Endpoint de exportación de reportes | S3-T11 | Exponer historial y evidencia de reporte | Consultar y exportar información autorizada con fechas unidades y procedencia. | 8 | Alexander Sebastián Atauje Barreto | To-Review |
 | TS07 | TS07: Documentación Swagger OpenAPI | S3-T12 | Documentar recursos con OpenAPI | Documentar los endpoints REST. Swagger está publicado; falta adjuntar las capturas de interacción y los ejemplos de respuesta al informe. | 6 | Alexander Sebastián Atauje Barreto | In-Process |
 | TS01 / TS02 / TS03 / TS05 | TS01: Endpoint de consulta de envíos activos; TS02: Endpoint de consulta de alertas; TS03: Endpoint de gestión de flotas; TS05: Endpoint de autenticación y sesión | S3-T13 | Adaptar el gateway de la SPA | Consumir recursos REST manteniendo autorización errores y estados de carga. | 8 | Alexander Sebastián Atauje Barreto | To-Review |
-| — | — | S3-T14 | Probar invariantes del dominio C# | Cubrir reglas de rango estados reservas y recuperación sin dependencias de interfaz. | 8 | Alexander Sebastián Atauje Barreto | To-Review |
-| — | — | S3-T15 | Probar integración con PostgreSQL | Comprobar persistencia integridad transacciones y permisos sobre el motor real. | 8 | Alexander Sebastián Atauje Barreto | To-Review |
+| Soporte | Calidad del dominio | S3-T14 | Probar invariantes del dominio C# | Cubrir reglas de rango estados reservas y recuperación sin dependencias de interfaz. | 8 | Alexander Sebastián Atauje Barreto | To-Review |
+| Soporte | Integración y persistencia | S3-T15 | Probar integración con PostgreSQL | Comprobar persistencia integridad transacciones y permisos sobre el motor real. | 8 | Alexander Sebastián Atauje Barreto | To-Review |
 | US30 / Soporte | US30: Gestión de multi-idioma (i18n) | S3-T16 | Revisar experiencia integrada ES y EN | Comprobar perfiles idiomas tamaños y errores de los recorridos seleccionados. | 6 | Alexander Sebastián Atauje Barreto | To-Review |
 | US26 / US30 | US26: Casos de éxito y testimonios; US30: Gestión de multi-idioma (i18n) | S3-T17 | Preparar landing y videos publicados | Ajustar el idioma inicial y preparar los reproductores opcionales. La publicación de cada video se registra por separado. | 6 | Alexander Sebastián Atauje Barreto | To-Review |
-| — | — | S3-T18 | Publicar API y base relacional | Aplicar migraciones y publicar servicio en recursos autorizados preservando datos. | 8 | Alexander Sebastián Atauje Barreto | To-Review |
+| Soporte | Despliegue de servicios | S3-T18 | Publicar API y base relacional | Aplicar migraciones y publicar servicio en recursos autorizados preservando datos. | 8 | Alexander Sebastián Atauje Barreto | To-Review |
 | US31 / Soporte | US31: Planes y acceso desde la Landing | S3-T19 | Publicar frontend y landing | Actualizar archivos públicos y verificar hashes y recorridos de entrada. | 4 | Alexander Sebastián Atauje Barreto | To-Review |
-| — | — | S3-T20 | Organizar tablero y trazabilidad | Confirmar asignaciones y estados en Trello; vincular tarjetas con evidencias e incorporar la captura del Sprint 3. | 4 | Rodrigo Andree Saavedra Flores (propuesto) | To-do |
-| — | — | S3-T21 | Preparar sesiones de validación | Preparar tareas y cuentas de demostración, identificar la versión y coordinar las sesiones con los segmentos. | 4 | Alexander Sebastián Atauje Barreto | To-Review |
-| — | — | S3-T22 | Registrar validación del coordinador | Completar de 3 a 5 sesiones del segmento Coordinador Logístico. Ya hay evidencia parcial de Nayely y Alexander; falta completar el número y los recorridos del rol. | 8 | Nayely Macarena Vera Solsol | In-Process |
-| — | — | S3-T23 | Registrar validación del cliente | Completar de 3 a 5 sesiones del segmento Cliente de Carga. Ya hay registros de Joaquín y Alexander; falta completar el número y consolidar la evidencia. | 8 | Joaquín Leonardo Daga Chávez | In-Process |
-| — | — | S3-T24 | Evaluar hallazgos y priorizar mejoras | Aplicar el Anexo D a las sesiones; registrar hallazgo, severidad, principio, captura y recomendación. | 8 | Joaquín Leonardo Daga Chávez (propuesto) | To-do |
-| — | — | S3-T25 | Publicar e integrar About-the-Product | Publicar el video en Stream y YouTube e incorporarlo a la landing. El informe recoge ambos enlaces y GitHub Pages registra el despliegue. | 6 | Nayely Macarena Vera Solsol | Done |
-| — | — | S3-T26 | Editar About-the-Team | Editar con escenas de trabajo y testimonios de cada integrante; publicar en Stream y YouTube e incorporar a la landing. | 6 | Nayely Macarena Vera Solsol (propuesto) | To-do |
-| — | — | S3-T27 | Grabar navegación del incremento | Grabar un recorrido del Sprint 3 desde la landing hasta las funciones centrales de ambos perfiles; enlazarlo en el informe. | 4 | Rodrigo Andree Saavedra Flores (propuesto) | To-do |
-| — | — | S3-T28 | Consolidar exposición AV2 | Preparar la exposición AV2 con todos los integrantes ante cámara, en un MP4 de máximo 30 minutos. | 8 | Rodrigo Andree Saavedra Flores (propuesto) | To-do |
-| — | — | S3-T29 | Integrar reporte y presentación AV2 | Actualizar el informe acumulativo y consolidar el Keynote con las evidencias del Sprint 3. Existe una versión base. | 8 | Alexander Sebastián Atauje Barreto (propuesto) | In-Process |
-| — | — | S3-T30 | Revisar y empaquetar la entrega | Verificar formatos, nombres y permisos de acceso; preparar el ZIP complementario una vez reunidos los entregables. | 6 | Rodrigo Andree Saavedra Flores (propuesto) | To-do |
+| Soporte | Gestión del sprint | S3-T20 | Organizar tablero y trazabilidad | Confirmar asignaciones y estados en Trello; vincular tarjetas con evidencias e incorporar la captura del Sprint 3. | 4 | Rodrigo Andree Saavedra Flores (propuesto) | To-do |
+| Soporte | Preparación de validación | S3-T21 | Preparar sesiones de validación | Preparar tareas y cuentas de demostración, identificar la versión y coordinar las sesiones con los segmentos. | 4 | Alexander Sebastián Atauje Barreto | To-Review |
+| Soporte | Validación del coordinador | S3-T22 | Registrar validación del coordinador | Completar de 3 a 5 sesiones del segmento Coordinador Logístico. Ya hay evidencia parcial de Nayely y Alexander; falta completar el número y los recorridos del rol. | 8 | Nayely Macarena Vera Solsol | In-Process |
+| Soporte | Validación del cliente | S3-T23 | Registrar validación del cliente | Completar de 3 a 5 sesiones del segmento Cliente de Carga. Ya hay registros de Joaquín y Alexander; falta completar el número y consolidar la evidencia. | 8 | Joaquín Leonardo Daga Chávez | In-Process |
+| Soporte | Evaluación de usabilidad | S3-T24 | Evaluar hallazgos y priorizar mejoras | Aplicar el Anexo D a las sesiones; registrar hallazgo, severidad, principio, captura y recomendación. | 8 | Joaquín Leonardo Daga Chávez (propuesto) | To-do |
+| Soporte | Comunicación del producto | S3-T25 | Publicar e integrar About-the-Product | Publicar el video en Stream y YouTube e incorporarlo a la landing. El informe recoge ambos enlaces y GitHub Pages registra el despliegue. | 6 | Nayely Macarena Vera Solsol | Done |
+| Soporte | Colaboración del equipo | S3-T26 | Editar About-the-Team | Editar con escenas de trabajo y testimonios de cada integrante; publicar en Stream y YouTube e incorporar a la landing. | 6 | Nayely Macarena Vera Solsol (propuesto) | To-do |
+| Soporte | Demostración del producto | S3-T27 | Grabar navegación del incremento | Grabar un recorrido del Sprint 3 desde la landing hasta las funciones centrales de ambos perfiles; enlazarlo en el informe. | 4 | Rodrigo Andree Saavedra Flores (propuesto) | To-do |
+| Soporte | Exposición académica | S3-T28 | Consolidar exposición AV2 | Preparar la exposición AV2 con todos los integrantes ante cámara, en un MP4 de máximo 30 minutos. | 8 | Rodrigo Andree Saavedra Flores (propuesto) | To-do |
+| Soporte | Documentación de entrega | S3-T29 | Integrar reporte y presentación AV2 | Actualizar el informe acumulativo y consolidar el Keynote con las evidencias del Sprint 3. Existe una versión base. | 8 | Alexander Sebastián Atauje Barreto (propuesto) | In-Process |
+| Soporte | Preparación de entrega | S3-T30 | Revisar y empaquetar la entrega | Verificar formatos, nombres y permisos de acceso; preparar el ZIP complementario una vez reunidos los entregables. | 6 | Rodrigo Andree Saavedra Flores (propuesto) | To-do |
+
+**Publicaciones incorporadas después de la captura**
+
+| Tarea | Evidencia incorporada | Seguimiento documental |
+| --- | --- | --- |
+| S3-T26 · About-the-Team | [Video del equipo en Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241d811_upc_edu_pe/IQA_6YgiuZLgRIvnZdb-6t56ASwzKeemh8AdD7un1OfiGk8?e=MY9kY5) | Video enlazado; revisión de contenido e integración en landing según alcance de la tarea. |
+| S3-T27 · Navegación | [Recorrido del producto en Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202219829_upc_edu_pe/IQB-D9wFBi1_S4lj6TjjtB3WAfg30uXT7S8NEhphn_q2DxE?e=5I1Yiy) | Video enlazado para revisión del incremento. |
+| S3-T28 · Exposición | [Exposición AV2](#videos-de-av2) | Grabación enlazada en el Anexo E. |
 
 **Evidencias de trabajo**
 
