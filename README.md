@@ -3665,7 +3665,9 @@ El [registro técnico](assets/evidence/av2/technical-verification.json) identifi
 
 ![Figura 5.12. Landing AV2 en inglés por defecto; vista local móvil sin videos configurados](assets/images/chapter-05/av2/landing-default-en-390.png)
 
-Las teselas y fuentes externas se bloquearon en estas pruebas locales; no se certifica el proveedor de mapas. Docker Compose no se ejecutó porque Docker no está instalado, aunque el backend fue probado directamente contra PostgreSQL. La evidencia de esta sección corresponde a pruebas técnicas automatizadas.
+Las teselas y fuentes externas se bloquearon en estas pruebas locales; no se certifica el proveedor de mapas. Docker Compose no se ejecutó porque Docker no está instalado, aunque el backend fue probado directamente contra PostgreSQL. Los resultados de la tabla corresponden a pruebas técnicas automatizadas.
+
+[Recorrido del producto FríoTrack AV2 en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202219829_upc_edu_pe/IQB-D9wFBi1_S4lj6TjjtB3WAfg30uXT7S8NEhphn_q2DxE?e=5I1Yiy). El video acompaña la revisión del incremento de Sprint 3.
 
 #### 5.2.3.6. Services Documentation Evidence for Sprint Review
 
