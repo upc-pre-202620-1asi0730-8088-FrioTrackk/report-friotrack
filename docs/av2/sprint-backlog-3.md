@@ -10,6 +10,16 @@ El objetivo del Sprint 3 fue permitir que el Coordinador Logístico programe y s
 
 La tabla vincula las historias con sus tareas y mantiene las estimaciones del [backlog base](sprint3-backlog-proposal.csv). Los estados corresponden a las listas de Trello al momento de la captura. La columna **Assigned To** identifica al integrante asociado con la evidencia disponible; la indicación **(propuesto)** distingue las asignaciones que no se registraron en Trello.
 
+## Resumen del tablero
+
+| Estado | Tareas |
+| --- | ---: |
+| To-do | 6 |
+| In-Process | 4 |
+| To-Review | 19 |
+| Done | 1 |
+| **Total** | **30** |
+
 | Story Id | Story Title | Task Id | Task Title | Task Description | Estimation (Hours) | Assigned To | Status |
 |---|---|---|---|---|---:|---|---|
 | US33 / US08 | US33: Programación de envío refrigerado; US08: Configuración de umbrales térmicos | S3-T01 | Implementar modelo de envío y rango | Proteger invariantes ambientales y de programación con clases tipadas. | 8 | Alexander Sebastián Atauje Barreto | To-Review |
