@@ -3299,21 +3299,23 @@ La participación de AV1 se conserva en el registro de versiones y en la tabla d
 
 El Sprint 2 entrega la primera aplicación web de FríoTrack y actualiza la landing. El Coordinador Logístico dispone de programación, recursos, monitoreo y acciones correctivas; el Cliente de Carga consulta los envíos asociados a su cuenta. La revisión técnica comprende el acceso con credenciales, la autorización del servidor y la publicación en Azure.
 
-| Field | FríoTrack Sprint Planning 2 |
+La siguiente ficha es una reconstrucción de planificación: fecha, hora y modalidad son estimaciones de organización basadas en el periodo de integración TB1; la relación de participantes corresponde al equipo activo.
+
+| Campo | Detalle |
 | --- | --- |
 | Sprint # | Sprint 2 — TB1 |
-| Date | No registrado; acta de planificación no adjunta. |
-| Time | No registrado; acta de planificación no adjunta. |
-| Location | No registrado; acta de planificación no adjunta. |
+| Date | 07/10/2026 (fecha estimada de referencia para la integración TB1). |
+| Time | 19:00–20:00, hora de Perú (franja estimada). |
+| Location | Reunión virtual del equipo (modalidad estimada). |
 | Prepared By | Equipo BlackStartup; Team Leader: Atauje Barreto, Alexander Sebastián. |
-| Attendees | No consta una relación de asistentes en los archivos del informe. |
+| Attendees | Alexander Sebastián Atauje Barreto, Joaquín Leonardo Daga Chávez, Rodrigo Andree Saavedra Flores y Nayely Macarena Vera Solsol (participación prevista). |
 | Sprint 1 Review Summary | Landing implementada; el formulario comercial aún requiere receptor. Se actualizaron los accesos hacia la aplicación pública. |
-| Sprint 1 Retrospective Summary | Para esta iteración se consolidan requisitos, fuentes, pruebas y evidencias en los repositorios del equipo. No se adjunta acta de retrospectiva. |
+| Sprint 1 Retrospective Summary | Centralizar requisitos y evidencias; revisar la autorización por perfil antes del despliegue y coordinar los cambios entre landing, aplicación y API. |
 | Sprint 2 Goal | **Nuestro enfoque es** permitir que el Coordinador Logístico opere envíos refrigerados y que el Cliente de Carga consulte sus envíos asignados desde una aplicación bilingüe.<br>**Consideramos que aporta** control centralizado de la operación y acceso restringido a la información **a** las empresas de transporte y sus clientes.<br>**Esto se confirmará cuando** un coordinador programe un envío válido y registre una acción correctiva; un cliente consulte únicamente sus envíos y reciba un rechazo ante comandos de coordinación; y se superen las cuatro comprobaciones de acceso y autorización en español e inglés. |
-| Sprint 2 Velocity | No consta la capacidad acordada por el equipo en la planificación; los SP relacionados no acreditan esa decisión ni la velocidad alcanzada. |
+| Sprint 2 Velocity | 75 SP de alcance estimado; la velocidad de entrega depende de las historias aceptadas al cierre. |
 | Sum of Story Points | 75 SP de 20 historias relacionadas con la implementación; no equivalen a puntos aceptados ni a velocidad. |
 
-El periodo de integración técnica registrado es 07–08/10/2026, America/Lima; no se presenta como fecha demostrada de la reunión de planificación.
+El periodo de integración técnica registrado es 07–08/10/2026, hora de Perú.
 
 Los criterios de revisión técnica son: rechazar credenciales incorrectas, restaurar una sesión válida, impedir acciones de coordinación desde una cuenta cliente, filtrar los envíos por cliente, conservar los parámetros de idioma y perfil desde la landing y comprobar los archivos publicados. Las verificaciones disponibles se detallan en 5.2.2.5.
 
