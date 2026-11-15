@@ -92,6 +92,7 @@ El siguiente registro conserva las actividades documentadas para AV1 en el repos
 | Preparación AV2 · v3.0.0-av2.1 | 13/11/2026 | Atauje Barreto, Alexander Sebastián | Integración del esquema EF Core/PostgreSQL de 18 tablas, documentación de recursos REST, preparación de Sprint 3, validación, videos y entrega. El corte técnico identifica las fuentes, migraciones y pruebas de integración. |
 | AV2 | 14/11/2026 | Atauje Barreto, Alexander Sebastián | Incorporación de la entrevista AV2-C01 de Farit Santoyo: video, captura original, resumen de respuestas y alcance parcial de la validación. |
 | AV2 | 14/11/2026 | Atauje Barreto, Alexander Sebastián | Corrección de redacción y presentación del informe y sus anexos. |
+| AV2 | 14/11/2026 | Atauje Barreto, Alexander Sebastián | Incorporación de la entrevista AV2-L01 de Irma Barreto: video, ficha, captura y resumen de validación del perfil cliente. |
 
 <div style="page-break-after: always;"></div>
 
@@ -3479,7 +3480,7 @@ Benjamin no participó en TB1 por su retiro; el Participant Performance Report r
 
 ### 5.2.3. Sprint 3 — Preparación AV2
 
-[PDF del corte técnico AV2](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/releases/download/v3.0.0-av2.3/upc-pre-202620-1asi0730-8088-blackstartup-report-av2.pdf). El archivo corresponde al corte técnico identificado por su release.
+[PDF del corte técnico AV2](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/releases/download/v3.0.0-av2.4/upc-pre-202620-1asi0730-8088-blackstartup-report-av2.pdf). El archivo corresponde al corte técnico identificado por su release.
 
 Documentos complementarios: [presentación editable](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-keynote-av2-base.pptx), [vista PDF de 14 diapositivas](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-keynote-av2-base.pdf), [plantilla editable de participación](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-performance-av2-template.md) y [formato PDF de participación](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-performance-av2-template.pdf). Los archivos están identificados como formatos base de presentación y participación.
 
@@ -3630,7 +3631,7 @@ El guion conserva las preguntas completas, criterios de observación y ficha de 
 
 ### 5.3.2. Registro de entrevistas
 
-El [registro editable de sesiones](docs/av2/validation-records.csv) incorpora la entrevista AV2-C01 de Farit Alejandro Santoyo Espejo. La ficha presenta el perfil del participante, el entorno observado y sus apreciaciones sobre el producto.
+El [registro editable de sesiones](docs/av2/validation-records.csv) incluye AV2-C01 de Farit Alejandro Santoyo Espejo y AV2-L01 de Irma Barreto. Las fichas presentan los perfiles de los participantes, el entorno observado y sus apreciaciones sobre el producto.
 
 #### Entrevista AV2-C01: Farit Alejandro Santoyo Espejo
 
@@ -3658,6 +3659,34 @@ El [registro editable de sesiones](docs/av2/validation-records.csv) incorpora la
 **Resumen de la entrevista.** Farit distingue el propósito de seguimiento térmico de FríoTrack y diferencia la organización y supervisión de despachos de la consulta de entregas del cliente. Explica que identificaría un envío mediante código, carga, origen, destino y estado. Al comentar una programación, señala que comprobaría las unidades, el rango térmico y la disponibilidad del vehículo y del conductor; estas respuestas describen lo que haría y no una programación ejecutada.
 
 En la interpretación de las lecturas, considera necesario comparar temperatura, rango y fecha de actualización; reconoce que una lectura antigua no confirma la condición actual de una carga. También diferencia el registro de atención de una alerta de la recuperación térmica, que comprobaría mediante lecturas posteriores. Valora el historial como antecedente para revisar incidencias y solicita un resumen fácil de compartir. Para una operación real comprobaría el origen y la actualización de las mediciones y la relación con el ERP. Como mejoras propone explicaciones breves en la programación y mensajes claros de estados y alertas.
+
+#### Entrevista AV2-L01: Irma Barreto
+
+| Campo | Detalle |
+| --- | --- |
+| Segmento | Cliente de Carga / negocio receptor de productos perecibles. |
+| Nombres y apellidos | Irma Barreto. |
+| Edad | 40 años. |
+| Distrito | San Juan de Lurigancho. |
+| Actividad | Administración de un restaurante familiar; compra frutas, verduras y carnes, revisa los productos recibidos y registra algunas compras en un cuaderno. |
+| Entrevistador | Alexander Sebastián Atauje Barreto. |
+| Fecha de la grabación | 14/11/2026. |
+| Video en Microsoft Stream | [Entrevista de validación — Irma Barreto](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241f246_upc_edu_pe/IQA73WP5IEN6QqfScDCafccJAbpmZV_QahXVmB4AaHYA7vQ?e=1eaXmu). |
+| Inicio y duración | Inicio: **00:00:00**. Duración: **00:05:05**. |
+| Entorno observado | Landing en GitHub Pages y aplicación pública en Azure, con el perfil Cliente de Carga. |
+| Modalidad | Demostración guiada y preguntas sobre propuesta de valor, envíos, estados, lecturas, alertas, notificaciones e historial. |
+| Autorización | Consentimiento verbal para participar y grabar con fines de evaluación académica, expresado al inicio de la entrevista. |
+| Acceso | Microsoft Stream institucional; requiere autenticación. |
+
+![Entrevista de validación de Irma Barreto durante la revisión de alertas con el perfil Cliente de Carga](assets/images/chapter-05/av2/validation-irma-barreto.png)
+
+*Captura de la entrevista durante la revisión de una alerta del envío.*
+
+**Resumen de la entrevista.** Irma comprende FríoTrack como una herramienta para seguir envíos y consultar información térmica que aporte antecedentes al comunicarse con sus proveedores. Explica que identificaría sus pedidos mediante código, destino, descripción de la carga y fecha. Distingue los estados En tránsito y Entregado y los relaciona con los pedidos que espera y los productos que ya recibió en su restaurante.
+
+Al interpretar las lecturas, revisaría su fecha de actualización y complementaría la información de la aplicación con la comprobación física de las cantidades y la condición de los productos. Ante una alerta consultaría con el responsable lo ocurrido y las medidas tomadas. También diferencia marcar una notificación como leída de la resolución de la incidencia.
+
+Considera que el reporte JSON es técnico y prefiere un resumen fácil de leer y compartir, con fechas e incidencias principales. Para confiar en la información comprobaría quién registra los datos, cuándo se actualizan y con quién comunicarse. Como mejoras propone mensajes sencillos, letras legibles y un resumen del estado del envío, sus incidencias y la última actualización, que pueda consultar mientras atiende otras tareas del restaurante.
 
 ### 5.3.3. Evaluación según heurísticas
 
