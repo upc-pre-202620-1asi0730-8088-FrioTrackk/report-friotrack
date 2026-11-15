@@ -3935,13 +3935,19 @@ Los enlaces identifican el mismo material de presentación en las plataformas co
 
 ## 5.5. Video About-the-Team
 
-La [pauta de About-the-Team](docs/av2/video-scripts.md#about-the-team--retrospectiva-y-testimonios) prepara **5 minutos de retrospectiva grupal y 1 minuto por integrante**, con escenas reales de planificación, diseño, desarrollo, ejecución y revisión. Los testimonios explican contribución propia, colaboración, aprendizaje y relación con Student Outcome 5.
+About-the-Team reúne el recurso audiovisual del equipo BlackStartup para AV2 y complementa el registro de contribuciones y aprendizajes de Student Outcome 5. Su enlace institucional permite consultar la grabación compartida para la entrega.
 
-| Recurso AV2 | Enlace |
+| Recurso | Detalle |
 | --- | --- |
+| Equipo | BlackStartup — FríoTrack. |
+| Integrantes activos | Alexander Sebastián Atauje Barreto, Joaquín Leonardo Daga Chávez, Rodrigo Andree Saavedra Flores y Nayely Macarena Vera Solsol. |
+| Entrega | AV2 · Sprint 3. |
 | Microsoft Stream | [Ver About-the-Team — FríoTrack](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241d811_upc_edu_pe/IQA_6YgiuZLgRIvnZdb-6t56ASwzKeemh8AdD7un1OfiGk8?e=MY9kY5) |
+| Acceso | Microsoft Stream institucional, según los permisos del enlace compartido. |
+| Duración de referencia | 9 minutos: 5 de retrospectiva grupal y 1 por cada uno de los cuatro integrantes; la duración del archivo se consulta en el reproductor. |
+| Registro complementario | [Contribuciones y liderazgo compartido](#liderazgo-compartido-en-av2). |
 
-Las [especificaciones de entrega](docs/av2/inputs-and-delivery.md) identifican los formatos y nombres de archivos. El [esquema de presentación](docs/av2/keynote-outline.md) organiza los contenidos de la exposición AV2.
+La participación documentada comprende la integración técnica, la validación con usuarios, el backlog, la comunicación del producto y la consolidación del informe. Las responsabilidades individuales se detallan en la [matriz del Sprint 3](#5232-aspect-leaders-and-collaborators).
 
 # Conclusiones y Recomendaciones
 
