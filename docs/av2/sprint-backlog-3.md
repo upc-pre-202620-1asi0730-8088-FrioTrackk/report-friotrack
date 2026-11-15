@@ -35,7 +35,7 @@ La tabla vincula las historias con sus tareas y mantiene las estimaciones del [b
 | — | — | S3-T21 | Preparar sesiones de validación | Preparar tareas y cuentas de demostración, identificar la versión y coordinar las sesiones con los segmentos. | 4 | Alexander Sebastián Atauje Barreto | To-Review |
 | — | — | S3-T22 | Registrar validación del coordinador | Completar de 3 a 5 sesiones del segmento Coordinador Logístico. Ya hay evidencia parcial de Nayely y Alexander; falta completar el número y los recorridos del rol. | 8 | Nayely Macarena Vera Solsol | In-Process |
 | — | — | S3-T23 | Registrar validación del cliente | Completar de 3 a 5 sesiones del segmento Cliente de Carga. Ya hay registros de Joaquín y Alexander; falta completar el número y consolidar la evidencia. | 8 | Joaquín Leonardo Daga Chávez | In-Process |
-| — | — | S3-T24 | Evaluar hallazgos y priorizar mejoras | Aplicar formato heurístico registrar problemas reales y verificar las correcciones seleccionadas. | 8 | — | To Do |
+| — | — | S3-T24 | Evaluar hallazgos y priorizar mejoras | Aplicar el Anexo D a las sesiones; registrar hallazgo, severidad, principio, captura y recomendación. | 8 | Joaquín Leonardo Daga Chávez (propuesto) | To-do |
 | — | — | S3-T25 | Publicar e integrar About-the-Product | Consolidar demostración beneficios y opiniones auténticas de ambos segmentos. | 6 | — | To Do |
 | — | — | S3-T26 | Editar About-the-Team | Consolidar sesiones reales retrospectiva y testimonio de cada integrante. | 6 | — | To Do |
 | — | — | S3-T27 | Grabar navegación del incremento | Mostrar recorridos estables por perfil y los estados relevantes del Sprint 3. | 4 | — | To Do |
