@@ -128,7 +128,7 @@ Los registros completos y sus fechas están en [current-commits.json](assets/evi
 
 ### Entrega AV2
 
-El equipo activo está conformado por Alexander, Joaquín, Rodrigo y Nayely. El corte AV2 del **15/11/2026** reúne **70 commits sin merges** en `develop`, desde el **12/11/2026 a las 00:00 (hora de Perú)**, e incluye los **13 commits de revisión de Rodrigo**. El [registro de colaboración](assets/evidence/av2/report-collaboration-2026-11-15.json) conserva los commits anteriores a esta revisión final y contabiliza por separado el commit que publica este registro. AV1 y TB1 mantienen sus cortes históricos.
+El equipo activo está conformado por Alexander, Joaquín, Rodrigo y Nayely. El corte de integración AV2 del **15/11/2026**, revisión `79146efe3777`, reúne **75 commits sin merges**, desde el **12/11/2026 a las 00:00 (hora de Perú)**. El [registro de colaboración](assets/evidence/av2/report-collaboration-integration-2026-11-15.json) conserva cada SHA, autor, fecha y asunto del corte. Las revisiones documentales posteriores se consultan en el historial. AV1 y TB1 mantienen sus cortes históricos.
 
 | Integrante | Usuario de GitHub | Commits del informe (sin merges) | Evidencia |
 | --- | --- | --- | --- |
@@ -136,7 +136,7 @@ El equipo activo está conformado por Alexander, Joaquín, Rodrigo y Nayely. El 
 | Bardales Rodriguez, Benjamin Elias | Benja72312 | 0 | Retirado del equipo; sin participación registrada en AV2. Se conservan sus aportes históricos de AV1. |
 | Daga Chávez, Joaquín Leonardo | Eshnikeee | 16 | Entrevista de validación de Gustavo Honorio y 13 actualizaciones del Sprint 3: objetivo, alcance, aceptación, matriz, evidencias, videos e índice. [bdcdb8d](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/bdcdb8daf430f537f88c197cf22a71b0a2edd306), [0ce82e4](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/0ce82e43f328d011ebf5b91472341037fada465b) y [cbe1271](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/cbe1271dfe4f18a97e7e08d28a704ef17a4598e2). |
 | Saavedra Flores, Rodrigo Andree | rodrigoxd67 | 14 | Estandarización de fichas de validación, entrevista de Jari Hassan Syeda y 13 commits de revisión del informe: carátula, planificación, objetivos en español, matrices, backlogs, videos y registro de colaboración. [75b182b](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/75b182b2ce15bc9724b895666f9ad3f82f032cb9). |
-| Vera Solsol, Nayely Macarena | Macaxprogram29 | 30 | Incorporación de enlaces de About-the-Product, captura de Trello y actualización de tareas, estados, responsables y evidencias del Sprint Backlog 3; integración del backlog en el informe. [52a38f4](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/52a38f43104b66ee7ffa36a8f7f599d888d406e8), [1e299b3](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/1e299b35314c6e1bd233ae23028b6e61493814da) y [6060878](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/60608781ab84deaf60fa7aca22abf596a221b270). |
+| Vera Solsol, Nayely Macarena | Macaxprogram29 | 35 | Incorporación de enlaces de About-the-Product, captura de Trello y actualización de tareas, estados, responsables y evidencias del Sprint Backlog 3; integración del backlog en el informe. [52a38f4](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/52a38f43104b66ee7ffa36a8f7f599d888d406e8), [1e299b3](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/1e299b35314c6e1bd233ae23028b6e61493814da) y [6060878](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/60608781ab84deaf60fa7aca22abf596a221b270). |
 
 El [historial de develop](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commits/develop/) permite consultar autores, fechas y cambios. El conteo excluye merges y se limita al repositorio del informe. Las tareas de implementación conservan la atribución indicada en sus evidencias.
 
@@ -145,6 +145,10 @@ La implementación relacional y sus pruebas se registran en la [API](https://git
 Los materiales complementarios del curso registran las lecciones [1 y 2 de Rodrigo](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/html-css-course-blackstartup/commit/f16dd22e352c00c63a59d233447ec485d67266a1), [3 y 4 de Alexander](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/html-css-course-blackstartup/commit/3f444b8412cb9a85cdc65a8aa5bc40c27b0ee90b), [5 y 6 de Nayely](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/html-css-course-blackstartup/commit/45eca287f0a20839300a11967c5d4372612aea1a) y [7 y 8 de Joaquín](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/html-css-course-blackstartup/commit/c2617b4f22c07bb8c098de7dae5489296bf9d1ef). Sus commits pertenecen al repositorio del curso y se consultan por separado.
 
 El avance de las 30 tareas se presenta en [Sprint Backlog 3](#5233-sprint-backlog-3), las entrevistas en [5.3.2](#532-registro-de-entrevistas) y el video de producto en [5.4](#54-video-about-the-product). La evaluación individual corresponde al Team Leader y considera las responsabilidades y resultados de cada integrante.
+
+![Contribuciones del informe AV2 por integrante](assets/images/chapter-05/av2/report-collaboration-integration-2026-11-15.png)
+
+*Gráfico del corte de integración `79146efe3777`: Alexander 10, Joaquín 16, Rodrigo 14 y Nayely 35. Fuente: historial Git del informe, excluidos merges.*
 
 ### Gráficos de colaboración del informe
 
@@ -3533,9 +3537,9 @@ Benjamin no participó en TB1 por su retiro; el Participant Performance Report r
 
 ### 5.2.3. Sprint 3 — AV2
 
-[PDF del corte técnico AV2](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/releases/download/v3.0.0-av2.4/upc-pre-202620-1asi0730-8088-blackstartup-report-av2.pdf). El archivo corresponde al corte técnico identificado por su release.
+[Informe AV2 en PDF](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/releases/download/v3.0.0-av2.5/upc-pre-202620-1asi0730-8088-blackstartup-report-av2.pdf). La versión reúne la documentación, las entrevistas individuales y las evidencias publicadas del avance.
 
-Documentos complementarios: [presentación editable](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-keynote-av2-base.pptx), [vista PDF de 14 diapositivas](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-keynote-av2-base.pdf), [plantilla editable de participación](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-performance-av2-template.md) y [formato PDF de participación](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-performance-av2-template.pdf). Los archivos están identificados como formatos base de presentación y participación.
+Documentos complementarios: [presentación editable](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-keynote-av2.pptx), [presentación en PDF](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-keynote-av2.pdf), [informe de participación en Word](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-performance-av2.docx) e [informe de participación en PDF](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-performance-av2.pdf). La evaluación de AV2 fue emitida por Alexander Sebastián Atauje Barreto, Team Leader de BlackStartup.
 
 Este corte documenta el incremento técnico de AV2: arquitectura, integración, pruebas y publicación. Los [documentos AV2](docs/av2/README.md) reúnen el protocolo de validación, los formatos de registro y las especificaciones de entrega.
 
@@ -3737,7 +3741,7 @@ El 14/11/2026 se publicó el incremento AV2 en los recursos existentes de Azure,
 
 | Producto | Versión / commit | URL | Verificación real |
 | --- | --- | --- | --- |
-| Landing AV2 | `0.2.0` / `36f2067` | [GitHub Pages](https://upc-pre-202620-1asi0730-8088-friotrackk.github.io/friotrack-landing/) | Publicación automática del repositorio; ocho archivos HTTP 200 coinciden con los bytes del commit. Videos aún sin configurar. |
+| Landing AV2 | `0.2.0` / `36f2067` | [GitHub Pages](https://upc-pre-202620-1asi0730-8088-friotrackk.github.io/friotrack-landing/) | Recibo del corte inicial: ocho archivos HTTP 200 coinciden con los bytes del commit. La incorporación posterior de About-the-Product se documenta en [5.4](#54-video-about-the-product). |
 | SPA AV2 | `0.2.1` / `574f3c1` | [Aplicación publicada](https://friotracktb1bce6db1b.z22.web.core.windows.net/) | 20 archivos publicados y verificados por SHA-256; recorridos autenticados de ambos perfiles. |
 | Web Services AV2 | `0.2.0` / `e9aca8e` | [API](https://friotrack-api-bce6db1b.azurewebsites.net/api/health) · [Swagger](https://friotrack-api-bce6db1b.azurewebsites.net/swagger/index.html) | Kudu completado; PostgreSQL activo; acceso anónimo 401 y registro público de coordinador 403; login y logout por perfil. |
 | PostgreSQL | 17 / migración inicial EF Core | Acceso privado en Neon | 18 tablas de dominio y 31 FK verificadas; datos históricos conservados y demostración aislada. |
@@ -3779,9 +3783,7 @@ El guion conserva las preguntas completas, criterios de observación y ficha de 
 
 ### 5.3.2. Registro de entrevistas
 
-El [registro editable de sesiones](docs/av2/validation-records.csv) incluye AV2-C01 de Farit Alejandro Santoyo Espejo y AV2-L01 de Irma Barreto. Las fichas presentan los perfiles de los participantes, el entorno observado y sus apreciaciones sobre el producto.
-
-Esta sección también presenta las fichas AV2-L02 y AV2-L03, correspondientes a negocios receptores de productos perecibles.
+El [registro editable de sesiones](docs/av2/validation-records.csv) reúne cinco entrevistas: AV2-C01 de Farit Alejandro Santoyo Espejo, AV2-C02 de Carol Solsol, AV2-L01 de Irma Barreto, AV2-L02 de Luis Gustavo Honorio Astudillo y AV2-L03 de Jari Hassan Syeda. Las fichas presentan los perfiles de los participantes, el entorno observado y sus apreciaciones sobre el producto.
 
 #### Entrevista AV2-C01: Farit Alejandro Santoyo Espejo
 
@@ -3819,6 +3821,31 @@ Esta sección también presenta las fichas AV2-L02 y AV2-L03, correspondientes a
 Farit distingue el propósito de seguimiento térmico de FríoTrack y diferencia la organización y supervisión de despachos de la consulta de entregas del cliente. Explica que identificaría un envío mediante código, carga, origen, destino y estado. Al comentar una programación, señala que comprobaría las unidades, el rango térmico y la disponibilidad del vehículo y del conductor; estas respuestas describen lo que haría y no una programación ejecutada.
 
 En la interpretación de las lecturas, considera necesario comparar temperatura, rango y fecha de actualización; reconoce que una lectura antigua no confirma la condición actual de una carga. También diferencia el registro de atención de una alerta de la recuperación térmica, que comprobaría mediante lecturas posteriores. Valora el historial como antecedente para revisar incidencias y solicita un resumen fácil de compartir. Para una operación real comprobaría el origen y la actualización de las mediciones y la relación con el ERP. Como mejoras propone explicaciones breves en la programación y mensajes claros de estados y alertas.
+
+#### Entrevista AV2-C02: Carol Solsol
+
+| Campo | Detalle |
+| --- | --- |
+| Segmento | Coordinador Logístico. |
+| Nombres y apellidos | Carol Solsol. |
+| Edad | 42 años. |
+| Distrito | Lima. |
+| Actividad | Administración y control de despachos en una distribuidora de productos refrigerados; organiza la información con hojas de cálculo (Excel) y reportes por WhatsApp. |
+| Entrevistador(a) | Nayely Macarena Vera Solsol. |
+| Fecha de la grabación | 14/11/2026 |
+| Video en Microsoft Stream | [Entrevista de validación - Carol Solsol](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231h171_upc_edu_pe/IQDD2Tcr5P_BR4fMcv4JirE1ATVguTS1iobPYY6Y60oNqmc?e=UDmzTX&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D). |
+| Inicio y duración | Inicio: **00:00:00**. Duración: **00:05:41**. |
+| Entorno observado | Landing en GitHub Pages y aplicación pública en Azure, con el perfil de Coordinador Logístico. |
+| Cuenta mostrada | Coordinador Logístico, perfil de demostración Alex Rivera. |
+| Modalidad y alcance | Demostración guiada y preguntas sobre propuesta de valor, envíos, estados, lecturas, alertas, notificaciones e historial. |
+| Autorización | Consentimiento verbal para participar y grabar con fines de evaluación académica, expresado al inicio de la entrevista. |
+| Acceso | Microsoft Stream institucional; requiere autenticación. |
+
+![Entrevista de validación de Carol Solsol durante la revisión de alertas con el perfil Coordinador Logístico](assets/images/chapter-05/imagen_entrevista.png)
+
+*Captura de la entrevista durante la revisión de la app web.*
+
+**Resumen de la entrevista.** Carol Solsol evaluó FríoTrack destacando la utilidad del seguimiento de las condiciones del envío y la claridad en la separación de roles entre coordinador y cliente. Valoró positivamente el control de rangos de temperatura, la gestión de alertas y el registro histórico para auditorías de calidad, sugiriendo como mejoras principales la adición de ayudas visuales (tooltips), alertas más llamativas y un formato visual de exportación rápida para optimizar la toma de decisiones operativas.
 
 #### Entrevista AV2-L01: Irma Barreto
 
@@ -3926,6 +3953,20 @@ La [guía de evaluación](docs/av2/heuristics-template.md) organiza los hallazgo
 
 El formato relaciona cada hallazgo con la tarea evaluada, la evidencia, el principio afectado, la severidad y su recomendación. Las inspecciones técnicas y las entrevistas se identifican como fuentes distintas.
 
+
+#### Hallazgos de revisión de las entrevistas AV2
+
+Las fichas siguientes sintetizan los comentarios registrados en las entrevistas. La severidad es una valoración de revisión del equipo según la escala del Anexo D; los escenarios se relacionan con el entorno mostrado en cada entrevista.
+
+| ID | Fuente y tarea | Problema identificado | Principio de revisión | Severidad | Recomendación |
+| --- | --- | --- | --- | :---: | --- |
+| H-AV2-01 | Irma Barreto; consulta del historial y reporte. | El formato JSON resulta técnico para una persona que necesita un resumen rápido durante la atención de su restaurante. | Usability: correspondencia con el mundo real y reconocimiento. | 2 | Presentar un resumen legible de estado, incidencias y última actualización; mantener la exportación técnica como recurso complementario. |
+| H-AV2-02 | Farit Santoyo; interpretación de temperatura e historial. | La confianza en una lectura depende de identificar su procedencia, actualización y relación con el envío. | Information Architecture: claridad del contexto y jerarquía informativa. | 2 | Mantener juntos valor, unidad, rango, fecha y procedencia, y distinguir una lectura histórica de la condición actual. |
+| H-AV2-03 | Luis Gustavo Honorio y Jari Hassan Syeda; interpretación de las alertas. | Las respuestas relacionan las alertas con vencimientos o inventario, en lugar de la temperatura durante el transporte. | Usability: correspondencia entre el sistema y el vocabulario del usuario. | 3 | Explicar el alcance del transporte refrigerado en la landing y mostrar ejemplos que diferencien una alerta térmica de un vencimiento de mercadería. |
+| H-AV2-04 | Carol Solsol y Jari Hassan Syeda; comprensión de controles. | Se solicitan ayudas breves para comprender botones y términos de operación. | Inclusive Design: lenguaje comprensible y apoyo a distintas experiencias digitales. | 2 | Añadir descripciones breves y accesibles junto a los controles, con nombres que describan la acción y no dependan sólo del color. |
+
+Evidencias: [Farit](#entrevista-av2-c01-farit-alejandro-santoyo-espejo), [Carol](#entrevista-av2-c02-carol-solsol), [Irma](#entrevista-av2-l01-irma-barreto), [Gustavo](#entrevista-av2-l02--bodega-receptora-de-perecibles) y [Jari](#entrevista-av2-l03-jari-hassan-syeda).
+
 ## 5.4. Video About-the-Product
 
 El video About-the-Product es el recurso de presentación de FríoTrack para AV2. Complementa la propuesta de valor y ofrece un punto de acceso audiovisual al producto. Nayely Vera Solsol realizó el video y publicó su configuración en la landing.
@@ -3951,6 +3992,8 @@ About-the-Team reúne el recurso audiovisual del equipo BlackStartup para AV2 y 
 | Integrantes activos | Alexander Sebastián Atauje Barreto, Joaquín Leonardo Daga Chávez, Rodrigo Andree Saavedra Flores y Nayely Macarena Vera Solsol. |
 | Entrega | AV2 · Sprint 3. |
 | Microsoft Stream | [Ver About-the-Team — FríoTrack](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241d811_upc_edu_pe/IQA_6YgiuZLgRIvnZdb-6t56ASwzKeemh8AdD7un1OfiGk8?e=MY9kY5) |
+| YouTube | [Ver About-the-Team — FríoTrack](https://youtu.be/KHjfFKsW7j0) |
+| Integración | Reproductor de YouTube en la landing. |
 | Acceso | Microsoft Stream institucional, según los permisos del enlace compartido. |
 | Duración de referencia | 9 minutos: 5 de retrospectiva grupal y 1 por cada uno de los cuatro integrantes; la duración del archivo se consulta en el reproductor. |
 | Registro complementario | [Contribuciones y liderazgo compartido](#liderazgo-compartido-en-av2). |
@@ -3969,15 +4012,15 @@ La revisión de fuentes del 10/11 registra 18 pruebas frontend y 26 comprobacion
 
 La arquitectura conserva los contenedores y evidencia del servicio JSON TB1 y documenta la evolución AV2 hacia EF Core/PostgreSQL, recursos REST, sesiones persistentes y Swagger. La API y la SPA están publicadas en Azure y utilizan PostgreSQL 17 en Neon; los recibos del 14/11/2026 documentan la publicación y la conservación de los datos anteriores. Las lecturas y coordenadas iniciales son datos de demostración; sensores físicos, recuperación por correo y procesamiento temporal automático continúan fuera del incremento acreditado.
 
-El nuevo repositorio consolida el trabajo por capítulo y registra los commits de las cuentas participantes. Los anexos reúnen los enlaces del producto, evidencias técnicas y materiales de apoyo, y especifican los documentos académicos que todavía requieren adjuntarse por el equipo.
+El repositorio consolida el trabajo por capítulo y registra los commits de las cuentas participantes. Los anexos reúnen los enlaces del producto, las evidencias técnicas, los materiales de apoyo y la evaluación de participación de las entregas.
 
 ## Recomendaciones
 
 La validación distingue las necesidades de transporte refrigerado y consulta de carga de los antecedentes de investigación sobre almacenes y bodegas.
 
-Para cerrar AV2, verificar y publicar el incremento relacional con su base configurada, migraciones y recibos de fuente/artefacto; repetir recorridos autorizados, conflictos de reserva y persistencia sobre la URL pública. Integrar dispositivos solo después de validar su identidad, marcas de tiempo y recepción de lecturas. Mantener visible la procedencia de datos de demostración mientras no exista telemetría real.
+Mantener una verificación del entorno público antes de las sesiones de revisión y conservar los recibos de fuente, artefacto y migración. Comprobar el acceso por perfil, los conflictos de reserva y la persistencia después de cada cambio de versión. Integrar dispositivos después de validar su identidad, marcas de tiempo y recepción de lecturas; conservar la identificación de los datos de demostración mientras no exista telemetría real.
 
-Cerrar el receptor del formulario comercial, desplegar las fuentes corregidas que ya están sincronizadas en los repositorios y repetir los recorridos de aceptación en ambos idiomas. Ampliar la revisión de accesibilidad y tamaños de pantalla a los controles y estados que aún no tienen evidencia completa.
+Evaluar la incorporación de un receptor para el formulario comercial y ampliar la revisión de accesibilidad de controles y mensajes en ambos idiomas y en distintos tamaños de pantalla.
 
 Conservar las actas de planificación, review y retrospectiva del sprint junto con las evidencias del equipo. Verificar que los enlaces institucionales del Anexo E permitan el acceso del docente.
 
@@ -4045,6 +4088,22 @@ La [comprobación pública previa a publicar](assets/evidence/public-predeployme
 
 ## Anexo A. Participant Performance Report
 
+### Evaluación AV2
+
+**Startup:** BlackStartup. **Producto:** FríoTrack. **Entrega:** AV2. **Team Leader:** Atauje Barreto, Alexander Sebastián. **Fecha:** 15 de noviembre de 2026.
+
+| Ítem | Estudiante | Calificación asignada |
+| --- | --- | :---: |
+| 1 | Atauje Barreto, Alexander Sebastián | 20 |
+| 2 | Daga Chávez, Joaquín Leonardo | 20 |
+| 3 | Saavedra Flores, Rodrigo Andree | 20 |
+| 4 | Vera Solsol, Nayely Macarena | 20 |
+
+- [Participant Performance Report AV2 en Word](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-performance-av2.docx).
+- [Participant Performance Report AV2 en PDF](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-performance-av2.pdf).
+
+### Evaluación TB1
+
 **Startup:** BlackStartup. **Producto:** FríoTrack. **Entrega:** TB1. **Team Leader:** Atauje Barreto, Alexander Sebastián.
 
 La evaluación conserva las calificaciones del [documento compartido por el equipo](https://docs.google.com/document/d/1qjp2CxUwGgXeMQdRhGMtJkPAc8xUnZu7Pc3QzG-SSwY/edit?tab=t.0) y actualiza las responsabilidades de TB1. Benjamin se retiró y no participó en esta entrega.
@@ -4067,7 +4126,7 @@ La evaluación conserva las calificaciones del [documento compartido por el equi
 | Project Report | [report-friotrack](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack) | Informe, recursos y anexos; consolidación en `develop` e integración en `main`. |
 | Landing Page | [friotrack-landing](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-landing) | Fuente independiente de la landing. |
 | Frontend Web Application | [friotrack-frontend](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend) | Vue/PrimeVue, pruebas y configuración Azure. |
-| Web Services | [friotrack-api](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-api) | Autenticación, autorización, persistencia JSON y comandos; producto versionado independientemente. |
+| Web Services | [friotrack-api](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-api) | ASP.NET Core, autenticación, autorización, EF Core/PostgreSQL, comandos de dominio y OpenAPI; producto versionado independientemente. |
 
 La API dispone de [repositorio público independiente](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-api). La copia `api/` del frontend y sus scripts anteriores fueron retirados del corte AV2. La API canónica implementa EF Core/PostgreSQL en su repositorio independiente. El almacén JSON y los recibos TB1 se conservan como antecedentes; no se migran automáticamente al nuevo destino.
 
@@ -4103,7 +4162,7 @@ Los enlaces de Microsoft Stream utilizan el acceso institucional compartido por 
 | Exposición AV2 | [Exposición del equipo BlackStartup en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241d811_upc_edu_pe/IQC7RGHeH-X1SpVd2USNiTfJAfUao6jxlSJN3yvyEmz6q6A?e=BfGqps) |
 | Recorrido del producto AV2 | [Evidencia de ejecución del Sprint 3](#5235-execution-evidence-for-sprint-review) |
 | About-the-Product | [Video del producto](#54-video-about-the-product) |
-| About-the-Team | [Video del equipo](#55-video-about-the-team) |
+| About-the-Team | [Ficha del video](#55-video-about-the-team) · [YouTube](https://youtu.be/KHjfFKsW7j0) |
 
 ### Videos de TB1
 
