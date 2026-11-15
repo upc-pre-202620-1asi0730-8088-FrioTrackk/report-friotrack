@@ -3633,6 +3633,8 @@ El guion conserva las preguntas completas, criterios de observación y ficha de 
 
 El [registro editable de sesiones](docs/av2/validation-records.csv) incluye AV2-C01 de Farit Alejandro Santoyo Espejo y AV2-L01 de Irma Barreto. Las fichas presentan los perfiles de los participantes, el entorno observado y sus apreciaciones sobre el producto.
 
+El registro también incluye la ficha anónima AV2-L02, correspondiente a una bodega receptora de perecibles.
+
 #### Entrevista AV2-C01: Farit Alejandro Santoyo Espejo
 
 | Campo | Detalle |
@@ -3687,6 +3689,21 @@ En la interpretación de las lecturas, considera necesario comparar temperatura,
 Al interpretar las lecturas, revisaría su fecha de actualización y complementaría la información de la aplicación con la comprobación física de las cantidades y la condición de los productos. Ante una alerta consultaría con el responsable lo ocurrido y las medidas tomadas. También diferencia marcar una notificación como leída de la resolución de la incidencia.
 
 Considera que el reporte JSON es técnico y prefiere un resumen fácil de leer y compartir, con fechas e incidencias principales. Para confiar en la información comprobaría quién registra los datos, cuándo se actualizan y con quién comunicarse. Como mejoras propone mensajes sencillos, letras legibles y un resumen del estado del envío, sus incidencias y la última actualización, que pueda consultar mientras atiende otras tareas del restaurante.
+
+#### Entrevista AV2-L02 — Bodega receptora de perecibles
+
+| Campo | Detalle |
+| --- | --- |
+| Segmento | Cliente de Carga / bodega receptora de productos perecibles. |
+| Fecha de la entrevista | 15/11/2026. |
+| Estado | Registro anónimo de una reacción inicial a la propuesta. |
+| Modalidad y alcance | Entrevista remota en dos partes sobre el trabajo en la bodega y la reacción verbal tras ver la landing. Sin tareas autónomas, sesión autenticada ni demostración navegada. |
+| Duración del montaje | **00:08:12**. |
+| Evidencia | Disponible en la entrega restringida al equipo y al profesor. |
+
+**Resumen de la entrevista.** En la bodega se comprueba que los pedidos lleguen completos y que los productos refrigerados se almacenen adecuadamente. Los pedidos, las cantidades y los vencimientos se anotan en un cuaderno. El participante probaría primero el seguimiento de envíos y las alertas. Al recibir el pedido, contrastaría la información de la aplicación con el estado físico y la temperatura de los productos. También pidió una forma de contactar a la persona encargada de la entrega.
+
+El participante asoció las alertas con los vencimientos del inventario. Conviene explicar en la landing que las alertas térmicas se refieren a la temperatura durante el transporte y distinguirlas de los avisos de vencimiento que gestiona la bodega.
 
 ### 5.3.3. Evaluación según heurísticas
 
