@@ -4045,7 +4045,19 @@ Los correos de las cuentas iniciales son `coordinador@friotrack.app` y `cliente@
 
 ## Anexo E. Videos de Exposiciones
 
-Los materiales siguientes corresponden a la investigación, el prototipo, la navegación de la landing y la exposición de TB1. Los enlaces de Stream utilizan el acceso institucional compartido por el equipo.
+Los enlaces de Microsoft Stream utilizan el acceso institucional compartido por el equipo.
+
+### Videos de AV2
+
+| Material | Recurso |
+| --- | --- |
+| Exposición AV2 | [Exposición del equipo BlackStartup en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241d811_upc_edu_pe/IQC7RGHeH-X1SpVd2USNiTfJAfUao6jxlSJN3yvyEmz6q6A?e=BfGqps) |
+| Recorrido del producto AV2 | [Evidencia de ejecución del Sprint 3](#5235-execution-evidence-for-sprint-review) |
+| About-the-Team | [Video del equipo](#55-video-about-the-team) |
+
+### Videos de TB1
+
+Los materiales de TB1 reúnen la investigación, el prototipo, la navegación de la landing y la exposición de esa entrega.
 
 | Material | Archivo o enlace | Contenido |
 | --- | --- | --- |
