@@ -3902,12 +3902,9 @@ La landing utiliza el enlace de YouTube para mostrar el reproductor de producto.
 
 La [pauta de About-the-Team](docs/av2/video-scripts.md#about-the-team--retrospectiva-y-testimonios) prepara **5 minutos de retrospectiva grupal y 1 minuto por integrante**, con escenas reales de planificación, diseño, desarrollo, ejecución y revisión. Los testimonios explican contribución propia, colaboración, aprendizaje y relación con Student Outcome 5.
 
-El formato comprende retrospectiva grupal, testimonios individuales, timestamps y publicación en Stream y YouTube. La landing dispone de un espacio configurable para el video.
-
-| Recurso AV2 | Registro |
+| Recurso AV2 | Enlace |
 | --- | --- |
-| Video About-the-Team | — |
-| Duración | — |
+| Microsoft Stream | [Ver About-the-Team — FríoTrack](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241d811_upc_edu_pe/IQA_6YgiuZLgRIvnZdb-6t56ASwzKeemh8AdD7un1OfiGk8?e=MY9kY5) |
 
 Las [especificaciones de entrega](docs/av2/inputs-and-delivery.md) identifican los formatos y nombres de archivos. El [esquema de presentación](docs/av2/keynote-outline.md) organiza los contenidos de la exposición AV2.
 
