@@ -3552,6 +3552,8 @@ El Sprint 3 busca que el Coordinador Logístico pueda programar y supervisar env
 
 La [evidencia de ejecución](#5235-execution-evidence-for-sprint-review) reúne las comprobaciones de integración y persistencia. La [verificación del despliegue](#5237-software-deployment-evidence-for-sprint-review) registra 14 comprobaciones públicas, entre ellas el acceso por perfil, la programación, el rechazo de una reserva solapada y la consulta de lecturas.
 
+**Alcance de la validación.** El [diseño de entrevistas](#531-diseño-de-entrevistas) prevé cuentas y cargas de demostración para las tareas de ambos segmentos. El [registro de entrevistas](#532-registro-de-entrevistas) distingue ejecución, demostración guiada y reacciones a la propuesta según lo observado en cada sesión. El incremento emplea telemetría de demostración. Sensores físicos, correo externo y pagos quedan fuera del alcance de AV2.
+
 | Field | Detail |
 | --- | --- |
 | Sprint # | Sprint 3 — AV2 |
