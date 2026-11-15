@@ -3655,19 +3655,6 @@ El [registro editable de sesiones](docs/av2/validation-records.csv) incorpora la
 
 En la interpretación de las lecturas, considera necesario comparar temperatura, rango y fecha de actualización; reconoce que una lectura antigua no confirma la condición actual de una carga. También diferencia el registro de atención de una alerta de la recuperación térmica, que comprobaría mediante lecturas posteriores. Valora el historial como antecedente para revisar incidencias y solicita un resumen fácil de compartir. Para una operación real comprobaría el origen y la actualización de las mediciones y la relación con el ERP. Como mejoras propone explicaciones breves en la programación y mensajes claros de estados y alertas.
 
-| Intervalo | Aspecto tratado | Resultado registrado |
-| --- | --- | --- |
-| 00:00:42–00:00:56 | Propuesta de valor y perfiles | Diferencia verbalmente el seguimiento del envío y las funciones de coordinador y cliente. |
-| 00:01:09–00:01:15 | Acceso | Indica que elegiría coordinador; la sesión mostrada es de cliente. |
-| 00:01:22–00:01:37 | Identificación del envío | Describe los datos que revisaría; no se acredita navegación autónoma del participante. |
-| 00:01:41–00:01:54 | Programación | Enumera datos y comprobaciones; no crea ni confirma una programación. |
-| 00:01:57–00:02:23 | Lecturas y alerta | Explica vigencia del dato y diferencia entre atención y recuperación; no registra una acción correctiva. |
-| 00:02:30–00:02:38 | Recursos reservados | Explica una respuesta hipotética al conflicto; no se ejecuta una reserva superpuesta. |
-| 00:02:43–00:03:13 | Historial y confianza | Solicita un resumen compartible y comprobar procedencia, actualización y relación con ERP. |
-| 00:03:19–00:03:28 | Mejoras | Propone aclarar campos de programación y mensajes de estados y alertas. |
-
-**Seguimiento.** Completar una sesión con la cuenta de Coordinador Logístico para observar la programación de un envío, el rechazo de una reserva superpuesta y el registro de atención de una alerta. La comprensión verbal de esos procesos no equivale a su ejecución ni a su aceptación operativa. El resto de sesiones y el video consolidado continúan pendientes; los antecedentes de TB1 se conservan en sus secciones históricas.
-
 ### 5.3.3. Evaluación según heurísticas
 
 La [plantilla de evaluación](docs/av2/heuristics-template.md) corresponde al **Anexo D del enunciado**: datos de evaluación, tareas incluidas/excluidas, resumen de problemas y fichas con severidad, principio, evidencia y recomendación. El Anexo D de este informe conserva sus enlaces de tablero/diseño; no debe confundirse con el anexo del statement.
