@@ -34,15 +34,19 @@ const fs=require('fs'),path=require('path'),{pathToFileURL}=require('url');
   }
   const broken=[...document.images].filter(i=>!i.naturalWidth).map(i=>i.getAttribute('src'));
   for(const img of [...document.images].filter(i=>i.getAttribute('src').includes('/chapter-05/av2/'))) {
+   if(img.closest('table'))continue;
    const parent=img.parentElement;
-   const figure=document.createElement('figure');figure.className='execution-figure';
+   const figure=document.createElement('figure');figure.className=img.alt.startsWith('Evidencia H-')?'heuristic-evidence':'execution-figure';
    parent.before(figure);figure.append(img);
    const caption=document.createElement('figcaption');caption.textContent=img.alt;figure.append(caption);
    if(!parent.textContent.trim()&&!parent.children.length)parent.remove();
   }
   for(const t of document.querySelectorAll('table')){
    const title=t.querySelector('thead')?.innerText||'';
-   if(title.includes('Evidence / Review Notes')) t.classList.add('backlog');
+   if(title.includes('Task Id') && title.includes('Task Description')) {
+    t.classList.add('backlog');
+    t.classList.add(t.querySelectorAll('thead th').length===8?'backlog-eight':'backlog-nine');
+   }
    if(title.includes('Criterios de Aceptación'))t.classList.add('stories');
   }
   for(const t of document.querySelectorAll('table.backlog')) {
@@ -70,12 +74,36 @@ const fs=require('fs'),path=require('path'),{pathToFileURL}=require('url');
   }
   const registry=document.getElementById('registro-de-versiones-del-informe');
   if(registry){const cover=document.createElement('section');cover.className='markdown-cover';document.body.prepend(cover);let node=cover.nextElementSibling;while(node&&node!==registry){const next=node.nextElementSibling;cover.append(node);node=next;}}
+  const memberTable=document.querySelector('.markdown-cover table');
+  if(memberTable){
+   const members=document.createElement('div');members.className='cover-members';
+   for(const row of memberTable.querySelectorAll('tr')){
+    const cells=row.querySelectorAll('td');if(cells.length!==2)continue;
+    const line=document.createElement('p');
+    line.textContent=cells[1].textContent.trim()+' ('+cells[0].textContent.trim()+')';
+    members.append(line);
+   }
+   memberTable.replaceWith(members);
+  }
+  for(const heading of [...document.querySelectorAll('h4')].filter(h=>/^H-0[123]\./.test(h.textContent))){
+   const section=document.createElement('section');section.className='heuristic-finding';heading.before(section);
+   let node=heading;
+   while(node){const next=node.nextElementSibling;section.append(node);if(!next||/^H[1-4]$/.test(next.tagName))break;node=next;}
+  }
+  const summary=[...document.querySelectorAll('h4')].find(h=>h.textContent==='Resumen de hallazgos');
+  if(summary&&summary.nextElementSibling?.matches('table')){
+   const table=summary.nextElementSibling,group=document.createElement('section');group.className='keep-together';summary.before(group);group.append(summary,table);
+  }
+  for(const heading of [...document.querySelectorAll('h2')].filter(h=>/^5\.[45]\. Video/.test(h.textContent))){
+   const group=document.createElement('section');group.className='keep-together';heading.before(group);
+   let node=heading;while(node){const next=node.nextElementSibling;group.append(node);if(!next||/^H[12]$/.test(next.tagName))break;node=next;}
+  }
   // PDF references must remain usable after downloading the report.
   const publicRepo='https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/';
   for(const link of document.querySelectorAll('a[href]')){
    const target=link.getAttribute('href');
    if(!target||target.startsWith('#')||/^[a-z][a-z0-9+.-]*:/i.test(target))continue;
-   link.href=publicRepo+'blob/main/'+target.replace(/^\.\//,'');
+   link.href=publicRepo+'blob/v3.0.0/'+target.replace(/^\.\//,'');
   }
   return {broken,images:document.images.length,tables:document.querySelectorAll('table').length};
  });

@@ -4,14 +4,16 @@ from reportlab.pdfgen import canvas
 import io,json,argparse
 parser=argparse.ArgumentParser()
 parser.add_argument('--stage',choices=['tb1','av2'],default='tb1')
+parser.add_argument('--output',type=Path)
 args=parser.parse_args()
 repo=Path(__file__).resolve().parents[1]
 writer=PdfWriter();writer.append(str(repo/'tmp/report-body.pdf'))
-writer.add_metadata({'/Title':'FríoTrack Informe del Trabajo Final '+args.stage.upper(),'/Author':'Alexander1Alexander2','/Subject':'Informe del proyecto AV2 del 15 de noviembre de 2026' if args.stage=='av2' else 'Revisión documental de TB1 del 11 de noviembre de 2026'})
+writer.add_metadata({'/Title':'Informe de Trabajo Final','/Author':'Equipo BlackStartup','/Subject':'FríoTrack - AV2 - v3.0.0 - 15 de noviembre de 2026' if args.stage=='av2' else 'FríoTrack - TB1'})
 for n,page in enumerate(writer.pages[1:],2):
  data=io.BytesIO(); w=float(page.mediabox.width); h=float(page.mediabox.height)
  c=canvas.Canvas(data,pagesize=(w,h));c.setFont('Helvetica',8);c.setFillColorRGB(.4,.4,.4);c.drawCentredString(w/2,20,str(n));c.save();data.seek(0);page.merge_page(PdfReader(data).pages[0])
-output=repo/('deliverables/upc-pre-202620-1asi0730-8088-blackstartup-report-'+args.stage+'.pdf')
+output=args.output or repo/('deliverables/upc-pre-202620-1asi0730-8088-blackstartup-report-'+args.stage+'.pdf')
+output.parent.mkdir(parents=True,exist_ok=True)
 writer.write(output)
 reader=PdfReader(output);sections={}
 for n,p in enumerate(reader.pages,1):

@@ -25,6 +25,12 @@ th {background:#e5edf4; color:black; font-weight:bold;}
 tbody tr:nth-child(even){background:#f7f9fb;}
 thead {display:table-header-group;} tr{break-inside:avoid;}
 table p{margin:.2em 0;} table img {max-height:130mm;}
+.heuristic-finding {break-before:page;break-inside:avoid;}
+.keep-together {break-inside:avoid;}
+.heuristic-evidence {break-inside:avoid;margin:5mm 0;text-align:center;}
+.heuristic-evidence img {max-height:70mm;}
+.heuristic-evidence figcaption {font-size:8pt;}
+table img[src*="validation-"] {max-height:65mm;}
 code {font-family:Consolas,monospace; font-size:.9em; overflow-wrap:anywhere;}
 pre {white-space:pre-wrap; padding:10px; background:#f3f5f7; border:1px solid #ddd;}
 ul,ol {padding-left:22px;}
@@ -36,6 +42,8 @@ blockquote {margin:10px 0; padding-left:14px; border-left:3px solid #cbd5df;}
 .markdown-cover p {margin:.75em 0;}
 .markdown-cover table {font-size:10pt;width:auto;max-width:90%;margin:1.2em auto;}
 .markdown-cover th,.markdown-cover td {padding:6px 8px;}
+.cover-members {margin:1.3em auto; text-align:center;}
+.cover-members p {margin:.65em 0; font-size:10pt;}
 .figure-caption {break-after:avoid;}
 div[align="center"]:has(img) {break-inside:avoid;}
 .persona-composite {break-inside:avoid; width:135mm; margin:5mm auto;}
@@ -47,9 +55,12 @@ div[align="center"]:has(img) {break-inside:avoid;}
  .backlog-section img {max-height:100mm;}
  .backlog {font-size:8.2pt;table-layout:fixed;}
  .backlog th,.backlog td {padding:5px;}
- .backlog th:nth-child(1){width:5%;}.backlog th:nth-child(2){width:10%;}.backlog th:nth-child(3){width:6%;}
- .backlog th:nth-child(4){width:12%;}.backlog th:nth-child(5){width:20%;}.backlog th:nth-child(6){width:4%;}
- .backlog th:nth-child(7){width:7%;}.backlog th:nth-child(8){width:11%;}.backlog th:nth-child(9){width:7%;}.backlog th:nth-child(10){width:18%;}
+ .backlog-nine th:nth-child(1){width:5%;}.backlog-nine th:nth-child(2){width:10%;}.backlog-nine th:nth-child(3){width:6%;}
+ .backlog-nine th:nth-child(4){width:12%;}.backlog-nine th:nth-child(5){width:21%;}.backlog-nine th:nth-child(6){width:6%;}
+ .backlog-nine th:nth-child(7){width:13%;}.backlog-nine th:nth-child(8){width:7%;}.backlog-nine th:nth-child(9){width:20%;}
+ .backlog-eight th:nth-child(1){width:8%;}.backlog-eight th:nth-child(2){width:15%;}.backlog-eight th:nth-child(3){width:6%;}
+ .backlog-eight th:nth-child(4){width:14%;}.backlog-eight th:nth-child(5){width:29%;}.backlog-eight th:nth-child(6){width:6%;}
+ .backlog-eight th:nth-child(7){width:14%;}.backlog-eight th:nth-child(8){width:8%;}
  .backlog td:nth-child(3){white-space:nowrap;}
  .stories {table-layout:fixed;}
  .stories th:nth-child(1){width:8%;} .stories th:nth-child(2){width:15%;}
