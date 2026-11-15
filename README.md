@@ -90,6 +90,7 @@ El siguiente registro conserva las actividades documentadas para AV1 en el repos
 
 | Revisión TB1 · v2.0.5 | 11/11/2026 | Atauje Barreto, Alexander Sebastián | Registro de integración local de landing, SPA y API; preparación trazable del tablero y procedimiento de publicación verificada, con accesos y aceptación pendientes explícitos. |
 | Preparación AV2 · v3.0.0-av2.1 | 13/11/2026 | Atauje Barreto, Alexander Sebastián | Integración del esquema EF Core/PostgreSQL de 18 tablas, documentación de recursos REST, preparación de Sprint 3, validación, videos y entrega. El despliegue AV2 y las sesiones con participantes aún requieren evidencia propia. |
+| AV2 | 14/11/2026 | Atauje Barreto, Alexander Sebastián | Incorporación de la entrevista AV2-C01 de Farit Santoyo: video, captura original, resumen de respuestas y alcance parcial de la validación. |
 
 <div style="page-break-after: always;"></div>
 
@@ -3625,9 +3626,47 @@ El guion conserva las preguntas completas, criterios de observación y ficha de 
 
 ### 5.3.2. Registro de entrevistas
 
-Las nuevas grabaciones de validación no se han incorporado a este corte. El [registro editable](docs/av2/validation-records.csv) se mantiene sin participantes ni resultados inventados. Cada sesión deberá añadir segmento, fecha, versión, enlace autorizado, inicio/duración del fragmento, captura representativa, resumen, resultados por tarea y dificultades.
+El [registro editable de sesiones](docs/av2/validation-records.csv) incorpora la entrevista AV2-C01 de Farit Alejandro Santoyo Espejo. La ficha distingue las respuestas de comprensión del producto de las tareas operativas que no se ejecutaron durante la grabación. Las siguientes entrevistas se incorporarán con sus evidencias y resultados propios.
 
-El video consolidado se publicará en Microsoft Stream privado con acceso comprobado para el docente. La [pauta de montaje](docs/av2/video-scripts.md#entrevistas-de-validación-consolidadas) prepara rótulos e índice sin sustituir las sesiones. Los enlaces antiguos de TB1 se conservan en sus secciones históricas.
+#### Entrevista AV2-C01: Farit Alejandro Santoyo Espejo
+
+| Campo | Detalle |
+| --- | --- |
+| Segmento | Empresas distribuidoras de productos perecibles / Coordinador Logístico. |
+| Nombres y apellidos | Farit Alejandro Santoyo Espejo, según su presentación en el video. |
+| Edad | 28 años. |
+| Distrito | San Luis. |
+| Actividad | Operaciones y logística de una empresa alimenticia; utiliza ERP y Excel. |
+| Entrevistador | Alexander Sebastián Atauje Barreto. |
+| Fecha de la grabación | 14/11/2026, según los metadatos del archivo, en America/Lima. |
+| Video en Microsoft Stream | [Entrevista de validación — Farit Santoyo](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241f246_upc_edu_pe/IQArjur2ZtRBSqwIc2ym8oKWAQTSrafIeKnth4eaBjo1C54?e=JRcADt). |
+| Inicio y duración | Inicio: **00:00:00**. Duración: **00:03:40**. |
+| Entorno observado | Landing en GitHub Pages y aplicación pública en Azure. La versión no se identifica dentro de la grabación. |
+| Cuenta mostrada | Cliente de Carga, perfil de demostración Andrea Salas. |
+| Modalidad y alcance | Demostración guiada y preguntas de comprensión. Validación parcial para el segmento de coordinadores; no acredita ejecución de programación, reserva ni atención de alertas con permisos de coordinador. |
+| Autorización | Consentimiento para participar y grabar con fines de evaluación académica, expresado entre **00:00:10 y 00:00:15**. |
+| Acceso del docente | Enlace institucional de Microsoft Stream; la consulta sin autenticar solicita inicio de sesión. Comprobar el permiso de acceso del docente antes de entregar. |
+
+![Entrevista de validación de Farit Santoyo durante la consulta guiada de alertas, con la cuenta cliente visible](assets/images/chapter-05/av2/validation-farit-santoyo.png)
+
+*Captura del archivo original en 00:02:20. La actividad profesional del participante corresponde al segmento de coordinadores; la cuenta utilizada en la demostración corresponde a Cliente de Carga.*
+
+**Resumen de la entrevista.** Farit distingue el propósito de seguimiento térmico de FríoTrack y diferencia la organización y supervisión de despachos de la consulta de entregas del cliente. Explica que identificaría un envío mediante código, carga, origen, destino y estado. Al comentar una programación, señala que comprobaría las unidades, el rango térmico y la disponibilidad del vehículo y del conductor; estas respuestas describen lo que haría y no una programación ejecutada.
+
+En la interpretación de las lecturas, considera necesario comparar temperatura, rango y fecha de actualización; reconoce que una lectura antigua no confirma la condición actual de una carga. También diferencia el registro de atención de una alerta de la recuperación térmica, que comprobaría mediante lecturas posteriores. Valora el historial como antecedente para revisar incidencias y solicita un resumen fácil de compartir. Para una operación real comprobaría el origen y la actualización de las mediciones y la relación con el ERP. Como mejoras propone explicaciones breves en la programación y mensajes claros de estados y alertas.
+
+| Intervalo | Aspecto tratado | Resultado registrado |
+| --- | --- | --- |
+| 00:00:42–00:00:56 | Propuesta de valor y perfiles | Diferencia verbalmente el seguimiento del envío y las funciones de coordinador y cliente. |
+| 00:01:09–00:01:15 | Acceso | Indica que elegiría coordinador; la sesión mostrada es de cliente. |
+| 00:01:22–00:01:37 | Identificación del envío | Describe los datos que revisaría; no se acredita navegación autónoma del participante. |
+| 00:01:41–00:01:54 | Programación | Enumera datos y comprobaciones; no crea ni confirma una programación. |
+| 00:01:57–00:02:23 | Lecturas y alerta | Explica vigencia del dato y diferencia entre atención y recuperación; no registra una acción correctiva. |
+| 00:02:30–00:02:38 | Recursos reservados | Explica una respuesta hipotética al conflicto; no se ejecuta una reserva superpuesta. |
+| 00:02:43–00:03:13 | Historial y confianza | Solicita un resumen compartible y comprobar procedencia, actualización y relación con ERP. |
+| 00:03:19–00:03:28 | Mejoras | Propone aclarar campos de programación y mensajes de estados y alertas. |
+
+**Seguimiento.** Completar una sesión con la cuenta de Coordinador Logístico para observar la programación de un envío, el rechazo de una reserva superpuesta y el registro de atención de una alerta. La comprensión verbal de esos procesos no equivale a su ejecución ni a su aceptación operativa. El resto de sesiones y el video consolidado continúan pendientes; los antecedentes de TB1 se conservan en sus secciones históricas.
 
 ### 5.3.3. Evaluación según heurísticas
 

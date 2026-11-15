@@ -9,7 +9,7 @@ Referencia: enunciado UPC 1ASI0730, periodo 202620, AV2 semana 12, páginas 32�
 | [Sprint 3](sprint-3.md) | Ocho secciones requeridas y propuesta de planificación, con datos reales pendientes identificados. |
 | [Backlog propuesto](sprint3-backlog-proposal.csv) | Tareas de 4–8 horas para discutir con el equipo; no constituyen capacidad ni compromiso aceptados. |
 | [Protocolo de validación](validation-protocol.md) | Tareas y preguntas por segmento para ejecutar sobre una versión estable. |
-| [Registro vacío de entrevistas](validation-records.csv) | Una fila por entrevista real, con evidencias y resultados. |
+| [Registro de entrevistas](validation-records.csv) | Sesión AV2-C01 de Farit Santoyo, con enlace, captura y alcance parcial; incorporar las siguientes sesiones reales. |
 | [Evaluación heurística](heuristics-template.md) | Estructura de Anexo D, severidad 1–4 y detalle de hallazgos observados. |
 | [Guiones de videos](video-scripts.md) | Product, Team, navegación y exposición; grabaciones auténticas aún necesarias. |
 | [Esquema de presentación](keynote-outline.md) | Estructura para preparar la presentación AV2 con evidencias verificadas. |
@@ -21,7 +21,7 @@ El repositorio Markdown continúa siendo la fuente editable. Los documentos de p
 
 Las fuentes del incremento incorporan PostgreSQL con EF Core, recursos REST y OpenAPI/Swagger, integrados con la SPA. El [informe principal](../../README.md#523-sprint-3--preparación-av2) registra el corte de implementación y separa sus pruebas de la aceptación pendiente. El [esquema AV2](../../assets/architecture/av2/README.md) se deriva de la migración inicial: 18 tablas, 31 FK e identificadores compatibles con el contrato histórico.
 
-Los [registros técnicos](../../assets/evidence/av2/technical-verification.json) identifican los commits y pruebas ejecutadas. La landing está publicada en GitHub Pages y Azure; la SPA y la API AV2 están publicadas en Azure con PostgreSQL 17 en Neon. Los [recibos de publicación](../../assets/evidence/av2/redeployment-api.json) y la [verificación del entorno público](../../assets/evidence/av2/public-interview-verification.json) registran el corte. Las entrevistas, grabaciones y aceptación siguen pendientes.
+Los [registros técnicos](../../assets/evidence/av2/technical-verification.json) identifican los commits y pruebas ejecutadas. La landing está publicada en GitHub Pages y Azure; la SPA y la API AV2 están publicadas en Azure con PostgreSQL 17 en Neon. Los [recibos de publicación](../../assets/evidence/av2/redeployment-api.json) y la [verificación del entorno público](../../assets/evidence/av2/public-interview-verification.json) registran el corte. La primera sesión grabada se registra en 5.3.2 con alcance parcial; completar las demás entrevistas, la validación operativa del coordinador y la aceptación del equipo.
 
 Se priorizan acceso y permisos, recursos independientes, programación/reserva consistente, lecturas autorizadas, alertas, atención e historial. La descarga del reporte persistido es JSON y el CSV de la SPA es una exportación distinta. Los datos son de demostración; no se afirma recepción física de sensores, correo verificado, pagos o funcionalidades fuera del incremento implementado.
 
