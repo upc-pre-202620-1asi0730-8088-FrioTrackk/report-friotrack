@@ -3820,6 +3820,31 @@ Farit distingue el propósito de seguimiento térmico de FríoTrack y diferencia
 
 En la interpretación de las lecturas, considera necesario comparar temperatura, rango y fecha de actualización; reconoce que una lectura antigua no confirma la condición actual de una carga. También diferencia el registro de atención de una alerta de la recuperación térmica, que comprobaría mediante lecturas posteriores. Valora el historial como antecedente para revisar incidencias y solicita un resumen fácil de compartir. Para una operación real comprobaría el origen y la actualización de las mediciones y la relación con el ERP. Como mejoras propone explicaciones breves en la programación y mensajes claros de estados y alertas.
 
+#### Entrevista AV2-C02: Carol Solsol
+
+| Campo | Detalle |
+| --- | --- |
+| Segmento | Coordinador Logístico. |
+| Nombres y apellidos | Carol Solsol. |
+| Edad | 42 años. |
+| Distrito | Lima. |
+| Actividad | Administración y control de despachos en una distribuidora de productos refrigerados; organiza la información con hojas de cálculo (Excel) y reportes por WhatsApp. |
+| Entrevistador(a) | Nayely Macarena Vera Solsol. |
+| Fecha de la grabación | 14/11/2026 |
+| Video en Microsoft Stream | [Entrevista de validación - Carol Solsol](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231h171_upc_edu_pe/IQDD2Tcr5P_BR4fMcv4JirE1ATVguTS1iobPYY6Y60oNqmc?e=UDmzTX&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D). |
+| Inicio y duración | Inicio: **00:00:00**. Duración: **00:05:41**. |
+| Entorno observado | Landing en GitHub Pages y aplicación pública en Azure, con el perfil de Coordinador Logístico. |
+| Cuenta mostrada | Coordinador Logístico, perfil de demostración Alex Rivera. |
+| Modalidad y alcance | Demostración guiada y preguntas sobre propuesta de valor, envíos, estados, lecturas, alertas, notificaciones e historial. |
+| Autorización | Consentimiento verbal para participar y grabar con fines de evaluación académica, expresado al inicio de la entrevista. |
+| Acceso | Microsoft Stream institucional; requiere autenticación. |
+
+![Entrevista de validación de Carol Solsol durante la revisión de alertas con el perfil Coordinador Logístico](assets/images/chapter-05/imagen_entrevista.png)
+
+*Captura de la entrevista durante la revisión de la app web.*
+
+**Resumen de la entrevista.** Carol Solsol evaluó FríoTrack destacando la utilidad del seguimiento de las condiciones del envío y la claridad en la separación de roles entre coordinador y cliente. Valoró positivamente el control de rangos de temperatura, la gestión de alertas y el registro histórico para auditorías de calidad, sugiriendo como mejoras principales la adición de ayudas visuales (tooltips), alertas más llamativas y un formato visual de exportación rápida para optimizar la toma de decisiones operativas.
+
 #### Entrevista AV2-L01: Irma Barreto
 
 | Campo | Detalle |
