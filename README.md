@@ -3216,7 +3216,7 @@ El Sprint 1 desarrolló la Landing Page de AV1. Su objetivo fue presentar el pro
 | Attendees (to planning meeting) | No registrado en la documentación disponible. |
 | Sprint 0 Review Summary | No aplica: primer sprint documentado. |
 | Sprint 0 Retrospective Summary | No aplica: no existe sprint previo documentado. |
-| Sprint 1 Goal | **Our focus is on** helping visitors understand the FríoTrack cold-chain transport proposal through a bilingual landing page.<br>**We believe it delivers** clear information about the proposed service and logistics corridors **to** refrigerated transport companies and cargo clients.<br>**This will be confirmed when** the sprint review demonstrates the value proposition, four proposed corridors and FAQ in English and Spanish without horizontal overflow at 390 px and 1440 px, and a valid commercial enquiry receives a real delivery confirmation. |
+| Sprint 1 Goal | **Nuestro enfoque es** presentar la propuesta de transporte refrigerado de FríoTrack mediante una landing bilingüe.<br>**Consideramos que aporta** información clara sobre el servicio y los corredores logísticos **a** las empresas de transporte refrigerado y los clientes de carga.<br>**Esto se confirmará cuando** la revisión muestre la propuesta de valor, los cuatro corredores y las preguntas frecuentes en español e inglés, sin desbordamiento horizontal a 390 y 1440 px, y una consulta comercial válida obtenga confirmación de recepción. |
 | Sprint 1 Velocity | No consta la capacidad acordada en SP en el registro de planificación; los 9 SP relacionados no se presentan como velocidad aceptada. |
 | Sum of Story Points | 9 SP: US23, US24, US25 y US27 del catálogo vigente. |
 
@@ -3236,7 +3236,7 @@ Alexander aportó la propuesta y la estructura del informe; Benjamin, arquitectu
 
 #### 5.2.1.3. Sprint Backlog 1
 
-El Sprint 1 se concentra en la propuesta, los corredores propuestos, el contacto y las preguntas frecuentes de la landing. Su goal se expresa con la plantilla del statement y una métrica de revisión; el receptor comercial no está configurado en este corte. La captura del tablero disponible es el antecedente del [Product Backlog en Trello](https://trello.com/b/6qrvOukt/blackstartup-fr%C3%ADotrack), no una validación actual de los estados regularizados.
+El Sprint 1 se concentra en la propuesta, los corredores propuestos, el contacto y las preguntas frecuentes de la landing. El objetivo incluye criterios de revisión de contenido, idiomas y contacto; el receptor comercial no está configurado en este corte. La captura del tablero disponible es el antecedente del [Product Backlog en Trello](https://trello.com/b/6qrvOukt/blackstartup-fr%C3%ADotrack), no una validación actual de los estados regularizados.
 
 ![Tablero disponible como antecedente del Sprint 1](assets/images/chapter-03/cap_trello.png)
 
@@ -3307,7 +3307,7 @@ El Sprint 2 entrega la primera aplicación web de FríoTrack y actualiza la land
 | Attendees | No consta una relación de asistentes en los archivos del informe. |
 | Sprint 1 Review Summary | Landing implementada; el formulario comercial aún requiere receptor. Se actualizaron los accesos hacia la aplicación pública. |
 | Sprint 1 Retrospective Summary | Para esta iteración se consolidan requisitos, fuentes, pruebas y evidencias en los repositorios del equipo. No se adjunta acta de retrospectiva. |
-| Sprint 2 Goal | **Our focus is on** enabling logistics coordinators to operate refrigerated shipments and cargo clients to consult their assigned shipments through the bilingual application.<br>**We believe it delivers** centralized operational control and restricted access to shipment information **to** refrigerated transport companies and cargo clients.<br>**This will be confirmed when** the review demonstrates a coordinator scheduling a valid shipment and recording a corrective action, a cargo client receiving only assigned shipments and being denied a coordination command, and both profiles completing access in English and Spanish, with all four authorization and access checks passing. |
+| Sprint 2 Goal | **Nuestro enfoque es** permitir que el Coordinador Logístico opere envíos refrigerados y que el Cliente de Carga consulte sus envíos asignados desde una aplicación bilingüe.<br>**Consideramos que aporta** control centralizado de la operación y acceso restringido a la información **a** las empresas de transporte y sus clientes.<br>**Esto se confirmará cuando** un coordinador programe un envío válido y registre una acción correctiva; un cliente consulte únicamente sus envíos y reciba un rechazo ante comandos de coordinación; y se superen las cuatro comprobaciones de acceso y autorización en español e inglés. |
 | Sprint 2 Velocity | No consta la capacidad acordada por el equipo en la planificación; los SP relacionados no acreditan esa decisión ni la velocidad alcanzada. |
 | Sum of Story Points | 75 SP de 20 historias relacionadas con la implementación; no equivalen a puntos aceptados ni a velocidad. |
 
@@ -3315,7 +3315,7 @@ El periodo de integración técnica registrado es 07–08/10/2026, America/Lima;
 
 Los criterios de revisión técnica son: rechazar credenciales incorrectas, restaurar una sesión válida, impedir acciones de coordinación desde una cuenta cliente, filtrar los envíos por cliente, conservar los parámetros de idioma y perfil desde la landing y comprobar los archivos publicados. Las verificaciones disponibles se detallan en 5.2.2.5.
 
-La revisión del goal utiliza cuatro comprobaciones: acceso válido en ambos idiomas; denegación de acceso con credenciales incorrectas; filtrado de envíos del Cliente de Carga; y rechazo de comandos de coordinación desde ese perfil. La programación y la acción correctiva se revisan como recorridos de operación. Estas métricas expresan el criterio de aceptación de la corrección; los recibos de 5.2.2.5 conservan sus resultados y fechas originales y no se presentan como ejecución de una nueva revisión del equipo.
+La revisión del objetivo utiliza cuatro comprobaciones: acceso válido en ambos idiomas; denegación de acceso con credenciales incorrectas; filtrado de envíos del Cliente de Carga; y rechazo de comandos de coordinación desde ese perfil. La programación y la acción correctiva se revisan como recorridos de operación. Estas métricas expresan el criterio de aceptación de la corrección; los recibos de 5.2.2.5 conservan sus resultados y fechas originales y no se presentan como ejecución de una nueva revisión del equipo.
 
 #### 5.2.2.2. Aspect Leaders and Collaborators
 

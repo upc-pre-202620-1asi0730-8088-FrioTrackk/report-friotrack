@@ -46,7 +46,7 @@ assert not broken, broken
 assert len(storyrows)==43 and results['scenarioMarkers']==86 and not gherkin, 'Incomplete story scenarios'
 assert all(not s['invalidHours'] and not s['invalidStatus'] for s in sprints.values()), 'Invalid backlog values'
 assert 'IAM' in results['boundedContextHeadings'][-1], 'Generic context must follow operational contexts'
-for phrase in ['Our focus is on','We believe it delivers','This will be confirmed when']:
+for phrase in ['Nuestro enfoque es','Consideramos que aporta','Esto se confirmará cuando']:
     assert text.count(phrase)>=2, 'Missing Sprint Goal template clause: '+phrase
 architecture=repo/'assets/architecture/chapter-04'
 manifest=json.loads((architecture/'manifest.json').read_text(encoding='utf-8-sig'))
