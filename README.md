@@ -3688,6 +3688,33 @@ Al interpretar las lecturas, revisaría su fecha de actualización y complementa
 
 Considera que el reporte JSON es técnico y prefiere un resumen fácil de leer y compartir, con fechas e incidencias principales. Para confiar en la información comprobaría quién registra los datos, cuándo se actualizan y con quién comunicarse. Como mejoras propone mensajes sencillos, letras legibles y un resumen del estado del envío, sus incidencias y la última actualización, que pueda consultar mientras atiende otras tareas del restaurante.
 
+
+#### Entrevista AV2-C01: Carol Solsol
+
+| Campo | Detalle |
+| --- | --- |
+| Segmento | Coordinador Logistico. |
+| Nombres y apellidos | Carol Solsol. |
+| Edad | 42 años. |
+| Distrito | Lima. |
+| Actividad | Administración y control de despachos en una distribuidora de productos refrigerados; organiza la información con hojas de cálculo (Excel) y reportes por WhatsApp. |
+| Entrevistador(a) | Nayely Macarena Vera Solsol. |
+| Fecha de la grabación | 14/11/2026 |
+| Video en Microsoft Stream | [Entrevista de validación - Carol Solsol](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231h171_upc_edu_pe/IQDD2Tcr5P_BR4fMcv4JirE1ATVguTS1iobPYY6Y60oNqmc?e=UDmzTX&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D). |
+| Inicio y duración | Inicio: **00:00:00**. Duración: **00:05:41**. |
+| Entorno observado | Landing en GitHub Pages y aplicación pública en Azure, con el perfil de Cliente de Carga / Coordinador logístico. |
+| Cuenta mostrada | Coordinador Logistico, perfil de demostración Alex Rivera. |
+| Modalidad y alcance | Demostración guiada y preguntas sobre propuesta de valor, envíos, estados, lecturas, alertas, notificaciones e historial. |
+| Autorización | Consentimiento verbal para participar y grabar con fines de evaluación académica, expresado al inicio de la entrevista. |
+| Acceso | Microsoft Stream institucional; requiere autenticación. |
+
+![Entrevista de validación de Carol Solsol durante la revisión de alertas con el perfil Coordinador Logistico]()
+
+*Captura de la entrevista durante la revisión de la app web.*
+
+**Resumen de la entrevista.** Carol Solsol evaluó FríoTrack destacando la utilidad del monitoreo en tiempo real y la claridad en la separación de roles entre coordinador y cliente. Valoró positivamente el control de rangos de temperatura, la gestión de alertas y el registro histórico para auditorías de calidad, sugiriendo como mejoras principales la adición de ayudas visuales (tooltips), alertas más llamativas y un formato visual de exportación rápida para optimizar la toma de decisiones operativas.
+
+
 ### 5.3.3. Evaluación según heurísticas
 
 La [plantilla de evaluación](docs/av2/heuristics-template.md) corresponde al **Anexo D del enunciado**: datos de evaluación, tareas incluidas/excluidas, resumen de problemas y fichas con severidad, principio, evidencia y recomendación. El Anexo D de este informe conserva sus enlaces de tablero/diseño; no debe confundirse con el anexo del statement.
