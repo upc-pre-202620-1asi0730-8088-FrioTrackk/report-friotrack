@@ -1,0 +1,539 @@
+{
+  "cutSha": "79146efe3777a21f8ae84317b1e4c083f40c6590",
+  "since": "2026-11-12T00:00:00-05:00",
+  "mergeCommitsExcluded": true,
+  "total": 75,
+  "counts": {
+    "rodrigoxd67": 14,
+    "Eshnikeee": 16,
+    "Macaxprogram29": 35,
+    "Alexander1Alexander2": 10
+  },
+  "commits": [
+    {
+      "sha": "29e2d20af3d0203c13a84da7f85e3e11722f2bcd",
+      "author": "rodrigoxd67",
+      "email": "rodrigosaavedraflores6@gmail.com",
+      "date": "2026-11-15T06:56:03-05:00",
+      "subject": "docs(report): refresh AV2 contribution totals and final validation"
+    },
+    {
+      "sha": "851d2788a1e4dec75ffee3eccbeb2e7cf7491803",
+      "author": "rodrigoxd67",
+      "email": "rodrigosaavedraflores6@gmail.com",
+      "date": "2026-11-15T06:53:12-05:00",
+      "subject": "docs(report): polish AV2 prose and align headings and references"
+    },
+    {
+      "sha": "a0627ffaeaca638bf3511bf53da0b57108b9046a",
+      "author": "rodrigoxd67",
+      "email": "rodrigosaavedraflores6@gmail.com",
+      "date": "2026-11-15T06:53:12-05:00",
+      "subject": "docs(videos): consolidate walkthrough and audiovisual catalog links"
+    },
+    {
+      "sha": "667a80582e4d146df15ceaf70972825b8b7b662f",
+      "author": "rodrigoxd67",
+      "email": "rodrigosaavedraflores6@gmail.com",
+      "date": "2026-11-15T06:53:11-05:00",
+      "subject": "docs(videos): finalize team video and collaboration references"
+    },
+    {
+      "sha": "163862e6f36df0ddfaa75e028cc892b3af101f2f",
+      "author": "rodrigoxd67",
+      "email": "rodrigosaavedraflores6@gmail.com",
+      "date": "2026-11-15T06:53:11-05:00",
+      "subject": "docs(videos): finalize product video reference and delivery details"
+    },
+    {
+      "sha": "5c8a163e51503374bbb6d7011bb731d043e33444",
+      "author": "rodrigoxd67",
+      "email": "rodrigosaavedraflores6@gmail.com",
+      "date": "2026-11-15T06:53:10-05:00",
+      "subject": "docs(sprint-3): classify support tasks and reconcile video evidence"
+    },
+    {
+      "sha": "d956ce78d275785435d61c38520bc5a8f2352d33",
+      "author": "rodrigoxd67",
+      "email": "rodrigosaavedraflores6@gmail.com",
+      "date": "2026-11-15T06:53:10-05:00",
+      "subject": "docs(backlogs): simplify historical sprint tables and review notes"
+    },
+    {
+      "sha": "2198d2b8bf7d51be6a1b20fb1613ffa5b503fc22",
+      "author": "rodrigoxd67",
+      "email": "rodrigosaavedraflores6@gmail.com",
+      "date": "2026-11-15T06:53:09-05:00",
+      "subject": "docs(team): clarify sprint responsibility matrices without empty cells"
+    },
+    {
+      "sha": "09eba03513500411d21fa614f7b135353b1384a9",
+      "author": "rodrigoxd67",
+      "email": "rodrigosaavedraflores6@gmail.com",
+      "date": "2026-11-15T06:53:09-05:00",
+      "subject": "docs(sprint-3): restore complete planning table and Spanish goal"
+    },
+    {
+      "sha": "f9557b1a64203ffe385e6e15d480dabd9a6c962d",
+      "author": "rodrigoxd67",
+      "email": "rodrigosaavedraflores6@gmail.com",
+      "date": "2026-11-15T06:53:09-05:00",
+      "subject": "docs(sprint-2): complete planning metadata and retrospective summary"
+    },
+    {
+      "sha": "1d5a1f9c28112bb281a7b85fffa33f1351fd5586",
+      "author": "rodrigoxd67",
+      "email": "rodrigosaavedraflores6@gmail.com",
+      "date": "2026-11-15T06:53:08-05:00",
+      "subject": "docs(sprint-1): complete kickoff planning and team participation"
+    },
+    {
+      "sha": "406a68b25cddc6fd87024a5d120f7fa3482c1dda",
+      "author": "rodrigoxd67",
+      "email": "rodrigosaavedraflores6@gmail.com",
+      "date": "2026-11-15T06:53:08-05:00",
+      "subject": "docs(sprints): translate sprint goals and acceptance clauses into Spanish"
+    },
+    {
+      "sha": "362e7ffd111d5a0047ab9a5a9350d8927161994b",
+      "author": "rodrigoxd67",
+      "email": "rodrigosaavedraflores6@gmail.com",
+      "date": "2026-11-15T06:53:07-05:00",
+      "subject": "docs(report): correct final report cover and version table"
+    },
+    {
+      "sha": "0abb314849959358544d9a88f6ac840e3f51daef",
+      "author": "Eshnikeee",
+      "email": "206278114+Eshnikeee@users.noreply.github.com",
+      "date": "2026-11-15T06:19:21-05:00",
+      "subject": "docs(report): add Sprint 3 and AV2 video anchors to the contents"
+    },
+    {
+      "sha": "ae0a9acb82226e64000caadcde956d3341dbde0b",
+      "author": "Eshnikeee",
+      "email": "206278114+Eshnikeee@users.noreply.github.com",
+      "date": "2026-11-15T06:19:21-05:00",
+      "subject": "docs(report): add the AV2 presentation and video references to Annex E"
+    },
+    {
+      "sha": "0b6394e84bda87af2a710fb3259098c767037ac0",
+      "author": "Eshnikeee",
+      "email": "206278114+Eshnikeee@users.noreply.github.com",
+      "date": "2026-11-15T06:19:21-05:00",
+      "subject": "docs(report): register the AV2 team video in Stream"
+    },
+    {
+      "sha": "b60a8c13a8a33b134bac0d8f4b16454e2f41b1cb",
+      "author": "Eshnikeee",
+      "email": "206278114+Eshnikeee@users.noreply.github.com",
+      "date": "2026-11-15T06:19:21-05:00",
+      "subject": "docs(report): link the AV2 product walkthrough in execution evidence"
+    },
+    {
+      "sha": "f13f06eba15c45746f5e2d8a59561c95927518cf",
+      "author": "Eshnikeee",
+      "email": "206278114+Eshnikeee@users.noreply.github.com",
+      "date": "2026-11-15T06:19:21-05:00",
+      "subject": "docs(report): trace Sprint 3 contributions to their evidence"
+    },
+    {
+      "sha": "c1227572690a0c5115f81ced9c24c768df6990d4",
+      "author": "Eshnikeee",
+      "email": "206278114+Eshnikeee@users.noreply.github.com",
+      "date": "2026-11-15T06:19:21-05:00",
+      "subject": "docs(report): populate the Sprint 3 LACX matrix"
+    },
+    {
+      "sha": "93d055849ce5a23ba9e4431550a443ccbebf9ab9",
+      "author": "Eshnikeee",
+      "email": "206278114+Eshnikeee@users.noreply.github.com",
+      "date": "2026-11-15T06:19:21-05:00",
+      "subject": "docs(report): record the Sprint 3 board snapshot"
+    },
+    {
+      "sha": "79857a3b36026707ff82522d5acde9f0a0aa01ee",
+      "author": "Eshnikeee",
+      "email": "206278114+Eshnikeee@users.noreply.github.com",
+      "date": "2026-11-15T06:19:21-05:00",
+      "subject": "docs(report): set the AV2 validation scope and exclusions"
+    },
+    {
+      "sha": "4db5b51183bc547a5ee163c1a665407f547437a2",
+      "author": "Eshnikeee",
+      "email": "206278114+Eshnikeee@users.noreply.github.com",
+      "date": "2026-11-15T06:19:21-05:00",
+      "subject": "docs(report): specify verifiable Sprint 3 acceptance criteria"
+    },
+    {
+      "sha": "737a088a919ee5329f9b33d3162a8694f1d0315b",
+      "author": "Eshnikeee",
+      "email": "206278114+Eshnikeee@users.noreply.github.com",
+      "date": "2026-11-15T06:19:21-05:00",
+      "subject": "docs(report): describe Sprint 3 scope by user role"
+    },
+    {
+      "sha": "724ca6ebcb5559d892a1a340554bfe17c2e850f5",
+      "author": "Eshnikeee",
+      "email": "206278114+Eshnikeee@users.noreply.github.com",
+      "date": "2026-11-15T06:19:21-05:00",
+      "subject": "docs(report): document lessons carried into Sprint 3"
+    },
+    {
+      "sha": "f58b5b81bf958bb6dd993afa7ff22ea3a2e2caef",
+      "author": "Eshnikeee",
+      "email": "206278114+Eshnikeee@users.noreply.github.com",
+      "date": "2026-11-15T06:19:21-05:00",
+      "subject": "docs(report): summarize the Sprint 2 review"
+    },
+    {
+      "sha": "ac1cacfb47f2992b984f96381059ea69761733a9",
+      "author": "Eshnikeee",
+      "email": "206278114+Eshnikeee@users.noreply.github.com",
+      "date": "2026-11-15T06:19:20-05:00",
+      "subject": "docs(report): define the Sprint 3 goal"
+    },
+    {
+      "sha": "4ecf223daf4131e6fe03a57feb7059feacac16b7",
+      "author": "Macaxprogram29",
+      "email": "nayelyvera2020@gmail.com",
+      "date": "2026-11-15T05:37:38-05:00",
+      "subject": "docs(report): update av2 student outcome and collaboration insights"
+    },
+    {
+      "sha": "9e369345088776af1d3583a57aa398d83925cd84",
+      "author": "Macaxprogram29",
+      "email": "nayelyvera2020@gmail.com",
+      "date": "2026-11-15T04:08:29-05:00",
+      "subject": "docs(sprint-3): remove the separate sprint backlog file"
+    },
+    {
+      "sha": "bdb26ab5d04449dc1dca0258932ba6407bfb895c",
+      "author": "Macaxprogram29",
+      "email": "nayelyvera2020@gmail.com",
+      "date": "2026-11-15T04:08:23-05:00",
+      "subject": "docs(sprint-3): point the sprint guide to the report backlog"
+    },
+    {
+      "sha": "60608781ab84deaf60fa7aca22abf596a221b270",
+      "author": "Macaxprogram29",
+      "email": "nayelyvera2020@gmail.com",
+      "date": "2026-11-15T04:08:07-05:00",
+      "subject": "docs(sprint-3): move the sprint backlog into the report"
+    },
+    {
+      "sha": "33a8d0765e2d2ce28071cf59a295f1c2f65c21f4",
+      "author": "Macaxprogram29",
+      "email": "nayelyvera2020@gmail.com",
+      "date": "2026-11-15T03:56:16-05:00",
+      "subject": "docs(sprint-3): summarize trello task status totals"
+    },
+    {
+      "sha": "a091caf18c3bd68717f0d26804cda5dd1f91f34a",
+      "author": "Macaxprogram29",
+      "email": "nayelyvera2020@gmail.com",
+      "date": "2026-11-15T03:56:09-05:00",
+      "subject": "docs(sprint-3): link the updated backlog from the sprint guide"
+    },
+    {
+      "sha": "558970b1f0c9c8af6a53a8d42d5b2e3d6819a1f1",
+      "author": "Macaxprogram29",
+      "email": "nayelyvera2020@gmail.com",
+      "date": "2026-11-15T03:55:42-05:00",
+      "subject": "docs(sprint-3): link contributor evidence"
+    },
+    {
+      "sha": "798c347656c48ac9fc18e9e8c66973eae2503acb",
+      "author": "Macaxprogram29",
+      "email": "nayelyvera2020@gmail.com",
+      "date": "2026-11-15T03:55:33-05:00",
+      "subject": "docs(sprint-3): update delivery packaging assignment"
+    },
+    {
+      "sha": "9cf5e9090af23f39e9f6c7edf8d6b4da7c75a6ef",
+      "author": "Macaxprogram29",
+      "email": "nayelyvera2020@gmail.com",
+      "date": "2026-11-15T03:55:26-05:00",
+      "subject": "docs(sprint-3): update report integration progress"
+    },
+    {
+      "sha": "8a9c52a0a7b25d94ac378996940c8065de5f6103",
+      "author": "Macaxprogram29",
+      "email": "nayelyvera2020@gmail.com",
+      "date": "2026-11-15T03:55:04-05:00",
+      "subject": "docs(sprint-3): update av2 presentation assignment"
+    },
+    {
+      "sha": "87d064be19c62ff3a20878a275dd48af6314b67a",
+      "author": "Macaxprogram29",
+      "email": "nayelyvera2020@gmail.com",
+      "date": "2026-11-15T03:54:56-05:00",
+      "subject": "docs(sprint-3): update navigation recording assignment"
+    },
+    {
+      "sha": "4c0418f6b3f72ca0e85c16250ed7a58a3f0b4b7b",
+      "author": "Macaxprogram29",
+      "email": "nayelyvera2020@gmail.com",
+      "date": "2026-11-15T03:54:49-05:00",
+      "subject": "docs(sprint-3): update team video editing assignment"
+    },
+    {
+      "sha": "65ac63383de4daeffa54bc06998c97de9ba82dd7",
+      "author": "Macaxprogram29",
+      "email": "nayelyvera2020@gmail.com",
+      "date": "2026-11-15T03:54:32-05:00",
+      "subject": "docs(sprint-3): update completed product video publication"
+    },
+    {
+      "sha": "60ab77e44e1c66a90fc7a36457f69018e85c470c",
+      "author": "Macaxprogram29",
+      "email": "nayelyvera2020@gmail.com",
+      "date": "2026-11-15T03:54:24-05:00",
+      "subject": "docs(sprint-3): update usability review planning"
+    },
+    {
+      "sha": "8f67e677b552bdac3a04b12533dc74f9b3acd1bd",
+      "author": "Macaxprogram29",
+      "email": "nayelyvera2020@gmail.com",
+      "date": "2026-11-15T03:54:16-05:00",
+      "subject": "docs(sprint-3): update cargo client validation progress"
+    },
+    {
+      "sha": "b243155b9bd3077a807f4823312d10c790a1f5bc",
+      "author": "Macaxprogram29",
+      "email": "nayelyvera2020@gmail.com",
+      "date": "2026-11-15T03:54:03-05:00",
+      "subject": "docs(sprint-3): update coordinator validation progress"
+    },
+    {
+      "sha": "dbdacaba56e523a3fa6a32a7a995a9ce5cf053f0",
+      "author": "Macaxprogram29",
+      "email": "nayelyvera2020@gmail.com",
+      "date": "2026-11-15T03:53:54-05:00",
+      "subject": "docs(sprint-3): update validation session preparation"
+    },
+    {
+      "sha": "cff11c7d288900c693cb1982ba04dd0ff7253f19",
+      "author": "Macaxprogram29",
+      "email": "nayelyvera2020@gmail.com",
+      "date": "2026-11-15T03:53:43-05:00",
+      "subject": "docs(sprint-3): update web deployment and board traceability"
+    },
+    {
+      "sha": "54d65f33401ee5ed9722626c93286ab16ee46e94",
+      "author": "Macaxprogram29",
+      "email": "nayelyvera2020@gmail.com",
+      "date": "2026-11-15T03:53:36-05:00",
+      "subject": "docs(sprint-3): update landing videos and api deployment"
+    },
+    {
+      "sha": "8abf16e5e85b643eabd8fd07272e876f69a25fbb",
+      "author": "Macaxprogram29",
+      "email": "nayelyvera2020@gmail.com",
+      "date": "2026-11-15T03:53:19-05:00",
+      "subject": "docs(sprint-3): update database tests and bilingual workflows"
+    },
+    {
+      "sha": "28f28f13db8af17428f0bef4d6bd729387c1d110",
+      "author": "Macaxprogram29",
+      "email": "nayelyvera2020@gmail.com",
+      "date": "2026-11-15T03:53:13-05:00",
+      "subject": "docs(sprint-3): update spa integration and domain tests"
+    },
+    {
+      "sha": "a8b530be3bc060ea4b442c4ab91b075bcaa560fe",
+      "author": "Macaxprogram29",
+      "email": "nayelyvera2020@gmail.com",
+      "date": "2026-11-15T03:53:06-05:00",
+      "subject": "docs(sprint-3): update report history and openapi documentation"
+    },
+    {
+      "sha": "1e5aac23994811739ed352e7c794f6702dd4bdf9",
+      "author": "Macaxprogram29",
+      "email": "nayelyvera2020@gmail.com",
+      "date": "2026-11-15T03:52:58-05:00",
+      "subject": "docs(sprint-3): update alerts and notification reading"
+    },
+    {
+      "sha": "d280611ea041e54608fc0a9ea807d2a676085265",
+      "author": "Macaxprogram29",
+      "email": "nayelyvera2020@gmail.com",
+      "date": "2026-11-15T03:52:44-05:00",
+      "subject": "docs(sprint-3): update fleet resources and telemetry storage"
+    },
+    {
+      "sha": "ef4580b4e80b6b9079bed13178e870781c84cf95",
+      "author": "Macaxprogram29",
+      "email": "nayelyvera2020@gmail.com",
+      "date": "2026-11-15T03:52:37-05:00",
+      "subject": "docs(sprint-3): update resource reservations and shipment lifecycle"
+    },
+    {
+      "sha": "acc07e1522fa073dcd793e4318149e09533efe5a",
+      "author": "Macaxprogram29",
+      "email": "nayelyvera2020@gmail.com",
+      "date": "2026-11-15T03:52:31-05:00",
+      "subject": "docs(sprint-3): update entity mappings and database migration"
+    },
+    {
+      "sha": "40f97b881bfac3d8bfe51b5827865cc1164c3e16",
+      "author": "Macaxprogram29",
+      "email": "nayelyvera2020@gmail.com",
+      "date": "2026-11-15T03:52:24-05:00",
+      "subject": "docs(sprint-3): update shipment model and persistent sessions"
+    },
+    {
+      "sha": "aef55aeeb2cf07408b333f3278bb550f68bca8ef",
+      "author": "Macaxprogram29",
+      "email": "nayelyvera2020@gmail.com",
+      "date": "2026-11-15T03:52:04-05:00",
+      "subject": "docs(sprint-3): add the complete sprint backlog table"
+    },
+    {
+      "sha": "1e299b35314c6e1bd233ae23028b6e61493814da",
+      "author": "Macaxprogram29",
+      "email": "nayelyvera2020@gmail.com",
+      "date": "2026-11-15T03:50:33-05:00",
+      "subject": "docs(sprint-3): add trello board screenshot"
+    },
+    {
+      "sha": "52a38f43104b66ee7ffa36a8f7f599d888d406e8",
+      "author": "Macaxprogram29",
+      "email": "nayelyvera2020@gmail.com",
+      "date": "2026-11-15T02:49:04-05:00",
+      "subject": "docs(report): add about the product video links"
+    },
+    {
+      "sha": "b8746af48d7c351e90d8b5e492b4b92189ad8633",
+      "author": "Macaxprogram29",
+      "email": "nayelyvera2020@gmail.com",
+      "date": "2026-11-15T02:48:31-05:00",
+      "subject": "docs(report): add about the product video links"
+    },
+    {
+      "sha": "3d0bf3f334f288fecfdd07d90f194d66f1e87c72",
+      "author": "Macaxprogram29",
+      "email": "nayelyvera2020@gmail.com",
+      "date": "2026-11-15T02:45:43-05:00",
+      "subject": "docs(report): add about the product video links"
+    },
+    {
+      "sha": "75b182b2ce15bc9724b895666f9ad3f82f032cb9",
+      "author": "rodrigoxd67",
+      "email": "rodrigosaavedraflores6@gmail.com",
+      "date": "2026-11-15T02:34:49-05:00",
+      "subject": "docs(chapter5): standardize validation interviews and add Jari Hassan Syeda"
+    },
+    {
+      "sha": "cbe1271dfe4f18a97e7e08d28a704ef17a4598e2",
+      "author": "Eshnikeee",
+      "email": "206278114+Eshnikeee@users.noreply.github.com",
+      "date": "2026-11-15T02:31:12-05:00",
+      "subject": "docs(report): align AV2 interview video label"
+    },
+    {
+      "sha": "0ce82e43f328d011ebf5b91472341037fada465b",
+      "author": "Eshnikeee",
+      "email": "206278114+Eshnikeee@users.noreply.github.com",
+      "date": "2026-11-15T02:28:28-05:00",
+      "subject": "docs(report): publish authorized AV2 interview evidence"
+    },
+    {
+      "sha": "20c303927b2e031e67b86307c6f682fc11631e2a",
+      "author": "Macaxprogram29",
+      "email": "nayelyvera2020@gmail.com",
+      "date": "2026-11-15T02:19:08-05:00",
+      "subject": "docs: update image link in README.md"
+    },
+    {
+      "sha": "9bd91d4d6c6d02509ff4736af185252aa2381549",
+      "author": "Macaxprogram29",
+      "email": "nayelyvera2020@gmail.com",
+      "date": "2026-11-15T02:15:55-05:00",
+      "subject": "docs: add file interview"
+    },
+    {
+      "sha": "0f7c77ecaa913d249fba7e01fa78cda9c792d024",
+      "author": "Macaxprogram29",
+      "email": "nayelyvera2020@gmail.com",
+      "date": "2026-11-15T02:14:46-05:00",
+      "subject": "docs: add interview"
+    },
+    {
+      "sha": "bdcdb8daf430f537f88c197cf22a71b0a2edd306",
+      "author": "Eshnikeee",
+      "email": "206278114+Eshnikeee@users.noreply.github.com",
+      "date": "2026-11-15T02:01:21-05:00",
+      "subject": "docs(report): add anonymized AV2 warehouse interview"
+    },
+    {
+      "sha": "5e1b01f02486babe7bf0f6157841252e63208f4b",
+      "author": "Alexander1Alexander2",
+      "email": "superalexandersebastian@gmail.com",
+      "date": "2026-11-14T23:51:12-05:00",
+      "subject": "docs(report): add Irma validation interview"
+    },
+    {
+      "sha": "e328c5789ca9bfdd31540761fbb79611ee5c351f",
+      "author": "Alexander1Alexander2",
+      "email": "superalexandersebastian@gmail.com",
+      "date": "2026-11-14T22:52:24-05:00",
+      "subject": "docs(report): refine AV2 report documentation"
+    },
+    {
+      "sha": "043ba7e24f225af1c5e94f748bd166e8901c2199",
+      "author": "Alexander1Alexander2",
+      "email": "superalexandersebastian@gmail.com",
+      "date": "2026-11-14T22:32:57-05:00",
+      "subject": "docs(report): simplify validation interview presentation"
+    },
+    {
+      "sha": "d94d6b2d40ad222c7ed2b48b3a4824e341de629e",
+      "author": "Alexander1Alexander2",
+      "email": "superalexandersebastian@gmail.com",
+      "date": "2026-11-14T22:27:00-05:00",
+      "subject": "docs(report): add Farit validation interview evidence"
+    },
+    {
+      "sha": "1302fe84b55c663c7141ff0f4b1b44c6f52aeb82",
+      "author": "Alexander1Alexander2",
+      "email": "superalexandersebastian@gmail.com",
+      "date": "2026-11-14T19:32:06-05:00",
+      "subject": "docs(report): document public AV2 deployment evidence"
+    },
+    {
+      "sha": "28e31c665bcb92b2ad63fe865278291a3ce0628b",
+      "author": "Alexander1Alexander2",
+      "email": "superalexandersebastian@gmail.com",
+      "date": "2026-11-13T20:08:06-05:00",
+      "subject": "docs(report): remove internal team planning notes"
+    },
+    {
+      "sha": "90a4cead37818c1377a6beeed4b456b30134c0cd",
+      "author": "Alexander1Alexander2",
+      "email": "superalexandersebastian@gmail.com",
+      "date": "2026-11-13T19:52:46-05:00",
+      "subject": "fix(report): normalize architecture sources and presentation metadata"
+    },
+    {
+      "sha": "d568b7b272f531e47644351908ec4a2b3148ed1d",
+      "author": "Alexander1Alexander2",
+      "email": "superalexandersebastian@gmail.com",
+      "date": "2026-11-13T19:44:47-05:00",
+      "subject": "fix(report): preserve diagram checksums across platforms"
+    },
+    {
+      "sha": "1c7d0d863e91edd124544e3c6c94cec5122cea45",
+      "author": "Alexander1Alexander2",
+      "email": "superalexandersebastian@gmail.com",
+      "date": "2026-11-13T19:43:42-05:00",
+      "subject": "docs(av2): add presentation base and collaboration evidence"
+    },
+    {
+      "sha": "f155aba22acdcac35619b71eec3a5c4c4b3c6349",
+      "author": "Alexander1Alexander2",
+      "email": "superalexandersebastian@gmail.com",
+      "date": "2026-11-13T15:26:36-05:00",
+      "subject": "docs(av2): document relational architecture and verified product integration"
+    }
+  ]
+}
