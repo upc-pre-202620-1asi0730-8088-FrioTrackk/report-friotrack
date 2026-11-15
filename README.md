@@ -249,6 +249,9 @@ La carátula y el informe completo se mantienen en Markdown dentro de este `READ
     - [5.2.1. Sprint 1](#521-sprint-1)
     - [5.2.2. Sprint 2](#522-sprint-2)
     - [5.2.3. Sprint 3 — Preparación AV2](#523-sprint-3--preparación-av2)
+      - [5.2.3.1. Sprint Planning 3](#5231-sprint-planning-3)
+      - [5.2.3.2. Aspect Leaders and Collaborators](#5232-aspect-leaders-and-collaborators)
+      - [5.2.3.5. Execution Evidence for Sprint Review](#5235-execution-evidence-for-sprint-review)
   - [5.3. Validation Interviews](#53-validation-interviews)
     - [5.3.1. Diseño de entrevistas](#531-diseño-de-entrevistas)
     - [5.3.2. Registro de entrevistas](#532-registro-de-entrevistas)
@@ -265,6 +268,7 @@ La carátula y el informe completo se mantienen en Markdown dentro de este `READ
   - [Anexo C. Acceso a los productos publicados](#anexo-c-acceso-a-los-productos-publicados)
   - [Anexo D. Tablero, diseño e investigación](#anexo-d-tablero-diseño-e-investigación)
   - [Anexo E. Videos de Exposiciones](#anexo-e-videos-de-exposiciones)
+    - [Videos de AV2](#videos-de-av2)
   - [Anexo F. Entregables TB1](#anexo-f-entregables-tb1)
   - [Anexo G. Registros de verificación](#anexo-g-registros-de-verificación)
 
