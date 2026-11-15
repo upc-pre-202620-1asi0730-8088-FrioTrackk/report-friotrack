@@ -11,7 +11,7 @@ Carrera de Ingeniería de Software<br>
 **NRC**
 ### 8088
 
-## Informe de Trabajo Final · TB1
+## Informe de Trabajo Final
 
 **Docente**<br>
 ### Bautista Ubillús, Efraín Ricardo
@@ -55,7 +55,7 @@ Proyecto<br>
 
 **Periodo 202620**
 
-**Octubre 2026**
+**Noviembre 2026**
 
 </div>
 
@@ -86,8 +86,7 @@ El siguiente registro conserva las actividades documentadas para AV1 en el repos
 | TB1 · v2.0.0 | 08/10/2026 | Saavedra Flores, Rodrigo Andree | Actualización del índice, Capítulo V, trazabilidad de commits, conclusiones, bibliografía y anexos del informe. |
 | TB1 | 09/10/2026 | Saavedra Flores, Rodrigo Andree | Incorporación de Contributors, actualización de videos, matriz de responsables, performance y archivos de entrega. |
 | Revisión TB1 | 10/11/2026 | Atauje Barreto, Alexander Sebastián | Corrección de carátula, gráficos, escenarios, sprint goals, estados, C4, modelo DDD y configuración de repositorios a partir de las observaciones de evaluación. |
-| Revisión TB1 · v2.0.4 | 11/11/2026 | Atauje Barreto, Alexander Sebastián | Incorporación de los 22 diagramas aprobados, fuentes editables, contratos I01–I13, alineación DDD y ERD, actualización de gráficos y consistencia de planificación y evidencias. Carátula sin cambios. |
-
+| Revisión TB1 · v2.0.4 | 11/11/2026 | Atauje Barreto, Alexander Sebastián | Incorporación de los 22 diagramas aprobados, fuentes editables, contratos I01–I13, alineación DDD y ERD, actualización de gráficos y consistencia de planificación y evidencias. Conservación de la carátula de esa revisión. |
 | Revisión TB1 · v2.0.5 | 11/11/2026 | Atauje Barreto, Alexander Sebastián | Registro de integración local de landing, SPA y API; preparación trazable del tablero y procedimiento de publicación verificada, con configuración de accesos y trazabilidad de publicación. |
 | Preparación AV2 · v3.0.0-av2.1 | 13/11/2026 | Atauje Barreto, Alexander Sebastián | Integración del esquema EF Core/PostgreSQL de 18 tablas, documentación de recursos REST, preparación de Sprint 3, validación, videos y entrega. El corte técnico identifica las fuentes, migraciones y pruebas de integración. |
 | AV2 | 14/11/2026 | Atauje Barreto, Alexander Sebastián | Incorporación de la entrevista AV2-C01 de Farit Santoyo: video, captura original, resumen de respuestas y alcance parcial de la validación. |
