@@ -8,7 +8,7 @@ parser.add_argument('--output',type=Path)
 args=parser.parse_args()
 repo=Path(__file__).resolve().parents[1]
 writer=PdfWriter();writer.append(str(repo/'tmp/report-body.pdf'))
-writer.add_metadata({'/Title':'Informe de Trabajo Final','/Author':'Equipo BlackStartup','/Subject':'FríoTrack - AV2 - v3.0.0 - 15 de noviembre de 2026' if args.stage=='av2' else 'FríoTrack - TB1'})
+writer.add_metadata({'/Title':'Informe de Trabajo Final','/Author':'Equipo BlackStartup','/Subject':'FríoTrack - AV2 - v3.0.1 - 26 de noviembre de 2026' if args.stage=='av2' else 'FríoTrack - TB1'})
 for n,page in enumerate(writer.pages[1:],2):
  data=io.BytesIO(); w=float(page.mediabox.width); h=float(page.mediabox.height)
  c=canvas.Canvas(data,pagesize=(w,h));c.setFont('Helvetica',8);c.setFillColorRGB(.4,.4,.4);c.drawCentredString(w/2,20,str(n));c.save();data.seek(0);page.merge_page(PdfReader(data).pages[0])

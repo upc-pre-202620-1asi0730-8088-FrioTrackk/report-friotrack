@@ -1,0 +1,109 @@
+{
+  "checkedAt": "2026-11-26T18:06:44.947Z",
+  "api": {
+    "sourceSha": "7951b1c2af68dcbc5430822c4c689e24910c21b7",
+    "artifactSha256": "67ed05cc1da81b1157c7f81b3de19e326fb565672e00a11f6c51b9444ee68762",
+    "previousArtifactSha256": "bf96a1678a5e233b78213388d92a15fe777595a38739c773457e004cf9642eba",
+    "kuduDeploymentId": "d0fe18047b0a40ddabb525d00fb3bbc4",
+    "kuduStatus": 4,
+    "health": {
+      "status": "ok",
+      "service": "FrioTrack",
+      "version": "0.2.1",
+      "persistence": "postgresql",
+      "telemetry": "demonstration"
+    },
+    "scalar": {
+      "url": "https://friotrack-api-bce6db1b.azurewebsites.net/scalar/v1",
+      "status": 200
+    },
+    "openApi": {
+      "status": 200,
+      "paths": 26,
+      "version": "0.2.1"
+    }
+  },
+  "databaseChanges": false,
+  "applicationSettingsChanged": false,
+  "landing": {
+    "sourceSha": "75f30a85e468bb24ca78cc39373759c4e181b34a",
+    "url": "https://friotracktb1bce6db1b.z22.web.core.windows.net/landing/",
+    "verifiedFiles": [
+      {
+        "path": "assets/css/styles.css",
+        "status": 200,
+        "sha256": "84cb2925f275ae5bd7aad8a0a052ab18821875b8596584e85e6fe4f0dc2fab39"
+      },
+      {
+        "path": "assets/images/logo.svg",
+        "status": 200,
+        "sha256": "1b9d36305d65732abb80bae0992068bfb7293d4c0372e86dc765dba2ab323c53"
+      },
+      {
+        "path": "assets/images/og-friotrack.png",
+        "status": 200,
+        "sha256": "dc9c88e5e20b9f18d08b2713cc976128959b7f0b415beca7430ab9eb62038e0a"
+      },
+      {
+        "path": "assets/images/team/README.txt",
+        "status": 200,
+        "sha256": "2b006a50ded342707b98c41c3330db826d95c451ce6a73f47b7425a203c12e9c"
+      },
+      {
+        "path": "assets/images/team/u20241f246.png",
+        "status": 200,
+        "sha256": "643db59620fdc1edd50f96b5c6298e3ed3781aea19024b04cbf652e75359d9c7"
+      },
+      {
+        "path": "assets/js/app.js",
+        "status": 200,
+        "sha256": "73b48a1d64cafab64a7317617e3ff87f678fdc5390c7aa8ea2a996c9f10af1b6"
+      },
+      {
+        "path": "assets/js/config.js",
+        "status": 200,
+        "sha256": "f64de0cae6860c5fdfaf7901e013ceb1c27e2b09016458d919598c5c8c816d56"
+      },
+      {
+        "path": "assets/js/hero-sim.js",
+        "status": 200,
+        "sha256": "4356d253166208caffb87f1eec8ca8f2f223cf698c63b5df75344213eb06f528"
+      },
+      {
+        "path": "assets/js/i18n.js",
+        "status": 200,
+        "sha256": "3b13c99d28b7710ae1a52386c825d4d095ccb222b07cbed94cd265197fee55ef"
+      },
+      {
+        "path": "assets/js/ui.js",
+        "status": 200,
+        "sha256": "d5ae3ec7cf85d2ea0dc8f84b21f9d5a3c985831c085ef411fe36e01e065dd0fc"
+      },
+      {
+        "path": "assets/js/videos.js",
+        "status": 200,
+        "sha256": "68f2086e515d26887bccb5d6857da6c689ef16719d42c5b33fd4991075661d2c"
+      },
+      {
+        "path": "i18n/en.js",
+        "status": 200,
+        "sha256": "f1f3f6788d221bb678715495310319aa1a5c807e73d277ae31dcb9c96634b442"
+      },
+      {
+        "path": "i18n/es.js",
+        "status": 200,
+        "sha256": "580ce5a4279d376362f7602c75d3c3c0160f709455e6fadd31fb62d6f21f8da8"
+      },
+      {
+        "path": "Terms-and-Condition.html",
+        "status": 200,
+        "sha256": "d926d5426164db2ce080808bfc7081aa9f9a7cb4e6eeaee1185fcb9daa8e7016"
+      },
+      {
+        "path": "index.html",
+        "status": 200,
+        "sha256": "d21f10f097347f1fd1607f201c000600ca75b8dd5a76b72c722698284bb05484"
+      }
+    ]
+  }
+}

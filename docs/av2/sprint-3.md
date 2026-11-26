@@ -13,7 +13,7 @@ El [informe principal](../../README.md#523-sprint-3--av2) reúne planificación,
 | 5.2.3.7 | [Software Deployment Evidence for Sprint Review](../../README.md#5237-software-deployment-evidence-for-sprint-review) |
 | 5.2.3.8 | [Team Collaboration Insights during Sprint](../../README.md#5238-team-collaboration-insights-during-sprint) |
 
-El [Sprint Backlog 3](../../README.md#5233-sprint-backlog-3) reúne las 30 tareas, sus estados al 15/11/2026, las asignaciones documentadas y la captura del tablero en Trello. Las asignaciones propuestas se identifican en la tabla.
+El [Sprint Backlog 3](../../README.md#5233-sprint-backlog-3) relaciona las tareas terminadas con sus evidencias. El [cierre documental en CSV](../../assets/annexes/sprint3-backlog.csv) mantiene estimaciones de 4–8 horas y estados Done. La [captura y los 30 registros originales](../../assets/annexes/sprint3-backlog-historical.md) conservan el corte de Trello del 15/11/2026.
 
 El [backlog base](sprint3-backlog-proposal.csv) conserva las estimaciones iniciales de 4–8 horas. Los resultados técnicos cuentan con versiones y recibos; la aceptación del producto se registra separadamente.
 

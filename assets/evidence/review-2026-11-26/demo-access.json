@@ -1,0 +1,25 @@
+{
+  "checkedAt": "2026-11-26T18:07:09.196217+00:00",
+  "host": "https://friotrack-api-bce6db1b.azurewebsites.net/api",
+  "checks": [
+    {
+      "role": "coordinator",
+      "username": "coordinador.demo@friotrack.example",
+      "loginStatus": 200,
+      "logoutStatus": 204,
+      "demonstrationFixturesPresent": true,
+      "legacySeedShipmentsAbsent": true,
+      "shipments": 6
+    },
+    {
+      "role": "cargo-client",
+      "username": "cliente.demo@friotrack.example",
+      "loginStatus": 200,
+      "logoutStatus": 204,
+      "demonstrationFixturesPresent": true,
+      "legacySeedShipmentsAbsent": true,
+      "shipments": 5
+    }
+  ],
+  "credentialsScope": "Public academic demonstration accounts in an isolated fictional organization; infrastructure credentials excluded"
+}
