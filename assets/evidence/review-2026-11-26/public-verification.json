@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-26T18:09:29.731Z",
+  "scope": "Public Azure and GitHub Pages; fresh headless browser; no personal browser session",
+  "checks": [
+    {
+      "resource": "Scalar",
+      "url": "https://friotrack-api-bce6db1b.azurewebsites.net/scalar/v1",
+      "status": 200,
+      "openApi": [
+        {
+          "url": "https://friotrack-api-bce6db1b.azurewebsites.net/swagger/v1/swagger.json",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "resource": "Landing",
+      "url": "https://upc-pre-202620-1asi0730-8088-friotrackk.github.io/friotrack-landing/",
+      "status": 200,
+      "productIframe": "https://www.youtube-nocookie.com/embed/t8ZrSPgQvr0",
+      "communityLinks": 2
+    },
+    {
+      "resource": "Landing",
+      "url": "https://friotracktb1bce6db1b.z22.web.core.windows.net/landing/",
+      "status": 200,
+      "productIframe": "https://www.youtube-nocookie.com/embed/t8ZrSPgQvr0",
+      "communityLinks": 2
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "checkedAt": "2026-11-26T18:00:57.118Z",
+  "scope": "Fresh headless browser; local release candidate",
+  "landing": [
+    {
+      "viewport": 390,
+      "language": "es",
+      "horizontalOverflow": 0,
+      "productIframe": "https://www.youtube-nocookie.com/embed/t8ZrSPgQvr0",
+      "youtubeLink": "https://www.youtube.com/watch?v=t8ZrSPgQvr0",
+      "githubLink": "https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk"
+    },
+    {
+      "viewport": 768,
+      "language": "es",
+      "horizontalOverflow": 0,
+      "productIframe": "https://www.youtube-nocookie.com/embed/t8ZrSPgQvr0",
+      "youtubeLink": "https://www.youtube.com/watch?v=t8ZrSPgQvr0",
+      "githubLink": "https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk"
+    },
+    {
+      "viewport": 1440,
+      "language": "es",
+      "horizontalOverflow": 0,
+      "productIframe": "https://www.youtube-nocookie.com/embed/t8ZrSPgQvr0",
+      "youtubeLink": "https://www.youtube.com/watch?v=t8ZrSPgQvr0",
+      "githubLink": "https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk"
+    }
+  ],
+  "scalar": {
+    "status": 200,
+    "openApiRequests": [
+      {
+        "url": "http://127.0.0.1:51997/swagger/v1/swagger.json",
+        "status": 200
+      }
+    ],
+    "renderedTitle": true
+  }
+}

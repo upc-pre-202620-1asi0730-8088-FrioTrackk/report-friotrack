@@ -1,0 +1,68 @@
+#### 5.2.3.3. Sprint Backlog 3
+
+El objetivo del Sprint 3 fue permitir que el Coordinador Logístico programe y supervise envíos refrigerados y que el Cliente de Carga consulte los envíos que tiene asignados. El backlog reúne las tareas de integración entre la aplicación web, la API REST y PostgreSQL, así como las de despliegue, validación con usuarios y preparación de la entrega AV2.
+
+**Tablero:** [BlackStartup – FríoTrack en Trello](https://trello.com/b/6qrvOukt/blackstartup-fr%C3%ADotrack).
+
+![Tablero del Sprint 3 de FríoTrack en Trello](assets/images/chapter-05/Tablero-Trello-Sprint-3.png)
+
+*Tablero del Sprint 3 al 15 de noviembre de 2026. Fuente: Trello del equipo BlackStartup.*
+
+La tabla vincula las historias con sus tareas y mantiene las estimaciones del [backlog base](docs/av2/sprint3-backlog-proposal.csv). Los estados conservan el corte de Trello mostrado en la captura; las publicaciones posteriores se relacionan al pie para distinguir el tablero de la evidencia documental. La columna **Assigned To** identifica al integrante asociado con la evidencia disponible; la indicación **(propuesto)** distingue las asignaciones que no se registraron en Trello.
+
+**Resumen histórico del tablero**
+
+| Estado | Tareas |
+| --- | ---: |
+| To-do | 6 |
+| In-Process | 4 |
+| To-Review | 19 |
+| Done | 1 |
+| **Total** | **30** |
+
+| Story Id | Story Title | Task Id | Task Title | Task Description | Estimation (Hours) | Assigned To | Status |
+|---|---|---|---|---|---:|---|---|
+| US33 / US08 | US33: Programación de envío refrigerado; US08: Configuración de umbrales térmicos | S3-T01 | Implementar modelo de envío y rango | Proteger invariantes ambientales y de programación con clases tipadas. | 8 | Alexander Sebastián Atauje Barreto | To-Review |
+| US19 / US20 / US32 / TS05 | US19: Inicio de sesión en el sistema; US20: Cierre de sesión seguro; US32: Registro de Cliente de Carga; TS05: Endpoint de autenticación y sesión | S3-T02 | Integrar identidad y sesión persistente | Conservar autenticación segura y permisos de coordinador y cliente con persistencia. | 8 | Alexander Sebastián Atauje Barreto | To-Review |
+| TS01 / TS03 | TS01: Endpoint de consulta de envíos activos; TS03: Endpoint de gestión de flotas | S3-T03 | Mapear el modelo con EF Core | Configurar entidades relaciones claves y tipos para PostgreSQL. | 8 | Alexander Sebastián Atauje Barreto | To-Review |
+| TS01 / TS03 | TS01: Endpoint de consulta de envíos activos; TS03: Endpoint de gestión de flotas | S3-T04 | Crear migración y datos de demostración | Preparar migración inicial y semillas ficticias sin sobrescribir datos existentes. | 6 | Alexander Sebastián Atauje Barreto | To-Review |
+| US33 / US17 | US33: Programación de envío refrigerado; US17: Asignación de conductor a vehículo | S3-T05 | Confirmar reservas de forma consistente | Evitar solapamiento de vehículo y conductor y cambios parciales al programar. | 8 | Alexander Sebastián Atauje Barreto | To-Review |
+| US34 | US34: Gestión de estados del envío | S3-T06 | Implementar ciclo e historial del envío | Iniciar entregar o cancelar conforme al estado y conservar fecha y responsable. | 6 | Alexander Sebastián Atauje Barreto | To-Review |
+| US14 / US15 / US16 / US18 / TS03 | US14: Registro de nueva unidad refrigerada; US15: Edición de datos de unidad; US16: Registro de conductores; US18: Configuración de dispositivos IoT; TS03: Endpoint de gestión de flotas | S3-T07 | Exponer recursos de flota | Implementar operaciones autorizadas de vehículos conductores y sensores independientes. | 8 | Alexander Sebastián Atauje Barreto | To-Review |
+| US01 / US02 / US06 / TS04 | US01: Telemetría en vivo en el panel; US02: Mapa interactivo de rutas; US06: Detección de excursiones térmicas; TS04: Endpoint de recepción de telemetría IoT | S3-T08 | Persistir lecturas y posiciones | Persistir lecturas y ubicaciones de demostración. Validar rangos y fechas; esta tarea no incluye captura desde sensores físicos. | 8 | Alexander Sebastián Atauje Barreto | To-Review |
+| US09 / US35 / TS02 | US09: Historial de alertas emitidas; US35: Registro de acción correctiva; TS02: Endpoint de consulta de alertas | S3-T09 | Implementar alertas y atención | Distinguir reconocimiento de resolución y conservar evidencia posterior normal en ambos intervalos. | 8 | Alexander Sebastián Atauje Barreto | To-Review |
+| US07 | US07: Notificaciones de incidencias en plataforma | S3-T10 | Registrar lectura de notificaciones | Permitir al destinatario autorizado marcar un aviso como leído explícitamente. | 4 | Alexander Sebastián Atauje Barreto | To-Review |
+| US10 / US11 / TS06 | US10: Consulta de historial térmico; US11: Exportación de informes de trazabilidad; TS06: Endpoint de exportación de reportes | S3-T11 | Exponer historial y evidencia de reporte | Consultar y exportar información autorizada con fechas unidades y procedencia. | 8 | Alexander Sebastián Atauje Barreto | To-Review |
+| TS07 | TS07: Documentación Swagger OpenAPI | S3-T12 | Documentar recursos con OpenAPI | Documentar los endpoints REST. Swagger está publicado; falta adjuntar las capturas de interacción y los ejemplos de respuesta al informe. | 6 | Alexander Sebastián Atauje Barreto | In-Process |
+| TS01 / TS02 / TS03 / TS05 | TS01: Endpoint de consulta de envíos activos; TS02: Endpoint de consulta de alertas; TS03: Endpoint de gestión de flotas; TS05: Endpoint de autenticación y sesión | S3-T13 | Adaptar el gateway de la SPA | Consumir recursos REST manteniendo autorización errores y estados de carga. | 8 | Alexander Sebastián Atauje Barreto | To-Review |
+| Soporte | Calidad del dominio | S3-T14 | Probar invariantes del dominio C# | Cubrir reglas de rango estados reservas y recuperación sin dependencias de interfaz. | 8 | Alexander Sebastián Atauje Barreto | To-Review |
+| Soporte | Integración y persistencia | S3-T15 | Probar integración con PostgreSQL | Comprobar persistencia integridad transacciones y permisos sobre el motor real. | 8 | Alexander Sebastián Atauje Barreto | To-Review |
+| US30 / Soporte | US30: Gestión de multi-idioma (i18n) | S3-T16 | Revisar experiencia integrada ES y EN | Comprobar perfiles idiomas tamaños y errores de los recorridos seleccionados. | 6 | Alexander Sebastián Atauje Barreto | To-Review |
+| US26 / US30 | US26: Casos de éxito y testimonios; US30: Gestión de multi-idioma (i18n) | S3-T17 | Preparar landing y videos publicados | Ajustar el idioma inicial y preparar los reproductores opcionales. La publicación de cada video se registra por separado. | 6 | Alexander Sebastián Atauje Barreto | To-Review |
+| Soporte | Despliegue de servicios | S3-T18 | Publicar API y base relacional | Aplicar migraciones y publicar servicio en recursos autorizados preservando datos. | 8 | Alexander Sebastián Atauje Barreto | To-Review |
+| US31 / Soporte | US31: Planes y acceso desde la Landing | S3-T19 | Publicar frontend y landing | Actualizar archivos públicos y verificar hashes y recorridos de entrada. | 4 | Alexander Sebastián Atauje Barreto | To-Review |
+| Soporte | Gestión del sprint | S3-T20 | Organizar tablero y trazabilidad | Confirmar asignaciones y estados en Trello; vincular tarjetas con evidencias e incorporar la captura del Sprint 3. | 4 | Rodrigo Andree Saavedra Flores (propuesto) | To-do |
+| Soporte | Preparación de validación | S3-T21 | Preparar sesiones de validación | Preparar tareas y cuentas de demostración, identificar la versión y coordinar las sesiones con los segmentos. | 4 | Alexander Sebastián Atauje Barreto | To-Review |
+| Soporte | Validación del coordinador | S3-T22 | Registrar validación del coordinador | Completar de 3 a 5 sesiones del segmento Coordinador Logístico. Ya hay evidencia parcial de Nayely y Alexander; falta completar el número y los recorridos del rol. | 8 | Nayely Macarena Vera Solsol | In-Process |
+| Soporte | Validación del cliente | S3-T23 | Registrar validación del cliente | Completar de 3 a 5 sesiones del segmento Cliente de Carga. Ya hay registros de Joaquín y Alexander; falta completar el número y consolidar la evidencia. | 8 | Joaquín Leonardo Daga Chávez | In-Process |
+| Soporte | Evaluación de usabilidad | S3-T24 | Evaluar hallazgos y priorizar mejoras | Aplicar el Anexo D a las sesiones; registrar hallazgo, severidad, principio, captura y recomendación. | 8 | Joaquín Leonardo Daga Chávez (propuesto) | To-do |
+| Soporte | Comunicación del producto | S3-T25 | Publicar e integrar About-the-Product | Publicar el video en Stream y YouTube e incorporarlo a la landing. El informe recoge ambos enlaces y GitHub Pages registra el despliegue. | 6 | Nayely Macarena Vera Solsol | Done |
+| Soporte | Colaboración del equipo | S3-T26 | Editar About-the-Team | Editar con escenas de trabajo y testimonios de cada integrante; publicar en Stream y YouTube e incorporar a la landing. | 6 | Nayely Macarena Vera Solsol (propuesto) | To-do |
+| Soporte | Demostración del producto | S3-T27 | Grabar navegación del incremento | Grabar un recorrido del Sprint 3 desde la landing hasta las funciones centrales de ambos perfiles; enlazarlo en el informe. | 4 | Rodrigo Andree Saavedra Flores (propuesto) | To-do |
+| Soporte | Exposición académica | S3-T28 | Consolidar exposición AV2 | Preparar la exposición AV2 con todos los integrantes ante cámara, en un MP4 de máximo 30 minutos. | 8 | Rodrigo Andree Saavedra Flores (propuesto) | To-do |
+| Soporte | Documentación de entrega | S3-T29 | Integrar reporte y presentación AV2 | Actualizar el informe acumulativo y consolidar el Keynote con las evidencias del Sprint 3. Existe una versión base. | 8 | Alexander Sebastián Atauje Barreto (propuesto) | In-Process |
+| Soporte | Preparación de entrega | S3-T30 | Revisar y empaquetar la entrega | Verificar formatos, nombres y permisos de acceso; preparar el ZIP complementario una vez reunidos los entregables. | 6 | Rodrigo Andree Saavedra Flores (propuesto) | To-do |
+
+**Publicaciones incorporadas después de la captura**
+
+| Tarea | Evidencia incorporada | Seguimiento documental |
+| --- | --- | --- |
+| S3-T26 · About-the-Team | [Video del equipo en Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241d811_upc_edu_pe/IQA_6YgiuZLgRIvnZdb-6t56ASwzKeemh8AdD7un1OfiGk8?e=MY9kY5) | Video enlazado; revisión de contenido e integración en landing según alcance de la tarea. |
+| S3-T27 · Navegación | [Recorrido del producto en Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202219829_upc_edu_pe/IQB-D9wFBi1_S4lj6TjjtB3WAfg30uXT7S8NEhphn_q2DxE?e=5I1Yiy) | Video enlazado para revisión del incremento. |
+| S3-T28 · Exposición | [Exposición AV2](#videos-de-av2) | Grabación enlazada en el Anexo E. |
+
+**Evidencias de trabajo**
+
+- **Alexander Atauje Barreto:** [implementación relacional de la API](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-api/commit/8c31d62), [pruebas PostgreSQL](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-api/commit/e9aca8e), [integración REST de la SPA](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/commit/c844513), [preparación de la landing](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-landing/commit/36f2067) y [evidencia de despliegue](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/1302fe8). Documentó entrevistas de ambos segmentos en [5.3.2](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/blob/develop/README.md#532-registro-de-entrevistas).
+- **Joaquín Daga Chávez:** [PR de documentación de la entrevista de Cliente de Carga](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/pull/4).
+- **Nayely Vera Solsol:** [registro de una entrevista de Coordinador Logístico](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/0f7c77e), [enlaces de About-the-Product en el informe](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/pull/7), [configuración en la landing](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-landing/pull/8) y [despliegue de GitHub Pages](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-landing/actions/runs/43691667295).

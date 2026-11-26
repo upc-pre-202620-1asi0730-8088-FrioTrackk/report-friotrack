@@ -124,5 +124,13 @@ proposal=list(csv.DictReader((repo/'docs/av2/sprint3-backlog-proposal.csv').open
 assert len({row['Task Id'] for row in proposal})==len(proposal), 'Duplicate Sprint 3 proposal task'
 assert all(4<=int(row['Proposed Estimation Hours'])<=8 for row in proposal), 'Invalid proposed task hours'
 assert all(row['Proposed Status'] in ('To Do','In Process','To Review','Done') for row in proposal), 'Invalid proposed status'
+closure=list(csv.DictReader((repo/'assets/annexes/sprint3-backlog.csv').open(encoding='utf-8-sig',newline='')))
+assert closure and len({row['Task Id'] for row in closure})==len(closure), 'Invalid Sprint 3 closure identifiers'
+assert all(row['Status']=='Done' and row['Evidence'].strip() for row in closure), 'Closed tasks require Done and evidence'
+assert all(4<=int(row['Estimation (Hours)'])<=8 for row in closure), 'Closed tasks must take 4–8 hours'
+hypothesis=text.split('#### 1.2.2.3.',1)[1].split('#### 1.2.2.4.',1)[0]
+assert hypothesis.count('*Creemos que lograremos*')==7 and '*We believe' not in hypothesis, 'Hypotheses must be in Spanish'
+sprint3goal=re.search(r'^\| Objetivo del Sprint 3 \| (.+) \|$',text,re.M)[1]
+assert not re.search(r'\b(?:API|REST|PostgreSQL|EF Core|SDK)\b',sprint3goal), 'Sprint 3 goal must describe a business result'
 results['av2']={'tables':len(tables),'foreignKeys':sum(len(t['foreignKeys']) for t in tables.values()),'schemaViews':len(schema_manifest),'documentLinksChecked':av2_links,'proposedTasks':len(proposal),'proposedHours':sum(int(row['Proposed Estimation Hours']) for row in proposal)}
 print(json.dumps(results,ensure_ascii=True,indent=2))

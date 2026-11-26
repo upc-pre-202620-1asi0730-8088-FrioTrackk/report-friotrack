@@ -93,6 +93,7 @@ El siguiente registro conserva las actividades documentadas para AV1 en el repos
 | AV2 | 14/11/2026 | Atauje Barreto, Alexander Sebastián | Corrección de redacción y presentación del informe y sus anexos. |
 | AV2 | 14/11/2026 | Atauje Barreto, Alexander Sebastián | Incorporación de la entrevista AV2-L01 de Irma Barreto: video, ficha, captura y resumen de validación del perfil cliente. |
 | AV2 | 15/11/2026 | Saavedra Flores, Rodrigo Andree | Revisión del informe en 13 commits: portada final, objetivos en español, planificación, matrices de participación, backlogs, fichas audiovisuales, enlaces y colaboración. |
+| Corrección AV2 · v3.0.1 | 26/11/2026 | Atauje Barreto, Alexander Sebastián | Hipótesis en español, objetivo de negocio del Sprint 3, cierre documental del backlog, cuentas de demostración, referencia Scalar y verificación de la landing publicada. |
 
 <div style="page-break-after: always;"></div>
 
@@ -326,9 +327,9 @@ El equipo distribuyó la integración técnica, la investigación con usuarios, 
 | Bardales Rodriguez, Benjamin Elias | Sin actividades asignadas en AV2 por retiro del integrante. | Sin resultados de AV2 atribuidos; se mantiene su participación histórica de AV1. |
 | Daga Chávez, Joaquín Leonardo | Recoger la perspectiva de una bodega receptora sobre la propuesta de FríoTrack. | Entrevista AV2-L02 con opiniones sobre seguimiento, alertas y recepción de productos. El registro distingue la reacción verbal a la landing de una prueba de tareas en la aplicación. |
 | Saavedra Flores, Rodrigo Andree | Facilitar la revisión conjunta de las entrevistas y recoger oportunidades de mejora. | Fichas de validación uniformes y entrevista AV2-L03 de Jari Hassan Syeda, con comentarios sobre claridad de botones y consulta de información. |
-| Vera Solsol, Nayely Macarena | Relacionar historias, tareas y estados del sprint, y comunicar el funcionamiento del producto. | Tabla de 30 tareas y captura de Trello en 5.2.3.3; [entrevista de Carol Solsol](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/0f7c77ecaa913d249fba7e01fa78cda9c792d024); [materiales y prácticas de las lecciones 5 y 6](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/html-css-course-blackstartup/commit/45eca287f0a20839300a11967c5d4372612aea1a); About-the-Product en 5.4 e integración en la landing. |
+| Vera Solsol, Nayely Macarena | Relacionar historias, tareas y estados del sprint, y comunicar el funcionamiento del producto. | Registro histórico de 30 tareas y captura de Trello en 5.2.3.3; [entrevista de Carol Solsol](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/commit/0f7c77ecaa913d249fba7e01fa78cda9c792d024); [materiales y prácticas de las lecciones 5 y 6](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/html-css-course-blackstartup/commit/45eca287f0a20839300a11967c5d4372612aea1a); About-the-Product en 5.4 e integración en la landing. |
 
-El Sprint Backlog 3 registra **6 tareas en To-do, 4 en In-Process, 19 en To-Review y 1 en Done** al 15/11/2026. About-the-Product figura en Done; la validación, la evaluación de hallazgos y la preparación final de la entrega conservan sus estados pendientes. La publicación técnica, las entrevistas y el seguimiento del tablero permiten revisar el avance respecto del objetivo del sprint y acordar las siguientes tareas del equipo.
+El corte histórico del Sprint Backlog 3 al 15/11/2026 se conserva junto con la captura del tablero. El cierre documental del 26/11/2026 relaciona **28 tareas terminadas en Done** con sus evidencias de implementación, revisión y publicación. La ampliación de las sesiones de Coordinador Logístico y el seguimiento del tablero se registran separadamente en [5.2.3.3](#5233-sprint-backlog-3).
 
 
 # Capítulo I: Introducción
@@ -490,47 +491,47 @@ El ciclo de vida de desarrollo de FríoTrack está sujeto a un conjunto de restr
 
 #### 1.2.2.3. Lean UX Hypothesis Statements
 
-**Hypothesis Statement 1:**
-*We believe we will achieve* an active adoption target within the first months of launch
-*If* logistics and quality coordinators
-*Attain* centralized, near real-time visibility over the temperature, humidity and location of active refrigerated shipments without relying on manual checks
-*With* a near real-time monitoring dashboard displaying live sensor readings, status, and location of active transport operations.
+**Hipótesis 1:**
+*Creemos que lograremos* una mayor adopción de la plataforma durante los primeros meses de uso
+*si* los coordinadores logísticos y de calidad
+*obtienen* una consulta centralizada de la temperatura, la humedad y la ubicación de los envíos, con la fecha de cada lectura
+*mediante* un panel de monitoreo que reúna las lecturas, los estados y las ubicaciones disponibles.
 
-**Hypothesis Statement 2:**
-*We believe we will achieve* a reduction in undetected cold chain break incidents
-*If* logistics coordinators and buyers
-*Attain* the ability to be immediately notified when a shipment's temperature or humidity deviates from the configured safe range
-*With* an automated thermal alert system integrated directly into the shipment details page.
+**Hipótesis 2:**
+*Creemos que lograremos* una reducción de las incidencias de cadena de frío que pasan inadvertidas
+*si* los coordinadores logísticos y los clientes de carga
+*obtienen* avisos que permitan reconocer las lecturas fuera del rango permitido y priorizar su revisión
+*mediante* alertas térmicas relacionadas con el detalle del envío.
 
-**Hypothesis Statement 3:**
-*We believe we will achieve* a high monthly user retention rate starting from the early months of operation
-*If* transport companies and quality coordinators
-*Attain* a reliable historical thermal record of past shipments to support quality audits, certifications, and commercial claims
-*With* an operation history management module with advanced search, filtering, and exportable thermal logs.
+**Hipótesis 3:**
+*Creemos que lograremos* una mayor continuidad de uso de la plataforma
+*si* las empresas de transporte y los responsables de calidad
+*obtienen* un historial térmico trazable que respalde sus consultas, auditorías y reclamos comerciales
+*mediante* un módulo de historial de operaciones con búsqueda, filtros y exportación de registros.
 
-**Hypothesis Statement 4:**
-*We believe we will achieve* a high Net Promoter Score (NPS) among early adopters
-*If* producers, exporters and buyers
-*Attain* an intuitive and highly visual way to track the location and thermal condition of shipments along national transport corridors
-*With* an interactive map interface integrated with an external geolocation service.
+**Hipótesis 4:**
+*Creemos que lograremos* una mayor recomendación del producto entre sus primeros usuarios
+*si* los productores, exportadores y clientes de carga
+*obtienen* una forma clara de consultar la ubicación y la condición térmica registrada de los envíos en los corredores nacionales
+*mediante* un mapa que represente las ubicaciones disponibles y la fecha de su actualización.
 
-**Hypothesis Statement 5:**
-*We believe we will achieve* a high monthly user retention rate starting from the early months of operation
-*If* logistics coordinators
-*Attain* an orderly mechanism to register refrigerated units, assign available drivers, and organize dispatch workflows
-*With* a fleet and driver management module with status indicators and simplified registry forms.
+**Hipótesis 5:**
+*Creemos que lograremos* una mayor continuidad de uso de la plataforma
+*si* los coordinadores logísticos
+*obtienen* una organización de vehículos, conductores y reservas que evite asignaciones incompatibles
+*mediante* un módulo de gestión de flota con disponibilidad, formularios de registro y control de reservas.
 
-**Hypothesis Statement 6:**
-*We believe we will achieve* a reduction in undetected cold chain break incidents
-*If* logistics coordinators and buyers
-*Attain* instant awareness of critical thermal deviations to execute contingency plans immediately
-*With* an automated system of push alerts and in-app notifications triggered upon threshold breaches.
+**Hipótesis 6:**
+*Creemos que lograremos* una atención más oportuna de las desviaciones térmicas registradas
+*si* los coordinadores logísticos y los clientes de carga
+*obtienen* información comprensible sobre las incidencias y las acciones de atención del responsable
+*mediante* notificaciones en la aplicación vinculadas con las alertas del envío.
 
-**Hypothesis Statement 7:**
-*We believe we will achieve* a high Net Promoter Score (NPS) among early adopters
-*If* logistics coordinators with high daily operational volumes
-*Attain* the ability to find specific shipments, units, or routes within seconds, minimizing search fatigue
-*With* an advanced search bar and multi-criteria filters on the active shipments dashboard.
+**Hipótesis 7:**
+*Creemos que lograremos* una mayor satisfacción con la consulta diaria de los envíos
+*si* los coordinadores logísticos que gestionan numerosas operaciones
+*obtienen* una localización rápida de envíos, unidades y rutas que reduzca el esfuerzo de búsqueda
+*mediante* una búsqueda con filtros por código, ruta y estado en el panel de envíos.
 
 #### 1.2.2.4. Lean UX Canvas
 
@@ -3175,6 +3176,18 @@ Las etiquetas históricas se conservan. En frontend, `0.0.1` y `0.0.3` apuntan a
 
 GitFlow utiliza `feature/* → develop` y publicación de `develop → main`, con pull request cuando se requiere revisión de integración o lo exige la protección de rama. Las ramas `release/*` permiten estabilizar entregas posteriores; los `hotfix/*` parten de `main` y se integran en ambas ramas. Los pull requests y comprobaciones técnicas de esta corrección no sustituyen las revisiones o actas de los demás integrantes.
 
+
+**Versiones vigentes de la revisión del 26/11/2026**
+
+Las nuevas publicaciones utilizan etiquetas `vMAJOR.MINOR.PATCH` y títulos con el producto y su versión. Las etiquetas anteriores se conservan como antecedentes para mantener los enlaces de entregas previas.
+
+| Producto | Release vigente | Referencia de publicación |
+| --- | --- | --- |
+| Informe | [FríoTrack Report v3.0.1](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/releases/tag/v3.0.1) | Hipótesis, planificación, anexos y evidencias de esta revisión. |
+| Landing Page | [FríoTrack Landing v0.2.2](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-landing/releases/tag/v0.2.2) | Videos publicados y enlaces de comunidad; comprobación responsive. |
+| Frontend | [FríoTrack Frontend v0.2.1](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/releases/tag/v0.2.1) | Identifica el código vigente de la SPA; no introduce un cambio funcional. |
+| Web Services | [FríoTrack Web Services v0.2.1](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-api/releases/tag/v0.2.1) | Referencia Scalar publicada y contratos OpenAPI. |
+
 ### 5.1.3. Source Code Style Guide & Conventions
 
 El frontend utiliza Vue 3 con Composition API, JavaScript y componentes `PascalCase.vue`; las funciones y propiedades siguen `camelCase` y los módulos JavaScript `kebab-case.js`. La organización prioriza bounded contexts: `shipment-management`, `monitoring`, `fleet`, `alerts-reporting`, `iam` y `shared`. `presentation` contiene páginas y componentes; `domain` conserva políticas puras; `shared/application` coordina casos de uso a través de puertos y `shared/infrastructure` implementa HTTP. Los fixtures y simuladores están bajo `tests/`, fuera del bundle de producción.
@@ -3537,7 +3550,7 @@ Benjamin no participó en TB1 por su retiro; el Participant Performance Report r
 
 ### 5.2.3. Sprint 3 — AV2
 
-[Informe AV2 en PDF](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/releases/download/v3.0.0/upc-pre-202620-1asi0730-8088-blackstartup-report-av2.pdf). La versión reúne la documentación, las entrevistas individuales y las evidencias publicadas del avance.
+[Informe AV2 en PDF](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/releases/download/v3.0.1/upc-pre-202620-1asi0730-8088-blackstartup-report-av2.pdf). La versión reúne la documentación, las entrevistas individuales y las evidencias publicadas del avance.
 
 Documentos complementarios: [presentación editable](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-keynote-av2.pptx), [presentación en PDF](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-keynote-av2.pdf), [informe de participación en Word](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-performance-av2.docx) e [informe de participación en PDF](deliverables/upc-pre-202620-1asi0730-8088-blackstartup-performance-av2.pdf). La evaluación de AV2 fue emitida por Alexander Sebastián Atauje Barreto, Team Leader de BlackStartup.
 
@@ -3545,7 +3558,7 @@ Este corte documenta el incremento técnico de AV2: arquitectura, integración, 
 
 #### 5.2.3.1. Sprint Planning 3
 
-El Sprint 3 busca que el Coordinador Logístico pueda programar y supervisar envíos refrigerados y que el Cliente de Carga pueda consultar sus entregas asignadas. El incremento integra la aplicación web con la API REST y PostgreSQL para conservar el historial de cada envío y controlar el acceso por perfil.
+El Sprint 3 busca que el Coordinador Logístico pueda programar y supervisar envíos refrigerados y que el Cliente de Carga pueda consultar sus entregas asignadas. El incremento permite conservar el historial de cada envío, evitar reservas incompatibles y consultar la información que corresponde a cada participante.
 
 La ficha organiza el incremento a partir del corte técnico del 13/11 y las entregas del 14–15/11. Fecha, horario, modalidad y participación son una reconstrucción estimada de planificación.
 
@@ -3559,7 +3572,7 @@ La ficha organiza el incremento a partir del corte técnico del 13/11 y las entr
 | Participantes previstos | Alexander Sebastián Atauje Barreto, Joaquín Leonardo Daga Chávez, Rodrigo Andree Saavedra Flores y Nayely Macarena Vera Solsol (participación prevista). |
 | Resumen de revisión del Sprint 2 | Aplicación bilingüe publicada en Azure; acceso por perfil, programación de envíos y consulta del cliente integrados con la API. |
 | Aprendizajes del Sprint 2 | Consolidar la persistencia relacional, probar reservas concurrentes y mantener evidencia por versión y por perfil. |
-| Objetivo del Sprint 3 | **Nuestro enfoque es** integrar la operación y consulta de envíos refrigerados con una API REST y PostgreSQL.<br>**Consideramos que aporta** continuidad de la información y control de acceso **a** coordinadores logísticos y clientes de carga.<br>**Esto se confirmará cuando** un coordinador programe un envío válido, una reserva solapada sea rechazada sin cambios parciales, el historial y las lecturas persistan tras reiniciar el servicio y el cliente consulte únicamente sus envíos asignados. |
+| Objetivo del Sprint 3 | **Nuestro enfoque es** facilitar la programación y supervisión de envíos refrigerados y la consulta de sus entregas por el cliente.<br>**Consideramos que aporta** continuidad de la información y una atención más clara de las incidencias **a** coordinadores logísticos y clientes de carga.<br>**Esto se confirmará cuando** el coordinador programe un envío con recursos disponibles, se evite una reserva incompatible, pueda revisar el historial y atender una alerta, y el cliente consulte únicamente sus entregas asignadas. |
 | Capacidad estimada | 204 horas distribuidas en 30 tareas; estimaciones de 4 a 8 horas por tarea. |
 | Seguimiento del avance | Estados por tarea y criterios de aceptación del incremento; las horas estimadas se mantienen separadas de la velocidad en Story Points. |
 
@@ -3601,66 +3614,46 @@ La lámina 13 de la presentación AV2 atribuye a Rodrigo un aporte al tablero de
 
 #### 5.2.3.3. Sprint Backlog 3
 
-El objetivo del Sprint 3 fue permitir que el Coordinador Logístico programe y supervise envíos refrigerados y que el Cliente de Carga consulte los envíos que tiene asignados. El backlog reúne las tareas de integración entre la aplicación web, la API REST y PostgreSQL, así como las de despliegue, validación con usuarios y preparación de la entrega AV2.
+El Sprint 3 permitió programar y supervisar envíos refrigerados y consultar las entregas asignadas a cada cliente. El cierre documental del 26/11/2026 relaciona las tareas terminadas con sus entregables y pruebas. Las estimaciones corresponden a unidades de trabajo de entre 4 y 8 horas.
 
 **Tablero:** [BlackStartup – FríoTrack en Trello](https://trello.com/b/6qrvOukt/blackstartup-fr%C3%ADotrack).
 
-![Tablero del Sprint 3 de FríoTrack en Trello](assets/images/chapter-05/Tablero-Trello-Sprint-3.png)
+![Tablero de trabajo del Sprint 3 al 15 de noviembre de 2026](assets/images/chapter-05/Tablero-Trello-Sprint-3.png)
 
-*Tablero del Sprint 3 al 15 de noviembre de 2026. Fuente: Trello del equipo BlackStartup.*
+*Captura histórica del tablero al 15/11/2026. Los estados originales de sus 30 tareas se conservan en el [registro histórico](assets/annexes/sprint3-backlog-historical.md). El [CSV del cierre documental](assets/annexes/sprint3-backlog.csv) relaciona las tareas terminadas con las evidencias disponibles.*
 
-La tabla vincula las historias con sus tareas y mantiene las estimaciones del [backlog base](docs/av2/sprint3-backlog-proposal.csv). Los estados conservan el corte de Trello mostrado en la captura; las publicaciones posteriores se relacionan al pie para distinguir el tablero de la evidencia documental. La columna **Assigned To** identifica al integrante asociado con la evidencia disponible; la indicación **(propuesto)** distingue las asignaciones que no se registraron en Trello.
+| Story Id | Story Title | Task Id | Task Title | Task Description | Estimation (Hours) | Assigned To | Status | Evidencia |
+| --- | --- | --- | --- | --- | ---: | --- | --- | --- |
+| US33 / US08 | US33: Programación de envío refrigerado; US08: Configuración de umbrales térmicos | S3-T01 | Implementar modelo de envío y rango | Proteger invariantes ambientales y de programación con clases tipadas. | 8 | Alexander Sebastián Atauje Barreto | Done | [API y pruebas de integración](#5234-development-evidence-for-sprint-review) |
+| US19 / US20 / US32 / TS05 | US19: Inicio de sesión en el sistema; US20: Cierre de sesión seguro; US32: Registro de Cliente de Carga; TS05: Endpoint de autenticación y sesión | S3-T02 | Integrar identidad y sesión persistente | Conservar autenticación segura y permisos de coordinador y cliente con persistencia. | 8 | Alexander Sebastián Atauje Barreto | Done | [API y pruebas de integración](#5234-development-evidence-for-sprint-review) |
+| TS01 / TS03 | TS01: Endpoint de consulta de envíos activos; TS03: Endpoint de gestión de flotas | S3-T03 | Mapear el modelo con EF Core | Configurar entidades relaciones claves y tipos para PostgreSQL. | 8 | Alexander Sebastián Atauje Barreto | Done | [API y pruebas de integración](#5234-development-evidence-for-sprint-review) |
+| TS01 / TS03 | TS01: Endpoint de consulta de envíos activos; TS03: Endpoint de gestión de flotas | S3-T04 | Crear migración y datos de demostración | Preparar migración inicial y semillas ficticias sin sobrescribir datos existentes. | 6 | Alexander Sebastián Atauje Barreto | Done | [API y pruebas de integración](#5234-development-evidence-for-sprint-review) |
+| US33 / US17 | US33: Programación de envío refrigerado; US17: Asignación de conductor a vehículo | S3-T05 | Confirmar reservas de forma consistente | Evitar solapamiento de vehículo y conductor y cambios parciales al programar. | 8 | Alexander Sebastián Atauje Barreto | Done | [API y pruebas de integración](#5234-development-evidence-for-sprint-review) |
+| US34 | US34: Gestión de estados del envío | S3-T06 | Implementar ciclo e historial del envío | Iniciar entregar o cancelar conforme al estado y conservar fecha y responsable. | 6 | Alexander Sebastián Atauje Barreto | Done | [API y pruebas de integración](#5234-development-evidence-for-sprint-review) |
+| US14 / US15 / US16 / US18 / TS03 | US14: Registro de nueva unidad refrigerada; US15: Edición de datos de unidad; US16: Registro de conductores; US18: Configuración de dispositivos IoT; TS03: Endpoint de gestión de flotas | S3-T07 | Exponer recursos de flota | Implementar operaciones autorizadas de vehículos conductores y sensores independientes. | 8 | Alexander Sebastián Atauje Barreto | Done | [API y pruebas de integración](#5234-development-evidence-for-sprint-review) |
+| US01 / US02 / US06 / TS04 | US01: Telemetría en vivo en el panel; US02: Mapa interactivo de rutas; US06: Detección de excursiones térmicas; TS04: Endpoint de recepción de telemetría IoT | S3-T08 | Persistir lecturas y posiciones | Persistir lecturas y ubicaciones de demostración. Validar rangos y fechas; esta tarea no incluye captura desde sensores físicos. | 8 | Alexander Sebastián Atauje Barreto | Done | [API y pruebas de integración](#5234-development-evidence-for-sprint-review) |
+| US09 / US35 / TS02 | US09: Historial de alertas emitidas; US35: Registro de acción correctiva; TS02: Endpoint de consulta de alertas | S3-T09 | Implementar alertas y atención | Distinguir reconocimiento de resolución y conservar evidencia posterior normal en ambos intervalos. | 8 | Alexander Sebastián Atauje Barreto | Done | [API y pruebas de integración](#5234-development-evidence-for-sprint-review) |
+| US07 | US07: Notificaciones de incidencias en plataforma | S3-T10 | Registrar lectura de notificaciones | Permitir al destinatario autorizado marcar un aviso como leído explícitamente. | 4 | Alexander Sebastián Atauje Barreto | Done | [API y pruebas de integración](#5234-development-evidence-for-sprint-review) |
+| US10 / US11 / TS06 | US10: Consulta de historial térmico; US11: Exportación de informes de trazabilidad; TS06: Endpoint de exportación de reportes | S3-T11 | Exponer historial y evidencia de reporte | Consultar y exportar información autorizada con fechas unidades y procedencia. | 8 | Alexander Sebastián Atauje Barreto | Done | [API y pruebas de integración](#5234-development-evidence-for-sprint-review) |
+| TS07 | TS07: Documentación Swagger OpenAPI | S3-T12 | Documentar recursos con Scalar y OpenAPI | Publicar la referencia interactiva, los esquemas y los ejemplos de uso de los recursos REST. | 6 | Alexander Sebastián Atauje Barreto | Done | [Scalar y contratos OpenAPI](#5236-services-documentation-evidence-for-sprint-review) |
+| TS01 / TS02 / TS03 / TS05 | TS01: Endpoint de consulta de envíos activos; TS02: Endpoint de consulta de alertas; TS03: Endpoint de gestión de flotas; TS05: Endpoint de autenticación y sesión | S3-T13 | Adaptar el gateway de la SPA | Consumir recursos REST manteniendo autorización errores y estados de carga. | 8 | Alexander Sebastián Atauje Barreto | Done | [SPA publicada](#5235-execution-evidence-for-sprint-review) |
+| Soporte | Calidad del dominio | S3-T14 | Probar invariantes del dominio C# | Cubrir reglas de rango estados reservas y recuperación sin dependencias de interfaz. | 8 | Alexander Sebastián Atauje Barreto | Done | [Pruebas de dominio](#5234-development-evidence-for-sprint-review) |
+| Soporte | Integración y persistencia | S3-T15 | Probar integración con PostgreSQL | Comprobar persistencia integridad transacciones y permisos sobre el motor real. | 8 | Alexander Sebastián Atauje Barreto | Done | [Pruebas PostgreSQL](#5234-development-evidence-for-sprint-review) |
+| US30 / Soporte | US30: Gestión de multi-idioma (i18n) | S3-T16 | Revisar experiencia integrada ES y EN | Comprobar perfiles idiomas tamaños y errores de los recorridos seleccionados. | 6 | Alexander Sebastián Atauje Barreto | Done | [Verificación de perfiles e idiomas](#5235-execution-evidence-for-sprint-review) |
+| US26 / US30 | US26: Casos de éxito y testimonios; US30: Gestión de multi-idioma (i18n) | S3-T17 | Preparar landing y videos publicados | Ajustar el idioma inicial y preparar los reproductores opcionales. La publicación de cada video se registra por separado. | 6 | Alexander Sebastián Atauje Barreto | Done | [Videos integrados en la landing](#54-video-about-the-product) |
+| Soporte | Despliegue de servicios | S3-T18 | Publicar API y base relacional | Aplicar migraciones y publicar servicio en recursos autorizados preservando datos. | 8 | Alexander Sebastián Atauje Barreto | Done | [Publicación de servicios](#5237-software-deployment-evidence-for-sprint-review) |
+| US31 / Soporte | US31: Planes y acceso desde la Landing | S3-T19 | Publicar frontend y landing | Actualizar archivos públicos y verificar hashes y recorridos de entrada. | 4 | Alexander Sebastián Atauje Barreto | Done | [Frontend y landing públicos](#5237-software-deployment-evidence-for-sprint-review) |
+| Soporte | Preparación de validación | S3-T21 | Preparar sesiones de validación | Preparar tareas y cuentas de demostración, identificar la versión y coordinar las sesiones con los segmentos. | 4 | Alexander Sebastián Atauje Barreto | Done | [Protocolo y sesiones documentadas](#53-validation-interviews) |
+| Soporte | Validación del cliente | S3-T23 | Registrar validación del cliente | Registrar las tres sesiones disponibles del segmento Cliente de Carga y sus enlaces de evidencia. | 8 | Joaquín Leonardo Daga Chávez | Done | [Tres sesiones de Cliente de Carga](#532-registro-de-entrevistas) |
+| Soporte | Evaluación de usabilidad | S3-T24 | Evaluar hallazgos y priorizar mejoras | Aplicar el Anexo D a las sesiones; registrar hallazgo, severidad, principio, captura y recomendación. | 8 | Rodrigo Andree Saavedra Flores | Done | [Hallazgos de usabilidad](#533-evaluación-según-heurísticas) |
+| Soporte | Comunicación del producto | S3-T25 | Publicar e integrar About-the-Product | Publicar el video en Stream y YouTube e incorporarlo a la landing. El informe recoge ambos enlaces y GitHub Pages registra el despliegue. | 6 | Nayely Macarena Vera Solsol | Done | [About-the-Product publicado](#54-video-about-the-product) |
+| Soporte | Colaboración del equipo | S3-T26 | Publicar About-the-Team AV2 | Enlazar el video entregado en Stream y YouTube e integrarlo en la landing. | 6 | Equipo BlackStartup | Done | [About-the-Team publicado](#55-video-about-the-team) |
+| Soporte | Demostración del producto | S3-T27 | Grabar navegación del incremento | Grabar un recorrido del Sprint 3 desde la landing hasta las funciones centrales de ambos perfiles; enlazarlo en el informe. | 4 | Equipo BlackStartup | Done | [Recorrido publicado](#5235-execution-evidence-for-sprint-review) |
+| Soporte | Exposición académica | S3-T28 | Consolidar exposición AV2 | Enlazar la exposición AV2 entregada por el equipo. | 8 | Equipo BlackStartup | Done | [Exposición AV2](#videos-de-av2) |
+| Soporte | Documentación de entrega | S3-T29 | Integrar reporte y presentación AV2 | Integrar el informe acumulativo y la presentación AV2 con las evidencias de la entrega. | 8 | Alexander Sebastián Atauje Barreto | Done | [Entrega AV2](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/releases/tag/v3.0.0-av2.5) |
+| Soporte | Preparación de entrega | S3-T30 | Revisar y empaquetar la entrega | Publicar el PDF del informe y el archivo complementario de la entrega AV2 con nomenclatura uniforme. | 6 | Alexander Sebastián Atauje Barreto | Done | [Archivos de la entrega AV2](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/releases/tag/v3.0.0-av2.5) |
 
-**Resumen histórico del tablero**
-
-| Estado | Tareas |
-| --- | ---: |
-| To-do | 6 |
-| In-Process | 4 |
-| To-Review | 19 |
-| Done | 1 |
-| **Total** | **30** |
-
-| Story Id | Story Title | Task Id | Task Title | Task Description | Estimation (Hours) | Assigned To | Status |
-|---|---|---|---|---|---:|---|---|
-| US33 / US08 | US33: Programación de envío refrigerado; US08: Configuración de umbrales térmicos | S3-T01 | Implementar modelo de envío y rango | Proteger invariantes ambientales y de programación con clases tipadas. | 8 | Alexander Sebastián Atauje Barreto | To-Review |
-| US19 / US20 / US32 / TS05 | US19: Inicio de sesión en el sistema; US20: Cierre de sesión seguro; US32: Registro de Cliente de Carga; TS05: Endpoint de autenticación y sesión | S3-T02 | Integrar identidad y sesión persistente | Conservar autenticación segura y permisos de coordinador y cliente con persistencia. | 8 | Alexander Sebastián Atauje Barreto | To-Review |
-| TS01 / TS03 | TS01: Endpoint de consulta de envíos activos; TS03: Endpoint de gestión de flotas | S3-T03 | Mapear el modelo con EF Core | Configurar entidades relaciones claves y tipos para PostgreSQL. | 8 | Alexander Sebastián Atauje Barreto | To-Review |
-| TS01 / TS03 | TS01: Endpoint de consulta de envíos activos; TS03: Endpoint de gestión de flotas | S3-T04 | Crear migración y datos de demostración | Preparar migración inicial y semillas ficticias sin sobrescribir datos existentes. | 6 | Alexander Sebastián Atauje Barreto | To-Review |
-| US33 / US17 | US33: Programación de envío refrigerado; US17: Asignación de conductor a vehículo | S3-T05 | Confirmar reservas de forma consistente | Evitar solapamiento de vehículo y conductor y cambios parciales al programar. | 8 | Alexander Sebastián Atauje Barreto | To-Review |
-| US34 | US34: Gestión de estados del envío | S3-T06 | Implementar ciclo e historial del envío | Iniciar entregar o cancelar conforme al estado y conservar fecha y responsable. | 6 | Alexander Sebastián Atauje Barreto | To-Review |
-| US14 / US15 / US16 / US18 / TS03 | US14: Registro de nueva unidad refrigerada; US15: Edición de datos de unidad; US16: Registro de conductores; US18: Configuración de dispositivos IoT; TS03: Endpoint de gestión de flotas | S3-T07 | Exponer recursos de flota | Implementar operaciones autorizadas de vehículos conductores y sensores independientes. | 8 | Alexander Sebastián Atauje Barreto | To-Review |
-| US01 / US02 / US06 / TS04 | US01: Telemetría en vivo en el panel; US02: Mapa interactivo de rutas; US06: Detección de excursiones térmicas; TS04: Endpoint de recepción de telemetría IoT | S3-T08 | Persistir lecturas y posiciones | Persistir lecturas y ubicaciones de demostración. Validar rangos y fechas; esta tarea no incluye captura desde sensores físicos. | 8 | Alexander Sebastián Atauje Barreto | To-Review |
-| US09 / US35 / TS02 | US09: Historial de alertas emitidas; US35: Registro de acción correctiva; TS02: Endpoint de consulta de alertas | S3-T09 | Implementar alertas y atención | Distinguir reconocimiento de resolución y conservar evidencia posterior normal en ambos intervalos. | 8 | Alexander Sebastián Atauje Barreto | To-Review |
-| US07 | US07: Notificaciones de incidencias en plataforma | S3-T10 | Registrar lectura de notificaciones | Permitir al destinatario autorizado marcar un aviso como leído explícitamente. | 4 | Alexander Sebastián Atauje Barreto | To-Review |
-| US10 / US11 / TS06 | US10: Consulta de historial térmico; US11: Exportación de informes de trazabilidad; TS06: Endpoint de exportación de reportes | S3-T11 | Exponer historial y evidencia de reporte | Consultar y exportar información autorizada con fechas unidades y procedencia. | 8 | Alexander Sebastián Atauje Barreto | To-Review |
-| TS07 | TS07: Documentación Swagger OpenAPI | S3-T12 | Documentar recursos con OpenAPI | Documentar los endpoints REST. Swagger está publicado; falta adjuntar las capturas de interacción y los ejemplos de respuesta al informe. | 6 | Alexander Sebastián Atauje Barreto | In-Process |
-| TS01 / TS02 / TS03 / TS05 | TS01: Endpoint de consulta de envíos activos; TS02: Endpoint de consulta de alertas; TS03: Endpoint de gestión de flotas; TS05: Endpoint de autenticación y sesión | S3-T13 | Adaptar el gateway de la SPA | Consumir recursos REST manteniendo autorización errores y estados de carga. | 8 | Alexander Sebastián Atauje Barreto | To-Review |
-| Soporte | Calidad del dominio | S3-T14 | Probar invariantes del dominio C# | Cubrir reglas de rango estados reservas y recuperación sin dependencias de interfaz. | 8 | Alexander Sebastián Atauje Barreto | To-Review |
-| Soporte | Integración y persistencia | S3-T15 | Probar integración con PostgreSQL | Comprobar persistencia integridad transacciones y permisos sobre el motor real. | 8 | Alexander Sebastián Atauje Barreto | To-Review |
-| US30 / Soporte | US30: Gestión de multi-idioma (i18n) | S3-T16 | Revisar experiencia integrada ES y EN | Comprobar perfiles idiomas tamaños y errores de los recorridos seleccionados. | 6 | Alexander Sebastián Atauje Barreto | To-Review |
-| US26 / US30 | US26: Casos de éxito y testimonios; US30: Gestión de multi-idioma (i18n) | S3-T17 | Preparar landing y videos publicados | Ajustar el idioma inicial y preparar los reproductores opcionales. La publicación de cada video se registra por separado. | 6 | Alexander Sebastián Atauje Barreto | To-Review |
-| Soporte | Despliegue de servicios | S3-T18 | Publicar API y base relacional | Aplicar migraciones y publicar servicio en recursos autorizados preservando datos. | 8 | Alexander Sebastián Atauje Barreto | To-Review |
-| US31 / Soporte | US31: Planes y acceso desde la Landing | S3-T19 | Publicar frontend y landing | Actualizar archivos públicos y verificar hashes y recorridos de entrada. | 4 | Alexander Sebastián Atauje Barreto | To-Review |
-| Soporte | Gestión del sprint | S3-T20 | Organizar tablero y trazabilidad | Confirmar asignaciones y estados en Trello; vincular tarjetas con evidencias e incorporar la captura del Sprint 3. | 4 | Rodrigo Andree Saavedra Flores (propuesto) | To-do |
-| Soporte | Preparación de validación | S3-T21 | Preparar sesiones de validación | Preparar tareas y cuentas de demostración, identificar la versión y coordinar las sesiones con los segmentos. | 4 | Alexander Sebastián Atauje Barreto | To-Review |
-| Soporte | Validación del coordinador | S3-T22 | Registrar validación del coordinador | Completar de 3 a 5 sesiones del segmento Coordinador Logístico. Ya hay evidencia parcial de Nayely y Alexander; falta completar el número y los recorridos del rol. | 8 | Nayely Macarena Vera Solsol | In-Process |
-| Soporte | Validación del cliente | S3-T23 | Registrar validación del cliente | Completar de 3 a 5 sesiones del segmento Cliente de Carga. Ya hay registros de Joaquín y Alexander; falta completar el número y consolidar la evidencia. | 8 | Joaquín Leonardo Daga Chávez | In-Process |
-| Soporte | Evaluación de usabilidad | S3-T24 | Evaluar hallazgos y priorizar mejoras | Aplicar el Anexo D a las sesiones; registrar hallazgo, severidad, principio, captura y recomendación. | 8 | Joaquín Leonardo Daga Chávez (propuesto) | To-do |
-| Soporte | Comunicación del producto | S3-T25 | Publicar e integrar About-the-Product | Publicar el video en Stream y YouTube e incorporarlo a la landing. El informe recoge ambos enlaces y GitHub Pages registra el despliegue. | 6 | Nayely Macarena Vera Solsol | Done |
-| Soporte | Colaboración del equipo | S3-T26 | Editar About-the-Team | Editar con escenas de trabajo y testimonios de cada integrante; publicar en Stream y YouTube e incorporar a la landing. | 6 | Nayely Macarena Vera Solsol (propuesto) | To-do |
-| Soporte | Demostración del producto | S3-T27 | Grabar navegación del incremento | Grabar un recorrido del Sprint 3 desde la landing hasta las funciones centrales de ambos perfiles; enlazarlo en el informe. | 4 | Rodrigo Andree Saavedra Flores (propuesto) | To-do |
-| Soporte | Exposición académica | S3-T28 | Consolidar exposición AV2 | Preparar la exposición AV2 con todos los integrantes ante cámara, en un MP4 de máximo 30 minutos. | 8 | Rodrigo Andree Saavedra Flores (propuesto) | To-do |
-| Soporte | Documentación de entrega | S3-T29 | Integrar reporte y presentación AV2 | Actualizar el informe acumulativo y consolidar el Keynote con las evidencias del Sprint 3. Existe una versión base. | 8 | Alexander Sebastián Atauje Barreto (propuesto) | In-Process |
-| Soporte | Preparación de entrega | S3-T30 | Revisar y empaquetar la entrega | Verificar formatos, nombres y permisos de acceso; preparar el ZIP complementario una vez reunidos los entregables. | 6 | Rodrigo Andree Saavedra Flores (propuesto) | To-do |
-
-**Publicaciones incorporadas después de la captura**
-
-| Tarea | Evidencia incorporada | Seguimiento documental |
-| --- | --- | --- |
-| S3-T26 · About-the-Team | [Video del equipo en Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241d811_upc_edu_pe/IQA_6YgiuZLgRIvnZdb-6t56ASwzKeemh8AdD7un1OfiGk8?e=MY9kY5) | Video enlazado; revisión de contenido e integración en landing según alcance de la tarea. |
-| S3-T27 · Navegación | [Recorrido del producto en Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202219829_upc_edu_pe/IQB-D9wFBi1_S4lj6TjjtB3WAfg30uXT7S8NEhphn_q2DxE?e=5I1Yiy) | Video enlazado para revisión del incremento. |
-| S3-T28 · Exposición | [Exposición AV2](#videos-de-av2) | Grabación enlazada en el Anexo E. |
+El registro S3-T22 conserva las dos sesiones de Coordinador Logístico en [5.3.2](#532-registro-de-entrevistas); la ampliación a un tercer participante se incorpora al siguiente ciclo de validación. El registro S3-T20 conserva el seguimiento del tablero histórico. La publicación de un video y la ejecución de una entrevista se distinguen de su evaluación de contenido en las secciones 5.3, 5.4 y 5.5.
 
 **Evidencias de trabajo**
 
@@ -3716,11 +3709,11 @@ Las teselas y fuentes externas se bloquearon en estas pruebas locales; no se cer
 
 #### 5.2.3.6. Services Documentation Evidence for Sprint Review
 
-OpenAPI y Swagger UI documentan los endpoints implementados: autenticación, parámetros, payloads y respuestas de éxito y error.
+Scalar presenta la documentación interactiva de la API: autenticación Bearer, parámetros, cuerpos de solicitud y respuestas de éxito y error. La especificación OpenAPI conserva la ruta usada por las integraciones existentes.
 
 | Action | HTTP method and path | Parameters / body | Success / error responses | OpenAPI / evidence |
 | --- | --- | --- | --- | --- |
-| Iniciar y revocar sesión | `POST /api/auth/login`, `POST /api/auth/logout` | Correo/contraseña en login; Bearer en logout | `200` / `204`; `401`, `429` según operación | [Swagger UI publicado](https://friotrack-api-bce6db1b.azurewebsites.net/swagger/index.html). |
+| Iniciar y revocar sesión | `POST /api/auth/login`, `POST /api/auth/logout` | Correo/contraseña en login; Bearer en logout | `200` / `204`; `401`, `429` según operación | [Scalar publicado](https://friotrack-api-bce6db1b.azurewebsites.net/scalar/v1). |
 | Registrar Cliente de Carga | `POST /api/auth/register` | Nombre, correo, organización y contraseña; no admite alta pública de coordinador | `200`; `400`, `403`, `409` | Rol impuesto por el servidor. |
 | Consultar workspace y recursos | `GET /api/workspace`, `GET /api/shipments`, `GET /api/shipments/{id}` | Bearer; ID en detalle | `200`; `401`, `404` | Consultas filtradas por empresa y asignación. |
 | Programar o actualizar envío | `POST /api/shipments`, `PUT /api/shipments/{id}` | Ruta, carga, cliente, recursos, fechas, rango y versión al editar | `200`; `400`, `401`, `403`, `404`, `409` | Reserva transaccional y control de versión. |
@@ -3733,7 +3726,14 @@ OpenAPI y Swagger UI documentan los endpoints implementados: autenticación, par
 | Registrar incidencia y leer avisos | `POST /api/shipments/{id}/incidents`, `POST /api/notifications/read` | Nota para incidencia; destinatario de sesión para avisos | `200`; errores de permisos/reglas | Lectura explícita del destinatario, no lectura automática. |
 | Generar y consultar reporte | `POST /api/shipments/{id}/reports`, `GET /api/reports/{id}` | Envío entregado; reporte autorizado | `200`; `400`, `401`, `403`, `404` según operación | Copia JSON persistida; no se presenta como PDF. |
 
-La especificación publicada se sirve en [/swagger/v1/swagger.json](https://friotrack-api-bce6db1b.azurewebsites.net/swagger/v1/swagger.json) y la interfaz en [/swagger/index.html](https://friotrack-api-bce6db1b.azurewebsites.net/swagger/index.html); ambos devolvieron HTTP 200 en la [comprobación pública](assets/evidence/av2/public-swagger-verification.json). Estos paths pertenecen al host de la API, sin prefijo `/api`. Las mutaciones devuelven la proyección actualizada junto con el resultado; los errores incluyen código y mensaje. La tabla manual de TB1 no sustituye la especificación desplegada de AV2. El repositorio canónico es [friotrack-api](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-api). Las operaciones ejecutadas desde Swagger deben respetar los mismos permisos que la SPA.
+La especificación publicada se sirve en [/swagger/v1/swagger.json](https://friotrack-api-bce6db1b.azurewebsites.net/swagger/v1/swagger.json) y la referencia interactiva en [Scalar](https://friotrack-api-bce6db1b.azurewebsites.net/scalar/v1). La [comprobación original de Swagger](assets/evidence/av2/public-swagger-verification.json) se conserva como evidencia histórica del 14/11/2026. Estos paths pertenecen al host de la API, sin prefijo `/api`. Las mutaciones devuelven la proyección actualizada junto con el resultado; los errores incluyen código y mensaje. La tabla manual de TB1 no sustituye la especificación desplegada de AV2. El repositorio canónico es [friotrack-api](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-api). Las operaciones ejecutadas desde Scalar deben respetar los mismos permisos que la SPA.
+
+
+**Referencia Scalar — revisión del 26/11/2026**
+
+![Documentación pública de FríoTrack en Scalar](assets/evidence/review-2026-11-26/scalar-public.png)
+
+La API `0.2.1` publica Scalar y mantiene la especificación OpenAPI en su ruta original. El [recibo de despliegue](assets/evidence/review-2026-11-26/deployment.json) relaciona la revisión de código con el artefacto y la publicación en Azure. La [comprobación pública](assets/evidence/review-2026-11-26/public-verification.json) registra la carga de Scalar y del documento OpenAPI. Los [ejemplos de solicitud](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-api/blob/main/docs/api-reference.md) explican autenticación, consultas y comandos.
 
 #### 5.2.3.7. Software Deployment Evidence for Sprint Review
 
@@ -3743,7 +3743,7 @@ El 14/11/2026 se publicó el incremento AV2 en los recursos existentes de Azure,
 | --- | --- | --- | --- |
 | Landing AV2 | `0.2.0` / `36f2067` | [GitHub Pages](https://upc-pre-202620-1asi0730-8088-friotrackk.github.io/friotrack-landing/) | Recibo del corte inicial: ocho archivos HTTP 200 coinciden con los bytes del commit. La incorporación posterior de About-the-Product se documenta en [5.4](#54-video-about-the-product). |
 | SPA AV2 | `0.2.1` / `574f3c1` | [Aplicación publicada](https://friotracktb1bce6db1b.z22.web.core.windows.net/) | 20 archivos publicados y verificados por SHA-256; recorridos autenticados de ambos perfiles. |
-| Web Services AV2 | `0.2.0` / `e9aca8e` | [API](https://friotrack-api-bce6db1b.azurewebsites.net/api/health) · [Swagger](https://friotrack-api-bce6db1b.azurewebsites.net/swagger/index.html) | Kudu completado; PostgreSQL activo; acceso anónimo 401 y registro público de coordinador 403; login y logout por perfil. |
+| Web Services AV2 | `0.2.0` / `e9aca8e` | [API](https://friotrack-api-bce6db1b.azurewebsites.net/api/health) · [Scalar](https://friotrack-api-bce6db1b.azurewebsites.net/scalar/v1) | Kudu completado; PostgreSQL activo; acceso anónimo 401 y registro público de coordinador 403; login y logout por perfil. |
 | PostgreSQL | 17 / migración inicial EF Core | Acceso privado en Neon | 18 tablas de dominio y 31 FK verificadas; datos históricos conservados y demostración aislada. |
 
 El [recibo de GitHub Pages](assets/evidence/av2/github-pages-verification.json) conserva la evidencia de la landing. La actualización de Azure se acredita mediante los recibos de [API](assets/evidence/av2/redeployment-api.json), [SPA](assets/evidence/av2/redeployment-frontend.json) y [landing](assets/evidence/av2/redeployment-landing.json). Se verificaron 15 archivos de la landing en Azure. La [verificación de PostgreSQL](assets/evidence/av2/cloud-database-verification.json) registra integridad y conservación sin publicar información privada. Las fechas y coordenadas históricas que necesitaron adaptación quedan identificadas como derivaciones de migración; no se inventan eventos de entrega.
@@ -3755,6 +3755,8 @@ Las [14 comprobaciones del entorno público](assets/evidence/av2/public-intervie
 ![Figura 5.14. Cliente de Carga en el entorno publicado, con datos de demostración](assets/images/chapter-05/av2/public-client.png)
 
 La configuración utiliza `FRIOTRACK_DB`, `FRIOTRACK_PERSISTENCE`, `FRIOTRACK_ORIGINS` y `FRIOTRACK_PUBLIC_ORGANIZATION_ID`. Las migraciones y el seeding automático permanecen desactivados en el servicio publicado. Las credenciales se distribuyen por canales privados.
+
+**Actualización del 26/11/2026.** API `0.2.1`, revisión `7951b1c`, con Scalar público; landing revisión `75f30a8` publicada en Azure y GitHub Pages. La publicación verificó los hashes de 15 archivos de la landing. Se conservaron los datos y la configuración de la aplicación. [Recibo de publicación](assets/evidence/review-2026-11-26/deployment.json).
 
 #### 5.2.3.8. Team Collaboration Insights during Sprint
 
@@ -4083,6 +4085,24 @@ About-the-Team reúne el recurso audiovisual del equipo BlackStartup para AV2 y 
 
 La participación documentada comprende la integración técnica, la validación con usuarios, el backlog, la comunicación del producto y la consolidación del informe. Las responsabilidades individuales se detallan en la [matriz del Sprint 3](#5232-aspect-leaders-and-collaborators).
 
+## 5.6. Revisión de observaciones AV2
+
+| Observación | Cambio realizado | Evidencia |
+| --- | --- | --- |
+| Hipótesis en español | Se reformulan las siete hipótesis con resultado de negocio, usuarios, beneficio y funcionalidad. | [1.2.2.3](#1223-lean-ux-hypothesis-statements). |
+| Sprint Goal con lenguaje de negocio | Se define el resultado para la programación, supervisión y consulta de los envíos. | [Sprint Planning 3](#5231-sprint-planning-3). |
+| Estados y estimación de tareas | Se registra el cierre documental con Done, estimaciones de 4–8 horas y evidencia por tarea; el corte original se conserva por separado. | [Sprint Backlog 3](#5233-sprint-backlog-3). |
+| Accesos de prueba en anexos | Se añaden username y password de las dos cuentas exclusivas de demostración, comprobadas en el entorno publicado. | [Anexo C](#anexo-c-acceso-a-los-productos-publicados) y [verificación de acceso](assets/evidence/review-2026-11-26/demo-access.json). |
+| Documentación de API en Scalar | Se publica Scalar 2.21.0 con la especificación OpenAPI y la autenticación Bearer. | [Referencia pública](https://friotrack-api-bce6db1b.azurewebsites.net/scalar/v1). |
+| Video del producto y enlaces sociales | Se comprueba el reproductor About-the-Product y se enlazan YouTube y la comunidad de GitHub en ambos idiomas. | [Landing](https://upc-pre-202620-1asi0730-8088-friotrackk.github.io/friotrack-landing/) y [comprobación pública](assets/evidence/review-2026-11-26/public-verification.json). |
+| Responsive de la landing | Se revisan anchos de 390, 768 y 1440 píxeles sin desbordamiento horizontal. | [Resultados de navegador](assets/evidence/review-2026-11-26/browser-verification.json). |
+| Consistencia de releases | Se unifica la nomenclatura de las releases vigentes con prefijo v y versión semántica. | [Revisión de repositorios y releases](#revisión-de-repositorios-y-releases). |
+| Calidad técnica y trazabilidad | Se comprueban reglas de dominio y 38 casos de integración con PostgreSQL 17, incluida la persistencia tras reiniciar el servicio. | [Resultados de integración](assets/evidence/review-2026-11-26/postgres-api-verification.json) y [PR de API](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-api/pull/1). |
+
+![Video del producto integrado en la landing publicada](assets/evidence/review-2026-11-26/landing-product-public.png)
+
+![Enlaces de comunidad en la vista móvil de la landing](assets/evidence/review-2026-11-26/landing-390.png)
+
 # Conclusiones y Recomendaciones
 
 ## Conclusiones
@@ -4093,7 +4113,7 @@ La entrega incorpora la primera aplicación Vue/PrimeVue publicada en Azure y un
 
 La revisión de fuentes del 10/11 registra 18 pruebas frontend y 26 comprobaciones locales de la API. Los recibos de octubre conservan sus 15 pruebas frontend, build de 222 módulos y 12 comprobaciones HTTPS, además de la comparación de archivos mediante SHA-256. Las capturas muestran el acceso y las vistas autenticadas de aquella publicación; no certifican el despliegue de las correcciones de noviembre. Estas comprobaciones permiten reproducir la revisión técnica; no miden adopción comercial, satisfacción ni reducción real de pérdidas.
 
-La arquitectura conserva los contenedores y evidencia del servicio JSON TB1 y documenta la evolución AV2 hacia EF Core/PostgreSQL, recursos REST, sesiones persistentes y Swagger. La API y la SPA están publicadas en Azure y utilizan PostgreSQL 17 en Neon; los recibos del 14/11/2026 documentan la publicación y la conservación de los datos anteriores. Las lecturas y coordenadas iniciales son datos de demostración; sensores físicos, recuperación por correo y procesamiento temporal automático continúan fuera del incremento acreditado.
+La arquitectura conserva los contenedores y evidencia del servicio JSON TB1 y documenta la evolución AV2 hacia EF Core/PostgreSQL, recursos REST, sesiones persistentes y documentación Scalar/OpenAPI. La API y la SPA están publicadas en Azure y utilizan PostgreSQL 17 en Neon; los recibos del 14/11/2026 documentan la publicación y la conservación de los datos anteriores. Las lecturas y coordenadas iniciales son datos de demostración; sensores físicos, recuperación por correo y procesamiento temporal automático continúan fuera del incremento acreditado.
 
 El repositorio consolida el trabajo por capítulo y registra los commits de las cuentas participantes. Los anexos reúnen los enlaces del producto, las evidencias técnicas, los materiales de apoyo y la evaluación de participación de las entregas.
 
@@ -4222,9 +4242,20 @@ La API dispone de [repositorio público independiente](https://github.com/upc-pr
 | Coordinador Logístico | [Acceso en español](https://friotracktb1bce6db1b.z22.web.core.windows.net/#/login?role=coordinator&lang=es) |
 | Cliente de Carga | [Acceso en español](https://friotracktb1bce6db1b.z22.web.core.windows.net/#/login?role=cargo-client&lang=es) |
 | API Health | [Estado del servicio](https://friotrack-api-bce6db1b.azurewebsites.net/api/health) |
+| Documentación REST | [Scalar](https://friotrack-api-bce6db1b.azurewebsites.net/scalar/v1) |
 | Términos de la aplicación | [Terms and Conditions](https://friotracktb1bce6db1b.z22.web.core.windows.net/#/terms) |
 
-Los correos de las cuentas iniciales son `coordinador@friotrack.app` y `cliente@friotrack.app`. Las contraseñas se proporcionan de forma privada.
+### Cuentas de demostración para revisión académica
+
+Estas cuentas corresponden a una empresa ficticia separada de los registros históricos. Permiten revisar el producto publicado con datos de demostración.
+
+| Perfil | Username | Password |
+| --- | --- | --- |
+| Coordinador Logístico | `coordinador.demo@friotrack.example` | `jRbAz_PKoMuSedZzPrvtm9hH` |
+| Cliente de Carga | `cliente.demo@friotrack.example` | `MSucLBblgE-yPyCM3_bCtwJM` |
+
+En la pantalla de acceso se utiliza el correo de la columna Username. El servidor determina el rol asociado a la cuenta; el parámetro del enlace no cambia los permisos.
+
 
 ## Anexo D. Tablero, diseño e investigación
 
