@@ -94,6 +94,7 @@ El siguiente registro conserva las actividades documentadas para AV1 en el repos
 | AV2 | 14/11/2026 | Atauje Barreto, Alexander Sebastián | Incorporación de la entrevista AV2-L01 de Irma Barreto: video, ficha, captura y resumen de validación del perfil cliente. |
 | AV2 | 15/11/2026 | Saavedra Flores, Rodrigo Andree | Revisión del informe en 13 commits: portada final, objetivos en español, planificación, matrices de participación, backlogs, fichas audiovisuales, enlaces y colaboración. |
 | Corrección AV2 · v3.0.1 | 26/11/2026 | Atauje Barreto, Alexander Sebastián | Hipótesis en español, objetivo de negocio del Sprint 3, cierre documental del backlog, cuentas de demostración, referencia Scalar y verificación de la landing publicada. |
+| Preparación TB2 · Sprint 4 | 27/11/2026 | Atauje Barreto, Alexander Sebastián | Incorporación de analítica, auditoría operativa, informes de la aplicación, lotes de lecturas, acceso de cuentas y recuperación configurable; pruebas integradas y trazabilidad del incremento. |
 
 <div style="page-break-after: always;"></div>
 
@@ -150,6 +151,12 @@ El avance de las 30 tareas se presenta en [Sprint Backlog 3](#5233-sprint-backlo
 ![Contribuciones del informe AV2 por integrante](assets/images/chapter-05/av2/report-collaboration-integration-2026-11-15.png)
 
 *Gráfico del corte de integración `79146efe3777`: Alexander 10, Joaquín 16, Rodrigo 14 y Nayely 35. Fuente: historial Git del informe, excluidos merges.*
+
+### Corte técnico de TB2
+
+![Contribuciones al informe en el corte técnico de TB2](assets/evidence/tb2/report-collaboration.svg)
+
+El [registro por autor](assets/evidence/tb2/report-collaboration.json) identifica la revisión analizada y el conteo reproducible de commits sin merges. Incluye aportes históricos del informe. Los cambios del incremento se relacionan con sus productos en [Sprint 4](#524-sprint-4--tb2).
 
 ### Gráficos de colaboración del informe
 
@@ -257,6 +264,15 @@ La carátula y el informe completo se mantienen en Markdown dentro de este `READ
       - [5.2.3.1. Sprint Planning 3](#5231-sprint-planning-3)
       - [5.2.3.2. Aspect Leaders and Collaborators](#5232-aspect-leaders-and-collaborators)
       - [5.2.3.5. Execution Evidence for Sprint Review](#5235-execution-evidence-for-sprint-review)
+    - [5.2.4. Sprint 4 — TB2](#524-sprint-4--tb2)
+      - [5.2.4.1. Sprint Planning 4](#5241-sprint-planning-4)
+      - [5.2.4.2. Aspect Leaders and Collaborators](#5242-aspect-leaders-and-collaborators)
+      - [5.2.4.3. Sprint Backlog 4](#5243-sprint-backlog-4)
+      - [5.2.4.4. Development Evidence](#5244-development-evidence-for-sprint-review)
+      - [5.2.4.5. Execution Evidence](#5245-execution-evidence-for-sprint-review)
+      - [5.2.4.6. Services Documentation](#5246-services-documentation-evidence-for-sprint-review)
+      - [5.2.4.7. Software Deployment](#5247-software-deployment-evidence-for-sprint-review)
+      - [5.2.4.8. Collaboration Insights](#5248-team-collaboration-insights-during-sprint)
   - [5.3. Validation Interviews](#53-validation-interviews)
     - [5.3.1. Diseño de entrevistas](#531-diseño-de-entrevistas)
     - [5.3.2. Registro de entrevistas](#532-registro-de-entrevistas)
@@ -273,6 +289,7 @@ La carátula y el informe completo se mantienen en Markdown dentro de este `READ
   - [Anexo C. Acceso a los productos publicados](#anexo-c-acceso-a-los-productos-publicados)
   - [Anexo D. Tablero, diseño e investigación](#anexo-d-tablero-diseño-e-investigación)
   - [Anexo E. Videos de Exposiciones](#anexo-e-videos-de-exposiciones)
+    - [Registro audiovisual de TB2](#registro-audiovisual-de-tb2)
     - [Videos de AV2](#videos-de-av2)
   - [Anexo F. Entregables TB1](#anexo-f-entregables-tb1)
   - [Anexo G. Registros de verificación](#anexo-g-registros-de-verificación)
@@ -331,6 +348,15 @@ El equipo distribuyó la integración técnica, la investigación con usuarios, 
 
 El corte histórico del Sprint Backlog 3 al 15/11/2026 se conserva junto con la captura del tablero. El cierre documental del 26/11/2026 relaciona **28 tareas terminadas en Done** con sus evidencias de implementación, revisión y publicación. La ampliación de las sesiones de Coordinador Logístico y el seguimiento del tablero se registran separadamente en [5.2.3.3](#5233-sprint-backlog-3).
 
+
+### Corte TB2 — Sprint 4
+
+| Criterio del Student Outcome 5 | Acción registrada en el corte | Resultado y conclusión |
+| --- | --- | --- |
+| Proporcionar liderazgo conjunto | Alexander coordina la integración de API, SPA, pruebas y reporte; las decisiones quedan relacionadas con sus revisiones. | La trazabilidad permite revisar el incremento por producto y sostener la coordinación de la entrega. |
+| Crear colaboración e inclusión | Los dos perfiles conservan permisos propios y la interfaz mantiene ES/EN, adaptación de pantalla y mensajes de error. Los cuatro integrantes activos mantienen sus aportes históricos identificados. | La solución permite revisar necesidades distintas sin atribuir evidencia de un segmento al otro. |
+| Establecer metas y planificar tareas | Sprint 4 define un objetivo de negocio y descompone actividades en unidades de 4–8 horas. | La tabla separa tareas terminadas de configuración, validación y comunicación que requieren evidencias del equipo. |
+| Cumplir objetivos | Las pruebas verifican aislamiento, atomicidad, informes, recuperación y revocación de sesiones. | Los resultados técnicos sustentan el alcance publicado; las grabaciones y la evaluación individual complementan el cierre del proyecto. |
 
 # Capítulo I: Introducción
 
@@ -3768,6 +3794,122 @@ El registro enlaza los commits de landing, SPA, API e informe para identificar e
 
 Los datos del corte TB1 se conservan como antecedentes históricos, separados del corte AV2.
 
+### 5.2.4. Sprint 4 — TB2
+
+El incremento del Sprint 4 amplía la supervisión del transporte con análisis mensual, bitácora operativa, informes y gestión de accesos. El corte del 27/11/2026 identifica el código, las pruebas y su publicación. Las fichas audiovisuales de AV2 se conservan como antecedentes de esa entrega.
+
+#### 5.2.4.1. Sprint Planning 4
+
+| Campo | Detalle |
+| --- | --- |
+| Sprint | Sprint 4 — TB2 · Release Review. |
+| Fecha | 27/11/2026, corte de preparación del incremento. |
+| Hora | Seguimiento asíncrono; las horas de integración se consultan en los commits y recibos de prueba. |
+| Lugar | Repositorios de GitHub y entornos de prueba del equipo. |
+| Preparado por | Alexander Sebastián Atauje Barreto, Team Leader de BlackStartup. |
+| Participantes previstos | Alexander Sebastián Atauje Barreto, Joaquín Leonardo Daga Chávez, Rodrigo Andree Saavedra Flores y Nayely Macarena Vera Solsol. |
+| Objetivo del Sprint 4 | **Nuestro enfoque es** facilitar que el coordinador revise el desempeño de sus rutas, consulte acciones registradas y administre el acceso de su empresa.<br>**Consideramos que aporta** información trazable para supervisar las entregas **a** coordinadores logísticos y clientes de carga.<br>**Esto se confirmará cuando** cada perfil consulte únicamente sus envíos, obtenga un informe del periodo elegido, identifique las rutas con incidencias y los cambios de acceso se apliquen sin exponer información de otra empresa. |
+| Capacidad estimada | 126 horas distribuidas en 20 tareas de 4–8 horas; las estimaciones no representan horas de ejecución medidas. |
+| Criterios de revisión | Reglas de negocio, autorización por empresa y asignación, integridad de lecturas por lote, revocación de sesiones y claridad en ES/EN. |
+
+#### 5.2.4.2. Aspect Leaders and Collaborators
+
+| Aspecto | Aporte registrado | Evidencia |
+| --- | --- | --- |
+| Desarrollo y pruebas del incremento | Alexander Sebastián Atauje Barreto. | [PR de API](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-api/pull/2), [PR de frontend](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/pull/7) y pruebas del corte. |
+| Reporte y trazabilidad | Alexander Sebastián Atauje Barreto. | Sprint 4, matriz de cobertura y referencias de implementación. |
+| Entrevistas y comunicación de AV2 | Aportes históricos de Alexander, Joaquín, Rodrigo y Nayely. | Fichas de 5.3 y recursos de 5.4–5.5, identificados como AV2. |
+
+El registro de TB2 atribuye los cambios de este corte a sus autores. La evidencia histórica de investigación y comunicación mantiene la atribución de sus integrantes y su entrega de origen.
+
+#### 5.2.4.3. Sprint Backlog 4
+
+El [backlog en CSV](assets/annexes/sprint4-backlog.csv) relaciona tareas, estimaciones, responsables y estado. Las tareas Done cuentan con resultados de implementación o prueba; las actividades de publicación, validación, comunicación y entrega se cierran al incorporar su evidencia correspondiente.
+
+| Story Id | Task Id | Task Title | Estimation (Hours) | Assigned To | Status | Evidencia |
+| --- | --- | --- | ---: | --- | --- | --- |
+| US12 / US29 | S4-T01 | Consultar indicadores mensuales por ruta | 8 | Alexander Sebastián Atauje Barreto | Done | Analítica y auditoría |
+| US28 / US11 / TS06 | S4-T02 | Generar informes de la aplicación | 8 | Alexander Sebastián Atauje Barreto | Done | Informes autenticados |
+| US13 | S4-T03 | Consultar bitácora operativa | 6 | Alexander Sebastián Atauje Barreto | Done | Bitácora por mes |
+| TS04 / US05 | S4-T04 | Procesar lotes de lecturas | 8 | Alexander Sebastián Atauje Barreto | Done | Pruebas de atomicidad |
+| US22 | S4-T05 | Administrar acceso de cuentas | 8 | Alexander Sebastián Atauje Barreto | Done | Pruebas de identidad y aislamiento |
+| US21 | S4-T06 | Implementar recuperación segura | 8 | Alexander Sebastián Atauje Barreto | Done | Pruebas de recuperación |
+| US12 / US29 / US13 | S4-T07 | Integrar pantalla de analítica | 6 | Alexander Sebastián Atauje Barreto | Done | Navegador ES/EN |
+| US22 | S4-T08 | Integrar administración de cuentas | 4 | Alexander Sebastián Atauje Barreto | Done | Navegador por perfil |
+| US21 | S4-T09 | Integrar recuperación de acceso | 4 | Alexander Sebastián Atauje Barreto | Done | Navegador y gateway HTTP |
+| TS07 | S4-T10 | Documentar controllers y contratos | 4 | Alexander Sebastián Atauje Barreto | Done | Contrato OpenAPI |
+| Calidad | S4-T11 | Verificar reglas y recorrido integrado | 8 | Alexander Sebastián Atauje Barreto | Done | 21 pruebas C#, 59 PostgreSQL, 37 frontend y 11 de navegador |
+| Despliegue | S4-T12 | Publicar el incremento | 8 | Alexander Sebastián Atauje Barreto | Done | [Recibo de publicación](assets/evidence/tb2/deployment.json) |
+| US21 / US25 | S4-T13 | Conectar proveedor de correo | 4 | Equipo BlackStartup | To Do | Proveedor del equipo |
+| Gestión | S4-T14 | Actualizar tablero del sprint | 4 | Equipo BlackStartup | To Do | Trello del equipo |
+| Validación | S4-T15 | Registrar validación del incremento | 8 | Equipo BlackStartup | To Do | Sesiones y fichas reales |
+| Comunicación | S4-T16 | Publicar About-the-Product final | 6 | Equipo BlackStartup | To Do | Stream y YouTube |
+| Colaboración | S4-T17 | Publicar About-the-Team final | 6 | Equipo BlackStartup | To Do | Stream y YouTube |
+| Sustentación | S4-T18 | Preparar presentación y exposición TB2 | 8 | Equipo BlackStartup | To Do | Materiales del equipo |
+| Participación | S4-T19 | Evaluar participación TB2 | 4 | Equipo BlackStartup | To Do | Evaluación emitida por el Team Leader |
+| Entrega | S4-T20 | Cerrar documentos y exportaciones | 6 | Equipo BlackStartup | To Do | Exportaciones finales |
+
+#### 5.2.4.4. Development Evidence for Sprint Review
+
+La API 0.3.0 incorpora controllers REST dentro de IAM, Monitoring y Alert and Reporting. Los contratos de comandos y consultas separan modificaciones y lecturas. Se mantienen EF Core/PostgreSQL, los agregados y las 18 tablas existentes. El generador de documentos y el adaptador SMTP implementan puertos de aplicación.
+
+| Producto | Funciones incorporadas | Fuente |
+| --- | --- | --- |
+| Web Services 0.3.0 | Analítica mensual, bitácora, informes, lotes, cuentas y recuperación. | [Código de API](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-api). |
+| SPA 0.3.0 | Analítica y auditoría, acceso de cuentas, recuperación y descargas autorizadas. | [Código de frontend](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend). |
+| Landing Page | Mantiene los CTA por perfil, los videos publicados y los enlaces de comunidad. | [Landing](https://upc-pre-202620-1asi0730-8088-friotrackk.github.io/friotrack-landing/). |
+
+La [arquitectura y los contratos del Sprint 4](docs/tb2/architecture-and-contracts.md) relacionan los conceptos de clase con las implementaciones y detallan los endpoints. La [matriz de cobertura](docs/tb2/requirements-coverage.csv) distingue implementación, dependencia de configuración y alcance posterior.
+
+#### 5.2.4.5. Execution Evidence for Sprint Review
+
+| Comprobación | Resultado del corte | Evidencia |
+| --- | --- | --- |
+| Dominio C# | 21 pruebas aprobadas. | Reglas de estado, rangos, recursos y notificaciones de la API. |
+| Integración PostgreSQL 17 | 59 comprobaciones aprobadas; base local aislada y descartable. | [Recibo de integración](assets/evidence/tb2/postgres-verification.json). |
+| Frontend | 37 pruebas aprobadas de reglas y gateway; build de producción correcto. | Suite `tests/` del frontend. |
+| Navegador con API y PostgreSQL | 11 comprobaciones de perfiles, ES/EN y anchos 390, 768 y 1440. | [Recibo de navegador](assets/evidence/tb2/browser-verification.json). |
+| Recuperación por correo | Enlace de un uso y vencimiento probados con SMTP local; el envío real depende de la configuración del proveedor. | Comprobaciones de token, sesión y estado no disponible en la suite PostgreSQL. |
+
+![Analítica del coordinador en el entorno integrado de prueba](assets/evidence/tb2/analytics-coordinator-1440.png)
+
+![Analítica en pantalla móvil](assets/evidence/tb2/analytics-coordinator-390.png)
+
+![Administración de accesos de la misma empresa](assets/evidence/tb2/accounts-coordinator.png)
+
+Las capturas corresponden a pruebas técnicas con datos de demostración. La evaluación con participantes se documenta mediante sus sesiones y fichas de validación.
+
+#### 5.2.4.6. Services Documentation Evidence for Sprint Review
+
+La documentación interactiva se consulta en [Scalar](https://friotrack-api-bce6db1b.azurewebsites.net/scalar/v1). El [contrato del incremento](docs/tb2/architecture-and-contracts.md#contratos-incorporados) describe los recursos, los permisos y el significado de cada periodo. Los endpoints de recuperación son públicos en OpenAPI; las consultas de información, los informes y la administración de cuentas requieren una sesión autorizada.
+
+La analítica considera envíos con salida en el mes seleccionado en UTC. La bitácora usa el mes del evento. Los promedios se calculan solo sobre lecturas registradas; los intervalos sin muestras no se completan con mediciones inventadas. Los informes identifican su procedencia de demostración.
+
+#### 5.2.4.7. Software Deployment Evidence for Sprint Review
+
+La publicación del incremento conserva la base existente y utiliza la configuración privada de Azure. No necesita una nueva migración ni reinicializa cuentas o envíos. Los recibos de publicación relacionan revisiones de código, hashes de artefactos y respuestas públicas.
+
+| Producto | Acceso |
+| --- | --- |
+| Landing | [FríoTrack](https://upc-pre-202620-1asi0730-8088-friotrackk.github.io/friotrack-landing/). |
+| SPA | [Aplicación publicada](https://friotracktb1bce6db1b.z22.web.core.windows.net/). |
+| API | [Health](https://friotrack-api-bce6db1b.azurewebsites.net/api/health) y [Scalar](https://friotrack-api-bce6db1b.azurewebsites.net/scalar/v1). |
+| Cuentas de demostración | [Anexo C](#anexo-c-acceso-a-los-productos-publicados). |
+
+La disponibilidad del correo se consulta en `/api/capabilities`. Un proveedor sin configurar se informa como no disponible. Las lecturas y coordenadas siguen siendo de demostración, y la integración del mapa conserva OpenStreetMap y su atribución.
+
+La publicación del 27/11/2026 corresponde a API `55736b4` y SPA `f8eab41`. Se verificaron 20 archivos publicados de la SPA. La configuración y los datos existentes se conservaron.
+
+#### 5.2.4.8. Team Collaboration Insights during Sprint
+
+La API y la SPA 0.3.0 están publicadas y se comprobaron con las cuentas de ambos perfiles. El [recibo de despliegue](assets/evidence/tb2/deployment.json) identifica las revisiones y hashes de los artefactos. La [verificación pública](assets/evidence/tb2/public-verification.json) registra seis comprobaciones de navegación y permisos, 36 rutas OpenAPI y el estado real de las capacidades.
+
+![Analítica del coordinador en Azure](assets/evidence/tb2/public-analytics-coordinator-1440.png)
+
+![Analítica del cliente en Azure](assets/evidence/tb2/public-analytics-cargo-client-390.png)
+
+El corte técnico relaciona cambios de API, integración de la SPA, pruebas y reporte con sus commits y PR. La colaboración audiovisual se incorpora mediante la retrospectiva y los testimonios del equipo en sus respectivos registros. Los aportes de otros sprints se conservan en las secciones históricas.
+
 ## 5.3. Validation Interviews
 
 La validación AV2 reúne sesiones de presentación y revisión de FríoTrack con participantes vinculados a los dos segmentos. Cada ficha especifica el entorno y el alcance observado. Las entrevistas de descubrimiento del Capítulo II son antecedentes y no se contabilizan como sesiones de validación del nuevo incremento.
@@ -4107,6 +4249,11 @@ La participación documentada comprende la integración técnica, la validación
 
 ## Conclusiones
 
+El Sprint 4 amplía la operación de FríoTrack con comparación mensual de rutas, consulta de acciones e informes, gestión de acceso por empresa y recepción atómica de lotes de demostración. Los casos de prueba verifican que el cliente conserve su alcance asignado y que los cambios de acceso y contraseña revoquen sesiones. La recuperación está implementada y requiere conectar un proveedor para la entrega real de correo.
+
+La arquitectura conserva ASP.NET Core y EF Core/PostgreSQL en los servicios, Vue y PrimeVue en la SPA, y puertos para las integraciones. Los controllers del incremento aplican recursos tipados y contratos separados de comandos y consultas. Los resultados de pruebas son evidencia técnica y se distinguen de la aceptación de los usuarios y de la retrospectiva del equipo.
+
+
 FríoTrack aborda la visibilidad del transporte refrigerado mediante programación de envíos, administración de recursos, consulta térmica y atención de alertas. El informe relaciona estos procesos con los perfiles de Coordinador Logístico y Cliente de Carga. Las entrevistas de distribuidores y comerciantes aportan contexto sobre conservación y pérdidas; los resultados de inventario y vencimientos no se convierten en funcionalidades implementadas de transporte.
 
 La entrega incorpora la primera aplicación Vue/PrimeVue publicada en Azure y una landing actualizada que conduce al acceso correspondiente. El inicio de sesión valida correo y contraseña en ASP.NET Core. La consulta y los comandos se autorizan en el servidor, y la cuenta cliente recibe únicamente sus envíos y recursos relacionados. El cierre de sesión revoca el token.
@@ -4186,6 +4333,13 @@ La [comprobación pública previa a publicar](assets/evidence/public-predeployme
 
 * Microsoft. (s. f.). *Static website hosting in Azure Storage*. [Documentación oficial](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blob-static-website).
 * Microsoft. (s. f.). *Deploy an ASP.NET web app to Azure*. [Documentación oficial](https://learn.microsoft.com/en-us/azure/app-service/quickstart-dotnetcore).
+
+
+- Microsoft. Documentación de [ASP.NET Core Web API](https://learn.microsoft.com/aspnet/core/web-api/) y [Entity Framework Core](https://learn.microsoft.com/ef/core/).
+- Scalar. [Integración de referencias OpenAPI con ASP.NET Core](https://scalar.com/products/api-references/integrations/aspnetcore/integration).
+- Empira. [PDFsharp 6.2.3 y licencia MIT](https://github.com/empira/PDFsharp/tree/v6.2.3).
+- The Inter Project Authors. [Inter y licencia SIL Open Font License](https://github.com/google/fonts/tree/main/ofl/inter).
+- Material de clase. Learning Center Platform Guide y Learning Center Platform Study Guide, facilitados para el curso Aplicaciones Web, periodo 202620.
 
 # Anexos
 
@@ -4268,6 +4422,10 @@ En la pantalla de acceso se utiliza el correo de la columna Username. El servido
 ## Anexo E. Videos de Exposiciones
 
 Los enlaces de Microsoft Stream utilizan el acceso institucional compartido por el equipo.
+
+### Registro audiovisual de TB2
+
+El incremento técnico de Sprint 4 se documenta en [5.2.4](#524-sprint-4--tb2). Los enlaces publicados que se conservan en las tablas siguientes corresponden a AV2 y TB1, con su identificación de origen. La versión final de los materiales de TB2 se registra con su publicación y sus permisos institucionales de acceso.
 
 ### Videos de AV2
 

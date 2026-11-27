@@ -47,7 +47,7 @@ assert len(storyrows)==43 and results['scenarioMarkers']==86 and not gherkin, 'I
 assert all(not s['invalidHours'] and not s['invalidStatus'] for s in sprints.values()), 'Invalid backlog values'
 assert 'IAM' in results['boundedContextHeadings'][-1], 'Generic context must follow operational contexts'
 for phrase in ['Nuestro enfoque es','Consideramos que aporta','Esto se confirmará cuando']:
-    assert text.count(phrase)==3, 'Missing Sprint Goal template clause: '+phrase
+    assert text.count(phrase)==4, 'Missing Sprint Goal template clause: '+phrase
 architecture=repo/'assets/architecture/chapter-04'
 manifest=json.loads((architecture/'manifest.json').read_text(encoding='utf-8-sig'))
 assert len(manifest)==22 and len({d['id'] for d in manifest})==22, 'Expected22distinctarchitectureviews'
@@ -61,7 +61,7 @@ for entry in manifest:
     assert (architecture/'fuentes'/f"{entry['id']}.json").is_file(), 'Missing model source: '+entry['id']
     assert '/revision-2026-11-11/'+entry['id']+'.png' in text, 'Architecture view missing from report: '+entry['id']
 results['architectureViews']=len(manifest)
-for n in (1,2,3):
+for n in (1,2,3,4):
     planning=text.split(f'#### 5.2.{n}.{1}. Sprint Planning {n}',1)[1].split(f'#### 5.2.{n}.2.',1)[0]
     assert all(f'| {field} |' in planning for field in ('Fecha','Hora','Lugar','Preparado por','Participantes previstos')), 'Complete Spanish planning fields required'
     assert not re.search(r'\|\s*(?:—|No registrad[^|]*)\s*\|',planning), 'Incomplete sprint planning field'
@@ -132,5 +132,13 @@ hypothesis=text.split('#### 1.2.2.3.',1)[1].split('#### 1.2.2.4.',1)[0]
 assert hypothesis.count('*Creemos que lograremos*')==7 and '*We believe' not in hypothesis, 'Hypotheses must be in Spanish'
 sprint3goal=re.search(r'^\| Objetivo del Sprint 3 \| (.+) \|$',text,re.M)[1]
 assert not re.search(r'\b(?:API|REST|PostgreSQL|EF Core|SDK)\b',sprint3goal), 'Sprint 3 goal must describe a business result'
+final_backlog=list(csv.DictReader((repo/'assets/annexes/sprint4-backlog.csv').open(encoding='utf-8-sig',newline='')))
+assert len({row['Task Id'] for row in final_backlog})==len(final_backlog), 'Duplicate Sprint 4 task'
+assert all(4<=int(row['Estimation (Hours)'])<=8 and row['Status'] in ('To Do','In Process','To Review','Done') for row in final_backlog), 'Invalid Sprint 4 task'
+coverage=list(csv.DictReader((repo/'docs/tb2/requirements-coverage.csv').open(encoding='utf8',newline='')))
+assert set(row['Story Id'] for row in coverage)==set(results['storyIds']), 'TB2 coverage must include every story'
+for raw in re.findall(r'!?\[[^\]]*\]\(([^\s]+?)\)',(repo/'docs/tb2/architecture-and-contracts.md').read_text(encoding='utf8')):
+    if not re.match(r'^[a-zA-Z]+:',raw): assert (repo/'docs/tb2'/unquote(raw.split('#')[0])).is_file(), 'Missing TB2 architecture reference'
+results['tb2']={'tasks':len(final_backlog),'hours':sum(int(row['Estimation (Hours)']) for row in final_backlog),'coverage':len(coverage)}
 results['av2']={'tables':len(tables),'foreignKeys':sum(len(t['foreignKeys']) for t in tables.values()),'schemaViews':len(schema_manifest),'documentLinksChecked':av2_links,'proposedTasks':len(proposal),'proposedHours':sum(int(row['Proposed Estimation Hours']) for row in proposal)}
 print(json.dumps(results,ensure_ascii=True,indent=2))
