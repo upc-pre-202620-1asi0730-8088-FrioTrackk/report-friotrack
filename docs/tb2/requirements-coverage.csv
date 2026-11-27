@@ -6,7 +6,7 @@ US02,Mapa interactivo de rutas,Implementado en el alcance de demostración,"Func
 US03,Búsqueda y filtros de envíos,Implementado en el alcance de demostración,"Funciones verificadas con cuentas, envíos y lecturas de demostración; revisar las evidencias de Sprint 3 y Sprint 4."
 US04,Indicadores visuales de severidad,Implementado en el alcance de demostración,"Funciones verificadas con cuentas, envíos y lecturas de demostración; revisar las evidencias de Sprint 3 y Sprint 4."
 US05,Detalle de telemetría por unidad,Implementado en el alcance de demostración,"Funciones verificadas con cuentas, envíos y lecturas de demostración; revisar las evidencias de Sprint 3 y Sprint 4. La recepción no autentica sensores físicos ni acredita ingesta IoT autónoma."
-TS01,Endpoint de consulta de envíos activos,Parcial,Las consultas autorizadas y los filtros de la SPA están disponibles; la colección REST no expone todos los filtros propuestos.
+TS01,Endpoint de consulta de envíos activos,Implementado en el alcance de demostración,"Consulta autorizada con filtros combinables de texto, estado, recurso, actividad y fechas UTC; las pruebas verifican el aislamiento entre empresas y clientes."
 TS04,Endpoint de recepción de telemetría IoT,Implementado en el alcance de demostración,"Funciones verificadas con cuentas, envíos y lecturas de demostración; revisar las evidencias de Sprint 3 y Sprint 4. La recepción no autentica sensores físicos ni acredita ingesta IoT autónoma."
 US06,Detección de excursiones térmicas,Implementado en el alcance de demostración,"Funciones verificadas con cuentas, envíos y lecturas de demostración; revisar las evidencias de Sprint 3 y Sprint 4. La recepción no autentica sensores físicos ni acredita ingesta IoT autónoma."
 US07,Notificaciones de incidencias en plataforma,Implementado en el alcance de demostración,"Funciones verificadas con cuentas, envíos y lecturas de demostración; revisar las evidencias de Sprint 3 y Sprint 4."
@@ -17,9 +17,9 @@ TS02,Endpoint de consulta de alertas,Implementado en el alcance de demostración
 US10,Consulta de historial térmico,Implementado en el alcance de demostración,"Funciones verificadas con cuentas, envíos y lecturas de demostración; revisar las evidencias de Sprint 3 y Sprint 4."
 US11,Exportación de informes de trazabilidad,Implementado en el alcance de demostración,"Funciones verificadas con cuentas, envíos y lecturas de demostración; revisar las evidencias de Sprint 3 y Sprint 4."
 US12,Gráficos estadísticos comparativos,Implementado en el alcance de demostración,"Funciones verificadas con cuentas, envíos y lecturas de demostración; revisar las evidencias de Sprint 3 y Sprint 4."
-US13,Registro de bitácora de auditoría,Implementado en el alcance de demostración,"Funciones verificadas con cuentas, envíos y lecturas de demostración; revisar las evidencias de Sprint 3 y Sprint 4."
+US13,Registro de bitácora de auditoría,Implementado en el alcance de demostración,Bitácora por periodo UTC y nombre de usuario. Una acción correctiva se muestra una vez; las lecturas individuales de un lote se conservan.
 US28,Generación de reportes PDF ejecutivos,Implementado en el alcance de demostración,"Funciones verificadas con cuentas, envíos y lecturas de demostración; revisar las evidencias de Sprint 3 y Sprint 4."
-US29,Panel de analítica de incidencias,Parcial,El panel incorpora analítica mensual por ruta; la agregación trimestral propuesta no forma parte del incremento.
+US29,Panel de analítica de incidencias,Implementado en el alcance de demostración,Analítica mensual y trimestral por rutas; agrega las lecturas individuales del periodo y conserva valores nulos cuando no existen muestras.
 US36,Consulta de envíos del Cliente de Carga,Implementado en el alcance de demostración,"Funciones verificadas con cuentas, envíos y lecturas de demostración; revisar las evidencias de Sprint 3 y Sprint 4."
 TS06,Endpoint de exportación de reportes,Implementado en el alcance de demostración,"Funciones verificadas con cuentas, envíos y lecturas de demostración; revisar las evidencias de Sprint 3 y Sprint 4."
 US14,Registro de nueva unidad refrigerada,Implementado en el alcance de demostración,"Funciones verificadas con cuentas, envíos y lecturas de demostración; revisar las evidencias de Sprint 3 y Sprint 4."
@@ -27,10 +27,10 @@ US15,Edición de datos de unidad,Implementado en el alcance de demostración,"Fu
 US16,Registro de conductores,Implementado en el alcance de demostración,"Funciones verificadas con cuentas, envíos y lecturas de demostración; revisar las evidencias de Sprint 3 y Sprint 4."
 US17,Asignación de conductor a vehículo,Implementado en el alcance de demostración,"Funciones verificadas con cuentas, envíos y lecturas de demostración; revisar las evidencias de Sprint 3 y Sprint 4."
 US18,Configuración de dispositivos IoT,Implementado en el alcance de demostración,"Funciones verificadas con cuentas, envíos y lecturas de demostración; revisar las evidencias de Sprint 3 y Sprint 4. La recepción no autentica sensores físicos ni acredita ingesta IoT autónoma."
-TS03,Endpoint de gestión de flotas,Parcial,"Se implementan creación, consulta, actualización y deshabilitación; no se publica eliminación física de recursos."
+TS03,Endpoint de gestión de flotas,Implementado en el alcance de demostración,"Creación, consulta, actualización y baja lógica por DELETE de vehículos, conductores y sensores. Conserva los registros y rechaza la baja de recursos reservados."
 US23,Propuesta de valor en Landing,Implementado en el alcance de demostración,"Funciones verificadas con cuentas, envíos y lecturas de demostración; revisar las evidencias de Sprint 3 y Sprint 4."
 US24,Corredores logísticos en Landing,Implementado en el alcance de demostración,"Funciones verificadas con cuentas, envíos y lecturas de demostración; revisar las evidencias de Sprint 3 y Sprint 4."
-US25,Formulario de contacto comercial,Parcial,La landing valida la solicitud; el receptor comercial no está conectado.
+US25,Formulario de contacto comercial,Parcial,"Receptor comercial implementado y probado con SMTP local, destinatario fijo y límite de solicitudes. Su activación en la landing y el correo real requieren configurar el proveedor."
 US26,Casos de éxito y testimonios,Parcial,Los videos de AV2 están publicados; los testimonios de la edición final se incorporan al publicar su versión de TB2.
 US27,Preguntas frecuentes (FAQ),Implementado en el alcance de demostración,"Funciones verificadas con cuentas, envíos y lecturas de demostración; revisar las evidencias de Sprint 3 y Sprint 4."
 US31,Planes y acceso desde la Landing,Implementado en el alcance de demostración,"Funciones verificadas con cuentas, envíos y lecturas de demostración; revisar las evidencias de Sprint 3 y Sprint 4."

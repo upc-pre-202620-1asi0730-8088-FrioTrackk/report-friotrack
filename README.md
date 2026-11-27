@@ -3796,7 +3796,7 @@ Los datos del corte TB1 se conservan como antecedentes históricos, separados de
 
 ### 5.2.4. Sprint 4 — TB2
 
-El incremento del Sprint 4 amplía la supervisión del transporte con análisis mensual, bitácora operativa, informes y gestión de accesos. El corte del 27/11/2026 identifica el código, las pruebas y su publicación. Las fichas audiovisuales de AV2 se conservan como antecedentes de esa entrega.
+El incremento del Sprint 4 amplía la supervisión del transporte con análisis mensual y trimestral, bitácora operativa, informes y gestión de accesos. El corte del 27/11/2026 identifica el código, las pruebas y su publicación. Las fichas audiovisuales de AV2 se conservan como antecedentes de esa entrega.
 
 #### 5.2.4.1. Sprint Planning 4
 
@@ -3816,7 +3816,7 @@ El incremento del Sprint 4 amplía la supervisión del transporte con análisis 
 
 | Aspecto | Aporte registrado | Evidencia |
 | --- | --- | --- |
-| Desarrollo y pruebas del incremento | Alexander Sebastián Atauje Barreto. | [PR de API](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-api/pull/2), [PR de frontend](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/pull/7) y pruebas del corte. |
+| Desarrollo y pruebas del incremento | Alexander Sebastián Atauje Barreto. | [PR de API](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-api/pull/3), [PR de frontend](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend/pull/8) y pruebas del corte. |
 | Reporte y trazabilidad | Alexander Sebastián Atauje Barreto. | Sprint 4, matriz de cobertura y referencias de implementación. |
 | Entrevistas y comunicación de AV2 | Aportes históricos de Alexander, Joaquín, Rodrigo y Nayely. | Fichas de 5.3 y recursos de 5.4–5.5, identificados como AV2. |
 
@@ -3828,17 +3828,17 @@ El [backlog en CSV](assets/annexes/sprint4-backlog.csv) relaciona tareas, estima
 
 | Story Id | Task Id | Task Title | Estimation (Hours) | Assigned To | Status | Evidencia |
 | --- | --- | --- | ---: | --- | --- | --- |
-| US12 / US29 | S4-T01 | Consultar indicadores mensuales por ruta | 8 | Alexander Sebastián Atauje Barreto | Done | Analítica y auditoría |
+| US12 / US29 / TS01 | S4-T01 | Consultar periodos y filtrar envíos | 8 | Alexander Sebastián Atauje Barreto | Done | Analítica y auditoría |
 | US28 / US11 / TS06 | S4-T02 | Generar informes de la aplicación | 8 | Alexander Sebastián Atauje Barreto | Done | Informes autenticados |
-| US13 | S4-T03 | Consultar bitácora operativa | 6 | Alexander Sebastián Atauje Barreto | Done | Bitácora por mes |
+| US13 | S4-T03 | Consultar bitácora operativa | 6 | Alexander Sebastián Atauje Barreto | Done | Bitácora por periodo y usuario |
 | TS04 / US05 | S4-T04 | Procesar lotes de lecturas | 8 | Alexander Sebastián Atauje Barreto | Done | Pruebas de atomicidad |
 | US22 | S4-T05 | Administrar acceso de cuentas | 8 | Alexander Sebastián Atauje Barreto | Done | Pruebas de identidad y aislamiento |
-| US21 | S4-T06 | Implementar recuperación segura | 8 | Alexander Sebastián Atauje Barreto | Done | Pruebas de recuperación |
+| US21 / US25 | S4-T06 | Implementar recuperación y receptor comercial | 8 | Alexander Sebastián Atauje Barreto | Done | Pruebas de recuperación |
 | US12 / US29 / US13 | S4-T07 | Integrar pantalla de analítica | 6 | Alexander Sebastián Atauje Barreto | Done | Navegador ES/EN |
 | US22 | S4-T08 | Integrar administración de cuentas | 4 | Alexander Sebastián Atauje Barreto | Done | Navegador por perfil |
 | US21 | S4-T09 | Integrar recuperación de acceso | 4 | Alexander Sebastián Atauje Barreto | Done | Navegador y gateway HTTP |
-| TS07 | S4-T10 | Documentar controllers y contratos | 4 | Alexander Sebastián Atauje Barreto | Done | Contrato OpenAPI |
-| Calidad | S4-T11 | Verificar reglas y recorrido integrado | 8 | Alexander Sebastián Atauje Barreto | Done | 21 pruebas C#, 59 PostgreSQL, 37 frontend y 11 de navegador |
+| TS07 / TS03 | S4-T10 | Completar contratos y baja lógica de recursos | 4 | Alexander Sebastián Atauje Barreto | Done | Contrato OpenAPI |
+| Calidad | S4-T11 | Verificar reglas y recorrido integrado | 8 | Alexander Sebastián Atauje Barreto | Done | 23 pruebas C#, 71 PostgreSQL, 38 frontend y 15 de navegador |
 | Despliegue | S4-T12 | Publicar el incremento | 8 | Alexander Sebastián Atauje Barreto | Done | [Recibo de publicación](assets/evidence/tb2/deployment.json) |
 | US21 / US25 | S4-T13 | Conectar proveedor de correo | 4 | Equipo BlackStartup | To Do | Proveedor del equipo |
 | Gestión | S4-T14 | Actualizar tablero del sprint | 4 | Equipo BlackStartup | To Do | Trello del equipo |
@@ -3851,12 +3851,12 @@ El [backlog en CSV](assets/annexes/sprint4-backlog.csv) relaciona tareas, estima
 
 #### 5.2.4.4. Development Evidence for Sprint Review
 
-La API 0.3.0 incorpora controllers REST dentro de IAM, Monitoring y Alert and Reporting. Los contratos de comandos y consultas separan modificaciones y lecturas. Se mantienen EF Core/PostgreSQL, los agregados y las 18 tablas existentes. El generador de documentos y el adaptador SMTP implementan puertos de aplicación.
+La API 0.4.0 incorpora controllers REST dentro de IAM, Monitoring, Shipment Management, Commercial Contact y Alert and Reporting. Los contratos de comandos y consultas separan modificaciones y lecturas. Se mantienen EF Core/PostgreSQL, los agregados y las 18 tablas existentes. El generador de documentos y el adaptador SMTP implementan puertos de aplicación.
 
 | Producto | Funciones incorporadas | Fuente |
 | --- | --- | --- |
-| Web Services 0.3.0 | Analítica mensual, bitácora, informes, lotes, cuentas y recuperación. | [Código de API](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-api). |
-| SPA 0.3.0 | Analítica y auditoría, acceso de cuentas, recuperación y descargas autorizadas. | [Código de frontend](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend). |
+| Web Services 0.4.0 | Analítica mensual y trimestral, filtros, baja lógica, bitácora, informes, lotes, cuentas y correo configurable. | [Código de API](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-api). |
+| SPA 0.4.0 | Analítica y auditoría, acceso de cuentas, recuperación y descargas autorizadas. | [Código de frontend](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/friotrack-frontend). |
 | Landing Page | Mantiene los CTA por perfil, los videos publicados y los enlaces de comunidad. | [Landing](https://upc-pre-202620-1asi0730-8088-friotrackk.github.io/friotrack-landing/). |
 
 La [arquitectura y los contratos del Sprint 4](docs/tb2/architecture-and-contracts.md) relacionan los conceptos de clase con las implementaciones y detallan los endpoints. La [matriz de cobertura](docs/tb2/requirements-coverage.csv) distingue implementación, dependencia de configuración y alcance posterior.
@@ -3865,10 +3865,10 @@ La [arquitectura y los contratos del Sprint 4](docs/tb2/architecture-and-contrac
 
 | Comprobación | Resultado del corte | Evidencia |
 | --- | --- | --- |
-| Dominio C# | 21 pruebas aprobadas. | Reglas de estado, rangos, recursos y notificaciones de la API. |
-| Integración PostgreSQL 17 | 59 comprobaciones aprobadas; base local aislada y descartable. | [Recibo de integración](assets/evidence/tb2/postgres-verification.json). |
-| Frontend | 37 pruebas aprobadas de reglas y gateway; build de producción correcto. | Suite `tests/` del frontend. |
-| Navegador con API y PostgreSQL | 11 comprobaciones de perfiles, ES/EN y anchos 390, 768 y 1440. | [Recibo de navegador](assets/evidence/tb2/browser-verification.json). |
+| Dominio C# | 23 pruebas aprobadas. | Reglas de estado, rangos, recursos y notificaciones de la API. |
+| Integración PostgreSQL 17 | 71 comprobaciones aprobadas; base local aislada y descartable. | [Recibo de integración](assets/evidence/tb2/postgres-verification.json). |
+| Frontend | 38 pruebas aprobadas de reglas y gateway; build de producción correcto. | Suite `tests/` del frontend. |
+| Navegador con API y PostgreSQL | 15 comprobaciones de perfiles, ES/EN y anchos 390, 768 y 1440. | [Recibo de navegador](assets/evidence/tb2/browser-verification.json). |
 | Recuperación por correo | Enlace de un uso y vencimiento probados con SMTP local; el envío real depende de la configuración del proveedor. | Comprobaciones de token, sesión y estado no disponible en la suite PostgreSQL. |
 
 ![Analítica del coordinador en el entorno integrado de prueba](assets/evidence/tb2/analytics-coordinator-1440.png)
@@ -3883,7 +3883,7 @@ Las capturas corresponden a pruebas técnicas con datos de demostración. La eva
 
 La documentación interactiva se consulta en [Scalar](https://friotrack-api-bce6db1b.azurewebsites.net/scalar/v1). El [contrato del incremento](docs/tb2/architecture-and-contracts.md#contratos-incorporados) describe los recursos, los permisos y el significado de cada periodo. Los endpoints de recuperación son públicos en OpenAPI; las consultas de información, los informes y la administración de cuentas requieren una sesión autorizada.
 
-La analítica considera envíos con salida en el mes seleccionado en UTC. La bitácora usa el mes del evento. Los promedios se calculan solo sobre lecturas registradas; los intervalos sin muestras no se completan con mediciones inventadas. Los informes identifican su procedencia de demostración.
+La analítica considera envíos con salida en el mes o trimestre seleccionado en UTC. La bitácora filtra el periodo del evento y su usuario, sin duplicar las acciones correctivas. Los promedios se calculan solo sobre lecturas registradas; los intervalos sin muestras no se completan con mediciones inventadas. Los informes identifican su procedencia de demostración.
 
 #### 5.2.4.7. Software Deployment Evidence for Sprint Review
 
@@ -3898,15 +3898,17 @@ La publicación del incremento conserva la base existente y utiliza la configura
 
 La disponibilidad del correo se consulta en `/api/capabilities`. Un proveedor sin configurar se informa como no disponible. Las lecturas y coordenadas siguen siendo de demostración, y la integración del mapa conserva OpenStreetMap y su atribución.
 
-La publicación del 27/11/2026 corresponde a API `55736b4` y SPA `f8eab41`. Se verificaron 20 archivos publicados de la SPA. La configuración y los datos existentes se conservaron.
+La publicación del 27/11/2026 corresponde a API `e8ae81f` y SPA `fb71ed4`. Se verificaron 20 archivos publicados de la SPA. La configuración y los datos existentes se conservaron.
 
 #### 5.2.4.8. Team Collaboration Insights during Sprint
 
-La API y la SPA 0.3.0 están publicadas y se comprobaron con las cuentas de ambos perfiles. El [recibo de despliegue](assets/evidence/tb2/deployment.json) identifica las revisiones y hashes de los artefactos. La [verificación pública](assets/evidence/tb2/public-verification.json) registra seis comprobaciones de navegación y permisos, 36 rutas OpenAPI y el estado real de las capacidades.
+La API y la SPA 0.4.0 están publicadas y se comprobaron con las cuentas de ambos perfiles. El [recibo de despliegue](assets/evidence/tb2/deployment.json) identifica las revisiones y hashes de los artefactos. La [verificación pública](assets/evidence/tb2/public-verification.json) registra 8 comprobaciones de navegación y permisos y 38 rutas OpenAPI y el estado real de las capacidades.
 
 ![Analítica del coordinador en Azure](assets/evidence/tb2/public-analytics-coordinator-1440.png)
 
 ![Analítica del cliente en Azure](assets/evidence/tb2/public-analytics-cargo-client-390.png)
+
+![Consulta trimestral del coordinador en Azure](assets/evidence/tb2/public-quarterly-coordinator.png)
 
 El corte técnico relaciona cambios de API, integración de la SPA, pruebas y reporte con sus commits y PR. La colaboración audiovisual se incorpora mediante la retrospectiva y los testimonios del equipo en sus respectivos registros. Los aportes de otros sprints se conservan en las secciones históricas.
 
@@ -4249,7 +4251,7 @@ La participación documentada comprende la integración técnica, la validación
 
 ## Conclusiones
 
-El Sprint 4 amplía la operación de FríoTrack con comparación mensual de rutas, consulta de acciones e informes, gestión de acceso por empresa y recepción atómica de lotes de demostración. Los casos de prueba verifican que el cliente conserve su alcance asignado y que los cambios de acceso y contraseña revoquen sesiones. La recuperación está implementada y requiere conectar un proveedor para la entrega real de correo.
+El Sprint 4 amplía la operación de FríoTrack con comparación mensual y trimestral de rutas, consulta de acciones e informes, gestión de acceso por empresa y recepción atómica de lotes de demostración. Los casos de prueba verifican que el cliente conserve su alcance asignado y que los cambios de acceso y contraseña revoquen sesiones. La recuperación está implementada y requiere conectar un proveedor para la entrega real de correo.
 
 La arquitectura conserva ASP.NET Core y EF Core/PostgreSQL en los servicios, Vue y PrimeVue en la SPA, y puertos para las integraciones. Los controllers del incremento aplican recursos tipados y contratos separados de comandos y consultas. Los resultados de pruebas son evidencia técnica y se distinguen de la aceptación de los usuarios y de la retrospectiva del equipo.
 

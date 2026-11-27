@@ -1,6 +1,6 @@
 {
   "scope": "Isolated real PostgreSQL API integration; not cloud deployment or team acceptance",
-  "startedAt": "2026-11-27T13:53:09.208Z",
+  "startedAt": "2026-11-27T14:27:02.278Z",
   "checks": [
     "EF migrations create the relational schema",
     "OpenAPI exposes authenticated domain REST operations",
@@ -47,10 +47,21 @@
     "Another organization cannot see route analytics",
     "Invalid calendar months are rejected",
     "Operational audit preserves actor, timestamp and shipment scope",
+    "Quarterly analytics include exactly the authorized three-month departure interval",
+    "Quarterly queries reject invalid periods and isolate organizations",
+    "Audit lists a corrective action once while preserving separate readings in one batch",
+    "Audit filters users and exclusive UTC date intervals without exposing other actors",
+    "Shipment collection combines search, resource, state and date filters within access scope",
+    "Logical DELETE of vehicles is idempotent and retains the resource",
+    "Logical DELETE of drivers is idempotent and retains the resource",
+    "Logical DELETE of sensors is idempotent and retains the resource",
+    "Fleet deactivation rejects reserved resources, cargo clients and cross-organization identifiers",
     "Monthly executive report is a real PDF with a download filename",
     "The persisted traceability snapshot can be downloaded as PDF",
     "Account administration rejects cargo clients and hides password hashes",
     "A coordinator cannot remove their own access",
+    "Commercial contact validates fields and delivers only to the fixed loopback mailbox",
+    "Public commercial contact is rate limited separately from account authentication",
     "Recovery returns the same response for existing and unknown accounts",
     "Recovery tokens are delivered through loopback SMTP and stored only as hashes",
     "A recovery token is single-use and revokes previous sessions",
@@ -60,7 +71,8 @@
     "Unknown privileged roles are rejected",
     "Account administration cannot cross organization boundaries",
     "Scalar contract does not require a bearer token to request recovery",
-    "Unconfigured email recovery is explicitly unavailable without claiming delivery"
+    "Unconfigured email recovery is explicitly unavailable without claiming delivery",
+    "Unconfigured commercial delivery returns unavailable without a success claim"
   ],
   "failures": [],
   "tables": [
@@ -84,6 +96,7 @@
     "vehicles"
   ],
   "status": "passed",
-  "completedAt": "2026-11-27T13:53:21.295Z",
-  "passed": 59
+  "completedAt": "2026-11-27T14:27:17.250Z",
+  "passed": 71,
+  "sourceCommit": "be4127c77f0237ade11b92c0d1e50e29fc0f36d0"
 }

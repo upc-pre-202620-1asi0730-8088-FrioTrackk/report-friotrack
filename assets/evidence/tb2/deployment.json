@@ -1,15 +1,15 @@
 {
-  "checkedAt": "2026-11-27T14:01:58.169Z",
+  "checkedAt": "2026-11-27T14:33:33.140Z",
   "api": {
-    "sourceSha": "55736b4e235aece2c219bff31e6137692a2cb7df",
-    "artifactSha256": "b63f84279f04555d561a5c2c8b95309f12856ccbbef2d0147f56a137edd494cf",
-    "previousArtifactSha256": "311d9ad029398634832f6a79d45d49e9504601c96900448a31aac65aeb654eeb",
-    "kuduDeploymentId": "685107466d9f47de9b6a6fe84bc8f48f",
+    "sourceSha": "e8ae81fea12677ba2cc711b64a2aeb10fb98163a",
+    "artifactSha256": "5764cee693010469f596ac2a75f60f76059a3e2c1e95d13bafff71e0a974c496",
+    "previousArtifactSha256": "2f70858b911b561b129bace5066587ae5453848f1a3bc733120f81d5ca7c744b",
+    "kuduDeploymentId": "eef49bcfed8f44639bbecad9fd3372fb",
     "kuduStatus": 4,
     "health": {
       "status": "ok",
       "service": "FrioTrack",
-      "version": "0.3.0",
+      "version": "0.4.0",
       "persistence": "postgresql",
       "telemetry": "demonstration"
     },
@@ -19,14 +19,14 @@
     },
     "openApi": {
       "status": 200,
-      "paths": 36,
-      "version": "0.3.0"
+      "paths": 38,
+      "version": "0.4.0"
     }
   },
   "databaseChanges": false,
   "applicationSettingsChanged": false,
   "frontend": {
-    "sourceSha": "f8eab41af84cc113509fa93a6694d90319c8cec2",
+    "sourceSha": "fb71ed4c88a76cb34525695dfe97575ea3715f97",
     "url": "https://friotracktb1bce6db1b.z22.web.core.windows.net/",
     "verifiedFiles": [
       {
@@ -35,14 +35,14 @@
         "sha256": "717fd00945521eb5394e102394f37fdc795f9a283f8b8ed5814b5dbd67e0f49a"
       },
       {
-        "path": "assets/index-ChD2dE_g.js",
-        "status": 200,
-        "sha256": "b4e97aeb10eeb641eed7cef96973befc4bb20cbce72f75db2a72ec0e68836ed5"
-      },
-      {
         "path": "assets/index-Dasu832I.css",
         "status": 200,
         "sha256": "73a2ea6d63c32d86ce2a86b1f16c367446dfef2b144ced946795133fc38ed178"
+      },
+      {
+        "path": "assets/index-zpZULeK3.js",
+        "status": 200,
+        "sha256": "f1f767513da9f5ec7bc3dc33506cedabbabde32aa7516d729b1f746cc68c09e0"
       },
       {
         "path": "assets/inter-latin-400-normal-C38fXH4l.woff2",
@@ -127,7 +127,7 @@
       {
         "path": "index.html",
         "status": 200,
-        "sha256": "6fdfe8a05876bb5ad52f39f312ec7ab7494005c657a3f1b69ba93e23a8c8858f"
+        "sha256": "059edf11204e1a93ec1e9b58f3cb6f23d3ec4b0c91057f2b7c48185a3dc117c5"
       }
     ]
   }
