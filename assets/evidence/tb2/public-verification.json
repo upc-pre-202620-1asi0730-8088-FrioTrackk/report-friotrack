@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-27T14:04:10.949Z",
+  "checkedAt": "2026-11-27T14:35:05.232Z",
   "scope": "Public Azure release candidate; fresh isolated browser contexts; demonstration accounts",
   "checks": [
     {
@@ -13,6 +13,11 @@
       "viewport": 1440,
       "route": "/analytics",
       "rendered": true
+    },
+    {
+      "role": "coordinator",
+      "quarter": "2026-Q4",
+      "quarterlyAnalyticsRendered": true
     },
     {
       "role": "coordinator",
@@ -32,21 +37,28 @@
     },
     {
       "role": "cargo-client",
+      "quarter": "2026-Q4",
+      "quarterlyAnalyticsRendered": true
+    },
+    {
+      "role": "cargo-client",
       "accountAdministrationAllowed": false
     }
   ],
   "health": {
     "status": "ok",
     "service": "FrioTrack",
-    "version": "0.3.0",
+    "version": "0.4.0",
     "persistence": "postgresql",
     "telemetry": "demonstration"
   },
-  "openApiPaths": 36,
+  "openApiPaths": 38,
   "capabilities": {
     "passwordRecovery": false,
+    "commercialContact": false,
     "monthlyPdf": true,
-    "analytics": true
+    "analytics": true,
+    "quarterlyAnalytics": true
   },
   "scalarStatus": 200,
   "status": "passed"

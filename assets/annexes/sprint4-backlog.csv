@@ -1,15 +1,15 @@
 Story Id,Task Id,Task Title,Task Description,Estimation (Hours),Assigned To,Status,Evidence
-US12 / US29,S4-T01,Consultar indicadores mensuales por ruta,"Comparar lecturas, temperatura e incidencias dentro del conjunto autorizado.",8,Alexander Sebastián Atauje Barreto,Done,Analítica y auditoría
+US12 / US29 / TS01,S4-T01,Consultar periodos y filtrar envíos,Comparar rutas por mes y trimestre y consultar envíos mediante filtros autorizados.,8,Alexander Sebastián Atauje Barreto,Done,Analítica y auditoría
 US28 / US11 / TS06,S4-T02,Generar informes de la aplicación,Crear PDF ejecutivo mensual y representar la copia persistida de trazabilidad.,8,Alexander Sebastián Atauje Barreto,Done,Informes autenticados
-US13,S4-T03,Consultar bitácora operativa,"Relacionar operación, fecha, responsable y envío autorizado.",6,Alexander Sebastián Atauje Barreto,Done,Bitácora por mes
+US13,S4-T03,Consultar bitácora operativa,"Relacionar operación, fecha, responsable y envío autorizado.",6,Alexander Sebastián Atauje Barreto,Done,"Bitácora por periodo y usuario, sin duplicación de acciones"
 TS04 / US05,S4-T04,Procesar lotes de lecturas,Validar 1–100 muestras y revertir todo el lote ante un error.,8,Alexander Sebastián Atauje Barreto,Done,Pruebas de atomicidad
 US22,S4-T05,Administrar acceso de cuentas,Limitar cambios a la empresa y revocar sesiones cuando cambie el acceso.,8,Alexander Sebastián Atauje Barreto,Done,Pruebas de identidad y aislamiento
-US21,S4-T06,Implementar recuperación segura,"Token de 15 minutos, un uso, hash y prueba con SMTP local.",8,Alexander Sebastián Atauje Barreto,Done,Pruebas de recuperación
+US21 / US25,S4-T06,Implementar recuperación y receptor comercial,"Token de 15 minutos, un uso, hash y prueba con SMTP local.",8,Alexander Sebastián Atauje Barreto,Done,Pruebas de recuperación
 US12 / US29 / US13,S4-T07,Integrar pantalla de analítica,"Presentar indicadores, rangos, historial y filtros del periodo.",6,Alexander Sebastián Atauje Barreto,Done,Navegador ES/EN
 US22,S4-T08,Integrar administración de cuentas,Presentar roles y habilitación solo al coordinador.,4,Alexander Sebastián Atauje Barreto,Done,Navegador por perfil
 US21,S4-T09,Integrar recuperación de acceso,Mostrar disponibilidad real del correo y formulario de restablecimiento.,4,Alexander Sebastián Atauje Barreto,Done,Navegador y gateway HTTP
-TS07,S4-T10,Documentar controllers y contratos,"Mantener Scalar, recursos, respuestas y seguridad de endpoints públicos.",4,Alexander Sebastián Atauje Barreto,Done,Contrato OpenAPI
-Calidad,S4-T11,Verificar reglas y recorrido integrado,"Ejecutar pruebas de dominio, integración, gateway y navegador.",8,Alexander Sebastián Atauje Barreto,Done,"21 pruebas C#, 59 PostgreSQL, 37 frontend y 11 de navegador"
+TS07 / TS03,S4-T10,Completar contratos y baja lógica de recursos,"Mantener Scalar, recursos, respuestas y seguridad de endpoints públicos.",4,Alexander Sebastián Atauje Barreto,Done,Contrato OpenAPI
+Calidad,S4-T11,Verificar reglas y recorrido integrado,"Ejecutar pruebas de dominio, integración, gateway y navegador.",8,Alexander Sebastián Atauje Barreto,Done,"23 pruebas C#, 71 PostgreSQL, 38 frontend y 15 de navegador"
 Despliegue,S4-T12,Publicar el incremento,"Conservar datos, comprobar los artefactos y probar ambos perfiles.",8,Alexander Sebastián Atauje Barreto,Done,Publicación y verificación pública del 27/11/2026
 US21 / US25,S4-T13,Conectar proveedor de correo,Configurar remitente y credenciales privadas; comprobar una entrega autorizada.,4,Equipo BlackStartup,To Do,Proveedor del equipo
 Gestión,S4-T14,Actualizar tablero del sprint,Relacionar las tarjetas terminadas con evidencias e incorporar una captura real.,4,Equipo BlackStartup,To Do,Trello del equipo

@@ -1,6 +1,6 @@
 # TB2 — Sprint 4
 
-El [informe principal](../../README.md#524-sprint-4--tb2) documenta el objetivo del sprint, el backlog, los productos, las pruebas y la publicación del incremento 0.3.0.
+El [informe principal](../../README.md#524-sprint-4--tb2) documenta el objetivo del sprint, el backlog, los productos, las pruebas y la publicación del incremento 0.4.0.
 
 - [Arquitectura y contratos](architecture-and-contracts.md).
 - [Cobertura de requisitos](requirements-coverage.csv).
