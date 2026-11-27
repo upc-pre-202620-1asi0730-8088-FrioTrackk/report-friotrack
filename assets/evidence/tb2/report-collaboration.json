@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-11-27",
+  "repository": "report-friotrack",
+  "sourceRevision": "371f0197af6606f3a6a1fe45727d758db8516ca7",
+  "method": "All non-merge commits reachable from the stated revision; historical contributions included",
+  "activeTeam": {
+    "Alexander Atauje": 33,
+    "Rodrigo Saavedra": 30,
+    "Joaquín Daga": 24,
+    "Nayely Vera": 39
+  },
+  "rawAuthors": {
+    "Alexander1Alexander2 <superalexandersebastian@gmail.com>": 33,
+    "rodrigoxd67 <rodrigosaavedraflores6@gmail.com>": 30,
+    "Eshnikeee <206278114+Eshnikeee@users.noreply.github.com>": 16,
+    "Macaxprogram29 <nayelyvera2020@gmail.com>": 39,
+    "Eshnikeee <leo-daga@hotmail.com>": 8
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "checkedAt": "2026-11-27T14:01:58.169Z",
+  "api": {
+    "sourceSha": "55736b4e235aece2c219bff31e6137692a2cb7df",
+    "artifactSha256": "b63f84279f04555d561a5c2c8b95309f12856ccbbef2d0147f56a137edd494cf",
+    "previousArtifactSha256": "311d9ad029398634832f6a79d45d49e9504601c96900448a31aac65aeb654eeb",
+    "kuduDeploymentId": "685107466d9f47de9b6a6fe84bc8f48f",
+    "kuduStatus": 4,
+    "health": {
+      "status": "ok",
+      "service": "FrioTrack",
+      "version": "0.3.0",
+      "persistence": "postgresql",
+      "telemetry": "demonstration"
+    },
+    "scalar": {
+      "url": "https://friotrack-api-bce6db1b.azurewebsites.net/scalar/v1",
+      "status": 200
+    },
+    "openApi": {
+      "status": 200,
+      "paths": 36,
+      "version": "0.3.0"
+    }
+  },
+  "databaseChanges": false,
+  "applicationSettingsChanged": false,
+  "frontend": {
+    "sourceSha": "f8eab41af84cc113509fa93a6694d90319c8cec2",
+    "url": "https://friotracktb1bce6db1b.z22.web.core.windows.net/",
+    "verifiedFiles": [
+      {
+        "path": "logo.svg",
+        "status": 200,
+        "sha256": "717fd00945521eb5394e102394f37fdc795f9a283f8b8ed5814b5dbd67e0f49a"
+      },
+      {
+        "path": "assets/index-ChD2dE_g.js",
+        "status": 200,
+        "sha256": "b4e97aeb10eeb641eed7cef96973befc4bb20cbce72f75db2a72ec0e68836ed5"
+      },
+      {
+        "path": "assets/index-Dasu832I.css",
+        "status": 200,
+        "sha256": "73a2ea6d63c32d86ce2a86b1f16c367446dfef2b144ced946795133fc38ed178"
+      },
+      {
+        "path": "assets/inter-latin-400-normal-C38fXH4l.woff2",
+        "status": 200,
+        "sha256": "8909904ab6c872eb994093482a88a28eca2cd95912d7b6fecd72103b0dc07edc"
+      },
+      {
+        "path": "assets/inter-latin-400-normal-CyCys3Eg.woff",
+        "status": 200,
+        "sha256": "e20fa0b4fd2dd26e4d14b3ac3cc922509c3a63fa5e910e90c614544aa042dd45"
+      },
+      {
+        "path": "assets/inter-latin-500-normal-BL9OpVg8.woff",
+        "status": 200,
+        "sha256": "9b42c108da48b5ed55a3072e815ffee2d271562e6c0dd6998910e8f9c09e0a3d"
+      },
+      {
+        "path": "assets/inter-latin-500-normal-Cerq10X2.woff2",
+        "status": 200,
+        "sha256": "f3779f1efccc4bdcdf9c0a02ab95bf6bd092ed09c48c08cedc725889edd1d19f"
+      },
+      {
+        "path": "assets/inter-latin-600-normal-CiBQ2DWP.woff",
+        "status": 200,
+        "sha256": "6a9cb3a509b4eeaf12b7dda6c4aacac3e85d07f4201bf4dd716e332e692b87bd"
+      },
+      {
+        "path": "assets/inter-latin-600-normal-LgqL8muc.woff2",
+        "status": 200,
+        "sha256": "f9a06e79cd3a2a20951c0f0e28f66dd0e6d3fda73911d640a2125c8fcb78f21a"
+      },
+      {
+        "path": "assets/inter-latin-700-normal-BLAVimhd.woff",
+        "status": 200,
+        "sha256": "7c5ed5655730de337704d3fc94628515cd7e3d8d32368871709bf56ac0397e7a"
+      },
+      {
+        "path": "assets/inter-latin-700-normal-Yt3aPRUw.woff2",
+        "status": 200,
+        "sha256": "6f56409fd3d64bb85f7d070bce20749db2d66b6d63cec586cc22d1c761be2491"
+      },
+      {
+        "path": "assets/leaflet-src-Byf149Wh.js",
+        "status": 200,
+        "sha256": "b5f6edcb2ae713969e26bdc6412df54067e80f52f4e50be26c51ce331ac54534"
+      },
+      {
+        "path": "assets/primeicons-C6QP2o4f.woff2",
+        "status": 200,
+        "sha256": "9eea6e0bcb974ec568fdcb1eec182d3b5383a3a23899a690140b2c0167886882"
+      },
+      {
+        "path": "assets/primeicons-DMOk5skT.eot",
+        "status": 200,
+        "sha256": "987f23eadfa70c603276a71c3c975c8d0534d9c719d8a6e3d965005e7b93747b"
+      },
+      {
+        "path": "assets/primeicons-Dr5RGzOO.svg",
+        "status": 200,
+        "sha256": "36c54cecfca947a6913c96df884300ce14108c4d8cb1cb241969321342f890c9"
+      },
+      {
+        "path": "assets/primeicons-MpK4pl85.ttf",
+        "status": 200,
+        "sha256": "dc895fee9f3ce1b0eaf16b4b9fab20077fc2981e6c0b332e4c97c176832fc05b"
+      },
+      {
+        "path": "assets/primeicons-WjwUDZjB.woff",
+        "status": 200,
+        "sha256": "f5d1d2195e05b8085953aa7d50b2e77070cd1120e0100a8600771aa5ba11a01e"
+      },
+      {
+        "path": "assets/primevue-DmebICQV.js",
+        "status": 200,
+        "sha256": "f56facd618799e9e9d66b730eaa9628a4fd9a95566811cbbd9e5ffe46e3b0536"
+      },
+      {
+        "path": "assets/vue-e2GoIkPi.js",
+        "status": 200,
+        "sha256": "b64512e505020c79afcc64dd75058959f651ccbad56614dda66ef6bb59fcdd99"
+      },
+      {
+        "path": "index.html",
+        "status": 200,
+        "sha256": "6fdfe8a05876bb5ad52f39f312ec7ab7494005c657a3f1b69ba93e23a8c8858f"
+      }
+    ]
+  }
+}

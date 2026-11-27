@@ -1,0 +1,73 @@
+{
+  "checkedAt": "2026-11-27T13:50:06.050Z",
+  "scope": "Isolated local PostgreSQL, fresh browser and current TB2 candidate; not participant interviews",
+  "checks": [
+    {
+      "role": "coordinator",
+      "route": "/analytics",
+      "viewport": 390,
+      "language": "es",
+      "horizontalOverflow": false
+    },
+    {
+      "role": "coordinator",
+      "route": "/analytics",
+      "viewport": 768,
+      "language": "es",
+      "horizontalOverflow": false
+    },
+    {
+      "role": "coordinator",
+      "route": "/analytics",
+      "viewport": 1440,
+      "language": "es",
+      "horizontalOverflow": false
+    },
+    {
+      "role": "coordinator",
+      "route": "/analytics",
+      "language": "en",
+      "rendered": true
+    },
+    {
+      "role": "coordinator",
+      "accountAdministrationAllowed": true
+    },
+    {
+      "role": "cargo-client",
+      "route": "/analytics",
+      "viewport": 390,
+      "language": "es",
+      "horizontalOverflow": false
+    },
+    {
+      "role": "cargo-client",
+      "route": "/analytics",
+      "viewport": 768,
+      "language": "es",
+      "horizontalOverflow": false
+    },
+    {
+      "role": "cargo-client",
+      "route": "/analytics",
+      "viewport": 1440,
+      "language": "es",
+      "horizontalOverflow": false
+    },
+    {
+      "role": "cargo-client",
+      "route": "/analytics",
+      "language": "en",
+      "rendered": true
+    },
+    {
+      "role": "cargo-client",
+      "accountAdministrationAllowed": false
+    },
+    {
+      "route": "/forgot-password",
+      "mailUnconfiguredStateCorrect": true
+    }
+  ],
+  "status": "passed"
+}
