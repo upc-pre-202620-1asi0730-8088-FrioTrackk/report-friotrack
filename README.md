@@ -24,32 +24,10 @@ Proyecto<br>
 
 **Integrantes**<br><br>
 
-<table align="center">
-  <tr>
-    <th>Código</th>
-    <th>Apellidos y Nombres</th>
-  </tr>
-  <tr>
-    <td>u20241f246</td>
-    <td>Atauje Barreto, Alexander Sebastián</td>
-  </tr>
-  <tr>
-    <td>u202421137</td>
-    <td>Bardales Rodriguez, Benjamin Elias (retirado)</td>
-  </tr>
-  <tr>
-    <td>u202219829</td>
-    <td>Daga Chávez, Joaquín Leonardo</td>
-  </tr>
-  <tr>
-    <td>u20241D811</td>
-    <td>Saavedra Flores, Rodrigo Andree</td>
-  </tr>
-  <tr>
-    <td>u20231H17</td>
-    <td>Vera Solsol, Nayely Macarena</td>
-  </tr>
-</table>
+Atauje Barreto, Alexander Sebastián — u20241f246<br>
+Daga Chávez, Joaquín Leonardo — u202219829<br>
+Saavedra Flores, Rodrigo Andree — u20241D811<br>
+Vera Solsol, Nayely Macarena — u20231H17
 
 <br>
 
@@ -263,7 +241,12 @@ La carátula y el informe completo se mantienen en Markdown dentro de este `READ
     - [5.2.3. Sprint 3 — AV2](#523-sprint-3--av2)
       - [5.2.3.1. Sprint Planning 3](#5231-sprint-planning-3)
       - [5.2.3.2. Aspect Leaders and Collaborators](#5232-aspect-leaders-and-collaborators)
+      - [5.2.3.3. Sprint Backlog 3](#5233-sprint-backlog-3)
+      - [5.2.3.4. Development Evidence for Sprint Review](#5234-development-evidence-for-sprint-review)
       - [5.2.3.5. Execution Evidence for Sprint Review](#5235-execution-evidence-for-sprint-review)
+      - [5.2.3.6. Services Documentation Evidence for Sprint Review](#5236-services-documentation-evidence-for-sprint-review)
+      - [5.2.3.7. Software Deployment Evidence for Sprint Review](#5237-software-deployment-evidence-for-sprint-review)
+      - [5.2.3.8. Team Collaboration Insights during Sprint](#5238-team-collaboration-insights-during-sprint)
     - [5.2.4. Sprint 4 — TB2](#524-sprint-4--tb2)
       - [5.2.4.1. Sprint Planning 4](#5241-sprint-planning-4)
       - [5.2.4.2. Aspect Leaders and Collaborators](#5242-aspect-leaders-and-collaborators)
@@ -276,12 +259,12 @@ La carátula y el informe completo se mantienen en Markdown dentro de este `READ
   - [5.3. Validation Interviews](#53-validation-interviews)
     - [5.3.1. Diseño de entrevistas](#531-diseño-de-entrevistas)
     - [5.3.2. Registro de entrevistas](#532-registro-de-entrevistas)
-    - [5.3.3. Evaluación según heurísticas](#533-evaluación-según-heurísticas)
+    - [5.3.3. Evaluaciones según heurísticas](#533-evaluaciones-según-heurísticas)
   - [5.4. Video About-the-Product](#54-video-about-the-product)
-  - [5.5. Video About-the-Team](#55-video-about-the-team)
 - [Conclusiones y Recomendaciones](#conclusiones-y-recomendaciones)
   - [Conclusiones](#conclusiones)
   - [Recomendaciones](#recomendaciones)
+- [Video About-the-Team](#video-about-the-team)
 - [Bibliografía](#bibliografía)
 - [Anexos](#anexos)
   - [Anexo A. Participant Performance Report](#anexo-a-participant-performance-report)
@@ -3671,9 +3654,9 @@ El Sprint 3 permitió programar y supervisar envíos refrigerados y consultar la
 | US31 / Soporte | US31: Planes y acceso desde la Landing | S3-T19 | Publicar frontend y landing | Actualizar archivos públicos y verificar hashes y recorridos de entrada. | 4 | Alexander Sebastián Atauje Barreto | Done | [Frontend y landing públicos](#5237-software-deployment-evidence-for-sprint-review) |
 | Soporte | Preparación de validación | S3-T21 | Preparar sesiones de validación | Preparar tareas y cuentas de demostración, identificar la versión y coordinar las sesiones con los segmentos. | 4 | Alexander Sebastián Atauje Barreto | Done | [Protocolo y sesiones documentadas](#53-validation-interviews) |
 | Soporte | Validación del cliente | S3-T23 | Registrar validación del cliente | Registrar las tres sesiones disponibles del segmento Cliente de Carga y sus enlaces de evidencia. | 8 | Joaquín Leonardo Daga Chávez | Done | [Tres sesiones de Cliente de Carga](#532-registro-de-entrevistas) |
-| Soporte | Evaluación de usabilidad | S3-T24 | Evaluar hallazgos y priorizar mejoras | Aplicar el Anexo D a las sesiones; registrar hallazgo, severidad, principio, captura y recomendación. | 8 | Rodrigo Andree Saavedra Flores | Done | [Hallazgos de usabilidad](#533-evaluación-según-heurísticas) |
+| Soporte | Evaluación de usabilidad | S3-T24 | Evaluar hallazgos y priorizar mejoras | Aplicar el Anexo D a las sesiones; registrar hallazgo, severidad, principio, captura y recomendación. | 8 | Rodrigo Andree Saavedra Flores | Done | [Hallazgos de usabilidad](#533-evaluaciones-según-heurísticas) |
 | Soporte | Comunicación del producto | S3-T25 | Publicar e integrar About-the-Product | Publicar el video en Stream y YouTube e incorporarlo a la landing. El informe recoge ambos enlaces y GitHub Pages registra el despliegue. | 6 | Nayely Macarena Vera Solsol | Done | [About-the-Product publicado](#54-video-about-the-product) |
-| Soporte | Colaboración del equipo | S3-T26 | Publicar About-the-Team AV2 | Enlazar el video entregado en Stream y YouTube e integrarlo en la landing. | 6 | Equipo BlackStartup | Done | [About-the-Team publicado](#55-video-about-the-team) |
+| Soporte | Colaboración del equipo | S3-T26 | Publicar About-the-Team AV2 | Enlazar el video entregado en Stream y YouTube e integrarlo en la landing. | 6 | Equipo BlackStartup | Done | [About-the-Team publicado](#video-about-the-team) |
 | Soporte | Demostración del producto | S3-T27 | Grabar navegación del incremento | Grabar un recorrido del Sprint 3 desde la landing hasta las funciones centrales de ambos perfiles; enlazarlo en el informe. | 4 | Equipo BlackStartup | Done | [Recorrido publicado](#5235-execution-evidence-for-sprint-review) |
 | Soporte | Exposición académica | S3-T28 | Consolidar exposición AV2 | Enlazar la exposición AV2 entregada por el equipo. | 8 | Equipo BlackStartup | Done | [Exposición AV2](#videos-de-av2) |
 | Soporte | Documentación de entrega | S3-T29 | Integrar reporte y presentación AV2 | Integrar el informe acumulativo y la presentación AV2 con las evidencias de la entrega. | 8 | Alexander Sebastián Atauje Barreto | Done | [Entrega AV2](https://github.com/upc-pre-202620-1asi0730-8088-FrioTrackk/report-friotrack/releases/tag/v3.0.0-av2.5) |
@@ -4086,30 +4069,31 @@ En sus respuestas grabadas, Jari destaca la utilidad de organizar la informació
 
 Estas apreciaciones corresponden al control de mercadería del negocio y no acreditan la validación específica de las funciones de transporte de FríoTrack. Es necesario distinguir las alertas térmicas durante el viaje de los avisos de vencimiento de inventario y comprobar esa comprensión en una sesión centrada en los flujos de transporte.
 
-### 5.3.3. Evaluación según heurísticas
+### 5.3.3. Evaluaciones según heurísticas
 
-La evaluación aplica la estructura del Anexo D del curso: identificación, alcance, severidad, resumen y fichas de hallazgos. Se revisaron las entrevistas AV2 y sus capturas. La severidad es un juicio de revisión documental del 15/11/2026, no una medición de frecuencia ni una nueva prueba con participantes.
+La evaluación aplica el formato del Anexo D del enunciado: identificación del proyecto, tareas incluidas y excluidas, escala de severidad, resumen de problemas y fichas detalladas. Se revisaron las entrevistas AV2 y sus capturas. La severidad es un juicio de revisión documental del 15/11/2026, no una medición de frecuencia ni una nueva prueba con participantes.
 
 #### Datos de la evaluación
 
 | Campo | Registro |
 | --- | --- |
-| Carrera | Ingeniería de Software. |
-| Curso | 1ASI0730 - Aplicaciones Web. |
-| Sección | NRC 8088. |
-| Profesor | Bautista Ubillús, Efraín Ricardo. |
-| Auditor documental | Rodrigo Andree Saavedra Flores, equipo BlackStartup. |
-| Cliente del proyecto | BlackStartup; segmentos: empresas de transporte refrigerado y clientes de carga. |
-| Sitio o aplicación | FríoTrack: landing y aplicación web. |
+| CARRERA | Ingeniería de Software. |
+| CURSO | 1ASI0730 - Aplicaciones Web. |
+| SECCIÓN | NRC 8088. |
+| PROFESORES | Bautista Ubillús, Efraín Ricardo. |
+| AUDITOR | Rodrigo Andree Saavedra Flores, equipo BlackStartup. |
+| CLIENTE(S) | Empresas de transporte refrigerado y clientes de carga. |
+| SITE o APP A EVALUAR | FríoTrack: landing y aplicación web. |
+| TAREAS A EVALUAR | Consultar un envío, revisar lecturas e incidencias, interpretar una alerta y consultar el historial según el perfil autorizado. |
 | Versión de referencia | AV2, Sprint 3. Corte técnico: API `e9aca8e`, frontend `9ef083e` y landing `36f2067`; publicación del 14/11/2026. Las grabaciones no identifican el SHA mostrado. |
 | Entorno documentado | Landing en GitHub Pages y aplicación en Azure; cuentas y telemetría de demostración. |
 | Fecha de evaluación | 15/11/2026; entrevistas del 14 y 15/11/2026. |
 | Método | Análisis de fichas, capturas y registros técnicos, con clasificación según las heurísticas de Nielsen. |
 | Fuentes | [Entrevistas](#532-registro-de-entrevistas), [registro de sesiones](docs/av2/validation-records.csv) y [comprobaciones públicas](assets/evidence/av2/public-interview-verification.json). |
 
-#### Tareas incluidas y excluidas
+#### Tareas a evaluar
 
-| Sesión | Tarea incluida | Alcance observado | Exclusión y motivo |
+| Sesión | Tarea incluida | Alcance observado | Tarea excluida y motivo |
 | --- | --- | --- | --- |
 | AV2-C01 - Farit Santoyo | Interpretar propuesta, envíos, lecturas, alertas e historial. | Demostración guiada con cuenta Cliente de Carga y respuestas de comprensión. | Programación y atención como coordinador: la cuenta mostrada corresponde al cliente. |
 | AV2-C02 - Carol Solsol | Revisar monitoreo, rangos, alertas e historial. | Demostración guiada con perfil coordinador, según la ficha aportada por Nayely Vera. | Eficacia autónoma y tiempos: la ficha no describe una prueba independiente de tareas. |
@@ -4132,11 +4116,11 @@ Se identifican tres hallazgos: uno de severidad 3 y dos de severidad 2. Las fuen
 
 #### Resumen de hallazgos
 
-| ID | Problema | Severidad | Heurística | Fuente y tarea |
-| --- | --- | :---: | --- | --- |
-| H-01 | El JSON resulta técnico para leer y compartir un resumen del envío. | 2 | H2: correspondencia con el mundo real; H8: información esencial. | AV2-L01, historial y reporte; AV2-C01 y AV2-C02 refuerzan la necesidad de un resumen. |
-| H-02 | Las alertas térmicas se confunden con avisos de vencimiento de inventario. | 3 | H2: correspondencia con el mundo real; H10: ayuda contextual. | AV2-L02, comprensión de la landing; AV2-L03, comentarios sobre inventario. |
-| H-03 | La pantalla de alertas pide registrar acciones correctivas a una cuenta Cliente de Carga. | 2 | H4: consistencia; H2: relación entre el mensaje y la tarea. | Inspección de la captura AV2-L01, lectura de una alerta. |
+| # | Problema | Escala de severidad | Heurística/Principio violada(o) |
+| --- | --- | :---: | --- |
+| H-01 | El JSON resulta técnico para leer y compartir un resumen del envío. | 2 — Menor | H2: correspondencia con el mundo real; H8: información esencial. |
+| H-02 | Las alertas térmicas se confunden con avisos de vencimiento de inventario. | 3 — Mayor | H2: correspondencia con el mundo real; H10: ayuda contextual. |
+| H-03 | La pantalla de alertas pide registrar acciones correctivas a una cuenta Cliente de Carga. | 2 — Menor | H4: consistencia; H2: relación entre el mensaje y la tarea. |
 
 #### H-01. Reporte poco accesible para lectura y comunicación
 
@@ -4211,25 +4195,7 @@ El video About-the-Product es el recurso de presentación de FríoTrack para AV2
 
 Los enlaces identifican el mismo material de presentación en las plataformas compartidas por el equipo. La navegación detallada del incremento se consulta en [5.2.3.5](#5235-execution-evidence-for-sprint-review).
 
-## 5.5. Video About-the-Team
-
-About-the-Team reúne el recurso audiovisual del equipo BlackStartup para AV2 y complementa el registro de contribuciones y aprendizajes de Student Outcome 5. Su enlace institucional permite consultar la grabación compartida para la entrega.
-
-| Recurso | Detalle |
-| --- | --- |
-| Equipo | BlackStartup — FríoTrack. |
-| Integrantes activos | Alexander Sebastián Atauje Barreto, Joaquín Leonardo Daga Chávez, Rodrigo Andree Saavedra Flores y Nayely Macarena Vera Solsol. |
-| Entrega | AV2 · Sprint 3. |
-| Microsoft Stream | [Ver About-the-Team — FríoTrack](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241d811_upc_edu_pe/IQA_6YgiuZLgRIvnZdb-6t56ASwzKeemh8AdD7un1OfiGk8?e=MY9kY5) |
-| YouTube | [Ver About-the-Team — FríoTrack](https://youtu.be/KHjfFKsW7j0) |
-| Integración | Reproductor de YouTube en la landing. |
-| Acceso | Microsoft Stream institucional, según los permisos del enlace compartido. |
-| Duración de referencia | 9 minutos: 5 de retrospectiva grupal y 1 por cada uno de los cuatro integrantes; la duración del archivo se consulta en el reproductor. |
-| Registro complementario | [Contribuciones y liderazgo compartido](#liderazgo-compartido-en-av2). |
-
-La participación documentada comprende la integración técnica, la validación con usuarios, el backlog, la comunicación del producto y la consolidación del informe. Las responsabilidades individuales se detallan en la [matriz del Sprint 3](#5232-aspect-leaders-and-collaborators).
-
-## 5.6. Revisión de observaciones AV2
+## Registro de correcciones AV2
 
 | Observación | Cambio realizado | Evidencia |
 | --- | --- | --- |
@@ -4276,6 +4242,24 @@ Evaluar la incorporación de un receptor para el formulario comercial y ampliar 
 
 Conservar las actas de planificación, review y retrospectiva del sprint junto con las evidencias del equipo. Verificar que los enlaces institucionales del Anexo E permitan el acceso del docente.
 
+
+# Video About-the-Team
+
+About-the-Team reúne el recurso audiovisual del equipo BlackStartup para AV2 y complementa el registro de contribuciones y aprendizajes de Student Outcome 5. Su enlace institucional permite consultar la grabación compartida para la entrega.
+
+| Recurso | Detalle |
+| --- | --- |
+| Equipo | BlackStartup — FríoTrack. |
+| Integrantes activos | Alexander Sebastián Atauje Barreto, Joaquín Leonardo Daga Chávez, Rodrigo Andree Saavedra Flores y Nayely Macarena Vera Solsol. |
+| Entrega | AV2 · Sprint 3. |
+| Microsoft Stream | [Ver About-the-Team — FríoTrack](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241d811_upc_edu_pe/IQA_6YgiuZLgRIvnZdb-6t56ASwzKeemh8AdD7un1OfiGk8?e=MY9kY5) |
+| YouTube | [Ver About-the-Team — FríoTrack](https://youtu.be/KHjfFKsW7j0) |
+| Integración | Reproductor de YouTube en la landing. |
+| Acceso | Microsoft Stream institucional, según los permisos del enlace compartido. |
+| Duración de referencia | 9 minutos: 5 de retrospectiva grupal y 1 por cada uno de los cuatro integrantes; la duración del archivo se consulta en el reproductor. |
+| Registro complementario | [Contribuciones y liderazgo compartido](#liderazgo-compartido-en-av2). |
+
+La participación documentada comprende la integración técnica, la validación con usuarios, el backlog, la comunicación del producto y la consolidación del informe. Las responsabilidades individuales se detallan en la [matriz del Sprint 3](#5232-aspect-leaders-and-collaborators).
 
 ### Cierre de evidencias de la revisión de noviembre
 
@@ -4436,7 +4420,7 @@ El incremento técnico de Sprint 4 se documenta en [5.2.4](#524-sprint-4--tb2). 
 | Exposición AV2 | [Exposición del equipo BlackStartup en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241d811_upc_edu_pe/IQC7RGHeH-X1SpVd2USNiTfJAfUao6jxlSJN3yvyEmz6q6A?e=BfGqps) |
 | Recorrido del producto AV2 | [Evidencia de ejecución del Sprint 3](#5235-execution-evidence-for-sprint-review) |
 | About-the-Product | [Video del producto](#54-video-about-the-product) |
-| About-the-Team | [Ficha del video](#55-video-about-the-team) · [YouTube](https://youtu.be/KHjfFKsW7j0) |
+| About-the-Team | [Ficha del video](#video-about-the-team) · [YouTube](https://youtu.be/KHjfFKsW7j0) |
 
 ### Videos de TB1
 
