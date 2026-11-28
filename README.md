@@ -498,6 +498,7 @@ El ciclo de vida de desarrollo de FríoTrack está sujeto a un conjunto de restr
 6. Creemos que las notificaciones dentro de la aplicación aumentarán el engagement diario.
 7. Creemos que un sistema de búsqueda y filtros avanzados facilitará la navegación en operaciones de alto volumen.
 
+<a id="1223-lean-ux-hypothesis-statements"></a>
 #### 1.2.2.3. Enunciados de hipótesis Lean UX
 
 **Hipótesis 1:**
